@@ -8,11 +8,12 @@ public class Scriptdeejemplo : MonoBehaviour
     void Start()
     {
         Debug.Log("Hola mundo");
+
+        Debug.Log("te odio!!");
     }
 
     // Update is called once per frame
     void Update()
-    {
-        
+    { 
     }
 }
