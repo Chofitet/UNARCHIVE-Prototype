@@ -6,6 +6,7 @@ TagManager:
   tags:
   - OptDesactivado
   - OptActivado
+  - Bitacora
   layers:
   - Default
   - TransparentFX
