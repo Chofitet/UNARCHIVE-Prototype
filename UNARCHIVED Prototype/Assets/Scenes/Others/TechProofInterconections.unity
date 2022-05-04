@@ -299,6 +299,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   libreta: {fileID: 94808029}
   A: {fileID: 414450557}
+  Canvas: {fileID: 320038365}
   BitacoraPrefab: {fileID: 2483674560380129722, guid: c650c2c6da49f9649bacbc5568f91879, type: 3}
   InicioBitacora: {fileID: 1497467237}
 --- !u!4 &176843631

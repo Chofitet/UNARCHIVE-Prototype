@@ -8,7 +8,8 @@ public class Bitacoras : MonoBehaviour
     [SerializeField] internal Libreta libreta;
     [SerializeField] internal Acciones A;
     GameObject PadreAux;
-  
+    public Canvas Canvas;
+   
     public TMP_Text BitacoraPrefab;
     private TMP_Text prefabAux;
     
@@ -19,6 +20,7 @@ public class Bitacoras : MonoBehaviour
     private void Start()
     {
         y = InicioBitacora.transform.position.y;
+      
     }
     //
     public void ActualizarBitacoras()
@@ -54,37 +56,27 @@ public class Bitacoras : MonoBehaviour
 
     void InstanciarBitacoras()
     {
-        PadreAux = new GameObject("PadreBitacoras");
-        Transform aux = PadreAux.transform;
-        aux = InicioBitacora.transform;
-        prefabAux = Instantiate(BitacoraPrefab, new Vector3(InicioBitacora.transform.position.x, y, InicioBitacora.transform.position.z) , InicioBitacora.transform.rotation, aux);
-        
-        
-        y = y - 40;
-        i = i + 1;
         if (i > 4)
         {
             i = 0;
             y = InicioBitacora.transform.position.y;
-            DestroyObject(InicioBitacora);
+            Destroy(PadreAux);
 
         }
+        if (i == 0)
+        {
+            PadreAux = new GameObject("PadreBitacoras");
+            PadreAux.transform.SetParent(Canvas.transform);
+        }
+        
+        Transform aux = PadreAux.transform;
+        prefabAux = Instantiate(BitacoraPrefab, new Vector3(InicioBitacora.transform.position.x, y, InicioBitacora.transform.position.z) , InicioBitacora.transform.rotation);
+        prefabAux.transform.SetParent(aux.transform);
+        
+        y = y - 40;
+        i = i + 1;
+        
     }
 
-
-
-
-
-    /*
-     * List<TMP_Text> generatedObjects = new List<TMP_Text>();
-
-        generatedObjects.Add(prefabAux);
-     * foreach (var obj in generatedObjects)
-            {
-                Debug.Log("AAAA");
-                Destroy(obj);*/
-
-
- 
 
 }
