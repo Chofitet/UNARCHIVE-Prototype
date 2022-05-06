@@ -5,55 +5,82 @@ using TMPro;
 
 public class Bitacoras : MonoBehaviour
 {
+    //Referencias Scripts
     [SerializeField] internal Libreta libreta;
     [SerializeField] internal Acciones A;
+    //Referencias de propiedades
     GameObject PadreAux;
     public Canvas Canvas;
-   
     public TMP_Text BitacoraPrefab;
     private TMP_Text prefabAux;
-    
-    private float y;
     public Transform InicioBitacora;
+    //Declaración varariables
+    private float y;
     private int i = 0;
+    private bool BenEliminado;
+    private bool BenLavado;
+    private bool PieGrandeEliminado;
+    private bool PieGrandeLavado;
+
+
 
     private void Start()
     {
         y = InicioBitacora.transform.position.y;
       
     }
-    //
+    
+    // Analiza las variables: ¿que nombre de la libreta està seleccionada?, ¿què acciòn està elegida? y si otra o esa misma accion fue ejecutada para evitar incongruencias o bitacoras repetidas.
+    // Si se cumplen las condiciones, imprimen la bitàcora correspondiente
     public void ActualizarBitacoras()
-
     {
-        InstanciarBitacoras();
-        
-       if (libreta.palabra == 1 && A.eliminar.CompareTag(tag = "OptActivado"))
+       //eLIMINAR BEN
+       if (libreta.palabra == 1 && A.eliminar.CompareTag(tag = "OptActivado") && A.eliminar.isOn == true && BenEliminado == false)
         {
-           prefabAux.GetComponent<TMP_Text>().text = "Ben a sido eliminado exitosamente";
-            A.eliminar.isOn = false;
+            InstanciarBitacoras();
+            prefabAux.GetComponent<TMP_Text>().text = "Ben a sido eliminado exitosamente";
+           
+            BenEliminado = true;
+
         }
-         if (libreta.palabra == 2 && A.eliminar.CompareTag(tag = "OptActivado"))
+       //ELIMINAR PIE GRANDE
+         if (libreta.palabra == 2 && A.eliminar.CompareTag(tag = "OptActivado") && A.eliminar.isOn == true && PieGrandeEliminado == false)
          {
+            InstanciarBitacoras();
             prefabAux.GetComponent<TMP_Text>().text = "Pie grande dio una buena pelea, perdimos un agente.";
-             A.eliminar.isOn = false;
+            libreta.agregarKate();
+            
+            PieGrandeEliminado = true;
          }
-         if (libreta.palabra == 1 && A.lavarCerebro.CompareTag(tag = "OptActivado"))
+         //LAVAR CEREBRO 
+         if (libreta.palabra == 1 && A.lavarCerebro.CompareTag(tag = "OptActivado") && A.lavarCerebro.isOn == true && BenLavado == false && BenEliminado == false)
          {
-             prefabAux.GetComponent<TMP_Text>().text = "Borramos con éxito la memoria de Ben";
-             A.lavarCerebro.isOn = false;
+            InstanciarBitacoras();
+            prefabAux.GetComponent<TMP_Text>().text = "Borramos con éxito la memoria de Ben";
+             
+            BenLavado = true;
          }
-         if (libreta.palabra == 2 && A.lavarCerebro.CompareTag(tag = "OptActivado"))
+         if (libreta.palabra == 2 && A.lavarCerebro.CompareTag(tag = "OptActivado") && A.lavarCerebro.isOn == true && PieGrandeLavado == false)
          {
-             prefabAux.GetComponent<TMP_Text>().text = "El amor de Pie Grande fue demasiado fuerte como para olvidar. Perdimos un agente";
-             A.lavarCerebro.isOn = false;
+            InstanciarBitacoras();
+            prefabAux.GetComponent<TMP_Text>().text = "El amor de Pie Grande fue demasiado fuerte como para olvidar. Perdimos un agente";
+            PieGrandeLavado = true;
+             
          }
+        /*if (libreta.palabra == 1 && A.lavarCerebro.CompareTag(tag = "OptActivado") )
+        {
+            InstanciarBitacoras();
+            prefabAux.GetComponent<TMP_Text>().text = "Lavado de cerebro a Kate Milliard exitoso, las sospechas se mantienen";
+            
+
+        }*/
 
 
         A.Restablecer();
 
     }
 
+    //Crea los espacios para rellenar las bitàcoras y los borra cuando es debido
     void InstanciarBitacoras()
     {
         if (i > 4)

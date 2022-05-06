@@ -10,7 +10,7 @@ public class Libreta : MonoBehaviour
     public int palabra = -1;
     [SerializeField] int BenBenji;
     [SerializeField] int PieGrande;
-    [SerializeField] int KateMilliard;
+    public string KateMilliard;
     bool apagado;
 
     
@@ -23,22 +23,26 @@ public class Libreta : MonoBehaviour
     private void Update ()
 
     {
-        
         if (ex.CasoLeido == true && apagado == false)
         {
             Palabras.options.Add(new TMP_Dropdown.OptionData() { text = "Ben Benji" });
 
             Palabras.options.Add(new TMP_Dropdown.OptionData() { text = "PieGrande" });
-            Debug.Log("Actualizado");
+            
             ex.CasoLeido = false;
             apagado = true;
         }
         
-        
-       /* Palabras.options.Add(new TMP_Dropdown.OptionData() { text = "Kate Millard" });
-        Palabras.options.Add(new TMP_Dropdown.OptionData() { text = "" });
-        Palabras.options.Add(new TMP_Dropdown.OptionData() { text = "Kate Millard" });*/
     }
-    
+
+
+    public void agregarKate()
+    {
+        Palabras.options.Add(new TMP_Dropdown.OptionData() { text = "Kate Milliard" });
+        
+    }
+
+
+
 
 }
