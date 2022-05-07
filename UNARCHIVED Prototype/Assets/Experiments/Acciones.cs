@@ -18,6 +18,7 @@ public class Acciones : MonoBehaviour
     public Toggle aislar;
     public Toggle crearNoticia;
     public Toggle crearEscena;
+    public Toggle analizarMuestra;
 
     public TMP_Text txtEliminar;
     public TMP_Text txtLavarCerebro;
@@ -27,66 +28,83 @@ public class Acciones : MonoBehaviour
     public TMP_Text txtAislar;
     public TMP_Text txtCrearNoticia;
     public TMP_Text txtCrearEscena;
+    public TMP_Text txtAnalizarMuestra;
 
-    void Update()
+    public  void CompletarPalabra ()
     {   // (de a acá)
-        if (eliminar.isOn == true) { txtEliminar.text = libreta.Palabras.options[libreta.Palabras.value].text; }
+        if (eliminar.isOn == true) { txtEliminar.text = libreta.palabra; }
         else { txtEliminar.text = ""; }
 
-        if (lavarCerebro.isOn == true) { txtLavarCerebro.text = libreta.Palabras.options[libreta.Palabras.value].text; }
+        if (lavarCerebro.isOn == true) { txtLavarCerebro.text = libreta.palabra; }
         else { txtLavarCerebro.text = ""; }
 
-        if (investigar.isOn == true) { txtInvestigar.text = libreta.Palabras.options[libreta.Palabras.value].text; }
+        if (investigar.isOn == true) { txtInvestigar.text = libreta.palabra; }
         else { txtInvestigar.text = ""; }
 
-        if (hackear.isOn == true) { txtHackear.text = libreta.Palabras.options[libreta.Palabras.value].text; }
+        if (hackear.isOn == true) { txtHackear.text = libreta.palabra; }
         else { txtHackear.text = ""; }
 
-        if (difamar.isOn == true) { txtDifamar.text = libreta.Palabras.options[libreta.Palabras.value].text; }
+        if (difamar.isOn == true) { txtDifamar.text = libreta.palabra; }
         else { txtDifamar.text = ""; }
 
-        if (aislar.isOn == true) { txtAislar.text = libreta.Palabras.options[libreta.Palabras.value].text; }
+        if (aislar.isOn == true) { txtAislar.text = libreta.palabra; }
         else { txtAislar.text = ""; }
 
-        if (crearNoticia.isOn == true) { txtCrearNoticia.text = libreta.Palabras.options[libreta.Palabras.value].text; }
+        if (crearNoticia.isOn == true) { txtCrearNoticia.text = libreta.palabra; }
         else { txtCrearNoticia.text = ""; }
 
-        if (crearEscena.isOn == true) { txtCrearEscena.text = libreta.Palabras.options[libreta.Palabras.value].text; }
+        if (crearEscena.isOn == true) { txtCrearEscena.text = libreta.palabra; }
         else { txtCrearEscena.text = ""; }
+
+        if (analizarMuestra.isOn == true) { txtAnalizarMuestra.text = libreta.palabra; }
+        else { txtAnalizarMuestra.text = ""; }
         //(hasta acá) rellenan las palabras al lado de las acciones
     }
     //Funcion llamada cada vez que se apreta el boton aprobar, aplica las acciones
     public void Eliminar(bool action)
     {
         if (action) { eliminar.tag = "OptActivado";  }
+        CompletarPalabra();
     }
     public void LavarCerebro(bool action)
     {
         if (action){ lavarCerebro.tag = "OptActivado"; }
+        CompletarPalabra();
     }
     public void Investigar(bool action)
     {
         if (action){ investigar.tag = "OptActivado"; }
+        CompletarPalabra();
     }
     public void Hackear(bool action)
     {
         if (action){ hackear.tag = "OptActivado";}
+        CompletarPalabra();
     }
     public void Difamar(bool action)
     {
         if (action) {difamar.tag = "OptActivado";}
+        CompletarPalabra();
     }
     public void Aislar(bool action)
     {
         if (action){ aislar.tag = "OptActivado";}
+        CompletarPalabra();
     }
     public void MontarEscena(bool action)
     {
         if (action){crearEscena.tag = "OptActivado";}
+        CompletarPalabra();
     }
     public void CrearnoticiaFalsa(bool action)
     {
         if (action){ crearNoticia.tag = "OptActivado"; }
+        CompletarPalabra();
+    }
+    public void AnalizarMuestra (bool action)
+    {
+        if (action) { analizarMuestra.tag = "OptActivado"; }
+        CompletarPalabra();
     }
 
     //Se activa con el boton aprobar, descelecciona y destaguè los toggles de las acciones
