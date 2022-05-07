@@ -60,10 +60,7 @@ public class Libreta : MonoBehaviour
             apagado = true;
         }
  
-        while (palabra == "Ben Benji")
-        {
-            txtBen.fontStyle = FontStyles.Underline;
-        }
+        
     }
    
 
