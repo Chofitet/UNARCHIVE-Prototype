@@ -19,20 +19,16 @@ public class Libreta : MonoBehaviour
     public GameObject BtnPepeQueño;
     public GameObject BtnPelosRojizos;
 
-    private bool SubrayadoBen;
-    private bool SubrayadoPieGrande;
-    private bool SubrayadoParquePimienta;
-    private bool SubrayadoPimientaPaluza;
-    private bool SubrayadoColorada;
-    private bool SubrayadoRed78;
-    private bool SubrayadoKateMilliard;
-    private bool SubrayadoPepeQueño;
-    private bool SubrayadoPelosRojizos;
-
-
     public TMP_Text txtBen;
+    public TMP_Text txtPieGrande;
+    public TMP_Text txtParquePimienta;
+    public TMP_Text txtPimientaPaluza;
+    public TMP_Text txtColorada;
+    public TMP_Text txtRed78;
+    public TMP_Text txtKate;
+    public TMP_Text txtPepeQueño;
+    public TMP_Text txtCabellosRojizos;
 
-    
     private void Start()
     {
         BtnBen.gameObject.SetActive(false);
@@ -59,61 +55,78 @@ public class Libreta : MonoBehaviour
             ex.CasoLeido = false;
             apagado = true;
         }
- 
-        
     }
    
-
     public void Kate()
     {
+        DesSubrayar();
         palabra = "Kate Milliard";
-       
+        txtKate.text = "<u>Kate Milliar<u>";
     }
 
     public void Ben ()
     {
+        DesSubrayar();
         palabra = "Ben Benji";
-        SubrayadoBen = true;
-        
+        txtBen.text = "<u>Ben Benji</u>";
     }
 
     public void PieGrande ()
     {
+        DesSubrayar();
         palabra = "Pie Grande";
-        SubrayadoBen = false;
+        txtPieGrande.text = "<u>Pie Grande</u>";
     }
     public void PimientaPaluza()
     {
+        DesSubrayar();
         palabra = "Pimienta Paluza";
+        txtPimientaPaluza.text = "<u>Pimienta paluza</u>";
     }
     public void ParquePimienta()
     {
+        DesSubrayar();
         palabra = "Parque Pimienta";
+        txtParquePimienta.text = "<u>Parque Pimienta</u>";
     }
     public void Colorada()
     {
+        DesSubrayar();
         palabra = "Colorada";
+        txtColorada.text = "<u>Colorada (?)</u>";
     }
     public void Red78()
     {
+        DesSubrayar();
         palabra = "Red78";
+        txtRed78.text = "<u>Red78 (?)</u>";
     }
     public void PepeQueño()
     {
+        DesSubrayar();
         palabra = "Pepe Queño";
+        txtPepeQueño.text = "<u>Pepe Queño</u>";
     }
     public void CabellosRojizos()
     {
+        DesSubrayar();
         palabra = "Cabellos rojizos";
+        txtCabellosRojizos.text = "<u>Cabellos Rojizos</u>";
     }
 
-    void Subrayar (TMP_Text text, bool Subrayado)
+    void DesSubrayar()
     {
-        if (Subrayado == false)
-        {
-            txtBen.fontStyle = FontStyles.Underline;
-           
-        } else { text.fontStyle ^= FontStyles.Underline; }
+        if(txtBen.text == "<u>Ben Benji</u>") { txtBen.text = "Ben Benji"; }
+        else if (txtPieGrande.text == "<u>Pie Grande</u>") { txtPieGrande.text = "Pie Grande"; }
+        else if (txtPimientaPaluza.text == "<u>Pimienta paluza</u>") { txtPimientaPaluza.text = "Pimienta paluza"; }
+        else if (txtParquePimienta.text == "<u>Parque Pimienta</u>") { txtParquePimienta.text = "Parque Pimienta"; }
+        else if (txtColorada.text == "<u>Colorada (?)</u>") { txtColorada.text = "Colorada (?)"; }
+        else if (txtPepeQueño.text == "<u>Pepe Queño</u>") { txtPepeQueño.text = "Pepe Queño"; }
+        else if (txtCabellosRojizos.text == "<u>Cabellos Rojizos</u>") { txtCabellosRojizos.text = "Cabellos Rojizos"; }
+        else if (txtRed78.text == "<u>Red78 (?)</u>") { txtRed78.text = "Red78 (?)"; }
+        else if (txtKate.text == "<u>Kate Milliar<u>") { txtKate.text = "Kate Milliar"; }
+
     }
+
 
 }

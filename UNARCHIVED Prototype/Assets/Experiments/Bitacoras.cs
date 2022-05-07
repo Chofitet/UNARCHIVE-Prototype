@@ -46,7 +46,7 @@ public class Bitacoras : MonoBehaviour
 
     private bool PepeEliminado;
     private bool PepeLavado;
-    private bool PepeInvestigado;
+    public bool PepeInvestigado;
     private bool PepeHackeado;
     private bool PepeDifamado;
 
