@@ -61,7 +61,7 @@ public class Bitacoras : MonoBehaviour
     }
     
     // Analiza las variables: ¿que nombre de la libreta està seleccionada?, ¿què acciòn està elegida? y si otra o esa misma accion fue ejecutada para evitar incongruencias o bitacoras repetidas.
-    // Si se cumplen las condiciones, imprimen la bitàcora correspondiente
+    // Si se cumplen las condiciones, imprimen la bitàcora correspondiente 
     public void ActualizarBitacoras()
     {
 
