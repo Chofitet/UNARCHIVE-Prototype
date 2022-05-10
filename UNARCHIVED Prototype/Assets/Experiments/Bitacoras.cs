@@ -294,7 +294,7 @@ public class Bitacoras : MonoBehaviour
     //Crea los espacios para rellenar las bitàcoras y los borra cuando es debido
     void InstanciarBitacoras()
     {
-        if (i > 4)
+        if (i > 5)
         {
             i = 0;
             y = InicioBitacora.transform.position.y;
@@ -304,14 +304,14 @@ public class Bitacoras : MonoBehaviour
         if (i == 0)
         {
             PadreAux = new GameObject("PadreBitacoras");
-            PadreAux.transform.SetParent(Canvas.transform);
+            PadreAux.transform.SetParent(InicioBitacora.transform);
         }
         
         Transform aux = PadreAux.transform;
         prefabAux = Instantiate(BitacoraPrefab, new Vector3(InicioBitacora.transform.position.x, y, InicioBitacora.transform.position.z) , InicioBitacora.transform.rotation);
         prefabAux.transform.SetParent(aux.transform);
         
-        y = y - 40;
+        y = y - 50;
         i = i + 1;   
     }
 

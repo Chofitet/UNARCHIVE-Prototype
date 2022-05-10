@@ -62,14 +62,17 @@ public class Telefono : MonoBehaviour
     void CargarLlamada ()
     {
         LlamadaEnProgreso = libreta.palabra;
-        Timer = 5;
+        Timer = 30;
         Cronometro = true;
     }
 
     public void BorrarLlamada()
     {
-        txtLlamada.text = "Interceptar linea";
-        btnplay.interactable = false;
+        if (btnllamar.interactable == true)
+        {
+            txtLlamada.text = "Interceptar linea";
+            btnplay.interactable = false;
+        }
         
     } 
     public void ReproducirLlamada ()
@@ -100,6 +103,7 @@ public class Telefono : MonoBehaviour
         }
         else txtTranscripciónLlamado.text = "No se interceptó ninguna llamada";
 
+        x = false;
         BorrarLlamada();
     }
     
