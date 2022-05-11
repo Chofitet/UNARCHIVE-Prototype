@@ -12,6 +12,7 @@ public enum CanvasType
     PC,
     Telefono,
     Libreta,
+    TV,
 }
 
 public class CanvasManager : MonoBehaviour

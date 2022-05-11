@@ -17,7 +17,7 @@ public class Bitacoras : MonoBehaviour
     //Declaración varariables
     private float y;
     private int i = 0;
-    private bool BenEliminado;
+    public bool BenEliminado;
     private bool BenLavado;
     private bool BenInvestigado;
     private bool BenHackeado;

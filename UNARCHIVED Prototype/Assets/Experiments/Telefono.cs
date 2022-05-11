@@ -12,35 +12,44 @@ public class Telefono : MonoBehaviour
     public Button btnplay;
     public Button btnREC;
     public TMP_Text txtLlamada;
-    float Timer;
+   
     public TMP_Text txtTranscripciónLlamado;
-    bool Cronometro = false;
+   
     string LlamadaEnProgreso;
+    float InicioLlamada;
 
     bool x;
 
-    private void Update()
+    private void OnEnable()
     {
-        if (Cronometro && btnllamar.interactable == false)
-        {
-            Timer = Timer - Time.deltaTime;
-        }
+        TimeManager.CambioHoras += CooldownTelefono;
+    }
 
-        if (Timer < 0)
+    private void OnDisable()
+    {
+        TimeManager.CambioHoras += CooldownTelefono;
+    }
+
+    private void CooldownTelefono() 
+    {
+        if (TimeManager.Hora == InicioLlamada + 1)
         {
-            Cronometro = false;
-            Timer = 0;
             btnplay.interactable = true;
         }
+    }
+    private void Update()
+    {
 
-        if (txtLlamada.text == "Interceptar linea" || txtLlamada.text == "") { btnREC.interactable = false; btnllamar.interactable = true; }
+        if (txtLlamada.text == "Interceptar linea" || txtLlamada.text == "") { btnREC.interactable = false; btnllamar.interactable = true; InicioLlamada = -200;  }
         else btnREC.interactable = true;
+
     }
 
     public void Llamar()
     {
         txtLlamada.text = libreta.palabra;
         txtTranscripciónLlamado.text = "";
+        LlamadaEnProgreso = libreta.palabra;
     }
 
     public void REC()
@@ -49,28 +58,26 @@ public class Telefono : MonoBehaviour
         if (x == false)
         { 
             btnllamar.interactable = false;
+            InicioLlamada = TimeManager.Hora;
             x = true; 
         }
         else 
         {
             btnllamar.interactable = true;
+            InicioLlamada = -200;
             x = false;
         }
-        CargarLlamada();
-    }
-
-    void CargarLlamada ()
-    {
-        LlamadaEnProgreso = libreta.palabra;
-        Timer = 30;
-        Cronometro = true;
+        txtTranscripciónLlamado.text = "";
+        
     }
 
     public void BorrarLlamada()
     {
-        if (btnllamar.interactable == true)
+        if (btnllamar.interactable == false)
         {
             txtLlamada.text = "Interceptar linea";
+            btnREC.interactable = false;
+            btnllamar.interactable = true;
             btnplay.interactable = false;
         }
         
