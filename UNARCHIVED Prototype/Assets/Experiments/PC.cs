@@ -23,18 +23,18 @@ public class PC : MonoBehaviour
     public void MostrarWiki ()
     {
         //================================================================ Wiki Ben =======================================================//
-        if(txtBuscador.text == "Ben Benji")
+        if(txtBuscador.text == "Ben Benjinnnnnnnnnn")
         {
-            txtInfo.text = "Ben Benji: Niño normal, no posee caracteristicas ni poderes especiales." 
-                + System.Environment.NewLine + "Edad: 10 años" 
-                + System.Environment.NewLine + "Estado: Niño de verdad" 
+            txtInfo.text = "Ben Benji: Niï¿½o normal, no posee caracteristicas ni poderes especiales." 
+                + System.Environment.NewLine + "Edad: 10 aï¿½os" 
+                + System.Environment.NewLine + "Estado: Niï¿½o de verdad" 
                 + System.Environment.NewLine + "Ultima vez visto en: Pueblo Pimienta, Desulum";
         }
         //================================================================ Wiki Pie Grande ==============================================//
         else if (txtBuscador.text == "Pie Grande")
         {
-            txtInfo.text = "Pie Grande: primo lejano del Hombre de las Nieves, esta criatura mitica ha sido avistado por todo el globo a lo largo de su existencia, pero eludiendo a las autoridades en cada oportunidad. Gracias a la intervención de su primo el tratado de paz firmado en el 79 terminó años de rivalidad y caceria entre Pie Grande y la agencia. Es considerado una especie en peligro de extincion, debe ser protegida y mantenida fuera del ojo publico." 
-                + System.Environment.NewLine + "Edad: 134 años(segun el), relativamente joven en años pie." 
+            txtInfo.text = "Pie Grande: primo lejano del Hombre de las Nieves, esta criatura mitica ha sido avistado por todo el globo a lo largo de su existencia, pero eludiendo a las autoridades en cada oportunidad. Gracias a la intervenciï¿½n de su primo el tratado de paz firmado en el 79 terminï¿½ aï¿½os de rivalidad y caceria entre Pie Grande y la agencia. Es considerado una especie en peligro de extincion, debe ser protegida y mantenida fuera del ojo publico." 
+                + System.Environment.NewLine + "Edad: 134 aï¿½os(segun el), relativamente joven en aï¿½os pie." 
                 + System.Environment.NewLine + "Estado: Divorciado en el 91."
                 + System.Environment.NewLine + "Ultima vez visto en:  Monte Desulum";
         }
@@ -47,19 +47,19 @@ public class PC : MonoBehaviour
         //================================================================ Wiki Colorada =======================================================//
         else if (txtBuscador.text == "Colorada")
         {
-            txtInfo.text = "Información sin correlación"
+            txtInfo.text = "Informaciï¿½n sin correlaciï¿½n"
                 + System.Environment.NewLine + "";
         }
-        //================================================================ Wiki Pepe Queño =======================================================//
+        //================================================================ Wiki Pepe Queï¿½o =======================================================//
 
         // Antes de investigarlo
-        else if (txtBuscador.text == "Pepe Queño" )
+        else if (txtBuscador.text == "Pepe Queï¿½o" )
         {
             txtInfo.text = ""
                 + System.Environment.NewLine + "";
         }
         //Despues de investigarlo
-        else if (txtBuscador.text == "Pepe Queño" && bitacoras.PepeInvestigado == true)
+        else if (txtBuscador.text == "Pepe Queï¿½o" && bitacoras.PepeInvestigado == true)
         {
             txtInfo.text = ""
                 + System.Environment.NewLine + "";
