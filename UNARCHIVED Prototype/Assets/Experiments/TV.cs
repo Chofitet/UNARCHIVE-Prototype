@@ -14,8 +14,8 @@ public class TV : MonoBehaviour
     [SerializeField] Bitacoras bitacoras;
 
 
-    string BenDesapareceTitulo = "NiñoNO ES ENCONTRADO HAY QUE DOLOR QUE PENA";
-    string BenDesapareceNoticia = "NiñoNO ES ENCONTRADO HAY QUE DOLOR QUE PENA, a pero fue encontrado, borra eso";
+    string BenDesapareceTitulo = "Niï¿½oNO ES ENCONTRADO HAY QUE DOLOR QUE PENA";
+    string BenDesapareceNoticia = "Niï¿½oNO ES ENCONTRADO HAY QUE DOLOR QUE PENA, a pero fue encontrado, borra eso";
 
 
     private void OnEnable()
@@ -50,7 +50,7 @@ public class TV : MonoBehaviour
                 titular.text = "Ahora explotan";
                 break;
             case 3:
-                titular.text = "Queso invisible";
+                titular.text = "CÃ³mo y donde encontrar queso invisible";
                 break;
                 
             case 4:
