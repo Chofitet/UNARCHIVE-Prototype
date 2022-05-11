@@ -14,6 +14,7 @@ public class Bitacoras : MonoBehaviour
     public TMP_Text BitacoraPrefab;
     private TMP_Text prefabAux;
     public Transform InicioBitacora;
+    public Transform InicioBitacora2;
     //Declaración varariables
     private float y;
     private int i = 0;
@@ -294,7 +295,7 @@ public class Bitacoras : MonoBehaviour
     //Crea los espacios para rellenar las bitàcoras y los borra cuando es debido
     void InstanciarBitacoras()
     {
-        if (i > 5)
+        if (i > 11)
         {
             i = 0;
             y = InicioBitacora.transform.position.y;
@@ -306,11 +307,24 @@ public class Bitacoras : MonoBehaviour
             PadreAux = new GameObject("PadreBitacoras");
             PadreAux.transform.SetParent(InicioBitacora.transform);
         }
-        
-        Transform aux = PadreAux.transform;
-        prefabAux = Instantiate(BitacoraPrefab, new Vector3(InicioBitacora.transform.position.x, y, InicioBitacora.transform.position.z) , InicioBitacora.transform.rotation);
-        prefabAux.transform.SetParent(aux.transform);
-        
+
+        if (i < 6)
+        {
+            Transform aux = PadreAux.transform;
+            prefabAux = Instantiate(BitacoraPrefab, new Vector3(InicioBitacora.transform.position.x, y, InicioBitacora.transform.position.z), InicioBitacora.transform.rotation);
+            prefabAux.transform.SetParent(aux.transform);
+        }
+
+        if (i == 6) y = InicioBitacora2.transform.position.y;
+
+        if (i >= 6) 
+        {
+            Transform aux = PadreAux.transform;
+            prefabAux = Instantiate(BitacoraPrefab, new Vector3(InicioBitacora2.transform.position.x, y, InicioBitacora2.transform.position.z), InicioBitacora2.transform.rotation);
+            prefabAux.transform.SetParent(aux.transform);
+
+        }
+
         y = y - 50;
         i = i + 1;   
     }
