@@ -55,13 +55,18 @@ public class PC : MonoBehaviour
         // Antes de investigarlo
         else if (txtBuscador.text == "Pepe Que�o" )
         {
-            txtInfo.text = ""
+            txtInfo.text = "No hashdasdhas"
                 + System.Environment.NewLine + "";
         }
         //Despues de investigarlo
         else if (txtBuscador.text == "Pepe Que�o" && bitacoras.PepeInvestigado == true)
         {
             txtInfo.text = ""
+                + System.Environment.NewLine + "";
+        }
+        else if (txtBuscador.text == "Pepe Que�o" && bitacoras.PepeInvestigado == true)//////post laboratorio , analisis
+        {
+            txtInfo.text = " Hijo bastardo de Pie Grande y posible causa de la separación de este en el 91. Su existencia fué un secreto para La Agencia hasta al incidente Venus in Fur. Reside actualmente en un orfanato. El paradero de su madre biológica permanece un misterio para todo aquel que no compra el DLC."
                 + System.Environment.NewLine + "";
         }
         //================================================================ Wiki Pimienta Paluza =======================================================//
