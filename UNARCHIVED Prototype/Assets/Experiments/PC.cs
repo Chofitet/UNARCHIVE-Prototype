@@ -23,12 +23,12 @@ public class PC : MonoBehaviour
     public void MostrarWiki ()
     {
         //================================================================ Wiki Ben =======================================================//
-        if(txtBuscador.text == "Ben Benjinnnnnnnnnn")
+        if(txtBuscador.text == "Ben Benji")
         {
-            txtInfo.text = "Ben Benji: Ni�o normal, no posee caracteristicas ni poderes especiales." 
+            txtInfo.text = "Ben Benji: Niño común, académicamente correcto, no posee características ni poderes especiales. Si leer esto parece aburrido y carente de imaginación, agradece que no conoces a Ben Benji." 
                 + System.Environment.NewLine + "Edad: 10 a�os" 
                 + System.Environment.NewLine + "Estado: Ni�o de verdad" 
-                + System.Environment.NewLine + "Ultima vez visto en: Pueblo Pimienta, Desulum";
+                + System.Environment.NewLine + "Ultima vez visto en: Pueblo Pimienta";
         }
         //================================================================ Wiki Pie Grande ==============================================//
         else if (txtBuscador.text == "Pie Grande")
@@ -42,8 +42,10 @@ public class PC : MonoBehaviour
         //================================================================ Wiki Kate Milliard =======================================================//
         else if (txtBuscador.text == "Kate Milliard")
         {
-            txtInfo.text = ""
-                + System.Environment.NewLine + "";
+            txtInfo.text = "Kate Milliard: Actriz de alto reconocimiento, saltó a la fama con la comedia romántica "Bananarama" en 1994 y consolidó su lugar en el podio dramatúrgico con "Not without my monkey" en 1997. Al negar teñir o cubrir su rojiza cabellera para interpretar roles ha logrado convertir ese capricho en su marca registrada. Aunque dice “aún no planea dejar la actuación, muchachos”, ha pasado a desarrollarse en los últimos años como directora de documentales sobre animales en peligro de extinción."
+                + System.Environment.NewLine + "Edad: 24 años"
+                + System.Environment.NewLine + "Estado: Soltera"
+                + System.Environment.NewLine + "Última vez vista en: Monte Quete.";
         }
         //================================================================ Wiki Colorada =======================================================//
         else if (txtBuscador.text == "Colorada")
@@ -68,13 +70,24 @@ public class PC : MonoBehaviour
         else if (txtBuscador.text == "Pepe Que�o" && bitacoras.PepeInvestigado == true)//////post laboratorio , analisis
         {
             txtInfo.text = " Hijo bastardo de Pie Grande y posible causa de la separación de este en el 91. Su existencia fué un secreto para La Agencia hasta al incidente Venus in Fur. Reside actualmente en un orfanato. El paradero de su madre biológica permanece un misterio para todo aquel que no compra el DLC."
-                + System.Environment.NewLine + "";
+                + System.Environment.NewLine + "Edad:10 años híbridos."
+                + System.Environment.NewLine + "Estado: Pequeño niño pie grande."
+                + System.Environment.NewLine + "Última vez visto en: Pueblo Pimienta.";
         }
         //================================================================ Wiki Pimienta Paluza =======================================================//
-        else if (txtBuscador.text == "Pimienta Paluza")
+        else if (txtBuscador.text == "Pimientapaluza")
         {
-            txtInfo.text = ""
-                + System.Environment.NewLine + "";
+            txtInfo.text = "Pimentapaluza: Solo un absoluto careta buscaría el significado de la Pimientaexperiencia en una computadora."
+            + System.Environment.NewLine + "Es el 27 de Marzo. SIEMPRE. CARETA."
+            + System.Environment.NewLine +
+            + System.Environment.NewLine +
+            + System.Environment.NewLine +
+            + System.Environment.NewLine +
+            + System.Environment.NewLine +
+            + System.Environment.NewLine +
+            + System.Environment.NewLine +
+            + System.Environment.NewLine +
+            + System.Environment.NewLine + "NOTA: POR FAVOR, GARY,  MANTENER CIVILES LAS ENTRADAS DE LA BASE DE DATOS";
         }
         //================================================================ Wiki Parque Pimienta =======================================================//
         else if (txtBuscador.text== "Parque Pimienta")
