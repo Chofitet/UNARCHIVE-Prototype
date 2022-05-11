@@ -33,10 +33,11 @@ public class PC : MonoBehaviour
         //================================================================ Wiki Pie Grande ==============================================//
         else if (txtBuscador.text == "Pie Grande")
         {
-            txtInfo.text = "Pie Grande: primo lejano del Hombre de las Nieves, esta criatura mitica ha sido avistado por todo el globo a lo largo de su existencia, pero eludiendo a las autoridades en cada oportunidad. Gracias a la intervenci�n de su primo el tratado de paz firmado en el 79 termin� a�os de rivalidad y caceria entre Pie Grande y la agencia. Es considerado una especie en peligro de extincion, debe ser protegida y mantenida fuera del ojo publico." 
-                + System.Environment.NewLine + "Edad: 134 a�os(segun el), relativamente joven en a�os pie." 
+            txtInfo.text = "Pie Grande: La Leyenda es cierta. De naturaleza andante y esotérica, está reservada criatura ha sido avistada a lo largo, ancho y alto del globo durante su centenaria existencia; eludiendo a cada largo paso de su personal travesía cualquier tipo de intento de captura.Gracias a la intervención de su primo, el tratado de paz firmado en el 79, terminó años de rivalidad y cacería entre Pie Grande y La Agencia; aun así no es un ser ajeno a la violencia y deben evitarse situaciones incómodas.n/Para la incredulidad del no iniciado, Pie Grande ha mantenido contacto con los avances tecnológicos y, debido a su reservada personalidad, se comunica mejor vía chat que en persona./nEs considerado una noble especie en peligro de extinción, y como tal debe ser protegida del alcance del vulgar ciudadano común."
+ 
+                + System.Environment.NewLine + "Edad: 134 años(sin certificado), relativamente joven en años pie." 
                 + System.Environment.NewLine + "Estado: Divorciado en el 91."
-                + System.Environment.NewLine + "Ultima vez visto en:  Monte Desulum";
+                + System.Environment.NewLine + "Ultima vez visto en:  Monte Quete";
         }
         //================================================================ Wiki Kate Milliard =======================================================//
         else if (txtBuscador.text == "Kate Milliard")
