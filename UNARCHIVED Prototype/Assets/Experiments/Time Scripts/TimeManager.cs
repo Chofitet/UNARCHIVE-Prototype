@@ -12,7 +12,7 @@ public class TimeManager : MonoBehaviour
     public static int Minuto { get; private set; }
     public static int Hora { get; private set; }
 
-    private float MinutosPorSegundosReales = 0.1f;
+    private float MinutosPorSegundosReales = 1f;
     private float timer;
 
     void Start()
