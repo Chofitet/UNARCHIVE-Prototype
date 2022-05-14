@@ -1099,6 +1099,7 @@ MonoBehaviour:
   btnREC: {fileID: 1526328218}
   txtLlamada: {fileID: 1485334863}
   "txtTranscripci\xF3nLlamado": {fileID: 1078501383}
+  LLamadaDiaria: 0
 --- !u!1 &127716413
 GameObject:
   m_ObjectHideFlags: 0
@@ -7675,7 +7676,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1167105853
 Transform:
   m_ObjectHideFlags: 0

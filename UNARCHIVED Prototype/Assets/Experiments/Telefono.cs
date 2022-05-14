@@ -12,9 +12,11 @@ public class Telefono : MonoBehaviour
     public Button btnplay;
     public Button btnREC;
     public TMP_Text txtLlamada;
+    
    
     public TMP_Text txtTranscripciónLlamado;
    
+    public  bool LLamadaDiaria;
     string LlamadaEnProgreso;
     float InicioLlamada;
 
@@ -32,7 +34,7 @@ public class Telefono : MonoBehaviour
 
     private void CooldownTelefono() 
     {
-        if (TimeManager.Hora == InicioLlamada + 1)
+        if (TimeManager.Hora == InicioLlamada + 3)
         {
             btnplay.interactable = true;
         }
@@ -87,13 +89,13 @@ public class Telefono : MonoBehaviour
         //Llamado ben
         if (LlamadaEnProgreso == "Ben Benji")
         {
-            txtTranscripciónLlamado.text = "***********************************************************************";
+            txtTranscripciónLlamado.text = "No ben que hiciste";
             libreta.BtnPepeQueño.SetActive(true);
         }
         //Llamado Pie Grande
         else if (LlamadaEnProgreso == "Pie Grande")
         {
-            txtTranscripciónLlamado.text = "******************************************************************";
+            txtTranscripciónLlamado.text = "unga unga aplastar porunga";
             
         }
         // Llamar Kate Milliard
