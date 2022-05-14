@@ -46,6 +46,7 @@ public class Bitacoras : MonoBehaviour
     public bool PepeInvestigado;
     private bool PepeHackeado;
     private bool PepeDifamado;
+    public bool PepeAnalizado;
     private bool CabellosRojijosAnalizado;
 
 
@@ -66,12 +67,13 @@ public class Bitacoras : MonoBehaviour
         {
             if (A.eliminar.CompareTag(tag = "OptActivado") && A.eliminar.isOn == true && BenEliminado == false)
             {
-                float RetencionBitacora = 2;
+                float RetencionBitacora = 3;
                 float HoraCompletado = RetencionBitacora + TimeManager.Hora;
                 float CalculoTiempo = RetencionBitacora * 60 * time.MinutosXseg;
                 string txt = "Ben fue eliminado exitosamente";
                 string FechaCompletado = "2" + time.Dia + "/03/2000";
                 string txtAccion = "Eliminar a Ben";
+                Toggle accion = A.eliminar;
                 if (HoraCompletado >= 18)
                 {
                     HoraCompletado = 6 + (RetencionBitacora - (18 - TimeManager.Hora));
@@ -79,7 +81,7 @@ public class Bitacoras : MonoBehaviour
                 }
                 InstanciarBitacoras(txtAccion, FechaCompletado, HoraCompletado);
                 TMP_Text textoPrefab = prefabAux.GetComponent<TMP_Text>();
-                StartCoroutine(GuardarBitacora(CalculoTiempo, txt, textoPrefab));
+                StartCoroutine(GuardarBitacora(CalculoTiempo, txt, textoPrefab, accion));
                 A.eliminar.interactable = false; 
                 BenEliminado = true;
             }
@@ -92,6 +94,7 @@ public class Bitacoras : MonoBehaviour
                 string txt = "Borramos con exito la memoria de Ben";
                 string FechaCompletado = "2" + time.Dia + "/03/2000";
                 string txtAccion = "Lavar cerebro a Ben";
+                Toggle accion = A.lavarCerebro;
                 if (HoraCompletado > 18)
                 {
                     HoraCompletado = 6 + (RetencionBitacora - (18 - TimeManager.Hora));
@@ -99,8 +102,8 @@ public class Bitacoras : MonoBehaviour
                 }
                 InstanciarBitacoras(txtAccion, FechaCompletado, HoraCompletado);
                 TMP_Text textoPrefab = prefabAux.GetComponent<TMP_Text>();
-                StartCoroutine(GuardarBitacora(CalculoTiempo, txt, textoPrefab));
-                
+                StartCoroutine(GuardarBitacora(CalculoTiempo, txt, textoPrefab, accion));
+                A.lavarCerebro.interactable = false;
                 BenLavado = true;
             }
             // investigar
@@ -110,6 +113,7 @@ public class Bitacoras : MonoBehaviour
                 float HoraCompletado = RetencionBitacora + TimeManager.Hora;
                 float CalculoTiempo = RetencionBitacora * 60 * time.MinutosXseg;
                 string txt = "Ben fue investigado";
+                Toggle accion = A.investigar;
                 string FechaCompletado = "2" + time.Dia + "/03/2000";
                 string txtAccion = "Investigar a Ben";
                 if (HoraCompletado >= 18)
@@ -119,18 +123,20 @@ public class Bitacoras : MonoBehaviour
                 }
                 InstanciarBitacoras(txtAccion, FechaCompletado, HoraCompletado);
                 TMP_Text textoPrefab = prefabAux.GetComponent<TMP_Text>();
-                StartCoroutine(GuardarBitacora(CalculoTiempo, txt, textoPrefab));
+                StartCoroutine(GuardarBitacora(CalculoTiempo, txt, textoPrefab, accion));
                 BenInvestigado = true;
+                A.investigar.interactable = false;
             }
             //Hackear
             if (A.hackear.CompareTag(tag = "OptActivado") && A.hackear.isOn == true && BenHackeado == false)
             {
-                float RetencionBitacora = 12;
+                float RetencionBitacora = 3;
                 float HoraCompletado = RetencionBitacora + TimeManager.Hora;
                 float CalculoTiempo = RetencionBitacora * 60 * time.MinutosXseg;
                 string txt = "Ben fue eliminado exitosamente";
                 string FechaCompletado = "2" + time.Dia + "/03/2000";
                 string txtAccion = "Hackear a Ben";
+                Toggle accion = A.hackear;
                 if (HoraCompletado >= 18)
                 {
                     HoraCompletado = 6 + (RetencionBitacora - (18 - TimeManager.Hora));
@@ -138,16 +144,18 @@ public class Bitacoras : MonoBehaviour
                 }
                 InstanciarBitacoras(txtAccion, FechaCompletado, HoraCompletado);
                 TMP_Text textoPrefab = prefabAux.GetComponent<TMP_Text>();
-                StartCoroutine(GuardarBitacora(CalculoTiempo, txt, textoPrefab));
+                StartCoroutine(GuardarBitacora(CalculoTiempo, txt, textoPrefab, accion));
                 BenHackeado = true;
+                A.hackear.interactable = false;
             }
             //Difamar
             if (A.difamar.CompareTag(tag = "OptActivado") && A.difamar.isOn == true && BenHackeado == true && BenDifamado == false)
             {
-                float RetencionBitacora = 12;
+                float RetencionBitacora = 3;
                 float HoraCompletado = RetencionBitacora + TimeManager.Hora;
                 float CalculoTiempo = RetencionBitacora * 60 * time.MinutosXseg;
                 string txt = "Ben fue eliminado exitosamente";
+                Toggle accion = A.difamar;
                 string FechaCompletado = "2" + time.Dia + "/03/2000";
                 string txtAccion = "Difamar a Ben";
                 if (HoraCompletado >= 18)
@@ -157,8 +165,9 @@ public class Bitacoras : MonoBehaviour
                 }
                 InstanciarBitacoras(txtAccion, FechaCompletado, HoraCompletado);
                 TMP_Text textoPrefab = prefabAux.GetComponent<TMP_Text>();
-                StartCoroutine(GuardarBitacora(CalculoTiempo, txt, textoPrefab));
+                StartCoroutine(GuardarBitacora(CalculoTiempo, txt, textoPrefab, accion));
                 BenDifamado = true;
+                A.difamar.interactable = false;
             }
         }
 
@@ -169,12 +178,13 @@ public class Bitacoras : MonoBehaviour
             //ELIMINAR 
             if (A.eliminar.CompareTag(tag = "OptActivado") && A.eliminar.isOn == true && PieGrandeEliminado == false)
             {
-                float RetencionBitacora = 12;
+                float RetencionBitacora = 3;
                 float HoraCompletado = RetencionBitacora + TimeManager.Hora;
                 float CalculoTiempo = RetencionBitacora * 60 * time.MinutosXseg;
                 string txt = "Ben fue eliminado exitosamente";
                 string FechaCompletado = "2" + time.Dia + "/03/2000";
                 string txtAccion = "Eliminar a Pie Grande";
+                Toggle accion = A.eliminar;
                 if (HoraCompletado >= 18)
                 {
                     HoraCompletado = 6 + (RetencionBitacora - (18 - TimeManager.Hora));
@@ -182,19 +192,21 @@ public class Bitacoras : MonoBehaviour
                 }
                 InstanciarBitacoras(txtAccion, FechaCompletado, HoraCompletado);
                 TMP_Text textoPrefab = prefabAux.GetComponent<TMP_Text>();
-                StartCoroutine(GuardarBitacora(CalculoTiempo, txt, textoPrefab));
+                StartCoroutine(GuardarBitacora(CalculoTiempo, txt, textoPrefab, accion));
                 PieGrandeEliminado = true;
+                A.eliminar.interactable = false;
             }
 
             //Lavar Cerebro 
             if (A.lavarCerebro.CompareTag(tag = "OptActivado") && A.lavarCerebro.isOn == true && PieGrandeLavado == false && PieGrandeEliminado == false)
             {
-                float RetencionBitacora = 12;
+                float RetencionBitacora = 3;
                 float HoraCompletado = RetencionBitacora + TimeManager.Hora;
                 float CalculoTiempo = RetencionBitacora * 60 * time.MinutosXseg;
                 string txt = "Ben fue eliminado exitosamente";
                 string FechaCompletado = "2" + time.Dia + "/03/2000";
                 string txtAccion = "Lavar cerebro Pie Grande";
+                Toggle accion = A.lavarCerebro;
                 if (HoraCompletado >= 18)
                 {
                     HoraCompletado = 6 + (RetencionBitacora - (18 - TimeManager.Hora));
@@ -202,8 +214,9 @@ public class Bitacoras : MonoBehaviour
                 }
                 InstanciarBitacoras(txtAccion, FechaCompletado, HoraCompletado);
                 TMP_Text textoPrefab = prefabAux.GetComponent<TMP_Text>();
-                StartCoroutine(GuardarBitacora(CalculoTiempo, txt, textoPrefab));
+                StartCoroutine(GuardarBitacora(CalculoTiempo, txt, textoPrefab, accion));
                 PieGrandeLavado = true;
+                A.lavarCerebro.interactable = false;
             }
             //Investigar
             if (A.investigar.CompareTag(tag = "OptActivado") && A.investigar.isOn == true && PieGrandeInvestigado == false)
@@ -214,6 +227,7 @@ public class Bitacoras : MonoBehaviour
                 string txt = "Ben fue eliminado exitosamente";
                 string FechaCompletado = "2" + time.Dia + "/03/2000";
                 string txtAccion = "Investigar Pie Grande";
+                Toggle accion = A.investigar;
                 if (HoraCompletado >= 18)
                 {
                     HoraCompletado = 6 + (RetencionBitacora - (18 - TimeManager.Hora));
@@ -221,18 +235,20 @@ public class Bitacoras : MonoBehaviour
                 }
                 InstanciarBitacoras(txtAccion, FechaCompletado, HoraCompletado);
                 TMP_Text textoPrefab = prefabAux.GetComponent<TMP_Text>();
-                StartCoroutine(GuardarBitacora(CalculoTiempo, txt, textoPrefab));
+                StartCoroutine(GuardarBitacora(CalculoTiempo, txt, textoPrefab, accion));
                 PieGrandeInvestigado = true;
+                A.investigar.interactable = false;
             }
             //Hackeado
             if (A.hackear.CompareTag(tag = "OptActivado") && A.hackear.isOn == true && PieGrandeHackeado == false)
             {
-                float RetencionBitacora = 12;
+                float RetencionBitacora = 3;
                 float HoraCompletado = RetencionBitacora + TimeManager.Hora;
                 float CalculoTiempo = RetencionBitacora * 60 * time.MinutosXseg;
                 string txt = "Ben fue eliminado exitosamente";
                 string FechaCompletado = "2" + time.Dia + "/03/2000";
                 string txtAccion = "Hackear Pie Grande";
+                Toggle accion = A.hackear;
                 if (HoraCompletado >= 18)
                 {
                     HoraCompletado = 6 + (RetencionBitacora - (18 - TimeManager.Hora));
@@ -240,19 +256,20 @@ public class Bitacoras : MonoBehaviour
                 }
                 InstanciarBitacoras(txtAccion, FechaCompletado, HoraCompletado);
                 TMP_Text textoPrefab = prefabAux.GetComponent<TMP_Text>();
-                StartCoroutine(GuardarBitacora(CalculoTiempo, txt, textoPrefab));
+                StartCoroutine(GuardarBitacora(CalculoTiempo, txt, textoPrefab, accion));
                 PieGrandeHackeado = true;
-                libreta.BtnRed78.gameObject.SetActive(true);
+                A.hackear.interactable = false;
             }
             //Difamar
             if (A.difamar.CompareTag(tag = "OptActivado") && A.difamar.isOn == true && PieGrandeDifamado == false)
             {
-                float RetencionBitacora = 12;
+                float RetencionBitacora = 3;
                 float HoraCompletado = RetencionBitacora + TimeManager.Hora;
                 float CalculoTiempo = RetencionBitacora * 60 * time.MinutosXseg;
                 string txt = "Ben fue eliminado exitosamente";
                 string FechaCompletado = "2" + time.Dia + "/03/2000";
                 string txtAccion = "Difamar Pie Grande";
+                Toggle accion = A.difamar;
                 if (HoraCompletado >= 18)
                 {
                     HoraCompletado = 6 + (RetencionBitacora - (18 - TimeManager.Hora));
@@ -260,8 +277,9 @@ public class Bitacoras : MonoBehaviour
                 }
                 InstanciarBitacoras(txtAccion, FechaCompletado, HoraCompletado);
                 TMP_Text textoPrefab = prefabAux.GetComponent<TMP_Text>();
-                StartCoroutine(GuardarBitacora(CalculoTiempo, txt, textoPrefab));
+                StartCoroutine(GuardarBitacora(CalculoTiempo, txt, textoPrefab, accion));
                 PieGrandeDifamado = true;
+                A.difamar.interactable = false;
             }
         }
         //=========================================================== Bitacoras Parque Pimienta =================================================//
@@ -270,12 +288,13 @@ public class Bitacoras : MonoBehaviour
             //Aislar
             if (A.aislar.CompareTag(tag = "OptActivado") && A.aislar.isOn == true && ParquePimientaAislado == false)
             {
-                float RetencionBitacora = 12;
+                float RetencionBitacora = 3;
                 float HoraCompletado = RetencionBitacora + TimeManager.Hora;
                 float CalculoTiempo = RetencionBitacora * 60 * time.MinutosXseg;
                 string txt = "Ben fue eliminado exitosamente";
                 string FechaCompletado = "2" + time.Dia + "/03/2000";
                 string txtAccion = "Aislar Parque Pimienta";
+                Toggle accion = A.aislar;
                 if (HoraCompletado >= 18)
                 {
                     HoraCompletado = 6 + (RetencionBitacora - (18 - TimeManager.Hora));
@@ -283,8 +302,9 @@ public class Bitacoras : MonoBehaviour
                 }
                 InstanciarBitacoras(txtAccion, FechaCompletado, HoraCompletado);
                 TMP_Text textoPrefab = prefabAux.GetComponent<TMP_Text>();
-                StartCoroutine(GuardarBitacora(CalculoTiempo, txt, textoPrefab));
+                StartCoroutine(GuardarBitacora(CalculoTiempo, txt, textoPrefab, accion));
                 ParquePimientaAislado = true;
+                A.aislar.interactable = false;
             }
             //Montar Escena
             if (A.crearEscena.CompareTag(tag = "OptActivado") && A.crearEscena.isOn == true && ParquePimientaEscena == false)
@@ -295,6 +315,7 @@ public class Bitacoras : MonoBehaviour
                 string txt = "Ben fue eliminado exitosamente";
                 string FechaCompletado = "2" + time.Dia + "/03/2000";
                 string txtAccion = "Montar escena Parque Pimienta";
+                Toggle accion = A.crearEscena;
                 if (HoraCompletado >= 18)
                 {
                     HoraCompletado = 6 + (RetencionBitacora - (18 - TimeManager.Hora));
@@ -302,8 +323,9 @@ public class Bitacoras : MonoBehaviour
                 }
                 InstanciarBitacoras(txtAccion, FechaCompletado, HoraCompletado);
                 TMP_Text textoPrefab = prefabAux.GetComponent<TMP_Text>();
-                StartCoroutine(GuardarBitacora(CalculoTiempo, txt, textoPrefab));
+                StartCoroutine(GuardarBitacora(CalculoTiempo, txt, textoPrefab, accion));
                 ParquePimientaEscena = true;
+                A.crearEscena.interactable = false;
             }
         }
         //========================================================== Bitacoras Pimienta Paluza ==================================================//
@@ -318,6 +340,7 @@ public class Bitacoras : MonoBehaviour
                 string txt = "Ben fue eliminado exitosamente";
                 string FechaCompletado = "2" + time.Dia + "/03/2000";
                 string txtAccion = "Montar escena Pimienta Paluza";
+                Toggle accion = A.crearEscena;
                 if (HoraCompletado >= 18)
                 {
                     HoraCompletado = 6 + (RetencionBitacora - (18 - TimeManager.Hora));
@@ -325,8 +348,9 @@ public class Bitacoras : MonoBehaviour
                 }
                 InstanciarBitacoras(txtAccion, FechaCompletado, HoraCompletado);
                 TMP_Text textoPrefab = prefabAux.GetComponent<TMP_Text>();
-                StartCoroutine(GuardarBitacora(CalculoTiempo, txt, textoPrefab));
+                StartCoroutine(GuardarBitacora(CalculoTiempo, txt, textoPrefab, accion));
                 PimientaPaluzaEscena = true;
+                A.crearEscena.interactable = false;
             }
         }
         //========================================================= Bitacoras Colorada ==========================================================//
@@ -341,6 +365,7 @@ public class Bitacoras : MonoBehaviour
                 string txt = "Ben fue eliminado exitosamente";
                 string FechaCompletado = "2" + time.Dia + "/03/2000";
                 string txtAccion = "Investigar colorada";
+                Toggle accion = A.investigar;
                 if (HoraCompletado >= 18)
                 {
                     HoraCompletado = 6 + (RetencionBitacora - (18 - TimeManager.Hora));
@@ -348,8 +373,9 @@ public class Bitacoras : MonoBehaviour
                 }
                 InstanciarBitacoras(txtAccion, FechaCompletado, HoraCompletado);
                 TMP_Text textoPrefab = prefabAux.GetComponent<TMP_Text>();
-                StartCoroutine(GuardarBitacora(CalculoTiempo, txt, textoPrefab));
+                StartCoroutine(GuardarBitacora(CalculoTiempo, txt, textoPrefab, accion));
                 ColoradaInvestigada = true;
+                A.investigar.interactable = false;
             }
         }
         //======================================================= Bitacoras Red78 ==============================================================//
@@ -364,6 +390,7 @@ public class Bitacoras : MonoBehaviour
                 string txt = "Ben fue eliminado exitosamente";
                 string FechaCompletado = "2" + time.Dia + "/03/2000";
                 string txtAccion = "Investigar Red78";
+                Toggle accion = A.investigar;
                 if (HoraCompletado >= 18)
                 {
                     HoraCompletado = 6 + (RetencionBitacora - (18 - TimeManager.Hora));
@@ -371,22 +398,24 @@ public class Bitacoras : MonoBehaviour
                 }
                 InstanciarBitacoras(txtAccion, FechaCompletado, HoraCompletado);
                 TMP_Text textoPrefab = prefabAux.GetComponent<TMP_Text>();
-                StartCoroutine(GuardarBitacora(CalculoTiempo, txt, textoPrefab));
+                StartCoroutine(GuardarBitacora(CalculoTiempo, txt, textoPrefab, accion));
                 Red78Investigada = true;
-                libreta.BtnKateMilliard.gameObject.SetActive(true);
+                A.investigar.interactable = false;
             }
         }
         //===================================================== Bitacoras Kate Milliard ======================================================//
         if (libreta.palabra == "Kate Milliard")
         {
+            //ELIMINAR
             if (A.eliminar.CompareTag(tag = "OptActivado") && A.eliminar.isOn == true && KateEliminada == false)
             {
-                float RetencionBitacora = 12;
+                float RetencionBitacora = 3;
                 float HoraCompletado = RetencionBitacora + TimeManager.Hora;
                 float CalculoTiempo = RetencionBitacora * 60 * time.MinutosXseg;
                 string txt = "Ben fue eliminado exitosamente";
                 string FechaCompletado = "2" + time.Dia + "/03/2000";
                 string txtAccion = "Eliminar Kate Milliard";
+                Toggle accion = A.eliminar;
                 if (HoraCompletado >= 18)
                 {
                     HoraCompletado = 6 + (RetencionBitacora - (18 - TimeManager.Hora));
@@ -394,18 +423,20 @@ public class Bitacoras : MonoBehaviour
                 }
                 InstanciarBitacoras(txtAccion, FechaCompletado, HoraCompletado);
                 TMP_Text textoPrefab = prefabAux.GetComponent<TMP_Text>();
-                StartCoroutine(GuardarBitacora(CalculoTiempo, txt, textoPrefab));
+                StartCoroutine(GuardarBitacora(CalculoTiempo, txt, textoPrefab, accion));
                 KateEliminada = true;
+                A.eliminar.interactable = false;
             }
             //LAVAR CEREBRO 
             if (A.lavarCerebro.CompareTag(tag = "OptActivado") && A.lavarCerebro.isOn == true && KateEliminada == false && KateLavada == false)
             {
-                float RetencionBitacora = 12;
+                float RetencionBitacora = 3;
                 float HoraCompletado = RetencionBitacora + TimeManager.Hora;
                 float CalculoTiempo = RetencionBitacora * 60 * time.MinutosXseg;
                 string txt = "Ben fue eliminado exitosamente";
                 string FechaCompletado = "2" + time.Dia + "/03/2000";
                 string txtAccion = "Lavar cerebro a Kate Milliard";
+                Toggle accion = A.lavarCerebro;
                 if (HoraCompletado >= 18)
                 {
                     HoraCompletado = 6 + (RetencionBitacora - (18 - TimeManager.Hora));
@@ -413,8 +444,9 @@ public class Bitacoras : MonoBehaviour
                 }
                 InstanciarBitacoras(txtAccion, FechaCompletado, HoraCompletado);
                 TMP_Text textoPrefab = prefabAux.GetComponent<TMP_Text>();
-                StartCoroutine(GuardarBitacora(CalculoTiempo, txt, textoPrefab));
+                StartCoroutine(GuardarBitacora(CalculoTiempo, txt, textoPrefab, accion));
                 KateLavada = true;
+                A.lavarCerebro.interactable = false;
             }
             // investigar
             if (A.investigar.CompareTag(tag = "OptActivado") && A.investigar.isOn == true && KateInvestigada == false)
@@ -425,6 +457,7 @@ public class Bitacoras : MonoBehaviour
                 string txt = "Ben fue eliminado exitosamente";
                 string FechaCompletado = "2" + time.Dia + "/03/2000";
                 string txtAccion = "Investigar Kate Milliard";
+                Toggle accion = A.investigar;
                 if (HoraCompletado >= 18)
                 {
                     HoraCompletado = 6 + (RetencionBitacora - (18 - TimeManager.Hora));
@@ -432,18 +465,20 @@ public class Bitacoras : MonoBehaviour
                 }
                 InstanciarBitacoras(txtAccion, FechaCompletado, HoraCompletado);
                 TMP_Text textoPrefab = prefabAux.GetComponent<TMP_Text>();
-                StartCoroutine(GuardarBitacora(CalculoTiempo, txt, textoPrefab));
+                StartCoroutine(GuardarBitacora(CalculoTiempo, txt, textoPrefab, accion));
                 KateInvestigada = true;
+                A.investigar.interactable = false;
             }
             //Hackear
             if (A.hackear.CompareTag(tag = "OptActivado") && A.hackear.isOn == true && KateHackeada == false)
             {
-                float RetencionBitacora = 12;
+                float RetencionBitacora = 3;
                 float HoraCompletado = RetencionBitacora + TimeManager.Hora;
                 float CalculoTiempo = RetencionBitacora * 60 * time.MinutosXseg;
                 string txt = "Ben fue eliminado exitosamente";
                 string FechaCompletado = "2" + time.Dia + "/03/2000";
                 string txtAccion = "Hackear Kate Milliard";
+                Toggle accion = A.hackear;
                 if (HoraCompletado >= 18)
                 {
                     HoraCompletado = 6 + (RetencionBitacora - (18 - TimeManager.Hora));
@@ -451,18 +486,20 @@ public class Bitacoras : MonoBehaviour
                 }
                 InstanciarBitacoras(txtAccion, FechaCompletado, HoraCompletado);
                 TMP_Text textoPrefab = prefabAux.GetComponent<TMP_Text>();
-                StartCoroutine(GuardarBitacora(CalculoTiempo, txt, textoPrefab));
+                StartCoroutine(GuardarBitacora(CalculoTiempo, txt, textoPrefab, accion));
                 KateHackeada = true;
+                A.hackear.interactable = false;
             }
             //Difamar
             if (A.difamar.CompareTag(tag = "OptActivado") && A.difamar.isOn == true && KateDifamada == false)
             {
-                float RetencionBitacora = 12;
+                float RetencionBitacora = 3;
                 float HoraCompletado = RetencionBitacora + TimeManager.Hora;
                 float CalculoTiempo = RetencionBitacora * 60 * time.MinutosXseg;
                 string txt = "Ben fue eliminado exitosamente";
                 string FechaCompletado = "2" + time.Dia + "/03/2000";
                 string txtAccion = "Difamar Kate Milliard";
+                Toggle accion = A.difamar;
                 if (HoraCompletado >= 18)
                 {
                     HoraCompletado = 6 + (RetencionBitacora - (18 - TimeManager.Hora));
@@ -470,8 +507,9 @@ public class Bitacoras : MonoBehaviour
                 }
                 InstanciarBitacoras(txtAccion, FechaCompletado, HoraCompletado);
                 TMP_Text textoPrefab = prefabAux.GetComponent<TMP_Text>();
-                StartCoroutine(GuardarBitacora(CalculoTiempo, txt, textoPrefab));
+                StartCoroutine(GuardarBitacora(CalculoTiempo, txt, textoPrefab, accion));
                 KateDifamada = true;
+                A.difamar.interactable = false;
             }
         }
         //================================================== Bitacoras Pepe Queño =========================================//
@@ -480,12 +518,13 @@ public class Bitacoras : MonoBehaviour
             //Eliminar
             if (A.eliminar.CompareTag(tag = "OptActivado") && A.eliminar.isOn == true && PepeEliminado == false )
             {
-                float RetencionBitacora = 12;
+                float RetencionBitacora = 3;
                 float HoraCompletado = RetencionBitacora + TimeManager.Hora;
                 float CalculoTiempo = RetencionBitacora * 60 * time.MinutosXseg;
                 string txt = "Ben fue eliminado exitosamente";
                 string FechaCompletado = "2" + time.Dia + "/03/2000";
                 string txtAccion = "Eliminar Pepe Queño";
+                Toggle accion = A.eliminar;
                 if (HoraCompletado >= 18)
                 {
                     HoraCompletado = 6 + (RetencionBitacora - (18 - TimeManager.Hora));
@@ -493,18 +532,20 @@ public class Bitacoras : MonoBehaviour
                 }
                 InstanciarBitacoras(txtAccion, FechaCompletado, HoraCompletado);
                 TMP_Text textoPrefab = prefabAux.GetComponent<TMP_Text>();
-                StartCoroutine(GuardarBitacora(CalculoTiempo, txt, textoPrefab));
+                StartCoroutine(GuardarBitacora(CalculoTiempo, txt, textoPrefab, accion));
                 PepeEliminado = true;
+                A.eliminar.interactable = false;
             }
             //LAVAR CEREBRO 
             if (A.lavarCerebro.CompareTag(tag = "OptActivado") && A.lavarCerebro.isOn == true && PepeEliminado == false && PepeLavado == false)
             {
-                float RetencionBitacora = 12;
+                float RetencionBitacora = 3;
                 float HoraCompletado = RetencionBitacora + TimeManager.Hora;
                 float CalculoTiempo = RetencionBitacora * 60 * time.MinutosXseg;
                 string txt = "Ben fue eliminado exitosamente";
                 string FechaCompletado = "2" + time.Dia + "/03/2000";
                 string txtAccion = "Lavar cerebro Pepe Queño";
+                Toggle accion = A.lavarCerebro;
                 if (HoraCompletado >= 18)
                 {
                     HoraCompletado = 6 + (RetencionBitacora - (18 - TimeManager.Hora));
@@ -512,18 +553,20 @@ public class Bitacoras : MonoBehaviour
                 }
                 InstanciarBitacoras(txtAccion, FechaCompletado, HoraCompletado);
                 TMP_Text textoPrefab = prefabAux.GetComponent<TMP_Text>();
-                StartCoroutine(GuardarBitacora(CalculoTiempo, txt, textoPrefab));
+                StartCoroutine(GuardarBitacora(CalculoTiempo, txt, textoPrefab, accion));
                 PepeLavado = true;
+                A.lavarCerebro.interactable = false;
             }
             // investigar
             if (A.investigar.CompareTag(tag = "OptActivado") && A.investigar.isOn == true && PepeInvestigado == false)
-            {
+                {   
                 float RetencionBitacora = 12;
                 float HoraCompletado = RetencionBitacora + TimeManager.Hora;
                 float CalculoTiempo = RetencionBitacora * 60 * time.MinutosXseg;
                 string txt = "Ben fue eliminado exitosamente";
                 string FechaCompletado = "2" + time.Dia + "/03/2000";
                 string txtAccion = "Investigar Pepe Queño";
+                Toggle accion = A.investigar;
                 if (HoraCompletado >= 18)
                 {
                     HoraCompletado = 6 + (RetencionBitacora - (18 - TimeManager.Hora));
@@ -531,18 +574,20 @@ public class Bitacoras : MonoBehaviour
                 }
                 InstanciarBitacoras(txtAccion, FechaCompletado, HoraCompletado);
                 TMP_Text textoPrefab = prefabAux.GetComponent<TMP_Text>();
-                StartCoroutine(GuardarBitacora(CalculoTiempo, txt, textoPrefab));
+                StartCoroutine(GuardarBitacora(CalculoTiempo, txt, textoPrefab, accion));
                 PepeInvestigado = true;
+                A.investigar.interactable = false;
             }
             //Hackear
             if (A.hackear.CompareTag(tag = "OptActivado") && A.hackear.isOn == true && PepeHackeado == false)
             {
-                float RetencionBitacora = 12;
+                float RetencionBitacora = 3;
                 float HoraCompletado = RetencionBitacora + TimeManager.Hora;
                 float CalculoTiempo = RetencionBitacora * 60 * time.MinutosXseg;
                 string txt = "Ben fue eliminado exitosamente";
                 string FechaCompletado = "2" + time.Dia + "/03/2000";
                 string txtAccion = "Hackear Pepe Queño";
+                Toggle accion = A.hackear;
                 if (HoraCompletado >= 18)
                 {
                     HoraCompletado = 6 + (RetencionBitacora - (18 - TimeManager.Hora));
@@ -550,18 +595,41 @@ public class Bitacoras : MonoBehaviour
                 }
                 InstanciarBitacoras(txtAccion, FechaCompletado, HoraCompletado);
                 TMP_Text textoPrefab = prefabAux.GetComponent<TMP_Text>();
-                StartCoroutine(GuardarBitacora(CalculoTiempo, txt, textoPrefab));
+                StartCoroutine(GuardarBitacora(CalculoTiempo, txt, textoPrefab, accion));
                 PepeHackeado = true;
+                A.hackear.interactable = false;
             }
             //Difamar
             if (A.difamar.CompareTag(tag = "OptActivado") && A.difamar.isOn == true && PepeDifamado== false)
+            {
+                float RetencionBitacora = 3;
+                float HoraCompletado = RetencionBitacora + TimeManager.Hora;
+                float CalculoTiempo = RetencionBitacora * 60 * time.MinutosXseg;
+                string txt = "Ben fue eliminado exitosamente";
+                string FechaCompletado = "2" + time.Dia + "/03/2000";
+                string txtAccion = "Difamar Pepe Queño";
+                Toggle accion = A.difamar;
+                if (HoraCompletado >= 18)
+                {
+                    HoraCompletado = 6 + (RetencionBitacora - (18 - TimeManager.Hora));
+                    FechaCompletado = "2" + (time.Dia + 1) + "/03/2000";
+                }
+                InstanciarBitacoras(txtAccion, FechaCompletado, HoraCompletado);
+                TMP_Text textoPrefab = prefabAux.GetComponent<TMP_Text>();
+                StartCoroutine(GuardarBitacora(CalculoTiempo, txt, textoPrefab, accion));
+                PepeDifamado = true;
+                A.difamar.interactable = false;
+            }
+            //Analizar muestra
+            if (A.analizarMuestra.CompareTag(tag = "OptActivado") && A.analizarMuestra.isOn == true && PepeAnalizado == false)
             {
                 float RetencionBitacora = 12;
                 float HoraCompletado = RetencionBitacora + TimeManager.Hora;
                 float CalculoTiempo = RetencionBitacora * 60 * time.MinutosXseg;
                 string txt = "Ben fue eliminado exitosamente";
                 string FechaCompletado = "2" + time.Dia + "/03/2000";
-                string txtAccion = "Difamar Pepe Queño";
+                string txtAccion = "Analizar Pepe Queño";
+                Toggle accion = A.analizarMuestra;
                 if (HoraCompletado >= 18)
                 {
                     HoraCompletado = 6 + (RetencionBitacora - (18 - TimeManager.Hora));
@@ -569,8 +637,9 @@ public class Bitacoras : MonoBehaviour
                 }
                 InstanciarBitacoras(txtAccion, FechaCompletado, HoraCompletado);
                 TMP_Text textoPrefab = prefabAux.GetComponent<TMP_Text>();
-                StartCoroutine(GuardarBitacora(CalculoTiempo, txt, textoPrefab));
-                PepeDifamado = true;
+                StartCoroutine(GuardarBitacora(CalculoTiempo, txt, textoPrefab, accion));
+                PepeAnalizado = true;
+                A.analizarMuestra.interactable = false;
             }
         }
         //================================================= Bitacoras Cabellos Rojizos ==========================================================//
@@ -585,6 +654,7 @@ public class Bitacoras : MonoBehaviour
                 string txt = "Ben fue eliminado exitosamente";
                 string FechaCompletado = "2" + time.Dia + "/03/2000";
                 string txtAccion = "Analizar cabellos rojizos";
+                Toggle accion = A.analizarMuestra;
                 if (HoraCompletado >= 18)
                 {
                     HoraCompletado = 6 + (RetencionBitacora - (18 - TimeManager.Hora));
@@ -592,19 +662,29 @@ public class Bitacoras : MonoBehaviour
                 }
                 InstanciarBitacoras(txtAccion, FechaCompletado, HoraCompletado);
                 TMP_Text textoPrefab = prefabAux.GetComponent<TMP_Text>();
-                StartCoroutine(GuardarBitacora(CalculoTiempo, txt, textoPrefab));
+                StartCoroutine(GuardarBitacora(CalculoTiempo, txt, textoPrefab, accion));
                 CabellosRojijosAnalizado = true;
+                A.analizarMuestra.interactable = false;
             }
 
         }
         A.Restablecer();
     }
 
-    IEnumerator GuardarBitacora(float ReinicioTiempo, string txt, TMP_Text TextoPrefab)
+    IEnumerator GuardarBitacora(float ReinicioTiempo, string txt, TMP_Text TextoPrefab, Toggle accion)
     {
         yield return new WaitForSeconds(ReinicioTiempo);
         TextoPrefab.text = txt;
-        A.eliminar.interactable = true;
+        accion.interactable = true;
+        ActualizarPalabras();
+    }
+
+    void ActualizarPalabras()
+    {
+        if (PieGrandeHackeado == true) { libreta.BtnRed78.gameObject.SetActive(true); }
+        if (Red78Investigada == true) { libreta.BtnKateMilliard.gameObject.SetActive(true); }
+        if (PieGrandeInvestigado == true) { libreta.BtnPelosRojizos.gameObject.SetActive(true); }
+
     }
 
     //Crea los espacios para rellenar las bitàcoras y los borra cuando es debido
@@ -627,7 +707,7 @@ public class Bitacoras : MonoBehaviour
         {
             Transform aux = PadreAux.transform;
             prefabAux = Instantiate(BitacoraPrefab, new Vector3(InicioBitacora.transform.position.x, y, InicioBitacora.transform.position.z), InicioBitacora.transform.rotation);
-            prefabAux.GetComponent<TMP_Text>().text = "En proceso: " + Accion + System.Environment.NewLine + "Se completa el: " + FechaCompletado + " a las: " + HoraCompletado + ":" + TimeManager.Minuto;
+            prefabAux.GetComponent<TMP_Text>().text = "En proceso: " + Accion + System.Environment.NewLine + "Se completa el " + FechaCompletado + " a las " + HoraCompletado + ":" + TimeManager.Minuto;
             prefabAux.transform.SetParent(aux.transform);
         }
 

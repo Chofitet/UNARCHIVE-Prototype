@@ -6,6 +6,7 @@ using TMPro;
 public class Reloj : MonoBehaviour
 {
     [SerializeField] TimeManager time;
+   
     public TMP_Text Fecha;
     public TMP_Text reloj;
 
@@ -19,22 +20,22 @@ public class Reloj : MonoBehaviour
             case 3:
                 
                 Fecha.text = "2" + time.Dia + "/03/2000";
-
+                
                 break;
             case 4:
-                
+               
                 Fecha.text = "2" + time.Dia + "/03/2000";
                 break;
             case 5:
-                
+             
                 Fecha.text = "2" + time.Dia + "/03/2000";
                 break;
             case 6:
-                
+              
                 Fecha.text = "2" + time.Dia + "/03/2000";
                 break;
             case 7:
-               
+                
                 Fecha.text = "2" + time.Dia + "/03/2000";
                 break;
             case 8:

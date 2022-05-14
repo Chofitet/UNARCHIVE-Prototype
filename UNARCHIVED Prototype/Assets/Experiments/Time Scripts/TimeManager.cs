@@ -5,6 +5,7 @@ using System;
 
 public class TimeManager : MonoBehaviour
 {
+    [SerializeField] Telefono telefono;
     public static Action CambioMinutos;
     public static Action CambioHoras;
     public int Dia ;
@@ -56,6 +57,8 @@ public class TimeManager : MonoBehaviour
     {
         if(Hora == 18)
         {
+            telefono.LLamadaDiaria = false;
+            telefono.PapelFax.gameObject.SetActive(false);
             Dia++;
             Hora = 6;
         }

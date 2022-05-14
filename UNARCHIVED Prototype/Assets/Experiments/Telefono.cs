@@ -12,6 +12,7 @@ public class Telefono : MonoBehaviour
     public Button btnplay;
     public Button btnREC;
     public TMP_Text txtLlamada;
+    public GameObject PapelFax;
     
    
     public TMP_Text txtTranscripciónLlamado;
@@ -21,6 +22,11 @@ public class Telefono : MonoBehaviour
     float InicioLlamada;
 
     bool x;
+
+    private void Start()
+    {
+        PapelFax.SetActive(false);
+    }
 
     private void OnEnable()
     {
@@ -34,6 +40,7 @@ public class Telefono : MonoBehaviour
 
     private void CooldownTelefono() 
     {
+        
         if (TimeManager.Hora == InicioLlamada + 3)
         {
             btnplay.interactable = true;
@@ -41,9 +48,17 @@ public class Telefono : MonoBehaviour
     }
     private void Update()
     {
-
-        if (txtLlamada.text == "Interceptar linea" || txtLlamada.text == "") { btnREC.interactable = false; btnllamar.interactable = true; InicioLlamada = -200;  }
-        else btnREC.interactable = true;
+        if (LLamadaDiaria == false)
+        {
+            if (txtLlamada.text == "Interceptar linea" || txtLlamada.text == "") { btnREC.interactable = false; btnllamar.interactable = true; InicioLlamada = -200; }
+            else btnREC.interactable = true;
+        }
+        if (LLamadaDiaria == true)
+        {
+            btnREC.interactable = false;
+            btnplay.interactable = false;
+            btnllamar.interactable = false;
+        }
 
     }
 
@@ -86,6 +101,7 @@ public class Telefono : MonoBehaviour
     } 
     public void ReproducirLlamada ()
     {
+        PapelFax.SetActive(true);
         //Llamado ben
         if (LlamadaEnProgreso == "Ben Benji")
         {
@@ -112,6 +128,7 @@ public class Telefono : MonoBehaviour
         }
         else txtTranscripciónLlamado.text = "No se interceptó ninguna llamada";
 
+        LLamadaDiaria = true;   
         x = false;
         BorrarLlamada();
     }
