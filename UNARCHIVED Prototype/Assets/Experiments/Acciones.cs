@@ -50,7 +50,7 @@ public class Acciones : MonoBehaviour
         if (aislar.isOn == true) { txtAislar.text = libreta.palabra; }
         else { txtAislar.text = ""; }
 
-        if (crearNoticia.isOn == true) { txtCrearNoticia.text = libreta.palabra; }
+        if (crearNoticia.isOn == true) { txtCrearNoticia.text = ""; }
         else { txtCrearNoticia.text = ""; }
 
         if (crearEscena.isOn == true) { txtCrearEscena.text = libreta.palabra; }

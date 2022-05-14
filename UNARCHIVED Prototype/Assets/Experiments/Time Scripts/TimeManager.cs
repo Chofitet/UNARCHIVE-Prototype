@@ -7,19 +7,22 @@ public class TimeManager : MonoBehaviour
 {
     public static Action CambioMinutos;
     public static Action CambioHoras;
-    public int Dia;
+    public int Dia ;
     
     public static int Minuto { get; private set; }
     public static int Hora { get; private set; }
 
-    private float MinutosPorSegundosReales = 1f;
+    private float MinutosPorSegundosReales = 0.1f;
+    public float MinutosXseg; 
     private float timer;
 
     void Start()
     {
+        Dia = 3;
         Minuto = 0;
         Hora = 6;
         timer = MinutosPorSegundosReales;
+        MinutosXseg = MinutosPorSegundosReales;
     }
 
     void Update()
@@ -37,6 +40,7 @@ public class TimeManager : MonoBehaviour
             }
             timer = MinutosPorSegundosReales;
         }
+        
     }
 
     private void OnEnable()

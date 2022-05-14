@@ -15,8 +15,8 @@ public class TV : MonoBehaviour
     [SerializeField] Bitacoras bitacoras;
 
 
-    string BenDesapareceTitulo = "Ni�oNO ES ENCONTRADO HAY QUE DOLOR QUE PENA";
-    string BenDesapareceNoticia = "Ni�oNO ES ENCONTRADO HAY QUE DOLOR QUE PENA, a pero fue encontrado, borra eso";
+    string BenDesapareceTitulo = "NiñoNO ES ENCONTRADO HAY QUE DOLOR QUE PENA";
+    string BenDesapareceNoticia = "NiñoNO ES ENCONTRADO HAY QUE DOLOR QUE PENA, a pero fue encontrado, borra eso";
 
 
     private void OnEnable()
@@ -36,8 +36,9 @@ public class TV : MonoBehaviour
         if (TimeManager.Hora == 15) {NoticiasAliatorias();}
         if (TimeManager.Hora == 18) {NoticiasAliatorias();}
 
-        if (TimeManager.Hora == 12 && tiempo.Dia == 1 && bitacoras.BenEliminado == true) { NoticiasImportantes(BenDesapareceTitulo, BenDesapareceNoticia); }
-        if (TimeManager.Hora == 12 && tiempo.Dia == 2 && bitacoras.BenEliminado == true) { NoticiasImportantes(BenDesapareceTitulo, BenDesapareceNoticia); }
+        if (TimeManager.Hora == 6 && tiempo.Dia == 3 && bitacoras.BenEliminado == true) { NoticiasImportantes(BenDesapareceTitulo, BenDesapareceNoticia); }
+        if (TimeManager.Hora == 6 && tiempo.Dia == 4 && bitacoras.BenEliminado == true) { NoticiasImportantes(BenDesapareceTitulo, BenDesapareceNoticia); }
+
     }
 
     void NoticiasAliatorias ()
@@ -46,6 +47,7 @@ public class TV : MonoBehaviour
         {
             case 1:
                 titular.text = "bOOBIS DE SANDIA";
+                noticia.text = "dksfhiusDFiuafsiDFNISSA";
                 break;
             case 2:
                 titular.text = "Ahora explotan";
@@ -59,27 +61,27 @@ public class TV : MonoBehaviour
                 break;
                
             case 5:
-                titular.text = "Queso invisible";
+                titular.text = "1";
                 break;
                 
             case 6:
-                titular.text = "Queso invisible";
+                titular.text = "2";
                 break;
                 
             case 7:
-                titular.text = "Queso invisible";
+                titular.text = "3";
                 break;
                 
             case 8:
-                titular.text = "Queso invisible";
+                titular.text = "4";
                 break;
                 
             case 9:
-                titular.text = "Queso invisible";
+                titular.text = "6";
                 break;
                 
             case 10:
-                titular.text = "Queso invisible";
+                titular.text = "8";
                 break;
 
         }

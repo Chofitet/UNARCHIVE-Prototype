@@ -23,7 +23,7 @@ public class PC : MonoBehaviour
     public void MostrarWiki ()
     {
         //================================================================ Wiki Ben =======================================================//
-        if(txtBuscador.text == "Ben Benjinnnnnnnnnn")
+        if(txtBuscador.text == "Ben Benjin")
         {
             txtInfo.text = "Ben Benji: Ni�o normal, no posee caracteristicas ni poderes especiales." 
                 + System.Environment.NewLine + "Edad: 10 a�os" 
