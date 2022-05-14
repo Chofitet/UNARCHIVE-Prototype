@@ -23,11 +23,9 @@ public class PC : MonoBehaviour
     public void MostrarWiki ()
     {
         //================================================================ Wiki Ben =======================================================//
-<<<<<<< HEAD
-        if(txtBuscador.text == "Ben Benjin")
-=======
+
         if(txtBuscador.text == "Ben Benji")
->>>>>>> 1bc699eb009414186d0f9f3f20f9b28cf061c59c
+
         {
             txtInfo.text = "Ben Benji: Niño común, académicamente correcto, no posee características ni poderes especiales. Si leer esto parece aburrido y carente de imaginación, agradece que no conoces a Ben Benji." 
                 + System.Environment.NewLine + "Edad: 10 a�os" 
@@ -47,7 +45,7 @@ public class PC : MonoBehaviour
         //================================================================ Wiki Kate Milliard =======================================================//
         else if (txtBuscador.text == "Kate Milliard")
         {
-            txtInfo.text = "Kate Milliard: Actriz de alto reconocimiento, saltó a la fama con la comedia romántica "Bananarama" en 1994 y consolidó su lugar en el podio dramatúrgico con "Not without my monkey" en 1997. Al negar teñir o cubrir su rojiza cabellera para interpretar roles ha logrado convertir ese capricho en su marca registrada. Aunque dice “aún no planea dejar la actuación, muchachos”, ha pasado a desarrollarse en los últimos años como directora de documentales sobre animales en peligro de extinción."
+            txtInfo.text = "Kate Milliard: Actriz de alto reconocimiento, saltó a la fama con la comedia romántica 'Bananarama' en 1994 y consolidó su lugar en el podio dramatúrgico con 'Not without my monkey' en 1997. Al negar teñir o cubrir su rojiza cabellera para interpretar roles ha logrado convertir ese capricho en su marca registrada. Aunque dice “aún no planea dejar la actuación, muchachos”, ha pasado a desarrollarse en los últimos años como directora de documentales sobre animales en peligro de extinción."
                 + System.Environment.NewLine + "Edad: 24 años"
                 + System.Environment.NewLine + "Estado: Soltera"
                 + System.Environment.NewLine + "Última vez vista en: Monte Quete.";
@@ -84,14 +82,14 @@ public class PC : MonoBehaviour
         {
             txtInfo.text = "Pimentapaluza: Solo un absoluto careta buscaría el significado de la Pimientaexperiencia en una computadora."
             + System.Environment.NewLine + "Es el 27 de Marzo. SIEMPRE. CARETA."
-            + System.Environment.NewLine +
-            + System.Environment.NewLine +
-            + System.Environment.NewLine +
-            + System.Environment.NewLine +
-            + System.Environment.NewLine +
-            + System.Environment.NewLine +
-            + System.Environment.NewLine +
-            + System.Environment.NewLine +
+            + System.Environment.NewLine 
+            + System.Environment.NewLine 
+            + System.Environment.NewLine 
+            + System.Environment.NewLine 
+            + System.Environment.NewLine 
+            + System.Environment.NewLine 
+            + System.Environment.NewLine 
+            + System.Environment.NewLine 
             + System.Environment.NewLine + "NOTA: POR FAVOR, GARY,  MANTENER CIVILES LAS ENTRADAS DE LA BASE DE DATOS";
         }
         //================================================================ Wiki Parque Pimienta =======================================================//

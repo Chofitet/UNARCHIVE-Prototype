@@ -15,8 +15,8 @@ public class TV : MonoBehaviour
     [SerializeField] Bitacoras bitacoras;
 
 
-    string BenDesapareceTitulo = "NiñoNO ES ENCONTRADO HAY QUE DOLOR QUE PENA";
-    string BenDesapareceNoticia = "NiñoNO ES ENCONTRADO HAY QUE DOLOR QUE PENA, a pero fue encontrado, borra eso";
+    string BenDesapareceTitulo = "NIÑO ES ENCONTRADO HAY QUE DOLOR QUE PENA";
+    string BenDesapareceNoticia = "NIÑO ES ENCONTRADO HAY QUE DOLOR QUE PENA, a pero fue encontrado, borra eso";
 
 
     private void OnEnable()
