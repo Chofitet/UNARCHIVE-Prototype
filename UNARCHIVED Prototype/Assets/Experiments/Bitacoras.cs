@@ -22,11 +22,11 @@ public class Bitacoras : MonoBehaviour
     private float y;
     private int i = 0;
     public bool BenEliminado;
-    private bool BenLavado;
+    public bool BenLavado;
     private bool BenInvestigado;
     private bool BenHackeado;
     private bool BenDifamado;
-    private bool PieGrandeEliminado;
+    public bool PieGrandeEliminado;
     private bool PieGrandeLavado;
     private bool PieGrandeInvestigado;
     private bool PieGrandeHackeado;
@@ -36,26 +36,39 @@ public class Bitacoras : MonoBehaviour
     private bool PimientaPaluzaEscena;
     private bool ColoradaInvestigada;
     private bool Red78Investigada;
-    private bool KateEliminada;
-    private bool KateLavada;
+    public bool KateEliminada;
+    public bool KateLavada;
     private bool KateInvestigada;
     private bool KateHackeada;
     private bool KateDifamada;
-    private bool PepeEliminado;
-    private bool PepeLavado;
+    public bool PepeEliminado;
+    public bool PepeLavado;
     public bool PepeInvestigado;
     private bool PepeHackeado;
     private bool PepeDifamado;
     public bool PepeAnalizado;
     private bool CabellosRojijosAnalizado;
 
+    private string txtNoticiaFalsa;
+    private int NumNoticias = 5;
+    
+    
 
     private void Start()
     {
         y = InicioBitacora.transform.position.y;
+       
+        
     }
 
-   
+    private void Update()
+    {
+        if (time.NoticiaDiaria == true)
+        {
+            A.crearNoticia.interactable = false;
+        }
+        else A.crearNoticia.interactable = true;
+    }
 
     // Analiza las variables: ¿que nombre de la libreta està seleccionada?, ¿què acciòn està elegida? y si otra o esa misma accion fue ejecutada para evitar incongruencias o bitacoras repetidas.
     // Si se cumplen las condiciones, imprimen la bitàcora correspondiente 
@@ -668,6 +681,33 @@ public class Bitacoras : MonoBehaviour
             }
 
         }
+        //================================================ Bitacoras Fake News ===================================================================//
+       
+          
+            if (A.crearNoticia.CompareTag(tag = "OptActivado") && A.crearNoticia.isOn == true)
+            {
+                float RetencionBitacora = 3;
+                float HoraCompletado = RetencionBitacora + TimeManager.Hora;
+                float CalculoTiempo = RetencionBitacora * 60 * time.MinutosXseg;
+                ElegirFakeNews(NumNoticias);
+                string FechaCompletado = "2" + time.Dia + "/03/2000";
+                string txtAccion = "Crear noticia falsa";
+                Toggle accion = A.crearNoticia;
+                 time.NoticiaDiaria = true;
+                if (HoraCompletado >= 18)
+                {
+                    HoraCompletado = 6 + (RetencionBitacora - (18 - TimeManager.Hora));
+                    FechaCompletado = "2" + (time.Dia + 1) + "/03/2000";
+                    
+                }
+                InstanciarBitacoras(txtAccion, FechaCompletado, HoraCompletado);
+                TMP_Text textoPrefab = prefabAux.GetComponent<TMP_Text>();
+                StartCoroutine(GuardarBitacora(CalculoTiempo, txtNoticiaFalsa, textoPrefab, accion));
+               
+                A.crearNoticia.interactable = false;
+            }
+
+      
         A.Restablecer();
     }
 
@@ -726,5 +766,45 @@ public class Bitacoras : MonoBehaviour
         i = i + 1;   
     }
 
+    //========================================== Fake news =======================================//
 
+   public void ElegirFakeNews(int Num)
+    {
+       
+        switch (Num)
+        {
+            case 0:
+                txtNoticiaFalsa = "No hay màs noticias";
+                break;
+            case 1:
+                txtNoticiaFalsa = "Noticia";
+                NumNoticias--;
+                break;
+            case 2:
+                txtNoticiaFalsa = "Noticia";
+                NumNoticias--;
+               
+                break;
+            case 3:
+                txtNoticiaFalsa = "Noticia";
+                NumNoticias--;
+                break;
+            case 4:
+                txtNoticiaFalsa = "Noticia";
+                NumNoticias--;
+                break;
+            case 5:
+                txtNoticiaFalsa = "Noticia";
+                NumNoticias--;
+                break;
+        
+        }
+        
+        
+        
+    }
+
+    
+       
+   
 }

@@ -9,7 +9,8 @@ public class TimeManager : MonoBehaviour
     public static Action CambioMinutos;
     public static Action CambioHoras;
     public int Dia ;
-    
+    public bool NoticiaDiaria;
+
     public static int Minuto { get; private set; }
     public static int Hora { get; private set; }
 
@@ -58,6 +59,7 @@ public class TimeManager : MonoBehaviour
         if(Hora == 18)
         {
             telefono.LLamadaDiaria = false;
+            NoticiaDiaria = false;
             telefono.PapelFax.gameObject.SetActive(false);
             Dia++;
             Hora = 6;

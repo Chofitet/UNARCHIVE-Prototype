@@ -1093,7 +1093,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   libreta: {fileID: 94808029}
-  bitacora: {fileID: 0}
+  bitacora: {fileID: 176843630}
   btnllamar: {fileID: 1406351004}
   btnplay: {fileID: 1892829243}
   btnREC: {fileID: 1526328218}
@@ -1681,6 +1681,12 @@ MonoBehaviour:
   InicioBitacora: {fileID: 1497467237}
   InicioBitacora2: {fileID: 1948954609}
   BenEliminado: 0
+  BenLavado: 0
+  PieGrandeEliminado: 0
+  KateEliminada: 0
+  KateLavada: 0
+  PepeEliminado: 0
+  PepeLavado: 0
   PepeInvestigado: 0
   PepeAnalizado: 0
 --- !u!4 &176843631
@@ -4866,6 +4872,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   telefono: {fileID: 113856866}
   Dia: 1
+  NoticiaDiaria: 0
   MinutosXseg: 0
 --- !u!1 &734188494
 GameObject:
