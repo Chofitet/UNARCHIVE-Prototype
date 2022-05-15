@@ -10,9 +10,6 @@ public class Reloj : MonoBehaviour
     public TMP_Text Fecha;
     public TMP_Text reloj;
 
-   
- 
-
     private void Update()
     {
         switch (time.Dia)
