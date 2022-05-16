@@ -28,8 +28,8 @@ public class PC : MonoBehaviour
 
         {
             txtInfo.text = "Ben Benji: Niño común, académicamente correcto, no posee características ni poderes especiales. Si leer esto parece aburrido y carente de imaginación, agradece que no conoces a Ben Benji." 
-                + System.Environment.NewLine + "Edad: 10 a�os" 
-                + System.Environment.NewLine + "Estado: Ni�o de verdad" 
+                + System.Environment.NewLine + "Edad: 10 años" 
+                + System.Environment.NewLine + "Estado: Niño de verdad" 
                 + System.Environment.NewLine + "Ultima vez visto en: Pueblo Pimienta";
         }
         //================================================================ Wiki Pie Grande ==============================================//
@@ -53,7 +53,7 @@ public class PC : MonoBehaviour
         //================================================================ Wiki Colorada =======================================================//
         else if (txtBuscador.text == "Colorada")
         {
-            txtInfo.text = "Informaci�n sin correlaci�n"
+            txtInfo.text = "Información sin correlación"
                 + System.Environment.NewLine + "";
         }
         //================================================================ Wiki Pepe Queño =======================================================//
@@ -90,7 +90,7 @@ public class PC : MonoBehaviour
             + System.Environment.NewLine 
             + System.Environment.NewLine 
             + System.Environment.NewLine 
-            + System.Environment.NewLine + "NOTA: POR FAVOR, GARY,  MANTENER CIVILES LAS ENTRADAS DE LA BASE DE DATOS";
+            + System.Environment.NewLine + "NOTA: POR FAVOR, GARY, MANTENER CIVILES LAS ENTRADAS DE LA BASE DE DATOS";
         }
         //================================================================ Wiki Parque Pimienta =======================================================//
         else if (txtBuscador.text== "Parque Pimienta")
