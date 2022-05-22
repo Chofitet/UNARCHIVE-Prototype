@@ -7,13 +7,16 @@ using TMPro;
 /// 
 public class TV : MonoBehaviour
 {
-
-
     public TMP_Text titular;
     public TMP_Text noticia;
     [SerializeField] TimeManager tiempo;
     [SerializeField] Bitacoras bitacoras;
+    [SerializeField] PC PC;
+    bool x;
 
+
+    // Para crear una noticia hay que crear tres variables: un booleano para que la noticia solo aparezca una vez, y dos strings, una para el titular(aparece pantalla chiquito)
+    // y otro para la noticia dentro de la pantalla de la tv.
     bool BenEliminado;
     string BenDesapareceTitulo = "NIÑO ES ENCONTRADO HAY QUE DOLOR QUE PENA";
     string BenDesapareceNoticia = "NIÑO ES ENCONTRADO HAY QUE DOLOR QUE PENA, a pero fue encontrado, borra eso";
@@ -37,11 +40,11 @@ public class TV : MonoBehaviour
 
     void DirectorNoticias ()
     {
-        if (TimeManager.Hora == 6) {NoticiasAliatorias(); CheckearBitacoras(); }
-        if (TimeManager.Hora == 9) {NoticiasAliatorias(); CheckearBitacoras(); }
-        if (TimeManager.Hora == 12) {NoticiasAliatorias(); CheckearBitacoras(); }
-        if (TimeManager.Hora == 15) {NoticiasAliatorias(); CheckearBitacoras(); }
-        if (TimeManager.Hora == 18) {NoticiasAliatorias(); CheckearBitacoras(); }
+        if (TimeManager.Hora == 6) { CheckearBitacoras(); if (x == false) NoticiasAliatorias(); x = false; }
+        if (TimeManager.Hora == 9) { CheckearBitacoras(); if (x == false) NoticiasAliatorias(); x = false; }
+        if (TimeManager.Hora == 12) { CheckearBitacoras(); if (x == false) NoticiasAliatorias(); x = false; }
+        if (TimeManager.Hora == 15) { CheckearBitacoras(); if (x == false) NoticiasAliatorias(); x = false; }
+        if (TimeManager.Hora == 18) { CheckearBitacoras(); if (x == false) NoticiasAliatorias(); x = false; }
 
     }
 
@@ -63,7 +66,7 @@ public class TV : MonoBehaviour
                 break;
                 
             case 4:
-                titular.text = "";
+                titular.text = "1";
                 noticia.text = "dksfhiusDFiuafsiDFNISSA";
                 break;
                
@@ -100,25 +103,33 @@ public class TV : MonoBehaviour
         }
     }
 
+    // Comprueba el estado de variables para posicionar noticias, ubicar las noticias cronologicamente, su orden va de arriba para abajo.
     void CheckearBitacoras ()
     {
-        if(bitacoras.BenEliminado == true && BenEliminado == false)
+        if (bitacoras.BenEliminado == true && BenEliminado == false)
         {
-            StartCoroutine(ImprimirNoticia(BenDesapareceTitulo, BenDesapareceNoticia));
+            Debug.Log("ben eliminado");
+            int IncrementoRating = 3;
+            StartCoroutine(ImprimirNoticia(BenDesapareceTitulo, BenDesapareceNoticia, IncrementoRating));
             BenEliminado = true;
         }
         else if (bitacoras.PieGrandeEliminado == true && PieGrandeEliminado == false)
         {
-            StartCoroutine(ImprimirNoticia(PieGrandeEliminadoTitulo, PieGrandeEliminadoNoticia));
+            int IncrementoRating = 5;
+            StartCoroutine(ImprimirNoticia(PieGrandeEliminadoTitulo, PieGrandeEliminadoNoticia, IncrementoRating));
+            PieGrandeEliminado = true;
         }
+       
 
     }
    
-    IEnumerator ImprimirNoticia (string T, string N)
+    IEnumerator ImprimirNoticia (string T, string N, int IncrementoRating)
     {
-        
-        yield return new WaitForSeconds(tiempo.MinutosXseg * 60.01f * 3);
+        yield return new WaitForSeconds(tiempo.MinutosXseg * 50 * 3);
+        x = true;
+        yield return new WaitForSeconds(tiempo.MinutosXseg * 10 * 3);
         noticia.text = N;
         titular.text = T;
+        PC.Rating = PC.Rating + IncrementoRating;
     }
 }

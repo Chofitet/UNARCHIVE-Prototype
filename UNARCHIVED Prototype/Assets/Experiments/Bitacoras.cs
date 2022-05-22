@@ -11,6 +11,8 @@ public class Bitacoras : MonoBehaviour
     [SerializeField] internal Acciones A;
     [SerializeField] internal TimeManager time;
     [SerializeField] Reloj reloj;
+    [SerializeField] PC PC;
+
     //Referencias de propiedades
     GameObject PadreAux;
     public Canvas Canvas;
@@ -51,14 +53,12 @@ public class Bitacoras : MonoBehaviour
 
     private string txtNoticiaFalsa;
     private int NumNoticias = 5;
-    
-    
+
+
 
     private void Start()
     {
         y = InicioBitacora.transform.position.y;
-       
-        
     }
 
     private void Update()
@@ -775,29 +775,34 @@ public class Bitacoras : MonoBehaviour
         {
             case 0:
                 txtNoticiaFalsa = "No hay màs noticias";
+                PC.Rating = PC.Rating - 1;
                 break;
             case 1:
                 txtNoticiaFalsa = "Noticia";
                 NumNoticias--;
+                PC.Rating = PC.Rating - 1;
                 break;
             case 2:
                 txtNoticiaFalsa = "Noticia";
                 NumNoticias--;
-               
+                PC.Rating = PC.Rating - 1;
                 break;
             case 3:
                 txtNoticiaFalsa = "Noticia";
                 NumNoticias--;
+                PC.Rating = PC.Rating - 1;
                 break;
             case 4:
                 txtNoticiaFalsa = "Noticia";
                 NumNoticias--;
+                PC.Rating = PC.Rating - 1;
                 break;
             case 5:
                 txtNoticiaFalsa = "Noticia";
                 NumNoticias--;
+                PC.Rating = PC.Rating - 1;
                 break;
-        
+                
         }
         
         

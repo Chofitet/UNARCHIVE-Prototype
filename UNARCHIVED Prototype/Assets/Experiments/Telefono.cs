@@ -56,7 +56,8 @@ public class Telefono : MonoBehaviour
         if (LLamadaDiaria == false)
         {
             if (txtLlamada.text == "Interceptar linea" || txtLlamada.text == "") { btnREC.interactable = false; btnllamar.interactable = true; InicioLlamada = -200;}
-            else btnREC.interactable = true;
+            else btnREC.interactable = true; 
+            
         }
         if (LLamadaDiaria == true)
         {
@@ -67,30 +68,27 @@ public class Telefono : MonoBehaviour
         if (txtTranscripciónLlamado.text == "")
         {
             PapelFax.SetActive(false);
-            x = false;
         }
 
     }
 
     public void Llamar()
     {
-        txtLlamada.text = libreta.palabra;
-        txtTranscripciónLlamado.text = "";
         LlamadaEnProgreso = libreta.palabra;
+        txtLlamada.text = LlamadaEnProgreso;
+        txtTranscripciónLlamado.text = "";
+        
     }
 
     public void REC()
     {
-       
         if (x == false)
         {
-           
             txtTranscripciónLlamado.text = "";
             EsLlamable(LlamadaEnProgreso);
         }
-        else 
+        else if (x == true)
         {
-            
             txtTranscripciónLlamado.text = "";
             btnllamar.interactable = true;
             InicioLlamada = -200;
@@ -100,7 +98,7 @@ public class Telefono : MonoBehaviour
 
     public void BorrarLlamada()
     {
-        if (btnllamar.interactable == false)
+        if (btnllamar.interactable == true)
         {
             txtLlamada.text = "Interceptar linea";
             btnREC.interactable = false;
@@ -188,7 +186,7 @@ public class Telefono : MonoBehaviour
         {
             PapelFax.SetActive(true);
             txtTranscripciónLlamado.text = "No hay posibilidad de interceptar";
-            x = true;
+           
         }
     }
 

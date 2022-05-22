@@ -9,15 +9,18 @@ public class PC : MonoBehaviour
     [SerializeField] Bitacoras bitacoras;
     public TMP_Text txtBuscador;
     public TMP_Text txtInfo;
-    
-    private void Start()
+    public TMP_Text txtRating;
+
+    public int Rating;
+
+    private void Update()
     {
+        txtRating.text = Rating + " w/s";
     }
 
     public void MostrarPalabraBuscador()
     {
-        txtBuscador.text =  libreta.palabra; 
-        
+        txtBuscador.text =  libreta.palabra;     
     }
     //Actualiza la wiki cada vez que le das a la lupa
     public void MostrarWiki ()
