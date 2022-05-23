@@ -3,9 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
+// Ejemplo de uso de ramas
 
 public class Bitacoras : MonoBehaviour
 {
+
     //Referencias Scripts
     [SerializeField] internal Libreta libreta;
     [SerializeField] internal Acciones A;
