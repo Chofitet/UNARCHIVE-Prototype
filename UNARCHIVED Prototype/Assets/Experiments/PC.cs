@@ -96,7 +96,7 @@ public class PC : MonoBehaviour
             + System.Environment.NewLine + "NOTA: POR FAVOR, GARY, MANTENER CIVILES LAS ENTRADAS DE LA BASE DE DATOS";
         }
         //================================================================ Wiki Parque Pimienta =======================================================//
-        else if (txtBuscador.text== "Parque Pimienta")
+        else if (txtBuscador.text== "Pueblo Pimienta")
         {
             txtInfo.text = ""
                 + System.Environment.NewLine + "";

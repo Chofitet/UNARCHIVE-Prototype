@@ -51,7 +51,6 @@ public class Libreta : MonoBehaviour
             BtnPieGrande.gameObject.SetActive(true);
             BtnParquePimienta.gameObject.SetActive(true);
             BtnColorada.gameObject.SetActive(true);
-            BtnPimientaPaluza.gameObject.SetActive(true);
             ex.CasoLeido = false;
             apagado = true;
         }
@@ -86,8 +85,8 @@ public class Libreta : MonoBehaviour
     public void ParquePimienta()
     {
         DesSubrayar();
-        palabra = "Parque Pimienta";
-        txtParquePimienta.text = "<u>Parque Pimienta</u>";
+        palabra = "Pueblo Pimienta";
+        txtParquePimienta.text = "<u>Pueblo Pimienta</u>";
     }
     public void Colorada()
     {
@@ -119,7 +118,7 @@ public class Libreta : MonoBehaviour
         if(txtBen.text == "<u>Ben Benji</u>") { txtBen.text = "Ben Benji"; }
         else if (txtPieGrande.text == "<u>Pie Grande</u>") { txtPieGrande.text = "Pie Grande"; }
         else if (txtPimientaPaluza.text == "<u>Pimienta paluza</u>") { txtPimientaPaluza.text = "Pimienta paluza"; }
-        else if (txtParquePimienta.text == "<u>Parque Pimienta</u>") { txtParquePimienta.text = "Parque Pimienta"; }
+        else if (txtParquePimienta.text == "<u>Pueblo Pimienta</u>") { txtParquePimienta.text = "Pueblo Pimienta"; }
         else if (txtColorada.text == "<u>Colorada (?)</u>") { txtColorada.text = "Colorada (?)"; }
         else if (txtPepeQueño.text == "<u>Pepe Queño</u>") { txtPepeQueño.text = "Pepe Queño"; }
         else if (txtCabellosRojizos.text == "<u>Cabellos Rojizos</u>") { txtCabellosRojizos.text = "Cabellos Rojizos"; }

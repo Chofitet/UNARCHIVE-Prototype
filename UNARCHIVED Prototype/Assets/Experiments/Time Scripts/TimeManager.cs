@@ -14,7 +14,7 @@ public class TimeManager : MonoBehaviour
     public static int Minuto { get; private set; }
     public static int Hora { get; private set; }
 
-    private float MinutosPorSegundosReales = 0.1f;
+    private float MinutosPorSegundosReales = 0.2f;
     public float MinutosXseg; 
     private float timer;
 
@@ -29,6 +29,9 @@ public class TimeManager : MonoBehaviour
 
     void Update()
     {
+
+        if (Input.GetKey("escape")) Application.Quit();
+
         timer -= Time.deltaTime;
         if(timer <= 0)
         {

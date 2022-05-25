@@ -4,5 +4,8 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Others/TechProofInterconections.unity
+    guid: 104bf0f5bad2f1146933591e08ce1af3
   m_configObjects: {}

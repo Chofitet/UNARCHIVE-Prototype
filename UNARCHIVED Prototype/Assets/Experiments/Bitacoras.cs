@@ -295,8 +295,8 @@ public class Bitacoras : MonoBehaviour
                 A.difamar.interactable = false;
             }
         }
-        //=========================================================== Bitacoras Parque Pimienta =================================================//
-        if (libreta.palabra == "Parque Pimienta")
+        //=========================================================== Bitacoras Pueblo Pimienta =================================================//
+        if (libreta.palabra == "Pueblo Pimienta")
         {
             //Aislar
             if (A.aislar.CompareTag(tag = "OptActivado") && A.aislar.isOn == true && ParquePimientaAislado == false)
@@ -306,7 +306,7 @@ public class Bitacoras : MonoBehaviour
                 float CalculoTiempo = RetencionBitacora * 60 * time.MinutosXseg;
                 string txt = "Ben fue eliminado exitosamente";
                 string FechaCompletado = "2" + time.Dia + "/03/2000";
-                string txtAccion = "Aislar Parque Pimienta";
+                string txtAccion = "Aislar Pueblo Pimienta";
                 Toggle accion = A.aislar;
                 if (HoraCompletado >= 18)
                 {
@@ -327,7 +327,7 @@ public class Bitacoras : MonoBehaviour
                 float CalculoTiempo = RetencionBitacora * 60 * time.MinutosXseg;
                 string txt = "Ben fue eliminado exitosamente";
                 string FechaCompletado = "2" + time.Dia + "/03/2000";
-                string txtAccion = "Montar escena Parque Pimienta";
+                string txtAccion = "Montar escena Pueblo Pimienta";
                 Toggle accion = A.crearEscena;
                 if (HoraCompletado >= 18)
                 {
@@ -762,7 +762,7 @@ public class Bitacoras : MonoBehaviour
 
         }
 
-        y = y - 50;
+        y = y - 100;
         i = i + 1;   
     }
 
