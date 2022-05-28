@@ -13,16 +13,8 @@ public class Bitacoras : MonoBehaviour
     [SerializeField] Reloj reloj;
     [SerializeField] PC PC;
 
-    //Referencias de propiedades
-    GameObject PadreAux;
-    public Canvas Canvas;
-    public TMP_Text BitacoraPrefab;
-    private TMP_Text prefabAux;
-    public Transform InicioBitacora;
-    public Transform InicioBitacora2;
     //Declaración varariables
-    private float y;
-    private int i = 0;
+  
     public bool BenEliminado;
     public bool BenLavado;
     private bool BenInvestigado;
@@ -54,11 +46,37 @@ public class Bitacoras : MonoBehaviour
     private string txtNoticiaFalsa;
     private int NumNoticias = 5;
 
+    //Vectores bitacoras
+    string[] pag1 = new string[12];
+    
+    string[] pag2 = new string[12];
+  
+    string[] pag3 = new string[12];
+   
+    int Pag = 1;
+    int PagActual;
+    int ind;
+    int aux;
 
+    //Textos bitacoras
+    public TMP_Text B1P1;
+    public TMP_Text B2P1;
+    public TMP_Text B3P1;
+    public TMP_Text B4P1;
+    public TMP_Text B5P1;
+    public TMP_Text B6P1;
+
+    public TMP_Text B1P2;
+    public TMP_Text B2P2;
+    public TMP_Text B3P2;
+    public TMP_Text B4P2;
+    public TMP_Text B5P2;
+    public TMP_Text B6P2;
 
     private void Start()
     {
-        y = InicioBitacora.transform.position.y;
+       
+        PagActual = Pag;
     }
 
     private void Update()
@@ -68,6 +86,8 @@ public class Bitacoras : MonoBehaviour
             A.crearNoticia.interactable = false;
         }
         else A.crearNoticia.interactable = true;
+
+        ActualizarPaginas();
     }
 
     // Analiza las variables: ¿que nombre de la libreta està seleccionada?, ¿què acciòn està elegida? y si otra o esa misma accion fue ejecutada para evitar incongruencias o bitacoras repetidas.
@@ -92,9 +112,13 @@ public class Bitacoras : MonoBehaviour
                     HoraCompletado = 6 + (RetencionBitacora - (18 - TimeManager.Hora));
                     FechaCompletado = "2" + (time.Dia + 1) + "/03/2000";
                 }
-                InstanciarBitacoras(txtAccion, FechaCompletado, HoraCompletado);
-                TMP_Text textoPrefab = prefabAux.GetComponent<TMP_Text>();
-                StartCoroutine(GuardarBitacora(CalculoTiempo, txt, textoPrefab, accion));
+                int indaux = ind;
+                int a = 1;
+                CargarVectorProgreso(txtAccion, FechaCompletado, HoraCompletado, indaux);
+                SetearBitacora();
+                a = aux;
+                ActualizarIndice();
+                StartCoroutine(GuardarBitacora(CalculoTiempo, txt, indaux, accion, a));
                 A.eliminar.interactable = false; 
                 BenEliminado = true;
             }
@@ -113,9 +137,13 @@ public class Bitacoras : MonoBehaviour
                     HoraCompletado = 6 + (RetencionBitacora - (18 - TimeManager.Hora));
                     FechaCompletado = "2" + (time.Dia + 1) + "/03/2000";
                 }
-                InstanciarBitacoras(txtAccion, FechaCompletado, HoraCompletado);
-                TMP_Text textoPrefab = prefabAux.GetComponent<TMP_Text>();
-                StartCoroutine(GuardarBitacora(CalculoTiempo, txt, textoPrefab, accion));
+                int indaux = ind;
+                int a = 1;
+                CargarVectorProgreso(txtAccion, FechaCompletado, HoraCompletado, indaux);
+                SetearBitacora();
+                a = aux;
+                ActualizarIndice();
+                StartCoroutine(GuardarBitacora(CalculoTiempo, txt, indaux, accion, a));
                 A.lavarCerebro.interactable = false;
                 BenLavado = true;
             }
@@ -134,9 +162,13 @@ public class Bitacoras : MonoBehaviour
                     HoraCompletado = 6 + (RetencionBitacora - (18 - TimeManager.Hora));
                     FechaCompletado = "2" + (time.Dia + 1) + "/03/2000";
                 }
-                InstanciarBitacoras(txtAccion, FechaCompletado, HoraCompletado);
-                TMP_Text textoPrefab = prefabAux.GetComponent<TMP_Text>();
-                StartCoroutine(GuardarBitacora(CalculoTiempo, txt, textoPrefab, accion));
+                int indaux = ind;
+                int a = 1;
+                CargarVectorProgreso(txtAccion, FechaCompletado, HoraCompletado, indaux);
+                SetearBitacora();
+                a = aux;
+                ActualizarIndice();
+                StartCoroutine(GuardarBitacora(CalculoTiempo, txt, indaux, accion, a));
                 BenInvestigado = true;
                 A.investigar.interactable = false;
             }
@@ -155,9 +187,13 @@ public class Bitacoras : MonoBehaviour
                     HoraCompletado = 6 + (RetencionBitacora - (18 - TimeManager.Hora));
                     FechaCompletado = "2" + (time.Dia + 1) + "/03/2000";
                 }
-                InstanciarBitacoras(txtAccion, FechaCompletado, HoraCompletado);
-                TMP_Text textoPrefab = prefabAux.GetComponent<TMP_Text>();
-                StartCoroutine(GuardarBitacora(CalculoTiempo, txt, textoPrefab, accion));
+                int indaux = ind;
+                int a = 1;
+                CargarVectorProgreso(txtAccion, FechaCompletado, HoraCompletado, indaux);
+                SetearBitacora();
+                a = aux;
+                ActualizarIndice();
+                StartCoroutine(GuardarBitacora(CalculoTiempo, txt, indaux, accion, a));
                 BenHackeado = true;
                 A.hackear.interactable = false;
             }
@@ -176,9 +212,13 @@ public class Bitacoras : MonoBehaviour
                     HoraCompletado = 6 + (RetencionBitacora - (18 - TimeManager.Hora));
                     FechaCompletado = "2" + (time.Dia + 1) + "/03/2000";
                 }
-                InstanciarBitacoras(txtAccion, FechaCompletado, HoraCompletado);
-                TMP_Text textoPrefab = prefabAux.GetComponent<TMP_Text>();
-                StartCoroutine(GuardarBitacora(CalculoTiempo, txt, textoPrefab, accion));
+                int indaux = ind;
+                int a = 1;
+                CargarVectorProgreso(txtAccion, FechaCompletado, HoraCompletado, indaux);
+                SetearBitacora();
+                a = aux;
+                ActualizarIndice();
+                StartCoroutine(GuardarBitacora(CalculoTiempo, txt, indaux, accion, a));
                 BenDifamado = true;
                 A.difamar.interactable = false;
             }
@@ -203,9 +243,13 @@ public class Bitacoras : MonoBehaviour
                     HoraCompletado = 6 + (RetencionBitacora - (18 - TimeManager.Hora));
                     FechaCompletado = "2" + (time.Dia + 1) + "/03/2000";
                 }
-                InstanciarBitacoras(txtAccion, FechaCompletado, HoraCompletado);
-                TMP_Text textoPrefab = prefabAux.GetComponent<TMP_Text>();
-                StartCoroutine(GuardarBitacora(CalculoTiempo, txt, textoPrefab, accion));
+                int indaux = ind;
+                int a = 1;
+                CargarVectorProgreso(txtAccion, FechaCompletado, HoraCompletado, indaux);
+                SetearBitacora();
+                a = aux;
+                ActualizarIndice();
+                StartCoroutine(GuardarBitacora(CalculoTiempo, txt, indaux, accion, a));
                 PieGrandeEliminado = true;
                 A.eliminar.interactable = false;
             }
@@ -225,9 +269,13 @@ public class Bitacoras : MonoBehaviour
                     HoraCompletado = 6 + (RetencionBitacora - (18 - TimeManager.Hora));
                     FechaCompletado = "2" + (time.Dia + 1) + "/03/2000";
                 }
-                InstanciarBitacoras(txtAccion, FechaCompletado, HoraCompletado);
-                TMP_Text textoPrefab = prefabAux.GetComponent<TMP_Text>();
-                StartCoroutine(GuardarBitacora(CalculoTiempo, txt, textoPrefab, accion));
+                int indaux = ind;
+                int a = 1;
+                CargarVectorProgreso(txtAccion, FechaCompletado, HoraCompletado, indaux);
+                SetearBitacora();
+                a = aux;
+                ActualizarIndice();
+                StartCoroutine(GuardarBitacora(CalculoTiempo, txt, indaux, accion, a));
                 PieGrandeLavado = true;
                 A.lavarCerebro.interactable = false;
             }
@@ -246,9 +294,13 @@ public class Bitacoras : MonoBehaviour
                     HoraCompletado = 6 + (RetencionBitacora - (18 - TimeManager.Hora));
                     FechaCompletado = "2" + (time.Dia + 1) + "/03/2000";
                 }
-                InstanciarBitacoras(txtAccion, FechaCompletado, HoraCompletado);
-                TMP_Text textoPrefab = prefabAux.GetComponent<TMP_Text>();
-                StartCoroutine(GuardarBitacora(CalculoTiempo, txt, textoPrefab, accion));
+                int indaux = ind;
+                int a = 1;
+                CargarVectorProgreso(txtAccion, FechaCompletado, HoraCompletado, indaux);
+                SetearBitacora();
+                a = aux;
+                ActualizarIndice();
+                StartCoroutine(GuardarBitacora(CalculoTiempo, txt, indaux, accion, a));
                 PieGrandeInvestigado = true;
                 A.investigar.interactable = false;
             }
@@ -267,9 +319,13 @@ public class Bitacoras : MonoBehaviour
                     HoraCompletado = 6 + (RetencionBitacora - (18 - TimeManager.Hora));
                     FechaCompletado = "2" + (time.Dia + 1) + "/03/2000";
                 }
-                InstanciarBitacoras(txtAccion, FechaCompletado, HoraCompletado);
-                TMP_Text textoPrefab = prefabAux.GetComponent<TMP_Text>();
-                StartCoroutine(GuardarBitacora(CalculoTiempo, txt, textoPrefab, accion));
+                int indaux = ind;
+                int a;
+                ActualizarIndice();
+                CargarVectorProgreso(txtAccion, FechaCompletado, HoraCompletado, indaux);
+                SetearBitacora();
+                a = aux;
+                StartCoroutine(GuardarBitacora(CalculoTiempo, txt, indaux, accion, a));
                 PieGrandeHackeado = true;
                 A.hackear.interactable = false;
             }
@@ -288,9 +344,13 @@ public class Bitacoras : MonoBehaviour
                     HoraCompletado = 6 + (RetencionBitacora - (18 - TimeManager.Hora));
                     FechaCompletado = "2" + (time.Dia + 1) + "/03/2000";
                 }
-                InstanciarBitacoras(txtAccion, FechaCompletado, HoraCompletado);
-                TMP_Text textoPrefab = prefabAux.GetComponent<TMP_Text>();
-                StartCoroutine(GuardarBitacora(CalculoTiempo, txt, textoPrefab, accion));
+                int indaux = ind;
+                int a = 1;
+                CargarVectorProgreso(txtAccion, FechaCompletado, HoraCompletado, indaux);
+                SetearBitacora();
+                a = aux;
+                ActualizarIndice();
+                StartCoroutine(GuardarBitacora(CalculoTiempo, txt, indaux, accion, a));
                 PieGrandeDifamado = true;
                 A.difamar.interactable = false;
             }
@@ -313,9 +373,13 @@ public class Bitacoras : MonoBehaviour
                     HoraCompletado = 6 + (RetencionBitacora - (18 - TimeManager.Hora));
                     FechaCompletado = "2" + (time.Dia + 1) + "/03/2000";
                 }
-                InstanciarBitacoras(txtAccion, FechaCompletado, HoraCompletado);
-                TMP_Text textoPrefab = prefabAux.GetComponent<TMP_Text>();
-                StartCoroutine(GuardarBitacora(CalculoTiempo, txt, textoPrefab, accion));
+                int indaux = ind;
+                int a = 1;
+                CargarVectorProgreso(txtAccion, FechaCompletado, HoraCompletado, indaux);
+                SetearBitacora();
+                a = aux;
+                ActualizarIndice();
+                StartCoroutine(GuardarBitacora(CalculoTiempo, txt, indaux, accion, a));
                 ParquePimientaAislado = true;
                 A.aislar.interactable = false;
             }
@@ -334,9 +398,13 @@ public class Bitacoras : MonoBehaviour
                     HoraCompletado = 6 + (RetencionBitacora - (18 - TimeManager.Hora));
                     FechaCompletado = "2" + (time.Dia + 1) + "/03/2000";
                 }
-                InstanciarBitacoras(txtAccion, FechaCompletado, HoraCompletado);
-                TMP_Text textoPrefab = prefabAux.GetComponent<TMP_Text>();
-                StartCoroutine(GuardarBitacora(CalculoTiempo, txt, textoPrefab, accion));
+                int indaux = ind;
+                int a = 1;
+                CargarVectorProgreso(txtAccion, FechaCompletado, HoraCompletado, indaux);
+                SetearBitacora();
+                a = aux;
+                ActualizarIndice();
+                StartCoroutine(GuardarBitacora(CalculoTiempo, txt, indaux, accion, a));
                 ParquePimientaEscena = true;
                 A.crearEscena.interactable = false;
             }
@@ -359,9 +427,13 @@ public class Bitacoras : MonoBehaviour
                     HoraCompletado = 6 + (RetencionBitacora - (18 - TimeManager.Hora));
                     FechaCompletado = "2" + (time.Dia + 1) + "/03/2000";
                 }
-                InstanciarBitacoras(txtAccion, FechaCompletado, HoraCompletado);
-                TMP_Text textoPrefab = prefabAux.GetComponent<TMP_Text>();
-                StartCoroutine(GuardarBitacora(CalculoTiempo, txt, textoPrefab, accion));
+                int indaux = ind;
+                int a = 1;
+                CargarVectorProgreso(txtAccion, FechaCompletado, HoraCompletado, indaux);
+                SetearBitacora();
+                a = aux;
+                ActualizarIndice();
+                StartCoroutine(GuardarBitacora(CalculoTiempo, txt, indaux, accion, a));
                 PimientaPaluzaEscena = true;
                 A.crearEscena.interactable = false;
             }
@@ -384,9 +456,13 @@ public class Bitacoras : MonoBehaviour
                     HoraCompletado = 6 + (RetencionBitacora - (18 - TimeManager.Hora));
                     FechaCompletado = "2" + (time.Dia + 1) + "/03/2000";
                 }
-                InstanciarBitacoras(txtAccion, FechaCompletado, HoraCompletado);
-                TMP_Text textoPrefab = prefabAux.GetComponent<TMP_Text>();
-                StartCoroutine(GuardarBitacora(CalculoTiempo, txt, textoPrefab, accion));
+                int indaux = ind;
+                int a = 1;
+                CargarVectorProgreso(txtAccion, FechaCompletado, HoraCompletado, indaux);
+                SetearBitacora();
+                a = aux;
+                ActualizarIndice();
+                StartCoroutine(GuardarBitacora(CalculoTiempo, txt, indaux, accion, a));
                 ColoradaInvestigada = true;
                 A.investigar.interactable = false;
             }
@@ -409,9 +485,13 @@ public class Bitacoras : MonoBehaviour
                     HoraCompletado = 6 + (RetencionBitacora - (18 - TimeManager.Hora));
                     FechaCompletado = "2" + (time.Dia + 1) + "/03/2000";
                 }
-                InstanciarBitacoras(txtAccion, FechaCompletado, HoraCompletado);
-                TMP_Text textoPrefab = prefabAux.GetComponent<TMP_Text>();
-                StartCoroutine(GuardarBitacora(CalculoTiempo, txt, textoPrefab, accion));
+                int indaux = ind;
+                int a = 1;
+                CargarVectorProgreso(txtAccion, FechaCompletado, HoraCompletado, indaux);
+                SetearBitacora();
+                a = aux;
+                ActualizarIndice();
+                StartCoroutine(GuardarBitacora(CalculoTiempo, txt, indaux, accion, a));
                 Red78Investigada = true;
                 A.investigar.interactable = false;
             }
@@ -434,9 +514,13 @@ public class Bitacoras : MonoBehaviour
                     HoraCompletado = 6 + (RetencionBitacora - (18 - TimeManager.Hora));
                     FechaCompletado = "2" + (time.Dia + 1) + "/03/2000";
                 }
-                InstanciarBitacoras(txtAccion, FechaCompletado, HoraCompletado);
-                TMP_Text textoPrefab = prefabAux.GetComponent<TMP_Text>();
-                StartCoroutine(GuardarBitacora(CalculoTiempo, txt, textoPrefab, accion));
+                int indaux = ind;
+                int a = 1;
+                CargarVectorProgreso(txtAccion, FechaCompletado, HoraCompletado, indaux);
+                SetearBitacora();
+                a = aux;
+                ActualizarIndice();
+                StartCoroutine(GuardarBitacora(CalculoTiempo, txt, indaux, accion, a));
                 KateEliminada = true;
                 A.eliminar.interactable = false;
             }
@@ -455,9 +539,13 @@ public class Bitacoras : MonoBehaviour
                     HoraCompletado = 6 + (RetencionBitacora - (18 - TimeManager.Hora));
                     FechaCompletado = "2" + (time.Dia + 1) + "/03/2000";
                 }
-                InstanciarBitacoras(txtAccion, FechaCompletado, HoraCompletado);
-                TMP_Text textoPrefab = prefabAux.GetComponent<TMP_Text>();
-                StartCoroutine(GuardarBitacora(CalculoTiempo, txt, textoPrefab, accion));
+                int indaux = ind;
+                int a = 1;
+                CargarVectorProgreso(txtAccion, FechaCompletado, HoraCompletado, indaux);
+                SetearBitacora();
+                a = aux;
+                ActualizarIndice();
+                StartCoroutine(GuardarBitacora(CalculoTiempo, txt, indaux, accion, a));
                 KateLavada = true;
                 A.lavarCerebro.interactable = false;
             }
@@ -476,9 +564,13 @@ public class Bitacoras : MonoBehaviour
                     HoraCompletado = 6 + (RetencionBitacora - (18 - TimeManager.Hora));
                     FechaCompletado = "2" + (time.Dia + 1) + "/03/2000";
                 }
-                InstanciarBitacoras(txtAccion, FechaCompletado, HoraCompletado);
-                TMP_Text textoPrefab = prefabAux.GetComponent<TMP_Text>();
-                StartCoroutine(GuardarBitacora(CalculoTiempo, txt, textoPrefab, accion));
+                int indaux = ind;
+                int a = 1;
+                CargarVectorProgreso(txtAccion, FechaCompletado, HoraCompletado, indaux);
+                SetearBitacora();
+                a = aux;
+                ActualizarIndice();
+                StartCoroutine(GuardarBitacora(CalculoTiempo, txt, indaux, accion, a));
                 KateInvestigada = true;
                 A.investigar.interactable = false;
             }
@@ -497,9 +589,13 @@ public class Bitacoras : MonoBehaviour
                     HoraCompletado = 6 + (RetencionBitacora - (18 - TimeManager.Hora));
                     FechaCompletado = "2" + (time.Dia + 1) + "/03/2000";
                 }
-                InstanciarBitacoras(txtAccion, FechaCompletado, HoraCompletado);
-                TMP_Text textoPrefab = prefabAux.GetComponent<TMP_Text>();
-                StartCoroutine(GuardarBitacora(CalculoTiempo, txt, textoPrefab, accion));
+                int indaux = ind;
+                int a = 1;
+                CargarVectorProgreso(txtAccion, FechaCompletado, HoraCompletado, indaux);
+                SetearBitacora();
+                a = aux;
+                ActualizarIndice();
+                StartCoroutine(GuardarBitacora(CalculoTiempo, txt, indaux, accion, a));
                 KateHackeada = true;
                 A.hackear.interactable = false;
             }
@@ -518,9 +614,13 @@ public class Bitacoras : MonoBehaviour
                     HoraCompletado = 6 + (RetencionBitacora - (18 - TimeManager.Hora));
                     FechaCompletado = "2" + (time.Dia + 1) + "/03/2000";
                 }
-                InstanciarBitacoras(txtAccion, FechaCompletado, HoraCompletado);
-                TMP_Text textoPrefab = prefabAux.GetComponent<TMP_Text>();
-                StartCoroutine(GuardarBitacora(CalculoTiempo, txt, textoPrefab, accion));
+                int indaux = ind;
+                int a = 1;
+                CargarVectorProgreso(txtAccion, FechaCompletado, HoraCompletado, indaux);
+                SetearBitacora();
+                a = aux;
+                ActualizarIndice();
+                StartCoroutine(GuardarBitacora(CalculoTiempo, txt, indaux, accion, a));
                 KateDifamada = true;
                 A.difamar.interactable = false;
             }
@@ -543,9 +643,13 @@ public class Bitacoras : MonoBehaviour
                     HoraCompletado = 6 + (RetencionBitacora - (18 - TimeManager.Hora));
                     FechaCompletado = "2" + (time.Dia + 1) + "/03/2000";
                 }
-                InstanciarBitacoras(txtAccion, FechaCompletado, HoraCompletado);
-                TMP_Text textoPrefab = prefabAux.GetComponent<TMP_Text>();
-                StartCoroutine(GuardarBitacora(CalculoTiempo, txt, textoPrefab, accion));
+                int indaux = ind;
+                int a = 1;
+                CargarVectorProgreso(txtAccion, FechaCompletado, HoraCompletado, indaux);
+                SetearBitacora();
+                a = aux;
+                ActualizarIndice();
+                StartCoroutine(GuardarBitacora(CalculoTiempo, txt, indaux, accion, a));
                 PepeEliminado = true;
                 A.eliminar.interactable = false;
             }
@@ -564,9 +668,13 @@ public class Bitacoras : MonoBehaviour
                     HoraCompletado = 6 + (RetencionBitacora - (18 - TimeManager.Hora));
                     FechaCompletado = "2" + (time.Dia + 1) + "/03/2000";
                 }
-                InstanciarBitacoras(txtAccion, FechaCompletado, HoraCompletado);
-                TMP_Text textoPrefab = prefabAux.GetComponent<TMP_Text>();
-                StartCoroutine(GuardarBitacora(CalculoTiempo, txt, textoPrefab, accion));
+                int indaux = ind;
+                int a = 1;
+                CargarVectorProgreso(txtAccion, FechaCompletado, HoraCompletado, indaux);
+                SetearBitacora();
+                a = aux;
+                ActualizarIndice();
+                StartCoroutine(GuardarBitacora(CalculoTiempo, txt, indaux, accion, a));
                 PepeLavado = true;
                 A.lavarCerebro.interactable = false;
             }
@@ -585,9 +693,13 @@ public class Bitacoras : MonoBehaviour
                     HoraCompletado = 6 + (RetencionBitacora - (18 - TimeManager.Hora));
                     FechaCompletado = "2" + (time.Dia + 1) + "/03/2000";
                 }
-                InstanciarBitacoras(txtAccion, FechaCompletado, HoraCompletado);
-                TMP_Text textoPrefab = prefabAux.GetComponent<TMP_Text>();
-                StartCoroutine(GuardarBitacora(CalculoTiempo, txt, textoPrefab, accion));
+                int indaux = ind;
+                int a = 1;
+                CargarVectorProgreso(txtAccion, FechaCompletado, HoraCompletado, indaux);
+                SetearBitacora();
+                a = aux;
+                ActualizarIndice();
+                StartCoroutine(GuardarBitacora(CalculoTiempo, txt, indaux, accion, a));
                 PepeInvestigado = true;
                 A.investigar.interactable = false;
             }
@@ -606,9 +718,13 @@ public class Bitacoras : MonoBehaviour
                     HoraCompletado = 6 + (RetencionBitacora - (18 - TimeManager.Hora));
                     FechaCompletado = "2" + (time.Dia + 1) + "/03/2000";
                 }
-                InstanciarBitacoras(txtAccion, FechaCompletado, HoraCompletado);
-                TMP_Text textoPrefab = prefabAux.GetComponent<TMP_Text>();
-                StartCoroutine(GuardarBitacora(CalculoTiempo, txt, textoPrefab, accion));
+                int indaux = ind;
+                int a = 1;
+                CargarVectorProgreso(txtAccion, FechaCompletado, HoraCompletado, indaux);
+                SetearBitacora();
+                a = aux;
+                ActualizarIndice();
+                StartCoroutine(GuardarBitacora(CalculoTiempo, txt, indaux, accion, a));
                 PepeHackeado = true;
                 A.hackear.interactable = false;
             }
@@ -627,9 +743,13 @@ public class Bitacoras : MonoBehaviour
                     HoraCompletado = 6 + (RetencionBitacora - (18 - TimeManager.Hora));
                     FechaCompletado = "2" + (time.Dia + 1) + "/03/2000";
                 }
-                InstanciarBitacoras(txtAccion, FechaCompletado, HoraCompletado);
-                TMP_Text textoPrefab = prefabAux.GetComponent<TMP_Text>();
-                StartCoroutine(GuardarBitacora(CalculoTiempo, txt, textoPrefab, accion));
+                int indaux = ind;
+                int a = 1;
+                CargarVectorProgreso(txtAccion, FechaCompletado, HoraCompletado, indaux);
+                SetearBitacora();
+                a = aux;
+                ActualizarIndice();
+                StartCoroutine(GuardarBitacora(CalculoTiempo, txt, indaux, accion, a));
                 PepeDifamado = true;
                 A.difamar.interactable = false;
             }
@@ -648,9 +768,13 @@ public class Bitacoras : MonoBehaviour
                     HoraCompletado = 6 + (RetencionBitacora - (18 - TimeManager.Hora));
                     FechaCompletado = "2" + (time.Dia + 1) + "/03/2000";
                 }
-                InstanciarBitacoras(txtAccion, FechaCompletado, HoraCompletado);
-                TMP_Text textoPrefab = prefabAux.GetComponent<TMP_Text>();
-                StartCoroutine(GuardarBitacora(CalculoTiempo, txt, textoPrefab, accion));
+                int indaux = ind;
+                int a = 1;
+                CargarVectorProgreso(txtAccion, FechaCompletado, HoraCompletado, indaux);
+                SetearBitacora();
+                a = aux;
+                ActualizarIndice();
+                StartCoroutine(GuardarBitacora(CalculoTiempo, txt, indaux, accion, a));
                 PepeAnalizado = true;
                 A.analizarMuestra.interactable = false;
             }
@@ -673,9 +797,13 @@ public class Bitacoras : MonoBehaviour
                     HoraCompletado = 6 + (RetencionBitacora - (18 - TimeManager.Hora));
                     FechaCompletado = "2" + (time.Dia + 1) + "/03/2000";
                 }
-                InstanciarBitacoras(txtAccion, FechaCompletado, HoraCompletado);
-                TMP_Text textoPrefab = prefabAux.GetComponent<TMP_Text>();
-                StartCoroutine(GuardarBitacora(CalculoTiempo, txt, textoPrefab, accion));
+                int indaux = ind;
+                int a = 1;
+                CargarVectorProgreso(txtAccion, FechaCompletado, HoraCompletado, indaux);
+                SetearBitacora();
+                a = aux;
+                ActualizarIndice();
+                StartCoroutine(GuardarBitacora(CalculoTiempo, txt, indaux, accion, a));
                 CabellosRojijosAnalizado = true;
                 A.analizarMuestra.interactable = false;
             }
@@ -700,9 +828,13 @@ public class Bitacoras : MonoBehaviour
                     FechaCompletado = "2" + (time.Dia + 1) + "/03/2000";
                     
                 }
-                InstanciarBitacoras(txtAccion, FechaCompletado, HoraCompletado);
-                TMP_Text textoPrefab = prefabAux.GetComponent<TMP_Text>();
-                StartCoroutine(GuardarBitacora(CalculoTiempo, txtNoticiaFalsa, textoPrefab, accion));
+                int indaux = ind;
+                int a = 1;
+                CargarVectorProgreso(txtAccion, FechaCompletado, HoraCompletado, indaux);
+                SetearBitacora();
+                a = aux;
+                ActualizarIndice();
+                StartCoroutine(GuardarBitacora(CalculoTiempo, txtNoticiaFalsa, indaux, accion, a));
                
                 A.crearNoticia.interactable = false;
             }
@@ -711,10 +843,10 @@ public class Bitacoras : MonoBehaviour
         A.Restablecer();
     }
 
-    IEnumerator GuardarBitacora(float ReinicioTiempo, string txt, TMP_Text TextoPrefab, Toggle accion)
+    IEnumerator GuardarBitacora(float ReinicioTiempo, string txt, int indaux, Toggle accion, int a)
     {
         yield return new WaitForSeconds(ReinicioTiempo);
-        TextoPrefab.text = txt;
+        CargarVectorAccion(a, indaux, txt);
         accion.interactable = true;
         ActualizarPalabras();
     }
@@ -728,44 +860,148 @@ public class Bitacoras : MonoBehaviour
     }
 
     //Crea los espacios para rellenar las bitàcoras y los borra cuando es debido
-    void InstanciarBitacoras(string Accion, string FechaCompletado, float HoraCompletado)
+   
+    public void SiguientePagina()
     {
-        if (i > 11)
+        if (PagActual < 3)  {PagActual++;}
+    }
+    public void AnteriorPagina ()
+    {
+        if (PagActual > 0) { PagActual--; } 
+    }
+    void ActualizarPaginas()
+    {
+        if (PagActual == 1)
         {
-            i = 0;
-            y = InicioBitacora.transform.position.y;
-            Destroy(PadreAux);
+            B1P1.text = pag1[0];
+            B2P1.text = pag1[1];
+            B3P1.text = pag1[2];
+            B4P1.text = pag1[3];
+            B5P1.text = pag1[4];
+            B6P1.text = pag1[5];
+            B1P2.text = pag1[6];
+            B2P2.text = pag1[7];
+            B3P2.text = pag1[8];
+            B4P2.text = pag1[9];
+            B5P2.text = pag1[10];
+            B6P2.text = pag1[11];
 
         }
-        if (i == 0)
+        else if (PagActual == 2)
         {
-            PadreAux = new GameObject("PadreBitacoras");
-            PadreAux.transform.SetParent(InicioBitacora.transform);
+            B1P1.text = pag2[0];
+            B2P1.text = pag2[1];
+            B3P1.text = pag2[2];
+            B4P1.text = pag2[3];
+            B5P1.text = pag2[4];
+            B6P1.text = pag2[5];
+            B1P2.text = pag2[6];
+            B2P2.text = pag2[7];
+            B3P2.text = pag2[8];
+            B4P2.text = pag2[9];
+            B5P2.text = pag2[10];
+            B6P2.text = pag2[11];
         }
-
-        if (i < 6)
+        else if (PagActual == 3)
         {
-            Transform aux = PadreAux.transform;
-            prefabAux = Instantiate(BitacoraPrefab, new Vector3(InicioBitacora.transform.position.x, y, InicioBitacora.transform.position.z), InicioBitacora.transform.rotation);
-            prefabAux.GetComponent<TMP_Text>().text = "En proceso: " + Accion + System.Environment.NewLine + "Se completa el " + FechaCompletado + " a las " + HoraCompletado + ":" + TimeManager.Minuto;
-            prefabAux.transform.SetParent(aux.transform);
+            B1P1.text = pag3[0];
+            B2P1.text = pag3[1];
+            B3P1.text = pag3[2];
+            B4P1.text = pag3[3];
+            B5P1.text = pag3[4];
+            B6P1.text = pag3[5];
+            B1P2.text = pag3[6];
+            B2P2.text = pag3[7];
+            B3P2.text = pag3[8];
+            B4P2.text = pag3[9];
+            B5P2.text = pag3[10];
+            B6P2.text = pag3[11];
         }
-
-        if (i == 6) y = InicioBitacora2.transform.position.y;
-
-        if (i >= 6) 
-        {
-            Transform aux = PadreAux.transform;
-            prefabAux = Instantiate(BitacoraPrefab, new Vector3(InicioBitacora2.transform.position.x, y, InicioBitacora2.transform.position.z), InicioBitacora2.transform.rotation);
-            prefabAux.GetComponent<TMP_Text>().text = "En proceso: " + Accion + System.Environment.NewLine + "Se completa el: " + FechaCompletado + " a las: " + HoraCompletado + ":" + TimeManager.Minuto;
-            prefabAux.transform.SetParent(aux.transform);
-
-        }
-
-        y = y - 100;
-        i = i + 1;   
     }
 
+    void CargarVectorProgreso(string Accion, string FechaCompletado, float HoraCompletado, int ind)
+    { 
+        if (Pag == 1)
+        {
+            pag1[ind] = "En proceso: " + Accion + System.Environment.NewLine + "Se completa el: " + FechaCompletado + " a las: " + HoraCompletado + ":" + TimeManager.Minuto;
+        }
+        else if (Pag == 2)
+        {
+            pag2[ind] = "En proceso: " + Accion + System.Environment.NewLine + "Se completa el: " + FechaCompletado + " a las: " + HoraCompletado + ":" + TimeManager.Minuto;
+        }
+        else if (Pag == 3)
+        {
+            pag3[ind] = "En proceso: " + Accion + System.Environment.NewLine + "Se completa el: " + FechaCompletado + " a las: " + HoraCompletado + ":" + TimeManager.Minuto;
+        }
+    }
+    void ActualizarIndice ()
+    {
+        if (ind > 10)
+        {
+            ind = 0;
+            Pag = Pag + 1;
+        }
+        else ind++;
+    }
+
+    void SetearBitacora ()
+    {
+        if (Pag == 1) aux = 1;
+
+        if (Pag == 2) aux = 2;
+        
+        if (Pag == 3) aux = 3;
+
+    }
+    void CargarVectorAccion (int a, int indaux, string txt )
+    {
+        if (a == 1) 
+        {
+            if (indaux == 0) pag1[0] = txt;
+            if (indaux == 1) pag1[1] = txt;
+            if (indaux == 2) pag1[2] = txt;
+            if (indaux == 3) pag1[3] = txt;
+            if (indaux == 4) pag1[4] = txt;
+            if (indaux == 5) pag1[5] = txt;
+            if (indaux == 6) pag1[6] = txt;
+            if (indaux == 7) pag1[7] = txt;
+            if (indaux == 8) pag1[8] = txt;
+            if (indaux == 9) pag1[9] = txt;
+            if (indaux == 10) pag1[10] = txt;
+            if (indaux == 11) pag1[11] = txt;
+        }
+        if (a == 2)
+        {
+            if (indaux == 0) pag2[0] = txt;
+            if (indaux == 1) pag2[1] = txt;
+            if (indaux == 2) pag2[2] = txt;
+            if (indaux == 3) pag2[3] = txt;
+            if (indaux == 4) pag2[4] = txt;
+            if (indaux == 5) pag2[5] = txt;
+            if (indaux == 6) pag2[6] = txt;
+            if (indaux == 7) pag2[7] = txt;
+            if (indaux == 8) pag2[8] = txt;
+            if (indaux == 9) pag2[9] = txt;
+            if (indaux == 10) pag2[10] = txt;
+            if (indaux == 11) pag2[11] = txt;
+        }
+        if (a == 3)
+        {
+            if (indaux == 0) pag3[0] = txt;
+            if (indaux == 1) pag3[1] = txt;
+            if (indaux == 2) pag3[2] = txt;
+            if (indaux == 3) pag3[3] = txt;
+            if (indaux == 4) pag3[4] = txt;
+            if (indaux == 5) pag3[5] = txt;
+            if (indaux == 6) pag3[6] = txt;
+            if (indaux == 7) pag3[7] = txt;
+            if (indaux == 8) pag3[8] = txt;
+            if (indaux == 9) pag3[9] = txt;
+            if (indaux == 10) pag3[10] = txt;
+            if (indaux == 11) pag3[11] = txt;
+        }
+
+    }
     //========================================== Fake news =======================================//
 
    public void ElegirFakeNews(int Num)
