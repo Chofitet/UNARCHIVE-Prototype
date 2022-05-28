@@ -75,7 +75,6 @@ public class Bitacoras : MonoBehaviour
 
     private void Start()
     {
-       
         PagActual = Pag;
     }
 
@@ -1041,11 +1040,6 @@ public class Bitacoras : MonoBehaviour
                 
         }
         
-        
-        
     }
 
-    
-       
-   
 }
