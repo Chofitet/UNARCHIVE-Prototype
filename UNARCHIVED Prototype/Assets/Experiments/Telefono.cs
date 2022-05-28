@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class Telefono : MonoBehaviour
 {
+   
     [SerializeField] Libreta libreta;
     [SerializeField] Bitacoras bitacora;
     public Button btnllamar;
