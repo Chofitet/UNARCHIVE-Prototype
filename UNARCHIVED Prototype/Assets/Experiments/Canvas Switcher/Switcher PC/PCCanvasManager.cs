@@ -3,42 +3,36 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
-public enum CanvasType
+public enum CanvasTypePC
 {
-    Escritorio,
-    Expediente,
-    Bitacoras,
-    Acciones,
     PC,
-    Telefono,
-    Libreta,
-    TV,
+    PCDef,
 }
 
-public class CanvasManager : MonoBehaviour
+public class PCCanvasManager : MonoBehaviour
 {
-    List<CanvasController> canvasControllerList;
-    public CanvasController lastActiveCanvas;
-    CanvasController lastActiveCanvas2;
-    public CanvasType Escritorio;
+    List<PCCanvasController> canvasControllerList;
+    public PCCanvasController lastActiveCanvas;
+    PCCanvasController lastActiveCanvas2;
+
 
     private void Update()
     {
-            if (Input.GetKeyDown(KeyCode.Mouse1) == true)
+        if (Input.GetKeyDown(KeyCode.Mouse1) == true)
         {
-            SwitchCanvas(Escritorio, Escritorio);
+            SwitchCanvas(CanvasTypePC.PCDef, CanvasTypePC.PCDef);
         }
     }
 
     void Start()
 
     {
-        canvasControllerList = GetComponentsInChildren<CanvasController>().ToList();
+        canvasControllerList = GetComponentsInChildren<PCCanvasController>().ToList();
         canvasControllerList.ForEach(x => x.gameObject.SetActive(false));
-        SwitchCanvas(CanvasType.Escritorio, CanvasType.Escritorio);
+        SwitchCanvas(CanvasTypePC.PCDef, CanvasTypePC.PCDef);
     }
 
-    public void SwitchCanvas(CanvasType _type, CanvasType _type2)
+    public void SwitchCanvas(CanvasTypePC _type, CanvasTypePC _type2)
     {
         if (lastActiveCanvas != null)
         {
@@ -50,8 +44,8 @@ public class CanvasManager : MonoBehaviour
             lastActiveCanvas2.gameObject.SetActive(false);
         }
 
-        CanvasController desiredCanvas = canvasControllerList.Find(x => x.canvasType == _type);
-        CanvasController desiredCanvas2 = canvasControllerList.Find(x => x.canvasType == _type2);
+        PCCanvasController desiredCanvas = canvasControllerList.Find(x => x.canvasTypePC == _type);
+        PCCanvasController desiredCanvas2 = canvasControllerList.Find(x => x.canvasTypePC == _type2);
         if (desiredCanvas != null)
         {
             desiredCanvas.gameObject.SetActive(true);
@@ -66,4 +60,3 @@ public class CanvasManager : MonoBehaviour
         else { Debug.LogWarning("The desired canvas was not found!"); }
     }
 }
-

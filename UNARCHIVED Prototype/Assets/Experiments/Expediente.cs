@@ -5,10 +5,13 @@ using TMPro;
 public class Expediente : MonoBehaviour
 {
     public bool CasoLeido;
-   
-    public void ExpedienteLeido()
-    {
-        CasoLeido = true;
-    }
+    public GameObject expediente;
+    
 
+    private void Update()
+    {
+        if(expediente.activeSelf == true) CasoLeido = true;
+
+    }
+   
 }

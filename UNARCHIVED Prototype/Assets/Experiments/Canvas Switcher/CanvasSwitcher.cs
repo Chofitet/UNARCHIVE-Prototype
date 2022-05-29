@@ -7,8 +7,10 @@ public class CanvasSwitcher : MonoBehaviour
     public CanvasType desiredCanvasType;
     public CanvasType desiredCanvasType2;
 
+
     public CanvasManager canvasManager;
     Button menuButton;
+    
 
     private void Start()
     {
@@ -16,9 +18,10 @@ public class CanvasSwitcher : MonoBehaviour
         menuButton.onClick.AddListener(OnButtonClicked);
        
     }
-
+ 
     void OnButtonClicked()
     {
+       
         canvasManager.SwitchCanvas(desiredCanvasType, desiredCanvasType2);
     }
 }
