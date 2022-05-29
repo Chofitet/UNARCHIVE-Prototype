@@ -33,11 +33,7 @@ public class TV : MonoBehaviour
     {
         TimeManager.CambioHoras -= DirectorNoticias;
     }
-    private void Update()
-    {
-        
-    }
-
+   
     void DirectorNoticias ()
     {
         if (TimeManager.Hora == 6) { CheckearBitacoras(); if (x == false) NoticiasAliatorias(); x = false; }
@@ -108,7 +104,6 @@ public class TV : MonoBehaviour
     {
         if (bitacoras.BenEliminado == true && BenEliminado == false)
         {
-            Debug.Log("ben eliminado");
             int IncrementoRating = 3;
             StartCoroutine(ImprimirNoticia(BenDesapareceTitulo, BenDesapareceNoticia, IncrementoRating));
             BenEliminado = true;
