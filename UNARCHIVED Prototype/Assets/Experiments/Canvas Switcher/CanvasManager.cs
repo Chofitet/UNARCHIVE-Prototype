@@ -18,7 +18,7 @@ public enum CanvasType
 public class CanvasManager : MonoBehaviour
 {
     List<CanvasController> canvasControllerList;
-    public CanvasController lastActiveCanvas;
+    CanvasController lastActiveCanvas;
     CanvasController lastActiveCanvas2;
     public CanvasType Escritorio;
 
