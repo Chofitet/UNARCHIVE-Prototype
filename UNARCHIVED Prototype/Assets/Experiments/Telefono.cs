@@ -8,6 +8,7 @@ public class Telefono : MonoBehaviour
 {
     [SerializeField] Libreta libreta;
     [SerializeField] Bitacoras bitacora;
+    [SerializeField] TimeManager time;
     public Button btnllamar;
     public Button btnplay;
     public Button btnREC;
@@ -24,131 +25,81 @@ public class Telefono : MonoBehaviour
    
     public  bool LLamadaDiaria;
     string LlamadaEnProgreso;
-    float InicioLlamada;
+
 
     bool x;
+    bool x1;
 
-    private void Start()
-    {
-        PapelFax.SetActive(false);
-    }
-
-    private void OnEnable()
-    {
-        TimeManager.CambioHoras += CooldownTelefono;
-    }
-
-    private void OnDisable()
-    {
-        TimeManager.CambioHoras += CooldownTelefono;
-    }
-
-    private void CooldownTelefono() 
-    {
-        
-        if (TimeManager.Hora == InicioLlamada + 3)
-        {
-            btnplay.interactable = true;
-        }
-    }
     private void Update()
     {
-        if (LLamadaDiaria == false)
-        {
-            if (txtLlamada.text == "Interceptar linea" || txtLlamada.text == "") { btnREC.interactable = false; btnllamar.interactable = true; InicioLlamada = -200;}
-            else btnREC.interactable = true; 
-            
-        }
-        if (LLamadaDiaria == true)
-        {
-            btnREC.interactable = false;
-            btnplay.interactable = false;
-            btnllamar.interactable = false;
-        }
-        if (txtTranscripciónLlamado.text == "")
-        {
-            PapelFax.SetActive(false);
-        }
-
-    }
-
-    public void Llamar()
-    {
-        LlamadaEnProgreso = libreta.palabra;
-        txtLlamada.text = LlamadaEnProgreso;
-        txtTranscripciónLlamado.text = "";
-        
+        if(btnllamar.interactable == true) txtLlamada.text = libreta.palabra;
+        if (LLamadaDiaria == false && x1 == true) { btnREC.interactable = true; btnllamar.interactable = true; x1 = false; }
     }
 
     public void REC()
     {
         if (x == false)
         {
-            txtTranscripciónLlamado.text = "";
+            LlamadaEnProgreso = libreta.palabra;
             EsLlamable(LlamadaEnProgreso);
         }
         else if (x == true)
         {
-            txtTranscripciónLlamado.text = "";
             btnllamar.interactable = true;
-            InicioLlamada = -200;
             x = false;
         }
     }
 
-    public void BorrarLlamada()
+    public void SetearLlamada ()
     {
-        if (btnllamar.interactable == true)
-        {
-            txtLlamada.text = "Interceptar linea";
-            btnREC.interactable = false;
-            btnllamar.interactable = true;
-            btnplay.interactable = false;
-        }
-        
-    } 
-    public void ReproducirLlamada ()
-    {
-        PapelFax.SetActive(true);
         txtTranscripciónLlamado.text = "No se interseptaron llamadas relevantes";
         //Llamado ben
         switch (LlamadaEnProgreso)
         {
             case ("Ben Benji"):
-                if (bitacora.BenEliminado == false && bitacora.BenLavado == false  )
+                if (bitacora.BenEliminado == false && bitacora.BenLavado == false)
                 {
                     if (bitacora.PepeEliminado == false && bitacora.PepeLavado == false && BenLlamado == false)
                     {
-                        txtTranscripciónLlamado.text = "No ben que hiciste";
-                        libreta.BtnPepeQueño.SetActive(true);
-                        BenLlamado = true;
+
+                        txtTranscripciónLlamado.text = "No ben que hiciste";;
+                        int retencionllamada = 3;
+                        StartCoroutine(PinchandoLlamada(retencionllamada, BenLlamado));
+
                     }
+                    else {PapelFax.SetActive(true);}
                 }
-                else txtTranscripciónLlamado.text = "Ben Benji ya no pude realizar llamadas por culpa de tus acciones";
+                else { PapelFax.SetActive(true); txtTranscripciónLlamado.text = "Ben Benji ya no pude realizar llamadas por culpa de tus acciones"; }
+
                 break;
 
             //Llamado Pie Grande
             case ("Pie Grande"):
-                if (bitacora.PieGrandeEliminado == false && PieGrandeLlamado == false)
+                if (bitacora.PieGrandeEliminado == false )
                 {
-                    if (bitacora.KateEliminada == false && bitacora.KateLavada == false)
+                    if (bitacora.KateEliminada == false && bitacora.KateLavada == false && PieGrandeLlamado == false)
                     {
                         txtTranscripciónLlamado.text = "unga unga aplastar porunga";
-                        PieGrandeLlamado = true;
+                        int retencionllamada = 3;
+                        StartCoroutine(PinchandoLlamada(retencionllamada, PieGrandeLlamado));
                     }
+                    else { PapelFax.SetActive(true); }
                 }
-                else txtTranscripciónLlamado.text = "Pie Grande ya no pude realizar llamadas por culpa de tus acciones";
+                else { PapelFax.SetActive(true); txtTranscripciónLlamado.text = "Pie Grande ya no pude realizar llamadas por culpa de tus acciones"; }
                 break;
             // Llamar Kate Milliard
             case ("Kate Milliard"):
                 if (bitacora.KateEliminada == false && bitacora.KateLavada == false)
                 {
-                    if  (bitacora.PieGrandeEliminado == false && KateLlamado == false){
+                    if (bitacora.PieGrandeEliminado == false && KateLlamado == false)
+                    {
                         txtTranscripciónLlamado.text = "******************************************************************";
-                        KateLlamado = true;
+                        int retencionllamada = 3;
+                        StartCoroutine(PinchandoLlamada(retencionllamada, KateLlamado));
                     }
+                    else { PapelFax.SetActive(true); }
                 }
-                else txtTranscripciónLlamado.text = "Kate ya no pude realizar llamadas por culpa de tus acciones";
+                else { PapelFax.SetActive(true); txtTranscripciónLlamado.text = "Kate ya no pude realizar llamadas por culpa de tus acciones"; }
              break;
             // Llamar Pepe Queño
             case ("Pepe Queño"):
@@ -158,19 +109,19 @@ public class Telefono : MonoBehaviour
                     if (PepeLlamado1 == false)
                     {
                         txtTranscripciónLlamado.text = "******************************************************************";
-                        PepeLlamado1 = true;
+                        int retencionllamada = 3;
+                        StartCoroutine(PinchandoLlamada(retencionllamada, PepeLlamado1));
                     }
                 }
-                else txtTranscripciónLlamado.text = "Pepe Queño ya no pude realizar llamadas por culpa de tus acciones";
+                else { PapelFax.SetActive(true); txtTranscripciónLlamado.text = "Pepe Queño ya no pude realizar llamadas por culpa de tus acciones"; }
                 break;
             case null: 
                 txtTranscripciónLlamado.text = "No se interceptó ninguna llamada";
             break;
 
         }
-        LLamadaDiaria = true;   
         x = false;
-        BorrarLlamada();
+      
 
     }
 
@@ -179,7 +130,8 @@ public class Telefono : MonoBehaviour
         if (Palabra == "Ben Benji" || Palabra == "Pepe Queño" || Palabra == "Pie Grande" || Palabra == "Kate Milliard")
         {
             btnllamar.interactable = false;
-            InicioLlamada = TimeManager.Hora;
+            PapelFax.SetActive(false);
+            SetearLlamada();
             x = true;
         }
         else
@@ -190,5 +142,32 @@ public class Telefono : MonoBehaviour
         }
     }
 
+    IEnumerator PinchandoLlamada (int retencionllamada, bool L)
+    {
+        yield return new WaitForSeconds(retencionllamada * time.MinutosXseg * 60);
+        L = true;
+        if (x == true) 
+        {
+            btnplay.interactable = true;
+            btnREC.interactable = false;
+            x = false;
+        }
+    }
+
+    void ActualizarPalabras()
+    {
+        if (bitacora.PieGrandeHackeado == true) { libreta.BtnRed78.gameObject.SetActive(true); }
+        if (bitacora.Red78Investigada == true) { libreta.BtnKateMilliard.gameObject.SetActive(true); }
+        if (bitacora.PieGrandeInvestigado == true) { libreta.BtnPelosRojizos.gameObject.SetActive(true); }
+    }
+
+    public void Play()
+    {
+        PapelFax.SetActive(true);
+        LLamadaDiaria = true;
+        btnplay.interactable = false;
+        x1 = true;
+        ActualizarPalabras();
+    }
 
 }

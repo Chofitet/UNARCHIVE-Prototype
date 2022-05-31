@@ -14,7 +14,7 @@ public class TimeManager : MonoBehaviour
     public static int Minuto { get; private set; }
     public static int Hora { get; private set; }
 
-    private float MinutosPorSegundosReales = 0.05f;
+    private float MinutosPorSegundosReales = 0.2f;
     public float MinutosXseg; 
     private float timer;
 
@@ -63,7 +63,6 @@ public class TimeManager : MonoBehaviour
         {
             telefono.LLamadaDiaria = false;
             NoticiaDiaria = false;
-            telefono.PapelFax.gameObject.SetActive(false);
             Dia++;
             Hora = 6;
         }
