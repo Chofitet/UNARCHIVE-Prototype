@@ -21,6 +21,14 @@ public class TV : MonoBehaviour
     string BenDesapareceTitulo = "NIÑO ES ENCONTRADO HAY QUE DOLOR QUE PENA";
     string BenDesapareceNoticia = "NIÑO ES ENCONTRADO HAY QUE DOLOR QUE PENA, a pero fue encontrado, borra eso";
 
+    bool BenBrainwash;
+    string BenBrainwashTitulo = "Niño testigo cancela entrevista. ¿Cobarde, mentiroso o co-conspirador?";
+    string BenBrainwashNoticia = "TV1:  Niño testigo cancela entrevista. ¿Cobarde, mentiroso o co-conspirador?";
+
+    bool BenDifamado;
+    string BenDifamadoTitulo = "Niño mentiroso miente. 10 mentiras que Ben Benji ya te dijo y no sabías!";
+    string BenDifamadoNoticia = "Niño mentiroso miente. 10 mentiras que Ben Benji ya te dijo y no sabías!";
+
     bool PieGrandeEliminado;
     string PieGrandeEliminadoTitulo = "Kate Milliar sale a decir que mataron a su choma";
     string PieGrandeEliminadoNoticia = "La actriz kATE Milliar estaba saliendo con el mismisimo Pie Grande y declara que po acaban de matar.";
@@ -112,6 +120,18 @@ public class TV : MonoBehaviour
             int IncrementoRating = 3;
             StartCoroutine(ImprimirNoticia(BenDesapareceTitulo, BenDesapareceNoticia, IncrementoRating));
             BenEliminado = true;
+        }
+        else if (bitacoras.BenLavado == true && BenBrainwash == false)//
+        {
+            int IncrementoRating = -1;
+            StartCoroutine(ImprimirNoticia(BenBrainwashTitulo, BenBrainwashNoticia, IncrementoRating));
+            BenBrainwash = true;
+        }
+        else if (bitacoras.BenDifamado == true && BenDifamado == false)//
+        {
+            int IncrementoRating = -2;
+            StartCoroutine(ImprimirNoticia(BenDifamadoTitulo, BenDifamadoNoticia, IncrementoRating));
+            BenDifamado = true;
         }
         else if (bitacoras.PieGrandeEliminado == true && PieGrandeEliminado == false)
         {
