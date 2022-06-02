@@ -20,27 +20,35 @@ public class Bitacoras : MonoBehaviour
     public bool BenInvestigado;
     public bool BenHackeado;
     public bool BenDifamado;
+    ///////////////////////////// 
     public bool PieGrandeEliminado;
     public bool PieGrandeLavado;
     public bool PieGrandeInvestigado;
     public bool PieGrandeHackeado;
     public bool PieGrandeDifamado;
+    ///////////////////////////// 
     public bool ParquePimientaAislado;
     public bool ParquePimientaEscena;
+    ///////////////////////////// 
     public bool PimientaPaluzaEscena;
+    ///////////////////////////// 
     public bool ColoradaInvestigada;
+    ///////////////////////////// 
     public bool Red78Investigada;
+    ///////////////////////////// 
     public bool KateEliminada;
     public bool KateLavada;
     public bool KateInvestigada;
     public bool KateHackeada;
     public bool KateDifamada;
+    ///////////////////////////// 
     public bool PepeEliminado;
     public bool PepeLavado;
     public bool PepeInvestigado;
     public bool PepeHackeado;
     public bool PepeDifamado;
     public bool PepeAnalizado;
+    ///////////////////////////// 
     public bool CabellosRojijosAnalizado;
 
     private string txtNoticiaFalsa;
@@ -96,7 +104,7 @@ public class Bitacoras : MonoBehaviour
     {
         //===================================================== Bitacoras Ben==============================================//
         //Eliminar
-        if (libreta.palabra == "Ben Benji")
+        if (libreta.palabra == libreta.palabrasCaso[0])
         {
             if (A.eliminar.CompareTag(tag = "OptActivado") && A.eliminar.isOn == true && BenEliminado == false)
             {
@@ -226,7 +234,7 @@ public class Bitacoras : MonoBehaviour
 
 
         //====================================================== Bitacoras Pie Grande =============================================//
-        if (libreta.palabra == "Pie Grande")
+        if (libreta.palabra == libreta.palabrasCaso[1])
         {
             //ELIMINAR 
             if (A.eliminar.CompareTag(tag = "OptActivado") && A.eliminar.isOn == true && PieGrandeEliminado == false)
@@ -356,7 +364,7 @@ public class Bitacoras : MonoBehaviour
             }
         }
         //=========================================================== Bitacoras Pueblo Pimienta =================================================//
-        if (libreta.palabra == "Pueblo Pimienta")
+        if (libreta.palabra == libreta.palabrasCaso[5])
         {
             //Aislar
             if (A.aislar.CompareTag(tag = "OptActivado") && A.aislar.isOn == true && ParquePimientaAislado == false)
@@ -410,7 +418,7 @@ public class Bitacoras : MonoBehaviour
             }
         }
         //========================================================== Bitacoras Pimienta Paluza ==================================================//
-        if (libreta.palabra == "Pimienta Paluza")
+        if (libreta.palabra == libreta.palabrasCaso[3])
         {
             //Montar escena
             if (A.crearEscena.CompareTag(tag = "OptActivado") && A.crearEscena.isOn == true && PimientaPaluzaEscena == false)
@@ -439,7 +447,7 @@ public class Bitacoras : MonoBehaviour
             }
         }
         //========================================================= Bitacoras Colorada ==========================================================//
-        if (libreta.palabra == "Colorada")
+        if (libreta.palabra == libreta.palabrasCaso[6])
         {
             //Investigar 
             if (A.investigar.CompareTag(tag = "OptActivado") && A.investigar.isOn == true && ColoradaInvestigada == false)
@@ -468,7 +476,7 @@ public class Bitacoras : MonoBehaviour
             }
         }
         //======================================================= Bitacoras Red78 ==============================================================//
-        if (libreta.palabra == "Red78")
+        if (libreta.palabra == libreta.palabrasCaso[7])
         {
             //Investigar 
             if (A.investigar.CompareTag(tag = "OptActivado") && A.investigar.isOn == true && Red78Investigada == false)
@@ -497,7 +505,7 @@ public class Bitacoras : MonoBehaviour
             }
         }
         //===================================================== Bitacoras Kate Milliard ======================================================//
-        if (libreta.palabra == "Kate Milliard")
+        if (libreta.palabra == libreta.palabrasCaso[2])
         {
             //ELIMINAR
             if (A.eliminar.CompareTag(tag = "OptActivado") && A.eliminar.isOn == true && KateEliminada == false)
@@ -626,7 +634,7 @@ public class Bitacoras : MonoBehaviour
             }
         }
         //================================================== Bitacoras Pepe Queño =========================================//
-        if (libreta.palabra == "Pepe Queño")
+        if (libreta.palabra == libreta.palabrasCaso[8])
         {
             //Eliminar
             if (A.eliminar.CompareTag(tag = "OptActivado") && A.eliminar.isOn == true && PepeEliminado == false )
@@ -780,7 +788,7 @@ public class Bitacoras : MonoBehaviour
             }
         }
         //================================================= Bitacoras Cabellos Rojizos ==========================================================//
-        if (libreta.palabra == "Cabellos rojizos" )
+        if (libreta.palabra == libreta.palabrasCaso[9])
         {
             //Analizar muestra
             if (A.analizarMuestra.CompareTag(tag = "OptActivado") && A.analizarMuestra.isOn == true && CabellosRojijosAnalizado == false)
