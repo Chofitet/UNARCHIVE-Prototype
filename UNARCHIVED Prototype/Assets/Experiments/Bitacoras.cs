@@ -103,7 +103,7 @@ public class Bitacoras : MonoBehaviour
                 float RetencionBitacora = 3;
                 float HoraCompletado = RetencionBitacora + TimeManager.Hora;
                 float CalculoTiempo = RetencionBitacora * 60 * time.MinutosXseg;
-                string txt = "Ben fue eliminado exitosamente";
+                string txt = "Ben fue eliminado exitosamente";//hola chofitet
                 string FechaCompletado = "2" + time.Dia + "/03/2000";
                 string txtAccion = "Eliminar a Ben";
                 Toggle accion = A.eliminar;
@@ -128,7 +128,7 @@ public class Bitacoras : MonoBehaviour
                 float RetencionBitacora = 3;
                 float HoraCompletado = RetencionBitacora + TimeManager.Hora;
                 float CalculoTiempo = RetencionBitacora * 60 * time.MinutosXseg;
-                string txt = "Borramos con exito la memoria de Ben";
+                string txt = "Lavado completo. Ben ya no recuerda la última semana.";
                 string FechaCompletado = "2" + time.Dia + "/03/2000";
                 string txtAccion = "Lavar cerebro a Ben";
                 Toggle accion = A.lavarCerebro;
@@ -153,7 +153,7 @@ public class Bitacoras : MonoBehaviour
                 float RetencionBitacora = 12;
                 float HoraCompletado = RetencionBitacora + TimeManager.Hora;
                 float CalculoTiempo = RetencionBitacora * 60 * time.MinutosXseg;
-                string txt = "Ben fue investigado";
+                string txt = "Niño común y corriente. Mejor promedio del condado. Si tan solo pasara menos tiempo con su computadora quizas seria mas popular.";
                 Toggle accion = A.investigar;
                 string FechaCompletado = "2" + time.Dia + "/03/2000";
                 string txtAccion = "Investigar a Ben";
@@ -178,7 +178,7 @@ public class Bitacoras : MonoBehaviour
                 float RetencionBitacora = 3;
                 float HoraCompletado = RetencionBitacora + TimeManager.Hora;
                 float CalculoTiempo = RetencionBitacora * 60 * time.MinutosXseg;
-                string txt = "Ben fue eliminado exitosamente";
+                string txt = "Encontramos lista de compras e instrucciones para crear una bomba del tamaño justo para volar una escuela. Sugerimos difamar para que la fuerza de las autoridades locales caiga sobre él cuanto antes.";
                 string FechaCompletado = "2" + time.Dia + "/03/2000";
                 string txtAccion = "Hackear a Ben";
                 Toggle accion = A.hackear;
@@ -197,13 +197,13 @@ public class Bitacoras : MonoBehaviour
                 BenHackeado = true;
                 A.hackear.interactable = false;
             }
-            //Difamar
+            //Difamar hay que hacer uno if hack true y otro si hack false
             if (A.difamar.CompareTag(tag = "OptActivado") && A.difamar.isOn == true && BenHackeado == true && BenDifamado == false)
             {
                 float RetencionBitacora = 3;
                 float HoraCompletado = RetencionBitacora + TimeManager.Hora;
                 float CalculoTiempo = RetencionBitacora * 60 * time.MinutosXseg;
-                string txt = "Ben fue eliminado exitosamente";
+                string txt = "Difamado en progreso";
                 Toggle accion = A.difamar;
                 string FechaCompletado = "2" + time.Dia + "/03/2000";
                 string txtAccion = "Difamar a Ben";
@@ -234,7 +234,7 @@ public class Bitacoras : MonoBehaviour
                 float RetencionBitacora = 3;
                 float HoraCompletado = RetencionBitacora + TimeManager.Hora;
                 float CalculoTiempo = RetencionBitacora * 60 * time.MinutosXseg;
-                string txt = "Ben fue eliminado exitosamente";
+                string txt = "Objetivo eliminado. El último Pie Grande ha muerto, pero se ha cargado a nuestro agente de manera gloriosa. No podremos hacer eliminaciones por el resto del caso.";
                 string FechaCompletado = "2" + time.Dia + "/03/2000";
                 string txtAccion = "Eliminar a Pie Grande";
                 Toggle accion = A.eliminar;
@@ -260,7 +260,7 @@ public class Bitacoras : MonoBehaviour
                 float RetencionBitacora = 3;
                 float HoraCompletado = RetencionBitacora + TimeManager.Hora;
                 float CalculoTiempo = RetencionBitacora * 60 * time.MinutosXseg;
-                string txt = "Ben fue eliminado exitosamente";
+                string txt = "Misión fallida. Hemos perdido al agente a manos de la criatura. Ultimo mensaje recibido “Bananarama”.No podremos hacer lavados de cerebro por el resto del caso.";
                 string FechaCompletado = "2" + time.Dia + "/03/2000";
                 string txtAccion = "Lavar cerebro Pie Grande";
                 Toggle accion = A.lavarCerebro;
@@ -285,7 +285,7 @@ public class Bitacoras : MonoBehaviour
                 float RetencionBitacora = 12;
                 float HoraCompletado = RetencionBitacora + TimeManager.Hora;
                 float CalculoTiempo = RetencionBitacora * 60 * time.MinutosXseg;
-                string txt = "Ben fue eliminado exitosamente";
+                string txt = "BITÁCORA: Se muestra recluso y no cooperativo. Tenía un chupón en una pequeña parte afeitada. Encontramos cabellos rojizos en la zona.";
                 string FechaCompletado = "2" + time.Dia + "/03/2000";
                 string txtAccion = "Investigar Pie Grande";
                 Toggle accion = A.investigar;
@@ -310,7 +310,7 @@ public class Bitacoras : MonoBehaviour
                 float RetencionBitacora = 3;
                 float HoraCompletado = RetencionBitacora + TimeManager.Hora;
                 float CalculoTiempo = RetencionBitacora * 60 * time.MinutosXseg;
-                string txt = "Ben fue eliminado exitosamente";
+                string txt = "Frecuenta la página furmatch.net. Matcheó con red78 hace 2 semanas.";
                 string FechaCompletado = "2" + time.Dia + "/03/2000";
                 string txtAccion = "Hackear Pie Grande";
                 Toggle accion = A.hackear;
@@ -335,7 +335,7 @@ public class Bitacoras : MonoBehaviour
                 float RetencionBitacora = 3;
                 float HoraCompletado = RetencionBitacora + TimeManager.Hora;
                 float CalculoTiempo = RetencionBitacora * 60 * time.MinutosXseg;
-                string txt = "Ben fue eliminado exitosamente";
+                string txt = "Mala movida. Hemos aumentado el interes del ojo publico sobre Pie grande. ¿Sos sobrino del jefe o algo?¿Como conseguiste este trabajo?";
                 string FechaCompletado = "2" + time.Dia + "/03/2000";
                 string txtAccion = "Difamar Pie Grande";
                 Toggle accion = A.difamar;
@@ -364,7 +364,7 @@ public class Bitacoras : MonoBehaviour
                 float RetencionBitacora = 3;
                 float HoraCompletado = RetencionBitacora + TimeManager.Hora;
                 float CalculoTiempo = RetencionBitacora * 60 * time.MinutosXseg;
-                string txt = "Ben fue eliminado exitosamente";
+                string txt = "No contamos con los recursos necesarios.";
                 string FechaCompletado = "2" + time.Dia + "/03/2000";
                 string txtAccion = "Aislar Pueblo Pimienta";
                 Toggle accion = A.aislar;
@@ -447,7 +447,7 @@ public class Bitacoras : MonoBehaviour
                 float RetencionBitacora = 12;
                 float HoraCompletado = RetencionBitacora + TimeManager.Hora;
                 float CalculoTiempo = RetencionBitacora * 60 * time.MinutosXseg;
-                string txt = "Ben fue eliminado exitosamente";
+                string txt = "Necesitamos mas información";
                 string FechaCompletado = "2" + time.Dia + "/03/2000";
                 string txtAccion = "Investigar colorada";
                 Toggle accion = A.investigar;
@@ -476,7 +476,7 @@ public class Bitacoras : MonoBehaviour
                 float RetencionBitacora = 12;
                 float HoraCompletado = RetencionBitacora + TimeManager.Hora;
                 float CalculoTiempo = RetencionBitacora * 60 * time.MinutosXseg;
-                string txt = "Ben fue eliminado exitosamente";
+                string txt = "Red78 es la reconocida actriz y documentologa Kate Milliard";
                 string FechaCompletado = "2" + time.Dia + "/03/2000";
                 string txtAccion = "Investigar Red78";
                 Toggle accion = A.investigar;
