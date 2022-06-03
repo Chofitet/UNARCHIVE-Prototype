@@ -26,6 +26,7 @@ public class Bitacoras : MonoBehaviour
     public bool PieGrandeLavado;
     public bool PieGrandeInvestigado;
     public bool PieGrandeHackeado;
+    public bool PieGrandeAnalizado;
     public bool PieGrandeDifamado;
     public bool PieGrandeUbicacion;
     ///////////////////////////// 
@@ -48,6 +49,7 @@ public class Bitacoras : MonoBehaviour
     public bool ColoradaInvestigada;
     ///////////////////////////// 
     public bool Red78Investigada;
+    public bool Red78Hackeada;
     ///////////////////////////// 
     public bool KateEliminada;
     public bool KateLavada;
@@ -293,8 +295,8 @@ public class Bitacoras : MonoBehaviour
 
 
         //====================================================== Bitacoras Pie Grande =============================================//
-
-        if (libreta.palabra == libreta.palabrasCaso[1] && A.difamar.CompareTag(tag = "OptActivado"))
+        //Difmar
+        if (libreta.palabra == libreta.palabrasCaso[1] && A.difamar.CompareTag(tag = "OptActivado") && PieGrandeUbicacion == false)
         {
             if (A.difamar.CompareTag(tag = "OptActivado") && A.difamar.isOn == true && PieGrandeDifamado == false)
             {
@@ -424,6 +426,31 @@ public class Bitacoras : MonoBehaviour
                 PieGrandeHackeado = true;
                 A.hackear.interactable = false;
             }
+            //Analizar Muestra
+            if (A.analizarMuestra.CompareTag(tag = "OptActivado") && PieGrandeAnalizado == false)
+            {
+                float RetencionBitacora = 12;
+                float HoraCompletado = RetencionBitacora + TimeManager.Hora;
+                float CalculoTiempo = RetencionBitacora * 60 * time.MinutosXseg;
+                string txt = "Ben fue eliminado exitosamente";
+                string FechaCompletado = "2" + time.Dia + "/03/2000";
+                string txtAccion = "Analizar cabellos rojizos";
+                Toggle accion = A.analizarMuestra;
+                if (HoraCompletado >= 18)
+                {
+                    HoraCompletado = 6 + (RetencionBitacora - (18 - TimeManager.Hora));
+                    FechaCompletado = "2" + (time.Dia + 1) + "/03/2000";
+                }
+                int indaux = ind;
+                int a = 1;
+                CargarVectorProgreso(txtAccion, FechaCompletado, HoraCompletado, indaux);
+                SetearBitacora();
+                a = aux;
+                ActualizarIndice();
+                StartCoroutine(GuardarBitacora(CalculoTiempo, txt, indaux, accion, a));
+                PieGrandeAnalizado = true;
+                A.analizarMuestra.interactable = false;
+            }
             //Difamar
             if (A.difamar.CompareTag(tag = "OptActivado") && A.difamar.isOn == true && PieGrandeDifamado == false)
             {
@@ -451,7 +478,7 @@ public class Bitacoras : MonoBehaviour
             }
             
         }
-        else
+        else if (libreta.palabra == libreta.palabrasCaso[1]) 
         {
             int a = 1;
             SetearBitacora();
@@ -1213,12 +1240,13 @@ public class Bitacoras : MonoBehaviour
         if (libreta.palabra == libreta.palabrasCaso[7])
         {
             //Investigar 
-            if (A.investigar.CompareTag(tag = "OptActivado") && A.investigar.isOn == true && Red78Investigada == false)
+            if (A.investigar.CompareTag(tag = "OptActivado") && A.investigar.isOn == true && Red78Investigada == false && Red78Hackeada == false)
             {
                 float RetencionBitacora = 12;
                 float HoraCompletado = RetencionBitacora + TimeManager.Hora;
                 float CalculoTiempo = RetencionBitacora * 60 * time.MinutosXseg;
                 string txt = "Red78 es la reconocida actriz y documentologa Kate Milliard";
+                if (libreta.BtnPelosRojizos.activeSelf == true) txt = "Bitacora 2";
                 string FechaCompletado = "2" + time.Dia + "/03/2000";
                 string txtAccion = "Investigar Red78";
                 Toggle accion = A.investigar;
@@ -1236,6 +1264,32 @@ public class Bitacoras : MonoBehaviour
                 StartCoroutine(GuardarBitacora(CalculoTiempo, txt, indaux, accion, a));
                 Red78Investigada = true;
                 A.investigar.interactable = false;
+            }
+            //Hackeado
+            if (A.hackear.CompareTag(tag = "OptActivado") && A.hackear.isOn == true && Red78Hackeada == false && Red78Investigada == false)
+            {
+                float RetencionBitacora = 3;
+                float HoraCompletado = RetencionBitacora + TimeManager.Hora;
+                float CalculoTiempo = RetencionBitacora * 60 * time.MinutosXseg;
+                string txt = "Frecuenta la página furmatch.net. Matcheó con red78 hace 2 semanas.";
+                if (libreta.BtnPelosRojizos.activeSelf == true) txt = "Bitacora 2";
+                string FechaCompletado = "2" + time.Dia + "/03/2000";
+                string txtAccion = "Hackear Pie Grande";
+                Toggle accion = A.hackear;
+                if (HoraCompletado >= 18)
+                {
+                    HoraCompletado = 6 + (RetencionBitacora - (18 - TimeManager.Hora));
+                    FechaCompletado = "2" + (time.Dia + 1) + "/03/2000";
+                }
+                int indaux = ind;
+                int a;
+                ActualizarIndice();
+                CargarVectorProgreso(txtAccion, FechaCompletado, HoraCompletado, indaux);
+                SetearBitacora();
+                a = aux;
+                StartCoroutine(GuardarBitacora(CalculoTiempo, txt, indaux, accion, a));
+                Red78Hackeada = true;
+                A.hackear.interactable = false;
             }
         }
         //===================================================== Bitacoras Kate Milliard ======================================================//
@@ -1635,8 +1689,82 @@ public class Bitacoras : MonoBehaviour
                
                 A.crearNoticia.interactable = false;
             }
+        //================================================ Bitacoras Montar escena chapandose ===================================================================//
 
-      
+        if (A.crearEscena.CompareTag(tag = "OptActivado") && A.crearEscena.isOn == true)
+        {
+            float RetencionBitacora = 3;
+            float HoraCompletado = RetencionBitacora + TimeManager.Hora;
+            float CalculoTiempo = RetencionBitacora * 60 * time.MinutosXseg;
+            string txt = "";
+            string FechaCompletado = "2" + time.Dia + "/03/2000";
+            string txtAccion = "Crear noticia falsa";
+            Toggle accion = A.crearEscena;
+            if (HoraCompletado >= 18)
+            {
+                HoraCompletado = 6 + (RetencionBitacora - (18 - TimeManager.Hora));
+                FechaCompletado = "2" + (time.Dia + 1) + "/03/2000";
+
+            }
+            int indaux = ind;
+            int a = 1;
+            CargarVectorProgreso(txtAccion, FechaCompletado, HoraCompletado, indaux);
+            SetearBitacora();
+            a = aux;
+            ActualizarIndice();
+            StartCoroutine(GuardarBitacora(CalculoTiempo, txt, indaux, accion, a));
+
+        }
+        //================================================ Bitacoras Plantar público ===================================================================//
+        if (A.plantarPublico.CompareTag(tag = "OptActivado") && A.plantarPublico.isOn == true)
+        {
+            float RetencionBitacora = 3;
+            float HoraCompletado = RetencionBitacora + TimeManager.Hora;
+            float CalculoTiempo = RetencionBitacora * 60 * time.MinutosXseg;
+            string txt = "";
+            string FechaCompletado = "2" + time.Dia + "/03/2000";
+            string txtAccion = "Crear noticia falsa";
+            Toggle accion = A.plantarPublico;
+            if (HoraCompletado >= 18)
+            {
+                HoraCompletado = 6 + (RetencionBitacora - (18 - TimeManager.Hora));
+                FechaCompletado = "2" + (time.Dia + 1) + "/03/2000";
+
+            }
+            int indaux = ind;
+            int a = 1;
+            CargarVectorProgreso(txtAccion, FechaCompletado, HoraCompletado, indaux);
+            SetearBitacora();
+            a = aux;
+            ActualizarIndice();
+            StartCoroutine(GuardarBitacora(CalculoTiempo, txt, indaux, accion, a));
+
+        }
+        //================================================ Bitacora TRUE ENDING  ===================================================================//
+        if (A.trueEnding.CompareTag(tag = "OptActivado") && A.trueEnding.isOn == true)
+        {
+            float RetencionBitacora = 3;
+            float HoraCompletado = RetencionBitacora + TimeManager.Hora;
+            float CalculoTiempo = RetencionBitacora * 60 * time.MinutosXseg;
+            string txt = "";
+            string FechaCompletado = "2" + time.Dia + "/03/2000";
+            string txtAccion = "Crear noticia falsa";
+            Toggle accion = A.plantarPublico;
+            if (HoraCompletado >= 18)
+            {
+                HoraCompletado = 6 + (RetencionBitacora - (18 - TimeManager.Hora));
+                FechaCompletado = "2" + (time.Dia + 1) + "/03/2000";
+
+            }
+            int indaux = ind;
+            int a = 1;
+            CargarVectorProgreso(txtAccion, FechaCompletado, HoraCompletado, indaux);
+            SetearBitacora();
+            a = aux;
+            ActualizarIndice();
+            StartCoroutine(GuardarBitacora(CalculoTiempo, txt, indaux, accion, a));
+        }
+
         A.Restablecer();
     }
 
@@ -1644,7 +1772,7 @@ public class Bitacoras : MonoBehaviour
     {
         yield return new WaitForSeconds(ReinicioTiempo);
         CargarVectorAccion(a, indaux, txt);
-        accion.interactable = true;
+        if (accion != A.crearEscena && accion != A.trueEnding && accion != A.plantarPublico) accion.interactable = true;
         ActualizarPalabras();
         UbicacionConfirmada();
     }
@@ -1652,10 +1780,11 @@ public class Bitacoras : MonoBehaviour
     void ActualizarPalabras()
     {
         if (PieGrandeHackeado == true) { libreta.BtnRed78.gameObject.SetActive(true); }
-        if (Red78Investigada == true) { libreta.BtnKateMilliard.gameObject.SetActive(true); }
+        if (Red78Investigada == true || Red78Hackeada == true) { libreta.BtnKateMilliard.gameObject.SetActive(true); }
         if (PieGrandeInvestigado == true) { libreta.BtnPelosRojizos.gameObject.SetActive(true); }
         if (ParquePimientaHackeado == true) { libreta.BtnWifiRobado.gameObject.SetActive(true); }
         if (PuebloPimientaInvestigado == true) { libreta.BtnParquePimienta.gameObject.SetActive(true); }
+        if (ParquePimientaInvestigado == true) { libreta.BtnPuebloPimienta.gameObject.SetActive(false); }
 
     }
 

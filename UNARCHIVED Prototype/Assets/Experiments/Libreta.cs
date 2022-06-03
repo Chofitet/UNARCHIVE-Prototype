@@ -79,6 +79,7 @@ public class Libreta : MonoBehaviour
             apagado = true;
         }
 
+        if (BtnKateMilliard.gameObject.activeSelf == true ) BtnColorada.gameObject.SetActive(false); BtnPelosRojizos.gameObject.SetActive(false ); BtnRed78.gameObject.SetActive(false); ;
 
     }
    
@@ -106,7 +107,7 @@ public class Libreta : MonoBehaviour
     {
         DesSubrayar();
         palabra = palabrasCaso[3];
-        txtPimientaPaluza.text = "<u>Pimientapaluza</u>";
+        txtPimientaPaluza.text = "<u>Pimienta Paluza</u>";
     }
     public void PuebloPimienta()
     {
@@ -142,7 +143,7 @@ public class Libreta : MonoBehaviour
     {
         DesSubrayar();
         palabra = palabrasCaso[10];
-        txtParquePimienta.text = "<u>Parque Pimienta</u>";
+        txtParquePimienta.text = "<u>Parque Pimienta<u>";
     }
     public void Pimientapaluzers()
     {
@@ -161,7 +162,7 @@ public class Libreta : MonoBehaviour
     {
         if(txtBen.text == "<u>Ben Benji</u>") { txtBen.text = palabrasCaso[0]; }
         else if (txtPieGrande.text == "<u>Pie Grande</u>" + SignoPregunta) { txtPieGrande.text = palabrasCaso[1] + SignoPregunta; }
-        else if (txtPimientaPaluza.text == "<u>Pimientapaluza</u>") { txtPimientaPaluza.text = palabrasCaso[3]; }
+        else if (txtPimientaPaluza.text == "<u>Pimienta Paluza</u>") { txtPimientaPaluza.text = palabrasCaso[3]; }
         else if (txtPuebloPimienta.text == "<u>Pueblo Pimienta</u>") { txtPuebloPimienta.text = palabrasCaso[5]; }
         else if (txtColorada.text == "<u>Colorada (?)</u>") { txtColorada.text = palabrasCaso[6] + " (?)"; }
         else if (txtPepeQueño.text == "<u>Pepe Queño</u>") { txtPepeQueño.text = palabrasCaso[8]; }

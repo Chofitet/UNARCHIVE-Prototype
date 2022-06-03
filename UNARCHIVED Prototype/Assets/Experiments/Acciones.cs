@@ -8,6 +8,7 @@ public class Acciones : MonoBehaviour
 {
     [SerializeField] internal Libreta libreta;
     [SerializeField] internal Bitacoras bitacoras;
+    [SerializeField] TV tv;
 
     public ToggleGroup acciones;
     public Toggle eliminar;
@@ -19,6 +20,12 @@ public class Acciones : MonoBehaviour
     public Toggle crearNoticia;
     public Toggle crearEscena;
     public Toggle analizarMuestra;
+    public Toggle plantarPublico;
+    public Toggle trueEnding;
+
+    public GameObject tglCrearEscena;
+    public GameObject tglPlantarPublico;
+    public GameObject tglTrueEnding;
 
     public TMP_Text txtEliminar;
     public TMP_Text txtLavarCerebro;
@@ -29,6 +36,13 @@ public class Acciones : MonoBehaviour
     public TMP_Text txtCrearNoticia;
     public TMP_Text txtCrearEscena;
     public TMP_Text txtAnalizarMuestra;
+
+    private void Update()
+    {
+        if (bitacoras.PieGrandeUbicacion == true) tglCrearEscena.SetActive(true);
+        if (bitacoras.BenEliminado == false && bitacoras.BenLavado == false && tv.BenEntrevista1 == true && tv.BenEntrevista2 == false) tglPlantarPublico.SetActive(true);
+        if (bitacoras.PieGrandeEliminado == false && bitacoras.PepeEliminado == false && bitacoras.PepeAnalizado == true) tglTrueEnding.SetActive(true);
+    }
 
     public  void CompletarPalabra ()
     {   // (de a acá)
@@ -53,7 +67,7 @@ public class Acciones : MonoBehaviour
         if (crearNoticia.isOn == true) { txtCrearNoticia.text = ""; }
         else { txtCrearNoticia.text = ""; }
 
-        if (crearEscena.isOn == true) { txtCrearEscena.text = libreta.palabra; }
+        if (crearEscena.isOn == true) { txtCrearEscena.text = ""; }
         else { txtCrearEscena.text = ""; }
 
         if (analizarMuestra.isOn == true) { txtAnalizarMuestra.text = libreta.palabra; }
@@ -95,6 +109,7 @@ public class Acciones : MonoBehaviour
     {
         if (action){crearEscena.tag = "OptActivado";}
         CompletarPalabra();
+       
     }
     public void CrearnoticiaFalsa(bool action)
     {
@@ -106,6 +121,18 @@ public class Acciones : MonoBehaviour
         if (action) { analizarMuestra.tag = "OptActivado"; }
         CompletarPalabra();
     }
+    public void PlantarPublico(bool action)
+    {
+        if (action) { plantarPublico.tag = "OptActivado"; }
+        CompletarPalabra();
+       
+    }
+    public void TrueEnding(bool action)
+    {
+        if (action) { trueEnding.tag = "OptActivado"; }
+        CompletarPalabra();
+        
+    }
 
     //Se activa con el boton aprobar, descelecciona y destaguè los toggles de las acciones
     public void Restablecer()
@@ -116,15 +143,17 @@ public class Acciones : MonoBehaviour
         hackear.tag = "OptDesactivado";
         difamar.tag = "OptDesactivado";
         aislar.tag = "OptDesactivado";
-        crearEscena.tag = "OptDesactivado";
         crearNoticia.tag = "OptDesactivado";
+      
         eliminar.isOn = false;
         lavarCerebro.isOn = false;
         investigar.isOn = false;
         hackear.isOn = false;
         difamar.isOn = false;
         aislar.isOn = false;
-        crearEscena.isOn = false;
         crearNoticia.isOn = false;
+        if (crearEscena.isOn == true) crearEscena.interactable = false; crearEscena.isOn = false;
+        if (plantarPublico.isOn == true) plantarPublico.interactable = false; plantarPublico.isOn = false;
+        if(trueEnding.isOn == true) trueEnding.interactable = false; trueEnding.isOn = false;
     }
 }

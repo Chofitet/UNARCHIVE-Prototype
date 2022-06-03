@@ -100,6 +100,7 @@ public class PC : MonoBehaviour
         {
             txtInfo.text = ""
                 + System.Environment.NewLine + "";
+            libreta.BtnPimientaPaluza.SetActive(true);
         }
         //================================================================ Wiki Pueblo Pimienta =======================================================//
         else if (txtBuscador.text == libreta.palabrasCaso[5])
