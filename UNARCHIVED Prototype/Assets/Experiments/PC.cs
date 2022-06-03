@@ -101,6 +101,13 @@ public class PC : MonoBehaviour
             txtInfo.text = ""
                 + System.Environment.NewLine + "";
         }
+        //================================================================ Wiki Pueblo Pimienta =======================================================//
+        else if (txtBuscador.text == libreta.palabrasCaso[5])
+        {
+            txtInfo.text = ""
+                + System.Environment.NewLine + "";
+            libreta.BtnParquePimienta.SetActive(true);
+        }
         //================================================================ Wiki Pimientapaluzers =======================================================//
         else if (txtBuscador.text == libreta.palabrasCaso[11])
         {

@@ -1221,6 +1221,7 @@ MonoBehaviour:
   BtnParquePimienta: {fileID: 1107377483}
   BtnPimientapaluzers: {fileID: 1658477382}
   BtnWifiRobado: {fileID: 1844106183}
+  SignoPregunta: (?)
   palabrasCaso:
   - 
   - 
@@ -1237,7 +1238,7 @@ MonoBehaviour:
   - 
   txtBen: {fileID: 2057002931}
   txtPieGrande: {fileID: 148861717}
-  txtParquePimienta: {fileID: 1628846090}
+  txtParquePimienta: {fileID: 2035203408}
   txtPimientaPaluza: {fileID: 1961353331}
   txtColorada: {fileID: 286000283}
   txtRed78: {fileID: 2098472834}
@@ -1720,7 +1721,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Pie Grande
+  m_text: Pie Grande(?)
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2243,14 +2244,27 @@ MonoBehaviour:
   BenInvestigado: 0
   BenHackeado: 0
   BenDifamado: 0
+  BenAnalizado: 0
   PieGrandeEliminado: 0
   PieGrandeLavado: 0
   PieGrandeInvestigado: 0
   PieGrandeHackeado: 0
   PieGrandeDifamado: 0
+  PieGrandeUbicacion: 0
+  ParquePimientaEliminado: 0
+  ParquePimientaLavado: 0
+  ParquePimientaHackeado: 0
+  ParquePimientaAnalizado: 0
+  ParquePimientaInvestigado: 0
+  ParquePimientaDifamado: 0
   ParquePimientaAislado: 0
-  ParquePimientaEscena: 0
-  PimientaPaluzaEscena: 0
+  PimientaPaluzaEliminado: 0
+  PimientaPaluzaLavado: 0
+  PimientaPaluzaHackeado: 0
+  PimientaPaluzaAnalizado: 0
+  PimientaPaluzaInvestigado: 0
+  PimientaPaluzaDifamado: 0
+  PimientaPaluzaAislado: 0
   ColoradaInvestigada: 0
   Red78Investigada: 0
   KateEliminada: 0
@@ -2265,6 +2279,22 @@ MonoBehaviour:
   PepeDifamado: 0
   PepeAnalizado: 0
   CabellosRojijosAnalizado: 0
+  PuebloPimientaEliminado: 0
+  PuebloPimientaLavado: 0
+  PuebloPimientaInvestigado: 0
+  PuebloPimientaHackeado: 0
+  PuebloPimientaDifamado: 0
+  PuebloPimientaAnalizado: 0
+  PuebloPimientaAislado: 0
+  PimientapaluzersEliminado: 0
+  PimientapaluzersLavado: 0
+  PimientapaluzersInvestigado: 0
+  PimientapaluzersHackeado: 0
+  PimientapaluzersDifamado: 0
+  PimientapaluzersAnalizado: 0
+  PimientapaluzersAislado: 0
+  WifiRobadoHackeado: 0
+  WifiRobadoInvestigado: 0
   B1P1: {fileID: 942434992}
   B2P1: {fileID: 1947220172}
   B3P1: {fileID: 42196300}
@@ -9672,7 +9702,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1167105853
 Transform:
   m_ObjectHideFlags: 0

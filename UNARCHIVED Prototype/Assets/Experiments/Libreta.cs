@@ -22,6 +22,7 @@ public class Libreta : MonoBehaviour
     public GameObject BtnPimientapaluzers;
     public GameObject BtnWifiRobado;
 
+    public string SignoPregunta = "(?)";
     public string[] palabrasCaso = new string[13];
 
     public TMP_Text txtBen;
@@ -72,11 +73,13 @@ public class Libreta : MonoBehaviour
         {
             BtnBen.gameObject.SetActive(true);
             BtnPieGrande.gameObject.SetActive(true);
-            BtnParquePimienta.gameObject.SetActive(true);
+            BtnPuebloPimienta.gameObject.SetActive(true);
             BtnColorada.gameObject.SetActive(true);
             ex.CasoLeido = false;
             apagado = true;
         }
+
+
     }
    
     public void Kate()
@@ -97,7 +100,7 @@ public class Libreta : MonoBehaviour
     {
         DesSubrayar();
         palabra = palabrasCaso[1];
-        txtPieGrande.text = "<u>Pie Grande</u>";
+        txtPieGrande.text = "<u>Pie Grande</u>" + SignoPregunta;
     }
     public void PimientaPaluza()
     {
@@ -109,7 +112,7 @@ public class Libreta : MonoBehaviour
     {
         DesSubrayar();
         palabra = palabrasCaso[5];
-        txtParquePimienta.text = "<u>Pueblo Pimienta</u>";
+        txtPuebloPimienta.text = "<u>Pueblo Pimienta</u>";
     }
     public void Colorada()
     {
@@ -157,9 +160,9 @@ public class Libreta : MonoBehaviour
     void DesSubrayar()
     {
         if(txtBen.text == "<u>Ben Benji</u>") { txtBen.text = palabrasCaso[0]; }
-        else if (txtPieGrande.text == "<u>Pie Grande</u>") { txtPieGrande.text = palabrasCaso[1]; }
+        else if (txtPieGrande.text == "<u>Pie Grande</u>" + SignoPregunta) { txtPieGrande.text = palabrasCaso[1] + SignoPregunta; }
         else if (txtPimientaPaluza.text == "<u>Pimientapaluza</u>") { txtPimientaPaluza.text = palabrasCaso[3]; }
-        else if (txtPuebloPimienta.text == "<u>Pueblo Pimienta</u>") { txtParquePimienta.text = palabrasCaso[5]; }
+        else if (txtPuebloPimienta.text == "<u>Pueblo Pimienta</u>") { txtPuebloPimienta.text = palabrasCaso[5]; }
         else if (txtColorada.text == "<u>Colorada (?)</u>") { txtColorada.text = palabrasCaso[6] + " (?)"; }
         else if (txtPepeQueño.text == "<u>Pepe Queño</u>") { txtPepeQueño.text = palabrasCaso[8]; }
         else if (txtCabellosRojizos.text == "<u>Cabellos Rojizos</u>") { txtCabellosRojizos.text = palabrasCaso[9]; }
