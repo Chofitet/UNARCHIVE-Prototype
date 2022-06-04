@@ -85,6 +85,11 @@ public class Bitacoras : MonoBehaviour
     public bool WifiRobadoHackeado;
     public bool WifiRobadoInvestigado;
 
+    ////////////////////
+    public bool CrearEscena;
+    public bool PlantarPublico;
+    public bool TrueEnding;
+
     private string PreUbicacion;
 
     private string txtNoticiaFalsa;
@@ -130,6 +135,8 @@ public class Bitacoras : MonoBehaviour
             A.crearNoticia.interactable = false;
         }
         else A.crearNoticia.interactable = true;
+
+        if (libreta.SignoPreguntaPieGrande == "") libreta.BtnWifiRobado.gameObject.SetActive(false);
 
         ActualizarPaginas();
     }
@@ -1497,6 +1504,7 @@ public class Bitacoras : MonoBehaviour
                 ActualizarIndice();
                 StartCoroutine(GuardarBitacora(CalculoTiempo, txt, indaux, accion, a));
                 PepeInvestigado = true;
+
                 A.investigar.interactable = false;
             }
             //Hackear
@@ -1691,7 +1699,7 @@ public class Bitacoras : MonoBehaviour
             }
         //================================================ Bitacoras Montar escena chapandose ===================================================================//
 
-        if (A.crearEscena.CompareTag(tag = "OptActivado") && A.crearEscena.isOn == true)
+        if (A.crearEscena.CompareTag(tag = "OptActivado") && A.crearEscena.isOn == true && CrearEscena == true)
         {
             float RetencionBitacora = 3;
             float HoraCompletado = RetencionBitacora + TimeManager.Hora;
@@ -1713,10 +1721,36 @@ public class Bitacoras : MonoBehaviour
             a = aux;
             ActualizarIndice();
             StartCoroutine(GuardarBitacora(CalculoTiempo, txt, indaux, accion, a));
+            CrearEscena = true;
 
         }
         //================================================ Bitacoras Plantar público ===================================================================//
-        if (A.plantarPublico.CompareTag(tag = "OptActivado") && A.plantarPublico.isOn == true)
+        if (A.plantarPublico.CompareTag(tag = "OptActivado") && A.plantarPublico.isOn == true && PlantarPublico == false)
+        {
+            float RetencionBitacora = 3;
+            float HoraCompletado = RetencionBitacora + TimeManager.Hora;
+            float CalculoTiempo = RetencionBitacora * 60 * time.MinutosXseg;
+            string txt = "";
+            string FechaCompletado = "2" + time.Dia + "/03/2000";
+            string txtAccion = "Crear noticia falsa";
+            Toggle accion = A.plantarPublico;
+            if (HoraCompletado >= 18)
+            {
+                HoraCompletado = 6 + (RetencionBitacora - (18 - TimeManager.Hora));
+                FechaCompletado = "2" + (time.Dia + 1) + "/03/2000";
+
+            }
+            int indaux = ind;
+            int a = 1;
+            CargarVectorProgreso(txtAccion, FechaCompletado, HoraCompletado, indaux);
+            SetearBitacora();
+            a = aux;
+            ActualizarIndice();
+            StartCoroutine(GuardarBitacora(CalculoTiempo, txt, indaux, accion, a));
+            PlantarPublico = true;
+        }
+        //================================================ Bitacora TRUE ENDING  ===================================================================//
+        if (A.trueEnding.CompareTag(tag = "OptActivado") && A.trueEnding.isOn == true && TrueEnding == false )
         {
             float RetencionBitacora = 3;
             float HoraCompletado = RetencionBitacora + TimeManager.Hora;
@@ -1740,31 +1774,7 @@ public class Bitacoras : MonoBehaviour
             a = aux;
             ActualizarIndice();
             StartCoroutine(GuardarBitacora(CalculoTiempo, txt, indaux, accion, a));
-
-        }
-        //================================================ Bitacora TRUE ENDING  ===================================================================//
-        if (A.trueEnding.CompareTag(tag = "OptActivado") && A.trueEnding.isOn == true)
-        {
-            float RetencionBitacora = 3;
-            float HoraCompletado = RetencionBitacora + TimeManager.Hora;
-            float CalculoTiempo = RetencionBitacora * 60 * time.MinutosXseg;
-            string txt = "";
-            string FechaCompletado = "2" + time.Dia + "/03/2000";
-            string txtAccion = "Crear noticia falsa";
-            Toggle accion = A.plantarPublico;
-            if (HoraCompletado >= 18)
-            {
-                HoraCompletado = 6 + (RetencionBitacora - (18 - TimeManager.Hora));
-                FechaCompletado = "2" + (time.Dia + 1) + "/03/2000";
-
-            }
-            int indaux = ind;
-            int a = 1;
-            CargarVectorProgreso(txtAccion, FechaCompletado, HoraCompletado, indaux);
-            SetearBitacora();
-            a = aux;
-            ActualizarIndice();
-            StartCoroutine(GuardarBitacora(CalculoTiempo, txt, indaux, accion, a));
+            TrueEnding = true;
         }
 
         A.Restablecer();
@@ -1775,19 +1785,24 @@ public class Bitacoras : MonoBehaviour
         yield return new WaitForSeconds(ReinicioTiempo);
         CargarVectorAccion(a, indaux, txt);
         if (accion != A.crearEscena && accion != A.trueEnding && accion != A.plantarPublico) accion.interactable = true;
-        ActualizarPalabras();
+       
         UbicacionConfirmada();
+        ActualizarPalabras();
+      
     }
 
     void ActualizarPalabras()
     {
         if (PieGrandeHackeado == true) { libreta.BtnRed78.gameObject.SetActive(true); }
-        if (Red78Investigada == true || Red78Hackeada == true) { libreta.BtnKateMilliard.gameObject.SetActive(true); }
-        if (PieGrandeInvestigado == true) { libreta.BtnPelosRojizos.gameObject.SetActive(true); }
-        if (ParquePimientaHackeado == true) { libreta.BtnWifiRobado.gameObject.SetActive(true); }
+        if (Red78Investigada == true || Red78Hackeada == true) { libreta.BtnKateMilliard.gameObject.SetActive(true);}
+        if (PieGrandeInvestigado == true) { libreta.BtnPelosRojizos.gameObject.SetActive(true);}
+        if (ParquePimientaHackeado == true && PieGrandeUbicacion == false) { libreta.BtnWifiRobado.gameObject.SetActive(true); Debug.Log(PieGrandeUbicacion); }
         if (PuebloPimientaInvestigado == true) { libreta.BtnParquePimienta.gameObject.SetActive(true); }
         if (ParquePimientaInvestigado == true) { libreta.BtnPuebloPimienta.gameObject.SetActive(false); }
-
+        if (CrearEscena == true) { libreta.BtnPepeQueño.gameObject.SetActive(true); }
+        if (PepeInvestigado == true || PepeAnalizado == true) { libreta.SignoPreguntaPepeQueño = ""; libreta.PepeQueño();}
+        if (PieGrandeUbicacion == true) libreta.BtnPuebloPimienta.SetActive(false);
+        if (PieGrandeLavado == true) libreta.BtnBananorrama.SetActive(true);
     }
 
     //Crea los espacios para rellenar las bitàcoras y los borra cuando es debido
@@ -1798,7 +1813,7 @@ public class Bitacoras : MonoBehaviour
     }
     public void AnteriorPagina ()
     {
-        if (PagActual > 0) { PagActual--; } 
+        if (PagActual > 1) { PagActual--; } 
     }
     void ActualizarPaginas()
     {
@@ -1972,9 +1987,8 @@ public class Bitacoras : MonoBehaviour
                 
         }
         
-        
-        
     }
+
 
     void UbicacionConfirmada()
     {
@@ -1982,33 +1996,45 @@ public class Bitacoras : MonoBehaviour
         {
             PieGrandeUbicacion = true;
             libreta.txtPieGrande.text = libreta.palabrasCaso[1];
-            libreta.SignoPregunta = "";
+            libreta.SignoPreguntaPieGrande = "";
+          
         }
+       
+        
     }
-      
+
+    int UN;
     void UbicacionNoEncontrada (string palabra)
     {
-        switch (Random.Range(0, 8))
+        switch (UN)
         {
             case 0:
                 PreUbicacion = "No sabemos el paradero de " + palabra;
+                UN++;
                 break;
             case 1:
                 PreUbicacion = "Se desconoce ubicación de " + palabra;
+                UN++;
                 break;
             case 2:
                 PreUbicacion = "Necesitamos confirmar su ubicación primero";
+                UN++;
                 break;
             case 3:
                 PreUbicacion = "¿Sabes donde está " + palabra+"?Porque nosotros no.";
+                UN++;
                 break;
             case 4:
                 PreUbicacion = "Objetivo inlocalizable";
+                UN++;
                 break;
             case 5:
                 PreUbicacion = "El agente necesita la ubicación del objetivo...DUH!";
+                UN = 0; 
                 break;
         }
+        
+       
     }
    
 }

@@ -73,32 +73,35 @@ public class PC : MonoBehaviour
         // Antes de investigarlo
         else if (txtBuscador.text == libreta.palabrasCaso[8])
         {
+
             txtInfo.text = "Sujeto no cargado en BD."
                 + System.Environment.NewLine + "Investigar.";
-        }
-        //Despues de investigarlo
-        else if (txtBuscador.text == libreta.palabrasCaso[8] && bitacoras.PepeInvestigado == true)
-        {
-            txtInfo.text = "Extaño niño en búsqueda de una buena afeitada. Reside actualmente en el orfanato local y su ÚNICO amigo es Ben Benji."
+
+            if (bitacoras.PepeInvestigado == true && bitacoras.PepeAnalizado == false)
+            {
+                txtInfo.text = "Extaño niño en búsqueda de una buena afeitada. Reside actualmente en el orfanato local y su ÚNICO amigo es Ben Benji."
             + System.Environment.NewLine
             + System.Environment.NewLine + "Edad: 10 años."
             + System.Environment.NewLine
             + System.Environment.NewLine + "Estado: Pequeño niño raro."
             + System.Environment.NewLine
             + System.Environment.NewLine + "Última vez visto en: Pueblo Pimienta.";
+            }
+            if (txtBuscador.text == libreta.palabrasCaso[8] && bitacoras.PepeAnalizado == true)
+            {
+                txtInfo.text = "Hijo bastardo de Pie Grande y más que probable causa de su separación en el 91."
+               + System.Environment.NewLine + "Su existencia fué un secreto para La Agencia hasta al incidente Venus in Fur. Reside actualmente en un orfanato. El paradero de su madre biológica permanece un misterio para todo aquel que no compra el DLC."
+               + System.Environment.NewLine
+               + System.Environment.NewLine + "Edad:10 años híbridos."
+               + System.Environment.NewLine
+               + System.Environment.NewLine + "Estado: Pequeño niño pie grande."
+               + System.Environment.NewLine
+               + System.Environment.NewLine + "Última vez visto en: Pueblo Pimienta.";
+                
+            }
 
         }
-        else if (txtBuscador.text == libreta.palabrasCaso[8] && bitacoras.PepeAnalizado == true)//////post laboratorio , analisis
-        {
-            txtInfo.text = " Hijo bastardo de Pie Grande y ás que probable causa de su separación en el 91." 
-                + System.Environment.NewLine + "Su existencia fué un secreto para La Agencia hasta al incidente Venus in Fur. Reside actualmente en un orfanato. El paradero de su madre biológica permanece un misterio para todo aquel que no compra el DLC."
-                + System.Environment.NewLine
-                + System.Environment.NewLine + "Edad:10 años híbridos."
-                + System.Environment.NewLine
-                + System.Environment.NewLine + "Estado: Pequeño niño pie grande."
-                + System.Environment.NewLine
-                + System.Environment.NewLine + "Última vez visto en: Pueblo Pimienta.";
-        }
+      
         //================================================================ Wiki Pimientapaluza =======================================================//
         else if (txtBuscador.text == libreta.palabrasCaso[3])
         {
@@ -150,10 +153,27 @@ public class PC : MonoBehaviour
             + System.Environment.NewLine + "NOTA: GARY!!";
         }
         //consultanding para agregar entradas de todas las palabras de la libreta
-        else if (txtBuscador.text == libreta.palabrasCaso[7])
+        else if (txtBuscador.text == libreta.palabrasCaso[9])
         {
             txtInfo.text = "Cabellos rojizos donde?";
         }
+        //================================================================ Wiki Bananorrama =======================================================//
+        else if (txtBuscador.text == libreta.palabrasCaso[4])
+        {
+            txtInfo.text = "CARETA."
+            + System.Environment.NewLine
+            + System.Environment.NewLine
+            + System.Environment.NewLine
+            + System.Environment.NewLine
+            + System.Environment.NewLine
+            + System.Environment.NewLine
+            + System.Environment.NewLine
+            + System.Environment.NewLine
+            + System.Environment.NewLine + "NOTA: GARY!!";
+            libreta.BtnKateMilliard.gameObject.SetActive(true);
+            libreta.BtnBananorrama.gameObject.SetActive(false);
+            }
+
     }
 
     public void BorrarWiki ()

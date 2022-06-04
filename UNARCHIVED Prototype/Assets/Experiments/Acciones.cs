@@ -26,6 +26,7 @@ public class Acciones : MonoBehaviour
     public GameObject tglCrearEscena;
     public GameObject tglPlantarPublico;
     public GameObject tglTrueEnding;
+    public GameObject tglAislar;
 
     public TMP_Text txtEliminar;
     public TMP_Text txtLavarCerebro;
@@ -39,9 +40,11 @@ public class Acciones : MonoBehaviour
 
     private void Update()
     {
-        if (bitacoras.PieGrandeUbicacion == true) tglCrearEscena.SetActive(true);
-        if (bitacoras.BenEliminado == false && bitacoras.BenLavado == false && tv.BenEntrevista1 == true && tv.BenEntrevista2 == false) tglPlantarPublico.SetActive(true);
-        if (bitacoras.PieGrandeEliminado == false && bitacoras.PepeEliminado == false && bitacoras.PepeAnalizado == true) tglTrueEnding.SetActive(true);
+        if (bitacoras.PieGrandeUbicacion == true && crearEscena.isOn == false) {tglCrearEscena.SetActive(true); tglAislar.SetActive(true); }
+        if (bitacoras.BenEliminado == false && bitacoras.BenLavado == false && tv.BenEntrevista1 == true && tv.BenEntrevista2 == false && plantarPublico.isOn == false) tglPlantarPublico.SetActive(true);
+        if (bitacoras.PieGrandeEliminado == false && bitacoras.PepeEliminado == false && bitacoras.PepeAnalizado == true && trueEnding.isOn == false && bitacoras.PieGrandeUbicacion == true) tglTrueEnding.SetActive(true);
+
+        if (bitacoras.ParquePimientaAislado) tglAislar.SetActive(false);
     }
 
     public  void CompletarPalabra ()
@@ -152,8 +155,9 @@ public class Acciones : MonoBehaviour
         difamar.isOn = false;
         aislar.isOn = false;
         crearNoticia.isOn = false;
-        if (crearEscena.isOn == true) crearEscena.interactable = false; crearEscena.isOn = false;
-        if (plantarPublico.isOn == true) plantarPublico.interactable = false; plantarPublico.isOn = false;
-        if(trueEnding.isOn == true) trueEnding.interactable = false; trueEnding.isOn = false;
+        
+        if (crearEscena.isOn == true) tglCrearEscena.SetActive(false); crearEscena.isOn = false;
+        if (plantarPublico.isOn == true) tglPlantarPublico.SetActive(false); plantarPublico.isOn = false;
+        if(trueEnding.isOn == true) tglTrueEnding.SetActive(false); plantarPublico.isOn = false;
     }
 }

@@ -65,7 +65,7 @@ public class Telefono : MonoBehaviour
                         txtTranscripciónLlamado.text = "****¿Por qué voy a mentir? Te juro, Pepe Queño! Era igual a vos!****";
                         int retencionllamada = 3;
                         StartCoroutine(PinchandoLlamada(retencionllamada, BenLlamado));
-
+                     
                     }
                     else {PapelFax.SetActive(true);}
                 }
@@ -156,9 +156,7 @@ public class Telefono : MonoBehaviour
 
     void ActualizarPalabras()
     {
-        if (bitacora.PieGrandeHackeado == true) { libreta.BtnRed78.gameObject.SetActive(true); }
-        if (bitacora.Red78Investigada == true) { libreta.BtnKateMilliard.gameObject.SetActive(true); }
-        if (bitacora.PieGrandeInvestigado == true) { libreta.BtnPelosRojizos.gameObject.SetActive(true); }
+        libreta.BtnPepeQueño.gameObject.SetActive(true);
     }
 
     public void Play()
