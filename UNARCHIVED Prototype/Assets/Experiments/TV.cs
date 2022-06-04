@@ -21,11 +21,11 @@ public class TV : MonoBehaviour
 
     //============================================================================ TV Ben Benji =============================================================================//
     public bool BenEntrevista1; //aviso de que se hará la entrevista
-    string BenEntrevistaTitulo1 = "Ben esntrevista";
+    string BenEntrevistaTitulo1 = "Ben entrevista";
     string BenEntrevistaNoticia1 = "";
 
     public bool BenEntrevista2; // entrevista de ben
-    string BenEntrevistaTitulo2 = "Ben esntrevista";
+    string BenEntrevistaTitulo2 = "Ben entrevista";
     string BenEntrevistaNoticia2 = "";
 
     bool BenEliminado;
