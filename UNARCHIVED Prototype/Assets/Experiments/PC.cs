@@ -16,12 +16,9 @@ public class PC : MonoBehaviour
     private void Update()
     {
         txtRating.text = Rating + " w/s";
+        txtBuscador.text = libreta.palabra;
     }
 
-    public void MostrarPalabraBuscador()
-    {
-        txtBuscador.text =  libreta.palabra;     
-    }
     //Actualiza la wiki cada vez que le das a la lupa
     public void MostrarWiki ()
     {
@@ -165,16 +162,7 @@ public class PC : MonoBehaviour
         //================================================================ Wiki Bananorrama =======================================================//
         else if (txtBuscador.text == libreta.palabrasCaso[4])
         {
-            txtInfo.text = "Comedia romántica estrenada en 1994. La actuación y encendida cabellera de Kate Milliard capturó a la audiencia catapultandola a la fama."
-            + System.Environment.NewLine
-            + System.Environment.NewLine
-            + System.Environment.NewLine
-            + System.Environment.NewLine
-            + System.Environment.NewLine
-            + System.Environment.NewLine
-            + System.Environment.NewLine
-            + System.Environment.NewLine
-            + System.Environment.NewLine ;
+            txtInfo.text = "Comedia romántica estrenada en 1994. La actuación y encendida cabellera de Kate Milliard capturó a la audiencia catapultandola a la fama." ;
             libreta.BtnKateMilliard.gameObject.SetActive(true);
             libreta.BtnBananorrama.gameObject.SetActive(false);
             }

@@ -1785,25 +1785,14 @@ public class Bitacoras : MonoBehaviour
         yield return new WaitForSeconds(ReinicioTiempo);
         CargarVectorAccion(a, indaux, txt);
         if (accion != A.crearEscena && accion != A.trueEnding && accion != A.plantarPublico) accion.interactable = true;
-       
+
+        libreta.PersonajeEliminado();
         UbicacionConfirmada();
-        ActualizarPalabras();
+        libreta.ActualizarPalabras();
       
     }
 
-    void ActualizarPalabras()
-    {
-        if (PieGrandeHackeado == true) { libreta.BtnRed78.gameObject.SetActive(true); }
-        if (Red78Investigada == true || Red78Hackeada == true) { libreta.BtnKateMilliard.gameObject.SetActive(true);}
-        if (PieGrandeInvestigado == true) { libreta.BtnPelosRojizos.gameObject.SetActive(true);}
-        if (ParquePimientaHackeado == true && PieGrandeUbicacion == false) { libreta.BtnWifiRobado.gameObject.SetActive(true); Debug.Log(PieGrandeUbicacion); }
-        if (PuebloPimientaInvestigado == true) { libreta.BtnParquePimienta.gameObject.SetActive(true); }
-        if (ParquePimientaInvestigado == true) { libreta.BtnPuebloPimienta.gameObject.SetActive(false); }
-        if (CrearEscena == true) { libreta.BtnPepeQueño.gameObject.SetActive(true); }
-        if (PepeInvestigado == true || PepeAnalizado == true) { libreta.SignoPreguntaPepeQueño = ""; libreta.PepeQueño();}
-        if (PieGrandeUbicacion == true) libreta.BtnPuebloPimienta.SetActive(false);
-        if (PieGrandeLavado == true) libreta.BtnBananorrama.SetActive(true);
-    }
+    
 
     //Crea los espacios para rellenar las bitàcoras y los borra cuando es debido
    
@@ -1997,10 +1986,7 @@ public class Bitacoras : MonoBehaviour
             PieGrandeUbicacion = true;
             libreta.txtPieGrande.text = libreta.palabrasCaso[1];
             libreta.SignoPreguntaPieGrande = "";
-          
         }
-       
-        
     }
 
     int UN;

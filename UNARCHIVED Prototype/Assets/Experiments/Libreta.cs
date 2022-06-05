@@ -201,5 +201,27 @@ public class Libreta : MonoBehaviour
 
     }
 
+    public void PersonajeEliminado()
+    {
+        if (bitacoras.BenEliminado == true) BtnBen.gameObject.SetActive(false);
+        if (bitacoras.PieGrandeEliminado) BtnPieGrande.gameObject.SetActive(false);
+        if (bitacoras.KateEliminada) BtnKateMilliard.gameObject.SetActive(false);
+        if (bitacoras.PepeEliminado)BtnPepeQueño.gameObject.SetActive(false);
+    }
+
+   public void ActualizarPalabras()
+    {
+        if (bitacoras.PieGrandeHackeado == true) {BtnRed78.gameObject.SetActive(true); }
+        if (bitacoras.Red78Investigada == true || bitacoras.Red78Hackeada == true) {BtnKateMilliard.gameObject.SetActive(true); }
+        if (bitacoras.PieGrandeInvestigado == true) { BtnPelosRojizos.gameObject.SetActive(true); }
+        if (bitacoras.ParquePimientaHackeado == true && bitacoras.PieGrandeUbicacion == false) {BtnWifiRobado.gameObject.SetActive(true);}
+        if (bitacoras.PuebloPimientaInvestigado == true) {BtnParquePimienta.gameObject.SetActive(true); }
+        if (bitacoras.ParquePimientaInvestigado == true) { BtnPuebloPimienta.gameObject.SetActive(false); }
+        if (bitacoras.CrearEscena == true) {BtnPepeQueño.gameObject.SetActive(true); }
+        if (bitacoras.PepeInvestigado == true || bitacoras.PepeAnalizado == true) {SignoPreguntaPepeQueño = ""; PepeQueño(); }
+        if (bitacoras.PieGrandeUbicacion == true) BtnPuebloPimienta.SetActive(false);
+        if (bitacoras.PieGrandeLavado == true) BtnBananorrama.SetActive(true);
+    }
+
 
 }
