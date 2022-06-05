@@ -69,7 +69,7 @@ public class Telefono : MonoBehaviour
                     }
                     else {PapelFax.SetActive(true);}
                 }
-                else { PapelFax.SetActive(true); txtTranscripciónLlamado.text = "Ben Benji no puede realizar llamadas desde la Granja"; }
+                else { PapelFax.SetActive(true); txtTranscripciónLlamado.text = "Ben Benji no puede realizar llamadas desde... La Granja"; }
 
                 break;
 
@@ -85,7 +85,7 @@ public class Telefono : MonoBehaviour
                     }
                     else { PapelFax.SetActive(true); }
                 }
-                else { PapelFax.SetActive(true); txtTranscripciónLlamado.text = "Pie Grande no puede realizar llamadas desde la Granja"; }
+                else { PapelFax.SetActive(true); txtTranscripciónLlamado.text = "Pie Grande no puede realizar llamadas desde... La Granja"; }
                 break;
             // Llamar Kate Milliard
             case ("Kate Milliard"):
@@ -93,13 +93,13 @@ public class Telefono : MonoBehaviour
                 {
                     if (bitacora.PieGrandeEliminado == false && KateLlamado == false)
                     {
-                        txtTranscripciónLlamado.text = "******************************************************************";
+                        txtTranscripciónLlamado.text = "No podemos imprimir esto es un juego para menores de 18. Es una fuerte llamada de cachondeo.";
                         int retencionllamada = 3;
                         StartCoroutine(PinchandoLlamada(retencionllamada, KateLlamado));
                     }
                     else { PapelFax.SetActive(true); }
                 }
-                else { PapelFax.SetActive(true); txtTranscripciónLlamado.text = "Kate no puede realizar llamadas desde la Granja"; }
+                else { PapelFax.SetActive(true); txtTranscripciónLlamado.text = "Kate no puede realizar llamadas desde... La Granja"; }
              break;
             // Llamar Pepe Queño
             case ("Pepe Queño"):
@@ -113,7 +113,7 @@ public class Telefono : MonoBehaviour
                         StartCoroutine(PinchandoLlamada(retencionllamada, PepeLlamado1));
                     }
                 }
-                else { PapelFax.SetActive(true); txtTranscripciónLlamado.text = "Pepe Queño no puede realizar llamadas desde la Granja"; }
+                else { PapelFax.SetActive(true); txtTranscripciónLlamado.text = "Pepe Queño no puede realizar llamadas desde... La Granja"; }
                 break;
             case null: 
                 txtTranscripciónLlamado.text = "No se interceptó ninguna llamada";

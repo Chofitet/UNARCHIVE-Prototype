@@ -21,59 +21,59 @@ public class TV : MonoBehaviour
 
     //============================================================================ TV Ben Benji =============================================================================//
     public bool BenEntrevista1; //aviso de que se hará la entrevista
-    string BenEntrevistaTitulo1 = "Ben entrevista";
-    string BenEntrevistaNoticia1 = "";
+    string BenEntrevistaTitulo1 = "ENTREVISTA EXCLUSIVA CON NIÑO AVISTADOR DE PIE GRANDE MAÑANA A LAS 21";
+    string BenEntrevistaNoticia1 = "ENTREVISTA EXCLUSIVA CON NIÑO AVISTADOR DE PIE GRANDE MAÑANA A LAS 21";
 
     public bool BenEntrevista2; // entrevista de ben
-    string BenEntrevistaTitulo2 = "Ben entrevista";
-    string BenEntrevistaNoticia2 = "";
+    string BenEntrevistaTitulo2 = "BEN BENJI DECLARA: ERA PIE GRANDE Y LO VI EN PARQUE PIMIENTA";
+    string BenEntrevistaNoticia2 = "BEN BENJI DECLARA: ERA PIE GRANDE Y LO VI EN PARQUE PIMIENTA";
 
     bool BenEliminado;
-    string BenDesapareceTitulo = "NIÑO ES ENCONTRADO HAY QUE DOLOR QUE PENA";
-    string BenDesapareceNoticia = "NIÑO ES ENCONTRADO HAY QUE DOLOR QUE PENA, a pero fue encontrado, borra eso";
+    string BenDesapareceTitulo = "NIÑO TESTIGO DESAPARECE. ¿ES PIE GRANDE EL CULPABLE O EL GOBIERNO?";
+    string BenDesapareceNoticia = "NIÑO TESTIGO DESAPARECE. ¿ES PIE GRANDE EL CULPABLE O EL GOBIERNO?";
 
     bool BenBrainwash;
-    string BenBrainwashTitulo = "Niño testigo cancela entrevista. ¿Cobarde, mentiroso o co-conspirador?";
-    string BenBrainwashNoticia = "TV1:  Niño testigo cancela entrevista. ¿Cobarde, mentiroso o co-conspirador?";
+    string BenBrainwashTitulo = "NIÑO AVISTADOR DICE QUE NO SABE NADA. ¿COBARDE MENTIROSO O CONSPIRADOR?";
+    string BenBrainwashNoticia = "NIÑO AVISTADOR DICE QUE NO SABE NADA. ¿COBARDE MENTIROSO O CONSPIRADOR?";
 
     bool BenDifamado1;
-    string BenDifamadoTitulo1 = "Niño mentiroso miente. 10 mentiras que Ben Benji ya te dijo y no sabías!"; ///ESTE ES EL CASO Hackeado = false
-    string BenDifamadoNoticia1 = "Niño mentiroso miente. 10 mentiras que Ben Benji ya te dijo y no sabías!";///ESTE ES EL CASO Hackeado = false
+    string BenDifamadoTitulo1 = "NIÑO MENTIROSO MIENTE DEVUELTA. 10 MENTIRAS QUE BENJI YA TE DIJO Y NO SABÍAS!"; ///ESTE ES EL CASO Hackeado = false
+    string BenDifamadoNoticia1 = "NIÑO MENTIROSO MIENTE DEVUELTA. 10 MENTIRAS QUE BENJI YA TE DIJO Y NO SABÍAS!";///ESTE ES EL CASO Hackeado = false
 
-    string BenDifamadoTitulo2 = "Niño mentiroso miente. 10 mentiras que Ben Benji ya te dijo y no sabías!"; ///ESTE ES EL CASO Hackeado = true
-    string BenDifamadoNoticia2 = "Niño mentiroso miente. 10 mentiras que Ben Benji ya te dijo y no sabías!"; ///ESTE ES EL CASO Hackeado = true
+    string BenDifamadoTitulo2 = "ENTUSIASTA AVISTADOR DE PIE GRANDES RESULTA TERRORISTA AMATEUR! PERPETUA PARA BENJI"; ///ESTE ES EL CASO Hackeado = true
+    string BenDifamadoNoticia2 = "ENTUSIASTA AVISTADOR DE PIE GRANDES RESULTA TERRORISTA AMATEUR! PERPETUA PARA BENJI"; ///ESTE ES EL CASO Hackeado = true
     //============================================================================ TV Pie Grande ===================================================================//
     bool PieGrandeEliminado;
     string PieGrandeEliminadoTitulo = "Kate Milliar sale a decir que mataron a su choma";
     string PieGrandeEliminadoNoticia = "La actriz kATE Milliar estaba saliendo con el mismisimo Pie Grande y declara que po acaban de matar.";
     //============================================================================ TV Pimienta Paluza ===================================================================//
     bool PimientaPaluzaHackeado;
-    string PimientaPaluzaoTitulo = "Kate Milliar sale a decir que mataron a su choma";
-    string PimientaPaluzaNoticia = "La actriz kATE Milliar estaba saliendo con el mismisimo Pie Grande y declara que po acaban de matar.";
+    string PimientaPaluzaoTitulo = "¡PIMIENTA PALUZA CANCELADO! DON PALUZA DEVUELVE LA PLATA. QUE AGRADABLE SUJETO";
+    string PimientaPaluzaNoticia = "¡PIMIENTA PALUZA CANCELADO! DON PALUZA DEVUELVE LA PLATA. QUE AGRADABLE SUJETO";
     //============================================================================ TV Pimientapaluzers ===================================================================//
     bool PimientapaluzersEliminado;
-    string PimientapaluzersTitulo = "Kate Milliar sale a decir que mataron a su choma";
-    string PimientapaluzersNoticia = "";
+    string PimientapaluzersTitulo = "¡MASACRE FRENTE A PARQUE PIMIENTA!";
+    string PimientapaluzersNoticia = "¡MASACRE FRENTE A PARQUE PIMIENTA!";
 
     bool PimientapaluzersDifamado;
     string PimientapaluzersTitulo2 = "";
     string PimientapaluzersNoticia2 = "";
     //============================================================================ TV Pepe Queño ===================================================================//
     bool PepeQueñoEliminado1;
-    string PepeQueñoTitulo1 = ""; //Parte 1
-    string PepeQueñoNoticia1 = "";
+    string PepeQueñoTitulo1 = "JOVEN ORGANIZA BÚSQUEDA POR SU AMIGO IMAGINARIO"; //Parte 1
+    string PepeQueñoNoticia1 = "JOVEN ORGANIZA BÚSQUEDA POR SU AMIGO IMAGINARIO";
 
     bool PepeQueñoEliminado2;
-    string PepeQueñoTitulo2 = ""; //Parte 2
-    string PepeQueñoNoticia2 = "";
+    string PepeQueñoTitulo2 = "NADIE SE PRESENTA A BUSQUEDA DE NIÑO PELUDO, TRISTE Y RARO"; //Parte 2
+    string PepeQueñoNoticia2 = "NADIE SE PRESENTA A BUSQUEDA DE NIÑO PELUDO, TRISTE Y RARO";
     //============================================================================ TV Parque Pimienta =============================================================================//
     bool ParquePimientaAislado1;
-    string ParquePimientaTitulo1 = ""; //Pimienta paluza hackeado = false
-    string ParquePimientaNoticia1 = ""; //Pimienta paluza hackeado = false
+    string ParquePimientaTitulo1 = "MISTERIOSA CERCA RODEA PARQUE PIMIENTA!"; //Pimienta paluza hackeado = false
+    string ParquePimientaNoticia1 = "MISTERIOSA CERCA RODEA PARQUE PIMIENTA!¿QUE ESTÁ PASANDO EN PUEBLO PIMIENTA?"; //Pimienta paluza hackeado = false
 
     bool ParquePimientaAislado2;
-    string ParquePimientaTitulo2 = ""; //Pimienta paluza hackeado = true
-    string ParquePimientaNoticia2 = ""; //Pimienta paluza hackeado = true
+    string ParquePimientaTitulo2 = "MISTERIOSA CERCA RODEA PARQUE PIMIENTA!"; //Pimienta paluza hackeado = true
+    string ParquePimientaNoticia2 = "MISTERIOSA CERCA RODEA PARQUE PIMIENTA!¿QUE ESTÁ PASANDO EN PUEBLO PIMIENTA?"; //Pimienta paluza hackeado = true
 
     bool ParquePimientaAislado3;
     string ParquePimientaTitulo3 = ""; //Pimienta paluza hackeado = true y pepe/ben eliminado/lavado = false
@@ -114,51 +114,51 @@ public class TV : MonoBehaviour
         switch (Random.Range(1,10))
         {
             case 1:
-                titular.text = "bOOBIS DE SANDIA";
-                noticia.text = "dksfhiusDFiuafsiDFNISSA";
+                titular.text = "COMO ROBAR DESEOS DE CUMPLEAÑOS COMO ESE NENE DE LA PELI";
+                noticia.text = "PONETE LOS LENTES, PA";
                 break;
             case 2:
-                titular.text = "Ahora explotan";
-                noticia.text = "dksfhiusDFiuafsiDFNISSA";
+                titular.text = "¿DIETA O RADIACION? CÓMO QUEMAR ESOS KILOS DE MÁS";
+                noticia.text = "PONETE LOS LENTES, PA";
                 break;
             case 3:
-                titular.text = "Cómo y donde encontrar queso invisible";
-                noticia.text = "dksfhiusDFiuafsiDFNISSA";
+                titular.text = "CÓMO Y DÓNDE ENCONTRAR QUESO INVISIBLE";
+                noticia.text = "PONETE LOS LENTES, PA";
                 break;
                 
             case 4:
-                titular.text = "1";
-                noticia.text = "dksfhiusDFiuafsiDFNISSA";
+                titular.text = "FESTIVAL 'PATEA UN TIBURÓN' TERMINA EN TRAGEDIA";
+                noticia.text = "PONETE LOS LENTES, PA";
                 break;
                
             case 5:
-                titular.text = "1";
-                noticia.text = "dksfhiusDFiuafsiDFNISSA";
+                titular.text = "ASESINO SERIAL RAGE QUITS";
+                noticia.text = "ASESINO SERIAL RAGE QUITS";
                 break;
                 
             case 6:
-                titular.text = "2";
-                noticia.text = "dksfhiusDFiuafsiDFNISSA";
+                titular.text = "¿CUÁNTO GARPA SER UNA NINFA?";
+                noticia.text = "PONETE LOS LENTES, PA";
                 break;
                 
             case 7:
-                titular.text = "3";
-                noticia.text = "dksfhiusDFiuafsiDFNISSA";
+                titular.text = "MARIPOSA SENTENCIADA A 60 AÑOS EN PRISIÓN FEDERAL";
+                noticia.text = "PONETE LOS LENTES, PA";
                 break;
                 
             case 8:
-                titular.text = "4";
-                noticia.text = "dksfhiusDFiuafsiDFNISSA";
+                titular.text = "REBOOT DE PREQUELA SE CONVIERTE EN SPIN-OFF DE REMAKE DEL LIBRO";
+                noticia.text = "PONETE LOS LENTES, PA";
                 break;
                 
             case 9:
-                titular.text = "6";
-                noticia.text = "dksfhiusDFiuafsiDFNISSA";
+                titular.text = "GAME DESIGNER PROPONE IDEA A ÚLTIMO MOMENTO";
+                noticia.text = "PONETE LOS LENTES, PA";
                 break;
                 
             case 10:
-                titular.text = "8";
-                noticia.text = "dksfhiusDFiuafsiDFNISSA";
+                titular.text = "ES OFICIAL: A NADIE LE IMPORTA AVATAR";
+                noticia.text = "PONETE LOS LENTES, PA";
                 break;
 
         }
