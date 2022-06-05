@@ -733,7 +733,7 @@ public class Bitacoras : MonoBehaviour
                 float RetencionBitacora = 12;
                 float HoraCompletado = RetencionBitacora + TimeManager.Hora;
                 float CalculoTiempo = RetencionBitacora * 60 * time.MinutosXseg;
-                string txt = "¡Presencia de Pie Grande confirmada! Se encuentra en una cueva robando wifi del Parque. Sugerimos mantener distancia.";
+                string txt = "Es hermoso! Aunque la wifi que tienen es privada. Medio ratas.";
                 string FechaCompletado = "2" + time.Dia + "/03/2000";
                 string txtAccion = "Investigar Parque Pimienta";
                 Toggle accion = A.investigar;
