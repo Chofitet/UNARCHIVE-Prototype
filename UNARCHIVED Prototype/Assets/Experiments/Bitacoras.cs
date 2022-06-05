@@ -1598,9 +1598,9 @@ public class Bitacoras : MonoBehaviour
                 float RetencionBitacora = 3;
                 float HoraCompletado = RetencionBitacora + TimeManager.Hora;
                 float CalculoTiempo = RetencionBitacora * 60 * time.MinutosXseg;
-                string txt = "Pepe Queño se fué a jugar a la Granja";
+                string txt = "Notificamos a los guardabosques y han cambiado la contraseña. Wifi robada 'eliminada'.";
                 string FechaCompletado = "2" + time.Dia + "/03/2000";
-                string txtAccion = "Eliminar Pepe Queño";
+                string txtAccion = "Eliminar Wifi Robado";
                 Toggle accion = A.eliminar;
                 if (HoraCompletado >= 18)
                 {
@@ -1620,12 +1620,12 @@ public class Bitacoras : MonoBehaviour
             //LAVAR CEREBRO 
             if (A.lavarCerebro.CompareTag(tag = "OptActivado") && A.lavarCerebro.isOn == true && WifiRobadoEliminado == false && PepeLavado == false)
             {
-                float RetencionBitacora = 3;
+                float RetencionBitacora = 0.001f;
                 float HoraCompletado = RetencionBitacora + TimeManager.Hora;
                 float CalculoTiempo = RetencionBitacora * 60 * time.MinutosXseg;
-                string txt = "Pepe Queño ha olvidado todo. No volverá a ser el mismo.";
+                string txt = "uhm... no.";
                 string FechaCompletado = "2" + time.Dia + "/03/2000";
-                string txtAccion = "Lavar cerebro Pepe Queño";
+                string txtAccion = "Lavar cerebro a Wifi Robado";
                 Toggle accion = A.lavarCerebro;
                 if (HoraCompletado >= 18)
                 {
@@ -1649,7 +1649,7 @@ public class Bitacoras : MonoBehaviour
                 float RetencionBitacora = 12;
                 float HoraCompletado = RetencionBitacora + TimeManager.Hora;
                 float CalculoTiempo = RetencionBitacora * 60 * time.MinutosXseg;
-                string txt = "Presencia de Pie Grande confirmada! Se encuentra en Parque Pimienta viviendole el Wifi a los guardabosques.";
+                string txt = "Presencia de Pie Grande confirmada! Se encuentra en Parque Pimienta viviendole la Wifi a los guardabosques desde una cueva secreta!";
                 string FechaCompletado = "2" + time.Dia + "/03/2000";
                 string txtAccion = "Investigar Wifi robado";
                 Toggle accion = A.investigar;
@@ -1674,7 +1674,7 @@ public class Bitacoras : MonoBehaviour
                 float RetencionBitacora = 3;
                 float HoraCompletado = RetencionBitacora + TimeManager.Hora;
                 float CalculoTiempo = RetencionBitacora * 60 * time.MinutosXseg;
-                string txt = "Presencia de Pie Grande confirmada! Se encuentra en Parque Pimienta viviendole el Wifi a los guardabosques.";
+                string txt = "Presencia de Pie Grande confirmada! Se encuentra en Parque Pimienta viviendole la Wifi a los guardabosques desde una cueva secreta!";
                 string FechaCompletado = "2" + time.Dia + "/03/2000";
                 string txtAccion = "Hackear Wifi Robado";
                 Toggle accion = A.hackear;
@@ -1699,9 +1699,9 @@ public class Bitacoras : MonoBehaviour
                 float RetencionBitacora = 3;
                 float HoraCompletado = RetencionBitacora + TimeManager.Hora;
                 float CalculoTiempo = RetencionBitacora * 60 * time.MinutosXseg;
-                string txt = "Su simple existencia es difamación suficiente por esta miserable vida.";
+                string txt = ".";
                 string FechaCompletado = "2" + time.Dia + "/03/2000";
-                string txtAccion = "Difamar Pepe Queño";
+                string txtAccion = "Difamar Wifi robado";
                 Toggle accion = A.difamar;
                 if (HoraCompletado >= 18)
                 {
@@ -1721,12 +1721,12 @@ public class Bitacoras : MonoBehaviour
             //Analizar muestra
             if (A.analizarMuestra.CompareTag(tag = "OptActivado") && A.analizarMuestra.isOn == true && WifiRobadoAnalizado == false)
             {
-                float RetencionBitacora = 12;
+                float RetencionBitacora = 0.001f;
                 float HoraCompletado = RetencionBitacora + TimeManager.Hora;
                 float CalculoTiempo = RetencionBitacora * 60 * time.MinutosXseg;
-                string txt = "ADN coincide con Pie Grade. Posible hijo ilegítimo durante su último matrimonio. Base de datos ACTUALIZADA!";
+                string txt = "Wifi robado carece de ADN.";
                 string FechaCompletado = "2" + time.Dia + "/03/2000";
-                string txtAccion = "Analizar Pepe Queño";
+                string txtAccion = "Analizar Wifi Robado";
                 Toggle accion = A.analizarMuestra;
                 if (HoraCompletado >= 18)
                 {
