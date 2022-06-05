@@ -23,6 +23,8 @@ public class Acciones : MonoBehaviour
     public Toggle plantarPublico;
     public Toggle trueEnding;
 
+    public GameObject tglEliminar;
+    public GameObject tglLavar;
     public GameObject tglCrearEscena;
     public GameObject tglPlantarPublico;
     public GameObject tglTrueEnding;
@@ -112,7 +114,7 @@ public class Acciones : MonoBehaviour
     {
         if (action){crearEscena.tag = "OptActivado";}
         CompletarPalabra();
-       
+        Debug.Log("Llama a montar escena");
     }
     public void CrearnoticiaFalsa(bool action)
     {
@@ -156,8 +158,15 @@ public class Acciones : MonoBehaviour
         aislar.isOn = false;
         crearNoticia.isOn = false;
         
-        if (crearEscena.isOn == true) tglCrearEscena.SetActive(false); crearEscena.isOn = false;
-        if (plantarPublico.isOn == true) tglPlantarPublico.SetActive(false); plantarPublico.isOn = false;
-        if(trueEnding.isOn == true) tglTrueEnding.SetActive(false); plantarPublico.isOn = false;
+       
     }
+    public void DeshabilitarAcciones()
+    {
+        if (crearEscena.isOn == true) tglCrearEscena.SetActive(false);
+        if (plantarPublico.isOn == true) tglPlantarPublico.SetActive(false);
+        if (trueEnding.isOn == true) tglTrueEnding.SetActive(false);
+        if (bitacoras.PieGrandeEliminado == true) tglEliminar.SetActive(false);
+        if (bitacoras.PieGrandeLavado == true) tglLavar.SetActive(false);
+    }
+
 }

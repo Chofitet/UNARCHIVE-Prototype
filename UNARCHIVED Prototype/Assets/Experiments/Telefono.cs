@@ -127,7 +127,7 @@ public class Telefono : MonoBehaviour
 
     void EsLlamable (string Palabra)
     {
-        if (Palabra == libreta.palabrasCaso[0] || Palabra == libreta.palabrasCaso[1] || Palabra == libreta.palabrasCaso[2] || Palabra == libreta.palabrasCaso[8])
+        if (Palabra == libreta.palabrasCaso[0] || (Palabra == libreta.palabrasCaso[1] && bitacora.PieGrandeUbicacion) || Palabra == libreta.palabrasCaso[2] || Palabra == libreta.palabrasCaso[8])
         {
             btnllamar.interactable = false;
             PapelFax.SetActive(false);

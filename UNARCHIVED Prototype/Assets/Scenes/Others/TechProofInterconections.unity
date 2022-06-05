@@ -2434,8 +2434,12 @@ MonoBehaviour:
   PimientapaluzersDifamado: 0
   PimientapaluzersAnalizado: 0
   PimientapaluzersAislado: 0
+  WifiRobadoEliminado: 0
+  WifiRobadoLavado: 0
+  WifiRobadoAnalizado: 0
   WifiRobadoHackeado: 0
   WifiRobadoInvestigado: 0
+  WifiRobadoDifamado: 0
   CrearEscena: 0
   PlantarPublico: 0
   TrueEnding: 0
@@ -4613,6 +4617,8 @@ MonoBehaviour:
   analizarMuestra: {fileID: 1337097332}
   plantarPublico: {fileID: 1281020347}
   trueEnding: {fileID: 1715898201}
+  tglEliminar: {fileID: 331164055}
+  tglLavar: {fileID: 22122815}
   tglCrearEscena: {fileID: 2023564432}
   tglPlantarPublico: {fileID: 1281020345}
   tglTrueEnding: {fileID: 1715898199}
@@ -8597,8 +8603,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff1acb13b30771942898fdf2d74012fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  desiredCanvasType: 0
-  desiredCanvasType2: 0
+  desiredCanvasType: 2
+  desiredCanvasType2: 2
   canvasManager: {fileID: 320038367}
 --- !u!1 &1012795772
 GameObject:

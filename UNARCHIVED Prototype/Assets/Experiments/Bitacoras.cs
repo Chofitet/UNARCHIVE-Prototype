@@ -82,8 +82,13 @@ public class Bitacoras : MonoBehaviour
     public bool PimientapaluzersAnalizado;
     public bool PimientapaluzersAislado;
     ///////////////////////////
+    public bool WifiRobadoEliminado;
+    public bool WifiRobadoLavado;
+    public bool WifiRobadoAnalizado;
     public bool WifiRobadoHackeado;
     public bool WifiRobadoInvestigado;
+    public bool WifiRobadoDifamado;
+
 
     ////////////////////
     public bool CrearEscena;
@@ -93,7 +98,7 @@ public class Bitacoras : MonoBehaviour
     private string PreUbicacion;
 
     private string txtNoticiaFalsa;
-    private int NumNoticias = 5;
+    private int NumNoticias = 0;
 
     //Vectores bitacoras
     string[] pag1 = new string[12];
@@ -1587,6 +1592,57 @@ public class Bitacoras : MonoBehaviour
 
         if (libreta.palabra == libreta.palabrasCaso[12])
         {
+            //Eliminar
+            if (A.eliminar.CompareTag(tag = "OptActivado") && A.eliminar.isOn == true && WifiRobadoEliminado == false)
+            {
+                float RetencionBitacora = 3;
+                float HoraCompletado = RetencionBitacora + TimeManager.Hora;
+                float CalculoTiempo = RetencionBitacora * 60 * time.MinutosXseg;
+                string txt = "Pepe Queño se fué a jugar a la Granja";
+                string FechaCompletado = "2" + time.Dia + "/03/2000";
+                string txtAccion = "Eliminar Pepe Queño";
+                Toggle accion = A.eliminar;
+                if (HoraCompletado >= 18)
+                {
+                    HoraCompletado = 6 + (RetencionBitacora - (18 - TimeManager.Hora));
+                    FechaCompletado = "2" + (time.Dia + 1) + "/03/2000";
+                }
+                int indaux = ind;
+                int a = 1;
+                CargarVectorProgreso(txtAccion, FechaCompletado, HoraCompletado, indaux);
+                SetearBitacora();
+                a = aux;
+                ActualizarIndice();
+                StartCoroutine(GuardarBitacora(CalculoTiempo, txt, indaux, accion, a));
+                WifiRobadoEliminado = true;
+                A.eliminar.interactable = false;
+            }
+            //LAVAR CEREBRO 
+            if (A.lavarCerebro.CompareTag(tag = "OptActivado") && A.lavarCerebro.isOn == true && WifiRobadoEliminado == false && PepeLavado == false)
+            {
+                float RetencionBitacora = 3;
+                float HoraCompletado = RetencionBitacora + TimeManager.Hora;
+                float CalculoTiempo = RetencionBitacora * 60 * time.MinutosXseg;
+                string txt = "Pepe Queño ha olvidado todo. No volverá a ser el mismo.";
+                string FechaCompletado = "2" + time.Dia + "/03/2000";
+                string txtAccion = "Lavar cerebro Pepe Queño";
+                Toggle accion = A.lavarCerebro;
+                if (HoraCompletado >= 18)
+                {
+                    HoraCompletado = 6 + (RetencionBitacora - (18 - TimeManager.Hora));
+                    FechaCompletado = "2" + (time.Dia + 1) + "/03/2000";
+                }
+                int indaux = ind;
+                int a = 1;
+                CargarVectorProgreso(txtAccion, FechaCompletado, HoraCompletado, indaux);
+                SetearBitacora();
+                a = aux;
+                ActualizarIndice();
+                StartCoroutine(GuardarBitacora(CalculoTiempo, txt, indaux, accion, a));
+                WifiRobadoLavado = true;
+                A.lavarCerebro.interactable = false;
+            }
+
             // investigar
             if (A.investigar.CompareTag(tag = "OptActivado") && A.investigar.isOn == true && WifiRobadoInvestigado == false && WifiRobadoHackeado == false )
             {
@@ -1636,6 +1692,56 @@ public class Bitacoras : MonoBehaviour
                 StartCoroutine(GuardarBitacora(CalculoTiempo, txt, indaux, accion, a));
                 WifiRobadoHackeado = true;
                 A.hackear.interactable = false;
+            }
+            //Difamar
+            if (A.difamar.CompareTag(tag = "OptActivado") && A.difamar.isOn == true && WifiRobadoDifamado == false)
+            {
+                float RetencionBitacora = 3;
+                float HoraCompletado = RetencionBitacora + TimeManager.Hora;
+                float CalculoTiempo = RetencionBitacora * 60 * time.MinutosXseg;
+                string txt = "Su simple existencia es difamación suficiente por esta miserable vida.";
+                string FechaCompletado = "2" + time.Dia + "/03/2000";
+                string txtAccion = "Difamar Pepe Queño";
+                Toggle accion = A.difamar;
+                if (HoraCompletado >= 18)
+                {
+                    HoraCompletado = 6 + (RetencionBitacora - (18 - TimeManager.Hora));
+                    FechaCompletado = "2" + (time.Dia + 1) + "/03/2000";
+                }
+                int indaux = ind;
+                int a = 1;
+                CargarVectorProgreso(txtAccion, FechaCompletado, HoraCompletado, indaux);
+                SetearBitacora();
+                a = aux;
+                ActualizarIndice();
+                StartCoroutine(GuardarBitacora(CalculoTiempo, txt, indaux, accion, a));
+                WifiRobadoDifamado = true;
+                A.difamar.interactable = false;
+            }
+            //Analizar muestra
+            if (A.analizarMuestra.CompareTag(tag = "OptActivado") && A.analizarMuestra.isOn == true && WifiRobadoAnalizado == false)
+            {
+                float RetencionBitacora = 12;
+                float HoraCompletado = RetencionBitacora + TimeManager.Hora;
+                float CalculoTiempo = RetencionBitacora * 60 * time.MinutosXseg;
+                string txt = "ADN coincide con Pie Grade. Posible hijo ilegítimo durante su último matrimonio. Base de datos ACTUALIZADA!";
+                string FechaCompletado = "2" + time.Dia + "/03/2000";
+                string txtAccion = "Analizar Pepe Queño";
+                Toggle accion = A.analizarMuestra;
+                if (HoraCompletado >= 18)
+                {
+                    HoraCompletado = 6 + (RetencionBitacora - (18 - TimeManager.Hora));
+                    FechaCompletado = "2" + (time.Dia + 1) + "/03/2000";
+                }
+                int indaux = ind;
+                int a = 1;
+                CargarVectorProgreso(txtAccion, FechaCompletado, HoraCompletado, indaux);
+                SetearBitacora();
+                a = aux;
+                ActualizarIndice();
+                StartCoroutine(GuardarBitacora(CalculoTiempo, txt, indaux, accion, a));
+                WifiRobadoAnalizado = true;
+                A.analizarMuestra.interactable = false;
             }
         }
         //================================================= Bitacoras Cabellos Rojizos ==========================================================//
@@ -1699,12 +1805,12 @@ public class Bitacoras : MonoBehaviour
             }
         //================================================ Bitacoras Montar escena chapandose ===================================================================//
 
-        if (A.crearEscena.CompareTag(tag = "OptActivado") && A.crearEscena.isOn == true && CrearEscena == true)
+        if (A.crearEscena.CompareTag(tag = "OptActivado") && A.crearEscena.isOn == true && CrearEscena == false)
         {
             float RetencionBitacora = 3;
             float HoraCompletado = RetencionBitacora + TimeManager.Hora;
             float CalculoTiempo = RetencionBitacora * 60 * time.MinutosXseg;
-            string txt = "";
+            string txt = "...";
             string FechaCompletado = "2" + time.Dia + "/03/2000";
             string txtAccion = "Crear noticia falsa";
             Toggle accion = A.crearEscena;
@@ -1712,7 +1818,6 @@ public class Bitacoras : MonoBehaviour
             {
                 HoraCompletado = 6 + (RetencionBitacora - (18 - TimeManager.Hora));
                 FechaCompletado = "2" + (time.Dia + 1) + "/03/2000";
-
             }
             int indaux = ind;
             int a = 1;
@@ -1722,6 +1827,7 @@ public class Bitacoras : MonoBehaviour
             ActualizarIndice();
             StartCoroutine(GuardarBitacora(CalculoTiempo, txt, indaux, accion, a));
             CrearEscena = true;
+            Debug.Log("funciona la bitácora");
 
         }
         //================================================ Bitacoras Plantar público ===================================================================//
@@ -1777,6 +1883,8 @@ public class Bitacoras : MonoBehaviour
             TrueEnding = true;
         }
 
+        Debug.Log(libreta.palabra);
+        libreta.SetearPalabraLibretaACero();
         A.Restablecer();
     }
 
@@ -1787,8 +1895,10 @@ public class Bitacoras : MonoBehaviour
         if (accion != A.crearEscena && accion != A.trueEnding && accion != A.plantarPublico) accion.interactable = true;
 
         libreta.PersonajeEliminado();
+        libreta.DesSubrayar();
         UbicacionConfirmada();
         libreta.ActualizarPalabras();
+        A.DeshabilitarAcciones();
       
     }
 
@@ -1947,30 +2057,31 @@ public class Bitacoras : MonoBehaviour
             case 0:
                 txtNoticiaFalsa = "Plaga de insectos se avecina sobre Pueblo Pimienta!";
                 PC.Rating = PC.Rating - 1;
+                NumNoticias++;
                 break;
             case 1:
                 txtNoticiaFalsa = "Fallece cantante importante";
-                NumNoticias--;
+                NumNoticias++;
                 PC.Rating = PC.Rating - 1;
                 break;
             case 2:
                 txtNoticiaFalsa = "Todos a las casas! Maratón del Señor de los Zarcillos hoy de ";
-                NumNoticias--;
+                NumNoticias++;
                 PC.Rating = PC.Rating - 1;
                 break;
             case 3:
                 txtNoticiaFalsa = "Noticia";
-                NumNoticias--;
+                NumNoticias++;
                 PC.Rating = PC.Rating - 1;
                 break;
             case 4:
                 txtNoticiaFalsa = "Noticia";
-                NumNoticias--;
+                NumNoticias++;
                 PC.Rating = PC.Rating - 1;
                 break;
             case 5:
                 txtNoticiaFalsa = "Noticia";
-                NumNoticias--;
+                NumNoticias++;
                 PC.Rating = PC.Rating - 1;
                 break;
                 

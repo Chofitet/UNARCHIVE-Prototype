@@ -14,6 +14,14 @@ public class TV : MonoBehaviour
     [SerializeField] Libreta libreta;
     [SerializeField] PC PC;
     bool x;
+    int CualLista;
+    int NumNoticiasAteatorias = 1;
+
+    private void Start()
+    {
+        CualLista = Random.Range(1, 3);
+        NoticiasAliatorias();
+    }
 
 
     // Para crear una noticia hay que crear tres variables: un booleano para que la noticia solo aparezca una vez, y dos strings, una para el titular(aparece pantalla chiquito)
@@ -109,60 +117,7 @@ public class TV : MonoBehaviour
         */
     }
 
-    void NoticiasAliatorias ()
-    {
-        switch (Random.Range(1,10))
-        {
-            case 1:
-                titular.text = "COMO ROBAR DESEOS DE CUMPLEAÑOS COMO ESE NENE DE LA PELI";
-                noticia.text = "PONETE LOS LENTES, PA";
-                break;
-            case 2:
-                titular.text = "¿DIETA O RADIACION? CÓMO QUEMAR ESOS KILOS DE MÁS";
-                noticia.text = "PONETE LOS LENTES, PA";
-                break;
-            case 3:
-                titular.text = "CÓMO Y DÓNDE ENCONTRAR QUESO INVISIBLE";
-                noticia.text = "PONETE LOS LENTES, PA";
-                break;
-                
-            case 4:
-                titular.text = "FESTIVAL 'PATEA UN TIBURÓN' TERMINA EN TRAGEDIA";
-                noticia.text = "PONETE LOS LENTES, PA";
-                break;
-               
-            case 5:
-                titular.text = "ASESINO SERIAL RAGE QUITS";
-                noticia.text = "ASESINO SERIAL RAGE QUITS";
-                break;
-                
-            case 6:
-                titular.text = "¿CUÁNTO GARPA SER UNA NINFA?";
-                noticia.text = "PONETE LOS LENTES, PA";
-                break;
-                
-            case 7:
-                titular.text = "MARIPOSA SENTENCIADA A 60 AÑOS EN PRISIÓN FEDERAL";
-                noticia.text = "PONETE LOS LENTES, PA";
-                break;
-                
-            case 8:
-                titular.text = "REBOOT DE PREQUELA SE CONVIERTE EN SPIN-OFF DE REMAKE DEL LIBRO";
-                noticia.text = "PONETE LOS LENTES, PA";
-                break;
-                
-            case 9:
-                titular.text = "GAME DESIGNER PROPONE IDEA A ÚLTIMO MOMENTO";
-                noticia.text = "PONETE LOS LENTES, PA";
-                break;
-                
-            case 10:
-                titular.text = "ES OFICIAL: A NADIE LE IMPORTA AVATAR";
-                noticia.text = "PONETE LOS LENTES, PA";
-                break;
-
-        }
-    }
+   
 
     // Comprueba el estado de variables para posicionar noticias, ubicar las noticias cronologicamente, su orden va de arriba para abajo.
     void CheckearBitacoras ()
@@ -281,5 +236,170 @@ public class TV : MonoBehaviour
         noticia.text = N;
         titular.text = T;
         PC.Rating = PC.Rating + IncrementoRating;
+    }
+
+
+    /// ================================================================== Noticias Aleatorias ========================================================= ///
+        string TitularAleatoria1 = "COMO ROBAR DESEOS DE CUMPLEAÑOS COMO ESE NENE DE LA PELI";
+        string NoticiaAleatoria1 = "PONETE LOS LENTES, PA";
+
+        string TitularAleatoria2 = "¿DIETA O RADIACION? CÓMO QUEMAR ESOS KILOS DE MÁS";
+        string NoticiaAleatoria2 = "PONETE LOS LENTES, PA";
+
+        string TitularAleatoria3 = "CÓMO Y DÓNDE ENCONTRAR QUESO INVISIBLE";
+        string NoticiaAleatoria3 = "PONETE LOS LENTES, PA";
+
+        string TitularAleatoria4 = "FESTIVAL 'PATEA UN TIBURÓN' TERMINA EN TRAGEDIA";
+        string NoticiaAleatoria4 = "PONETE LOS LENTES, PA";
+
+        string TitularAleatoria5 = "ASESINO SERIAL RAGE QUITS";
+        string NoticiaAleatoria5 = "ASESINO SERIAL RAGE QUITS";
+
+        string TitularAleatoria6 = "¿CUÁNTO GARPA SER UNA NINFA?";
+        string NoticiaAleatoria6 = "PONETE LOS LENTES, PA";
+
+        string TitularAleatoria7 = "MARIPOSA SENTENCIADA A 60 AÑOS EN PRISIÓN FEDERAL";
+        string NoticiaAleatoria7 = "PONETE LOS LENTES, PA";
+
+        string TitularAleatoria8 = "REBOOT DE PREQUELA SE CONVIERTE EN SPIN-OFF DE REMAKE DEL LIBRO";
+        string NoticiaAleatoria8 = "PONETE LOS LENTES, PA";
+
+        string TitularAleatoria9 = "GAME DESIGNER PROPONE IDEA A ÚLTIMO MOMENTO";
+        string NoticiaAleatoria9 = "PONETE LOS LENTES, PA";
+
+        string TitularAleatoria10 = "ES OFICIAL: A NADIE LE IMPORTA AVATAR";
+        string NoticiaAleatoria10 = "PONETE LOS LENTES, PA";
+
+
+    void NoticiasAliatorias()
+    {
+        if (CualLista == 1) 
+        {
+            switch (NumNoticiasAteatorias)
+            {
+                case 1:
+                    titular.text = TitularAleatoria1;
+                    noticia.text = NoticiaAleatoria1;
+                    NumNoticiasAteatorias++;
+                    break;
+                case 2:
+                    titular.text = TitularAleatoria2;
+                    noticia.text = NoticiaAleatoria2;
+                    NumNoticiasAteatorias++;
+                    break;
+                case 3:
+                    titular.text = TitularAleatoria3;
+                    noticia.text = NoticiaAleatoria3;
+                    NumNoticiasAteatorias++;
+                    break;
+
+                case 4:
+                    titular.text = TitularAleatoria4;
+                    noticia.text = NoticiaAleatoria4;
+                    NumNoticiasAteatorias++;
+                    break;
+
+                case 5:
+                    titular.text = TitularAleatoria5;
+                    noticia.text = NoticiaAleatoria5;
+                    NumNoticiasAteatorias++;
+                    break;
+
+                case 6:
+                    titular.text = TitularAleatoria6;
+                    noticia.text = NoticiaAleatoria6;
+                    NumNoticiasAteatorias++;
+                    break;
+
+                case 7:
+                    titular.text = TitularAleatoria7;
+                    noticia.text = NoticiaAleatoria7;
+                    NumNoticiasAteatorias++;
+                    break;
+
+                case 8:
+                    titular.text = TitularAleatoria8;
+                    noticia.text = NoticiaAleatoria8;
+                    NumNoticiasAteatorias++;
+                    break;
+
+                case 9:
+                    titular.text = TitularAleatoria9;
+                    noticia.text = NoticiaAleatoria9;
+                    NumNoticiasAteatorias++;
+                    break;
+
+                case 10:
+                    titular.text = TitularAleatoria10;
+                    noticia.text = NoticiaAleatoria10;
+                    NumNoticiasAteatorias = 1;
+                    break;
+            }
+
+        }
+        else if (CualLista == 2)
+        {
+            switch (NumNoticiasAteatorias)
+            {
+                case 10:
+                    titular.text = TitularAleatoria1;
+                    noticia.text = NoticiaAleatoria1;
+                    NumNoticiasAteatorias = 1;
+                    break;
+                case 9:
+                    titular.text = TitularAleatoria2;
+                    noticia.text = NoticiaAleatoria2;
+                    NumNoticiasAteatorias++;
+                    break;
+                case 8:
+                    titular.text = TitularAleatoria3;
+                    noticia.text = NoticiaAleatoria3;
+                    NumNoticiasAteatorias++;
+                    break;
+
+                case 7:
+                    titular.text = TitularAleatoria4;
+                    noticia.text = NoticiaAleatoria4;
+                    NumNoticiasAteatorias++;
+                    break;
+
+                case 6:
+                    titular.text = TitularAleatoria5;
+                    noticia.text = NoticiaAleatoria5;
+                    NumNoticiasAteatorias++;
+                    break;
+
+                case 5:
+                    titular.text = TitularAleatoria6;
+                    noticia.text = NoticiaAleatoria6;
+                    NumNoticiasAteatorias++;
+                    break;
+
+                case 4:
+                    titular.text = TitularAleatoria7;
+                    noticia.text = NoticiaAleatoria7;
+                    NumNoticiasAteatorias++;
+                    break;
+
+                case 3:
+                    titular.text = TitularAleatoria8;
+                    noticia.text = NoticiaAleatoria8;
+                    NumNoticiasAteatorias++;
+                    break;
+
+                case 2:
+                    titular.text = TitularAleatoria9;
+                    noticia.text = NoticiaAleatoria9;
+                    NumNoticiasAteatorias++;
+                    break;
+
+                case 1:
+                    titular.text = TitularAleatoria10;
+                    noticia.text = NoticiaAleatoria10;
+                    NumNoticiasAteatorias++;
+                    break;
+            }
+
+        }
     }
 }

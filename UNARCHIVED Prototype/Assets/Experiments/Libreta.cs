@@ -90,15 +90,6 @@ public class Libreta : MonoBehaviour
         }
 
 
-        if (bitacoras.CabellosRojijosAnalizado == true || bitacoras.Red78Hackeada == true || bitacoras.Red78Investigada == true) 
-        {
-            BtnColorada.gameObject.SetActive(false); 
-            BtnPelosRojizos.gameObject.SetActive(false); 
-            BtnRed78.gameObject.SetActive(false);
-            BtnBananorrama.gameObject.SetActive(false);
-            Debug.LogWarning("Boton Kate");
-
-        }
 
     }
    
@@ -183,7 +174,7 @@ public class Libreta : MonoBehaviour
         txtWifiRobado.text = "<u>wifi robado<u>";
     }
 
-    void DesSubrayar()
+    public void DesSubrayar()
     {
         if(txtBen.text == "<u>Ben Benji</u>") { txtBen.text = palabrasCaso[0]; }
         else if (txtPieGrande.text == "<u>Pie Grande</u>" + SignoPreguntaPieGrande) { txtPieGrande.text = palabrasCaso[1] + SignoPreguntaPieGrande; }
@@ -194,7 +185,7 @@ public class Libreta : MonoBehaviour
         else if (txtPepeQueño.text == "<u>Pepe Queño</u>" + SignoPreguntaPepeQueño) { txtPepeQueño.text = palabrasCaso[8] + SignoPreguntaPepeQueño; }
         else if (txtCabellosRojizos.text == "<u>cabellos rojizos</u>") { txtCabellosRojizos.text = palabrasCaso[9]; }
         else if (txtRed78.text == "<u>Red78?</u>") { txtRed78.text = palabrasCaso[7] + "?"; }
-        else if (txtKate.text == "<u>Kate Milliar<u>") { txtKate.text = palabrasCaso[2]; }
+        else if (txtKate.text == "<u>Kate Milliard<u>") { txtKate.text = palabrasCaso[2]; }
         else if (txtParquePimienta.text == "<u>Parque Pimienta<u>") { txtParquePimienta.text = palabrasCaso[10]; }
         else if (txtPimientapaluzers.text == "<u>pimientapaluzers<u>") { txtPimientapaluzers.text = palabrasCaso[11]; }
         else if (txtWifiRobado.text == "<u>wifi robado<u>") { txtWifiRobado.text = palabrasCaso[12]; }
@@ -213,6 +204,7 @@ public class Libreta : MonoBehaviour
     {
         if (bitacoras.PieGrandeHackeado == true) {BtnRed78.gameObject.SetActive(true); }
         if (bitacoras.Red78Investigada == true || bitacoras.Red78Hackeada == true) {BtnKateMilliard.gameObject.SetActive(true); }
+        if (bitacoras.CabellosRojijosAnalizado == true) BtnKateMilliard.gameObject.SetActive(true);
         if (bitacoras.PieGrandeInvestigado == true) { BtnPelosRojizos.gameObject.SetActive(true); }
         if (bitacoras.ParquePimientaHackeado == true && bitacoras.PieGrandeUbicacion == false) {BtnWifiRobado.gameObject.SetActive(true);}
         if (bitacoras.PuebloPimientaInvestigado == true) {BtnParquePimienta.gameObject.SetActive(true); }
@@ -221,6 +213,21 @@ public class Libreta : MonoBehaviour
         if (bitacoras.PepeInvestigado == true || bitacoras.PepeAnalizado == true) {SignoPreguntaPepeQueño = ""; PepeQueño(); }
         if (bitacoras.PieGrandeUbicacion == true) BtnPuebloPimienta.SetActive(false);
         if (bitacoras.PieGrandeLavado == true) BtnBananorrama.SetActive(true);
+
+        if (bitacoras.CabellosRojijosAnalizado == true || bitacoras.Red78Hackeada == true || bitacoras.Red78Investigada == true)
+        {
+            BtnColorada.gameObject.SetActive(false);
+            BtnPelosRojizos.gameObject.SetActive(false);
+            BtnRed78.gameObject.SetActive(false);
+            BtnBananorrama.gameObject.SetActive(false);
+
+        }
+
+    }
+
+    public void SetearPalabraLibretaACero ()
+    {
+        palabra = "";
     }
 
 
