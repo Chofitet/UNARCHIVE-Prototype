@@ -24,10 +24,7 @@ public class CanvasManager : MonoBehaviour
 
     private void Update()
     {
-            if (Input.GetKeyDown(KeyCode.Mouse1) == true)
-        {
-            SwitchCanvas(Escritorio, Escritorio);
-        }
+         
     }
 
     void Start()
