@@ -8,13 +8,11 @@ public class PCCanvasSwitcher : MonoBehaviour
     public CanvasTypePC desiredCanvasType2;
 
     public PCCanvasManager canvasManager;
-    public GameObject Escritorio;
+ 
 
     void OnMouseDown()
     {
-        if (Escritorio.activeSelf == true)
-        {
-            canvasManager.SwitchCanvas(desiredCanvasType, desiredCanvasType2);
-        }
+          canvasManager.SwitchCanvas(desiredCanvasType, desiredCanvasType2);
+    
     }
 }

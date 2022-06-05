@@ -45,6 +45,7 @@ public class Libreta : MonoBehaviour
 
     private void Update ()
     {
+
         if (ex.CasoLeido == true && apagado == false)
         {
             BtnBen.gameObject.SetActive(true);
