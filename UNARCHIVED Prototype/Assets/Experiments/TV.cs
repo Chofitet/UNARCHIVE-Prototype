@@ -19,7 +19,7 @@ public class TV : MonoBehaviour
 
     private void Start()
     {
-        CualLista = Random.Range(1, 3);
+        CualLista = Random.Range(0, 3);
         NoticiasAliatorias();
     }
 
@@ -97,14 +97,14 @@ public class TV : MonoBehaviour
     }
     private void OnDisable()
     {
-      //  TimeManager.CambioHoras -= DirectorNoticias;
+        //  TimeManager.CambioHoras -= DirectorNoticias;
     }
     private void Update()
     {
-        
+
     }
 
-    public void DirectorNoticias ()
+    public void DirectorNoticias()
     {
         CheckearBitacoras(); if (x == false) NoticiasAliatorias(); x = false;
 
@@ -117,10 +117,10 @@ public class TV : MonoBehaviour
         */
     }
 
-   
+
 
     // Comprueba el estado de variables para posicionar noticias, ubicar las noticias cronologicamente, su orden va de arriba para abajo.
-    void CheckearBitacoras ()
+    void CheckearBitacoras()
     {
         //============================================================================ TV Diario =============================================================================//
         if (bitacoras.BenEliminado == false && bitacoras.BenLavado == false && tiempo.Dia == 3 && TimeManager.Hora == 12 && BenEntrevista1 == false)
@@ -168,7 +168,7 @@ public class TV : MonoBehaviour
             PieGrandeEliminado = true;
         }
         //============================================================================ TV Pimienta Paluza ===================================================================//
-        else if (bitacoras.PimientaPaluzaHackeado== true && PimientaPaluzaHackeado == false)
+        else if (bitacoras.PimientaPaluzaHackeado == true && PimientaPaluzaHackeado == false)
         {
             int IncrementoRating = 5;
             StartCoroutine(ImprimirNoticia(PimientaPaluzaoTitulo, PimientaPaluzaNoticia, IncrementoRating));
@@ -211,7 +211,7 @@ public class TV : MonoBehaviour
         {
             int IncrementoRating = 5;
             StartCoroutine(ImprimirNoticia(PimientapaluzersTitulo2, PimientapaluzersNoticia2, IncrementoRating));
-            PimientapaluzersDifamado= true;
+            PimientapaluzersDifamado = true;
         }
         //============================================================================ TV Pepe Queño ===================================================================//
         else if (bitacoras.PepeEliminado == true && bitacoras.BenEliminado == false && PepeQueñoEliminado1 == false)
@@ -227,8 +227,8 @@ public class TV : MonoBehaviour
             PepeQueñoEliminado2 = true;
         }
     }
-   
-    IEnumerator ImprimirNoticia (string T, string N, int IncrementoRating)
+
+    IEnumerator ImprimirNoticia(string T, string N, int IncrementoRating)
     {
         yield return new WaitForSeconds(tiempo.MinutosXseg * 50 * 3);
         x = true;
@@ -240,40 +240,40 @@ public class TV : MonoBehaviour
 
 
     /// ================================================================== Noticias Aleatorias ========================================================= ///
-        string TitularAleatoria1 = "COMO ROBAR DESEOS DE CUMPLEAÑOS COMO ESE NENE DE LA PELI";
-        string NoticiaAleatoria1 = "PONETE LOS LENTES, PA";
+    string TitularAleatoria1 = "COMO ROBAR DESEOS DE CUMPLEAÑOS COMO ESE NENE DE LA PELI";
+    string NoticiaAleatoria1 = "PONETE LOS LENTES, PA";
 
-        string TitularAleatoria2 = "¿DIETA O RADIACION? CÓMO QUEMAR ESOS KILOS DE MÁS";
-        string NoticiaAleatoria2 = "PONETE LOS LENTES, PA";
+    string TitularAleatoria2 = "¿DIETA O RADIACION? CÓMO QUEMAR ESOS KILOS DE MÁS";
+    string NoticiaAleatoria2 = "PONETE LOS LENTES, PA";
 
-        string TitularAleatoria3 = "CÓMO Y DÓNDE ENCONTRAR QUESO INVISIBLE";
-        string NoticiaAleatoria3 = "PONETE LOS LENTES, PA";
+    string TitularAleatoria3 = "CÓMO Y DÓNDE ENCONTRAR QUESO INVISIBLE";
+    string NoticiaAleatoria3 = "PONETE LOS LENTES, PA";
 
-        string TitularAleatoria4 = "FESTIVAL 'PATEA UN TIBURÓN' TERMINA EN TRAGEDIA";
-        string NoticiaAleatoria4 = "PONETE LOS LENTES, PA";
+    string TitularAleatoria4 = "FESTIVAL 'PATEA UN TIBURÓN' TERMINA EN TRAGEDIA";
+    string NoticiaAleatoria4 = "PONETE LOS LENTES, PA";
 
-        string TitularAleatoria5 = "ASESINO SERIAL RAGE QUITS";
-        string NoticiaAleatoria5 = "ASESINO SERIAL RAGE QUITS";
+    string TitularAleatoria5 = "ASESINO SERIAL RAGE QUITS";
+    string NoticiaAleatoria5 = "ASESINO SERIAL RAGE QUITS";
 
-        string TitularAleatoria6 = "¿CUÁNTO GARPA SER UNA NINFA?";
-        string NoticiaAleatoria6 = "PONETE LOS LENTES, PA";
+    string TitularAleatoria6 = "¿CUÁNTO GARPA SER UNA NINFA?";
+    string NoticiaAleatoria6 = "PONETE LOS LENTES, PA";
 
-        string TitularAleatoria7 = "MARIPOSA SENTENCIADA A 60 AÑOS EN PRISIÓN FEDERAL";
-        string NoticiaAleatoria7 = "PONETE LOS LENTES, PA";
+    string TitularAleatoria7 = "MARIPOSA SENTENCIADA A 60 AÑOS EN PRISIÓN FEDERAL";
+    string NoticiaAleatoria7 = "PONETE LOS LENTES, PA";
 
-        string TitularAleatoria8 = "REBOOT DE PREQUELA SE CONVIERTE EN SPIN-OFF DE REMAKE DEL LIBRO";
-        string NoticiaAleatoria8 = "PONETE LOS LENTES, PA";
+    string TitularAleatoria8 = "REBOOT DE PREQUELA SE CONVIERTE EN SPIN-OFF DE REMAKE DEL LIBRO";
+    string NoticiaAleatoria8 = "PONETE LOS LENTES, PA";
 
-        string TitularAleatoria9 = "GAME DESIGNER PROPONE IDEA A ÚLTIMO MOMENTO";
-        string NoticiaAleatoria9 = "PONETE LOS LENTES, PA";
+    string TitularAleatoria9 = "GAME DESIGNER PROPONE IDEA A ÚLTIMO MOMENTO";
+    string NoticiaAleatoria9 = "PONETE LOS LENTES, PA";
 
-        string TitularAleatoria10 = "ES OFICIAL: A NADIE LE IMPORTA AVATAR";
-        string NoticiaAleatoria10 = "PONETE LOS LENTES, PA";
+    string TitularAleatoria10 = "ES OFICIAL: JAMES, A NADIE LE IMPORTA AVATAR";
+    string NoticiaAleatoria10 = "PONETE LOS LENTES, PA";
 
 
     void NoticiasAliatorias()
     {
-        if (CualLista == 1) 
+        if (CualLista == 1)
         {
             switch (NumNoticiasAteatorias)
             {
@@ -400,6 +400,70 @@ public class TV : MonoBehaviour
                     break;
             }
 
+
+        }
+        else if (CualLista == 0)
+        {
+            switch (NumNoticiasAteatorias)
+            {
+                case 5:
+                    titular.text = TitularAleatoria1;
+                    noticia.text = NoticiaAleatoria1;
+                    NumNoticiasAteatorias = 1;
+                    break;
+                case 3:
+                    titular.text = TitularAleatoria2;
+                    noticia.text = NoticiaAleatoria2;
+                    NumNoticiasAteatorias++;
+                    break;
+                case 1:
+                    titular.text = TitularAleatoria3;
+                    noticia.text = NoticiaAleatoria3;
+                    NumNoticiasAteatorias++;
+                    break;
+
+                case 7:
+                    titular.text = TitularAleatoria4;
+                    noticia.text = NoticiaAleatoria4;
+                    NumNoticiasAteatorias++;
+                    break;
+
+                case 2:
+                    titular.text = TitularAleatoria5;
+                    noticia.text = NoticiaAleatoria5;
+                    NumNoticiasAteatorias++;
+                    break;
+
+                case 4:
+                    titular.text = TitularAleatoria6;
+                    noticia.text = NoticiaAleatoria6;
+                    NumNoticiasAteatorias++;
+                    break;
+
+                case 8:
+                    titular.text = TitularAleatoria7;
+                    noticia.text = NoticiaAleatoria7;
+                    NumNoticiasAteatorias++;
+                    break;
+
+                case 10:
+                    titular.text = TitularAleatoria8;
+                    noticia.text = NoticiaAleatoria8;
+                    NumNoticiasAteatorias = 1;
+                    break;
+
+                case 6:
+                    titular.text = TitularAleatoria9;
+                    noticia.text = NoticiaAleatoria9;
+                    NumNoticiasAteatorias++;
+                    break;
+
+                case 9:
+                    titular.text = TitularAleatoria10;
+                    noticia.text = NoticiaAleatoria10;
+                    NumNoticiasAteatorias++;
+                    break;
+            }
         }
     }
 }
