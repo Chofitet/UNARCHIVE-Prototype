@@ -54,7 +54,7 @@ public class PC : MonoBehaviour
         //================================================================ Wiki Kate Milliard =======================================================//
         else if (txtBuscador.text == libreta.palabrasCaso[2])
         {
-            txtInfo.text = "Actriz de alto reconocimiento, saltó a la fama con la comedia romántica 'Bananorama' en 1994 y consolidó su lugar en el podio dramatúrgico con 'Not without my monkey' en 1997. Al negar teñir o cubrir su rojiza cabellera para interpretar roles ha logrado convertir ese capricho en su marca registrada. Aunque dice “aún no planea dejar la actuación, muchachos”, ha pasado a desarrollarse en los últimos años como directora de documentales sobre animales en peligro de extinción."
+            txtInfo.text = "Actriz de alto reconocimiento, saltó a la fama con la comedia romántica 'Bananorrama' en 1994 y consolidó su lugar en el podio dramatúrgico con 'Not without my monkey' en 1997. Al negar teñir o cubrir su rojiza cabellera para interpretar roles ha logrado convertir ese capricho en su marca registrada. Aunque dice “aún no planea dejar la actuación, muchachos”, ha pasado a desarrollarse en los últimos años como directora de documentales sobre animales en peligro de extinción."
                 + System.Environment.NewLine
                 + System.Environment.NewLine + "Edad: 24 años"
                 + System.Environment.NewLine
@@ -152,15 +152,20 @@ public class PC : MonoBehaviour
             + System.Environment.NewLine 
             + System.Environment.NewLine + "NOTA: GARY!!";
         }
-        //consultanding para agregar entradas de todas las palabras de la libreta
+        //================================================================ Wiki cabellos rojizos =======================================================//
         else if (txtBuscador.text == libreta.palabrasCaso[9])
         {
-            txtInfo.text = "Cabellos rojizos donde?";
+            txtInfo.text = "¿Cabellos rojizos donde?";
+        }
+        //================================================================ Wiki wifi robado =======================================================//
+        else if (txtBuscador.text == libreta.palabrasCaso[12])
+        {
+            txtInfo.text = "Robar wifi es un acto inmoral penalizable con hasta 60 años en prision.";
         }
         //================================================================ Wiki Bananorrama =======================================================//
         else if (txtBuscador.text == libreta.palabrasCaso[4])
         {
-            txtInfo.text = "CARETA."
+            txtInfo.text = "Comedia romántica estrenada en 1994. La actuación y encendida cabellera de Kate Milliard capturó a la audiencia catapultandola a la fama."
             + System.Environment.NewLine
             + System.Environment.NewLine
             + System.Environment.NewLine
@@ -169,11 +174,15 @@ public class PC : MonoBehaviour
             + System.Environment.NewLine
             + System.Environment.NewLine
             + System.Environment.NewLine
-            + System.Environment.NewLine + "NOTA: GARY!!";
+            + System.Environment.NewLine ;
             libreta.BtnKateMilliard.gameObject.SetActive(true);
             libreta.BtnBananorrama.gameObject.SetActive(false);
             }
-
+        //================================================================ Wiki red78 =======================================================//
+        else if (txtBuscador.text == libreta.palabrasCaso[7])
+        {
+            txtInfo.text = "Sin resultados.";
+        }
     }
 
     public void BorrarWiki ()
