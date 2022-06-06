@@ -1877,6 +1877,7 @@ public class Bitacoras : MonoBehaviour
             int a = 1;
             CargarVectorProgreso(txtAccion, FechaCompletado, HoraCompletado, indaux);
             SetearBitacora();
+            libreta.DesSubrayar();
             a = aux;
             ActualizarIndice();
             StartCoroutine(GuardarBitacora(CalculoTiempo, txt, indaux, accion, a));
@@ -1890,16 +1891,16 @@ public class Bitacoras : MonoBehaviour
 
     IEnumerator GuardarBitacora(float ReinicioTiempo, string txt, int indaux, Toggle accion, int a)
     {
-        yield return new WaitForSeconds(ReinicioTiempo);
-        CargarVectorAccion(a, indaux, txt);
-        if (accion != A.crearEscena && accion != A.trueEnding && accion != A.plantarPublico) accion.interactable = true;
+            yield return new WaitForSeconds(ReinicioTiempo);
+            CargarVectorAccion(a, indaux, txt);
+            if (accion != A.crearEscena && accion != A.trueEnding && accion != A.plantarPublico) accion.interactable = true;
 
-        libreta.PersonajeEliminado();
-        libreta.DesSubrayar();
-        UbicacionConfirmada();
-        libreta.ActualizarPalabras();
-        A.DeshabilitarAcciones();
-      
+            libreta.PersonajeEliminado();
+
+            UbicacionConfirmada();
+            libreta.ActualizarPalabras();
+            time.TiempoNormal();
+            A.DeshabilitarAcciones();
     }
 
     
@@ -2051,7 +2052,6 @@ public class Bitacoras : MonoBehaviour
 
    public void ElegirFakeNews(int Num)
     {
-       
         switch (Num)
         {
             case 0:
@@ -2084,9 +2084,7 @@ public class Bitacoras : MonoBehaviour
                 NumNoticias++;
                 PC.Rating = PC.Rating - 1;
                 break;
-                
         }
-        
     }
 
 
@@ -2134,4 +2132,11 @@ public class Bitacoras : MonoBehaviour
        
     }
    
+    void ModificarTiempo (float tiempo)
+    {
+        Update();
+
+            
+
+    }
 }

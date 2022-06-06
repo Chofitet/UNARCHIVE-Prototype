@@ -93,28 +93,23 @@ public class TV : MonoBehaviour
 
     private void OnEnable()
     {
-        // TimeManager.CambioHoras += DirectorNoticias;
+        TimeManager.CambioHoras += DirectorNoticias;
     }
     private void OnDisable()
     {
-        //  TimeManager.CambioHoras -= DirectorNoticias;
+        TimeManager.CambioHoras -= DirectorNoticias;
     }
-    private void Update()
-    {
-
-    }
-
+  
     public void DirectorNoticias()
     {
-        CheckearBitacoras(); if (x == false) NoticiasAliatorias(); x = false;
+       // CheckearBitacoras(); if (x == false) NoticiasAliatorias(); x = false;
 
-        /*
         if (TimeManager.Hora == 6) { CheckearBitacoras(); if (x == false) NoticiasAliatorias(); x = false; }
         if (TimeManager.Hora == 9) { CheckearBitacoras(); if (x == false) NoticiasAliatorias(); x = false; }
         if (TimeManager.Hora == 12) { CheckearBitacoras(); if (x == false) NoticiasAliatorias(); x = false; }
         if (TimeManager.Hora == 15) { CheckearBitacoras(); if (x == false) NoticiasAliatorias(); x = false; }
         if (TimeManager.Hora == 18) { CheckearBitacoras(); if (x == false) NoticiasAliatorias(); x = false; }
-        */
+       
     }
 
 

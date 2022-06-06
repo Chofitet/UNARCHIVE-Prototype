@@ -10,11 +10,13 @@ public class TimeManager : MonoBehaviour
     public static Action CambioHoras;
     public int Dia ;
     public bool NoticiaDiaria;
+    float VariacionDeTiempo = 1;
+    bool x;
 
     public static int Minuto { get; private set; }
     public static int Hora { get; private set; }
 
-    private float MinutosPorSegundosReales = 0.5f;
+    private float MinutosPorSegundosReales = 2.2f ;
     public float MinutosXseg; 
     private float timer;
 
@@ -29,6 +31,8 @@ public class TimeManager : MonoBehaviour
 
     void Update()
     {
+       
+        Time.timeScale = VariacionDeTiempo;
 
         if (Input.GetKey("escape")) Application.Quit();
 
@@ -45,7 +49,7 @@ public class TimeManager : MonoBehaviour
             }
             timer = MinutosPorSegundosReales;
         }
-        
+
     }
 
     private void OnEnable()
@@ -66,6 +70,19 @@ public class TimeManager : MonoBehaviour
             Dia++;
             Hora = 6;
         }
+    }
+
+    public void TiempoAcelerado ()
+    {
+        if (x == false) { VariacionDeTiempo = 60f; x = true; }
+        else {VariacionDeTiempo = 1; x = false;}
+
+    }
+
+    public void TiempoNormal ()
+    {
+        VariacionDeTiempo = 1;
+        x = false;
     }
 
 }
