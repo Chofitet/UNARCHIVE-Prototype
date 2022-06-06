@@ -1877,13 +1877,12 @@ public class Bitacoras : MonoBehaviour
             int a = 1;
             CargarVectorProgreso(txtAccion, FechaCompletado, HoraCompletado, indaux);
             SetearBitacora();
-            libreta.DesSubrayar();
             a = aux;
             ActualizarIndice();
             StartCoroutine(GuardarBitacora(CalculoTiempo, txt, indaux, accion, a));
             TrueEnding = true;
         }
-
+        libreta.DesSubrayar();
         Debug.Log(libreta.palabra);
         libreta.SetearPalabraLibretaACero();
         A.Restablecer();
