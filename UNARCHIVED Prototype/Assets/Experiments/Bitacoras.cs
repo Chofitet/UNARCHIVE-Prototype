@@ -2055,32 +2055,32 @@ public class Bitacoras : MonoBehaviour
         switch (Num)
         {
             case 0:
-                txtNoticiaFalsa = "Plaga de insectos se avecina sobre Pueblo Pimienta!";
+                txtNoticiaFalsa = "PLAGA DE INSECTOS SE AVECINA SOBRE PUEBLO PIMIENTA!";
                 PC.Rating = PC.Rating - 1;
                 NumNoticias++;
                 break;
             case 1:
-                txtNoticiaFalsa = "Fallece cantante importante";
+                txtNoticiaFalsa = "FALLECE CANTANTE IMPORTANTE AY QUE DOLOR QUE PENA";
                 NumNoticias++;
                 PC.Rating = PC.Rating - 1;
                 break;
             case 2:
-                txtNoticiaFalsa = "Todos a las casas! Maratón del Señor de los Zarcillos hoy de ";
+                txtNoticiaFalsa = "TODOS A LAS CASAS! MARATÓN DEL SEÑOR DE LOS ZARCILLOS HOY TODO EL DÍA";
                 NumNoticias++;
                 PC.Rating = PC.Rating - 1;
                 break;
             case 3:
-                txtNoticiaFalsa = "Noticia";
+                txtNoticiaFalsa = "ESTA ES TU NOTICIA FALSA! HAY MUCHAS COMO ELLA PERO ESTA ES TUYA!";
                 NumNoticias++;
                 PC.Rating = PC.Rating - 1;
                 break;
             case 4:
-                txtNoticiaFalsa = "Noticia";
+                txtNoticiaFalsa = "";
                 NumNoticias++;
                 PC.Rating = PC.Rating - 1;
                 break;
             case 5:
-                txtNoticiaFalsa = "Noticia";
+                txtNoticiaFalsa = "";
                 NumNoticias++;
                 PC.Rating = PC.Rating - 1;
                 break;
@@ -2106,27 +2106,27 @@ public class Bitacoras : MonoBehaviour
         switch (UN)
         {
             case 0:
-                PreUbicacion = "No sabemos el paradero de " + palabra;
+                PreUbicacion = "Necitamos primero el paradero de " + palabra + ".";
                 UN++;
                 break;
             case 1:
-                PreUbicacion = "Se desconoce ubicación de " + palabra;
+                PreUbicacion = "Se desconoce ubicación de " + palabra + ". Sería necesaria para esto.";
                 UN++;
                 break;
             case 2:
-                PreUbicacion = "Necesitamos confirmar su ubicación primero";
+                PreUbicacion = "Necesitamos confirmar su ubicación primero.";
                 UN++;
                 break;
             case 3:
-                PreUbicacion = "¿Sabes donde está " + palabra+"?Porque nosotros no.";
+                PreUbicacion = "¿Sabes donde está " + palabra+"? Porque nosotros no.";
                 UN++;
                 break;
             case 4:
-                PreUbicacion = "Objetivo inlocalizable";
+                PreUbicacion = "Objetivo inalcanzable sin conocimiento de su ubicación.";
                 UN++;
                 break;
             case 5:
-                PreUbicacion = "El agente necesita la ubicación del objetivo...DUH!";
+                PreUbicacion = "El agente necesita la ubicación del objetivo primero...DUH!";
                 UN = 0; 
                 break;
         }
