@@ -16,28 +16,28 @@ public class Reloj : MonoBehaviour
         {
             case 3:
                 
-                Fecha.text = "2" + time.Dia + "/03/2000";
+                Fecha.text = "2" + time.Dia + "/03";
                 
                 break;
             case 4:
                
-                Fecha.text = "2" + time.Dia + "/03/2000";
+                Fecha.text = "2" + time.Dia + "/03";
                 break;
             case 5:
              
-                Fecha.text = "2" + time.Dia + "/03/2000";
+                Fecha.text = "2" + time.Dia + "/03";
                 break;
             case 6:
               
-                Fecha.text = "2" + time.Dia + "/03/2000";
+                Fecha.text = "2" + time.Dia + "/03";
                 break;
             case 7:
                 
-                Fecha.text = "2" + time.Dia + "/03/2000";
+                Fecha.text = "2" + time.Dia + "/03";
                 break;
             case 8:
                 
-                Fecha.text = "2" + time.Dia + "/03/2000";
+                Fecha.text = "2" + time.Dia + "/03";
                 break;
         }
     }

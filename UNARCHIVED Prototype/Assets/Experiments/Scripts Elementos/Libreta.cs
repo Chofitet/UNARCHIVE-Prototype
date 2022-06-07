@@ -79,17 +79,14 @@ public class Libreta : MonoBehaviour
 
     private void Update ()
     {
-        if (ex.CasoLeido == true && apagado == false)
+        if (ex.CasoLeido == true)
         {
             BtnBen.gameObject.SetActive(true);
             BtnPieGrande.gameObject.SetActive(true);
             BtnPuebloPimienta.gameObject.SetActive(true);
             BtnColorada.gameObject.SetActive(true);
-            ex.CasoLeido = false;
-            apagado = true;
+           
         }
-
-
 
     }
    

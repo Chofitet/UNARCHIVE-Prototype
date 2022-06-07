@@ -5,9 +5,10 @@ using TMPro;
 public class Expediente : MonoBehaviour
 {
     public bool CasoLeido;
-   
-    public void ExpedienteLeido()
+
+    void OnMouseDown ()
     {
+        Debug.Log("11");
         CasoLeido = true;
     }
 
