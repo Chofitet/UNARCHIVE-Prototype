@@ -8,11 +8,12 @@ public class PCCanvasSwitcher : MonoBehaviour
     public CanvasTypePC desiredCanvasType2;
 
     public PCCanvasManager canvasManager;
+    
  
 
     void OnMouseDown()
     {
           canvasManager.SwitchCanvas(desiredCanvasType, desiredCanvasType2);
-    
+            
     }
 }

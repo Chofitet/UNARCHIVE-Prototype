@@ -3,37 +3,38 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
-public enum CanvasTypePC
+public enum CanvasTypeExp
 {
-    PC,
-    PCDef,
+   Expediente,
+   ExpedienteDef,
+   Bitacoras,
+   Acciones,
+   Libreta,
 }
 
-public class PCCanvasManager : MonoBehaviour
+public class ExpCanvasManager : MonoBehaviour
 {
-    List<PCCanvasController> canvasControllerList;
-    public PCCanvasController lastActiveCanvas;
-    PCCanvasController lastActiveCanvas2;
-
+    List<ExpController> canvasControllerList;
+    public ExpController lastActiveCanvas;
+    ExpController lastActiveCanvas2;
 
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Mouse1) == true)
         {
-            SwitchCanvas(CanvasTypePC.PCDef, CanvasTypePC.PCDef);
-
+            SwitchCanvas(CanvasTypeExp.ExpedienteDef, CanvasTypeExp.ExpedienteDef);
         }
     }
 
     void Start()
 
     {
-        canvasControllerList = GetComponentsInChildren<PCCanvasController>().ToList();
+        canvasControllerList = GetComponentsInChildren<ExpController>().ToList();
         canvasControllerList.ForEach(x => x.gameObject.SetActive(false));
-        SwitchCanvas(CanvasTypePC.PCDef, CanvasTypePC.PCDef);
+        SwitchCanvas(CanvasTypeExp.ExpedienteDef, CanvasTypeExp.ExpedienteDef);
     }
 
-    public void SwitchCanvas(CanvasTypePC _type, CanvasTypePC _type2)
+    public void SwitchCanvas(CanvasTypeExp _type, CanvasTypeExp _type2)
     {
         if (lastActiveCanvas != null)
         {
@@ -45,8 +46,8 @@ public class PCCanvasManager : MonoBehaviour
             lastActiveCanvas2.gameObject.SetActive(false);
         }
 
-        PCCanvasController desiredCanvas = canvasControllerList.Find(x => x.canvasTypePC == _type);
-        PCCanvasController desiredCanvas2 = canvasControllerList.Find(x => x.canvasTypePC == _type2);
+        ExpController desiredCanvas = canvasControllerList.Find(x => x.canvasTypeExp == _type);
+        ExpController desiredCanvas2 = canvasControllerList.Find(x => x.canvasTypeExp == _type2);
         if (desiredCanvas != null)
         {
             desiredCanvas.gameObject.SetActive(true);

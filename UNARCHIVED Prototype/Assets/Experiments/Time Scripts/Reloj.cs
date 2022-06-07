@@ -57,4 +57,9 @@ public class Reloj : MonoBehaviour
     {
         reloj.text = $"{TimeManager.Hora:00}:{TimeManager.Minuto:00}";
     }
+
+    private void OnMouseDown()
+    {
+        time.TiempoAcelerado();
+    }
 }

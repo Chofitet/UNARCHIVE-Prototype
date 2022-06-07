@@ -3,37 +3,37 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
-public enum CanvasTypePC
+public enum CanvasTypeTV
 {
-    PC,
-    PCDef,
+    TV,
+    TVDef,
 }
 
-public class PCCanvasManager : MonoBehaviour
+
+public class TVCanvasManager : MonoBehaviour
 {
-    List<PCCanvasController> canvasControllerList;
-    public PCCanvasController lastActiveCanvas;
-    PCCanvasController lastActiveCanvas2;
+    List<TVCanvasController> canvasControllerList;
+    public TVCanvasController lastActiveCanvas;
+    TVCanvasController lastActiveCanvas2;
 
 
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Mouse1) == true)
         {
-            SwitchCanvas(CanvasTypePC.PCDef, CanvasTypePC.PCDef);
-
+            SwitchCanvas(CanvasTypeTV.TVDef, CanvasTypeTV.TVDef);
         }
     }
 
     void Start()
 
     {
-        canvasControllerList = GetComponentsInChildren<PCCanvasController>().ToList();
+        canvasControllerList = GetComponentsInChildren<TVCanvasController>().ToList();
         canvasControllerList.ForEach(x => x.gameObject.SetActive(false));
-        SwitchCanvas(CanvasTypePC.PCDef, CanvasTypePC.PCDef);
+        SwitchCanvas(CanvasTypeTV.TVDef, CanvasTypeTV.TVDef);
     }
 
-    public void SwitchCanvas(CanvasTypePC _type, CanvasTypePC _type2)
+    public void SwitchCanvas(CanvasTypeTV _type, CanvasTypeTV _type2)
     {
         if (lastActiveCanvas != null)
         {
@@ -45,8 +45,8 @@ public class PCCanvasManager : MonoBehaviour
             lastActiveCanvas2.gameObject.SetActive(false);
         }
 
-        PCCanvasController desiredCanvas = canvasControllerList.Find(x => x.canvasTypePC == _type);
-        PCCanvasController desiredCanvas2 = canvasControllerList.Find(x => x.canvasTypePC == _type2);
+        TVCanvasController desiredCanvas = canvasControllerList.Find(x => x.canvasTypeTV == _type);
+        TVCanvasController desiredCanvas2 = canvasControllerList.Find(x => x.canvasTypeTV == _type2);
         if (desiredCanvas != null)
         {
             desiredCanvas.gameObject.SetActive(true);
