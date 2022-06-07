@@ -101,12 +101,18 @@ public class Bitacoras : MonoBehaviour
     private int NumNoticias = 0;
 
     //Vectores bitacoras
-    string[] pag1 = new string[12];
+    string[] pag1 = new string[6];
     
-    string[] pag2 = new string[12];
+    string[] pag2 = new string[6];
   
-    string[] pag3 = new string[12];
-   
+    string[] pag3 = new string[6];
+
+    string[] pag4 = new string[6];
+
+    string[] pag5 = new string[6];
+
+    string[] pag6 = new string[6];
+
     int Pag = 1;
     int PagActual;
     int ind;
@@ -1908,7 +1914,7 @@ public class Bitacoras : MonoBehaviour
    
     public void SiguientePagina()
     {
-        if (PagActual < 3)  {PagActual++;}
+        if (PagActual < 6)  {PagActual++;}
     }
     public void AnteriorPagina ()
     {
@@ -1924,12 +1930,7 @@ public class Bitacoras : MonoBehaviour
             B4P1.text = pag1[3];
             B5P1.text = pag1[4];
             B6P1.text = pag1[5];
-            B1P2.text = pag1[6];
-            B2P2.text = pag1[7];
-            B3P2.text = pag1[8];
-            B4P2.text = pag1[9];
-            B5P2.text = pag1[10];
-            B6P2.text = pag1[11];
+            
 
         }
         else if (PagActual == 2)
@@ -1940,12 +1941,7 @@ public class Bitacoras : MonoBehaviour
             B4P1.text = pag2[3];
             B5P1.text = pag2[4];
             B6P1.text = pag2[5];
-            B1P2.text = pag2[6];
-            B2P2.text = pag2[7];
-            B3P2.text = pag2[8];
-            B4P2.text = pag2[9];
-            B5P2.text = pag2[10];
-            B6P2.text = pag2[11];
+            
         }
         else if (PagActual == 3)
         {
@@ -1955,13 +1951,37 @@ public class Bitacoras : MonoBehaviour
             B4P1.text = pag3[3];
             B5P1.text = pag3[4];
             B6P1.text = pag3[5];
-            B1P2.text = pag3[6];
-            B2P2.text = pag3[7];
-            B3P2.text = pag3[8];
-            B4P2.text = pag3[9];
-            B5P2.text = pag3[10];
-            B6P2.text = pag3[11];
+           
         }
+        else if (PagActual == 4 ) 
+        {
+            B1P1.text = pag4[0];
+            B2P1.text = pag4[1];
+            B3P1.text = pag5[2];
+            B4P1.text = pag4[3];
+            B5P1.text = pag4[4];
+            B6P1.text = pag4[5];
+        }
+        else if (PagActual == 5)
+        {
+            B1P1.text = pag5[0];
+            B2P1.text = pag5[1];
+            B3P1.text = pag5[2];
+            B4P1.text = pag5[3];
+            B5P1.text = pag5[4];
+            B6P1.text = pag5[5];
+        }
+        else if (PagActual == 6)
+        {
+            B1P1.text = pag6[0];
+            B2P1.text = pag6[1];
+            B3P1.text = pag6[2];
+            B4P1.text = pag6[3];
+            B5P1.text = pag6[4];
+            B6P1.text = pag6[5];
+        }
+       
+
     }
 
     void CargarVectorProgreso(string Accion, string FechaCompletado, float HoraCompletado, int ind)
@@ -1978,10 +1998,23 @@ public class Bitacoras : MonoBehaviour
         {
             pag3[ind] = "En proceso: " + Accion + System.Environment.NewLine + "Se completa el: " + FechaCompletado + " a las: " + HoraCompletado + ":" + TimeManager.Minuto;
         }
+        else if (Pag == 4)
+        {
+            pag4[ind] = "En proceso: " + Accion + System.Environment.NewLine + "Se completa el: " + FechaCompletado + " a las: " + HoraCompletado + ":" + TimeManager.Minuto;
+        }
+        else if (Pag == 5)
+        {
+            pag5[ind] = "En proceso: " + Accion + System.Environment.NewLine + "Se completa el: " + FechaCompletado + " a las: " + HoraCompletado + ":" + TimeManager.Minuto;
+        }
+        else if (Pag == 6)
+        {
+            pag6[ind] = "En proceso: " + Accion + System.Environment.NewLine + "Se completa el: " + FechaCompletado + " a las: " + HoraCompletado + ":" + TimeManager.Minuto;
+        }
+
     }
     void ActualizarIndice ()
     {
-        if (ind > 10)
+        if (ind > 4)
         {
             ind = 0;
             Pag = Pag + 1;
@@ -1997,6 +2030,12 @@ public class Bitacoras : MonoBehaviour
         
         if (Pag == 3) aux = 3;
 
+        if (Pag == 4) aux = 4;
+
+        if (Pag == 5) aux = 5;
+
+        if (Pag == 6) aux = 6;
+
     }
     void CargarVectorAccion (int a, int indaux, string txt )
     {
@@ -2008,12 +2047,7 @@ public class Bitacoras : MonoBehaviour
             if (indaux == 3) pag1[3] = txt;
             if (indaux == 4) pag1[4] = txt;
             if (indaux == 5) pag1[5] = txt;
-            if (indaux == 6) pag1[6] = txt;
-            if (indaux == 7) pag1[7] = txt;
-            if (indaux == 8) pag1[8] = txt;
-            if (indaux == 9) pag1[9] = txt;
-            if (indaux == 10) pag1[10] = txt;
-            if (indaux == 11) pag1[11] = txt;
+        
         }
         if (a == 2)
         {
@@ -2023,12 +2057,7 @@ public class Bitacoras : MonoBehaviour
             if (indaux == 3) pag2[3] = txt;
             if (indaux == 4) pag2[4] = txt;
             if (indaux == 5) pag2[5] = txt;
-            if (indaux == 6) pag2[6] = txt;
-            if (indaux == 7) pag2[7] = txt;
-            if (indaux == 8) pag2[8] = txt;
-            if (indaux == 9) pag2[9] = txt;
-            if (indaux == 10) pag2[10] = txt;
-            if (indaux == 11) pag2[11] = txt;
+     
         }
         if (a == 3)
         {
@@ -2038,14 +2067,38 @@ public class Bitacoras : MonoBehaviour
             if (indaux == 3) pag3[3] = txt;
             if (indaux == 4) pag3[4] = txt;
             if (indaux == 5) pag3[5] = txt;
-            if (indaux == 6) pag3[6] = txt;
-            if (indaux == 7) pag3[7] = txt;
-            if (indaux == 8) pag3[8] = txt;
-            if (indaux == 9) pag3[9] = txt;
-            if (indaux == 10) pag3[10] = txt;
-            if (indaux == 11) pag3[11] = txt;
+    
         }
+        if (a == 4)
+        {
+            if (indaux == 0) pag4[0] = txt;
+            if (indaux == 1) pag4[1] = txt;
+            if (indaux == 2) pag4[2] = txt;
+            if (indaux == 3) pag4[3] = txt;
+            if (indaux == 4) pag4[4] = txt;
+            if (indaux == 5) pag4[5] = txt;
 
+        }
+        if (a == 5)
+        {
+            if (indaux == 0) pag5[0] = txt;
+            if (indaux == 1) pag5[1] = txt;
+            if (indaux == 2) pag5[2] = txt;
+            if (indaux == 3) pag5[3] = txt;
+            if (indaux == 4) pag5[4] = txt;
+            if (indaux == 5) pag5[5] = txt;
+
+        }
+        if (a == 6)
+        {
+            if (indaux == 0) pag6[0] = txt;
+            if (indaux == 1) pag6[1] = txt;
+            if (indaux == 2) pag6[2] = txt;
+            if (indaux == 3) pag6[3] = txt;
+            if (indaux == 4) pag6[4] = txt;
+            if (indaux == 5) pag6[5] = txt;
+
+        }
     }
     //========================================== Fake news =======================================//
 
