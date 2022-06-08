@@ -33,7 +33,7 @@ public class PC : MonoBehaviour
         if(txtBuscador.text == libreta.palabrasCaso[0])
 
         {
-            txtInfo.text = "Niño común, académicamente correcto, no posee características ni poderes especiales. Si leer esto parece aburrido y carente de imaginación, agradece que no conoces a Ben Benji."
+            txtInfo.text = "Niño común, académicamente correcto, no posee características ni poderes especiales. Si leer esto te parece aburrido y consideras que quien redactó esta entrada carece de ambición creativa, agradece que no conoces a Ben Benji."
                 + System.Environment.NewLine
                 + System.Environment.NewLine + "Edad: 10 años"
                 + System.Environment.NewLine
@@ -80,8 +80,8 @@ public class PC : MonoBehaviour
         else if (txtBuscador.text == libreta.palabrasCaso[8])
         {
 
-            txtInfo.text = "Sujeto no cargado en BD."
-                + System.Environment.NewLine + "Investigar.";
+            txtInfo.text = "Habitante de Pueblo Pimienta no cargado en BD."
+                + System.Environment.NewLine + "Investigar para completar entrada.";
 
             if (bitacoras.PepeInvestigado == true && bitacoras.PepeAnalizado == false)
             {
@@ -122,7 +122,7 @@ public class PC : MonoBehaviour
             + System.Environment.NewLine 
             + System.Environment.NewLine 
             + System.Environment.NewLine 
-            + System.Environment.NewLine + "NOTA: POR FAVOR, GARY, MANTENER CIVILES LAS ENTRADAS DE LA BASE DE DATOS";
+            + System.Environment.NewLine + "NOTA: POR FAVOR, MANTENGAMOS CIVILES LAS ENTRADAS EN LA BASE DE DATOS";
         }
         //================================================================ Wiki Parque Pimienta =======================================================//
         else if (txtBuscador.text== libreta.palabrasCaso[10])
@@ -157,7 +157,7 @@ public class PC : MonoBehaviour
             + System.Environment.NewLine 
             + System.Environment.NewLine 
             + System.Environment.NewLine 
-            + System.Environment.NewLine + "NOTA: GARY!!";
+            + System.Environment.NewLine + "NOTA: POR FAVOR!!";
         }
         //================================================================ Wiki cabellos rojizos =======================================================//
         else if (txtBuscador.text == libreta.palabrasCaso[9])

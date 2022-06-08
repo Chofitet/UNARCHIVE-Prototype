@@ -76,7 +76,15 @@ public class Telefono : MonoBehaviour
                     }
                     else {PapelFax.SetActive(true);}
                 }
-                else { PapelFax.SetActive(true); txtTranscripciónLlamado.text = "Ben Benji no puede realizar llamadas desde... La Granja"; }
+                else if(bitacora.BenLavado == true)
+                {
+                    txtTranscripciónLlamado.text = "****No tengo idea de que me hablas, Pepe Queño. No ví nada en el Parque!****";
+                    int retencionllamada = 3;
+                    StartCoroutine(PinchandoLlamada(retencionllamada, BenLlamado));
+                } 
+                
+                else
+                { PapelFax.SetActive(true); txtTranscripciónLlamado.text = "Ben Benji no puede realizar llamadas desde... La Granja"; }
 
                 break;
 
@@ -100,7 +108,7 @@ public class Telefono : MonoBehaviour
                 {
                     if (bitacora.PieGrandeEliminado == false && KateLlamado == false)
                     {
-                        txtTranscripciónLlamado.text = "No podemos imprimir esto es un juego para menores de 18. Es una fuerte llamada de cachondeo.";
+                        txtTranscripciónLlamado.text = "No podemos imprimir esto en un juego para menores de 18. Es una fuerte llamada de cachondeo.";
                         int retencionllamada = 3;
                         StartCoroutine(PinchandoLlamada(retencionllamada, KateLlamado));
                     }
@@ -115,7 +123,7 @@ public class Telefono : MonoBehaviour
                     //Llamada 1 de pepe
                     if (PepeLlamado1 == false)
                     {
-                        txtTranscripciónLlamado.text = "******************************************************************";
+                        txtTranscripciónLlamado.text = "********";
                         int retencionllamada = 3;
                         StartCoroutine(PinchandoLlamada(retencionllamada, PepeLlamado1));
                     }
