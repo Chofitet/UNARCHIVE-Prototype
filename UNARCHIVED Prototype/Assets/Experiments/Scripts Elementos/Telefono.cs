@@ -9,6 +9,7 @@ public class Telefono : MonoBehaviour
     [SerializeField] Libreta libreta;
     [SerializeField] Bitacoras bitacora;
     [SerializeField] TimeManager time;
+    [SerializeField] AlarmaTelefono Alarma;
     public Button btnllamar;
     public Button btnplay;
     public Button btnREC;
@@ -20,6 +21,12 @@ public class Telefono : MonoBehaviour
     private bool PepeLlamado1;
     private bool PepeLlamado2;
     private bool PepeLlamado3;
+
+    private void Start()
+    {
+        Alarma.Apagado();
+        PapelFax.gameObject.SetActive(false);
+    }
 
     public TMP_Text txtTranscripciónLlamado;
    
@@ -133,6 +140,7 @@ public class Telefono : MonoBehaviour
             PapelFax.SetActive(false);
             SetearLlamada();
             x = true;
+            Alarma.Titilando();
         }
         else
         {
@@ -146,6 +154,7 @@ public class Telefono : MonoBehaviour
     {
         yield return new WaitForSeconds(retencionllamada * time.MinutosXseg * 60);
         L = true;
+        Alarma.Encendido();
         if (x == true) 
         {
             btnplay.interactable = true;
@@ -161,6 +170,7 @@ public class Telefono : MonoBehaviour
 
     public void Play()
     {
+        Alarma.Apagado();
         PapelFax.SetActive(true);
         LLamadaDiaria = true;
         btnplay.interactable = false;

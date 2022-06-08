@@ -8,7 +8,6 @@ public class Expediente : MonoBehaviour
 
     void OnMouseDown ()
     {
-        Debug.Log("11");
         CasoLeido = true;
     }
 

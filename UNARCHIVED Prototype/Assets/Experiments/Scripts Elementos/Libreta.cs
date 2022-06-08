@@ -41,7 +41,7 @@ public class Libreta : MonoBehaviour
     public TMP_Text txtPimientapaluzers;
     public TMP_Text txtWifiRobado;
     public TMP_Text txtBananorrama;
-   
+    bool x;
 
     private void Start()
     {
@@ -79,13 +79,13 @@ public class Libreta : MonoBehaviour
 
     private void Update ()
     {
-        if (ex.CasoLeido == true)
+        if (ex.CasoLeido == true && x==false )
         {
             BtnBen.gameObject.SetActive(true);
             BtnPieGrande.gameObject.SetActive(true);
             BtnPuebloPimienta.gameObject.SetActive(true);
             BtnColorada.gameObject.SetActive(true);
-           
+            x = true;
         }
 
     }
@@ -191,7 +191,7 @@ public class Libreta : MonoBehaviour
 
     public void PersonajeEliminado()
     {
-        if (bitacoras.BenEliminado == true) BtnBen.gameObject.SetActive(false);
+        if (bitacoras.BenEliminado) { BtnBen.gameObject.SetActive(false); Debug.Log("BEN?"); }
         if (bitacoras.PieGrandeEliminado) BtnPieGrande.gameObject.SetActive(false);
         if (bitacoras.KateEliminada) BtnKateMilliard.gameObject.SetActive(false);
         if (bitacoras.PepeEliminado)BtnPepeQueño.gameObject.SetActive(false);

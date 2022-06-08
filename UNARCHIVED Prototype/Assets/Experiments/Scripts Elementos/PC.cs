@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 
 public class PC : MonoBehaviour
 {
@@ -10,6 +11,10 @@ public class PC : MonoBehaviour
     public TMP_Text txtBuscador;
     public TMP_Text txtInfo;
     public TMP_Text txtRating;
+    public Image Termometro;
+    public Image fotoCarnet;
+    public Sprite[] images;
+    public Sprite[] personajes;
 
     public int Rating;
 
@@ -17,6 +22,7 @@ public class PC : MonoBehaviour
     {
         txtRating.text = Rating + " w/s";
         txtBuscador.text = libreta.palabra;
+        CambiarTermometro();
     }
 
     //Actualiza la wiki cada vez que le das a la lupa
@@ -34,6 +40,7 @@ public class PC : MonoBehaviour
                 + System.Environment.NewLine + "Estado: Niño de verdad"
                 + System.Environment.NewLine
                 + System.Environment.NewLine + "Ultima vez visto en: Pueblo Pimienta";
+            FotoCarnet(0);
         }
         //================================================================ Wiki Pie Grande ==============================================//
         else if (txtBuscador.text == libreta.palabrasCaso[1])
@@ -47,6 +54,7 @@ public class PC : MonoBehaviour
                 + System.Environment.NewLine + "Estado: Divorciado en el 91."
                 + System.Environment.NewLine
                 + System.Environment.NewLine + "Ultima vez visto en:  Monte Quete";
+            FotoCarnet(1);
         }
         //================================================================ Wiki Kate Milliard =======================================================//
         else if (txtBuscador.text == libreta.palabrasCaso[2])
@@ -58,6 +66,7 @@ public class PC : MonoBehaviour
                 + System.Environment.NewLine + "Estado: Soltera"
                 + System.Environment.NewLine
                 + System.Environment.NewLine + "Última vez vista en: Monte Quete.";
+            FotoCarnet(2);
         }
         //================================================================ Wiki Colorada =======================================================//
         else if (txtBuscador.text == libreta.palabrasCaso[6])
@@ -96,6 +105,7 @@ public class PC : MonoBehaviour
                + System.Environment.NewLine + "Última vez visto en: Pueblo Pimienta.";
                 
             }
+            FotoCarnet(3);
 
         }
       
@@ -177,5 +187,91 @@ public class PC : MonoBehaviour
     {
         txtBuscador.text = "Buscar...";
         txtInfo.text = "";
+        FotoCarnet(4);
     }
+
+    void CambiarTermometro()
+    {
+        switch (Rating)
+        {
+            case 0:
+                Termometro.sprite = images[0];
+                break;
+            case 1:
+                Termometro.sprite = images[1];
+                break;
+            case 2:
+                Termometro.sprite = images[2];
+                break;
+            case 3:
+                Termometro.sprite = images[3];
+                break;
+            case 4:
+                Termometro.sprite = images[4];
+                break;
+            case 5:
+                Termometro.sprite = images[5];
+                break;
+            case 6:
+                Termometro.sprite = images[6];
+                break;
+            case 7:
+                Termometro.sprite = images[7];
+                break;
+            case 8:
+                Termometro.sprite = images[8];
+                break;
+            case 9:
+                Termometro.sprite = images[9];
+                break;
+            case 10:
+                Termometro.sprite = images[10];
+                break;
+            case 11:
+                Termometro.sprite = images[11];
+                break;
+            case 12:
+                Termometro.sprite = images[12];
+                break;
+            case 13:
+                Termometro.sprite = images[13];
+                break;
+            case 14:
+                Termometro.sprite = images[14];
+                break;
+            case 15:
+                Termometro.sprite = images[15];
+                break;
+            case 16:
+                Termometro.sprite = images[16];
+                break;
+
+        }
+
+    }
+
+    void FotoCarnet (int num)
+    {
+        switch (num)
+        {
+            case 0:
+                fotoCarnet.sprite = personajes[0];
+                break;
+            case 1:
+                fotoCarnet.sprite = personajes[1];
+                break;
+            case 2:
+                fotoCarnet.sprite = personajes[2];
+                break;
+            case 3:
+                fotoCarnet.sprite = personajes[3];
+                break;
+            case 4:
+                fotoCarnet.sprite = personajes[4];
+                break;
+
+        }
+
+    }
+
 }

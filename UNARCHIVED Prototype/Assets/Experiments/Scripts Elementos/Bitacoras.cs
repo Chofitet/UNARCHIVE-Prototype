@@ -1888,8 +1888,8 @@ public class Bitacoras : MonoBehaviour
             StartCoroutine(GuardarBitacora(CalculoTiempo, txt, indaux, accion, a));
             TrueEnding = true;
         }
+        
         libreta.DesSubrayar();
-        Debug.Log(libreta.palabra);
         libreta.SetearPalabraLibretaACero();
         A.Restablecer();
     }
@@ -1899,9 +1899,7 @@ public class Bitacoras : MonoBehaviour
             yield return new WaitForSeconds(ReinicioTiempo);
             CargarVectorAccion(a, indaux, txt);
             if (accion != A.crearEscena && accion != A.trueEnding && accion != A.plantarPublico) accion.interactable = true;
-
             libreta.PersonajeEliminado();
-
             UbicacionConfirmada();
             libreta.ActualizarPalabras();
             time.TiempoNormal();
@@ -2183,12 +2181,5 @@ public class Bitacoras : MonoBehaviour
         
        
     }
-   
-    void ModificarTiempo (float tiempo)
-    {
-        Update();
-
-            
-
-    }
+  
 }
