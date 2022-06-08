@@ -374,6 +374,7 @@ public class TV : MonoBehaviour
         noticia.text = N;
         titular.text = T;
         PC.Rating = PC.Rating + IncrementoRating;
+        if (PC.Rating >= 16) { PC.RatinMaximo(); }
     }
 
 

@@ -9,6 +9,7 @@ public class AlarmaTelefono : MonoBehaviour
     private void Start()
     {
         Luz = GetComponent<Renderer>();
+        Apagado();
     }
 
     public void Apagado ()

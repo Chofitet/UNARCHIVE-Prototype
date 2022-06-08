@@ -12,6 +12,7 @@ public class Bitacoras : MonoBehaviour
     [SerializeField] internal TimeManager time;
     [SerializeField] Reloj reloj;
     [SerializeField] PC PC;
+    [SerializeField] PantallasSwitcherManager Pantallas;
 
     //Declaración varariables
   
@@ -2146,6 +2147,9 @@ public class Bitacoras : MonoBehaviour
             libreta.txtPieGrande.text = libreta.palabrasCaso[1];
             libreta.SignoPreguntaPieGrande = "";
         }
+
+        if (TrueEnding == true) { Pantallas.SwitchCanvas(CanvasTypePantallas.TrueEnding, CanvasTypePantallas.TrueEnding); }
+
     }
 
     int UN;

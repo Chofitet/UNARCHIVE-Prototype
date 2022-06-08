@@ -6,6 +6,7 @@ using System;
 public class TimeManager : MonoBehaviour
 {
     [SerializeField] Telefono telefono;
+    [SerializeField] PantallasSwitcherManager Pantallas;
     public static Action CambioMinutos;
     public static Action CambioHoras;
     public int Dia ;
@@ -31,7 +32,6 @@ public class TimeManager : MonoBehaviour
 
     void Update()
     {
-       
         Time.timeScale = VariacionDeTiempo;
 
         if (Input.GetKey("escape")) Application.Quit();
@@ -49,6 +49,8 @@ public class TimeManager : MonoBehaviour
             }
             timer = MinutosPorSegundosReales;
         }
+
+        if (Dia == 7 && Hora == 17 && Minuto > 58) FinJuego();
 
     }
 
@@ -83,6 +85,11 @@ public class TimeManager : MonoBehaviour
     {
         VariacionDeTiempo = 1;
         x = false;
+    }
+
+    void FinJuego ()
+    {
+        Pantallas.SwitchCanvas(CanvasTypePantallas.FinJuego, CanvasTypePantallas.FinJuego);
     }
 
 }

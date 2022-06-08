@@ -24,7 +24,6 @@ public class Telefono : MonoBehaviour
 
     private void Start()
     {
-        Alarma.Apagado();
         PapelFax.gameObject.SetActive(false);
     }
 

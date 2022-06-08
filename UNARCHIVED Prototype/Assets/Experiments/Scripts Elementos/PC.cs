@@ -8,6 +8,7 @@ public class PC : MonoBehaviour
 {
     [SerializeField] internal Libreta libreta;
     [SerializeField] Bitacoras bitacoras;
+    [SerializeField] PantallasSwitcherManager Pantallas; 
     public TMP_Text txtBuscador;
     public TMP_Text txtInfo;
     public TMP_Text txtRating;
@@ -16,6 +17,7 @@ public class PC : MonoBehaviour
     public Sprite[] images;
     public Sprite[] personajes;
 
+
     public int Rating;
 
     private void Update()
@@ -23,6 +25,7 @@ public class PC : MonoBehaviour
         txtRating.text = Rating + " w/s";
         txtBuscador.text = libreta.palabra;
         CambiarTermometro();
+       
     }
 
     //Actualiza la wiki cada vez que le das a la lupa
@@ -92,6 +95,7 @@ public class PC : MonoBehaviour
             + System.Environment.NewLine + "Estado: Pequeño niño raro."
             + System.Environment.NewLine
             + System.Environment.NewLine + "Última vez visto en: Pueblo Pimienta.";
+                FotoCarnet(3);
             }
             if (txtBuscador.text == libreta.palabrasCaso[8] && bitacoras.PepeAnalizado == true)
             {
@@ -103,9 +107,9 @@ public class PC : MonoBehaviour
                + System.Environment.NewLine + "Estado: Pequeño niño pie grande."
                + System.Environment.NewLine
                + System.Environment.NewLine + "Última vez visto en: Pueblo Pimienta.";
-                
+                FotoCarnet(3);
             }
-            FotoCarnet(3);
+            
 
         }
       
@@ -272,6 +276,11 @@ public class PC : MonoBehaviour
 
         }
 
+    }
+
+   public void RatinMaximo()
+    {
+        Pantallas.SwitchCanvas(CanvasTypePantallas.RatingMaximo, CanvasTypePantallas.RatingMaximo);
     }
 
 }
