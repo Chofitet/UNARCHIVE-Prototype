@@ -6382,14 +6382,13 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\t\t\t\t\t23/03/2000\r\n\t\t-Venus in Fur-\r\nAlerta Magenta! Ni\xF1o
-    se encuentra propagando haber avistado a Pie Grande reciprocando besitos mariposa
-    con colorada.\n\n\rPor motivos de conocimiento interno el equipo de limpieza
-    no se encontrar\xE1 disponible hasta el 27 de Marzo.\r\n\nObjetivo: Corroborar
-    informaci\xF3n y tomar las medidas necesarias para mantener controlado el perfil
-    de la situaci\xF3n hasta dicha fecha. \n\nNo convertir esto en un Evento AZUL.\r\n\nProveeremos
-    un equipo de especialistas acorde a la situaci\xF3n\n\r\nTestigo: Ben Benji\r\n\nLugar:
-    Pueblo Pimienta"
+  m_text: "\t\t\t\t\t23/03/2000\r\n\t\t-Venus in Fur-\r\n\nAlerta Magenta! Hemos
+    sido notificados que un ni\xF1o se encuentra propagando haber avistado a Pie
+    Grande reciprocando besitos mariposa con colorada.\n\nObjetivo: Confirmar presencia
+    de Pie Grande y tomar las medidas necesarias para mantener controlado el perfil
+    de la situaci\xF3n hasta la llegada del equipo de limpieza el 27/03. \n\nProveeremos
+    un equipo de especialistas acorde a la situaci\xF3n.\n\nNo convertir esto en
+    un Evento AZUL.\r\n\n\r\nTestigo: Ben Benji\r\n\nLugar: Pueblo Pimienta"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
