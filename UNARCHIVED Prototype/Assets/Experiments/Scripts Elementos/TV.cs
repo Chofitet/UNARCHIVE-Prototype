@@ -34,6 +34,10 @@ public class TV : MonoBehaviour
     string BenEntrevistaTitulo1 = "ENTREVISTA EXCLUSIVA CON NIÑO AVISTADOR DE PIE GRANDE MAÑANA A LAS 12 AM";
     string BenEntrevistaNoticia1 = "ENTREVISTA EXCLUSIVA CON NIÑO AVISTADOR DE PIE GRANDE MAÑANA A LAS 12 AM";
 
+    bool BenEntrevista1b;
+    string BenEntrevistaTitulo1b = "ENTREVISTA EXCLUSIVA CON NIÑO AVISTADOR DE PIE GRANDE HOY A LAS 12 AM";
+    string BenEntrevistaNoticia1b = "ENTREVISTA EXCLUSIVA CON NIÑO AVISTADOR DE PIE GRANDE HOY A LAS 12 AM";
+
     public bool BenEntrevista2; // entrevista de ben
     string BenEntrevistaTitulo2 = "BEN BENJI DECLARA: ERA PIE GRANDE Y LO VI EN PARQUE PIMIENTA";
     string BenEntrevistaNoticia2 = "BEN BENJI DECLARA: ERA PIE GRANDE Y LO VI EN PARQUE PIMIENTA";
@@ -61,13 +65,11 @@ public class TV : MonoBehaviour
     bool BenBombaEscuela;
     string BenBombaEscuelaTitulo = "ESCUELA EXPLOTA! ¿QUE ESTA PASANDO EN PUEBLO PIMIENTA?";
     string BenBombaEscuelaNoticia = "ESCUELA EXPLOTA! ¿QUE ESTA PASANDO EN PUEBLO PIMIENTA?";
-
-
-    
+     
 
     bool BenBrainwash;
-    string BenBrainwashTitulo = "NIÑO AVISTADOR DICE QUE NO SABE NADA. ¿COBARDE MENTIROSO O CONSPIRADOR?";
-    string BenBrainwashNoticia = "NIÑO AVISTADOR DICE QUE NO SABE NADA. ¿COBARDE MENTIROSO O CONSPIRADOR?";
+    string BenBrainwashTitulo = "NIÑO AVISTADOR DICE QUE NO SABE NADA.¿COBARDE MENTIROSO O CONSPIRADOR?";
+    string BenBrainwashNoticia = "NIÑO AVISTADOR DICE QUE NO SABE NADA.¿COBARDE MENTIROSO O CONSPIRADOR?";
 
     bool BenDifamado1;
     string BenDifamadoTitulo1 = "NIÑO MENTIROSO MIENTE DEVUELTA. 10 MENTIRAS QUE BENJI YA TE DIJO Y NO SABÍAS!"; ///ESTE ES EL CASO Hackeado = false
@@ -182,9 +184,15 @@ public class TV : MonoBehaviour
         //============================================================================ TV Diario =============================================================================//
         if (bitacoras.BenEliminado == false && bitacoras.BenLavado == false && tiempo.Dia == 3 && TimeManager.Hora == 12 && BenEntrevista1 == false)
         {
-            int IncrementoRating = 3;
+            int IncrementoRating = 2;
             StartCoroutine(ImprimirNoticia(BenEntrevistaTitulo1, BenEntrevistaNoticia1, IncrementoRating));
             BenEntrevista1 = true;
+        }
+        else if (bitacoras.BenEliminado == false && bitacoras.BenLavado == false && tiempo.Dia == 4 && TimeManager.Hora == 10 && BenEntrevista1 == true && BenEntrevista1b == false)
+        {
+            int IncrementoRating = 2;
+            StartCoroutine(ImprimirNoticia(BenEntrevistaTitulo1b, BenEntrevistaNoticia1b, IncrementoRating));
+            BenEntrevista1b = true;
         }
         else if (bitacoras.BenEliminado == false && bitacoras.BenLavado == false && tiempo.Dia == 4 && TimeManager.Hora == 12 && BenEntrevista2 == false && bitacoras.PlantarPublico == false)
         {
