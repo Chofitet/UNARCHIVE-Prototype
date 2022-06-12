@@ -69,7 +69,7 @@ public class Telefono : MonoBehaviour
                     {
 
                         txtTranscripciónLlamado.text = "****¿Por qué voy a mentir? Te juro, Pepe Queño! Era igual a vos!****";
-                        int retencionllamada = 3;
+                        float retencionllamada = 3 * 60 * time.MinutosXseg;
                         StartCoroutine(PinchandoLlamada(retencionllamada, BenLlamado));
                      
                     }
@@ -78,7 +78,7 @@ public class Telefono : MonoBehaviour
                 else if(bitacora.BenLavado == true)
                 {
                     txtTranscripciónLlamado.text = "****No tengo idea de que me hablas, Pepe Queño. No ví nada en el Parque!****";
-                    int retencionllamada = 3;
+                    float retencionllamada = 3 * 60 * time.MinutosXseg;
                     StartCoroutine(PinchandoLlamada(retencionllamada, BenLlamado));
                 } 
                 
@@ -94,7 +94,7 @@ public class Telefono : MonoBehaviour
                     if (bitacora.KateEliminada == false && bitacora.KateLavada == false && PieGrandeLlamado == false)
                     {
                         txtTranscripciónLlamado.text = "unga unga aplastar porunga";
-                        int retencionllamada = 3;
+                        float retencionllamada = 3 * 60 * time.MinutosXseg;
                         StartCoroutine(PinchandoLlamada(retencionllamada, PieGrandeLlamado));
                     }
                     else { PapelFax.SetActive(true); }
@@ -108,7 +108,7 @@ public class Telefono : MonoBehaviour
                     if (bitacora.PieGrandeEliminado == false && KateLlamado == false)
                     {
                         txtTranscripciónLlamado.text = "No podemos imprimir esto en un juego para menores de 18. Es una fuerte llamada de cachondeo.";
-                        int retencionllamada = 3;
+                        float retencionllamada = 3 * 60 * time.MinutosXseg;
                         StartCoroutine(PinchandoLlamada(retencionllamada, KateLlamado));
                     }
                     else { PapelFax.SetActive(true); }
@@ -123,7 +123,7 @@ public class Telefono : MonoBehaviour
                     if (PepeLlamado1 == false)
                     {
                         txtTranscripciónLlamado.text = "********";
-                        int retencionllamada = 3;
+                        float retencionllamada = 3 * 60 * time.MinutosXseg;
                         StartCoroutine(PinchandoLlamada(retencionllamada, PepeLlamado1));
                     }
                 }
@@ -157,9 +157,9 @@ public class Telefono : MonoBehaviour
         }
     }
 
-    IEnumerator PinchandoLlamada (int retencionllamada, bool L)
+    IEnumerator PinchandoLlamada (float retencionllamada, bool L)
     {
-        yield return new WaitForSeconds(retencionllamada * time.MinutosXseg * 60);
+        yield return StartCoroutine(time.RetencionBitacorasSegunAccion(retencionllamada));
         L = true;
         Alarma.Encendido();
         if (x == true) 

@@ -185,43 +185,71 @@ public class TV : MonoBehaviour
         if (bitacoras.BenEliminado == false && bitacoras.BenLavado == false && tiempo.Dia == 3 && TimeManager.Hora == 12 && BenEntrevista1 == false)
         {
             int IncrementoRating = 2;
-            StartCoroutine(ImprimirNoticia(BenEntrevistaTitulo1, BenEntrevistaNoticia1, IncrementoRating));
+            noticia.text = BenEntrevistaTitulo1;
+            titular.text = BenEntrevistaNoticia1;
+            PC.Rating = PC.Rating + IncrementoRating;
+            if (PC.Rating >= 16) { PC.RatinMaximo(); }
+            x = true;
             BenEntrevista1 = true;
         }
         else if (bitacoras.BenEliminado == false && bitacoras.BenLavado == false && tiempo.Dia == 4 && TimeManager.Hora == 10 && BenEntrevista1 == true && BenEntrevista1b == false)
         {
             int IncrementoRating = 2;
-            StartCoroutine(ImprimirNoticia(BenEntrevistaTitulo1b, BenEntrevistaNoticia1b, IncrementoRating));
+            noticia.text = BenEntrevistaNoticia1b;
+            titular.text = BenEntrevistaTitulo1b;
+            PC.Rating = PC.Rating + IncrementoRating;
+            if (PC.Rating >= 16) { PC.RatinMaximo(); }
+            x = true;
             BenEntrevista1b = true;
         }
         else if (bitacoras.BenEliminado == false && bitacoras.BenLavado == false && tiempo.Dia == 4 && TimeManager.Hora == 12 && BenEntrevista2 == false && bitacoras.PlantarPublico == false)
         {
             int IncrementoRating = 3;
-            StartCoroutine(ImprimirNoticia(BenEntrevistaTitulo2, BenEntrevistaNoticia2, IncrementoRating));
+            noticia.text = BenEntrevistaNoticia2;
+            titular.text = BenEntrevistaTitulo2;
+            PC.Rating = PC.Rating + IncrementoRating;
+            if (PC.Rating >= 16) { PC.RatinMaximo(); }
+            x = true;
             BenEntrevista2 = true;
         }
         else if (tiempo.Dia == 4 && TimeManager.Hora == 15 && BenEntrevista2 == true && BenEliminado == true)
         {
             int IncrementoRating = 2;
-            StartCoroutine(ImprimirNoticia(BenEntrevistaTitulo3, BenEntrevistaNoticia3, IncrementoRating));
+            noticia.text = BenEntrevistaNoticia3;
+            titular.text = BenEntrevistaTitulo3;
+            PC.Rating = PC.Rating + IncrementoRating;
+            if (PC.Rating >= 16) { PC.RatinMaximo(); }
+            x = true;
             BenEntrevista3 = true;
         }
         else if (tiempo.Dia == 4 && TimeManager.Hora == 15 && BenEntrevista2 == true && BenEliminado == false)
         {
             int IncrementoRating = 2;
-            StartCoroutine(ImprimirNoticia(BenEntrevistaTitulo3b, BenEntrevistaNoticia3b, IncrementoRating));
+            noticia.text = BenEntrevistaNoticia3b;
+            titular.text = BenEntrevistaTitulo3b;
+            PC.Rating = PC.Rating + IncrementoRating;
+            if (PC.Rating >= 16) { PC.RatinMaximo(); }
+            x = true;
             BenEntrevista3b = true;
         }
         else if (tiempo.Dia == 5 && TimeManager.Hora == 16 && BenEntrevista3 == true && PieGrandeEliminado == false)
         {
             int IncrementoRating = 15;
-            StartCoroutine(ImprimirNoticia(BenEntrevistaTitulo4, BenEntrevistaNoticia4, IncrementoRating));
+            noticia.text = BenEntrevistaNoticia4;
+            titular.text = BenEntrevistaTitulo4;
+            PC.Rating = PC.Rating + IncrementoRating;
+            if (PC.Rating >= 16) { PC.RatinMaximo(); }
+            x = true;
             BenEntrevista4 = true;
         }
         else if (bitacoras.BenEliminado == false && bitacoras.BenLavado == false && tiempo.Dia == 4 && TimeManager.Hora == 12 && BenEntrevista2 == false && bitacoras.PlantarPublico == true)
         {
             int IncrementoRating = -3;
-            StartCoroutine(ImprimirNoticia(PlantarPublicoTitulo, PlantarPublicoNoticia, IncrementoRating));
+            noticia.text = PlantarPublicoNoticia;
+            titular.text = PlantarPublicoTitulo;
+            PC.Rating = PC.Rating + IncrementoRating;
+            if (PC.Rating >= 16) { PC.RatinMaximo(); }
+            x = true;
             
         }
         

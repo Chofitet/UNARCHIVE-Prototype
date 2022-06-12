@@ -8021,8 +8021,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   telefono: {fileID: 113856866}
   Pantallas: {fileID: 1707752575}
+  A: {fileID: 414450557}
   Dia: 1
   NoticiaDiaria: 0
+  VariacionDeTiempo: 1
   MinutosXseg: 0
 --- !u!1 &720682528
 GameObject:
@@ -24278,7 +24280,7 @@ MonoBehaviour:
   noticia: {fileID: 1415475985}
   tiempo: {fileID: 698772801}
   bitacoras: {fileID: 176843630}
-  libreta: {fileID: 0}
+  libreta: {fileID: 94808029}
   PC: {fileID: 1090419601}
   BenEntrevista1: 0
   BenEntrevista2: 0

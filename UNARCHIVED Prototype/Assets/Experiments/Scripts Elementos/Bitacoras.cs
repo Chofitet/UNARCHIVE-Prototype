@@ -90,7 +90,6 @@ public class Bitacoras : MonoBehaviour
     public bool WifiRobadoInvestigado;
     public bool WifiRobadoDifamado;
 
-
     ////////////////////
     public bool CrearEscena;
     public bool PlantarPublico;
@@ -181,9 +180,10 @@ public class Bitacoras : MonoBehaviour
                 SetearBitacora();
                 a = aux;
                 ActualizarIndice();
-                StartCoroutine(GuardarBitacora(CalculoTiempo, txt, indaux, accion, a));
+                 StartCoroutine(GuardarBitacora(CalculoTiempo, txt, indaux, accion, a));
                 A.eliminar.interactable = false; 
                 BenEliminado = true;
+               
             }
             //LAVAR CEREBRO 
             if (A.lavarCerebro.CompareTag(tag = "OptActivado") && A.lavarCerebro.isOn == true && BenLavado == false && BenEliminado == false)
@@ -315,7 +315,7 @@ public class Bitacoras : MonoBehaviour
 
         //====================================================== Bitacoras Pie Grande =============================================//
         //Difamar
-        if (libreta.palabra == libreta.palabrasCaso[1] && A.difamar.CompareTag(tag = "OptActivado") && PieGrandeUbicacion == false)
+       if (libreta.palabra == libreta.palabrasCaso[1] && A.difamar.CompareTag(tag = "OptActivado") && PieGrandeUbicacion == false)
         {
             if (A.difamar.CompareTag(tag = "OptActivado") && A.difamar.isOn == true && PieGrandeDifamado == false)
             {
@@ -1889,15 +1889,17 @@ public class Bitacoras : MonoBehaviour
             StartCoroutine(GuardarBitacora(CalculoTiempo, txt, indaux, accion, a));
             TrueEnding = true;
         }
+
         
         libreta.DesSubrayar();
         libreta.SetearPalabraLibretaACero();
         A.Restablecer();
     }
 
+    
     IEnumerator GuardarBitacora(float ReinicioTiempo, string txt, int indaux, Toggle accion, int a)
     {
-            yield return new WaitForSeconds(ReinicioTiempo);
+            yield return StartCoroutine(time.RetencionBitacorasSegunAccion(ReinicioTiempo));
             CargarVectorAccion(a, indaux, txt);
             if (accion != A.crearEscena && accion != A.trueEnding && accion != A.plantarPublico) accion.interactable = true;
             libreta.PersonajeEliminado();
