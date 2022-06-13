@@ -13,36 +13,30 @@ public class TimeManager : MonoBehaviour
     public static Action CambioHoras;
     public int Dia ;
     public bool NoticiaDiaria;
-    public float VariacionDeTiempo;
+    public float VariacionDeTiempo = 50;
     bool x;
 
-    public static int Minuto { get; private set; }
-    public static int Hora { get; private set; }
+    public static int Minuto { get; private set;}
+    public static int Hora { get; private set;}
 
-    private float MinutosPorSegundosReales = 2.2f ;
-    public float MinutosXseg; 
-    private float timer;
-    private float TiempoAlternativo  ;
-    private float TiempoAlAcelerar;
-    private float TiempoAlNormalizar;
-
+    int Segundero = 1;
+    private float TiempoAlternativo;
 
     void Start()
     {
         Dia = 3;
         Minuto = 0;
         Hora = 6;
-        timer = MinutosPorSegundosReales;
-        MinutosXseg = MinutosPorSegundosReales;
+        VariacionDeTiempo = 30;
     }
 
     void Update()
     {
         if (Input.GetKey("escape")) Application.Quit();
-       
-        TiempoAlternativo += Time.deltaTime * VariacionDeTiempo ;
-        timer -= Time.deltaTime * VariacionDeTiempo;
-        if (timer <= 0)
+
+        Debug.Log(VariacionDeTiempo);
+        TiempoAlternativo += Time.deltaTime * VariacionDeTiempo;
+        if (TiempoAlternativo >= 60 * Segundero)
         {
             Minuto++;
             CambioMinutos?.Invoke();
@@ -52,9 +46,8 @@ public class TimeManager : MonoBehaviour
                 Minuto = 0;
                 CambioHoras?.Invoke(); 
             }
-            timer = MinutosPorSegundosReales;
+            Segundero++;
         }
-
         if (Dia == 7 && Hora == 17 && Minuto > 58) FinJuego();
     }
 
@@ -80,17 +73,15 @@ public class TimeManager : MonoBehaviour
 
     public void TiempoAcelerado ()
     {
-        if (x == false) { VariacionDeTiempo = 60f; x = true; }
-        else {VariacionDeTiempo = 1; x = false;}
-        TiempoAlAcelerar = TiempoAlternativo;
-        
+        if (x == false) { VariacionDeTiempo = 600f; x = true; }
+        else {VariacionDeTiempo = 30f; x = false;}
     }
 
     public void TiempoNormal ()
     {
-        VariacionDeTiempo = 1;
+        VariacionDeTiempo = 30;
         x = false;
-        TiempoAlNormalizar = TiempoAlternativo;
+        
     }
 
     void FinJuego ()
@@ -101,13 +92,11 @@ public class TimeManager : MonoBehaviour
    public IEnumerator RetencionBitacorasSegunAccion (float retencion)
     {
        float TiempoActual = TiempoAlternativo;
-       float CalculoTiempoNormal = retencion + TiempoActual;
+       float CalculoTiempoNormal = (retencion*3600) + TiempoActual;
        float TiempoRetención = CalculoTiempoNormal;
 
         while (TiempoRetención >= TiempoAlternativo)
         {
-            Debug.Log(TiempoRetención);
-            Debug.Log(TiempoAlternativo);
             yield return null;
         }
     }

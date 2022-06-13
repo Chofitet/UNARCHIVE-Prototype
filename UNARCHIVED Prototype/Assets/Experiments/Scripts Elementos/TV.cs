@@ -16,6 +16,7 @@ public class TV : MonoBehaviour
     bool x;
     int CualLista;
     int NumNoticiasAteatorias = 1;
+    int RetencionNoticia = 3;
 
     private void Start()
     {
@@ -171,8 +172,6 @@ public class TV : MonoBehaviour
         if (TimeManager.Hora == 15) { CheckearBitacoras(); if (x == false) NoticiasAliatorias(); x = false; }
         if (TimeManager.Hora == 16) { CheckearBitacoras(); if (x == false) NoticiasAliatorias(); x = false; }
         if (TimeManager.Hora == 17) { CheckearBitacoras(); if (x == false) NoticiasAliatorias(); x = false; }
-
-
 
     }
 
@@ -404,9 +403,8 @@ public class TV : MonoBehaviour
 
     IEnumerator ImprimirNoticia(string T, string N, int IncrementoRating)
     {
-        yield return new WaitForSeconds(tiempo.MinutosXseg * 50 * 3);
         x = true;
-        yield return new WaitForSeconds(tiempo.MinutosXseg * 10 * 3);
+        yield return StartCoroutine(tiempo.RetencionBitacorasSegunAccion(RetencionNoticia));
         noticia.text = N;
         titular.text = T;
         PC.Rating = PC.Rating + IncrementoRating;
