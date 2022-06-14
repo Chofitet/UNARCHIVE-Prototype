@@ -9,14 +9,14 @@ public class ButtonCanvasSwitcher : MonoBehaviour
 
     GameObject Boton;
     public ExpCanvasManager canvasManager;
+    [SerializeField] TimeManager time;
   
 
 
     void OnMouseDown()
     {
-
+        time.TiempoNormal();
         canvasManager.SwitchCanvas(desiredCanvasType, desiredCanvasType2);
-      
     }
 
     private void Update()

@@ -47,7 +47,9 @@ public class Bitacoras : MonoBehaviour
     public bool PimientaPaluzaDifamado;
     public bool PimientaPaluzaAislado;
     ///////////////////////////// 
+    public bool ColoradaEliminado;
     public bool ColoradaInvestigada;
+    
     ///////////////////////////// 
     public bool Red78Investigada;
     public bool Red78Hackeada;
@@ -1188,6 +1190,30 @@ public class Bitacoras : MonoBehaviour
         //========================================================= Bitacoras Colorada ==========================================================//
         if (libreta.palabra == libreta.palabrasCaso[6])
         {
+            //Eliminar
+            if (A.eliminar.CompareTag(tag = "OptActivado") && A.eliminar.isOn == true && ColoradaEliminado == false)
+            {
+                float RetencionBitacora = 0.001f;
+                float HoraCompletado = RetencionBitacora + TimeManager.Hora;
+                string txt = "WIP";
+                string FechaCompletado = "2" + time.Dia + "/03/2000";
+                string txtAccion = "Eliminar a Colorada";
+                Toggle accion = A.eliminar;
+                if (HoraCompletado >= 18)
+                {
+                    HoraCompletado = 6 + (RetencionBitacora - (18 - TimeManager.Hora));
+                    FechaCompletado = "2" + (time.Dia + 1) + "/03/2000";
+                }
+                int indaux = ind;
+                int a = 1;
+                CargarVectorProgreso(txtAccion, FechaCompletado, HoraCompletado, indaux);
+                SetearBitacora();
+                a = aux;
+                ActualizarIndice();
+                StartCoroutine(GuardarBitacora(RetencionBitacora, txt, indaux, accion, a));
+                A.eliminar.interactable = false;
+                ColoradaEliminado = true;
+            }
             //Investigar 
             if (A.investigar.CompareTag(tag = "OptActivado") && A.investigar.isOn == true && ColoradaInvestigada == false)
             {

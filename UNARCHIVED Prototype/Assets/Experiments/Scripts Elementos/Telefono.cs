@@ -147,7 +147,7 @@ public class Telefono : MonoBehaviour
             PapelFax.SetActive(false);
             SetearLlamada();
             x = true;
-            Alarma.Titilando();
+            Alarma.Encendido();
         }
         else
         {
@@ -161,7 +161,7 @@ public class Telefono : MonoBehaviour
     {
         yield return StartCoroutine(time.RetencionBitacorasSegunAccion(retencionllamada));
         L = true;
-        Alarma.Encendido();
+        Alarma.Titilando();
         if (x == true) 
         {
             btnplay.interactable = true;

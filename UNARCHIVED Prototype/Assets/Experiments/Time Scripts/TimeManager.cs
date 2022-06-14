@@ -27,7 +27,7 @@ public class TimeManager : MonoBehaviour
         Dia = 3;
         Minuto = 0;
         Hora = 6;
-        VariacionDeTiempo = 30;
+        VariacionDeTiempo = 0;
     }
 
     void Update()
@@ -74,7 +74,7 @@ public class TimeManager : MonoBehaviour
     public void TiempoAcelerado ()
     {
         if (x == false) { VariacionDeTiempo = 600f; x = true; }
-        else {VariacionDeTiempo = 30f; x = false;}
+        else { TiempoNormal(); }
     }
 
     public void TiempoNormal ()
@@ -82,6 +82,11 @@ public class TimeManager : MonoBehaviour
         VariacionDeTiempo = 30;
         x = false;
         
+    }
+
+    public void TiempoPausado()
+    {
+        VariacionDeTiempo = 0;
     }
 
     void FinJuego ()

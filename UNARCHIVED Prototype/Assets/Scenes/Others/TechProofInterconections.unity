@@ -363,7 +363,7 @@ GameObject:
   - component: {fileID: 23763976}
   - component: {fileID: 23763975}
   m_Layer: 0
-  m_Name: Boton 3D (2)
+  m_Name: "Bot\xF3n bit\xE1coras"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -400,6 +400,7 @@ MonoBehaviour:
   desiredCanvasType: 2
   desiredCanvasType2: 2
   canvasManager: {fileID: 320038367}
+  time: {fileID: 698772801}
 --- !u!65 &23763976
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2976,6 +2977,7 @@ MonoBehaviour:
   PimientaPaluzaInvestigado: 0
   PimientaPaluzaDifamado: 0
   PimientaPaluzaAislado: 0
+  ColoradaEliminado: 0
   ColoradaInvestigada: 0
   Red78Investigada: 0
   Red78Hackeada: 0
@@ -4365,6 +4367,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lastActiveCanvas: {fileID: 0}
+  time: {fileID: 698772801}
 --- !u!1 &331164055
 GameObject:
   m_ObjectHideFlags: 0
@@ -6234,6 +6237,7 @@ MonoBehaviour:
   desiredCanvasType: 3
   desiredCanvasType2: 3
   canvasManager: {fileID: 320038367}
+  time: {fileID: 698772801}
 --- !u!65 &525171096
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7091,7 +7095,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &609372141
 Transform:
   m_ObjectHideFlags: 0
@@ -10481,6 +10485,7 @@ MonoBehaviour:
   desiredCanvasType: 0
   desiredCanvasType2: 0
   canvasManager: {fileID: 320038367}
+  time: {fileID: 0}
 --- !u!65 &936548027
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12061,6 +12066,7 @@ MonoBehaviour:
   desiredCanvasType: 2
   desiredCanvasType2: 2
   canvasManager: {fileID: 320038367}
+  time: {fileID: 0}
 --- !u!65 &1073116704
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14677,7 +14683,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1285109839}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 127.695145, z: -437.7081}
+  m_LocalPosition: {x: 0, y: 127.695145, z: -466}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -15243,6 +15249,7 @@ MonoBehaviour:
   desiredCanvasType: 3
   desiredCanvasType2: 3
   canvasManager: {fileID: 320038367}
+  time: {fileID: 0}
 --- !u!65 &1335159634
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -25451,6 +25458,7 @@ MonoBehaviour:
   desiredCanvasType: 2
   desiredCanvasType2: 2
   canvasManager: {fileID: 320038367}
+  time: {fileID: 0}
 --- !u!65 &2057420179
 BoxCollider:
   m_ObjectHideFlags: 0

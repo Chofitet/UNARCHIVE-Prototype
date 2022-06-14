@@ -16,6 +16,7 @@ public class ExpCanvasManager : MonoBehaviour
 {
     List<ExpController> canvasControllerList;
     public ExpController lastActiveCanvas;
+    [SerializeField] TimeManager time;
     ExpController lastActiveCanvas2;
 
     private void Update()
@@ -23,6 +24,7 @@ public class ExpCanvasManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Mouse1) == true)
         {
             SwitchCanvas(CanvasTypeExp.ExpedienteDef, CanvasTypeExp.ExpedienteDef);
+            time.TiempoNormal();
         }
     }
 
@@ -31,7 +33,7 @@ public class ExpCanvasManager : MonoBehaviour
     {
         canvasControllerList = GetComponentsInChildren<ExpController>().ToList();
         canvasControllerList.ForEach(x => x.gameObject.SetActive(false));
-        SwitchCanvas(CanvasTypeExp.ExpedienteDef, CanvasTypeExp.ExpedienteDef);
+        SwitchCanvas(CanvasTypeExp.Expediente, CanvasTypeExp.Expediente);
     }
 
     public void SwitchCanvas(CanvasTypeExp _type, CanvasTypeExp _type2)
@@ -61,4 +63,5 @@ public class ExpCanvasManager : MonoBehaviour
         }
         else { Debug.LogWarning("The desired canvas was not found!"); }
     }
+   
 }

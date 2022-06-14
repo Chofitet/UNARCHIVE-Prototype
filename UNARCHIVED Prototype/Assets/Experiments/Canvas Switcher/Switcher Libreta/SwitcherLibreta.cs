@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class SwitcherLibreta : MonoBehaviour
 {
+    
     public GameObject Libreta;
 
     // Update is called once per frame
@@ -16,7 +17,7 @@ public class SwitcherLibreta : MonoBehaviour
     }
     private void OnMouseDown()
     {
-       Libreta.SetActive(true); 
+       Libreta.SetActive(true);
     }
     
 }
