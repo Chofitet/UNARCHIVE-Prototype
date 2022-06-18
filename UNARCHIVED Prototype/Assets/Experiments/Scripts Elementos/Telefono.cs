@@ -48,6 +48,7 @@ public class Telefono : MonoBehaviour
         {
             LlamadaEnProgreso = libreta.palabra;
             EsLlamable(LlamadaEnProgreso);
+           
         }
         else if (x == true)
         {

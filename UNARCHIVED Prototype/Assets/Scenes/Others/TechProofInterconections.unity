@@ -12780,7 +12780,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!82 &1137727152
 AudioSource:
   m_ObjectHideFlags: 0
@@ -16084,6 +16084,7 @@ Transform:
   - {fileID: 113856865}
   - {fileID: 1988636336}
   - {fileID: 698772800}
+  - {fileID: 1858582946}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -18779,6 +18780,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5289586557357b341bb7bb853128e841, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Sonido: {fileID: 1858582947}
   CasoLeido: 0
 --- !u!1 &1624266164
 GameObject:
@@ -21263,6 +21265,52 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1844106183}
   m_CullTransparentMesh: 1
+--- !u!1 &1858582945
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1858582946}
+  - component: {fileID: 1858582947}
+  m_Layer: 0
+  m_Name: SonidoManagement
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1858582946
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1858582945}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -1172.7313, y: 101.60948, z: -73.72421}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1426801071}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1858582947
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1858582945}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f1fdc70ed17abf42bc00cfb4925d57e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  camara: {fileID: 1031912887}
+  AbrirExpediente: {fileID: 6331831696735580730, guid: d1741426e2c61434ead38cec1f720dd6, type: 3}
 --- !u!1 &1858669548
 GameObject:
   m_ObjectHideFlags: 0
