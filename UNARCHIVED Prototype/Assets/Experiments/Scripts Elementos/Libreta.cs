@@ -2,12 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 
 public class Libreta : MonoBehaviour
 {
 
     [SerializeField] Expediente ex;
     [SerializeField] Bitacoras bitacoras;
+    [SerializeField] Acciones A;
     bool apagado;
     public string palabra;
     public GameObject BtnBen;
@@ -45,18 +47,14 @@ public class Libreta : MonoBehaviour
 
     private void Start()
     {
-        BtnBen.gameObject.SetActive(false);
-        BtnPieGrande.gameObject.SetActive(false);
         BtnParquePimienta.gameObject.SetActive(false);
         BtnPimientaPaluza.gameObject.SetActive(false);
-        BtnColorada.gameObject.SetActive(false);
         BtnRed78.gameObject.SetActive(false);
         BtnKateMilliard.gameObject.SetActive(false);
         BtnPepeQueño.gameObject.SetActive(false);
         BtnPelosRojizos.gameObject.SetActive(false);
         BtnPimientapaluzers.gameObject.SetActive(false);
         BtnWifiRobado.gameObject.SetActive(false);
-        BtnPuebloPimienta.gameObject.SetActive(false);
         BtnBananorrama.gameObject.SetActive(false);
 
         palabrasCaso[0] = "Ben Benji";
@@ -197,29 +195,56 @@ public class Libreta : MonoBehaviour
         if (bitacoras.PepeEliminado)BtnPepeQueño.gameObject.SetActive(false);
     }
 
-   public void ActualizarPalabras()
+   public void ActualizarPalabras(Toggle accion)
     {
-        if (bitacoras.PieGrandeHackeado == true) {BtnRed78.gameObject.SetActive(true); }
-        if (bitacoras.Red78Investigada == true || bitacoras.Red78Hackeada == true) {BtnKateMilliard.gameObject.SetActive(true); }
-        if (bitacoras.CabellosRojijosAnalizado == true) BtnKateMilliard.gameObject.SetActive(true);
-        if (bitacoras.PieGrandeInvestigado == true) { BtnPelosRojizos.gameObject.SetActive(true); }
-        if (bitacoras.ParquePimientaHackeado == true && bitacoras.PieGrandeUbicacion == false) {BtnWifiRobado.gameObject.SetActive(true);}
-        if (bitacoras.PuebloPimientaInvestigado == true) {BtnParquePimienta.gameObject.SetActive(true); }
-        if (bitacoras.ParquePimientaInvestigado == true) { BtnPuebloPimienta.gameObject.SetActive(false); }
-        if (bitacoras.CrearEscena == true) {BtnPepeQueño.gameObject.SetActive(true); }
-        if (bitacoras.PepeInvestigado == true || bitacoras.PepeAnalizado == true) {SignoPreguntaPepeQueño = ""; PepeQueño(); }
-        if (bitacoras.PieGrandeUbicacion == true) BtnPuebloPimienta.SetActive(false);
-        if (bitacoras.PieGrandeLavado == true) BtnBananorrama.SetActive(true);
-
-        if (bitacoras.CabellosRojijosAnalizado == true || bitacoras.Red78Hackeada == true || bitacoras.Red78Investigada == true)
+        if (accion == A.hackear)
         {
-            BtnColorada.gameObject.SetActive(false);
-            BtnPelosRojizos.gameObject.SetActive(false);
-            BtnRed78.gameObject.SetActive(false);
-            BtnBananorrama.gameObject.SetActive(false);
-
+            if (bitacoras.PieGrandeHackeado == true) { BtnRed78.gameObject.SetActive(true); }
+            if (bitacoras.ParquePimientaHackeado == true && bitacoras.PieGrandeUbicacion == false) { BtnWifiRobado.gameObject.SetActive(true); }
+            if (bitacoras.Red78Investigada == true || bitacoras.Red78Hackeada == true) { BtnKateMilliard.gameObject.SetActive(true); }
+            if (bitacoras.CabellosRojijosAnalizado == true || bitacoras.Red78Hackeada == true || bitacoras.Red78Investigada == true)
+            {
+                BtnColorada.gameObject.SetActive(false);
+                BtnPelosRojizos.gameObject.SetActive(false);
+                BtnRed78.gameObject.SetActive(false);
+                BtnBananorrama.gameObject.SetActive(false);
+            }
         }
-
+        if(accion == A.investigar)
+        {
+            if (bitacoras.Red78Investigada == true || bitacoras.Red78Hackeada == true) { BtnKateMilliard.gameObject.SetActive(true); }
+            if (bitacoras.PieGrandeInvestigado == true) { BtnPelosRojizos.gameObject.SetActive(true); }
+            if (bitacoras.PuebloPimientaInvestigado == true) { BtnParquePimienta.gameObject.SetActive(true); }
+            if (bitacoras.ParquePimientaInvestigado == true) { BtnPuebloPimienta.gameObject.SetActive(false); }
+            if (bitacoras.PepeInvestigado == true || bitacoras.PepeAnalizado == true) { SignoPreguntaPepeQueño = ""; PepeQueño(); }
+            if (bitacoras.CabellosRojijosAnalizado == true || bitacoras.Red78Hackeada == true || bitacoras.Red78Investigada == true)
+            {
+                BtnColorada.gameObject.SetActive(false);
+                BtnPelosRojizos.gameObject.SetActive(false);
+                BtnRed78.gameObject.SetActive(false);
+                BtnBananorrama.gameObject.SetActive(false);
+            }
+        }
+        if (accion == A.analizarMuestra)
+        {
+            if (bitacoras.CabellosRojijosAnalizado == true) BtnKateMilliard.gameObject.SetActive(true);
+            if (bitacoras.CabellosRojijosAnalizado == true || bitacoras.Red78Hackeada == true || bitacoras.Red78Investigada == true)
+            {
+                BtnColorada.gameObject.SetActive(false);
+                BtnPelosRojizos.gameObject.SetActive(false);
+                BtnRed78.gameObject.SetActive(false);
+                BtnBananorrama.gameObject.SetActive(false);
+            }
+        }
+        if (accion == A.lavarCerebro)
+        {
+            if (bitacoras.PieGrandeLavado == true) BtnBananorrama.SetActive(true);
+        }
+        if (accion == A.crearEscena)
+        {
+            if (bitacoras.CrearEscena == true) { BtnPepeQueño.gameObject.SetActive(true); }
+        } 
+            
     }
 
     public void SetearPalabraLibretaACero ()

@@ -1863,8 +1863,8 @@ public class Bitacoras : MonoBehaviour
             CargarVectorAccion(a, indaux, txt);
             if (accion != A.crearEscena && accion != A.trueEnding && accion != A.plantarPublico) accion.interactable = true;
             libreta.PersonajeEliminado();
-            UbicacionConfirmada();
-            libreta.ActualizarPalabras();
+            UbicacionConfirmada(accion);
+            libreta.ActualizarPalabras(accion);
             time.TiempoNormal();
             A.DeshabilitarAcciones();
     }
@@ -2101,16 +2101,24 @@ public class Bitacoras : MonoBehaviour
     }
 
 
-    void UbicacionConfirmada()
+    void UbicacionConfirmada(Toggle accion)
     {
-        if (WifiRobadoHackeado == true || WifiRobadoInvestigado == true)
+        if (accion == A.hackear || A.investigar == accion)
         {
-            PieGrandeUbicacion = true;
-            libreta.txtPieGrande.text = libreta.palabrasCaso[1];
-            libreta.SignoPreguntaPieGrande = "";
+            if (WifiRobadoHackeado == true || WifiRobadoInvestigado == true)
+            {
+                PieGrandeUbicacion = true;
+                libreta.txtPieGrande.text = libreta.palabrasCaso[1];
+                libreta.SignoPreguntaPieGrande = "";
+                libreta.BtnPuebloPimienta.SetActive(false);
+            }
         }
 
-        if (TrueEnding == true) { Pantallas.SwitchCanvas(CanvasTypePantallas.TrueEnding, CanvasTypePantallas.TrueEnding); }
+        if (TrueEnding == true) 
+        { 
+            Pantallas.SwitchCanvas(CanvasTypePantallas.TrueEnding, CanvasTypePantallas.TrueEnding);
+            time.TiempoPausado();
+        }
 
     }
 
