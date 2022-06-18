@@ -8,7 +8,8 @@ public class PC : MonoBehaviour
 {
     [SerializeField] internal Libreta libreta;
     [SerializeField] Bitacoras bitacoras;
-    [SerializeField] PantallasSwitcherManager Pantallas; 
+    [SerializeField] PantallasSwitcherManager Pantallas;
+    [SerializeField] SonidoMagnament Sonido;
     public TMP_Text txtBuscador;
     public TMP_Text txtInfo;
     public TMP_Text txtRating;
@@ -32,7 +33,7 @@ public class PC : MonoBehaviour
     public void MostrarWiki ()
     {
         //================================================================ Wiki Ben =======================================================//
-
+        Sonido.SonidoClickMouse();
         if(txtBuscador.text == libreta.palabrasCaso[0])
 
         {
@@ -135,6 +136,7 @@ public class PC : MonoBehaviour
             + System.Environment.NewLine + "A pesar de su propósito es también, controversialmente, el hogar del festival de música más masivo del planeta: El Pimentapaluza, festejado religiosamente en la inamovible fecha del 27 de Marzo de cada año."
             + System.Environment.NewLine + "Ubicación: Entre Pueblo Pimienta y Monte Quete.";
             libreta.BtnPimientaPaluza.SetActive(true);
+            Sonido.SonidoEscribirPapel();
         }
         //================================================================ Wiki Pueblo Pimienta =======================================================//
         else if (txtBuscador.text == libreta.palabrasCaso[5])
@@ -148,6 +150,7 @@ public class PC : MonoBehaviour
             + System.Environment.NewLine + "Ubicacion: Quete.";
  
             libreta.BtnParquePimienta.SetActive(true);
+            Sonido.SonidoEscribirPapel();
         }
         //================================================================ Wiki Pimientapaluzers =======================================================//
         else if (txtBuscador.text == libreta.palabrasCaso[11])
@@ -179,7 +182,8 @@ public class PC : MonoBehaviour
             txtInfo.text = "Comedia romántica estrenada en 1994. La actuación y encendida cabellera de Kate Milliard capturó a la audiencia catapultandola a la fama." ;
             libreta.BtnKateMilliard.gameObject.SetActive(true);
             libreta.BtnBananorrama.gameObject.SetActive(false);
-            }
+            Sonido.SonidoEscribirPapel();
+        }
         //================================================================ Wiki red78 =======================================================//
         else if (txtBuscador.text == libreta.palabrasCaso[7])
         {

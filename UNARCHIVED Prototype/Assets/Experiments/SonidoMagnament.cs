@@ -9,10 +9,10 @@ public class SonidoMagnament : MonoBehaviour
     public Transform camara;
 
     public GameObject AbrirExpediente;
-    /*public GameObject CerrarExpediente;
+    public GameObject CerrarExpediente;
     public GameObject SonidoImprimir;
     public GameObject SonidoTachar;
-    public GameObject SonidoPING;
+    public GameObject PING;
     public GameObject RelojNormal;
     public GameObject RelojRapido;
 
@@ -21,7 +21,7 @@ public class SonidoMagnament : MonoBehaviour
     public GameObject[] PasarHoja;
     public GameObject[] SonidoBoton;
     public GameObject[] SonidoTeclado;
-    */
+    
     void NuevoSonido(GameObject prefabs, Vector3 posición, float duración = 5f, bool ModificarPitch = true)
     {
            GameObject obj = Instantiate(prefabs, posición, Quaternion.identity);
@@ -34,55 +34,7 @@ public class SonidoMagnament : MonoBehaviour
 
     void Start()
     {
-
-         /*
-        //Cerrar expediente
-        NuevoSonido(CerrarExpediente, , 1f);
-        Destroy(GameObject);
-        //Sonido imprimir
-        NuevoSonido(SonidoImprimir, , 1f);
-        Destroy(GameObject);
-
-        //Sonido tachar
-        NuevoSonido(SonidoTachar, , 1f);
-        Destroy(GameObject);
-
-        //Sonido PING
-        NuevoSonido(SonidoPING, , 1f);
-        Destroy(GameObject);
-
-        //Reloj normal
-        NuevoSonido(RelojNormal, , 1f);
-        Destroy(GameObject);
-
-        //Reloj rapido
-        NuevoSonido(RelojRapido, , 1f);
-        Destroy(GameObject);
-
-        //Escribir papel
-        int num = Random.range(0, 4);
-        NuevoSonido(EscribirPapel[num], , 1f);
-        Destroy(GameObject);
-
-        //Click mouse
-        int num = Random.range(0, 3);
-        NuevoSonido(PasarHoja[num], , 1f);
-        Destroy(GameObject);
-
-        //Pasar hoja
-        int num = Random.range(0, 3);
-        NuevoSonido(PasarHoja[num], , 1f);
-        Destroy(GameObject);
-
-        //Sonido boton
-        int num = Random.range(0, 2);
-        NuevoSonido(SonidoBoton[num], , 1f);
-        Destroy(GameObject);
-
-        //Sonido teclado
-        int num = Random.range(0, 5);
-        NuevoSonido(SonidoTeclado[num], , 1f);
-        Destroy(GameObject);*/
+        
     }
 
     public void SonidoAbrirExpediente ()
@@ -91,6 +43,74 @@ public class SonidoMagnament : MonoBehaviour
         Destroy(AbrirExpediente);
     }
 
+    public void SonidoCerrarExpediente ()
+    {
+        NuevoSonido(CerrarExpediente, camara.position, 1f);
+        Destroy(CerrarExpediente);
+    }
 
+    public void SonidodeImprimir ()
+    {
+        NuevoSonido(SonidoImprimir, camara.position, 1f);
+        Destroy(SonidoImprimir);
+    }
 
+    public void SonidodeTachar ()
+    {
+        NuevoSonido(SonidoTachar, camara.position, 1f);
+        Destroy(SonidoTachar);
+    }
+
+    public void SonidoPING ()
+    {
+        NuevoSonido(PING, camara.position, 1f);
+        Destroy(PING);
+    }
+
+    public void SonidoRelojNormal()
+    {
+        NuevoSonido(RelojNormal, camara.position, 1f);
+        Destroy(RelojNormal);
+    }
+
+    public void SonidoRelojRapido ()
+    {
+        NuevoSonido(RelojRapido, camara.position, 1f);
+        Destroy(RelojRapido);
+    }
+
+    public void SonidoEscribirPapel()
+    {
+        int num = Random.Range(0, 4);
+        NuevoSonido(EscribirPapel[num], camara.position, 1f);
+        Destroy(EscribirPapel[num]);
+    }
+
+    public void SonidoClickMouse ()
+    {
+        int num = Random.Range(0, 3);
+        NuevoSonido(ClickMouse[num], camara.position, 1f);
+        Destroy(ClickMouse[num]);
+    }
+
+    public void SonidoPasarHoja ()
+    {
+        int num = Random.Range(0, 3);
+        NuevoSonido(PasarHoja[num], camara.position, 1f);
+        Destroy(PasarHoja[num]);
+    }
+
+    public void SonidodeBoton ()
+    {
+        int num = Random.Range(0, 2);
+        NuevoSonido(SonidoBoton[num], camara.position, 1f);
+        Destroy(SonidoBoton[num]);
+    }
+
+    public void SonidodeTeclado ()
+    {
+        int num = Random.Range(0, 5);
+        NuevoSonido(SonidoTeclado[num], camara.position, 1f);
+        Destroy(SonidoTeclado[num]);
+    }
 }

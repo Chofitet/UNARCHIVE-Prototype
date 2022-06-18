@@ -401,6 +401,7 @@ MonoBehaviour:
   desiredCanvasType2: 2
   canvasManager: {fileID: 320038367}
   time: {fileID: 698772801}
+  Sonido: {fileID: 1858582947}
 --- !u!65 &23763976
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1527,6 +1528,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6829d5d658125c418b588148dbcfeb6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Sonido: {fileID: 1858582947}
   ex: {fileID: 1617941787}
   bitacoras: {fileID: 176843630}
   A: {fileID: 414450557}
@@ -1946,6 +1948,7 @@ MonoBehaviour:
   bitacora: {fileID: 176843630}
   time: {fileID: 698772801}
   Alarma: {fileID: 1616859476}
+  Sonido: {fileID: 1858582947}
   btnllamar: {fileID: 1406351004}
   btnplay: {fileID: 1892829243}
   btnREC: {fileID: 1526328218}
@@ -2829,6 +2832,7 @@ MonoBehaviour:
   reloj: {fileID: 904785885}
   PC: {fileID: 1090419601}
   Pantallas: {fileID: 1707752575}
+  sonido: {fileID: 1858582947}
   BenEliminado: 0
   BenLavado: 0
   BenInvestigado: 0
@@ -4299,6 +4303,7 @@ MonoBehaviour:
   desiredCanvasType2: 0
   canvasManager: {fileID: 320038367}
   time: {fileID: 698772801}
+  Sonido: {fileID: 1858582947}
 --- !u!65 &320533837
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6232,6 +6237,7 @@ MonoBehaviour:
   desiredCanvasType2: 3
   canvasManager: {fileID: 320038367}
   time: {fileID: 698772801}
+  Sonido: {fileID: 1858582947}
 --- !u!65 &525171096
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8081,6 +8087,7 @@ MonoBehaviour:
   telefono: {fileID: 113856866}
   Pantallas: {fileID: 1707752575}
   A: {fileID: 414450557}
+  Sonido: {fileID: 1858582947}
   Dia: 1
   NoticiaDiaria: 0
   VariacionDeTiempo: 1
@@ -10342,6 +10349,7 @@ MonoBehaviour:
   desiredCanvasType2: 0
   canvasManager: {fileID: 320038367}
   time: {fileID: 698772801}
+  Sonido: {fileID: 1858582947}
 --- !u!65 &936548027
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11923,6 +11931,7 @@ MonoBehaviour:
   desiredCanvasType2: 2
   canvasManager: {fileID: 320038367}
   time: {fileID: 698772801}
+  Sonido: {fileID: 1858582947}
 --- !u!65 &1073116704
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12316,6 +12325,7 @@ MonoBehaviour:
   libreta: {fileID: 94808029}
   bitacoras: {fileID: 176843630}
   Pantallas: {fileID: 1707752575}
+  Sonido: {fileID: 1858582947}
   txtBuscador: {fileID: 338755631}
   txtInfo: {fileID: 1463728168}
   txtRating: {fileID: 1689505300}
@@ -14970,6 +14980,7 @@ MonoBehaviour:
   desiredCanvasType2: 3
   canvasManager: {fileID: 320038367}
   time: {fileID: 698772801}
+  Sonido: {fileID: 1858582947}
 --- !u!65 &1335159634
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21311,6 +21322,32 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   camara: {fileID: 1031912887}
   AbrirExpediente: {fileID: 6331831696735580730, guid: d1741426e2c61434ead38cec1f720dd6, type: 3}
+  CerrarExpediente: {fileID: 16956568562034932, guid: f6a41c5ec48897d4c8c3aed547b45404, type: 3}
+  SonidoImprimir: {fileID: 3924760758477047190, guid: 4a66dcf753551f44ea5473fca2d1ea5d, type: 3}
+  SonidoTachar: {fileID: 8560816922296900077, guid: c35c74790db070a4da5eb043ff1cea52, type: 3}
+  PING: {fileID: 6583076030164176970, guid: f017b858ca18a7b4b92df4d968d59d20, type: 3}
+  RelojNormal: {fileID: 5950911551545462266, guid: 72526facfd5e89143b91ff9d231b5769, type: 3}
+  RelojRapido: {fileID: 6865227081373058436, guid: b02e0a0b214f52c4ca9ccf1b1e6c13bf, type: 3}
+  EscribirPapel:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  ClickMouse:
+  - {fileID: 8629342142397041216, guid: c63b412b98d51f340bc797e823de56fd, type: 3}
+  - {fileID: 7408940091345412453, guid: d2ee1c6bab081ac438edff7a7a36830f, type: 3}
+  - {fileID: 1408720568649355311, guid: a4234afe4734b744db5b87337ffd5706, type: 3}
+  PasarHoja:
+  - {fileID: 157931906236986895, guid: 13d0e639fc4ffd34cb1b15c85c72e90b, type: 3}
+  - {fileID: 4747996553631353212, guid: 9986bfdce8d8ee3479930602395427b4, type: 3}
+  SonidoBoton:
+  - {fileID: 2773480768118358123, guid: 6bc8fdf0541d58048a0f1c40978d5d83, type: 3}
+  - {fileID: 1624024331850727650, guid: 5037dd7846e25294c9744fcb5cbc6200, type: 3}
+  SonidoTeclado:
+  - {fileID: 8838241794675209127, guid: 725241be46677db42b9ad2d98e433c56, type: 3}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1 &1858669548
 GameObject:
   m_ObjectHideFlags: 0
@@ -25087,6 +25124,7 @@ MonoBehaviour:
   desiredCanvasType2: 2
   canvasManager: {fileID: 320038367}
   time: {fileID: 0}
+  Sonido: {fileID: 0}
 --- !u!65 &2057420179
 BoxCollider:
   m_ObjectHideFlags: 0

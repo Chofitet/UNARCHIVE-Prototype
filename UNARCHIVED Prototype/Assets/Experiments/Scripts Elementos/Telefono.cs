@@ -10,6 +10,7 @@ public class Telefono : MonoBehaviour
     [SerializeField] Bitacoras bitacora;
     [SerializeField] TimeManager time;
     [SerializeField] AlarmaTelefono Alarma;
+    [SerializeField] SonidoMagnament Sonido;
     public Button btnllamar;
     public Button btnplay;
     public Button btnREC;
@@ -44,6 +45,7 @@ public class Telefono : MonoBehaviour
 
     public void REC()
     {
+        Sonido.SonidodeBoton();
         if (x == false)
         {
             LlamadaEnProgreso = libreta.palabra;
@@ -174,16 +176,20 @@ public class Telefono : MonoBehaviour
     void ActualizarPalabras()
     {
         libreta.BtnPepeQueño.gameObject.SetActive(true);
+        Sonido.SonidoEscribirPapel();
     }
 
     public void Play()
     {
+        Sonido.SonidodeBoton();
+        Sonido.SonidodeImprimir();
         Alarma.Apagado();
         PapelFax.SetActive(true);
         LLamadaDiaria = true;
         btnplay.interactable = false;
         x1 = true;
         ActualizarPalabras();
+        
     }
 
 }

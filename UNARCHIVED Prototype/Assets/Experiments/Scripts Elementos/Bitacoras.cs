@@ -13,6 +13,7 @@ public class Bitacoras : MonoBehaviour
     [SerializeField] Reloj reloj;
     [SerializeField] PC PC;
     [SerializeField] PantallasSwitcherManager Pantallas;
+    [SerializeField] SonidoMagnament sonido;
 
     //Declaración varariables
   
@@ -1876,10 +1877,12 @@ public class Bitacoras : MonoBehaviour
     public void SiguientePagina()
     {
         if (PagActual < 6)  {PagActual++;}
+        sonido.SonidoPasarHoja();
     }
     public void AnteriorPagina ()
     {
-        if (PagActual > 1) { PagActual--; } 
+        if (PagActual > 1) { PagActual--; }
+        sonido.SonidoPasarHoja();
     }
     void ActualizarPaginas()
     {
@@ -2111,6 +2114,7 @@ public class Bitacoras : MonoBehaviour
                 libreta.txtPieGrande.text = libreta.palabrasCaso[1];
                 libreta.SignoPreguntaPieGrande = "";
                 libreta.BtnPuebloPimienta.SetActive(false);
+                sonido.SonidodeTachar();
             }
         }
 
