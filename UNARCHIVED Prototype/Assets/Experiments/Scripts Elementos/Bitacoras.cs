@@ -99,8 +99,14 @@ public class Bitacoras : MonoBehaviour
 
     private string PreUbicacion;
 
-    private string txtNoticiaFalsa;
+    public string txtNoticiaFalsa;
     private int NumNoticias = 0;
+    public bool NoticiaFalasa1;
+    public bool NoticiaFalasa2;
+    public bool NoticiaFalasa3;
+    public bool NoticiaFalasa4;
+    public bool NoticiaFalasa5;
+    public bool NoticiaFalsa6;
 
     //Vectores bitacoras
     string[] pag1 = new string[6];
@@ -1867,6 +1873,7 @@ public class Bitacoras : MonoBehaviour
             libreta.ActualizarPalabras(accion);
             time.TiempoNormal();
             A.DeshabilitarAcciones();
+            MostrarNoticiasFalsas(accion);
     }
 
     
@@ -2097,6 +2104,19 @@ public class Bitacoras : MonoBehaviour
                 NumNoticias++;
                 PC.Rating = PC.Rating - 1;
                 break;
+        }
+    }
+
+    void MostrarNoticiasFalsas (Toggle accion)
+    {
+        if (accion == A.crearNoticia)
+        {
+            if (NumNoticias == 0) { NoticiaFalasa1 = true; }
+            if (NumNoticias == 1) { NoticiaFalasa2 = true; }
+            if (NumNoticias == 2) { NoticiaFalasa3 = true; }
+            if (NumNoticias == 3) { NoticiaFalasa4 = true; }
+            if (NumNoticias == 4) { NoticiaFalasa5 = true; }
+            if (NumNoticias == 5) { NoticiaFalsa6 = true; }
         }
     }
 

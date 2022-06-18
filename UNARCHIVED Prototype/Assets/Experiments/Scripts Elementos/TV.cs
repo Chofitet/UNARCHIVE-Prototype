@@ -24,10 +24,16 @@ public class TV : MonoBehaviour
         NoticiasAliatorias();
     }
 
+    private bool NF1;
+    private bool NF2;
+    private bool NF3;
+    private bool NF4;
+    private bool NF5;
+    private bool NF6;
 
     // Para crear una noticia hay que crear tres variables: un booleano para que la noticia solo aparezca una vez, y dos strings, una para el titular(aparece pantalla chiquito)
     // y otro para la noticia dentro de la pantalla de la tv.
-    
+
 
 
     //============================================================================ TV Ben Benji =============================================================================//
@@ -398,7 +404,62 @@ public class TV : MonoBehaviour
             StartCoroutine(ImprimirNoticia(PepeQueñoTitulo2, PepeQueñoNoticia2, IncrementoRating));
             PepeQueñoEliminado2 = true;
         }
-        
+        //=========================================================================== TV Noticia Falsa ===============================================================//
+        else if (bitacoras.NoticiaFalasa1 == true && NF1 == false )
+        {
+            int IncrementoRating = -2;
+            noticia.text = bitacoras.txtNoticiaFalsa;
+            titular.text = bitacoras.txtNoticiaFalsa;
+            PC.Rating = PC.Rating + IncrementoRating;
+            x = true;
+            NF1 = true;
+        }
+        else if (bitacoras.NoticiaFalasa2 == true && NF2 == false)
+        {
+            int IncrementoRating = -1;
+            noticia.text = bitacoras.txtNoticiaFalsa;
+            titular.text = bitacoras.txtNoticiaFalsa;
+            PC.Rating = PC.Rating + IncrementoRating;
+            x = true;
+            NF2 = true;
+        }
+        else if (bitacoras.NoticiaFalasa3 == true && NF3 == false)
+        {
+            int IncrementoRating = -2;
+            noticia.text = bitacoras.txtNoticiaFalsa;
+            titular.text = bitacoras.txtNoticiaFalsa;
+            PC.Rating = PC.Rating + IncrementoRating;
+            x = true;
+            NF3 = true;
+        }
+        else if (bitacoras.NoticiaFalasa4 == true && NF4 == false)
+        {
+            int IncrementoRating = -1;
+            noticia.text = bitacoras.txtNoticiaFalsa;
+            titular.text = bitacoras.txtNoticiaFalsa;
+            PC.Rating = PC.Rating + IncrementoRating;
+            x = true;
+            NF4 = true;
+        }
+        else if (bitacoras.NoticiaFalasa5 == true && NF5 == false)
+        {
+            int IncrementoRating = -2;
+            noticia.text = bitacoras.txtNoticiaFalsa;
+            titular.text = bitacoras.txtNoticiaFalsa;
+            PC.Rating = PC.Rating + IncrementoRating;
+            x = true;
+            NF5 = true;
+        }
+        else if (bitacoras.NoticiaFalsa6 == true && NF6 == false)
+        {
+            int IncrementoRating = -1;
+            noticia.text = bitacoras.txtNoticiaFalsa;
+            titular.text = bitacoras.txtNoticiaFalsa;
+            PC.Rating = PC.Rating + IncrementoRating;
+            x = true;
+            NF6 = true;
+        }
+
     }
 
     IEnumerator ImprimirNoticia(string T, string N, int IncrementoRating)

@@ -5,9 +5,10 @@ using TMPro;
 public class Expediente : MonoBehaviour
 {
     public bool CasoLeido;
-
+    [SerializeField] TimeManager time;
     void OnMouseDown ()
     {
+        time.TiempoNormal();
         CasoLeido = true;
     }
 

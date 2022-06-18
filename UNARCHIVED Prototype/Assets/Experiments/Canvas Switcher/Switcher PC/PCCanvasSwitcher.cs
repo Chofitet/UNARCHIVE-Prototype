@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PCCanvasSwitcher : MonoBehaviour
 {
+    [SerializeField] TimeManager time;
     public CanvasTypePC desiredCanvasType;
     public CanvasTypePC desiredCanvasType2;
 
@@ -13,7 +14,7 @@ public class PCCanvasSwitcher : MonoBehaviour
 
     void OnMouseDown()
     {
-          canvasManager.SwitchCanvas(desiredCanvasType, desiredCanvasType2);
-            
+        canvasManager.SwitchCanvas(desiredCanvasType, desiredCanvasType2);
+        time.TiempoNormal(); 
     }
 }

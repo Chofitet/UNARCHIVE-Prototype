@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class TVCanvasSwither : MonoBehaviour
 {
+    [SerializeField] TimeManager time;
     public CanvasTypeTV desiredCanvasType;
     public CanvasTypeTV desiredCanvasType2;
 
@@ -12,6 +13,6 @@ public class TVCanvasSwither : MonoBehaviour
     void OnMouseDown()
     {
         canvasManager.SwitchCanvas(desiredCanvasType, desiredCanvasType2);
-     
+        time.TiempoNormal();
     }
 }
