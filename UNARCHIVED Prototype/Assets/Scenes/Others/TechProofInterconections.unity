@@ -21427,9 +21427,9 @@ MonoBehaviour:
   RelojNormal: {fileID: 5950911551545462266, guid: 72526facfd5e89143b91ff9d231b5769, type: 3}
   RelojRapido: {fileID: 6865227081373058436, guid: b02e0a0b214f52c4ca9ccf1b1e6c13bf, type: 3}
   EscribirPapel:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 826747028300232187, guid: 8cb84e1e0b5cf414bba98d27805f968e, type: 3}
+  - {fileID: 1342365992440772043, guid: 41b8f1b5856581c4d8448adc36f60667, type: 3}
+  - {fileID: 3119632794560854626, guid: 19d1e5cf6ff4d324f9a057a6465e90ce, type: 3}
   ClickMouse:
   - {fileID: 8629342142397041216, guid: c63b412b98d51f340bc797e823de56fd, type: 3}
   - {fileID: 7408940091345412453, guid: d2ee1c6bab081ac438edff7a7a36830f, type: 3}
@@ -21442,10 +21442,9 @@ MonoBehaviour:
   - {fileID: 1624024331850727650, guid: 5037dd7846e25294c9744fcb5cbc6200, type: 3}
   SonidoTeclado:
   - {fileID: 8838241794675209127, guid: 725241be46677db42b9ad2d98e433c56, type: 3}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 5555430501680066728, guid: 20d24db3b92e5ec4ba768950175231ed, type: 3}
+  - {fileID: 6436644893801605420, guid: 8f85975e7302dfa49a3743d4d84d790e, type: 3}
+  - {fileID: 8890671995334624900, guid: 17fc835a7f65b474c8cad45cd1387da2, type: 3}
 --- !u!1 &1858669548
 GameObject:
   m_ObjectHideFlags: 0

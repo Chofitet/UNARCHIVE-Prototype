@@ -81,7 +81,7 @@ public class SonidoMagnament : MonoBehaviour
 
     public void SonidoEscribirPapel()
     {
-        int num = Random.Range(0, 4);
+        int num = Random.Range(0, 3);
         NuevoSonido(EscribirPapel[num], camara.position, 1f);
         Destroy(EscribirPapel[num]);
     }
@@ -95,7 +95,7 @@ public class SonidoMagnament : MonoBehaviour
 
     public void SonidoPasarHoja ()
     {
-        int num = Random.Range(0, 3);
+        int num = Random.Range(0, 2);
         NuevoSonido(PasarHoja[num], camara.position, 1f);
         Destroy(PasarHoja[num]);
     }
@@ -109,7 +109,7 @@ public class SonidoMagnament : MonoBehaviour
 
     public void SonidodeTeclado ()
     {
-        int num = Random.Range(0, 5);
+        int num = Random.Range(0, 4);
         NuevoSonido(SonidoTeclado[num], camara.position, 1f);
         Destroy(SonidoTeclado[num]);
     }
