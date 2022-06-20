@@ -65,7 +65,7 @@ public class Libreta : MonoBehaviour
         palabrasCaso[5] = "Pueblo Pimienta";
         palabrasCaso[6] = "colorada";
         palabrasCaso[7] = "Red78";
-        palabrasCaso[8] = "Pepe Queño";
+        palabrasCaso[8] = "Pepe Quenio";
         palabrasCaso[9] = "cabellos rojizos";
         palabrasCaso[10] = "Parque Pimienta";
         palabrasCaso[11] = "pimientapaluzers";
@@ -136,7 +136,7 @@ public class Libreta : MonoBehaviour
     {
         DesSubrayar();
         palabra = palabrasCaso[8];
-        txtPepeQueño.text = "<u>Pepe Queño</u>" + SignoPreguntaPepeQueño;
+        txtPepeQueño.text = "<u>Pepe Quenio</u>" + SignoPreguntaPepeQueño;
     }
     public void CabellosRojizos()
     {
@@ -177,7 +177,7 @@ public class Libreta : MonoBehaviour
         else if (txtPuebloPimienta.text == "<u>Pueblo Pimienta</u>") { txtPuebloPimienta.text = palabrasCaso[5]; }
         else if (txtBananorrama.text == "<u>Bananorrama?<u>") { txtBananorrama.text = palabrasCaso[4] + "?";}
         else if (txtColorada.text == "<u>colorada?</u>") { txtColorada.text = palabrasCaso[6] + "?"; }
-        else if (txtPepeQueño.text == "<u>Pepe Queño</u>" + SignoPreguntaPepeQueño) { txtPepeQueño.text = palabrasCaso[8] + SignoPreguntaPepeQueño; }
+        else if (txtPepeQueño.text == "<u>Pepe Quenio</u>" + SignoPreguntaPepeQueño) { txtPepeQueño.text = palabrasCaso[8] + SignoPreguntaPepeQueño; }
         else if (txtCabellosRojizos.text == "<u>cabellos rojizos</u>") { txtCabellosRojizos.text = palabrasCaso[9]; }
         else if (txtRed78.text == "<u>Red78?</u>") { txtRed78.text = palabrasCaso[7] + "?"; }
         else if (txtKate.text == "<u>Kate Milliard<u>") { txtKate.text = palabrasCaso[2]; }
