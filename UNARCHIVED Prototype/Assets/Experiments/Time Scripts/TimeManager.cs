@@ -80,10 +80,9 @@ public class TimeManager : MonoBehaviour
 
     public void TiempoNormal ()
     {
+        if(x == true) Sonido.SonidoRelojNormal();
         VariacionDeTiempo = 30;
         x = false;
-        //Sonido.SonidoRelojNormal();
-
     }
 
     public void TiempoPausado()

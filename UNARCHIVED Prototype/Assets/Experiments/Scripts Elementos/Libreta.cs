@@ -10,6 +10,7 @@ public class Libreta : MonoBehaviour
     [SerializeField] Expediente ex;
     [SerializeField] Bitacoras bitacoras;
     [SerializeField] Acciones A;
+    [SerializeField] PCCanvasSwitcher PCSwitcher;
     bool apagado;
     public string palabra;
     public GameObject BtnBen;
@@ -255,5 +256,11 @@ public class Libreta : MonoBehaviour
         palabra = "";
     }
 
-
+    public void SonidoTecleado ()
+    {
+        if (PCSwitcher.PantallaPC == true)
+        {
+            //SONIDO TECLEADO
+        }
+    }
 }

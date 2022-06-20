@@ -1532,6 +1532,7 @@ MonoBehaviour:
   ex: {fileID: 1617941787}
   bitacoras: {fileID: 176843630}
   A: {fileID: 414450557}
+  PCSwitcher: {fileID: 1840333181}
   palabra: 
   BtnBen: {fileID: 1983828063}
   BtnPieGrande: {fileID: 1896948674}
@@ -9107,6 +9108,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 94808029}
+        m_TargetAssemblyTypeName: Libreta, Assembly-CSharp
+        m_MethodName: SonidoTecleado
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &769224898
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9707,6 +9720,18 @@ MonoBehaviour:
       - m_Target: {fileID: 113856866}
         m_TargetAssemblyTypeName: Telefono, Assembly-CSharp
         m_MethodName: BorrarLlamada
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 94808029}
+        m_TargetAssemblyTypeName: Libreta, Assembly-CSharp
+        m_MethodName: SonidoTecleado
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -12623,6 +12648,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 94808029}
+        m_TargetAssemblyTypeName: Libreta, Assembly-CSharp
+        m_MethodName: SonidoTecleado
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1107377486
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13793,6 +13830,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 94808029}
+        m_TargetAssemblyTypeName: Libreta, Assembly-CSharp
+        m_MethodName: SonidoTecleado
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1225135679
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14568,6 +14617,18 @@ MonoBehaviour:
       - m_Target: {fileID: 113856866}
         m_TargetAssemblyTypeName: Telefono, Assembly-CSharp
         m_MethodName: BorrarLlamada
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 94808029}
+        m_TargetAssemblyTypeName: Libreta, Assembly-CSharp
+        m_MethodName: SonidoTecleado
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -19367,6 +19428,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 94808029}
+        m_TargetAssemblyTypeName: Libreta, Assembly-CSharp
+        m_MethodName: SonidoTecleado
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1658477385
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19507,6 +19580,18 @@ MonoBehaviour:
       - m_Target: {fileID: 113856866}
         m_TargetAssemblyTypeName: Telefono, Assembly-CSharp
         m_MethodName: BorrarLlamada
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 94808029}
+        m_TargetAssemblyTypeName: Libreta, Assembly-CSharp
+        m_MethodName: SonidoTecleado
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -21022,6 +21107,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   desiredCanvasType: 0
   desiredCanvasType2: 0
+  PantallaPC: 0
   canvasManager: {fileID: 541790786}
 --- !u!114 &1840333185
 MonoBehaviour:
@@ -21229,6 +21315,18 @@ MonoBehaviour:
       - m_Target: {fileID: 113856866}
         m_TargetAssemblyTypeName: Telefono, Assembly-CSharp
         m_MethodName: BorrarLlamada
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 94808029}
+        m_TargetAssemblyTypeName: Libreta, Assembly-CSharp
+        m_MethodName: SonidoTecleado
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -22240,6 +22338,18 @@ MonoBehaviour:
       - m_Target: {fileID: 113856866}
         m_TargetAssemblyTypeName: Telefono, Assembly-CSharp
         m_MethodName: BorrarLlamada
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 94808029}
+        m_TargetAssemblyTypeName: Libreta, Assembly-CSharp
+        m_MethodName: SonidoTecleado
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -23371,6 +23481,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 94808029}
+        m_TargetAssemblyTypeName: Libreta, Assembly-CSharp
+        m_MethodName: SonidoTecleado
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1958976861
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24061,6 +24183,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 94808029}
+        m_TargetAssemblyTypeName: Libreta, Assembly-CSharp
+        m_MethodName: SonidoTecleado
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1983828066
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24706,6 +24840,18 @@ MonoBehaviour:
       - m_Target: {fileID: 113856866}
         m_TargetAssemblyTypeName: Telefono, Assembly-CSharp
         m_MethodName: BorrarLlamada
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 94808029}
+        m_TargetAssemblyTypeName: Libreta, Assembly-CSharp
+        m_MethodName: SonidoTecleado
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -25485,6 +25631,18 @@ MonoBehaviour:
       - m_Target: {fileID: 113856866}
         m_TargetAssemblyTypeName: Telefono, Assembly-CSharp
         m_MethodName: BorrarLlamada
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 94808029}
+        m_TargetAssemblyTypeName: Libreta, Assembly-CSharp
+        m_MethodName: SonidoTecleado
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

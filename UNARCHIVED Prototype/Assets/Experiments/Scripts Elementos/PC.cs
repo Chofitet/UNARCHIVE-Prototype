@@ -17,6 +17,8 @@ public class PC : MonoBehaviour
     public Image fotoCarnet;
     public Sprite[] images;
     public Sprite[] personajes;
+    bool SonidoTerm;
+    int RatingAux;
 
 
     public int Rating;
@@ -25,8 +27,13 @@ public class PC : MonoBehaviour
     {
         txtRating.text = Rating + " w/s";
         txtBuscador.text = libreta.palabra;
+
+        if (Rating != RatingAux)
+        {
+            SonidoTerm = true;
+        }
         CambiarTermometro();
-       
+        RatingAux = Rating;
     }
 
     //Actualiza la wiki cada vez que le das a la lupa
@@ -255,7 +262,7 @@ public class PC : MonoBehaviour
                 break;
 
         }
-
+        SonidoTermometro();
     }
 
     void FotoCarnet (int num)
@@ -277,14 +284,21 @@ public class PC : MonoBehaviour
             case 4:
                 fotoCarnet.sprite = personajes[4];
                 break;
-
         }
-
     }
 
    public void RatinMaximo()
     {
         Pantallas.SwitchCanvas(CanvasTypePantallas.RatingMaximo, CanvasTypePantallas.RatingMaximo);
+    }
+
+    void SonidoTermometro ()
+    {
+        if (SonidoTerm == true)
+        {
+            //Sonido (Javi)
+            SonidoTerm = false;
+        }
     }
 
 }
