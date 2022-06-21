@@ -117,7 +117,7 @@ public class PC : MonoBehaviour
         else if (txtBuscador.text == libreta.palabrasCaso[3])
         {
             txtInfo.text = "Solo un absoluto careta buscaría el significado de la Pimientaexperiencia en una computadora."
-            + System.Environment.NewLine + "Es el 27 de Marzo en Parque Pimienta. SIEMPRE. CARETA."
+            + System.Environment.NewLine + "Es el 28 de Marzo en Parque Pimienta. SIEMPRE. CARETA."
             + System.Environment.NewLine 
             + System.Environment.NewLine 
             + System.Environment.NewLine 
@@ -132,7 +132,7 @@ public class PC : MonoBehaviour
         else if (txtBuscador.text== libreta.palabrasCaso[10])
         {
             txtInfo.text = "Enorme reserva ambiental ubicada entre el dorso de Pueblo Pimienta y Monte Quete, es el austero hogar de especies nativas tales como el caribú mostaza, la liebre vermin y el noble salmón araña."
-            + System.Environment.NewLine + "A pesar de su propósito es también, controversialmente, el hogar del festival de música más masivo del planeta: El Pimentapaluza, festejado religiosamente en la inamovible fecha del 27 de Marzo de cada año."
+            + System.Environment.NewLine + "A pesar de su propósito es también, controversialmente, el hogar del festival de música más masivo del planeta: El Pimentapaluza, festejado religiosamente en la inamovible fecha del 28 de Marzo de cada año."
             + System.Environment.NewLine + "Ubicación: Entre Pueblo Pimienta y Monte Quete.";
             libreta.BtnPimientaPaluza.SetActive(true);
         }

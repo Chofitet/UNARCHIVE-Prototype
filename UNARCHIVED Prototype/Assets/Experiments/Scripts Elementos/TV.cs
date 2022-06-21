@@ -37,21 +37,25 @@ public class TV : MonoBehaviour
 
 
     //============================================================================ TV Ben Benji =============================================================================//
+    bool RomoresPuebloPimienta;
+    string RumoresPuebloPimientaTitulo = "BIZARRO RUMOR TOMA MODERADO VUELO EN PUEBLO PIMIENTA";
+    string RumoresPuebloPimientaNoticia = "¿CREER O REVENTAR? LAS RESPUESTAS SE ACERCAN";
+
     public bool BenEntrevista1; //aviso de que se hará la entrevista
-    string BenEntrevistaTitulo1 = "ENTREVISTA EXCLUSIVA CON NIÑO AVISTADOR DE PIE GRANDE MAÑANA A LAS 12 AM";
-    string BenEntrevistaNoticia1 = "ENTREVISTA EXCLUSIVA CON NIÑO AVISTADOR DE PIE GRANDE MAÑANA A LAS 12 AM";
+    string BenEntrevistaTitulo1 = "ENTREVISTA EXCLUSIVA CON NIÑO AVISTADOR DE MISTERIOSA CRIATURA MAÑANA A LAS 12 AM";
+    string BenEntrevistaNoticia1 = "BEN BENJI CONTARÁ TODO EN ESTE MISMO CANAL MAÑANA A LAS 12 AM.";
 
     bool BenEntrevista1b;
-    string BenEntrevistaTitulo1b = "ENTREVISTA EXCLUSIVA CON NIÑO AVISTADOR DE PIE GRANDE HOY A LAS 12 AM";
-    string BenEntrevistaNoticia1b = "ENTREVISTA EXCLUSIVA CON NIÑO AVISTADOR DE PIE GRANDE HOY A LAS 12 AM";
+    string BenEntrevistaTitulo1b = "REITERAMOS: ENTREVISTA EXCLUSIVA CON NIÑO AVISTADOR DE MISTERIOSA CRIATURA HOY A LAS 12 AM";
+    string BenEntrevistaNoticia1b = "BENJI EL PISPIADOR CONTARÁ TODO EN IMPERDIBLE EXCLUSIVA HOY A LAS 12 AM.";
 
     public bool BenEntrevista2; // entrevista de ben
-    string BenEntrevistaTitulo2 = "BEN BENJI DECLARA: ERA PIE GRANDE Y LO VI EN PARQUE PIMIENTA";
-    string BenEntrevistaNoticia2 = "BEN BENJI DECLARA: ERA PIE GRANDE Y LO VI EN PARQUE PIMIENTA";
+    string BenEntrevistaTitulo2 = "\"ERA PIE GRANDE Y LO VÍ EN PARQUE PIMIENTA\". PELUDAS DECLARACIONES!!!";
+    string BenEntrevistaNoticia2 = "BENJI EL PISPIADOR CONFIRMA QUE LA CRIATURA EN PARQUE PIMIENTA SE TRATA DE EL MÍTICO PIE GRANDE.¿QUIÉN ERA LA COLORADA?";
 
     bool BenEntrevista3;
-    string BenEntrevistaTitulo3 = "TURBA ENFURECIDA SE DIRIJE A PARQUE PIMIENTA EN BUSQUEDA DE BENJI";
-    string BenEntrevistaNoticia3 = "TURBA ENFURECIDA SE DIRIJE A PARQUE PIMIENTA EN BUSQUEDA DE BENJI";
+    string BenEntrevistaTitulo3 = "TURBA ENFURECIDA SE DIRIJE A PARQUE PIMIENTA EN BÚSQUEDA DE BENJI EL PISPIADOR";
+    string BenEntrevistaNoticia3 = "TURBA ENFURECIDA SE DIRIJE A PARQUE PIMIENTA EN BÚSQUEDA DE BENJI EL PISPIADOR";
 
     bool BenEntrevista3b;
     string BenEntrevistaTitulo3b = "TURBA ENTUSIASTA SE DIRIJE A PARQUE PIMIENTA EN BUSQUEDA DE CRIATURA";
@@ -63,31 +67,32 @@ public class TV : MonoBehaviour
 
     bool BenEliminado;
     string BenDesapareceTitulo = "NIÑO TESTIGO DESAPARECE. ¿ES PIE GRANDE EL CULPABLE O EL GOBIERNO?";
-    string BenDesapareceNoticia = "NIÑO TESTIGO DESAPARECE. ¿ES PIE GRANDE EL CULPABLE O EL GOBIERNO?";
+    string BenDesapareceNoticia = "BENJI EL PISPIADOR HA DESAPARECIDO SIN DEJAR RASTRO.¿RAPTADO POR PIE GRANDE O BAJO ORDENES DEL GOBIERNO?";
 
     bool BenBombaCasa;
-    string BenBombaCasaTitulo = "CASA DE NIÑO DESAPARECIDO VUELA EN ALEVOSA EXPLOSION. ¿QUE ESTA PASANDO EN PUEBLO PIMIENTA?";
-    string BenBombaCasaNoticia = "EXPLOSION EN CASA DE NIÑO DESAPARECIDO. ¿QUE ESTA PASANDO EN PUEBLO PIMIENTA?";
+    string BenBombaCasaTitulo = "CASA DE BEN BENJI VUELA EN ALEVOSA EXPLOSIÓN. ¿QUE ESTÁ PASANDO EN PUEBLO PIMIENTA?";
+    string BenBombaCasaNoticia = "EXPLOSIÓN EN CASA DE NIÑO DESAPARECIDO. ¿QUE ESTA PASANDO EN PUEBLO PIMIENTA?";
 
     bool BenBombaEscuela;
     string BenBombaEscuelaTitulo = "ESCUELA EXPLOTA! ¿QUE ESTA PASANDO EN PUEBLO PIMIENTA?";
-    string BenBombaEscuelaNoticia = "ESCUELA EXPLOTA! ¿QUE ESTA PASANDO EN PUEBLO PIMIENTA?";
+    string BenBombaEscuelaNoticia = "GRACIAS A LA GRACIA DEL SEÑOR NO HAY VICTIMAS AL ENCONTRARSE EL COLEGIO ENTERO EN EXCURSION BARRIAL. FIUUU!!";
      
 
     bool BenBrainwash;
-    string BenBrainwashTitulo = "NIÑO AVISTADOR DICE QUE NO SABE NADA.¿COBARDE MENTIROSO O CONSPIRADOR?";
-    string BenBrainwashNoticia = "NIÑO AVISTADOR DICE QUE NO SABE NADA.¿COBARDE MENTIROSO O CONSPIRADOR?";
+    string BenBrainwashTitulo = "NIÑO AVISTADOR NIEGA TODO ¿COBARDE MENTIROSO O CONSPIRADOR?";
+    string BenBrainwashNoticia = "¿DONDE COMIENZA LA MENTIRA?¿EN EL HOGAR O EN LAS AULAS?";
 
     bool BenDifamado1;
     string BenDifamadoTitulo1 = "NIÑO MENTIROSO MIENTE DEVUELTA. 10 MENTIRAS QUE BENJI YA TE DIJO Y NO SABÍAS!"; ///ESTE ES EL CASO Hackeado = false
-    string BenDifamadoNoticia1 = "NIÑO MENTIROSO MIENTE DEVUELTA. 10 MENTIRAS QUE BENJI YA TE DIJO Y NO SABÍAS!";///ESTE ES EL CASO Hackeado = false
+    string BenDifamadoNoticia1 = "¿DONDE COMIENZA LA MENTIRA?¿EN EL HOGAR O EN LAS AULAS?";///ESTE ES EL CASO Hackeado = false
 
     string BenDifamadoTitulo2 = "ENTUSIASTA AVISTADOR DE PIE GRANDES RESULTA TERRORISTA AMATEUR! PERPETUA PARA BENJI"; ///ESTE ES EL CASO Hackeado = true
-    string BenDifamadoNoticia2 = "ENTUSIASTA AVISTADOR DE PIE GRANDES RESULTA TERRORISTA AMATEUR! PERPETUA PARA BENJI"; ///ESTE ES EL CASO Hackeado = true
+    string BenDifamadoNoticia2 = "EXPLOSIVA REVELACIÓN DESENMASCA A BEN BENJI COMO TERRORISTA AMATEUR! EL PUEBLO PIDE PERPETUA"; ///ESTE ES EL CASO Hackeado = true
+
     //============================================================================ TV Pie Grande ===================================================================//
     bool PieGrandeEliminado;
-    string PieGrandeEliminadoTitulo = "REVELACIONES PELUDAS! LA NOVIA DE PIE GRANDE DECLARARÁ HOY A LAS 17";
-    string PieGrandeEliminadoNoticia = "REVELACIONES PELUDAS! LA NOVIA DE PIE GRANDE DECLARARÁ HOY A LAS 17";
+    string PieGrandeEliminadoTitulo = "REVELACIONES PELUDAS! LA NOVIA SECRETA DE PIE GRANDE DECLARA TODO HOY A LAS 17";
+    string PieGrandeEliminadoNoticia = "REVELACIONES PELUDAS! LA NOVIA SECRETA DE PIE GRANDE DECLARA TODO HOY A LAS 17";
 
     bool KateEliminado2;
     string PieGrandeEliminadoTitulo2 = "PIE GRANDE ERA MI FIANCÉ. REAPARECE KATE MILLIARD Y CUENTA TODO!";
@@ -112,10 +117,25 @@ public class TV : MonoBehaviour
     string CasamientoTitulo = "KATE MILLIARD ANUNCIA CASAMIENTO CON PIE GRANDE! LAS LEYENDAS ERAN CIERTAS!";
     string CasamientoNoticia = "KATE MILLIARD ANUNCIA CASAMIENTO CON PIE GRANDE! LAS LEYENDAS ERAN CIERTAS!";
 
-    //============================================================================ TV Pimienta Paluza ===================================================================//
+    //============================================================================ TV Pimientapaluza ===================================================================//
+    string PimientaPaluzaAnuncioTitulo = "SE APROXIMA EL PIMIENTAPALUZA! TODOS PREPARADOS PARA EL 28?"; //EL 24
+    string PimientaPaluzaAnuncioNoticia = "EL FESTIVAL MAS GRANDE DEL PLANETA DA COMIENZO ESTE 28 EN PARQUE PIMIENTA. ENTRADAS AGOTADAS!";
+
+    string PimientaPaluzaSeAdelantaTitulo = "PIMIENTAPALUZA SE ADELANTA AL 27/03";//EL 25
+    string PimientaPaluzaSeAdelantaNoticia = "EL FESTIVAL AGREGA UN DIA DANDO INCIO ANTES DE LO ESPERADO. ENTRADAS AGOTADAS!";
+
+    string PimientaPaluzaMañanaTitulo = "PIMIENTAPALUZA COMIENZA MAÑANA";//EL 26
+    string PimientaPaluzaMañanaNoticia = "EL FESTIVAL SE ADELANTA UN DIA ";
+
+    string PimientaPaluzaArrancaTitulo = "DA INICIO EL PIMIENTAPALUZA";//EL 27
+    string PimientaPaluzaArrancaNoticia = "WIP";
+
+    string PimientaPaluzaAisladoTitulo = "WIP";
+    string PimientaPaluzaAisladoNoticia = "WIP";
+
     bool PimientaPaluzaHackeado;
-    string PimientaPaluzaoTitulo = "¡PIMIENTA PALUZA CANCELADO! DON PALUZA DEVUELVE LA PLATA. QUE AGRADABLE SUJETO";
-    string PimientaPaluzaNoticia = "¡PIMIENTA PALUZA CANCELADO! DON PALUZA DEVUELVE LA PLATA. QUE AGRADABLE SUJETO";
+    string PimientaPaluzaCanceladoTitulo = "¡PIMIENTA PALUZA CANCELADO! DON PALUZA DEVUELVE LA PLATA. QUE AGRADABLE SUJETO";
+    string PimientaPaluzaCanceladoNoticia = "¡PIMIENTA PALUZA CANCELADO! DON PALUZA DEVUELVE LA PLATA. QUE AGRADABLE SUJETO";
     //============================================================================ TV Pimientapaluzers ===================================================================//
     bool PimientapaluzersEliminado;
     string PimientapaluzersTitulo = "¡MASACRE FRENTE A PARQUE PIMIENTA!";
@@ -150,8 +170,8 @@ public class TV : MonoBehaviour
     string ParquePimientaNoticia4 = ""; //Pimienta paluza hackeado = true
                                         //============================================================================ TV Pie Grande ===================================================================//
     bool PlantarPublico;
-    string PlantarPublicoTitulo = "ABUCHEOS DURANTE ENTREVISTA!LA CREDBILIDAD DE BEN BENJI SE DESMORONA AL MOJAR SUS PANTALONES EN TV NACIONAL";
-    string PlantarPublicoNoticia = "ABUCHEOS DURANTE ENTREVISTA!LA CREDBILIDAD DE BEN BENJI SE DESMORONA AL MOJAR SUS PANTALONES EN TV NACIONAL";
+    string PlantarPublicoTitulo = "ABUCHEOS DURANTE ENTREVISTA!LA CREDiBILIDAD DE BENJI SE DESMORONA!!";
+    string PlantarPublicoNoticia = "BENJI EL MENTIROSO PIERDE EL APOYO DE LA COMUNIDAD AL MOJAR SUS PANTALONES EN TV NACIONALA";
 
     private void OnEnable()
     {
@@ -187,20 +207,20 @@ public class TV : MonoBehaviour
     void CheckearBitacoras()
     {
         //============================================================================ TV Diario =============================================================================//
-        if (bitacoras.BenEliminado == false && bitacoras.BenLavado == false && tiempo.Dia == 3 && TimeManager.Hora == 12 && BenEntrevista1 == false)
+        if (bitacoras.BenEliminado == false && bitacoras.BenLavado == false && tiempo.Dia == 3 && TimeManager.Hora == 10 && BenEntrevista1 == false && bitacoras.BenRetirado == false)
         {
             int IncrementoRating = 2;
-            noticia.text = BenEntrevistaTitulo1;
-            titular.text = BenEntrevistaNoticia1;
+            noticia.text =  BenEntrevistaNoticia1;//ENTREVISTA EXCLUSIVA CON NIÑO AVISTADOR DE MISTERIOSA CRIATURA MAÑANA A LAS 12 AM
+            titular.text = BenEntrevistaTitulo1;
             PC.Rating = PC.Rating + IncrementoRating;
             if (PC.Rating >= 16) { PC.RatinMaximo(); }
             x = true;
             BenEntrevista1 = true;
         }
-        else if (bitacoras.BenEliminado == false && bitacoras.BenLavado == false && tiempo.Dia == 4 && TimeManager.Hora == 10 && BenEntrevista1 == true && BenEntrevista1b == false)
+        else if (bitacoras.BenEliminado == false && bitacoras.BenLavado == false && tiempo.Dia == 4 && TimeManager.Hora == 7 && BenEntrevista1 == true && BenEntrevista1b == false)
         {
             int IncrementoRating = 2;
-            noticia.text = BenEntrevistaNoticia1b;
+            noticia.text = BenEntrevistaNoticia1b;//REITERAMOS: ENTREVISTA EXCLUSIVA CON NIÑO AVISTADOR DE MISTERIOSA CRIATURA HOY A LAS 12 AM
             titular.text = BenEntrevistaTitulo1b;
             PC.Rating = PC.Rating + IncrementoRating;
             if (PC.Rating >= 16) { PC.RatinMaximo(); }
@@ -209,8 +229,8 @@ public class TV : MonoBehaviour
         }
         else if (bitacoras.BenEliminado == false && bitacoras.BenLavado == false && tiempo.Dia == 4 && TimeManager.Hora == 12 && BenEntrevista2 == false && bitacoras.PlantarPublico == false)
         {
-            int IncrementoRating = 3;
-            noticia.text = BenEntrevistaNoticia2;
+            int IncrementoRating = 6;
+            noticia.text = BenEntrevistaNoticia2; //"ERA PIE GRANDE Y LO VÍ EN PARQUE PIMIENTA\". PELUDAS DECLARACIONES!!!
             titular.text = BenEntrevistaTitulo2;
             PC.Rating = PC.Rating + IncrementoRating;
             if (PC.Rating >= 16) { PC.RatinMaximo(); }
@@ -219,8 +239,8 @@ public class TV : MonoBehaviour
         }
         else if (tiempo.Dia == 4 && TimeManager.Hora == 15 && BenEntrevista2 == true && BenEliminado == true)
         {
-            int IncrementoRating = 2;
-            noticia.text = BenEntrevistaNoticia3;
+            int IncrementoRating = 5;
+            noticia.text = BenEntrevistaNoticia3;//TURBA ENFURECIDA SE DIRIJE A PARQUE PIMIENTA EN BÚSQUEDA DE BENJI EL PISPIADOR
             titular.text = BenEntrevistaTitulo3;
             PC.Rating = PC.Rating + IncrementoRating;
             if (PC.Rating >= 16) { PC.RatinMaximo(); }
@@ -229,8 +249,8 @@ public class TV : MonoBehaviour
         }
         else if (tiempo.Dia == 4 && TimeManager.Hora == 15 && BenEntrevista2 == true && BenEliminado == false)
         {
-            int IncrementoRating = 2;
-            noticia.text = BenEntrevistaNoticia3b;
+            int IncrementoRating = 5;
+            noticia.text = BenEntrevistaNoticia3b;//TURBA ENTUSIASTA SE DIRIJE A PARQUE PIMIENTA EN BUSQUEDA DE CRIATURA
             titular.text = BenEntrevistaTitulo3b;
             PC.Rating = PC.Rating + IncrementoRating;
             if (PC.Rating >= 16) { PC.RatinMaximo(); }
@@ -240,7 +260,17 @@ public class TV : MonoBehaviour
         else if (tiempo.Dia == 5 && TimeManager.Hora == 16 && BenEntrevista3 == true && PieGrandeEliminado == false)
         {
             int IncrementoRating = 15;
-            noticia.text = BenEntrevistaNoticia4;
+            noticia.text = BenEntrevistaNoticia4;//TURBA AMATEUR ES ATACADA POR CRIATURA MONSTRUOSA EN PARQUE PIMIENTA!
+            titular.text = BenEntrevistaTitulo4;
+            PC.Rating = PC.Rating + IncrementoRating;
+            if (PC.Rating >= 16) { PC.RatinMaximo(); }
+            x = true;
+            BenEntrevista4 = true;
+        }
+        else if (tiempo.Dia == 5 && TimeManager.Hora == 16 && BenEntrevista3b == true && PieGrandeEliminado == false)
+        {
+            int IncrementoRating = 15;
+            noticia.text = BenEntrevistaNoticia4;//TURBA AMATEUR ES ATACADA POR CRIATURA MONSTRUOSA EN PARQUE PIMIENTA!
             titular.text = BenEntrevistaTitulo4;
             PC.Rating = PC.Rating + IncrementoRating;
             if (PC.Rating >= 16) { PC.RatinMaximo(); }
@@ -250,14 +280,76 @@ public class TV : MonoBehaviour
         else if (bitacoras.BenEliminado == false && bitacoras.BenLavado == false && tiempo.Dia == 4 && TimeManager.Hora == 12 && BenEntrevista2 == false && bitacoras.PlantarPublico == true)
         {
             int IncrementoRating = -3;
-            noticia.text = PlantarPublicoNoticia;
+            noticia.text = PlantarPublicoNoticia;//ABUCHEOS DURANTE ENTREVISTA!LA CREDBILIDAD DE BEN BENJI SE DESMORONA AL MOJAR SUS PANTALONES EN TV NACIONAL
             titular.text = PlantarPublicoTitulo;
             PC.Rating = PC.Rating + IncrementoRating;
             if (PC.Rating >= 16) { PC.RatinMaximo(); }
             x = true;
             
         }
-        
+
+        else if (tiempo.Dia == 3 && TimeManager.Hora == 13)
+        {
+            int IncrementoRating = 0;
+            noticia.text = PimientaPaluzaAnuncioNoticia;//se anuncia pimientapaluza
+            titular.text = PimientaPaluzaAnuncioTitulo;
+            PC.Rating = PC.Rating + IncrementoRating;
+            if (PC.Rating >= 16) { PC.RatinMaximo(); }
+            x = true;
+
+        }
+        else if (tiempo.Dia == 4 && TimeManager.Hora == 10)
+        {
+            int IncrementoRating = 0;
+            noticia.text = PimientaPaluzaAnuncioNoticia;//se anuncia pimientapaluza
+            titular.text = PimientaPaluzaAnuncioTitulo;
+            PC.Rating = PC.Rating + IncrementoRating;
+            if (PC.Rating >= 16) { PC.RatinMaximo(); }
+            x = true;
+
+        }
+        else if (tiempo.Dia == 5 && TimeManager.Hora == 10)
+        {
+            int IncrementoRating = 0;
+            noticia.text = PimientaPaluzaSeAdelantaNoticia;//Pimientapaluza se adelanta
+            titular.text = PimientaPaluzaSeAdelantaTitulo;
+            PC.Rating = PC.Rating + IncrementoRating;
+            if (PC.Rating >= 16) { PC.RatinMaximo(); }
+            x = true;
+
+        }
+        else if (tiempo.Dia == 6 && TimeManager.Hora == 10)
+        {
+            int IncrementoRating = 0;
+            noticia.text = PimientaPaluzaMañanaNoticia;//Pimientapaluza Mañana
+            titular.text = PimientaPaluzaMañanaTitulo;
+            PC.Rating = PC.Rating + IncrementoRating;
+            if (PC.Rating >= 16) { PC.RatinMaximo(); }
+            x = true;
+
+        }
+        else if (tiempo.Dia == 7 && TimeManager.Hora == 10)
+        {
+            int IncrementoRating = 0;
+            noticia.text = PimientaPaluzaArrancaNoticia;//Pimientapaluza Arranca
+            titular.text = PimientaPaluzaArrancaTitulo;
+            PC.Rating = PC.Rating + IncrementoRating;
+            if (PC.Rating >= 16) { PC.RatinMaximo(); }
+            x = true;
+
+        }
+        //============================================================================ TV RUMOR =============================================================================//
+        else if (tiempo.Dia == 3 && TimeManager.Hora == 7)
+        {
+            int IncrementoRating = 1;
+            noticia.text = RumoresPuebloPimientaNoticia;//BIZARRO RUMOR TOMA MODERADO VUELO EN PUEBLO PIMIENTA
+            titular.text = RumoresPuebloPimientaTitulo;
+            PC.Rating = PC.Rating + IncrementoRating;
+            if (PC.Rating >= 16) { PC.RatinMaximo(); }
+            x = true;
+
+        }
+
         //============================================================================ TV Ben Benji =============================================================================//
         else if (bitacoras.BenEliminado == true && BenEliminado == false)
         {
@@ -265,13 +357,13 @@ public class TV : MonoBehaviour
             StartCoroutine(ImprimirNoticia(BenDesapareceTitulo, BenDesapareceNoticia, IncrementoRating));
             BenEliminado = true;
         }
-        else if (BenEliminado == true && tiempo.Dia == 5 && TimeManager.Hora == 9)
+        else if (BenEliminado == true && tiempo.Dia == 5 && TimeManager.Hora == 9 && bitacoras.BenRetirado == false)
         {
             int IncrementoRating = 3;
             StartCoroutine(ImprimirNoticia(BenBombaCasaTitulo, BenBombaCasaNoticia, IncrementoRating));
             BenBombaCasa = true;
         }
-        else if (BenEliminado == false && tiempo.Dia == 5 && TimeManager.Hora == 9 && BenBombaCasa == false)
+        else if (BenEliminado == false && tiempo.Dia == 5 && TimeManager.Hora == 9 && BenBombaCasa == false && bitacoras.BenRetirado == false)
         {
             int IncrementoRating = 3;
             StartCoroutine(ImprimirNoticia(BenBombaEscuelaTitulo, BenBombaEscuelaNoticia, IncrementoRating));
@@ -289,9 +381,9 @@ public class TV : MonoBehaviour
             StartCoroutine(ImprimirNoticia(BenDifamadoTitulo1, BenDifamadoNoticia1, IncrementoRating));
             BenDifamado1 = true;
         }
-        else if (bitacoras.BenDifamado == true && bitacoras.BenHackeado == true && BenDifamado1 == false)// Hacheado = true
+        else if (bitacoras.BenRetirado == true)// Hackeado = true
         {
-            int IncrementoRating = -2;
+            int IncrementoRating = -4;
             StartCoroutine(ImprimirNoticia(BenDifamadoTitulo2, BenDifamadoNoticia2, IncrementoRating));
             BenDifamado1 = true;
         }
@@ -342,10 +434,11 @@ public class TV : MonoBehaviour
             CrearEscena = true;
         }
         //============================================================================ TV Pimienta Paluza ===================================================================//
+
         else if (bitacoras.PimientaPaluzaHackeado == true && PimientaPaluzaHackeado == false)
         {
             int IncrementoRating = 5;
-            StartCoroutine(ImprimirNoticia(PimientaPaluzaoTitulo, PimientaPaluzaNoticia, IncrementoRating));
+            StartCoroutine(ImprimirNoticia(PimientaPaluzaCanceladoTitulo, PimientaPaluzaCanceladoNoticia, IncrementoRating));
             PimientaPaluzaHackeado = true;
         }
         //============================================================================ TV Parque Pimienta =============================================================================//
@@ -481,10 +574,10 @@ public class TV : MonoBehaviour
     string NoticiaAleatoria2 = "PONETE LOS LENTES, PA";
 
     string TitularAleatoria3 = "CÓMO Y DÓNDE ENCONTRAR QUESO INVISIBLE";
-    string NoticiaAleatoria3 = "PONETE LOS LENTES, PA";
+    string NoticiaAleatoria3 = "Y CUANDO";
 
     string TitularAleatoria4 = "FESTIVAL 'PATEA UN TIBURÓN' TERMINA EN SORPRESIVA TRAGEDIA";
-    string NoticiaAleatoria4 = "PONETE LOS LENTES, PA";
+    string NoticiaAleatoria4 = "FINALMENTE PASÓ LO IMPENSABLE";
 
     string TitularAleatoria5 = "ASESINO SERIAL RAGE QUITS";
     string NoticiaAleatoria5 = "ASESINO SERIAL RAGE QUITS";
@@ -493,19 +586,19 @@ public class TV : MonoBehaviour
     string NoticiaAleatoria6 = "PONETE LOS LENTES, PA";
 
     string TitularAleatoria7 = "MARIPOSA SENTENCIADA A 60 AÑOS EN PRISIÓN FEDERAL";
-    string NoticiaAleatoria7 = "PONETE LOS LENTES, PA";
+    string NoticiaAleatoria7 = "JUSTICIA AL FIN!";
 
     string TitularAleatoria8 = "REBOOT DE PRECUELA SE CONVIERTE EN SPIN-OFF DE REMAKE DEL LIBRO";
     string NoticiaAleatoria8 = "PONETE LOS LENTES, PA";
 
-    string TitularAleatoria9 = "GAME DESIGNER PROPONE IDEA A ÚLTIMO MOMENTO";
+    string TitularAleatoria9 = "GAME DESIGNER PROPONE FEATURE A ÚLTIMO MOMENTO";
     string NoticiaAleatoria9 = "PONETE LOS LENTES, PA";
 
     string TitularAleatoria10 = "ES OFICIAL: JAMES, A NADIE LE IMPORTA AVATAR";
     string NoticiaAleatoria10 = "PONETE LOS LENTES, PA";
 
     string TitularAleatoria11 = "LORO BOCASUCIA ARRUINA BAUTISMO";
-    string NoticiaAleatoria11 = "&#$%@<´+{<*/:(";
+    string NoticiaAleatoria11 = "POLLY NO QUIERE UNA GALLETA, QUIERE &#$%@< Y +{<*/:(";
 
     string TitularAleatoria12 = "COMO ROBAR DESEOS DE CUMPLEAÑOS COMO ESE NENE DE LA PELI";
     string NoticiaAleatoria12 = "PONETE LOS LENTES, PA";
@@ -516,7 +609,7 @@ public class TV : MonoBehaviour
     string TitularAleatoria14 = "¿ES AMARILLO EL COLOR PARA TU PERSONAJE?";
     string NoticiaAleatoria14 = "PONETE LOS LENTES, PA";
 
-    string TitularAleatoria15 = "TECHPROOF CUMPLE CON LA MINIMA. ALUMNOS SE REGOZIJAN";
+    string TitularAleatoria15 = "TECHPROOF CUMPLE CON LA MÍNIMA. ALUMNOS SE REGOZIJAN";
     string NoticiaAleatoria15 = "PONETE LOS LENTES, PA";
 
     string TitularAleatoria16 = "APRENDE OTRO IDIOMA CAMBIANDOLO EN SETTINGS";

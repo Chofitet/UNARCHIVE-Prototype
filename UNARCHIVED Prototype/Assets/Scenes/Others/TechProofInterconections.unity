@@ -2858,6 +2858,16 @@ MonoBehaviour:
   PimientaPaluzaAislado: 0
   ColoradaEliminado: 0
   ColoradaInvestigada: 0
+  ColoradaLavada: 0
+  ColoradaHackeada: 0
+  ColoradaDifamada: 0
+  ColoradaAnalizada: 0
+  ColoradaAislada: 0
+  Red78Eliminada: 0
+  Red78Analizada: 0
+  Red78Difamar: 0
+  Red78Lavada: 0
+  Red78Aislada: 0
   Red78Investigada: 0
   Red78Hackeada: 0
   KateEliminada: 0
@@ -2865,6 +2875,7 @@ MonoBehaviour:
   KateInvestigada: 0
   KateHackeada: 0
   KateDifamada: 0
+  KateAnalizada: 0
   PepeEliminado: 0
   PepeLavado: 0
   PepeInvestigado: 0
@@ -2872,6 +2883,19 @@ MonoBehaviour:
   PepeDifamado: 0
   PepeAnalizado: 0
   CabellosRojijosAnalizado: 0
+  CabellosRojijosEliminado: 0
+  CabellosRojijosLavado: 0
+  CabellosRojijosInvestigado: 0
+  CabellosRojijosHackeados: 0
+  CabellosRojijosDifamado: 0
+  CabellosRojijosAislado: 0
+  BananorramaEliminado: 0
+  BananorramaLavado: 0
+  BananorramaInvestigado: 0
+  BananorramaHackeado: 0
+  BananorramaDifamado: 0
+  BananorramaAnalizado: 0
+  BananorramaAislado: 0
   PuebloPimientaEliminado: 0
   PuebloPimientaLavado: 0
   PuebloPimientaInvestigado: 0
@@ -6408,10 +6432,10 @@ MonoBehaviour:
     IN FUR</u>-\r\n\n\nALERTA MAGENTA! Ni\xF1o se encuentra propagando haber avistado
     a Pie Grande reciprocando besitos mariposa con misteriosa colorada durante inocente
     excurci\xF3n.\n\n\n<u>OBJETIVO:</u> Verificar presencia de Pie Grande y tomar
-    las medidas necesarias para mantener controlado el perfil de la situaci\xF3n
-    hasta la llegada del Equipo de Limpieza el 27/03. \n\nProveeremos un equipo de
-    especialistas acorde a la situaci\xF3n.\n\nNo convertir esto en un Evento AZUL.\r\n\n\r\nTestigo:
-    Ben Benji\r\n\nLugar: Pueblo Pimienta"
+    las acciones necesarias para mantener bajo control la TEMPERATURA de la situaci\xF3n
+    hasta la llegada de El Equipo de Limpieza el 27/03. \n\nProveeremos un equipo
+    de especialistas acorde al caso.\n\nNo convertir esto en un Evento AZUL.\n\nTestigo/s:
+    Ben Benji\r.\n\nLugar: Pueblo Pimienta."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
