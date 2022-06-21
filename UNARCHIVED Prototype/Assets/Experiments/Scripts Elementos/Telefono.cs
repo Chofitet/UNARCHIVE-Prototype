@@ -63,7 +63,7 @@ public class Telefono : MonoBehaviour
         switch (LlamadaEnProgreso)
         {
             case ("Ben Benji"):
-                if (bitacora.BenEliminado == false && bitacora.BenLavado == false)
+                if (bitacora.BenEliminado == false && bitacora.BenLavado == false && bitacora.BenRetirado == false)
                 {
                     if (bitacora.PepeEliminado == false && bitacora.PepeLavado == false && BenLlamado == false)
                     {
@@ -75,7 +75,7 @@ public class Telefono : MonoBehaviour
                     }
                     else {PapelFax.SetActive(true);}
                 }
-                else if(bitacora.BenLavado == true)
+                else if(bitacora.BenLavado == true && bitacora.BenRetirado == false)
                 {
                     txtTranscripciónLlamado.text = "****No tengo idea de que me hablas, Pepe Quenio. No ví nada en el Parque!****";
                     float retencionllamada = 3;
