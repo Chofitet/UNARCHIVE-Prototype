@@ -121,6 +121,9 @@ public class Bitacoras : MonoBehaviour
     public bool WifiRobadoDifamado;
 
     ////////////////////
+    public bool OfrecerProteccion;
+    public bool ConvertirCueva;
+    public bool ExtraerFoto;
     public bool CrearEscena;
     public bool PlantarPublico;
     public bool TrueEnding;
@@ -196,7 +199,7 @@ public class Bitacoras : MonoBehaviour
         //Eliminar
         if (libreta.palabra == libreta.palabrasCaso[0])
         {
-            if (A.eliminar.CompareTag(tag = "OptActivado") && A.eliminar.isOn == true && BenEliminado == false && BenRetirado == false)
+            if (A.eliminar.CompareTag(tag = "OptActivado") && A.eliminar.isOn == true && BenEliminado == false )
             {
                 float RetencionBitacora = 2;
                 float HoraCompletado = RetencionBitacora + TimeManager.Hora;
@@ -221,7 +224,7 @@ public class Bitacoras : MonoBehaviour
                
             }
             //LAVAR CEREBRO 
-            if (A.lavarCerebro.CompareTag(tag = "OptActivado") && A.lavarCerebro.isOn == true && BenLavado == false && BenEliminado == false && BenRetirado == false)
+            if (A.lavarCerebro.CompareTag(tag = "OptActivado") && A.lavarCerebro.isOn == true && BenLavado == false && BenEliminado == false)
             {
                 float RetencionBitacora = 3;
                 float HoraCompletado = RetencionBitacora + TimeManager.Hora;
@@ -245,7 +248,7 @@ public class Bitacoras : MonoBehaviour
                 BenLavado = true;
             }
             // investigar
-            if (A.investigar.CompareTag(tag = "OptActivado") && A.investigar.isOn == true && BenInvestigado == false && BenRetirado == false)
+            if (A.investigar.CompareTag(tag = "OptActivado") && A.investigar.isOn == true && BenInvestigado == false)
             {
                 float RetencionBitacora = 4;
                 float HoraCompletado = RetencionBitacora + TimeManager.Hora;
@@ -269,7 +272,7 @@ public class Bitacoras : MonoBehaviour
                 A.investigar.interactable = false;
             }
             //Hackear
-            if (A.hackear.CompareTag(tag = "OptActivado") && A.hackear.isOn == true && BenHackeado == false && BenRetirado == false)
+            if (A.hackear.CompareTag(tag = "OptActivado") && A.hackear.isOn == true && BenHackeado == false )
             {
                 float RetencionBitacora =2;
                 float HoraCompletado = RetencionBitacora + TimeManager.Hora;
@@ -293,7 +296,7 @@ public class Bitacoras : MonoBehaviour
                 A.hackear.interactable = false;
             }
             //Analizar muestra
-            if (A.analizarMuestra.CompareTag(tag = "OptActivado") && A.analizarMuestra.isOn == true && BenAnalizado == false && BenRetirado == false)
+            if (A.analizarMuestra.CompareTag(tag = "OptActivado") && A.analizarMuestra.isOn == true && BenAnalizado == false )
             {
                 float RetencionBitacora = 12;
                 float HoraCompletado = RetencionBitacora + TimeManager.Hora;
@@ -317,7 +320,7 @@ public class Bitacoras : MonoBehaviour
                 A.analizarMuestra.interactable = false;
             }
             //Difamar hay que hacer uno if hack true y otro si hack false
-            if (A.difamar.CompareTag(tag = "OptActivado") && A.difamar.isOn == true && BenHackeado == true && BenDifamado == false && BenRetirado == false)
+            if (A.difamar.CompareTag(tag = "OptActivado") && A.difamar.isOn == true && BenHackeado == true && BenDifamado == false )
             {
                 float RetencionBitacora = 1;
                 float HoraCompletado = RetencionBitacora + TimeManager.Hora;
@@ -342,7 +345,7 @@ public class Bitacoras : MonoBehaviour
                 A.difamar.interactable = false;
                 
             }
-            if (A.difamar.CompareTag(tag = "OptActivado") && A.difamar.isOn == true && BenHackeado == false && BenDifamado == false && BenRetirado == false)
+            if (A.difamar.CompareTag(tag = "OptActivado") && A.difamar.isOn == true && BenHackeado == false && BenDifamado == false )
             {
                 float RetencionBitacora = 1;
                 float HoraCompletado = RetencionBitacora + TimeManager.Hora;
@@ -1976,7 +1979,7 @@ public class Bitacoras : MonoBehaviour
             ActualizarIndice();
             StartCoroutine(GuardarBitacora(RetencionBitacora, txt, indaux, accion, a));
             CrearEscena = true;
-            Debug.Log("funciona la bitácora");
+            A.crearEscena.interactable = false;
 
         }
         //================================================ Bitacoras Plantar público ===================================================================//
@@ -2002,6 +2005,7 @@ public class Bitacoras : MonoBehaviour
             ActualizarIndice();
             StartCoroutine(GuardarBitacora(RetencionBitacora, txt, indaux, accion, a));
             PlantarPublico = true;
+            A.plantarPublico.interactable = false;
         }
         //================================================ Bitacora TRUE ENDING  ===================================================================//
         if (A.trueEnding.CompareTag(tag = "OptActivado") && A.trueEnding.isOn == true && TrueEnding == false )
@@ -2028,12 +2032,88 @@ public class Bitacoras : MonoBehaviour
             ActualizarIndice();
             StartCoroutine(GuardarBitacora(RetencionBitacora, txt, indaux, accion, a));
             TrueEnding = true;
+            A.trueEnding.interactable = false;
+        }
+        //=========================================================== Bitacora  Ofrecer Protección ===================================================================//
+        if (A.ofrecerProteccion.CompareTag(tag = "OptActivado") && A.ofrecerProteccion.isOn == true && OfrecerProteccion == false)
+        {
+            float RetencionBitacora = 1;
+            float HoraCompletado = RetencionBitacora + TimeManager.Hora;
+            string txt = "Wip";
+            string FechaCompletado = "2" + time.Dia + "/03/2000";
+            string txtAccion = "Wip";
+            Toggle accion = A.ofrecerProteccion;
+            if (HoraCompletado >= 18)
+            {
+                HoraCompletado = 6 + (RetencionBitacora - (18 - TimeManager.Hora));
+                FechaCompletado = "2" + (time.Dia + 1) + "/03/2000";
+
+            }
+            int indaux = ind;
+            int a = 1;
+            CargarVectorProgreso(txtAccion, FechaCompletado, HoraCompletado, indaux);
+            SetearBitacora();
+            a = aux;
+            ActualizarIndice();
+            StartCoroutine(GuardarBitacora(RetencionBitacora, txt, indaux, accion, a));
+            OfrecerProteccion = true;
+            A.ofrecerProteccion.interactable = false;
+        }
+        //=========================================================== Bitacora Convertir Cueva ===================================================================//
+        if (A.convertirCueva.CompareTag(tag = "OptActivado") && A.convertirCueva.isOn == true && ConvertirCueva == false)
+        {
+            float RetencionBitacora = 1;
+            float HoraCompletado = RetencionBitacora + TimeManager.Hora;
+            string txt = "Wip";
+            string FechaCompletado = "2" + time.Dia + "/03/2000";
+            string txtAccion = "Wip";
+            Toggle accion = A.convertirCueva;
+            if (HoraCompletado >= 18)
+            {
+                HoraCompletado = 6 + (RetencionBitacora - (18 - TimeManager.Hora));
+                FechaCompletado = "2" + (time.Dia + 1) + "/03/2000";
+
+            }
+            int indaux = ind;
+            int a = 1;
+            CargarVectorProgreso(txtAccion, FechaCompletado, HoraCompletado, indaux);
+            SetearBitacora();
+            a = aux;
+            ActualizarIndice();
+            StartCoroutine(GuardarBitacora(RetencionBitacora, txt, indaux, accion, a));
+            ConvertirCueva = true;
+            A.convertirCueva.interactable = false;
+        }
+        //=========================================================== Bitacora Extraer fotos ===================================================================//
+        if (A.extraerFotos.CompareTag(tag = "OptActivado") && A.extraerFotos.isOn == true && ExtraerFoto == false)
+        {
+            float RetencionBitacora = 1;
+            float HoraCompletado = RetencionBitacora + TimeManager.Hora;
+            string txt = "Wip";
+            string FechaCompletado = "2" + time.Dia + "/03/2000";
+            string txtAccion = "Wip";
+            Toggle accion = A.extraerFotos;
+            if (HoraCompletado >= 18)
+            {
+                HoraCompletado = 6 + (RetencionBitacora - (18 - TimeManager.Hora));
+                FechaCompletado = "2" + (time.Dia + 1) + "/03/2000";
+
+            }
+            int indaux = ind;
+            int a = 1;
+            CargarVectorProgreso(txtAccion, FechaCompletado, HoraCompletado, indaux);
+            SetearBitacora();
+            a = aux;
+            ActualizarIndice();
+            StartCoroutine(GuardarBitacora(RetencionBitacora, txt, indaux, accion, a));
+            ExtraerFoto = true;
+            A.extraerFotos.interactable = false;
         }
 
-        
         libreta.DesSubrayar();
         libreta.SetearPalabraLibretaACero();
         A.Restablecer();
+        A.DeshabilidarAccionesInstantadea();
     }
 
     
@@ -2041,7 +2121,7 @@ public class Bitacoras : MonoBehaviour
     {
             yield return StartCoroutine(time.RetencionBitacorasSegunAccion(ReinicioTiempo));
             CargarVectorAccion(a, indaux, txt);
-            if (accion != A.crearEscena && accion != A.trueEnding && accion != A.plantarPublico) accion.interactable = true;
+            if (accion != A.crearEscena && accion != A.trueEnding && accion != A.plantarPublico && accion != A.extraerFotos && accion != A.ofrecerProteccion && accion != A.convertirCueva) accion.interactable = true;
             libreta.PersonajeEliminado();
             UbicacionConfirmada(accion);
             libreta.ActualizarPalabras(accion);

@@ -16,13 +16,22 @@ public class TV : MonoBehaviour
     bool x;
     int CualLista;
     int NumNoticiasAteatorias = 1;
-    int RetencionNoticia = 3;
 
     private void Start()
     {
         CualLista = Random.Range(0, 3);
         NoticiasAliatorias();
     }
+
+    int EliminarRetencion = 1;
+    int LavarRetencion = 1;
+    int InvestigarRetencion = 3;
+    int HackearRetencion = 3;
+    int DifamarRetencion = 1;
+    int CrearEscenaRetencion = 1;
+    int AislarRetencion = 1;
+   
+
 
     private bool NF1;
     private bool NF2;
@@ -86,6 +95,7 @@ public class TV : MonoBehaviour
     string BenDifamadoTitulo1 = "NIÑO MENTIROSO MIENTE DEVUELTA. 10 MENTIRAS QUE BENJI YA TE DIJO Y NO SABÍAS!"; ///ESTE ES EL CASO Hackeado = false
     string BenDifamadoNoticia1 = "¿DONDE COMIENZA LA MENTIRA?¿EN EL HOGAR O EN LAS AULAS?";///ESTE ES EL CASO Hackeado = false
 
+    bool BenDifamado2;
     string BenDifamadoTitulo2 = "ENTUSIASTA AVISTADOR DE PIE GRANDES RESULTA TERRORISTA AMATEUR! PERPETUA PARA BENJI"; ///ESTE ES EL CASO Hackeado = true
     string BenDifamadoNoticia2 = "EXPLOSIVA REVELACIÓN DESENMASCA A BEN BENJI COMO TERRORISTA AMATEUR! EL PUEBLO PIDE PERPETUA"; ///ESTE ES EL CASO Hackeado = true
 
@@ -95,7 +105,7 @@ public class TV : MonoBehaviour
     string PieGrandeEliminadoNoticia = "REVELACIONES PELUDAS! LA NOVIA SECRETA DE PIE GRANDE DECLARA TODO HOY A LAS 17";
 
     bool KateEliminado2;
-    string PieGrandeEliminadoTitulo2 = "PIE GRANDE ERA MI FIANCÉ. REAPARECE KATE MILLIARD Y CUENTA TODO!";
+    string PieGrandeEliminadoTitulo2 = "PIE GRANDE ERA MI FIANCÉ. REAPARECE KATE MILLIARD Y CUENTA TODO!"; 
     string PieGrandeEliminadoNoticia2 = "PIE GRANDE ERA MI FIANCÉ. REAPARECE KATE MILLIARD Y CUENTA TODO! PERO TODO TODO!";
 
     bool PieGrandeDifamado;
@@ -308,6 +318,26 @@ public class TV : MonoBehaviour
             x = true;
 
         }
+        else if (BenEliminado == false && tiempo.Dia == 5 && TimeManager.Hora == 9 && BenBombaCasa == false && bitacoras.BenRetirado == false)
+        {
+            int IncrementoRating = 3;
+            noticia.text = BenBombaEscuelaNoticia;
+            titular.text = BenBombaEscuelaTitulo;
+            PC.Rating = PC.Rating + IncrementoRating;
+            if (PC.Rating >= 16) { PC.RatinMaximo(); }
+            x = true;
+            BenBombaEscuela = true;
+        }
+        else if (BenEliminado == true && tiempo.Dia == 5 && TimeManager.Hora == 9 && bitacoras.BenRetirado == false)
+        {
+            int IncrementoRating = 3;
+            noticia.text = BenBombaCasaNoticia;
+            titular.text = BenBombaCasaTitulo;
+            PC.Rating = PC.Rating + IncrementoRating;
+            if (PC.Rating >= 16) { PC.RatinMaximo(); }
+            x = true;
+            BenBombaCasa = true;
+        }
         else if (tiempo.Dia == 5 && TimeManager.Hora == 10)
         {
             int IncrementoRating = 0;
@@ -317,6 +347,17 @@ public class TV : MonoBehaviour
             if (PC.Rating >= 16) { PC.RatinMaximo(); }
             x = true;
 
+        }
+
+        else if (bitacoras.PieGrandeEliminado == true && PieGrandeEliminado == true && tiempo.Dia == 5 && TimeManager.Hora == 17 && KateEliminado2 == false)
+        {
+            int IncrementoRating = 8;
+            noticia.text = PieGrandeEliminadoNoticia2; //PIE GRANDE ERA MI FIANCÉ. REAPARECE KATE MILLIARD Y CUENTA TODO!
+            titular.text = PieGrandeEliminadoTitulo2;
+            PC.Rating = PC.Rating + IncrementoRating;
+            if (PC.Rating >= 16) { PC.RatinMaximo(); }
+            x = true;
+            PieGrandeEliminado = true;
         }
         else if (tiempo.Dia == 6 && TimeManager.Hora == 10)
         {
@@ -338,6 +379,18 @@ public class TV : MonoBehaviour
             x = true;
 
         }
+
+
+        else if (bitacoras.KateEliminada == false && PieGrandeEliminado == false && KateEliminada == false && tiempo.Dia == 7 && TimeManager.Hora == 17)
+        {
+            int IncrementoRating = 15;
+            noticia.text = CasamientoNoticia;//KATE MILLIARD ANUNCIA CASAMIENTO CON PIE GRANDE! LAS LEYENDAS ERAN CIERTAS!
+            titular.text = CasamientoTitulo;
+            PC.Rating = PC.Rating + IncrementoRating;
+            if (PC.Rating >= 16) { PC.RatinMaximo(); }
+            x = true;
+
+        }
         //============================================================================ TV RUMOR =============================================================================//
         else if (tiempo.Dia == 3 && TimeManager.Hora == 7)
         {
@@ -347,90 +400,77 @@ public class TV : MonoBehaviour
             PC.Rating = PC.Rating + IncrementoRating;
             if (PC.Rating >= 16) { PC.RatinMaximo(); }
             x = true;
-
         }
 
         //============================================================================ TV Ben Benji =============================================================================//
         else if (bitacoras.BenEliminado == true && BenEliminado == false)
         {
             int IncrementoRating = 3;
-            StartCoroutine(ImprimirNoticia(BenDesapareceTitulo, BenDesapareceNoticia, IncrementoRating));
+            int RetencionNoticia = EliminarRetencion;
+            StartCoroutine(ImprimirNoticia(BenDesapareceTitulo, BenDesapareceNoticia, IncrementoRating, RetencionNoticia));
             BenEliminado = true;
         }
-        else if (BenEliminado == true && tiempo.Dia == 5 && TimeManager.Hora == 9 && bitacoras.BenRetirado == false)
-        {
-            int IncrementoRating = 3;
-            StartCoroutine(ImprimirNoticia(BenBombaCasaTitulo, BenBombaCasaNoticia, IncrementoRating));
-            BenBombaCasa = true;
-        }
-        else if (BenEliminado == false && tiempo.Dia == 5 && TimeManager.Hora == 9 && BenBombaCasa == false && bitacoras.BenRetirado == false)
-        {
-            int IncrementoRating = 3;
-            StartCoroutine(ImprimirNoticia(BenBombaEscuelaTitulo, BenBombaEscuelaNoticia, IncrementoRating));
-            BenBombaEscuela = true;
-        }
+       
         else if (bitacoras.BenLavado == true && BenBrainwash == false)//
         {
             int IncrementoRating = 1;
-            StartCoroutine(ImprimirNoticia(BenBrainwashTitulo, BenBrainwashNoticia, IncrementoRating));
+            int RetencionNoticia = LavarRetencion;
+            StartCoroutine(ImprimirNoticia(BenBrainwashTitulo, BenBrainwashNoticia, IncrementoRating, RetencionNoticia));
             BenBrainwash = true;
         }
         else if (bitacoras.BenDifamado == true && bitacoras.BenHackeado == false && BenDifamado1 == false)// Hackeado = false
         {
             int IncrementoRating = -2;
-            StartCoroutine(ImprimirNoticia(BenDifamadoTitulo1, BenDifamadoNoticia1, IncrementoRating));
+            int RetencionNoticia = DifamarRetencion;
+            StartCoroutine(ImprimirNoticia(BenDifamadoTitulo1, BenDifamadoNoticia1, IncrementoRating, RetencionNoticia));
             BenDifamado1 = true;
         }
-        else if (bitacoras.BenRetirado == true)// Hackeado = true
+        else if (bitacoras.BenEliminado == false && bitacoras.BenLavado == false && bitacoras.BenRetirado == true && BenDifamado2 == false)// Hackeado = true
         {
             int IncrementoRating = -4;
-            StartCoroutine(ImprimirNoticia(BenDifamadoTitulo2, BenDifamadoNoticia2, IncrementoRating));
+            int RetencionNoticia = 3;
+            StartCoroutine(ImprimirNoticia(BenDifamadoTitulo2, BenDifamadoNoticia2, IncrementoRating, RetencionNoticia));
             BenDifamado1 = true;
+            BenDifamado2 = true;
         }
         //============================================================================ TV Pie Grande ===================================================================//
         else if (bitacoras.PieGrandeEliminado == true && PieGrandeEliminado == false && KateEliminada == false)
         {
             int IncrementoRating = 5;
-            StartCoroutine(ImprimirNoticia(PieGrandeEliminadoTitulo, PieGrandeEliminadoNoticia, IncrementoRating));
+            int RetencionNoticia = 3;
+            StartCoroutine(ImprimirNoticia(PieGrandeEliminadoTitulo, PieGrandeEliminadoNoticia, IncrementoRating, RetencionNoticia));
             PieGrandeEliminado = true;
         }
-        else if (bitacoras.PieGrandeEliminado == true && PieGrandeEliminado == true && tiempo.Dia == 5 && TimeManager.Hora ==17 && KateEliminado2 == false)
-        {
-            int IncrementoRating = 8;
-            StartCoroutine(ImprimirNoticia(PieGrandeEliminadoTitulo2, PieGrandeEliminadoNoticia2, IncrementoRating));
-            PieGrandeEliminado = true;
-        }
+        
         else if (bitacoras.PieGrandeDifamado == true && PieGrandeDifamado == false)
         {
             int IncrementoRating = 3;
-            StartCoroutine(ImprimirNoticia(PieGrandeDifamadoTitulo, PieGrandeDifamadoNoticia, IncrementoRating));
+            int RetencionNoticia = 3;
+            StartCoroutine(ImprimirNoticia(PieGrandeDifamadoTitulo, PieGrandeDifamadoNoticia, IncrementoRating, RetencionNoticia));
             PieGrandeDifamado = true;
         }
         //============================================================================ TV Kate Milliard ===================================================================//
 
-        else if (bitacoras.KateEliminada == false && PieGrandeEliminado == false && KateEliminada == false && tiempo.Dia == 7 && TimeManager.Hora == 17)
-        {
-            int IncrementoRating = 15;
-            StartCoroutine(ImprimirNoticia(CasamientoTitulo, CasamientoNoticia, IncrementoRating));
-            
-        }
         else if (bitacoras.KateEliminada == true && PieGrandeEliminado == false && KateEliminada == false)
         {
             int IncrementoRating = 7;
-            StartCoroutine(ImprimirNoticia(KateEliminadaTitulo, KateEliminadaNoticia, IncrementoRating));
+            int RetencionNoticia = 3;
+            StartCoroutine(ImprimirNoticia(KateEliminadaTitulo, KateEliminadaNoticia, IncrementoRating, RetencionNoticia));
             KateEliminada = true;
         }
         else if (bitacoras.KateEliminada == true && PieGrandeEliminado == false && KateEliminada == true && (tiempo.Dia == 6 || tiempo.Dia == 7))
         {
             int IncrementoRating = 13;
-            StartCoroutine(ImprimirNoticia(KateEliminadaTitulo2, KateEliminadaNoticia2, IncrementoRating));
+            int RetencionNoticia = 3;
+            StartCoroutine(ImprimirNoticia(KateEliminadaTitulo2, KateEliminadaNoticia2, IncrementoRating, RetencionNoticia));
             KateEliminada = true;
         }
         //============================================================================ TV Crear Escena ===================================================================//
         else if (bitacoras.CrearEscena == true && CrearEscena == false)
         {
             int IncrementoRating = -2;
-            StartCoroutine(ImprimirNoticia(CrearEscenaTitulo, CrearEscenaNoticia, IncrementoRating));
+            int RetencionNoticia = 3;
+            StartCoroutine(ImprimirNoticia(CrearEscenaTitulo, CrearEscenaNoticia, IncrementoRating, RetencionNoticia));
             CrearEscena = true;
         }
         //============================================================================ TV Pimienta Paluza ===================================================================//
@@ -438,33 +478,38 @@ public class TV : MonoBehaviour
         else if (bitacoras.PimientaPaluzaHackeado == true && PimientaPaluzaHackeado == false)
         {
             int IncrementoRating = 5;
-            StartCoroutine(ImprimirNoticia(PimientaPaluzaCanceladoTitulo, PimientaPaluzaCanceladoNoticia, IncrementoRating));
+            int RetencionNoticia = 3;
+            StartCoroutine(ImprimirNoticia(PimientaPaluzaCanceladoTitulo, PimientaPaluzaCanceladoNoticia, IncrementoRating, RetencionNoticia));
             PimientaPaluzaHackeado = true;
         }
         //============================================================================ TV Parque Pimienta =============================================================================//
         else if (bitacoras.ParquePimientaAislado == true && PimientaPaluzaHackeado == false && ParquePimientaAislado1 == false) // Hackeado = false
         {
             int IncrementoRating = 3;
-            StartCoroutine(ImprimirNoticia(ParquePimientaTitulo1, ParquePimientaNoticia1, IncrementoRating));
+            int RetencionNoticia = 3;
+            StartCoroutine(ImprimirNoticia(ParquePimientaTitulo1, ParquePimientaNoticia1, IncrementoRating, RetencionNoticia));
             ParquePimientaAislado1 = true;
             libreta.BtnPimientapaluzers.SetActive(true);
         }
         else if (bitacoras.ParquePimientaAislado == true && PimientaPaluzaHackeado == true && ParquePimientaAislado2 == false) // Hackeado = true
         {
             int IncrementoRating = 0;
-            StartCoroutine(ImprimirNoticia(ParquePimientaTitulo2, ParquePimientaNoticia2, IncrementoRating));
+            int RetencionNoticia = 3;
+            StartCoroutine(ImprimirNoticia(ParquePimientaTitulo2, ParquePimientaNoticia2, IncrementoRating, RetencionNoticia));
             ParquePimientaAislado2 = true;
         }
         else if (bitacoras.ParquePimientaAislado == true && bitacoras.BenEliminado == false && bitacoras.BenLavado == false && bitacoras.PepeLavado == false && bitacoras.PepeEliminado == false && PimientaPaluzaHackeado == true && ParquePimientaAislado3 == false) // Hackeado = true Ben Pepe
         {
             int IncrementoRating = 5;
-            StartCoroutine(ImprimirNoticia(ParquePimientaTitulo3, ParquePimientaNoticia3, IncrementoRating));
+            int RetencionNoticia = 3;
+            StartCoroutine(ImprimirNoticia(ParquePimientaTitulo3, ParquePimientaNoticia3, IncrementoRating, RetencionNoticia));
             ParquePimientaAislado3 = true;
         }
         else if (bitacoras.ParquePimientaAislado == true && bitacoras.PieGrandeEliminado == false && bitacoras.PieGrandeLavado == false && bitacoras.KateLavada == false && bitacoras.KateEliminada == false && PimientaPaluzaHackeado == true && ParquePimientaAislado3 == false && ParquePimientaAislado4 == false) // Hackeado = true Kate Pie Grande
         {
             int IncrementoRating = 5;
-            StartCoroutine(ImprimirNoticia(ParquePimientaTitulo4, ParquePimientaNoticia4, IncrementoRating));
+            int RetencionNoticia = 3;
+            StartCoroutine(ImprimirNoticia(ParquePimientaTitulo4, ParquePimientaNoticia4, IncrementoRating, RetencionNoticia));
             ParquePimientaAislado4 = true;
         }
         //============================================================================ TV Pimientapaluza ===================================================================//
@@ -475,26 +520,30 @@ public class TV : MonoBehaviour
         else if (bitacoras.PimientapaluzersEliminado == true && PimientapaluzersEliminado == false)
         {
             int IncrementoRating = 8;
-            StartCoroutine(ImprimirNoticia(PimientapaluzersTitulo, PimientapaluzersNoticia, IncrementoRating));
+            int RetencionNoticia = 3;
+            StartCoroutine(ImprimirNoticia(PimientapaluzersTitulo, PimientapaluzersNoticia, IncrementoRating, RetencionNoticia));
             PimientapaluzersEliminado = true;
         }
         else if (bitacoras.PimientapaluzersDifamado == true && PimientapaluzersDifamado == false)
         {
             int IncrementoRating = 5;
-            StartCoroutine(ImprimirNoticia(PimientapaluzersTitulo2, PimientapaluzersNoticia2, IncrementoRating));
+            int RetencionNoticia = 3;
+            StartCoroutine(ImprimirNoticia(PimientapaluzersTitulo2, PimientapaluzersNoticia2, IncrementoRating, RetencionNoticia));
             PimientapaluzersDifamado = true;
         }
         //============================================================================ TV Pepe Queño ===================================================================//
         else if (bitacoras.PepeEliminado == true && bitacoras.BenEliminado == false && PepeQueñoEliminado1 == false)
         {
             int IncrementoRating = 0;
-            StartCoroutine(ImprimirNoticia(PepeQueñoTitulo1, PepeQueñoNoticia1, IncrementoRating));
+            int RetencionNoticia = 3;
+            StartCoroutine(ImprimirNoticia(PepeQueñoTitulo1, PepeQueñoNoticia1, IncrementoRating, RetencionNoticia));
             PepeQueñoEliminado1 = true;
         }
         else if (bitacoras.PepeEliminado == true && bitacoras.BenEliminado == false && PepeQueñoEliminado2 == false)
         {
             int IncrementoRating = 0;
-            StartCoroutine(ImprimirNoticia(PepeQueñoTitulo2, PepeQueñoNoticia2, IncrementoRating));
+            int RetencionNoticia = 3;
+            StartCoroutine(ImprimirNoticia(PepeQueñoTitulo2, PepeQueñoNoticia2, IncrementoRating, RetencionNoticia));
             PepeQueñoEliminado2 = true;
         }
         //=========================================================================== TV Noticia Falsa ===============================================================//
@@ -555,16 +604,21 @@ public class TV : MonoBehaviour
 
     }
 
-    IEnumerator ImprimirNoticia(string T, string N, int IncrementoRating)
+    IEnumerator ImprimirNoticia(string T, string N, int IncrementoRating, int RetencioNoticia)
     {
         x = true;
-        yield return StartCoroutine(tiempo.RetencionBitacorasSegunAccion(RetencionNoticia));
+        yield return StartCoroutine(tiempo.RetencionBitacorasSegunAccion(RetencioNoticia));
         noticia.text = N;
         titular.text = T;
         PC.Rating = PC.Rating + IncrementoRating;
         if (PC.Rating >= 16) { PC.RatinMaximo(); }
+        LaFuncionMasEspecificaDelMundoPorqueEsteJugoNoDejaDeTenerDetallesBoludos();
     }
 
+    private void LaFuncionMasEspecificaDelMundoPorqueEsteJugoNoDejaDeTenerDetallesBoludos ()
+    {
+       if(BenDifamado2) libreta.BtnBen.SetActive(false);
+    }
 
     /// ================================================================== Noticias Aleatorias ========================================================= ///
 	string TitularAleatoria1 = "ALMONDIGAS DE MURCIEGALO: EL PLATO DEL MOMENTO";
