@@ -260,7 +260,7 @@ public class Libreta : MonoBehaviour
     {
         if (PCSwitcher.PantallaPC == true)
         {
-            //SONIDO TECLEADO
+            Sonido.SonidodeTeclado();
         }
     }
 }

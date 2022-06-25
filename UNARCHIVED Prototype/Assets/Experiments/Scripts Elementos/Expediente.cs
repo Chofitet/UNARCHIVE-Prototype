@@ -20,7 +20,7 @@ public class Expediente : MonoBehaviour
         {
             if(PantallaExp == true)
             {
-                //Sonido expediente cerrado
+                Sonido.SonidoCerrarExpediente();
           
             }
             PantallaExp = false;

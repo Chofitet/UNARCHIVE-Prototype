@@ -296,7 +296,7 @@ public class PC : MonoBehaviour
     {
         if (SonidoTerm == true)
         {
-            //Sonido (Javi)
+            Sonido.SonidoPING();
             SonidoTerm = false;
         }
     }
