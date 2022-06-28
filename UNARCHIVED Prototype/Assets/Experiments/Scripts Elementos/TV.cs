@@ -631,7 +631,7 @@ public class TV : MonoBehaviour
     string NoticiaAleatoria3 = "Y CUANDO";
 
     string TitularAleatoria4 = "FESTIVAL 'PATEA UN TIBURÓN' TERMINA EN SORPRESIVA TRAGEDIA";
-    string NoticiaAleatoria4 = "FINALMENTE PASÓ LO IMPENSABLE";
+    string NoticiaAleatoria4 = "FINALMENTE PASÓ LO IMPENSABLE. ¿ES ESTE EL FIN DEL FESTIVAL 'PATEA UN TIBURON'?";
 
     string TitularAleatoria5 = "ASESINO SERIAL RAGE QUITS";
     string NoticiaAleatoria5 = "ASESINO SERIAL RAGE QUITS";
@@ -646,13 +646,13 @@ public class TV : MonoBehaviour
     string NoticiaAleatoria8 = "PONETE LOS LENTES, PA";
 
     string TitularAleatoria9 = "GAME DESIGNER PROPONE FEATURE A ÚLTIMO MOMENTO";
-    string NoticiaAleatoria9 = "PONETE LOS LENTES, PA";
+    string NoticiaAleatoria9 = "GAME DESIGNER SORPRENDE A EQUIPO PROPONIENDO FEATURE ESCENCIAL A HORAS DE ENTREGA";
 
     string TitularAleatoria10 = "ES OFICIAL: JAMES, A NADIE LE IMPORTA AVATAR";
     string NoticiaAleatoria10 = "PONETE LOS LENTES, PA";
 
     string TitularAleatoria11 = "LORO BOCASUCIA ARRUINA BAUTISMO";
-    string NoticiaAleatoria11 = "POLLY NO QUIERE UNA GALLETA, QUIERE &#$%@< Y +{<*/:(";
+    string NoticiaAleatoria11 = "POLLY NO QUIERE UNA GALLETA, QUIERE &#$%@< Y +{<*/:(. ";
 
     string TitularAleatoria12 = "COMO ROBAR DESEOS DE CUMPLEAÑOS COMO ESE NENE DE LA PELI";
     string NoticiaAleatoria12 = "PONETE LOS LENTES, PA";
@@ -664,20 +664,52 @@ public class TV : MonoBehaviour
     string NoticiaAleatoria14 = "PONETE LOS LENTES, PA";
 
     string TitularAleatoria15 = "TECHPROOF CUMPLE CON LA MÍNIMA. ALUMNOS SE REGOZIJAN";
-    string NoticiaAleatoria15 = "PONETE LOS LENTES, PA";
+    string NoticiaAleatoria15 = "LA LEY DEL MINIMO ESFUERZO TRAJO";
 
     string TitularAleatoria16 = "APRENDE OTRO IDIOMA CAMBIANDOLO EN SETTINGS";
     string NoticiaAleatoria16 = "PONETE LOS LENTES, PA";
 
-    string TitularAleatoria17 = "ES OFICIAL: NADA PASÓ EN UNA HORA";
-    string NoticiaAleatoria17 = "PONETE LOS LENTES, PA";
+    string TitularAleatoria17 = "HACE UNA HORA QUE NO PASA NADA";
+    string NoticiaAleatoria17 = "¿ES ESTE EL FIN DEL MUNDO DEL PERIODISMO COMO LO CONOCEMOS?";
 
     string TitularAleatoria18 = "ESTERNOCLEIDOMASTOIDEO Y OTRAS 10 PARALABRAS QUEMADAS PARA JUGAR AL AHORCADO COMO UN GIL";
     string NoticiaAleatoria18 = "PONETE LOS LENTES, PA";
 
     string TitularAleatoria19 = "ABUELITA REAPARECE DESPUES DE CAER EN DUDOSO POZO SIN FONDO";
-    string NoticiaAleatoria19 = "PONETE LOS LENTES, PA";
+    string NoticiaAleatoria19 = "NIETOS RECLAMAN REGALOS";
 
+    string TitularAleatoria21 = "";
+    string NoticiaAleatoria21 = "";
+
+    string TitularAleatoria22 = "";
+    string NoticiaAleatoria22 = "";
+
+    string TitularAleatoria23 = "";
+    string NoticiaAleatoria23 = "";
+
+    string TitularAleatoria24 = "";
+    string NoticiaAleatoria24 = "";
+
+    string TitularAleatoria25 = "";
+    string NoticiaAleatoria25 = "";
+
+    string TitularAleatoria26 = "";
+    string NoticiaAleatoria26 = "";
+
+    string TitularAleatoria27 = "";
+    string NoticiaAleatoria27 = "";
+
+    string TitularAleatoria28 = "BIZCOCHITOS DE ADAMANTIUM";
+    string NoticiaAleatoria28 = "SORPRENDE A TUS VISITAS CON EL LIBRO DE RECETAS DE LA ABUELA HARDCORE";
+
+    string TitularAleatoria29 = "";
+    string NoticiaAleatoria29 = "";
+
+    string TitularAleatoria30 = "";
+    string NoticiaAleatoria30 = "";
+
+    string TitularAleatoria31 = "";
+    string NoticiaAleatoria31 = "";
 
 
     void NoticiasAliatorias()
