@@ -48,7 +48,7 @@ public class TV : MonoBehaviour
     //============================================================================ TV Ben Benji =============================================================================//
     bool RomoresPuebloPimienta;
     string RumoresPuebloPimientaTitulo = "BIZARRO RUMOR TOMA MODERADO VUELO EN PUEBLO PIMIENTA";
-    string RumoresPuebloPimientaNoticia = "¿CREER O REVENTAR? LAS RESPUESTAS SE ACERCAN";
+    string RumoresPuebloPimientaNoticia = "¿CREER O REVENTAR? LAS RESPUESTAS SE ACERCAN EN PUEBLO PIMIENTA";
 
     public bool BenEntrevista1; //aviso de que se hará la entrevista
     string BenEntrevistaTitulo1 = "ENTREVISTA EXCLUSIVA CON NIÑO AVISTADOR DE MISTERIOSA CRIATURA MAÑANA A LAS 12 AM";
@@ -120,12 +120,12 @@ public class TV : MonoBehaviour
     string KateEliminadaNoticia2 = "PUEBLO PIMIENTA DESTRUIDO!";
 
     bool CrearEscena;
-    string CrearEscenaTitulo = "HOMBRE PELUDO Y COLORADA DESMIENTE LOS DICHOS DE BENJI¿ERA EL RUMOR FALSO?";
-    string CrearEscenaNoticia = "HOMBRE PELUDO Y COLORADA DESMIENTE LOS DICHOS DE BENJI¿ERA EL RUMOR FALSO?";
+    string CrearEscenaTitulo = "HOMBRE PELUDO Y COLORADA DESMIENTEN LOS DICHOS DE BENJI ¿ERA FALSO EL RUMOR?";
+    string CrearEscenaNoticia = "HOMBRE PELUDO Y COLORADA DESMIENTEN LOS DICHOS DE BENJI ¿ERA FALSO EL RUMOR?";
 
     bool Casamiento;
-    string CasamientoTitulo = "KATE MILLIARD ANUNCIA CASAMIENTO CON PIE GRANDE! LAS LEYENDAS ERAN CIERTAS!";
-    string CasamientoNoticia = "KATE MILLIARD ANUNCIA CASAMIENTO CON PIE GRANDE! LAS LEYENDAS ERAN CIERTAS!";
+    string CasamientoTitulo = "KATE MILLIARD ANUNCIA CASAMIENTO CON PIE GRANDE! LAS LEYENDAS ERAN CIERTAS Y AMOROSAS!";
+    string CasamientoNoticia = "KATE MILLIARD ANUNCIA CASAMIENTO CON PIE GRANDE! LAS LEYENDAS ERAN CIERTAS Y AMOROSAS!";
 
     //============================================================================ TV Pimientapaluza ===================================================================//
     string PimientaPaluzaAnuncioTitulo = "SE APROXIMA EL PIMIENTAPALUZA! TODOS PREPARADOS PARA EL 28?"; //EL 24
@@ -138,10 +138,10 @@ public class TV : MonoBehaviour
     string PimientaPaluzaMañanaNoticia = "EL FESTIVAL SE ADELANTA UN DIA ";
 
     string PimientaPaluzaArrancaTitulo = "DA INICIO EL PIMIENTAPALUZA";//EL 27
-    string PimientaPaluzaArrancaNoticia = "WIP";
+    string PimientaPaluzaArrancaNoticia = "EL FESTIVAL DE MÚSICA MAS GRANDE DEL PLANETA HA DADO COMIENZO EN PARQUE PIMIENTA";
 
-    string PimientaPaluzaAisladoTitulo = "WIP";
-    string PimientaPaluzaAisladoNoticia = "WIP";
+    string PimientaPaluzaAisladoTitulo = "CERCA GIGANTE RODEA LA CERCA GIGANTE DE PIMIENTAPALUZA";
+    string PimientaPaluzaAisladoNoticia = "MISTERIOSA CERCA SE CIERRA SOBRE EL FESTIVAL. PIMIENTAPALUZERS SE MUESTRAN APÁTICOS ANTE ESTE SUCESO.";
 
     bool PimientaPaluzaHackeado;
     string PimientaPaluzaCanceladoTitulo = "¡PIMIENTA PALUZA CANCELADO! DON PALUZA DEVUELVE LA PLATA. QUE AGRADABLE SUJETO";
@@ -149,11 +149,11 @@ public class TV : MonoBehaviour
     //============================================================================ TV Pimientapaluzers ===================================================================//
     bool PimientapaluzersEliminado;
     string PimientapaluzersTitulo = "¡MASACRE FRENTE A PARQUE PIMIENTA!";
-    string PimientapaluzersNoticia = "¡MASACRE FRENTE A PARQUE PIMIENTA!";
+    string PimientapaluzersNoticia = "WIP ¡MASACRE FRENTE A PARQUE PIMIENTA!";
 
     bool PimientapaluzersDifamado;
-    string PimientapaluzersTitulo2 = "ALGO DIFAMANTE";
-    string PimientapaluzersNoticia2 = "ALGO DIFAMANTE";
+    string PimientapaluzersTitulo2 = "WIP ALGO DIFAMANTE";
+    string PimientapaluzersNoticia2 = "WIP ALGO DIFAMANTE";
     //============================================================================ TV Pepe Queño ===================================================================//
     bool PepeQueñoEliminado1;
     string PepeQueñoTitulo1 = "JOVEN ORGANIZA BÚSQUEDA POR SU AMIGO IMAGINARIO"; //Parte 1
@@ -627,8 +627,8 @@ public class TV : MonoBehaviour
     string TitularAleatoria2 = "¿DIETA O RADIACION? CÓMO QUEMAR ESOS KILOS DE MÁS";
     string NoticiaAleatoria2 = "PONETE LOS LENTES, PA";
 
-    string TitularAleatoria3 = "CÓMO Y DÓNDE ENCONTRAR QUESO INVISIBLE";
-    string NoticiaAleatoria3 = "Y CUANDO";
+    string TitularAleatoria3 = "BIZCOCHITOS DE ADAMANTIUM";
+    string NoticiaAleatoria3 = "SORPRENDE A TUS VISITAS CON EL LIBRO DE RECETAS DE LA ABUELA HARDCORE";
 
     string TitularAleatoria4 = "FESTIVAL 'PATEA UN TIBURÓN' TERMINA EN SORPRESIVA TRAGEDIA";
     string NoticiaAleatoria4 = "FINALMENTE PASÓ LO IMPENSABLE. ¿ES ESTE EL FIN DEL FESTIVAL 'PATEA UN TIBURON'?";
@@ -678,10 +678,10 @@ public class TV : MonoBehaviour
     string TitularAleatoria19 = "ABUELITA REAPARECE DESPUES DE CAER EN DUDOSO POZO SIN FONDO";
     string NoticiaAleatoria19 = "NIETOS RECLAMAN REGALOS";
 
-    string TitularAleatoria21 = "";
+    string TitularAleatoria21 = "GROG! LA BEBIDA QUE ALGO ALGO";
     string NoticiaAleatoria21 = "";
 
-    string TitularAleatoria22 = "";
+    string TitularAleatoria22 = "POLENTA OLVIDADA EN EL FONDO DE LA HELADERA SE COBRA OTRA VIDA";
     string NoticiaAleatoria22 = "";
 
     string TitularAleatoria23 = "";
@@ -696,11 +696,11 @@ public class TV : MonoBehaviour
     string TitularAleatoria26 = "";
     string NoticiaAleatoria26 = "";
 
-    string TitularAleatoria27 = "";
-    string NoticiaAleatoria27 = "";
+    string TitularAleatoria27 = "CÓMO Y DÓNDE ENCONTRAR QUESO INVISIBLE";
+    string NoticiaAleatoria27 = "Y CUANDO";
 
-    string TitularAleatoria28 = "BIZCOCHITOS DE ADAMANTIUM";
-    string NoticiaAleatoria28 = "SORPRENDE A TUS VISITAS CON EL LIBRO DE RECETAS DE LA ABUELA HARDCORE";
+    string TitularAleatoria28 = "";
+    string NoticiaAleatoria28 = "";
 
     string TitularAleatoria29 = "";
     string NoticiaAleatoria29 = "";
