@@ -776,8 +776,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -38, y: -622.3}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchoredPosition: {x: -26.404247, y: -661}
+  m_SizeDelta: {x: 270, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &42196299
 CanvasRenderer:
@@ -807,7 +807,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: New Text
+  m_text: "<b>PIE GRANDE ELIMINADO</b>\"\r\n\"El \xFAltimo Pie Grande ha muerto,
+    pero se ha cargado a nuestro agente de manera gloriosa. No podremos hacer eliminaciones
+    por el resto del caso.\""
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -7003,14 +7005,14 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\t\t\t\t\t        23/03/2000\r\n\t\t\n                            -<u>VENUS
-    IN FUR</u>-\r\n\n\nALERTA MAGENTA! Ni\xF1o se encuentra propagando haber avistado
-    a Pie Grande reciprocando besitos mariposa con misteriosa colorada durante inocente
-    excurci\xF3n.\n\n\n<u>OBJETIVO:</u> Verificar presencia de Pie Grande y tomar
-    las acciones necesarias para mantener bajo control la TEMPERATURA de la situaci\xF3n
-    hasta la llegada de El Equipo de Limpieza el 27/03. \n\nProveeremos un equipo
-    de especialistas acorde al caso.\n\nNo convertir esto en un Evento AZUL.\n\nTestigo/s:
-    Ben Benji\r.\n\nLugar: Pueblo Pimienta."
+  m_text: "\t\t\t\t\t        23/03/2000\r\n\t\t\n                            -<u><b>VENUS
+    IN FUR</b></u>-\r\n\n\nALERTA MAGENTA! Ni\xF1o se encuentra propagando haber
+    avistado a Pie Grande reciprocando besitos mariposa con misteriosa colorada durante
+    inocente excurci\xF3n.\n\n\n<u>OBJETIVO:</u> Verificar presencia de Pie Grande
+    y tomar las acciones necesarias para mantener bajo control la TEMPERATURA de
+    la situaci\xF3n hasta la llegada de El Equipo de Limpieza el 27/03. \n\nProveeremos
+    un equipo de especialistas acorde al caso.\n\nNo convertir esto en un Evento
+    AZUL.\n\nTestigo/s: Ben Benji\r.\n\nLugar: Pueblo Pimienta."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -11699,8 +11701,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -38, y: -521}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchoredPosition: {x: -26.4, y: -536}
+  m_SizeDelta: {x: 270, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &942434991
 CanvasRenderer:
@@ -11730,7 +11732,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: New Text
+  m_text: "<b>PIE GRANDE ELIMINADO</b>\"\r\n\"El \xFAltimo Pie Grande ha muerto,
+    pero se ha cargado a nuestro agente de manera gloriosa. No podremos hacer eliminaciones
+    por el resto del caso.\""
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -11834,7 +11838,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -51, y: -483}
+  m_AnchoredPosition: {x: -51, y: -476.6}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &958825548
@@ -11972,7 +11976,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 64, y: 118.8}
+  m_AnchoredPosition: {x: 64, y: 139.5}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &980845921
@@ -12718,7 +12722,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1070692277}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -12727,8 +12731,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -38, y: -675.2}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchoredPosition: {x: -26.404247, y: -724}
+  m_SizeDelta: {x: 270, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1070692279
 CanvasRenderer:
@@ -12758,7 +12762,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: New Text
+  m_text: "<b>PIE GRANDE ELIMINADO</b>\"\r\n\"El \xFAltimo Pie Grande ha muerto,
+    pero se ha cargado a nuestro agente de manera gloriosa. No podremos hacer eliminaciones
+    por el resto del caso.\""
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -13021,8 +13027,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 15
-  m_fontSizeBase: 15
+  m_fontSize: 14
+  m_fontSizeBase: 14
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -13088,8 +13094,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -24.070068, y: 128.4}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchoredPosition: {x: -6, y: 35}
+  m_SizeDelta: {x: 226, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1082012354
 GameObject:
@@ -18890,8 +18896,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -38, y: -729.9}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchoredPosition: {x: -26.404247, y: -785}
+  m_SizeDelta: {x: 270, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1527970892
 CanvasRenderer:
@@ -18921,7 +18927,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: New Text
+  m_text: "<b>PIE GRANDE ELIMINADO</b>\"\r\n\"El \xFAltimo Pie Grande ha muerto,
+    pero se ha cargado a nuestro agente de manera gloriosa. No podremos hacer eliminaciones
+    por el resto del caso.\""
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -21193,18 +21201,18 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1699579214}
-  m_LocalRotation: {x: 0.10500391, y: -0.42653003, z: 0.06964583, w: 0.89565384}
-  m_LocalPosition: {x: 0, y: 0, z: -32.450672}
-  m_LocalScale: {x: 0.045344673, y: 0.045344673, z: 0.04534467}
+  m_LocalRotation: {x: 0.10848854, y: -0.47259665, z: 0.06408273, w: 0.87222475}
+  m_LocalPosition: {x: 0, y: 0, z: -33.84}
+  m_LocalScale: {x: 0.065175794, y: 0.065175794, z: 0.06517579}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1078501385}
   m_Father: {fileID: 2079693305}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 14.33, y: -50.668, z: 2.081}
+  m_LocalEulerAnglesHint: {x: 14.467, y: -56.831, z: 0.547}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -570.8095, y: -197.27}
+  m_AnchoredPosition: {x: -570.3, y: -203.18}
   m_SizeDelta: {x: 320.14, y: 353.2}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &1699579216
@@ -22207,7 +22215,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: New Text
+  m_text: "<b>PIE GRANDE ELIMINADO</b>\"\r\n\"El \xFAltimo Pie Grande ha muerto,
+    pero se ha cargado a nuestro agente de manera gloriosa. No podremos hacer eliminaciones
+    por el resto del caso.\""
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -22292,7 +22302,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1793294544}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -22301,8 +22311,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -38, y: -779.2}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchoredPosition: {x: -26.404247, y: -845}
+  m_SizeDelta: {x: 270, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1821122925
 GameObject:
@@ -24664,8 +24674,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -38, y: -569.4}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchoredPosition: {x: -26.404247, y: -598}
+  m_SizeDelta: {x: 270, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1947220171
 CanvasRenderer:
@@ -24695,7 +24705,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: New Text
+  m_text: "<b>PIE GRANDE ELIMINADO</b>\"\r\n \"El \xFAltimo Pie Grande ha muerto,
+    pero se ha cargado a nuestro agente de manera gloriosa. No podremos hacer eliminaciones
+    por el resto del caso.\""
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}

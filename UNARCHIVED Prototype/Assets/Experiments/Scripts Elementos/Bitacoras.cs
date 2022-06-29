@@ -59,7 +59,7 @@ public class Bitacoras : MonoBehaviour
     /////////////////////////////
     public bool Red78Eliminada;
     public bool Red78Analizada;
-    public bool Red78Difamar;
+    public bool Red78Difamada;
     public bool Red78Lavada;
     public bool Red78Aislada;
     public bool Red78Investigada;
@@ -71,6 +71,8 @@ public class Bitacoras : MonoBehaviour
     public bool KateHackeada;
     public bool KateDifamada;
     public bool KateAnalizada;
+    public bool KateAislada;
+
 
     ///////////////////////////// 
     public bool PepeEliminado;
@@ -79,6 +81,8 @@ public class Bitacoras : MonoBehaviour
     public bool PepeHackeado;
     public bool PepeDifamado;
     public bool PepeAnalizado;
+    public bool PepeAislado;
+
     ///////////////////////////// 
     public bool CabellosRojijosAnalizado;
     public bool CabellosRojijosEliminado;
@@ -87,7 +91,9 @@ public class Bitacoras : MonoBehaviour
     public bool CabellosRojijosHackeados;
     public bool CabellosRojijosDifamado;
     public bool CabellosRojijosAislado;
-
+    
+    ////////////////////////////
+ 
     public bool BananorramaEliminado;
     public bool BananorramaLavado;
     public bool BananorramaInvestigado;
@@ -119,14 +125,16 @@ public class Bitacoras : MonoBehaviour
     public bool WifiRobadoHackeado;
     public bool WifiRobadoInvestigado;
     public bool WifiRobadoDifamado;
+    public bool WifiRobadoAislado;
+
 
     ////////////////////
-    public bool OfrecerProteccion;
-    public bool ConvertirCueva;
-    public bool ExtraerFoto;
-    public bool CrearEscena;
-    public bool PlantarPublico;
-    public bool TrueEnding;
+    public bool OfrecerProteccion; //falta generar
+    public bool ConvertirCueva;//falta generar
+    public bool ExtraerFoto;//falta generar
+    public bool CrearEscena;//falta generar
+    public bool PlantarPublico;//falta generar
+    public bool TrueEnding;//falta generar
 
     private string PreUbicacion;
 
@@ -441,7 +449,7 @@ public class Bitacoras : MonoBehaviour
                 float RetencionBitacora = 3;
                 float HoraCompletado = RetencionBitacora + TimeManager.Hora;
                 string txt = "<b>PIE GRANDE LAVADO</b>"
-                + System.Environment.NewLine + "MISION FALLIDA. Hemos perdido al agente a manos de la criatura. Último mensaje recibido “...Bananorrama”. No podremos hacer lavados de cerebro por el resto del caso.";
+                + System.Environment.NewLine + "MISION FALLIDA. Hemos perdido al agente a manos de la criatura. No podremos hacer lavados de cerebro por el resto del caso. Último mensaje recibido “...Bananorrama”. Es una cinta del 94.";
                 string FechaCompletado = "2" + time.Dia + "/03/2000";
                 string txtAccion = "Lavar cerebro Pie Grande";
                 Toggle accion = A.lavarCerebro;
@@ -654,7 +662,7 @@ public class Bitacoras : MonoBehaviour
             {
                 float RetencionBitacora = 0.001f;
                 float HoraCompletado = RetencionBitacora + TimeManager.Hora;
-                string txt = "<b>PUEBLO PIMIENTA HACKEADO</b>"
+                string txt = "<b>HACKEAR PUEBLO PIMIENTA</b>"
                 + System.Environment.NewLine + "Lo solicitado es un poco mucho.";
                 string FechaCompletado = "2" + time.Dia + "/03/2000";
                 string txtAccion = "Hackear Pueblo Pimienta";
@@ -1169,7 +1177,7 @@ public class Bitacoras : MonoBehaviour
                 float RetencionBitacora = 4;
                 float HoraCompletado = RetencionBitacora + TimeManager.Hora;
                 string txt = "<b>PIMIENTAPALUZERS INVESTIGADOS</b>"
-                + System.Environment.NewLine + "WIP.";
+                + System.Environment.NewLine + "WIP Pasión e integridad.";
                 string FechaCompletado = "2" + time.Dia + "/03/2000";
                 string txtAccion = "Investigar Pimientapaluzers";
                 Toggle accion = A.investigar;
@@ -1194,7 +1202,7 @@ public class Bitacoras : MonoBehaviour
                 float RetencionBitacora = 3;
                 float HoraCompletado = RetencionBitacora + TimeManager.Hora;
                 string txt = "<b>PIMIENTAPALUZERS HACKEADOS</b>"
-                + System.Environment.NewLine + "WIP.";
+                + System.Environment.NewLine + "WIP Todos sacaron las entradas online pero.";
                 string FechaCompletado = "2" + time.Dia + "/03/2000";
                 string txtAccion = "Hackear Pimientapaluzers";
                 Toggle accion = A.hackear;
@@ -1299,7 +1307,7 @@ public class Bitacoras : MonoBehaviour
                 float RetencionBitacora = 0.001f;
                 float HoraCompletado = RetencionBitacora + TimeManager.Hora;
                 string txt = "<b>ELIMINAR COLORADA</b>"
-                + System.Environment.NewLine + "WIP";
+                + System.Environment.NewLine + "Tendriamos que dar primero con su identidad y paradero.";
                 string FechaCompletado = "2" + time.Dia + "/03/2000";
                 string txtAccion = "Eliminar a Colorada";
                 Toggle accion = A.eliminar;
@@ -1324,7 +1332,7 @@ public class Bitacoras : MonoBehaviour
                 float RetencionBitacora =0.001f;
                 float HoraCompletado = RetencionBitacora + TimeManager.Hora;
                 string txt = "<b>INVESTIGAR COLORADA</b>"
-                + System.Environment.NewLine + "Necesitamos mas información.";
+                + System.Environment.NewLine + "WIP quizas debamos focalizarnos en los involucrados confirmados.";
                 string FechaCompletado = "2" + time.Dia + "/03/2000";
                 string txtAccion = "Investigar colorada";
                 Toggle accion = A.investigar;
@@ -1349,7 +1357,7 @@ public class Bitacoras : MonoBehaviour
                 float RetencionBitacora = 0.001f;
                 float HoraCompletado = RetencionBitacora + TimeManager.Hora;
                 string txt = "<b>LAVAR COLORADA</b>"
-                + System.Environment.NewLine + "WIP.";
+                + System.Environment.NewLine + "WIP Tendriamos que dar primero con su identidad y paradero.";
                 string FechaCompletado = "2" + time.Dia + "/03/2000";
                 string txtAccion = "Lavar cerebro a colorada";
                 Toggle accion = A.lavarCerebro;
@@ -1374,7 +1382,7 @@ public class Bitacoras : MonoBehaviour
                 float RetencionBitacora = 0.001f;
                 float HoraCompletado = RetencionBitacora + TimeManager.Hora;
                 string txt = "<b>HACKEAR COLORADA</b>"
-                + System.Environment.NewLine + "WIP.";
+                + System.Environment.NewLine + "WIP Tendriamos que dar primero con su identidad y paradero.";
                 string FechaCompletado = "2" + time.Dia + "/03/2000";
                 string txtAccion = "Hackear colorada";
                 Toggle accion = A.hackear;
@@ -1399,7 +1407,7 @@ public class Bitacoras : MonoBehaviour
                 float RetencionBitacora = 0.001f;
                 float HoraCompletado = RetencionBitacora + TimeManager.Hora;
                 string txt = "<b>DIFAMAR COLORADA</b>"
-                + System.Environment.NewLine + "WIP.";
+                + System.Environment.NewLine + "WIP ninfomana cabellos de satan actos indebidos ante la juventud.";
                 string FechaCompletado = "2" + time.Dia + "/03/2000";
                 string txtAccion = "Difamar colorada";
                 Toggle accion = A.difamar;
@@ -1424,7 +1432,7 @@ public class Bitacoras : MonoBehaviour
                 float RetencionBitacora = 0.001f;
                 float HoraCompletado = RetencionBitacora + TimeManager.Hora;
                 string txt = "<b>AISLAR COLORADA</b>"
-                + System.Environment.NewLine + "WIP";
+                + System.Environment.NewLine + "Quizás debamos pensar un poco más antes de unir palabras al azar.";
                 string FechaCompletado = "2" + time.Dia + "/03/2000";
                 string txtAccion = "Aislar colorada";
                 Toggle accion = A.aislar;
@@ -1449,7 +1457,7 @@ public class Bitacoras : MonoBehaviour
                 float RetencionBitacora = 0.001f;
                 float HoraCompletado = RetencionBitacora + TimeManager.Hora;
                 string txt = "<b>ANALIZAR COLORADA</b>"
-                + System.Environment.NewLine + "WIP";
+                + System.Environment.NewLine + "WIP Quizás debamos pensar un poco más antes de unir palabras al azar.";
                 string FechaCompletado = "2" + time.Dia + "/03/2000";
                 string txtAccion = "Analizar ADN Colorada";
                 Toggle accion = A.analizarMuestra;
@@ -1472,6 +1480,32 @@ public class Bitacoras : MonoBehaviour
         //======================================================= Bitacoras Red78 ==============================================================//
         if (libreta.palabra == libreta.palabrasCaso[7])
         {
+
+            //Eliminar
+            if (A.eliminar.CompareTag(tag = "OptActivado") && A.eliminar.isOn == true && Red78Eliminada == false)
+            {
+                float RetencionBitacora = 0.001f;
+                float HoraCompletado = RetencionBitacora + TimeManager.Hora;
+                string txt = "<b>ELIMINAR RED78</b>"
+                + System.Environment.NewLine + "Tendriamos que dar primero con la persona que se esconde tras el nombre Red78.";
+                string FechaCompletado = "2" + time.Dia + "/03/2000";
+                string txtAccion = "Eliminar Red78";
+                Toggle accion = A.eliminar;
+                if (HoraCompletado >= 18)
+                {
+                    HoraCompletado = 6 + (RetencionBitacora - (18 - TimeManager.Hora));
+                    FechaCompletado = "2" + (time.Dia + 1) + "/03/2000";
+                }
+                int indaux = ind;
+                int a = 1;
+                CargarVectorProgreso(txtAccion, FechaCompletado, HoraCompletado, indaux);
+                SetearBitacora();
+                a = aux;
+                ActualizarIndice();
+                StartCoroutine(GuardarBitacora(RetencionBitacora, txt, indaux, accion, a));
+                A.eliminar.interactable = false;
+                Red78Eliminada = true;
+            }
             //Investigar 
             if (A.investigar.CompareTag(tag = "OptActivado") && A.investigar.isOn == true && Red78Investigada == false && Red78Hackeada == false)
             {
@@ -1498,6 +1532,31 @@ public class Bitacoras : MonoBehaviour
                 Red78Investigada = true;
                 A.investigar.interactable = false;
             }
+            //Brainwash
+            if (A.lavarCerebro.CompareTag(tag = "OptActivado") && A.lavarCerebro.isOn == true && Red78Lavada == false)
+            {
+                float RetencionBitacora = 0.001f;
+                float HoraCompletado = RetencionBitacora + TimeManager.Hora;
+                string txt = "<b>LAVAR RED78</b>"
+                + System.Environment.NewLine + "WIP.";
+                string FechaCompletado = "2" + time.Dia + "/03/2000";
+                string txtAccion = "Lavar cerebro a Red78";
+                Toggle accion = A.lavarCerebro;
+                if (HoraCompletado >= 18)
+                {
+                    HoraCompletado = 6 + (RetencionBitacora - (18 - TimeManager.Hora));
+                    FechaCompletado = "2" + (time.Dia + 1) + "/03/2000";
+                }
+                int indaux = ind;
+                int a = 1;
+                CargarVectorProgreso(txtAccion, FechaCompletado, HoraCompletado, indaux);
+                SetearBitacora();
+                a = aux;
+                ActualizarIndice();
+                StartCoroutine(GuardarBitacora(RetencionBitacora, txt, indaux, accion, a));
+                Red78Lavada = true;
+                A.lavarCerebro.interactable = false;
+            }
             //Hackeado
             if (A.hackear.CompareTag(tag = "OptActivado") && A.hackear.isOn == true && Red78Hackeada == false && Red78Investigada == false)
             {
@@ -1523,6 +1582,83 @@ public class Bitacoras : MonoBehaviour
                 StartCoroutine(GuardarBitacora(RetencionBitacora, txt, indaux, accion, a));
                 Red78Hackeada = true;
                 A.hackear.interactable = false;
+
+
+            }
+            //Difamar
+            if (A.difamar.CompareTag(tag = "OptActivado") && A.difamar.isOn == true && Red78Difamada == false)
+            {
+                float RetencionBitacora = 1;
+                float HoraCompletado = RetencionBitacora + TimeManager.Hora;
+                string txt = "<b>RED78 DIFAMADA</b>"
+                + System.Environment.NewLine + "WIP Escondan a sus niños!.";
+                string FechaCompletado = "2" + time.Dia + "/03/2000";
+                string txtAccion = "Difamar Red78";
+                Toggle accion = A.difamar;
+                if (HoraCompletado >= 18)
+                {
+                    HoraCompletado = 6 + (RetencionBitacora - (18 - TimeManager.Hora));
+                    FechaCompletado = "2" + (time.Dia + 1) + "/03/2000";
+                }
+                int indaux = ind;
+                int a = 1;
+                CargarVectorProgreso(txtAccion, FechaCompletado, HoraCompletado, indaux);
+                SetearBitacora();
+                a = aux;
+                ActualizarIndice();
+                StartCoroutine(GuardarBitacora(RetencionBitacora, txt, indaux, accion, a));
+                Red78Difamada = true;
+                A.difamar.interactable = false;
+            }
+            //Aislar
+            if (A.aislar.CompareTag(tag = "OptActivado") && A.aislar.isOn == true && Red78Aislada == false)
+            {
+                float RetencionBitacora = 0.001f;
+                float HoraCompletado = RetencionBitacora + TimeManager.Hora;
+                string txt = "<b>AISLAR RED78</b>"
+                + System.Environment.NewLine + "Solo por que la acción esté disponible no quiere decir que haya que probarla con cada palabrita de cada caso.";
+                string FechaCompletado = "2" + time.Dia + "/03/2000";
+                string txtAccion = "Aislar Red78";
+                Toggle accion = A.aislar;
+                if (HoraCompletado >= 18)
+                {
+                    HoraCompletado = 6 + (RetencionBitacora - (18 - TimeManager.Hora));
+                    FechaCompletado = "2" + (time.Dia + 1) + "/03/2000";
+                }
+                int indaux = ind;
+                int a = 1;
+                CargarVectorProgreso(txtAccion, FechaCompletado, HoraCompletado, indaux);
+                SetearBitacora();
+                a = aux;
+                ActualizarIndice();
+                StartCoroutine(GuardarBitacora(RetencionBitacora, txt, indaux, accion, a));
+                Red78Aislada = true;
+                A.aislar.interactable = false;
+            }
+            //Analizar muestra
+            if (A.analizarMuestra.CompareTag(tag = "OptActivado") && A.analizarMuestra.isOn == true && Red78Analizada == false)
+            {
+                float RetencionBitacora = 0.001f;
+                float HoraCompletado = RetencionBitacora + TimeManager.Hora;
+                string txt = "<b>ANALIZAR RED78</b>"
+                + System.Environment.NewLine + "Los nombres de usuario, por mas sucios que sean, carecen de ADN.";
+                string FechaCompletado = "2" + time.Dia + "/03/2000";
+                string txtAccion = "Analizar ADN de Red78";
+                Toggle accion = A.analizarMuestra;
+                if (HoraCompletado >= 18)
+                {
+                    HoraCompletado = 6 + (RetencionBitacora - (18 - TimeManager.Hora));
+                    FechaCompletado = "2" + (time.Dia + 1) + "/03/2000";
+                }
+                int indaux = ind;
+                int a = 1;
+                CargarVectorProgreso(txtAccion, FechaCompletado, HoraCompletado, indaux);
+                SetearBitacora();
+                a = aux;
+                ActualizarIndice();
+                StartCoroutine(GuardarBitacora(RetencionBitacora, txt, indaux, accion, a));
+                Red78Analizada = true;
+                A.analizarMuestra.interactable = false;
             }
 
         }
@@ -1585,7 +1721,7 @@ public class Bitacoras : MonoBehaviour
                 float RetencionBitacora = 4;
                 float HoraCompletado = RetencionBitacora + TimeManager.Hora;
                 string txt = "<b>KATE MILLIARD INVESTIGADA</b>"
-                + System.Environment.NewLine + "WIP.";
+                + System.Environment.NewLine + "WIP Se encuentra alojada bajo un pseudonimo en un motel cercano a Parque Pimienta.";
                 string FechaCompletado = "2" + time.Dia + "/03/2000";
                 string txtAccion = "Investigar Kate Milliard";
                 Toggle accion = A.investigar;
@@ -1635,7 +1771,7 @@ public class Bitacoras : MonoBehaviour
                 float RetencionBitacora = 1;
                 float HoraCompletado = RetencionBitacora + TimeManager.Hora;
                 string txt = "<b>KATE MILLIARD DIFAMADA</b>"
-                + System.Environment.NewLine + "WIP.";
+                + System.Environment.NewLine + "WIP algo del pasado (pateo un mono en el set de bananorrama).";
                 string FechaCompletado = "2" + time.Dia + "/03/2000";
                 string txtAccion = "Difamar Kate Milliard";
                 Toggle accion = A.difamar;
@@ -1653,6 +1789,56 @@ public class Bitacoras : MonoBehaviour
                 StartCoroutine(GuardarBitacora(RetencionBitacora, txt, indaux, accion, a));
                 KateDifamada = true;
                 A.difamar.interactable = false;
+            }
+            //Aislar
+            if (A.aislar.CompareTag(tag = "OptActivado") && A.aislar.isOn == true && KateAislada == false)
+            {
+                float RetencionBitacora = 0.001f;
+                float HoraCompletado = RetencionBitacora + TimeManager.Hora;
+                string txt = "<b>AISLAR KATE MILLIARD</b>"
+                + System.Environment.NewLine + "La cerca que tenemos es muy grande para una sola persona WIP";
+                string FechaCompletado = "2" + time.Dia + "/03/2000";
+                string txtAccion = "Aislar Kate Milliard";
+                Toggle accion = A.aislar;
+                if (HoraCompletado >= 18)
+                {
+                    HoraCompletado = 6 + (RetencionBitacora - (18 - TimeManager.Hora));
+                    FechaCompletado = "2" + (time.Dia + 1) + "/03/2000";
+                }
+                int indaux = ind;
+                int a = 1;
+                CargarVectorProgreso(txtAccion, FechaCompletado, HoraCompletado, indaux);
+                SetearBitacora();
+                a = aux;
+                ActualizarIndice();
+                StartCoroutine(GuardarBitacora(RetencionBitacora, txt, indaux, accion, a));
+                KateAislada = true;
+                A.aislar.interactable = false;
+            }
+            //Analizar muestra
+            if (A.analizarMuestra.CompareTag(tag = "OptActivado") && A.analizarMuestra.isOn == true && KateAnalizada == false)
+            {
+                float RetencionBitacora = 12;
+                float HoraCompletado = RetencionBitacora + TimeManager.Hora;
+                string txt = "<b>KATE MILLIARD ANALIZADA</b>"
+                + System.Environment.NewLine + "Jefe, tenemos raras noticias. Se encuentra embarazada...WIP";
+                string FechaCompletado = "2" + time.Dia + "/03/2000";
+                string txtAccion = "Analizar Kate Milliard";
+                Toggle accion = A.analizarMuestra;
+                if (HoraCompletado >= 18)
+                {
+                    HoraCompletado = 6 + (RetencionBitacora - (18 - TimeManager.Hora));
+                    FechaCompletado = "2" + (time.Dia + 1) + "/03/2000";
+                }
+                int indaux = ind;
+                int a = 1;
+                CargarVectorProgreso(txtAccion, FechaCompletado, HoraCompletado, indaux);
+                SetearBitacora();
+                a = aux;
+                ActualizarIndice();
+                StartCoroutine(GuardarBitacora(RetencionBitacora, txt, indaux, accion, a));
+                KateAnalizada = true;
+                A.analizarMuestra.interactable = false;
             }
         }
         //================================================== Bitacoras Pepe Quenio =========================================//
@@ -1809,6 +1995,30 @@ public class Bitacoras : MonoBehaviour
                 PepeAnalizado = true;
                 A.analizarMuestra.interactable = false;
             }
+            if (A.aislar.CompareTag(tag = "OptActivado") && A.aislar.isOn == true && PepeAislado == false)
+            {
+                float RetencionBitacora = 0.001f;
+                float HoraCompletado = RetencionBitacora + TimeManager.Hora;
+                string txt = "<b>AISLAR PEPE QUENIO</b>"
+                + System.Environment.NewLine + "Este plan de acción es solo aplicable a LUGARES";
+                string FechaCompletado = "2" + time.Dia + "/03/2000";
+                string txtAccion = "Aislar Pepe Quenio";
+                Toggle accion = A.aislar;
+                if (HoraCompletado >= 18)
+                {
+                    HoraCompletado = 6 + (RetencionBitacora - (18 - TimeManager.Hora));
+                    FechaCompletado = "2" + (time.Dia + 1) + "/03/2000";
+                }
+                int indaux = ind;
+                int a = 1;
+                CargarVectorProgreso(txtAccion, FechaCompletado, HoraCompletado, indaux);
+                SetearBitacora();
+                a = aux;
+                ActualizarIndice();
+                StartCoroutine(GuardarBitacora(RetencionBitacora, txt, indaux, accion, a));
+                PepeAislado = true;
+                A.aislar.interactable = false;
+            }
         }
         //================================================= Bitacoras WifiRobado ==========================================================//
 
@@ -1921,7 +2131,7 @@ public class Bitacoras : MonoBehaviour
                 float RetencionBitacora = 1;
                 float HoraCompletado = RetencionBitacora + TimeManager.Hora;
                 string txt = "<b>WIFI ROBADO DIFAMADO</b>"
-                + System.Environment.NewLine + "WIP.";
+                + System.Environment.NewLine + "WIP sucio ladron se encuentra robandole el wifi a la nombre reserva Parque Pimienta.";
                 string FechaCompletado = "2" + time.Dia + "/03/2000";
                 string txtAccion = "Difamar Wifi robado";
                 Toggle accion = A.difamar;
@@ -1965,6 +2175,31 @@ public class Bitacoras : MonoBehaviour
                 WifiRobadoAnalizado = true;
                 A.analizarMuestra.interactable = false;
             }
+            //Aislar
+            if (A.aislar.CompareTag(tag = "OptActivado") && A.aislar.isOn == true && WifiRobadoAislado == false)
+            {
+                float RetencionBitacora = 0.001f;
+                float HoraCompletado = RetencionBitacora + TimeManager.Hora;
+                string txt = "<b>AISLAR WIFI ROBADO</b>"
+                + System.Environment.NewLine + "Quizás debamos pensar un poco más antes de unir palabras al azar.";
+                string FechaCompletado = "2" + time.Dia + "/03/2000";
+                string txtAccion = "Aislar Wifi Robado";
+                Toggle accion = A.aislar;
+                if (HoraCompletado >= 18)
+                {
+                    HoraCompletado = 6 + (RetencionBitacora - (18 - TimeManager.Hora));
+                    FechaCompletado = "2" + (time.Dia + 1) + "/03/2000";
+                }
+                int indaux = ind;
+                int a = 1;
+                CargarVectorProgreso(txtAccion, FechaCompletado, HoraCompletado, indaux);
+                SetearBitacora();
+                a = aux;
+                ActualizarIndice();
+                StartCoroutine(GuardarBitacora(RetencionBitacora, txt, indaux, accion, a));
+                WifiRobadoAislado = true;
+                A.aislar.interactable = false;
+            }
         }
         //================================================= Bitacoras Cabellos Rojizos ==========================================================//
         if (libreta.palabra == libreta.palabrasCaso[9])
@@ -1996,9 +2231,167 @@ public class Bitacoras : MonoBehaviour
             }
 
         }
-        //================================================ Bitacoras Fake News ===================================================================//
-       
-          
+
+        //===================================================== Bitacoras Bananorrama==============================================//
+        //Eliminar
+        if (libreta.palabra == libreta.palabrasCaso[0])
+        {
+            if (A.eliminar.CompareTag(tag = "OptActivado") && A.eliminar.isOn == true && BananorramaEliminado == false)
+            {
+                float RetencionBitacora = 2;//revisar
+                float HoraCompletado = RetencionBitacora + TimeManager.Hora;
+                string txt = "<b>ELIMINAR BANANORRAMA</b>"//REVISAR SI ES POSIBLE O NO
+                + System.Environment.NewLine + "Hemos terciarizado el acto de eliminar cada cinta de Bananorrama en existencia. Aguardamos novedades.";//
+                string FechaCompletado = "2" + time.Dia + "/03/2000";
+                string txtAccion = "Eliminar Bananorrama";
+                Toggle accion = A.eliminar;
+                if (HoraCompletado >= 18)
+                {
+                    HoraCompletado = 6 + (RetencionBitacora - (18 - TimeManager.Hora));
+                    FechaCompletado = "2" + (time.Dia + 1) + "/03/2000";
+                }
+                int indaux = ind;
+                int a = 1;
+                CargarVectorProgreso(txtAccion, FechaCompletado, HoraCompletado, indaux);
+                SetearBitacora();
+                a = aux;
+                ActualizarIndice();
+                StartCoroutine(GuardarBitacora(RetencionBitacora, txt, indaux, accion, a));
+                A.eliminar.interactable = false;
+                BananorramaEliminado = true;
+
+            }
+            //LAVAR CEREBRO 
+            if (A.lavarCerebro.CompareTag(tag = "OptActivado") && A.lavarCerebro.isOn == true && BananorramaLavado == false)
+            {
+                float RetencionBitacora = 0.001f;
+                float HoraCompletado = RetencionBitacora + TimeManager.Hora;
+                string txt = "<b>LAVAR BANANORRAMA</b>"
+                + System.Environment.NewLine + "No.";
+                string FechaCompletado = "2" + time.Dia + "/03/2000";
+                string txtAccion = "Lavar cerebro a Bananorrama";
+                Toggle accion = A.lavarCerebro;
+                if (HoraCompletado > 18)
+                {
+                    HoraCompletado = 6 + (RetencionBitacora - (18 - TimeManager.Hora));
+                    FechaCompletado = "2" + (time.Dia + 1) + "/03/2000";
+                }
+                int indaux = ind;
+                int a = 1;
+                CargarVectorProgreso(txtAccion, FechaCompletado, HoraCompletado, indaux);
+                SetearBitacora();
+                a = aux;
+                ActualizarIndice();
+                StartCoroutine(GuardarBitacora(RetencionBitacora, txt, indaux, accion, a));
+                A.lavarCerebro.interactable = false;
+                BananorramaLavado = true;
+            }
+            // investigar
+            if (A.investigar.CompareTag(tag = "OptActivado") && A.investigar.isOn == true && BananorramaInvestigado == false)
+            {
+                float RetencionBitacora = 2;//revisar
+                float HoraCompletado = RetencionBitacora + TimeManager.Hora;
+                string txt = "<b>BANANORRAMA INVESTIGADO</b>"
+                + System.Environment.NewLine + "WIP El agente ha terminado de ver la película Bananorrama.";
+                Toggle accion = A.investigar;
+                string FechaCompletado = "2" + time.Dia + "/03/2000";
+                string txtAccion = "Investigar Bananorrama";
+                if (HoraCompletado >= 18)
+                {
+                    HoraCompletado = 6 + (RetencionBitacora - (18 - TimeManager.Hora));
+                    FechaCompletado = "2" + (time.Dia + 1) + "/03/2000";
+                }
+                int indaux = ind;
+                int a = 1;
+                CargarVectorProgreso(txtAccion, FechaCompletado, HoraCompletado, indaux);
+                SetearBitacora();
+                a = aux;
+                ActualizarIndice();
+                StartCoroutine(GuardarBitacora(RetencionBitacora, txt, indaux, accion, a));
+                BananorramaInvestigado = true;
+                A.investigar.interactable = false;
+            }
+            //Hackear
+            if (A.hackear.CompareTag(tag = "OptActivado") && A.hackear.isOn == true && BananorramaHackeado == false)
+            {
+                float RetencionBitacora = 0.001f;
+                float HoraCompletado = RetencionBitacora + TimeManager.Hora;
+                string txt = "<b>HACKEAR BANANORRAMA</b>"
+                + System.Environment.NewLine + "No podemos hackear eso.";
+                string FechaCompletado = "2" + time.Dia + "/03/2000";
+                string txtAccion = "Hackear Bananorrama";
+                Toggle accion = A.hackear;
+                if (HoraCompletado >= 18)
+                {
+                    HoraCompletado = 6 + (RetencionBitacora - (18 - TimeManager.Hora));
+                    FechaCompletado = "2" + (time.Dia + 1) + "/03/2000";
+                }
+                int indaux = ind;
+                int a = 1;
+                CargarVectorProgreso(txtAccion, FechaCompletado, HoraCompletado, indaux);
+                SetearBitacora();
+                a = aux;
+                ActualizarIndice();
+                StartCoroutine(GuardarBitacora(RetencionBitacora, txt, indaux, accion, a));
+                BananorramaHackeado = true;
+                A.hackear.interactable = false;
+            }
+            //Analizar muestra
+            if (A.analizarMuestra.CompareTag(tag = "OptActivado") && A.analizarMuestra.isOn == true && BananorramaAnalizado == false)
+            {
+                float RetencionBitacora = 0.001f;
+                float HoraCompletado = RetencionBitacora + TimeManager.Hora;
+                string txt = "<b>ANALIZAR BABANORRAMA</b>"
+                + System.Environment.NewLine + "El ADN de la película no requiere un laboratorio para ser analizado. Sus origenes e inspiraciones se datan a WIP";
+                string FechaCompletado = "2" + time.Dia + "/03/2000";
+                string txtAccion = "Analizar Bananorrama";
+                Toggle accion = A.analizarMuestra;
+                if (HoraCompletado >= 18)
+                {
+                    HoraCompletado = 6 + (RetencionBitacora - (18 - TimeManager.Hora));
+                    FechaCompletado = "2" + (time.Dia + 1) + "/03/2000";
+                }
+                int indaux = ind;
+                int a = 1;
+                CargarVectorProgreso(txtAccion, FechaCompletado, HoraCompletado, indaux);
+                SetearBitacora();
+                a = aux;
+                ActualizarIndice();
+                StartCoroutine(GuardarBitacora(RetencionBitacora, txt, indaux, accion, a));
+                BananorramaAnalizado = true;
+                A.analizarMuestra.interactable = false;
+            }
+
+            if (A.difamar.CompareTag(tag = "OptActivado") && A.difamar.isOn == true && BananorramaDifamado == false)
+            {
+                float RetencionBitacora = 1;
+                float HoraCompletado = RetencionBitacora + TimeManager.Hora;
+                string txt = "<b>BANANORRAMA DIFAMADO</b>"
+                + System.Environment.NewLine + "WIP peli mala tuto. porque un remake de bananorrama seria una mala idea. critico que no habia visto aun bananorrama se siente insultado personalmente por la cinta ";
+                Toggle accion = A.difamar;
+                string FechaCompletado = "2" + time.Dia + "/03/2000";
+                string txtAccion = "Difamar Bananorrama";
+                if (HoraCompletado >= 18)
+                {
+                    HoraCompletado = 6 + (RetencionBitacora - (18 - TimeManager.Hora));
+                    FechaCompletado = "2" + (time.Dia + 1) + "/03/2000";
+                }
+                int indaux = ind;
+                int a = 1;
+                CargarVectorProgreso(txtAccion, FechaCompletado, HoraCompletado, indaux);
+                SetearBitacora();
+                a = aux;
+                ActualizarIndice();
+                StartCoroutine(GuardarBitacora(RetencionBitacora, txt, indaux, accion, a));
+                BananorramaDifamado = true;
+                A.difamar.interactable = false;
+
+            }
+
+        }
+            //================================================ Bitacoras Fake News ===================================================================//
+
+
             if (A.crearNoticia.CompareTag(tag = "OptActivado") && A.crearNoticia.isOn == true)
             {
                 float RetencionBitacora = 2;
@@ -2113,7 +2506,7 @@ public class Bitacoras : MonoBehaviour
             string txt = "<b>PROTECCION Y ASILO OFRECIDOS</b>"
             + System.Environment.NewLine + "Wip";
             string FechaCompletado = "2" + time.Dia + "/03/2000";
-            string txtAccion = "Wip";
+            string txtAccion = "Ofrenda de asilo y protección";
             Toggle accion = A.ofrecerProteccion;
             if (HoraCompletado >= 18)
             {
@@ -2137,9 +2530,9 @@ public class Bitacoras : MonoBehaviour
             float RetencionBitacora = 1;
             float HoraCompletado = RetencionBitacora + TimeManager.Hora;
             string txt = "<b>CUEVA SECRETA CONVERTIDA EN GIFTSHOP</b>"
-            + System.Environment.NewLine + "Wip";
+            + System.Environment.NewLine + "Wip va a estar todo bien";
             string FechaCompletado = "2" + time.Dia + "/03/2000";
-            string txtAccion = "Wip";
+            string txtAccion = "Convertir cueva secreta en giftshop";
             Toggle accion = A.convertirCueva;
             if (HoraCompletado >= 18)
             {
@@ -2163,9 +2556,9 @@ public class Bitacoras : MonoBehaviour
             float RetencionBitacora = 1;
             float HoraCompletado = RetencionBitacora + TimeManager.Hora;
             string txt = "<b>FOTOS EXTRAIDAS</b>"
-            + System.Environment.NewLine + "Wip";
+            + System.Environment.NewLine + "Wip El pequeño set amateur de fotos muestra fuera de foco una mancha marrón y una roja ";
             string FechaCompletado = "2" + time.Dia + "/03/2000";
-            string txtAccion = "Wip";
+            string txtAccion = "Extracción de fotos";
             Toggle accion = A.extraerFotos;
             if (HoraCompletado >= 18)
             {
@@ -2284,27 +2677,27 @@ public class Bitacoras : MonoBehaviour
     { 
         if (Pag == 1)
         {
-            pag1[ind] = "En proceso: " + Accion + System.Environment.NewLine + "Se completa el: " + FechaCompletado + " a las: " + HoraCompletado + ":" + TimeManager.Minuto;
+            pag1[ind] = Accion + " en proceso: " + System.Environment.NewLine + "Se completa el: " + FechaCompletado + " a las: " + HoraCompletado + ":" + TimeManager.Minuto;
         }
         else if (Pag == 2)
         {
-            pag2[ind] = "En proceso: " + Accion + System.Environment.NewLine + "Se completa el: " + FechaCompletado + " a las: " + HoraCompletado + ":" + TimeManager.Minuto;
+            pag2[ind] = Accion + " en proceso: " + System.Environment.NewLine + "Se completa el: " + FechaCompletado + " a las: " + HoraCompletado + ":" + TimeManager.Minuto;
         }
         else if (Pag == 3)
         {
-            pag3[ind] = "En proceso: " + Accion + System.Environment.NewLine + "Se completa el: " + FechaCompletado + " a las: " + HoraCompletado + ":" + TimeManager.Minuto;
+            pag3[ind] = Accion + " en proceso: " + System.Environment.NewLine + "Se completa el: " + FechaCompletado + " a las: " + HoraCompletado + ":" + TimeManager.Minuto;
         }
         else if (Pag == 4)
         {
-            pag4[ind] = "En proceso: " + Accion + System.Environment.NewLine + "Se completa el: " + FechaCompletado + " a las: " + HoraCompletado + ":" + TimeManager.Minuto;
+            pag4[ind] = Accion + " en proceso: " + System.Environment.NewLine + "Se completa el: " + FechaCompletado + " a las: " + HoraCompletado + ":" + TimeManager.Minuto;
         }
         else if (Pag == 5)
         {
-            pag5[ind] = "En proceso: " + Accion + System.Environment.NewLine + "Se completa el: " + FechaCompletado + " a las: " + HoraCompletado + ":" + TimeManager.Minuto;
+            pag5[ind] = Accion + " en proceso: " + System.Environment.NewLine + "Se completa el: " + FechaCompletado + " a las: " + HoraCompletado + ":" + TimeManager.Minuto;
         }
         else if (Pag == 6)
         {
-            pag6[ind] = "En proceso: " + Accion + System.Environment.NewLine + "Se completa el: " + FechaCompletado + " a las: " + HoraCompletado + ":" + TimeManager.Minuto;
+            pag6[ind] = Accion + " en proceso: " + System.Environment.NewLine + "Se completa el: " + FechaCompletado + " a las: " + HoraCompletado + ":" + TimeManager.Minuto;
         }
 
     }
@@ -2428,7 +2821,7 @@ public class Bitacoras : MonoBehaviour
                 PC.Rating = PC.Rating - 2;
                 break;
             case 5:
-                txtNoticiaFalsa = "VISITAR PARQUE PIMIENTA ATRAE LA MALA SUERTE";
+                txtNoticiaFalsa = "CONFIRMADO: VISITAR PARQUE PIMIENTA ATRAE LA MALA SUERTE Y EL ESCORBUTO";
                 NumNoticias++;
                 PC.Rating = PC.Rating - 1;
                 break;
@@ -2476,19 +2869,19 @@ public class Bitacoras : MonoBehaviour
         switch (UN)
         {
             case 0:
-                PreUbicacion = "Necitamos primero el paradero de " + palabra + ".";
+                PreUbicacion = "¿Sabes donde está " + palabra + "? Porque nosotros no.";
                 UN++;
                 break;
             case 1:
-                PreUbicacion = "Se desconoce ubicación de " + palabra + ". Sería necesaria para esto.";
+                PreUbicacion = "No contamos con la ubicación de " + palabra + ". Sería necesaria para llevar a cabo la directiva.";
                 UN++;
                 break;
             case 2:
-                PreUbicacion = "Necesitamos confirmar su ubicación primero.";
+                PreUbicacion = "Necesitamos que confirmen su ubicación primero.";
                 UN++;
                 break;
             case 3:
-                PreUbicacion = "¿Sabes donde está " + palabra+"? Porque nosotros no.";
+                PreUbicacion = "Necesitamos primero contar con el paradero de " + palabra + ".";
                 UN++;
                 break;
             case 4:

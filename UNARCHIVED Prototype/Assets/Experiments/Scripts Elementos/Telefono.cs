@@ -39,7 +39,7 @@ public class Telefono : MonoBehaviour
     private void Update()
     {
         if(btnllamar.interactable == true) txtLlamada.text = libreta.palabra;
-        if (LLamadaDiaria == false && x1 == true) { btnREC.interactable = true; btnllamar.interactable = true; x1 = false; }
+        if(LLamadaDiaria == false && x1 == true) { btnREC.interactable = true; btnllamar.interactable = true; x1 = false; }
     }
 
     public void REC()
@@ -58,7 +58,7 @@ public class Telefono : MonoBehaviour
 
     public void SetearLlamada ()
     {
-        txtTranscripciónLlamado.text = "No se interceptó información relevante";
+        txtTranscripciónLlamado.text = "WIP. Solo una por dia";// si ya esta hecho el llamado, hay que cambiar
         //Llamado ben
         switch (LlamadaEnProgreso)
         {
@@ -68,7 +68,7 @@ public class Telefono : MonoBehaviour
                     if (bitacora.PepeEliminado == false && bitacora.PepeLavado == false && BenLlamado == false)
                     {
 
-                        txtTranscripciónLlamado.text = "****¿Por qué te voy a mentir? Te juro, Pepe Quenio! Era igual a vos!****";
+                        txtTranscripciónLlamado.text = "****¿Por qué te voy a mentir? Te lo juro, Pepe Quenio! Era igual a vos!****";
                         float retencionllamada = 3;
                         StartCoroutine(PinchandoLlamada(retencionllamada, BenLlamado));
                      
@@ -130,7 +130,7 @@ public class Telefono : MonoBehaviour
                 else { PapelFax.SetActive(true); txtTranscripciónLlamado.text = "Pepe Quenio no puede realizar llamadas desde... La Granja"; }
                 break;
             case null: 
-                txtTranscripciónLlamado.text = "No se interceptó ninguna llamada";
+                txtTranscripciónLlamado.text = "No se ha interceptado ninguna llamada";
             break;
 
         }
@@ -152,7 +152,7 @@ public class Telefono : MonoBehaviour
         else
         {
             PapelFax.SetActive(true);
-            txtTranscripciónLlamado.text = "No hay posibilidad de interceptar";
+            txtTranscripciónLlamado.text = "No es posible interceptar sin contar con el número del teléfono";//este es cuando llamas a un objeto  o lugar o coso
            
         }
     }

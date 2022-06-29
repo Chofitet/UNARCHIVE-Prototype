@@ -57,10 +57,12 @@ public class Acciones : MonoBehaviour
         //if (bitacoras.ParquePimientaAislado) tglAislar.SetActive(false);
 
         ///acciones  para agregar condiciones (solo en los if) AGREGAR && 
-        if (convertirCueva.isOn == false ) { tglConvertirCueva.SetActive(true); }
-        if (extraerFotos.isOn == false) { tglExtraerFotos.SetActive(true); }
-        if (ofrecerProteccion.isOn == false) { tglOfrecerprotección.SetActive(true); }
+        if (convertirCueva.isOn == false && bitacoras.TrueEnding == true && bitacoras.ParquePimientaAislado == true ) { tglConvertirCueva.SetActive(true); }
+        if (extraerFotos.isOn == false && tv.BenEntrevista2 == false && TimeManager.Hora < 11 /*&&  Ben pinchado telefono */) { tglExtraerFotos.SetActive(true); }
+        if (ofrecerProteccion.isOn == false && bitacoras.KateAnalizada == true && bitacoras.PieGrandeUbicacion == true ) { tglOfrecerprotección.SetActive(true); }
     }
+    ///////////////////////////////////////////////////////
+    
 
     public  void CompletarPalabra ()
     {   // (de a acá)
