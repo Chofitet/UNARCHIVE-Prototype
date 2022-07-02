@@ -6,10 +6,19 @@ public class Expediente : MonoBehaviour
 {
     public bool CasoLeido;
     [SerializeField] TimeManager time;
-    void OnMouseDown ()
+    [SerializeField] Bitacoras bitacoras;
+    public GameObject libreta;
+    void OnMouseDown()
     {
         time.TiempoNormal();
         CasoLeido = true;
+
+        if (bitacoras.BitacoraCargada == false)
+        {
+            libreta.SetActive(true);
+            
+        } 
+        else { libreta.SetActive(false); bitacoras.BitacoraCargada = false; }
     }
 
 }

@@ -9,14 +9,16 @@ public class ExpCanvasSwitcher : MonoBehaviour
     public GameObject Carpeta;
     public ExpCanvasManager canvasManager;
     Button menuButton;
-
+    [SerializeField] Bitacoras bitacoras;
 
     void OnMouseDown()
     {
-       
-        canvasManager.SwitchCanvas(desiredCanvasType, desiredCanvasType2);
         Carpeta.gameObject.SetActive(true);
- 
+       if(bitacoras.BitacoraCargada == true)
+        {
+            canvasManager.SwitchCanvas(desiredCanvasType, desiredCanvasType2);
+        }
+        else canvasManager.SwitchCanvas(CanvasTypeExp.Acciones, CanvasTypeExp.Acciones);
     }
 
     private void Update()

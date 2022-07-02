@@ -14,6 +14,7 @@ public class Telefono : MonoBehaviour
     public Button btnplay;
     public Button btnREC;
     public TMP_Text txtLlamada;
+    public TMP_Text txtNumero;
     public GameObject PapelFax;
     private bool BenLlamado;
     private bool PieGrandeLlamado;
@@ -38,7 +39,7 @@ public class Telefono : MonoBehaviour
 
     private void Update()
     {
-        if(btnllamar.interactable == true) txtLlamada.text = libreta.palabra;
+        if(btnllamar.interactable == true) txtLlamada.text = libreta.palabra; MostrarNumero();
         if(LLamadaDiaria == false && x1 == true) { btnREC.interactable = true; btnllamar.interactable = true; x1 = false; }
     }
 
@@ -183,6 +184,16 @@ public class Telefono : MonoBehaviour
         btnplay.interactable = false;
         x1 = true;
         ActualizarPalabras();
+    }
+
+    void MostrarNumero ()
+    {
+        txtNumero.text = "";
+        if (libreta.palabra == libreta.palabrasCaso[0]) { txtNumero.text = "4223-4485"; }
+        if (libreta.palabra == libreta.palabrasCaso[1] && bitacora.PieGrandeUbicacion == true) { txtNumero.text = "4223-4485"; }
+        if (libreta.palabra == libreta.palabrasCaso[2]) { txtNumero.text = "4223-4485"; }
+        if (libreta.palabra == libreta.palabrasCaso[8] && bitacora.PepeInvestigado == true) { txtNumero.text = "4223-4485"; }
+
     }
 
 }
