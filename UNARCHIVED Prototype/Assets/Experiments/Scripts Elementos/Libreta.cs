@@ -44,6 +44,7 @@ public class Libreta : MonoBehaviour
     public TMP_Text txtWifiRobado;
     public TMP_Text txtBananorrama;
     bool x;
+    bool LevantasCerca;
 
     private void Start()
     {
@@ -244,6 +245,17 @@ public class Libreta : MonoBehaviour
         {
             if (bitacoras.CrearEscena == true) { BtnPepeQueño.gameObject.SetActive(true); }
         } 
+        if (accion == A.aislar && bitacoras.ParquePimientaAislado == true && LevantasCerca == false)
+        {
+            A.tglAislar.gameObject.SetActive(false);
+            A.tglLevantarCerca.gameObject.SetActive(true);
+            LevantasCerca = true;
+        }
+        if (accion == A.levantarCerca && bitacoras.ParquePimientaAislado == true)
+        {
+            A.tglAislar.gameObject.SetActive(true);
+            A.tglLevantarCerca.gameObject.SetActive(false);
+        }
             
     }
 

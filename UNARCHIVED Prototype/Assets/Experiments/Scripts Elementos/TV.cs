@@ -248,6 +248,7 @@ public class TV : MonoBehaviour
             if (PC.Rating >= 16) { PC.RatinMaximo(); }
             x = true;
             BenEntrevista2 = true;
+            libreta.BtnParquePimienta.SetActive(true);
         }
         else if (tiempo.Dia == 4 && TimeManager.Hora == 15 && BenEntrevista2 == true && BenEliminado == true)
         {
@@ -558,7 +559,7 @@ public class TV : MonoBehaviour
         {
             int IncrementoRating = -2;
             noticia.text = bitacoras.txtNoticiaFalsa;
-            titular.text = bitacoras.txtNoticiaFalsa;
+            titular.text = bitacoras.txtTituloFalsa;
             PC.Rating = PC.Rating + IncrementoRating;
             x = true;
             NF1 = true;
@@ -567,7 +568,7 @@ public class TV : MonoBehaviour
         {
             int IncrementoRating = -1;
             noticia.text = bitacoras.txtNoticiaFalsa;
-            titular.text = bitacoras.txtNoticiaFalsa;
+            titular.text = bitacoras.txtTituloFalsa;
             PC.Rating = PC.Rating + IncrementoRating;
             x = true;
             NF2 = true;
@@ -576,7 +577,7 @@ public class TV : MonoBehaviour
         {
             int IncrementoRating = -2;
             noticia.text = bitacoras.txtNoticiaFalsa;
-            titular.text = bitacoras.txtNoticiaFalsa;
+            titular.text = bitacoras.txtTituloFalsa;
             PC.Rating = PC.Rating + IncrementoRating;
             x = true;
             NF3 = true;
@@ -585,7 +586,7 @@ public class TV : MonoBehaviour
         {
             int IncrementoRating = -1;
             noticia.text = bitacoras.txtNoticiaFalsa;
-            titular.text = bitacoras.txtNoticiaFalsa;
+            titular.text = bitacoras.txtTituloFalsa;
             PC.Rating = PC.Rating + IncrementoRating;
             x = true;
             NF4 = true;
@@ -594,7 +595,7 @@ public class TV : MonoBehaviour
         {
             int IncrementoRating = -2;
             noticia.text = bitacoras.txtNoticiaFalsa;
-            titular.text = bitacoras.txtNoticiaFalsa;
+            titular.text = bitacoras.txtTituloFalsa;
             PC.Rating = PC.Rating + IncrementoRating;
             x = true;
             NF5 = true;
@@ -603,7 +604,7 @@ public class TV : MonoBehaviour
         {
             int IncrementoRating = -1;
             noticia.text = bitacoras.txtNoticiaFalsa;
-            titular.text = bitacoras.txtNoticiaFalsa;
+            titular.text = bitacoras.txtTituloFalsa;
             PC.Rating = PC.Rating + IncrementoRating;
             x = true;
             NF6 = true;

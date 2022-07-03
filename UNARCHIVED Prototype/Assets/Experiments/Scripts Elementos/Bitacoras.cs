@@ -13,6 +13,7 @@ public class Bitacoras : MonoBehaviour
     [SerializeField] Reloj reloj;
     [SerializeField] PC PC;
     [SerializeField] PantallasSwitcherManager Pantallas;
+    
 
     //Declaración varariables
 
@@ -127,6 +128,8 @@ public class Bitacoras : MonoBehaviour
     public bool WifiRobadoDifamado;
     public bool WifiRobadoAislado;
 
+    //////////////////////
+    public bool BitacoraCargada;
 
     ////////////////////
     public bool OfrecerProteccion; //falta generar
@@ -135,10 +138,13 @@ public class Bitacoras : MonoBehaviour
     public bool CrearEscena;//falta generar
     public bool PlantarPublico;//falta generar
     public bool TrueEnding;//falta generar
+    public bool LevantarCerca;
 
     private string PreUbicacion;
 
     public string txtNoticiaFalsa;
+    public string txtTituloFalsa;
+    string txtBitacoraNoticia;
     private int NumNoticias = 0;
     public bool NoticiaFalasa1;
     public bool NoticiaFalasa2;
@@ -1841,7 +1847,7 @@ public class Bitacoras : MonoBehaviour
                 A.analizarMuestra.interactable = false;
             }
         }
-        //================================================== Bitacoras Pepe Quenio =========================================//
+        //================================================== Bitacoras Pepe GQuenio =========================================//
         if (libreta.palabra == libreta.palabrasCaso[8])
         {
             //Eliminar
@@ -2234,7 +2240,7 @@ public class Bitacoras : MonoBehaviour
 
         //===================================================== Bitacoras Bananorrama==============================================//
         //Eliminar
-        if (libreta.palabra == libreta.palabrasCaso[0])
+        if (libreta.palabra == libreta.palabrasCaso[4])
         {
             if (A.eliminar.CompareTag(tag = "OptActivado") && A.eliminar.isOn == true && BananorramaEliminado == false)
             {
@@ -2413,7 +2419,7 @@ public class Bitacoras : MonoBehaviour
                 SetearBitacora();
                 a = aux;
                 ActualizarIndice();
-                StartCoroutine(GuardarBitacora( RetencionBitacora, txtNoticiaFalsa, indaux, accion, a));
+                StartCoroutine(GuardarBitacora( RetencionBitacora, txtBitacoraNoticia, indaux, accion, a));
                
                 A.crearNoticia.interactable = false;
             }
@@ -2576,14 +2582,38 @@ public class Bitacoras : MonoBehaviour
             ExtraerFoto = true;
             A.extraerFotos.interactable = false;
         }
-
+        //=========================================================== Levantar cerca ===================================================================//
+        if (A.levantarCerca.CompareTag(tag = "OptActivado") && A.levantarCerca.isOn == true && LevantarCerca == false)
+        {
+            float RetencionBitacora = 1;
+            float HoraCompletado = RetencionBitacora + TimeManager.Hora;
+            string txt = "<b>Wip</b>"
+            + System.Environment.NewLine + "Wip";
+            string FechaCompletado = "2" + time.Dia + "/03/2000";
+            string txtAccion = "Wip";
+            Toggle accion = A.levantarCerca;
+            if (HoraCompletado >= 18)
+            {
+                HoraCompletado = 6 + (RetencionBitacora - (18 - TimeManager.Hora));
+                FechaCompletado = "2" + (time.Dia + 1) + "/03/2000";
+            }
+            int indaux = ind;
+            int a = 1;
+            CargarVectorProgreso(txtAccion, FechaCompletado, HoraCompletado, indaux);
+            SetearBitacora();
+            a = aux;
+            ActualizarIndice();
+            StartCoroutine(GuardarBitacora(RetencionBitacora, txt, indaux, accion, a));
+            LevantarCerca = true;
+            A.levantarCerca.interactable = false;
+        }
         libreta.DesSubrayar();
         libreta.SetearPalabraLibretaACero();
         A.Restablecer();
         A.DeshabilidarAccionesInstantadea();
     }
 
-    
+
     IEnumerator GuardarBitacora(float ReinicioTiempo, string txt, int indaux, Toggle accion, int a)
     {
             yield return StartCoroutine(time.RetencionBitacorasSegunAccion(ReinicioTiempo));
@@ -2595,6 +2625,7 @@ public class Bitacoras : MonoBehaviour
             time.TiempoNormal();
             A.DeshabilitarAcciones();
             MostrarNoticiasFalsas(accion);
+            BitacoraCargada = true;
     }
 
     
@@ -2796,31 +2827,43 @@ public class Bitacoras : MonoBehaviour
         switch (Num)
         {
             case 0:
+                txtBitacoraNoticia = "BITACORA NOTICIA";
+                txtTituloFalsa = "EL PREMIO SERÁ DADO EN ASDFGD";
                 txtNoticiaFalsa = "PUEBLO PIMIENTA NOMINADO A PUEBLO MENOS ILUSO DEL PLANETA";
                 PC.Rating = PC.Rating - 2;
                 NumNoticias++;
                 break;
             case 1:
+                txtBitacoraNoticia = "WIP";
+                txtTituloFalsa = "WIP";
                 txtNoticiaFalsa = "ESTUDIO COMPRUEBA QUE EL ESCEPTICISMO PREVIENE LA CAIDA DEL CABELLO";
                 NumNoticias++;
                 PC.Rating = PC.Rating - 1;
                 break;
             case 2:
+                txtBitacoraNoticia = "WIP";
+                txtTituloFalsa = "WIP";
                 txtNoticiaFalsa = "MARATÓN DE EL SEÑOR DE LOS ZARCILLOS ARRANCA DE HOY HASTA EL 28/03";
                 NumNoticias++;
                 PC.Rating = PC.Rating - 2;
                 break;
             case 3:
+                txtBitacoraNoticia = "WIP";
+                txtTituloFalsa = "WIP";
                 txtNoticiaFalsa = "FALLECE CANTANTE IMPORTANTE. PENSEMOS EN EL MUCHO Y MUCHOS DIAS.";
                 NumNoticias++;
                 PC.Rating = PC.Rating - 1;
                 break;
             case 4:
+                txtBitacoraNoticia = "WIP";
+                txtTituloFalsa = "WIP";
                 txtNoticiaFalsa = "NO CREER TODO LO QUE TE DICEN AUMENTA TU VIRILIDAD UN 800%";
                 NumNoticias++;
                 PC.Rating = PC.Rating - 2;
                 break;
             case 5:
+                txtBitacoraNoticia = "WIP";
+                txtTituloFalsa = "WIP";
                 txtNoticiaFalsa = "CONFIRMADO: VISITAR PARQUE PIMIENTA ATRAE LA MALA SUERTE Y EL ESCORBUTO";
                 NumNoticias++;
                 PC.Rating = PC.Rating - 1;
