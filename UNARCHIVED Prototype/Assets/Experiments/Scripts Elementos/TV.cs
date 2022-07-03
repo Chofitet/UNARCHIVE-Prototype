@@ -552,7 +552,7 @@ public class TV : MonoBehaviour
         {
             int IncrementoRating = -2;
             noticia.text = bitacoras.txtNoticiaFalsa;
-            titular.text = bitacoras.txtNoticiaFalsa;
+            titular.text = bitacoras.txtTituloFalsa;
             PC.Rating = PC.Rating + IncrementoRating;
             x = true;
             NF1 = true;
@@ -561,7 +561,7 @@ public class TV : MonoBehaviour
         {
             int IncrementoRating = -1;
             noticia.text = bitacoras.txtNoticiaFalsa;
-            titular.text = bitacoras.txtNoticiaFalsa;
+            titular.text = bitacoras.txtTituloFalsa;
             PC.Rating = PC.Rating + IncrementoRating;
             x = true;
             NF2 = true;
@@ -570,7 +570,7 @@ public class TV : MonoBehaviour
         {
             int IncrementoRating = -2;
             noticia.text = bitacoras.txtNoticiaFalsa;
-            titular.text = bitacoras.txtNoticiaFalsa;
+            titular.text = bitacoras.txtTituloFalsa;
             PC.Rating = PC.Rating + IncrementoRating;
             x = true;
             NF3 = true;
@@ -579,7 +579,7 @@ public class TV : MonoBehaviour
         {
             int IncrementoRating = -1;
             noticia.text = bitacoras.txtNoticiaFalsa;
-            titular.text = bitacoras.txtNoticiaFalsa;
+            titular.text = bitacoras.txtTituloFalsa;
             PC.Rating = PC.Rating + IncrementoRating;
             x = true;
             NF4 = true;
@@ -588,7 +588,7 @@ public class TV : MonoBehaviour
         {
             int IncrementoRating = -2;
             noticia.text = bitacoras.txtNoticiaFalsa;
-            titular.text = bitacoras.txtNoticiaFalsa;
+            titular.text = bitacoras.txtTituloFalsa;
             PC.Rating = PC.Rating + IncrementoRating;
             x = true;
             NF5 = true;
@@ -597,7 +597,7 @@ public class TV : MonoBehaviour
         {
             int IncrementoRating = -1;
             noticia.text = bitacoras.txtNoticiaFalsa;
-            titular.text = bitacoras.txtNoticiaFalsa;
+            titular.text = bitacoras.txtTituloFalsa;
             PC.Rating = PC.Rating + IncrementoRating;
             x = true;
             NF6 = true;

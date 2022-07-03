@@ -143,6 +143,8 @@ public class Bitacoras : MonoBehaviour
     private string PreUbicacion;
 
     public string txtNoticiaFalsa;
+    public string txtTituloFalsa;
+    string txtBitacoraNoticia;
     private int NumNoticias = 0;
     public bool NoticiaFalasa1;
     public bool NoticiaFalasa2;
@@ -2417,7 +2419,7 @@ public class Bitacoras : MonoBehaviour
                 SetearBitacora();
                 a = aux;
                 ActualizarIndice();
-                StartCoroutine(GuardarBitacora( RetencionBitacora, txtNoticiaFalsa, indaux, accion, a));
+                StartCoroutine(GuardarBitacora( RetencionBitacora, txtBitacoraNoticia, indaux, accion, a));
                
                 A.crearNoticia.interactable = false;
             }
@@ -2825,31 +2827,43 @@ public class Bitacoras : MonoBehaviour
         switch (Num)
         {
             case 0:
+                txtBitacoraNoticia = "BITACORA NOTICIA";
+                txtTituloFalsa = "EL PREMIO SERÁ DADO EN ASDFGD";
                 txtNoticiaFalsa = "PUEBLO PIMIENTA NOMINADO A PUEBLO MENOS ILUSO DEL PLANETA";
                 PC.Rating = PC.Rating - 2;
                 NumNoticias++;
                 break;
             case 1:
+                txtBitacoraNoticia = "WIP";
+                txtTituloFalsa = "WIP";
                 txtNoticiaFalsa = "ESTUDIO COMPRUEBA QUE EL ESCEPTICISMO PREVIENE LA CAIDA DEL CABELLO";
                 NumNoticias++;
                 PC.Rating = PC.Rating - 1;
                 break;
             case 2:
+                txtBitacoraNoticia = "WIP";
+                txtTituloFalsa = "WIP";
                 txtNoticiaFalsa = "MARATÓN DE EL SEÑOR DE LOS ZARCILLOS ARRANCA DE HOY HASTA EL 28/03";
                 NumNoticias++;
                 PC.Rating = PC.Rating - 2;
                 break;
             case 3:
+                txtBitacoraNoticia = "WIP";
+                txtTituloFalsa = "WIP";
                 txtNoticiaFalsa = "FALLECE CANTANTE IMPORTANTE. PENSEMOS EN EL MUCHO Y MUCHOS DIAS.";
                 NumNoticias++;
                 PC.Rating = PC.Rating - 1;
                 break;
             case 4:
+                txtBitacoraNoticia = "WIP";
+                txtTituloFalsa = "WIP";
                 txtNoticiaFalsa = "NO CREER TODO LO QUE TE DICEN AUMENTA TU VIRILIDAD UN 800%";
                 NumNoticias++;
                 PC.Rating = PC.Rating - 2;
                 break;
             case 5:
+                txtBitacoraNoticia = "WIP";
+                txtTituloFalsa = "WIP";
                 txtNoticiaFalsa = "CONFIRMADO: VISITAR PARQUE PIMIENTA ATRAE LA MALA SUERTE Y EL ESCORBUTO";
                 NumNoticias++;
                 PC.Rating = PC.Rating - 1;
