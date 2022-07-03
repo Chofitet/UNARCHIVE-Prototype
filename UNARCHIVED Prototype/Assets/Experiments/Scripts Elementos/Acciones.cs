@@ -59,7 +59,7 @@ public class Acciones : MonoBehaviour
 
         ///acciones  para agregar condiciones (solo en los if) AGREGAR && 
         if (convertirCueva.isOn == false && bitacoras.TrueEnding == true && bitacoras.ParquePimientaAislado == true ) { tglConvertirCueva.SetActive(true); }
-        if (extraerFotos.isOn == false && tv.BenEntrevista2 == false && TimeManager.Hora < 11 /*&&  Ben pinchado telefono */) { tglExtraerFotos.SetActive(true); }
+        if (extraerFotos.isOn == false && tv.BenEntrevista2 == false && TimeManager.Hora < 11 /*&& Benllamado == true*/) { tglExtraerFotos.SetActive(true); }
         if (ofrecerProteccion.isOn == false && bitacoras.KateAnalizada == true && bitacoras.PieGrandeUbicacion == true ) { tglOfrecerprotección.SetActive(true); }
     }
     ///////////////////////////////////////////////////////

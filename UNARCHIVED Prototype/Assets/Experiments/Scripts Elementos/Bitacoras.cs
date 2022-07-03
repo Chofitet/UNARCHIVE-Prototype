@@ -1410,10 +1410,10 @@ public class Bitacoras : MonoBehaviour
             //Difamar
             if (A.difamar.CompareTag(tag = "OptActivado") && A.difamar.isOn == true && ColoradaDifamada == false)
             {
-                float RetencionBitacora = 0.001f;
+                float RetencionBitacora = 1;
                 float HoraCompletado = RetencionBitacora + TimeManager.Hora;
-                string txt = "<b>DIFAMAR COLORADA</b>"
-                + System.Environment.NewLine + "WIP ninfomana cabellos de satan actos indebidos ante la juventud.";
+                string txt = "<b>COLORADA DIFAMADA</b>"
+                + System.Environment.NewLine + "Ninfómana cabellos de Satán realiza actos indebidos ante la juventud. Mantengan a sus hijos en sus casas.";
                 string FechaCompletado = "2" + time.Dia + "/03/2000";
                 string txtAccion = "Difamar colorada";
                 Toggle accion = A.difamar;
@@ -1463,7 +1463,7 @@ public class Bitacoras : MonoBehaviour
                 float RetencionBitacora = 0.001f;
                 float HoraCompletado = RetencionBitacora + TimeManager.Hora;
                 string txt = "<b>ANALIZAR COLORADA</b>"
-                + System.Environment.NewLine + "WIP Quizás debamos pensar un poco más antes de unir palabras al azar.";
+                + System.Environment.NewLine + "Quizás debamos analizar .";
                 string FechaCompletado = "2" + time.Dia + "/03/2000";
                 string txtAccion = "Analizar ADN Colorada";
                 Toggle accion = A.analizarMuestra;
@@ -2430,7 +2430,7 @@ public class Bitacoras : MonoBehaviour
             float RetencionBitacora = 3;
             float HoraCompletado = RetencionBitacora + TimeManager.Hora;
             string txt = "<b>MONTAR ESCENA CON AGENTE PELUDO Y AGENTE CON PELUCA COLORADA</b>"
-            + System.Environment.NewLine + "La estrategia parece haber calmado las aguas. Los agentes fueron aproximados por un pequeño niño raro llamado Pepe Quenio, su interés les llamo la atención.";
+            + System.Environment.NewLine + "La estrategia parece haber calmado las aguas. Los agentes fueron aproximados por un pequeño niño raro llamado Pepe Quenio, su interés en ellos les llamó la atención.";
             string FechaCompletado = "2" + time.Dia + "/03/2000";
             string txtAccion = "Montar Escena";
             Toggle accion = A.crearEscena;
@@ -2456,7 +2456,7 @@ public class Bitacoras : MonoBehaviour
             float RetencionBitacora = 1;
             float HoraCompletado = RetencionBitacora + TimeManager.Hora;
             string txt = "<b>AGENTES PLANTADOS EN PUBLICO DE ENTREVISTA</b>"
-            + System.Environment.NewLine + "Los agentes estarán listos para boicotear la entrevista apenas esta de comienzo.";
+            + System.Environment.NewLine + "Los agentes estarán listos para boicotear la entrevista apenas comience.";
             string FechaCompletado = "2" + time.Dia + "/03/2000";
             string txtAccion = "Boicotear entrevista";
             Toggle accion = A.plantarPublico;
@@ -2482,7 +2482,7 @@ public class Bitacoras : MonoBehaviour
             float RetencionBitacora = 1;
             float HoraCompletado = RetencionBitacora + TimeManager.Hora;
             string txt = "<b>FAMILIA REUNIDA</b>"
-            + System.Environment.NewLine + "La nueva familia, reunida al fín por nuestra cuestionable simpatía, ha decidido encontrar un nuevo hogar donde vivir alejados de la sociedad, libres de prejuicio y sentido común."
+            + System.Environment.NewLine + "La nueva familia, reunida al fín gracias a nuestra cuestionable simpatía, ha decidido encontrar un nuevo hogar donde vivir alejados de la sociedad, libres de prejuicio y sentido común."
             + System.Environment.NewLine + "Caso ganado."
             + System.Environment.NewLine + "Que Dios se apiade de nuestras almas.";
             string FechaCompletado = "2" + time.Dia + "/03/2000";
@@ -2562,7 +2562,7 @@ public class Bitacoras : MonoBehaviour
             float RetencionBitacora = 1;
             float HoraCompletado = RetencionBitacora + TimeManager.Hora;
             string txt = "<b>FOTOS EXTRAIDAS</b>"
-            + System.Environment.NewLine + "Wip El pequeño set amateur de fotos muestra fuera de foco una mancha marrón y una roja ";
+            + System.Environment.NewLine + "Wip El pequeño set fotos amateur muestra una mancha marrón y una roja fuera de foco.";
             string FechaCompletado = "2" + time.Dia + "/03/2000";
             string txtAccion = "Extracción de fotos";
             Toggle accion = A.extraerFotos;
