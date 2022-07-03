@@ -58,7 +58,7 @@ public class Telefono : MonoBehaviour
 
     public void SetearLlamada ()
     {
-        txtTranscripciónLlamado.text = "WIP. Solo una por dia";// si ya esta hecho el llamado, hay que cambiar
+        txtTranscripciónLlamado.text = "Por cuestiones legales solo podemos pinchar la  misma linea una vez por día";// si ya esta hecho el llamado, hay que cambiar
         //Llamado ben
         switch (LlamadaEnProgreso)
         {
@@ -68,7 +68,7 @@ public class Telefono : MonoBehaviour
                     if (bitacora.PepeEliminado == false && bitacora.PepeLavado == false && BenLlamado == false)
                     {
 
-                        txtTranscripciónLlamado.text = "****¿Por qué te voy a mentir? Te lo juro, Pepe Quenio! Era igual a vos!****";
+                        txtTranscripciónLlamado.text = "****¿Por qué te voy a mentir? Te lo juro, Pepe Quenio! Era igual a vos! Mirá las fotos que te mandé.****";
                         float retencionllamada = 3;
                         StartCoroutine(PinchandoLlamada(retencionllamada, BenLlamado));
                      
@@ -77,7 +77,7 @@ public class Telefono : MonoBehaviour
                 }
                 else if(bitacora.BenLavado == true && bitacora.BenRetirado == false)
                 {
-                    txtTranscripciónLlamado.text = "****No tengo idea de que me hablas, Pepe Quenio. No ví nada en el Parque!****";
+                    txtTranscripciónLlamado.text = "****No tengo idea de que me hablas, Pepe Quenio. No ví nada en Parque Pimienta! Me haces doler la cabeza, no me llames denuevo...****";
                     float retencionllamada = 3;
                     StartCoroutine(PinchandoLlamada(retencionllamada, BenLlamado));
                 } 
@@ -152,7 +152,7 @@ public class Telefono : MonoBehaviour
         else
         {
             PapelFax.SetActive(true);
-            txtTranscripciónLlamado.text = "No es posible interceptar sin contar con el número del teléfono";//este es cuando llamas a un objeto  o lugar o coso
+            txtTranscripciónLlamado.text = "";//este es cuando llamas a un objeto  o lugar o coso
            
         }
     }

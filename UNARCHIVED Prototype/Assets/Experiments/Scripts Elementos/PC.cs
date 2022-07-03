@@ -42,6 +42,8 @@ public class PC : MonoBehaviour
                 + System.Environment.NewLine
                 + System.Environment.NewLine + "Estado: Niño de verdad"
                 + System.Environment.NewLine
+                + System.Environment.NewLine + "Teléfono: 0447 - 9965892"
+                + System.Environment.NewLine
                 + System.Environment.NewLine + "Ultima vez visto en: Pueblo Pimienta";
             FotoCarnet(0);
         }
@@ -74,10 +76,9 @@ public class PC : MonoBehaviour
         //================================================================ Wiki Colorada =======================================================//
         else if (txtBuscador.text == libreta.palabrasCaso[6])
         {
-            txtInfo.text = "Filtro NSFW: ACTIVADO."
-                + System.Environment.NewLine + "";
+            txtInfo.text = "Filtro NSFW: ACTIVADO.";
         }
-        //================================================================ Wiki Pepe Queño =======================================================//
+        //================================================================ Wiki Pepe Quenio =======================================================//
 
         // Antes de investigarlo
         else if (txtBuscador.text == libreta.palabrasCaso[8])
@@ -94,6 +95,8 @@ public class PC : MonoBehaviour
             + System.Environment.NewLine
             + System.Environment.NewLine + "Estado: Pequeño niño raro."
             + System.Environment.NewLine
+            + System.Environment.NewLine + "Teléfono: 0447 - 9965784"
+            + System.Environment.NewLine
             + System.Environment.NewLine + "Última vez visto en: Pueblo Pimienta.";
                 FotoCarnet(3);
             }
@@ -105,6 +108,8 @@ public class PC : MonoBehaviour
                + System.Environment.NewLine + "Edad:10 años híbridos."
                + System.Environment.NewLine
                + System.Environment.NewLine + "Estado: Pequeño niño pie grande."
+               + System.Environment.NewLine
+               + System.Environment.NewLine + "Teléfono: 0447 - 9965784"
                + System.Environment.NewLine
                + System.Environment.NewLine + "Última vez visto en: Pueblo Pimienta.";
                 FotoCarnet(3);
