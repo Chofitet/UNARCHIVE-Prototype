@@ -33,7 +33,6 @@ public class Telefono : MonoBehaviour
     public  bool LLamadaDiaria;
     string LlamadaEnProgreso;
 
-
     bool x;
     bool x1;
 

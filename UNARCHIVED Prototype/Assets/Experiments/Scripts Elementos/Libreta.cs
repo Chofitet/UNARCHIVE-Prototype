@@ -25,6 +25,12 @@ public class Libreta : MonoBehaviour
     public GameObject BtnPimientapaluzers;
     public GameObject BtnWifiRobado;
     public GameObject BtnBananorrama;
+    public TMP_Text lblCercar;
+
+    public Button BenBtn;
+    public Button PieGrandeBtn;
+    public Button KateMilliardBtn;
+    public Button PepeQuenioBtn;
 
     public string SignoPreguntaPieGrande = "?";
     public string SignoPreguntaPepeQueño = "?";
@@ -45,6 +51,7 @@ public class Libreta : MonoBehaviour
     public TMP_Text txtBananorrama;
     bool x;
     bool LevantasCerca;
+    bool LevantasCercaPimientapaluza;
 
     private void Start()
     {
@@ -86,7 +93,6 @@ public class Libreta : MonoBehaviour
             BtnColorada.gameObject.SetActive(true);
             x = true;
         }
-
     }
    
     public void Kate()
@@ -190,10 +196,10 @@ public class Libreta : MonoBehaviour
 
     public void PersonajeEliminado()
     {
-        if (bitacoras.BenEliminado) { BtnBen.gameObject.SetActive(false); Debug.Log("BEN?"); }
-        if (bitacoras.PieGrandeEliminado) BtnPieGrande.gameObject.SetActive(false);
-        if (bitacoras.KateEliminada) BtnKateMilliard.gameObject.SetActive(false);
-        if (bitacoras.PepeEliminado)BtnPepeQueño.gameObject.SetActive(false);
+        if (bitacoras.BenEliminado) { BenBtn.interactable = false; txtBen.text = "<s>" + palabrasCaso[0] + "</s>"; }
+        if (bitacoras.PieGrandeEliminado) { PieGrandeBtn.interactable = false; txtPieGrande.text = "<s>" + palabrasCaso[1] + "</s>"; }
+        if (bitacoras.KateEliminada) { PieGrandeBtn.interactable = false; txtKate.text = "<s>" + palabrasCaso[2] + "</s>"; }
+        if (bitacoras.PepeEliminado) { PepeQuenioBtn.interactable = false; txtPepeQueño.text = "<s>" + palabrasCaso[8] + "</s>"; }
     }
 
    public void ActualizarPalabras(Toggle accion)
@@ -245,13 +251,22 @@ public class Libreta : MonoBehaviour
         {
             if (bitacoras.CrearEscena == true) { BtnPepeQueño.gameObject.SetActive(true); }
         } 
+
         if (accion == A.aislar && bitacoras.ParquePimientaAislado == true && LevantasCerca == false)
         {
             A.tglAislar.gameObject.SetActive(false);
             A.tglLevantarCerca.gameObject.SetActive(true);
+            lblCercar.text = palabrasCaso[10];
             LevantasCerca = true;
         }
-        if (accion == A.levantarCerca && bitacoras.ParquePimientaAislado == true)
+        else if (accion == A.aislar && bitacoras.PimientaPaluzaAislado == true &&  LevantasCercaPimientapaluza == false)
+        {
+            A.tglAislar.gameObject.SetActive(false);
+            A.tglLevantarCerca.gameObject.SetActive(true);
+            lblCercar.text = palabrasCaso[3];
+            LevantasCercaPimientapaluza = true;
+        }
+        if (accion == A.levantarCerca )
         {
             A.tglAislar.gameObject.SetActive(true);
             A.tglLevantarCerca.gameObject.SetActive(false);

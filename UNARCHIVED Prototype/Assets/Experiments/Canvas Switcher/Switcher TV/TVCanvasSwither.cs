@@ -7,6 +7,7 @@ public class TVCanvasSwither : MonoBehaviour
     [SerializeField] TimeManager time;
     public CanvasTypeTV desiredCanvasType;
     public CanvasTypeTV desiredCanvasType2;
+    public bool TvClickeada;
 
     public TVCanvasManager canvasManager;
 
@@ -14,5 +15,6 @@ public class TVCanvasSwither : MonoBehaviour
     {
         canvasManager.SwitchCanvas(desiredCanvasType, desiredCanvasType2);
         time.TiempoNormal();
+        TvClickeada = true;
     }
 }

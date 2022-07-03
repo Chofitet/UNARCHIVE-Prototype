@@ -13,6 +13,7 @@ public class TV : MonoBehaviour
     [SerializeField] Bitacoras bitacoras;
     [SerializeField] Libreta libreta;
     [SerializeField] PC PC;
+    [SerializeField] TVCanvasSwither TVSwither;
     bool x;
     int CualLista;
     int NumNoticiasAteatorias = 1;
@@ -218,6 +219,7 @@ public class TV : MonoBehaviour
     // Comprueba el estado de variables para posicionar noticias, ubicar las noticias cronologicamente, su orden va de arriba para abajo.
     void CheckearBitacoras()
     {
+        TVSwither.TvClickeada = false;
         //============================================================================ TV Diario =============================================================================//
         if (bitacoras.BenEliminado == false && bitacoras.BenLavado == false && tiempo.Dia == 3 && TimeManager.Hora == 10 && BenEntrevista1 == false && bitacoras.BenRetirado == false)
         {
