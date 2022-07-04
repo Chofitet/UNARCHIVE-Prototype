@@ -40,6 +40,7 @@ public class Bitacoras : MonoBehaviour
     public bool ParquePimientaInvestigado;
     public bool ParquePimientaDifamado;
     public bool ParquePimientaAislado;
+    public bool ParquePimientaLevantarCerca;
     ///////////////////////////// 
     public bool PimientaPaluzaEliminado;
     public bool PimientaPaluzaLavado;
@@ -48,6 +49,7 @@ public class Bitacoras : MonoBehaviour
     public bool PimientaPaluzaInvestigado;
     public bool PimientaPaluzaDifamado;
     public bool PimientaPaluzaAislado;
+    public bool PimientaPaluzaLevantarCerca;
     ///////////////////////////// 
     public bool ColoradaEliminado;
     public bool ColoradaInvestigada;
@@ -56,7 +58,6 @@ public class Bitacoras : MonoBehaviour
     public bool ColoradaDifamada;
     public bool ColoradaAnalizada;
     public bool ColoradaAislada;
-
     /////////////////////////////
     public bool Red78Eliminada;
     public bool Red78Analizada;
@@ -185,6 +186,8 @@ public class Bitacoras : MonoBehaviour
     public TMP_Text B5P2;
     public TMP_Text B6P2;
 
+    public TMP_Text lblLevantarCerca;
+
     private void Start()
     {
        
@@ -208,6 +211,7 @@ public class Bitacoras : MonoBehaviour
     // Si se cumplen las condiciones, imprimen la bitàcora correspondiente 
     public void ActualizarBitacoras()
     {
+        PagActual = Pag;
         //===================================================== Bitacoras Ben==============================================//
         //Eliminar
         if (libreta.palabra == libreta.palabrasCaso[0])
@@ -941,7 +945,7 @@ public class Bitacoras : MonoBehaviour
                 ParquePimientaAislado = true;
                 A.aislar.interactable = false;
             }
-
+           
         }
         //========================================================== Bitacoras Pimientapaluza ==================================================//
         if (libreta.palabra == libreta.palabrasCaso[3])
@@ -1121,6 +1125,7 @@ public class Bitacoras : MonoBehaviour
                 PimientaPaluzaAislado = true;
                 A.aislar.interactable = false;
             }
+            
 
         }
         //=========================================================== Bitacoras Pimientapaluzers =================================================//
@@ -2517,7 +2522,6 @@ public class Bitacoras : MonoBehaviour
             {
                 HoraCompletado = 6 + (RetencionBitacora - (18 - TimeManager.Hora));
                 FechaCompletado = "2" + (time.Dia + 1) + "/03/2000";
-
             }
             int indaux = ind;
             int a = 1;
@@ -2582,30 +2586,64 @@ public class Bitacoras : MonoBehaviour
             A.extraerFotos.interactable = false;
         }
         //=========================================================== Levantar cerca ===================================================================//
-        if (A.levantarCerca.CompareTag(tag = "OptActivado") && A.levantarCerca.isOn == true && LevantarCerca == false)
+        //Levantar cerca Parque Pimienta
+        if (libreta.palabrasCaso[10] == lblLevantarCerca.text)
         {
-            float RetencionBitacora = 1;
-            float HoraCompletado = RetencionBitacora + TimeManager.Hora;
-            string txt = "<b>Wip</b>"
-            + System.Environment.NewLine + "Wip";
-            string FechaCompletado = "2" + time.Dia + "/03/2000";
-            string txtAccion = "Wip";
-            Toggle accion = A.levantarCerca;
-            if (HoraCompletado >= 18)
+            if (A.levantarCerca.CompareTag(tag = "OptActivado") && A.levantarCerca.isOn == true && ParquePimientaLevantarCerca == false)
             {
-                HoraCompletado = 6 + (RetencionBitacora - (18 - TimeManager.Hora));
-                FechaCompletado = "2" + (time.Dia + 1) + "/03/2000";
+                float RetencionBitacora = 1;
+                float HoraCompletado = RetencionBitacora + TimeManager.Hora;
+                string txt = "<b>Wip</b>"
+                + System.Environment.NewLine + "Wip";
+                string FechaCompletado = "2" + time.Dia + "/03/2000";
+                string txtAccion = "Wip";
+                Toggle accion = A.levantarCerca;
+                if (HoraCompletado >= 18)
+                {
+                    HoraCompletado = 6 + (RetencionBitacora - (18 - TimeManager.Hora));
+                    FechaCompletado = "2" + (time.Dia + 1) + "/03/2000";
+                }
+                int indaux = ind;
+                int a = 1;
+                CargarVectorProgreso(txtAccion, FechaCompletado, HoraCompletado, indaux);
+                SetearBitacora();
+                a = aux;
+                ActualizarIndice();
+                StartCoroutine(GuardarBitacora(RetencionBitacora, txt, indaux, accion, a));
+                ParquePimientaLevantarCerca = true;
+                A.levantarCerca.interactable = false;
             }
-            int indaux = ind;
-            int a = 1;
-            CargarVectorProgreso(txtAccion, FechaCompletado, HoraCompletado, indaux);
-            SetearBitacora();
-            a = aux;
-            ActualizarIndice();
-            StartCoroutine(GuardarBitacora(RetencionBitacora, txt, indaux, accion, a));
-            LevantarCerca = true;
-            A.levantarCerca.interactable = false;
         }
+        //Levantar cerca
+        if (libreta.palabrasCaso[3] == lblLevantarCerca.text)
+        {
+            if (A.levantarCerca.CompareTag(tag = "OptActivado") && A.levantarCerca.isOn == true && PimientaPaluzaLevantarCerca == false)
+            {
+                float RetencionBitacora = 1;
+                float HoraCompletado = RetencionBitacora + TimeManager.Hora;
+                string txt = "<b>Wip</b>"
+                + System.Environment.NewLine + "Wip";
+                string FechaCompletado = "2" + time.Dia + "/03/2000";
+                string txtAccion = "Wip";
+                Toggle accion = A.levantarCerca;
+                if (HoraCompletado >= 18)
+                {
+                    HoraCompletado = 6 + (RetencionBitacora - (18 - TimeManager.Hora));
+                    FechaCompletado = "2" + (time.Dia + 1) + "/03/2000";
+                }
+                int indaux = ind;
+                int a = 1;
+                CargarVectorProgreso(txtAccion, FechaCompletado, HoraCompletado, indaux);
+                SetearBitacora();
+                a = aux;
+                ActualizarIndice();
+                StartCoroutine(GuardarBitacora(RetencionBitacora, txt, indaux, accion, a));
+                PimientaPaluzaLevantarCerca = true;
+                A.levantarCerca.interactable = false;
+            }
+        }
+
+
         libreta.DesSubrayar();
         libreta.SetearPalabraLibretaACero();
         A.Restablecer();
@@ -2633,7 +2671,7 @@ public class Bitacoras : MonoBehaviour
    
     public void SiguientePagina()
     {
-        if (PagActual < 6)  {PagActual++;}
+        if (PagActual < Pag)  {PagActual++;}
     }
     public void AnteriorPagina ()
     {
@@ -2649,8 +2687,6 @@ public class Bitacoras : MonoBehaviour
             B4P1.text = pag1[3];
             B5P1.text = pag1[4];
             B6P1.text = pag1[5];
-            
-
         }
         else if (PagActual == 2)
         {

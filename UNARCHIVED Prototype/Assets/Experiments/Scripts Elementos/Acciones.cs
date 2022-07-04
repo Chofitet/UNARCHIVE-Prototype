@@ -52,8 +52,7 @@ public class Acciones : MonoBehaviour
     private void Update()
     {
         if (bitacoras.PieGrandeUbicacion == true && crearEscena.isOn == false) {tglCrearEscena.SetActive(true); }
-        if ((tv.BenEntrevista2 == true || bitacoras.PieGrandeUbicacion == true) && tglLevantarCerca.activeSelf == false) { tglAislar.SetActive(true); }
-        if (bitacoras.BenEliminado == false && bitacoras.BenLavado == false && tv.BenEntrevista1 == true && tv.BenEntrevista2 == false && plantarPublico.isOn == false) tglPlantarPublico.SetActive(true);
+        if (bitacoras.PieGrandeUbicacion == true && tglLevantarCerca.activeSelf == false) { tglAislar.SetActive(true); }
         if (tv.BenEntrevista2 == true) tglPlantarPublico.SetActive(false);
         if (bitacoras.PieGrandeEliminado == false && bitacoras.PepeEliminado == false && bitacoras.PepeAnalizado == true && trueEnding.isOn == false && bitacoras.PieGrandeUbicacion == true) tglTrueEnding.SetActive(true);
         //if (bitacoras.ParquePimientaAislado) tglAislar.SetActive(false);
