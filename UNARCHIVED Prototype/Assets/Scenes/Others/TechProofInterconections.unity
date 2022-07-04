@@ -1959,6 +1959,7 @@ MonoBehaviour:
   txtLlamada: {fileID: 1485334863}
   txtNumero: {fileID: 428526672}
   PapelFax: {fileID: 1699579214}
+  BenLlamado: 0
   "txtTranscripci\xF3nLlamado": {fileID: 1078501383}
   LLamadaDiaria: 0
 --- !u!1001 &122939887
@@ -5715,6 +5716,7 @@ MonoBehaviour:
   libreta: {fileID: 94808029}
   bitacoras: {fileID: 176843630}
   tv: {fileID: 1988636337}
+  Pinchofono: {fileID: 113856866}
   acciones: {fileID: 1250356728}
   eliminar: {fileID: 331164057}
   lavarCerebro: {fileID: 22122817}
@@ -13473,7 +13475,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -6, y: 35}
+  m_AnchoredPosition: {x: -23.8, y: 35}
   m_SizeDelta: {x: 226, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1082012354
