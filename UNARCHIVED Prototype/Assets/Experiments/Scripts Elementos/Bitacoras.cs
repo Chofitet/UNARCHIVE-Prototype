@@ -74,7 +74,6 @@ public class Bitacoras : MonoBehaviour
     public bool KateAnalizada;
     public bool KateAislada;
 
-
     ///////////////////////////// 
     public bool PepeEliminado;
     public bool PepeLavado;
@@ -132,12 +131,12 @@ public class Bitacoras : MonoBehaviour
     public bool BitacoraCargada;
 
     ////////////////////
-    public bool OfrecerProteccion; //falta generar
-    public bool ConvertirCueva;//falta generar
-    public bool ExtraerFoto;//falta generar
-    public bool CrearEscena;//falta generar
-    public bool PlantarPublico;//falta generar
-    public bool TrueEnding;//falta generar
+    public bool OfrecerProteccion; //falta detashar testos
+    public bool ConvertirCueva;//falta detashar testos
+    public bool ExtraerFoto;//falta detashar testos
+    public bool CrearEscena;//falta detashar testos
+    public bool PlantarPublico;//falta detashar testos
+    public bool TrueEnding;//falta detashar testos
     public bool LevantarCerca;
 
     private string PreUbicacion;
@@ -1906,7 +1905,7 @@ public class Bitacoras : MonoBehaviour
                 float RetencionBitacora = 4;
                 float HoraCompletado = RetencionBitacora + TimeManager.Hora;
                 string txt = "<b>PEPE QUENIO INVESTIGADO</b>"
-                + System.Environment.NewLine + "Extraño niño...Su único amigo parece ser Ben Benji. Tiene un... no se qué.";
+                + System.Environment.NewLine + "BASE DE DATOS ACTUALIZADA. Extraño niño...Su único amigo parece ser Ben Benji. Tiene un... no se qué.";
                 string FechaCompletado = "2" + time.Dia + "/03/2000";
                 string txtAccion = "Investigar Pepe Quenio";
                 Toggle accion = A.investigar;
@@ -1982,7 +1981,7 @@ public class Bitacoras : MonoBehaviour
                 float RetencionBitacora = 12;
                 float HoraCompletado = RetencionBitacora + TimeManager.Hora;
                 string txt = "<b>PEPE QUENIO ANALIZADO</b>"
-                + System.Environment.NewLine + "ADN coincide con Pie Grade. Posible hijo ilegítimo durante su último matrimonio. Base de datos ACTUALIZADA!";
+                + System.Environment.NewLine + "BASE DE DATOS ACTUALIZADA. ADN coincide con Pie Grade. Posible hijo ilegítimo durante su último matrimonio.";
                 string FechaCompletado = "2" + time.Dia + "/03/2000";
                 string txtAccion = "Analizar Pepe Quenio";
                 Toggle accion = A.analizarMuestra;
@@ -2535,10 +2534,10 @@ public class Bitacoras : MonoBehaviour
         {
             float RetencionBitacora = 1;
             float HoraCompletado = RetencionBitacora + TimeManager.Hora;
-            string txt = "<b>CUEVA SECRETA CONVERTIDA EN GIFTSHOP</b>"
+            string txt = "<b>CUEVA SECRETA CONVERTIDA EN GIFT SHOP</b>"
             + System.Environment.NewLine + "Wip va a estar todo bien";
             string FechaCompletado = "2" + time.Dia + "/03/2000";
-            string txtAccion = "Convertir cueva secreta en giftshop";
+            string txtAccion = "Convertir cueva secreta en Gift Shop";
             Toggle accion = A.convertirCueva;
             if (HoraCompletado >= 18)
             {
@@ -2827,44 +2826,50 @@ public class Bitacoras : MonoBehaviour
         switch (Num)
         {
             case 0:
-                txtBitacoraNoticia = "BITACORA NOTICIA";
-                txtTituloFalsa = "EL PREMIO SERÁ DADO EN ASDFGD";
-                txtNoticiaFalsa = "PUEBLO PIMIENTA NOMINADO A PUEBLO MENOS ILUSO DEL PLANETA";
+                txtBitacoraNoticia = "<b>NOTICIA FALSA CREADA</b>"
+                + System.Environment.NewLine + "Entrará en transmisión a la brevedad.";
+                txtTituloFalsa = "PUEBLO PIMIENTA NOMINADO A PUEBLO MENOS ILUSO DEL PLANETA";
+                txtNoticiaFalsa = "EL PREMIO SERÁ ENTREGADO EN ASDFGD";
                 PC.Rating = PC.Rating - 2;
                 NumNoticias++;
                 break;
             case 1:
-                txtBitacoraNoticia = "WIP";
-                txtTituloFalsa = "WIP";
-                txtNoticiaFalsa = "ESTUDIO COMPRUEBA QUE EL ESCEPTICISMO PREVIENE LA CAIDA DEL CABELLO";
+                txtBitacoraNoticia = "<b>NOTICIA FALSA CREADA</b>"
+                + System.Environment.NewLine + "Entrará en transmisión a la brevedad.";
+                txtTituloFalsa = "ESTUDIO COMPRUEBA QUE EL ESCEPTICISMO PREVIENE LA CAIDA DEL CABELLO";
+                txtNoticiaFalsa = "";
                 NumNoticias++;
                 PC.Rating = PC.Rating - 1;
                 break;
             case 2:
-                txtBitacoraNoticia = "WIP";
-                txtTituloFalsa = "WIP";
-                txtNoticiaFalsa = "MARATÓN DE EL SEÑOR DE LOS ZARCILLOS ARRANCA DE HOY HASTA EL 28/03";
+                txtBitacoraNoticia = "<b>NOTICIA FALSA CREADA</b>"
+                + System.Environment.NewLine + "Entrará en transmisión a la brevedad.";
+                txtTituloFalsa = "MARATÓN DE EL SEÑOR DE LOS ZARCILLOS ARRANCA DE HOY HASTA EL 28/03";
+                txtNoticiaFalsa = "";
                 NumNoticias++;
                 PC.Rating = PC.Rating - 2;
                 break;
             case 3:
-                txtBitacoraNoticia = "WIP";
-                txtTituloFalsa = "WIP";
-                txtNoticiaFalsa = "FALLECE CANTANTE IMPORTANTE. PENSEMOS EN EL MUCHO Y MUCHOS DIAS.";
+                txtBitacoraNoticia = "<b>NOTICIA FALSA CREADA</b>"
+                + System.Environment.NewLine + "Entrará en transmisión a la brevedad.";
+                txtTituloFalsa = "FALLECE CANTANTE IMPORTANTE. PENSEMOS EN EL MUCHO Y MUCHOS DIAS.";
+                txtNoticiaFalsa = "";
                 NumNoticias++;
                 PC.Rating = PC.Rating - 1;
                 break;
             case 4:
-                txtBitacoraNoticia = "WIP";
-                txtTituloFalsa = "WIP";
-                txtNoticiaFalsa = "NO CREER TODO LO QUE TE DICEN AUMENTA TU VIRILIDAD UN 800%";
+                txtBitacoraNoticia = "<b>NOTICIA FALSA CREADA</b>"
+                + System.Environment.NewLine + "Entrará en transmisión a la brevedad.";
+                txtTituloFalsa = "NO CREER TODO LO QUE TE DICEN AUMENTA TU VIRILIDAD UN 800%";
+                txtNoticiaFalsa = "";
                 NumNoticias++;
                 PC.Rating = PC.Rating - 2;
                 break;
             case 5:
-                txtBitacoraNoticia = "WIP";
-                txtTituloFalsa = "WIP";
-                txtNoticiaFalsa = "CONFIRMADO: VISITAR PARQUE PIMIENTA ATRAE LA MALA SUERTE Y EL ESCORBUTO";
+                txtBitacoraNoticia = "<b>NOTICIA FALSA CREADA</b>"
+                + System.Environment.NewLine + "Entrará en transmisión a la brevedad.";
+                txtTituloFalsa = "CONFIRMADO: VISITAR PARQUE PIMIENTA ATRAE LA MALA SUERTE Y EL ESCORBUTO";
+                txtNoticiaFalsa = "";
                 NumNoticias++;
                 PC.Rating = PC.Rating - 1;
                 break;

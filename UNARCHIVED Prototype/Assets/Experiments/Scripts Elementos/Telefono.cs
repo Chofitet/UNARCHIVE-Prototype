@@ -16,7 +16,7 @@ public class Telefono : MonoBehaviour
     public TMP_Text txtLlamada;
     public TMP_Text txtNumero;
     public GameObject PapelFax;
-    private bool BenLlamado;
+    public bool BenLlamado;
     private bool PieGrandeLlamado;
     private bool KateLlamado;
     private bool PepeLlamado1;
