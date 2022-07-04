@@ -13,7 +13,7 @@ public class TV : MonoBehaviour
     [SerializeField] Bitacoras bitacoras;
     [SerializeField] Libreta libreta;
     [SerializeField] PC PC;
-    [SerializeField] TVCanvasSwither TVSwither;
+    [SerializeField] Acciones A;
     bool x;
     int CualLista;
     int NumNoticiasAteatorias = 1;
@@ -219,7 +219,6 @@ public class TV : MonoBehaviour
     // Comprueba el estado de variables para posicionar noticias, ubicar las noticias cronologicamente, su orden va de arriba para abajo.
     void CheckearBitacoras()
     {
-        TVSwither.TvClickeada = false;
         //============================================================================ TV Diario =============================================================================//
         if (bitacoras.BenEliminado == false && bitacoras.BenLavado == false && tiempo.Dia == 3 && TimeManager.Hora == 10 && BenEntrevista1 == false && bitacoras.BenRetirado == false)
         {
@@ -250,7 +249,6 @@ public class TV : MonoBehaviour
             if (PC.Rating >= 16) { PC.RatinMaximo(); }
             x = true;
             BenEntrevista2 = true;
-            libreta.BtnParquePimienta.SetActive(true);
         }
         else if (tiempo.Dia == 4 && TimeManager.Hora == 15 && BenEntrevista2 == true && BenEliminado == true)
         {
@@ -372,7 +370,6 @@ public class TV : MonoBehaviour
             PC.Rating = PC.Rating + IncrementoRating;
             if (PC.Rating >= 16) { PC.RatinMaximo(); }
             x = true;
-
         }
         else if (tiempo.Dia == 7 && TimeManager.Hora == 10)
         {
@@ -382,10 +379,7 @@ public class TV : MonoBehaviour
             PC.Rating = PC.Rating + IncrementoRating;
             if (PC.Rating >= 16) { PC.RatinMaximo(); }
             x = true;
-
         }
-
-
         else if (bitacoras.KateEliminada == false && PieGrandeEliminado == false && KateEliminada == false && tiempo.Dia == 7 && TimeManager.Hora == 17)
         {
             int IncrementoRating = 15;
@@ -394,7 +388,6 @@ public class TV : MonoBehaviour
             PC.Rating = PC.Rating + IncrementoRating;
             if (PC.Rating >= 16) { PC.RatinMaximo(); }
             x = true;
-
         }
         //============================================================================ TV RUMOR =============================================================================//
         else if (tiempo.Dia == 3 && TimeManager.Hora == 7)
@@ -406,7 +399,6 @@ public class TV : MonoBehaviour
             if (PC.Rating >= 16) { PC.RatinMaximo(); }
             x = true;
         }
-
         //============================================================================ TV Ben Benji =============================================================================//
         else if (bitacoras.BenEliminado == true && BenEliminado == false)
         {
@@ -628,6 +620,27 @@ public class TV : MonoBehaviour
     private void LaFuncionMasEspecificaDelMundoPorqueEsteJugoNoDejaDeTenerDetallesBoludos ()
     {
        if(BenDifamado2) libreta.BtnBen.SetActive(false);
+    }
+
+    public void PulsadoDeTV ()
+    {
+        if (titular.text == PimientaPaluzaAnuncioTitulo) libreta.BtnPimientaPaluza.SetActive(true);
+        if (titular.text == BenEntrevistaTitulo2) 
+        { 
+            libreta.BtnParquePimienta.SetActive(true); 
+            bitacoras.PieGrandeUbicacion = true;
+            libreta.txtPieGrande.text = libreta.palabrasCaso[1];
+            libreta.SignoPreguntaPieGrande = "";
+        }
+        /*  poner en la comparación el título de la noticia que lo activa
+         if (titular.text ==  ) libreta.BtnKateMilliard.SetActive(true);
+         if (titular.text == ) libreta.BtnPimientapaluzers.SetActive(true);
+ */
+        if (titular.text == BenEntrevistaTitulo1) A.tglPlantarPublico.SetActive(true);
+        if (titular.text == BenEntrevistaTitulo2 && A.tglLevantarCerca.activeSelf == false) A.tglAislar.SetActive(true);
+        
+        /*if (titular.text == ) A.tglCrearEscena.SetActive(true);
+        */
     }
 
     /// ================================================================== Noticias Aleatorias ========================================================= ///

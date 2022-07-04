@@ -24930,9 +24930,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   time: {fileID: 698772801}
+  tv: {fileID: 1988636337}
   desiredCanvasType: 0
   desiredCanvasType2: 0
-  TvClickeada: 0
   canvasManager: {fileID: 1444158490}
 --- !u!65 &1942275297
 BoxCollider:
@@ -26200,7 +26200,7 @@ MonoBehaviour:
   bitacoras: {fileID: 176843630}
   libreta: {fileID: 94808029}
   PC: {fileID: 1090419601}
-  TVSwither: {fileID: 1942275296}
+  A: {fileID: 414450557}
   BenEntrevista1: 0
   BenEntrevista2: 0
 --- !u!1 &1994510090
