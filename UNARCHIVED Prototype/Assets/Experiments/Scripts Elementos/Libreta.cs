@@ -26,6 +26,12 @@ public class Libreta : MonoBehaviour
     public GameObject BtnPimientapaluzers;
     public GameObject BtnWifiRobado;
     public GameObject BtnBananorrama;
+    public TMP_Text lblCercar;
+
+    public Button BenBtn;
+    public Button PieGrandeBtn;
+    public Button KateMilliardBtn;
+    public Button PepeQuenioBtn;
 
     public string SignoPreguntaPieGrande = "?";
     public string SignoPreguntaPepeQueño = "?";
@@ -45,6 +51,8 @@ public class Libreta : MonoBehaviour
     public TMP_Text txtWifiRobado;
     public TMP_Text txtBananorrama;
     bool x;
+    bool LevantasCerca;
+    bool LevantasCercaPimientapaluza;
 
     private void Start()
     {
@@ -66,7 +74,7 @@ public class Libreta : MonoBehaviour
         palabrasCaso[5] = "Pueblo Pimienta";
         palabrasCaso[6] = "colorada";
         palabrasCaso[7] = "Red78";
-        palabrasCaso[8] = "Pepe Queño";
+        palabrasCaso[8] = "Pepe Quenio";
         palabrasCaso[9] = "cabellos rojizos";
         palabrasCaso[10] = "Parque Pimienta";
         palabrasCaso[11] = "pimientapaluzers";
@@ -76,9 +84,9 @@ public class Libreta : MonoBehaviour
         SignoPreguntaPepeQueño = "?";
     }
 
-    private void Update ()
+    private void Update()
     {
-        if (ex.CasoLeido == true && x==false )
+        if (ex.CasoLeido == true && x == false)
         {
             BtnBen.gameObject.SetActive(true);
             BtnPieGrande.gameObject.SetActive(true);
@@ -86,9 +94,8 @@ public class Libreta : MonoBehaviour
             BtnColorada.gameObject.SetActive(true);
             x = true;
         }
-
     }
-   
+
     public void Kate()
     {
         DesSubrayar();
@@ -96,14 +103,14 @@ public class Libreta : MonoBehaviour
         txtKate.text = "<u>Kate Milliard<u>";
     }
 
-    public void Ben ()
+    public void Ben()
     {
         DesSubrayar();
         palabra = palabrasCaso[0];
         txtBen.text = "<u>Ben Benji</u>";
     }
 
-    public void PieGrande ()
+    public void PieGrande()
     {
         DesSubrayar();
         palabra = palabrasCaso[1];
@@ -137,7 +144,7 @@ public class Libreta : MonoBehaviour
     {
         DesSubrayar();
         palabra = palabrasCaso[8];
-        txtPepeQueño.text = "<u>Pepe Queño</u>" + SignoPreguntaPepeQueño;
+        txtPepeQueño.text = "<u>Pepe Quenio</u>" + SignoPreguntaPepeQueño;
     }
     public void CabellosRojizos()
     {
@@ -172,13 +179,13 @@ public class Libreta : MonoBehaviour
 
     public void DesSubrayar()
     {
-        if(txtBen.text == "<u>Ben Benji</u>") { txtBen.text = palabrasCaso[0]; }
+        if (txtBen.text == "<u>Ben Benji</u>") { txtBen.text = palabrasCaso[0]; }
         else if (txtPieGrande.text == "<u>Pie Grande</u>" + SignoPreguntaPieGrande) { txtPieGrande.text = palabrasCaso[1] + SignoPreguntaPieGrande; }
         else if (txtPimientaPaluza.text == "<u>Pimientapaluza</u>") { txtPimientaPaluza.text = palabrasCaso[3]; }
         else if (txtPuebloPimienta.text == "<u>Pueblo Pimienta</u>") { txtPuebloPimienta.text = palabrasCaso[5]; }
-        else if (txtBananorrama.text == "<u>Bananorrama?<u>") { txtBananorrama.text = palabrasCaso[4] + "?";}
+        else if (txtBananorrama.text == "<u>Bananorrama?<u>") { txtBananorrama.text = palabrasCaso[4] + "?"; }
         else if (txtColorada.text == "<u>colorada?</u>") { txtColorada.text = palabrasCaso[6] + "?"; }
-        else if (txtPepeQueño.text == "<u>Pepe Queño</u>" + SignoPreguntaPepeQueño) { txtPepeQueño.text = palabrasCaso[8] + SignoPreguntaPepeQueño; }
+        else if (txtPepeQueño.text == "<u>Pepe Quenio</u>" + SignoPreguntaPepeQueño) { txtPepeQueño.text = palabrasCaso[8] + SignoPreguntaPepeQueño; }
         else if (txtCabellosRojizos.text == "<u>cabellos rojizos</u>") { txtCabellosRojizos.text = palabrasCaso[9]; }
         else if (txtRed78.text == "<u>Red78?</u>") { txtRed78.text = palabrasCaso[7] + "?"; }
         else if (txtKate.text == "<u>Kate Milliard<u>") { txtKate.text = palabrasCaso[2]; }
@@ -190,13 +197,15 @@ public class Libreta : MonoBehaviour
 
     public void PersonajeEliminado()
     {
-        if (bitacoras.BenEliminado) { BtnBen.gameObject.SetActive(false);Sonido.SonidodeTachar(); }
-        if (bitacoras.PieGrandeEliminado) { BtnPieGrande.gameObject.SetActive(false); Sonido.SonidodeTachar(); }
-        if (bitacoras.KateEliminada) { BtnKateMilliard.gameObject.SetActive(false); Sonido.SonidodeTachar(); }
-        if (bitacoras.PepeEliminado) { BtnPepeQueño.gameObject.SetActive(false); Sonido.SonidodeTachar(); }
+
+        if (bitacoras.BenEliminado) { BenBtn.interactable = false; txtBen.text = "<s>" + palabrasCaso[0] + "</s>"; Sonido.SonidodeTachar(); }
+        if (bitacoras.PieGrandeEliminado) { PieGrandeBtn.interactable = false; txtPieGrande.text = "<s>" + palabrasCaso[1] + "</s>"; Sonido.SonidodeTachar(); }
+        if (bitacoras.KateEliminada) { PieGrandeBtn.interactable = false; txtKate.text = "<s>" + palabrasCaso[2] + "</s>"; Sonido.SonidodeTachar(); }
+        if (bitacoras.PepeEliminado) { PepeQuenioBtn.interactable = false; txtPepeQueño.text = "<s>" + palabrasCaso[8] + "</s>"; Sonido.SonidodeTachar(); }
+
     }
 
-   public void ActualizarPalabras(Toggle accion)
+    public void ActualizarPalabras(Toggle accion)
     {
         if (accion == A.hackear)
         {
@@ -212,7 +221,7 @@ public class Libreta : MonoBehaviour
                 Sonido.SonidodeTachar();
             }
         }
-        if(accion == A.investigar)
+        if (accion == A.investigar)
         {
             if (bitacoras.Red78Investigada == true || bitacoras.Red78Hackeada == true) { BtnKateMilliard.gameObject.SetActive(true); Sonido.SonidoEscribirPapel(); }
             if (bitacoras.PieGrandeInvestigado == true) { BtnPelosRojizos.gameObject.SetActive(true); Sonido.SonidoEscribirPapel(); }
@@ -243,20 +252,40 @@ public class Libreta : MonoBehaviour
         if (accion == A.lavarCerebro)
         {
             if (bitacoras.PieGrandeLavado == true) { BtnBananorrama.SetActive(true); Sonido.SonidoEscribirPapel(); }
-            }
+        }
         if (accion == A.crearEscena)
         {
             if (bitacoras.CrearEscena == true) { BtnPepeQueño.gameObject.SetActive(true); Sonido.SonidoEscribirPapel(); }
-        } 
-            
+        }
+
+        if (accion == A.aislar && bitacoras.ParquePimientaAislado == true && LevantasCerca == false)
+        {
+            A.tglAislar.gameObject.SetActive(false);
+            A.tglLevantarCerca.gameObject.SetActive(true);
+            lblCercar.text = palabrasCaso[10];
+            LevantasCerca = true;
+        }
+        else if (accion == A.aislar && bitacoras.PimientaPaluzaAislado == true && LevantasCercaPimientapaluza == false)
+        {
+            A.tglAislar.gameObject.SetActive(false);
+            A.tglLevantarCerca.gameObject.SetActive(true);
+            lblCercar.text = palabrasCaso[3];
+            LevantasCercaPimientapaluza = true;
+        }
+        if (accion == A.levantarCerca)
+        {
+            A.tglAislar.gameObject.SetActive(true);
+            A.tglLevantarCerca.gameObject.SetActive(false);
+        }
+
     }
 
-    public void SetearPalabraLibretaACero ()
+    public void SetearPalabraLibretaACero()
     {
         palabra = "";
     }
 
-    public void SonidoTecleado ()
+    public void SonidoTecleado()
     {
         if (PCSwitcher.PantallaPC == true)
         {
