@@ -10,13 +10,11 @@ public class ButtonCanvasSwitcher : MonoBehaviour
     GameObject Boton;
     public ExpCanvasManager canvasManager;
     [SerializeField] TimeManager time;
-    [SerializeField] SonidoMagnament Sonido;
-
+  
 
 
     void OnMouseDown()
     {
-        Sonido.SonidoPasarHoja();
         time.TiempoNormal();
         canvasManager.SwitchCanvas(desiredCanvasType, desiredCanvasType2);
     }

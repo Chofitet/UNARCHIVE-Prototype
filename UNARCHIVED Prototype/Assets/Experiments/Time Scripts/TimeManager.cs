@@ -9,7 +9,7 @@ public class TimeManager : MonoBehaviour
     [SerializeField] Telefono telefono;
     [SerializeField] PantallasSwitcherManager Pantallas;
     [SerializeField] Acciones A;
-    [SerializeField] SonidoMagnament Sonido;
+    [SerializeField] MovimientoVolumesTiempo efecto;
     public static Action CambioMinutos;
     public static Action CambioHoras;
     public int Dia ;
@@ -74,15 +74,21 @@ public class TimeManager : MonoBehaviour
 
     public void TiempoAcelerado ()
     {
-        if (x == false) { VariacionDeTiempo = 600f; x = true; Sonido.SonidoRelojRapido(); }
+        if (x == false) 
+        {
+            efecto.ColocarEfectoTiempo();
+            VariacionDeTiempo = 800f; 
+            x = true; 
+        }
         else { TiempoNormal(); }
     }
 
     public void TiempoNormal ()
     {
-        if(x == true) Sonido.SonidoRelojNormal();
+        efecto.QuitarEfectoTiempo();
         VariacionDeTiempo = 30;
         x = false;
+        
     }
 
     public void TiempoPausado()
