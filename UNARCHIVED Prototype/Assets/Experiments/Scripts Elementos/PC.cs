@@ -8,7 +8,8 @@ public class PC : MonoBehaviour
 {
     [SerializeField] internal Libreta libreta;
     [SerializeField] Bitacoras bitacoras;
-    [SerializeField] PantallasSwitcherManager Pantallas; 
+    [SerializeField] PantallasSwitcherManager Pantallas;
+    [SerializeField] SonidoMagnament Sonido;
     public TMP_Text txtBuscador;
     public TMP_Text txtInfo;
     public TMP_Text txtRating;
@@ -16,23 +17,30 @@ public class PC : MonoBehaviour
     public Image fotoCarnet;
     public Sprite[] images;
     public Sprite[] personajes;
+    bool SonidoTerm;
+    int RatingAux;
 
 
     public int Rating;
 
     private void Update()
     {
-        txtRating.text = Rating + "";
+        txtRating.text = Rating + " w/s";
         txtBuscador.text = libreta.palabra;
+
+        if (Rating != RatingAux)
+        {
+            SonidoTerm = true;
+        }
         CambiarTermometro();
-       
+        RatingAux = Rating;
     }
 
     //Actualiza la wiki cada vez que le das a la lupa
     public void MostrarWiki ()
     {
         //================================================================ Wiki Ben =======================================================//
-
+        Sonido.SonidoClickMouse();
         if(txtBuscador.text == libreta.palabrasCaso[0])
 
         {
@@ -41,8 +49,6 @@ public class PC : MonoBehaviour
                 + System.Environment.NewLine + "Edad: 10 años"
                 + System.Environment.NewLine
                 + System.Environment.NewLine + "Estado: Niño de verdad"
-                + System.Environment.NewLine
-                + System.Environment.NewLine + "Teléfono: 0447 - 9965892"
                 + System.Environment.NewLine
                 + System.Environment.NewLine + "Ultima vez visto en: Pueblo Pimienta";
             FotoCarnet(0);
@@ -76,9 +82,10 @@ public class PC : MonoBehaviour
         //================================================================ Wiki Colorada =======================================================//
         else if (txtBuscador.text == libreta.palabrasCaso[6])
         {
-            txtInfo.text = "Filtro NSFW: ACTIVADO.";
+            txtInfo.text = "Filtro NSFW activado."
+                + System.Environment.NewLine + "";
         }
-        //================================================================ Wiki Pepe Quenio =======================================================//
+        //================================================================ Wiki Pepe Queño =======================================================//
 
         // Antes de investigarlo
         else if (txtBuscador.text == libreta.palabrasCaso[8])
@@ -95,8 +102,6 @@ public class PC : MonoBehaviour
             + System.Environment.NewLine
             + System.Environment.NewLine + "Estado: Pequeño niño raro."
             + System.Environment.NewLine
-            + System.Environment.NewLine + "Teléfono: 0447 - 9965784"
-            + System.Environment.NewLine
             + System.Environment.NewLine + "Última vez visto en: Pueblo Pimienta.";
                 FotoCarnet(3);
             }
@@ -109,8 +114,6 @@ public class PC : MonoBehaviour
                + System.Environment.NewLine
                + System.Environment.NewLine + "Estado: Pequeño niño pie grande."
                + System.Environment.NewLine
-               + System.Environment.NewLine + "Teléfono: 0447 - 9965784"
-               + System.Environment.NewLine
                + System.Environment.NewLine + "Última vez visto en: Pueblo Pimienta.";
                 FotoCarnet(3);
             }
@@ -122,7 +125,7 @@ public class PC : MonoBehaviour
         else if (txtBuscador.text == libreta.palabrasCaso[3])
         {
             txtInfo.text = "Solo un absoluto careta buscaría el significado de la Pimientaexperiencia en una computadora."
-            + System.Environment.NewLine + "Es el 28 de Marzo en Parque Pimienta. SIEMPRE. CARETA."
+            + System.Environment.NewLine + "Es el 27 de Marzo en Parque Pimienta. SIEMPRE. CARETA."
             + System.Environment.NewLine 
             + System.Environment.NewLine 
             + System.Environment.NewLine 
@@ -137,23 +140,24 @@ public class PC : MonoBehaviour
         else if (txtBuscador.text== libreta.palabrasCaso[10])
         {
             txtInfo.text = "Enorme reserva ambiental ubicada entre el dorso de Pueblo Pimienta y Monte Quete, es el austero hogar de especies nativas tales como el caribú mostaza, la liebre vermin y el noble salmón araña."
-            + System.Environment.NewLine + "A pesar de su propósito es también, controversialmente, el hogar del festival de música más masivo del planeta: El Pimentapaluza, festejado religiosamente en la inamovible fecha del 28 de Marzo de cada año."
-            + System.Environment.NewLine 
+            + System.Environment.NewLine + "A pesar de su propósito es también, controversialmente, el hogar del festival de música más masivo del planeta: El Pimentapaluza, festejado religiosamente en la inamovible fecha del 27 de Marzo de cada año."
             + System.Environment.NewLine + "Ubicación: Entre Pueblo Pimienta y Monte Quete.";
             libreta.BtnPimientaPaluza.SetActive(true);
+            Sonido.SonidoEscribirPapel();
         }
         //================================================================ Wiki Pueblo Pimienta =======================================================//
         else if (txtBuscador.text == libreta.palabrasCaso[5])
         {
             txtInfo.text = "Ex Ciudad Pimienta, descendida a Pueblo luego de la Triquiñuela del 68."
-            + System.Environment.NewLine + "El segundo pueblo más poblado de Quete es una zona semi rural pos urbana que se encuentra en un proceso de reivindicación fiscal. Es "
-            + System.Environment.NewLine + "Si bien los ingresos anuales generados por la reserva ambiental Parque Pimienta son suficientes para soportar la economía de diez Pueblos Pimienta, intentan mantener su urbanidad controlable."
+            + System.Environment.NewLine + "Es una zona semi rural pos urbana cuyos habitantes se encuentran en un proceso de reivindicación fiscal.Es el segundo pueblo más poblado de Quete."
+            + System.Environment.NewLine + "Si bien los ingresos anuales generados en la reserva ambiental Parque Pimienta son suficientes para soportar la economía de diez Pueblos Pimienta, intentan mantener su urbanidad controlable."
            + System.Environment.NewLine
             + System.Environment.NewLine + "Habitantes: 274"
             + System.Environment.NewLine
             + System.Environment.NewLine + "Ubicacion: Quete.";
  
             libreta.BtnParquePimienta.SetActive(true);
+            Sonido.SonidoEscribirPapel();
         }
         //================================================================ Wiki Pimientapaluzers =======================================================//
         else if (txtBuscador.text == libreta.palabrasCaso[11])
@@ -172,7 +176,7 @@ public class PC : MonoBehaviour
         //================================================================ Wiki cabellos rojizos =======================================================//
         else if (txtBuscador.text == libreta.palabrasCaso[9])
         {
-            txtInfo.text = "Filtro NSFW: ACTIVADO";
+            txtInfo.text = "¿Cabellos rojizos donde?";
         }
         //================================================================ Wiki wifi robado =======================================================//
         else if (txtBuscador.text == libreta.palabrasCaso[12])
@@ -185,7 +189,8 @@ public class PC : MonoBehaviour
             txtInfo.text = "Comedia romántica estrenada en 1994. La actuación y encendida cabellera de Kate Milliard capturó a la audiencia catapultandola a la fama." ;
             libreta.BtnKateMilliard.gameObject.SetActive(true);
             libreta.BtnBananorrama.gameObject.SetActive(false);
-            }
+            Sonido.SonidoEscribirPapel();
+        }
         //================================================================ Wiki red78 =======================================================//
         else if (txtBuscador.text == libreta.palabrasCaso[7])
         {
@@ -255,8 +260,9 @@ public class PC : MonoBehaviour
             case 16:
                 Termometro.sprite = images[16];
                 break;
-        }
 
+        }
+        SonidoTermometro();
     }
 
     void FotoCarnet (int num)
@@ -279,12 +285,20 @@ public class PC : MonoBehaviour
                 fotoCarnet.sprite = personajes[4];
                 break;
         }
-
     }
 
    public void RatinMaximo()
     {
         Pantallas.SwitchCanvas(CanvasTypePantallas.RatingMaximo, CanvasTypePantallas.RatingMaximo);
+    }
+
+    void SonidoTermometro ()
+    {
+        if (SonidoTerm == true)
+        {
+            Sonido.SonidoPING();
+            SonidoTerm = false;
+        }
     }
 
 }

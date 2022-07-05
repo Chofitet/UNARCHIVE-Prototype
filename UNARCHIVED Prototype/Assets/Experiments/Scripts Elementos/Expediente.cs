@@ -4,21 +4,27 @@ using UnityEngine;
 using TMPro;
 public class Expediente : MonoBehaviour
 {
+    [SerializeField] SonidoMagnament Sonido;
     public bool CasoLeido;
-    [SerializeField] TimeManager time;
-    [SerializeField] Bitacoras bitacoras;
-    public GameObject libreta;
-    void OnMouseDown()
-    {
-        time.TiempoNormal();
-        CasoLeido = true;
+    private bool PantallaExp = true;
 
-        if (bitacoras.BitacoraCargada == false)
+    void OnMouseDown ()
+    {
+        CasoLeido = true;
+        Sonido.SonidoAbrirExpediente();
+        PantallaExp = true;
+    }
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Mouse1) == true)
         {
-            libreta.SetActive(true);
-            
-        } 
-        else { libreta.SetActive(false); bitacoras.BitacoraCargada = false; }
+            if(PantallaExp == true)
+            {
+                Sonido.SonidoCerrarExpediente();
+          
+            }
+            PantallaExp = false;
+        }
     }
 
 }

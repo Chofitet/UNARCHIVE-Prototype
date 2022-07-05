@@ -4,11 +4,9 @@ using UnityEngine;
 
 public class TelefonoCamara : MonoBehaviour
 {
-    [SerializeField] TimeManager time;
     public bool telefonoCamara;
     private void OnMouseDown()
     {
-        time.TiempoNormal();
         telefonoCamara = true;
     }
 

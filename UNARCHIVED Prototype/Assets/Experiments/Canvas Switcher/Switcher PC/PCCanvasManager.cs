@@ -21,7 +21,6 @@ public class PCCanvasManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Mouse1) == true)
         {
             SwitchCanvas(CanvasTypePC.PCDef, CanvasTypePC.PCDef);
-
         }
     }
 
