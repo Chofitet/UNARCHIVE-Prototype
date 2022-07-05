@@ -625,22 +625,39 @@ public class TV : MonoBehaviour
     public void PulsadoDeTV ()
     {
         if (titular.text == PimientaPaluzaAnuncioTitulo) libreta.BtnPimientaPaluza.SetActive(true);
+        if (titular.text == PimientaPaluzaSeAdelantaTitulo) libreta.BtnPimientaPaluza.SetActive(true);
+        if (titular.text == PimientaPaluzaMañanaTitulo) libreta.BtnPimientaPaluza.SetActive(true);
+        if (titular.text == PimientaPaluzaArrancaTitulo) libreta.BtnPimientaPaluza.SetActive(true);
+
+        if (titular.text == PieGrandeEliminadoTitulo2) libreta.BtnKateMilliard.SetActive(true);
+        if (titular.text == CasamientoTitulo) libreta.BtnKateMilliard.SetActive(true);
+
         if (titular.text == BenEntrevistaTitulo2) 
         { 
             libreta.BtnParquePimienta.SetActive(true); 
-            bitacoras.PieGrandeUbicacion = true;
-            libreta.txtPieGrande.text = libreta.palabrasCaso[1];
-            libreta.SignoPreguntaPieGrande = "";
+
         }
         /*  poner en la comparación el título de la noticia que lo activa
          if (titular.text ==  ) libreta.BtnKateMilliard.SetActive(true);
          if (titular.text == ) libreta.BtnPimientapaluzers.SetActive(true);
  */
         if (titular.text == BenEntrevistaTitulo1) A.tglPlantarPublico.SetActive(true);
-        if (titular.text == BenEntrevistaTitulo2 && A.tglLevantarCerca.activeSelf == false) A.tglAislar.SetActive(true);
+        if (titular.text == BenEntrevistaTitulo1b && PlantarPublico == false) A.tglPlantarPublico.SetActive(true);
+
         
+        if (titular.text == BenEntrevistaTitulo2 && A.tglLevantarCerca.activeSelf == false) A.tglAislar.SetActive(true);
+        if (titular.text == BenEntrevistaTitulo3b && A.tglLevantarCerca.activeSelf == false) A.tglAislar.SetActive(true);
+
+        if (titular.text == BenEntrevistaTitulo3 && A.tglLevantarCerca.activeSelf == false) A.tglAislar.SetActive(true);
+
+        if (titular.text == PimientaPaluzaMañanaTitulo && A.tglLevantarCerca.activeSelf == false) A.tglAislar.SetActive(true);
+        if (titular.text == PimientaPaluzaArrancaTitulo && A.tglLevantarCerca.activeSelf == false) A.tglAislar.SetActive(true);
+        if (titular.text == PimientaPaluzaSeAdelantaTitulo && A.tglLevantarCerca.activeSelf == false) A.tglAislar.SetActive(true);
+
         /*if (titular.text == ) A.tglCrearEscena.SetActive(true);
         */
+        if (titular.text == BenEntrevistaTitulo4 && bitacoras.PieGrandeUbicacion == false) /*bitacoras.PieGrandeUbicacion == true*/;
+        if (titular.text == KateEliminadaTitulo && bitacoras.PieGrandeEliminado == false) /*bitacoras.PieGrandeUbicacion == true*/;
     }
 
     /// ================================================================== Noticias Aleatorias ========================================================= ///

@@ -15799,7 +15799,7 @@ MonoBehaviour:
   tiempoExagerado: {fileID: 1345883729}
   PosicionInicio: {fileID: 1821122926}
   PosicionFinal: {fileID: 1031912887}
-  transitionSpeed: 5
+  transitionSpeed: 4
 --- !u!1 &1308103297
 GameObject:
   m_ObjectHideFlags: 0
@@ -16560,7 +16560,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PosicionInicio: {fileID: 1821122926}
   PosicionFinal: {fileID: 1031912887}
-  transitionSpeed: 4
+  transitionSpeed: 3
 --- !u!114 &1345883730
 MonoBehaviour:
   m_ObjectHideFlags: 0
