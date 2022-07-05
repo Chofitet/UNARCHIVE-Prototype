@@ -6,10 +6,15 @@ public class Expediente : MonoBehaviour
 {
     [SerializeField] SonidoMagnament Sonido;
     public bool CasoLeido;
+
     private bool PantallaExp = true;
 
-    void OnMouseDown ()
+    [SerializeField] TimeManager time;
+    [SerializeField] Bitacoras bitacoras;
+    public GameObject libreta;
+    void OnMouseDown()
     {
+        time.TiempoNormal();
         CasoLeido = true;
         Sonido.SonidoAbrirExpediente();
         PantallaExp = true;
@@ -25,6 +30,13 @@ public class Expediente : MonoBehaviour
             }
             PantallaExp = false;
         }
+
+        if (bitacoras.BitacoraCargada == false)
+        {
+            libreta.SetActive(true);
+            
+        } 
+        else { libreta.SetActive(false); bitacoras.BitacoraCargada = false; }
     }
 
 }

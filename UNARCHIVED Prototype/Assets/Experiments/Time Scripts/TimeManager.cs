@@ -9,7 +9,11 @@ public class TimeManager : MonoBehaviour
     [SerializeField] Telefono telefono;
     [SerializeField] PantallasSwitcherManager Pantallas;
     [SerializeField] Acciones A;
+
     [SerializeField] SonidoMagnament Sonido;
+
+    [SerializeField] MovimientoVolumesTiempo efecto;
+
     public static Action CambioMinutos;
     public static Action CambioHoras;
     public int Dia ;
@@ -54,14 +58,14 @@ public class TimeManager : MonoBehaviour
 
     private void OnEnable()
     {
-        CambioHoras += PasoDelDía;
+        CambioHoras += PasoDelDï¿½a;
     }
     private void OnDisable()
     {
-        CambioHoras -= PasoDelDía;
+        CambioHoras -= PasoDelDï¿½a;
     }
 
-    void PasoDelDía ()
+    void PasoDelDï¿½a ()
     {
         if(Hora == 18)
         {
@@ -74,13 +78,23 @@ public class TimeManager : MonoBehaviour
 
     public void TiempoAcelerado ()
     {
-        if (x == false) { VariacionDeTiempo = 600f; x = true; Sonido.SonidoRelojRapido(); }
+
+        if (x == false) 
+        {
+            Sonido.SonidoRelojRapido();
+            efecto.ColocarEfectoTiempo();
+            VariacionDeTiempo = 800f; 
+            x = true; 
+        }
         else { TiempoNormal(); }
     }
 
     public void TiempoNormal ()
     {
         if(x == true) Sonido.SonidoRelojNormal();
+
+        efecto.QuitarEfectoTiempo();
+
         VariacionDeTiempo = 30;
         x = false;
     }
@@ -99,9 +113,9 @@ public class TimeManager : MonoBehaviour
     {
        float TiempoActual = TiempoAlternativo;
        float CalculoTiempoNormal = (retencion*3600) + TiempoActual;
-       float TiempoRetención = CalculoTiempoNormal;
+       float TiempoRetenciï¿½n = CalculoTiempoNormal;
 
-        while (TiempoRetención >= TiempoAlternativo)
+        while (TiempoRetenciï¿½n >= TiempoAlternativo)
         {
             yield return null;
         }
