@@ -5,6 +5,7 @@ using TMPro;
 
 
 // hola si funciona
+// hola si funciona 2
 public class TV : MonoBehaviour
 {
     public TMP_Text titular;
