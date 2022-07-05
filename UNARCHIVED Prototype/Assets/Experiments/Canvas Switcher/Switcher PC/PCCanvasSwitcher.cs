@@ -4,17 +4,15 @@ using UnityEngine;
 
 public class PCCanvasSwitcher : MonoBehaviour
 {
-    [SerializeField] TimeManager time;
     public CanvasTypePC desiredCanvasType;
     public CanvasTypePC desiredCanvasType2;
     public bool PantallaPC;
     public PCCanvasManager canvasManager;
-
+    
     void OnMouseDown()
     {
-        canvasManager.SwitchCanvas(desiredCanvasType, desiredCanvasType2);
-        time.TiempoNormal();
-        PantallaPC = true;
+          canvasManager.SwitchCanvas(desiredCanvasType, desiredCanvasType2);
+          PantallaPC = true;
     }
     private void Update()
     {
@@ -23,6 +21,5 @@ public class PCCanvasSwitcher : MonoBehaviour
             PantallaPC = false;
 
         }
-
     }
 }

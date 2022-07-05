@@ -10,17 +10,15 @@ public class TimeManager : MonoBehaviour
     [SerializeField] PantallasSwitcherManager Pantallas;
     [SerializeField] Acciones A;
     [SerializeField] SonidoMagnament Sonido;
-    [SerializeField] MovimientoVolumesTiempo efecto;
-
     public static Action CambioMinutos;
     public static Action CambioHoras;
-    public int Dia;
+    public int Dia ;
     public bool NoticiaDiaria;
     public float VariacionDeTiempo = 50;
     bool x;
 
-    public static int Minuto { get; private set; }
-    public static int Hora { get; private set; }
+    public static int Minuto { get; private set;}
+    public static int Hora { get; private set;}
 
     int Segundero = 1;
     private float TiempoAlternativo;
@@ -43,11 +41,11 @@ public class TimeManager : MonoBehaviour
         {
             Minuto++;
             CambioMinutos?.Invoke();
-            if (Minuto >= 60)
+            if(Minuto >= 60)
             {
                 Hora++;
                 Minuto = 0;
-                CambioHoras?.Invoke();
+                CambioHoras?.Invoke(); 
             }
             Segundero++;
         }
@@ -63,9 +61,9 @@ public class TimeManager : MonoBehaviour
         CambioHoras -= PasoDelDía;
     }
 
-    void PasoDelDía()
+    void PasoDelDía ()
     {
-        if (Hora == 18)
+        if(Hora == 18)
         {
             telefono.LLamadaDiaria = false;
             NoticiaDiaria = false;
@@ -74,23 +72,15 @@ public class TimeManager : MonoBehaviour
         }
     }
 
-    public void TiempoAcelerado()
+    public void TiempoAcelerado ()
     {
-
-        if (x == false)
-        {
-            Sonido.SonidoRelojRapido();
-            efecto.ColocarEfectoTiempo();
-            VariacionDeTiempo = 800f;
-            x = true;
-        }
+        if (x == false) { VariacionDeTiempo = 600f; x = true; Sonido.SonidoRelojRapido(); }
         else { TiempoNormal(); }
     }
 
-    public void TiempoNormal()
+    public void TiempoNormal ()
     {
-        if (x == true) Sonido.SonidoRelojNormal();
-
+        if(x == true) Sonido.SonidoRelojNormal();
         VariacionDeTiempo = 30;
         x = false;
     }
@@ -100,16 +90,16 @@ public class TimeManager : MonoBehaviour
         VariacionDeTiempo = 0;
     }
 
-    void FinJuego()
+    void FinJuego ()
     {
         Pantallas.SwitchCanvas(CanvasTypePantallas.FinJuego, CanvasTypePantallas.FinJuego);
     }
 
-    public IEnumerator RetencionBitacorasSegunAccion(float retencion)
+   public IEnumerator RetencionBitacorasSegunAccion (float retencion)
     {
-        float TiempoActual = TiempoAlternativo;
-        float CalculoTiempoNormal = (retencion * 3600) + TiempoActual;
-        float TiempoRetención = CalculoTiempoNormal;
+       float TiempoActual = TiempoAlternativo;
+       float CalculoTiempoNormal = (retencion*3600) + TiempoActual;
+       float TiempoRetención = CalculoTiempoNormal;
 
         while (TiempoRetención >= TiempoAlternativo)
         {
