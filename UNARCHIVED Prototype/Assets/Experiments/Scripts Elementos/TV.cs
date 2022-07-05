@@ -4,7 +4,7 @@ using UnityEngine;
 using TMPro;
 
 
-/// 
+// hola si funciona
 public class TV : MonoBehaviour
 {
     public TMP_Text titular;
