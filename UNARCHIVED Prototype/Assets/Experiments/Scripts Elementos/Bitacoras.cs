@@ -13,7 +13,6 @@ public class Bitacoras : MonoBehaviour
     [SerializeField] Reloj reloj;
     [SerializeField] PC PC;
     [SerializeField] PantallasSwitcherManager Pantallas;
-    
 
     //Declaración varariables
 
@@ -165,6 +164,18 @@ public class Bitacoras : MonoBehaviour
     string[] pag5 = new string[6];
 
     string[] pag6 = new string[6];
+
+    string[] pag7 = new string[6];
+
+    string[] pag8 = new string[6];
+
+    string[] pag9 = new string[6];
+
+    string[] pag10 = new string[6];
+
+    string[] pag11 = new string[6];
+
+    string[] pag12 = new string[6];
 
     int Pag = 1;
     int PagActual;
@@ -2433,8 +2444,8 @@ public class Bitacoras : MonoBehaviour
         {
             float RetencionBitacora = 3;
             float HoraCompletado = RetencionBitacora + TimeManager.Hora;
-            string txt = "<b>MONTAR ESCENA CON AGENTE PELUDO Y AGENTE CON PELUCA COLORADA</b>"
-            + System.Environment.NewLine + "La estrategia parece haber calmado las aguas. Los agentes fueron aproximados por un pequeño niño raro llamado Pepe Quenio, su interés en ellos les llamó la atención.";
+            string txt = "<b>MONTAR ESCENA CON AGENTE PELUDO Y AGENTE CON PELUCA COLORADA WIP</b>"
+            + System.Environment.NewLine + "La estrategia parece haber calmado las aguas. Los agentes fueron aproximados por un pequeño niño raro llamado Pepe Quenio, su interés en ellos les llamó la atención. WIP";
             string FechaCompletado = "2" + time.Dia + "/03/2000";
             string txtAccion = "Montar Escena";
             Toggle accion = A.crearEscena;
@@ -2712,7 +2723,7 @@ public class Bitacoras : MonoBehaviour
         {
             B1P1.text = pag4[0];
             B2P1.text = pag4[1];
-            B3P1.text = pag5[2];
+            B3P1.text = pag4[2];
             B4P1.text = pag4[3];
             B5P1.text = pag4[4];
             B6P1.text = pag4[5];
@@ -2735,7 +2746,63 @@ public class Bitacoras : MonoBehaviour
             B5P1.text = pag6[4];
             B6P1.text = pag6[5];
         }
-       
+        if (PagActual == 7)
+        {
+            B1P1.text = pag7[0];
+            B2P1.text = pag7[1];
+            B3P1.text = pag7[2];
+            B4P1.text = pag7[3];
+            B5P1.text = pag7[4];
+            B6P1.text = pag7[5];
+        }
+       else if (PagActual == 8)
+        {
+            B1P1.text = pag8[0];
+            B2P1.text = pag8[1];
+            B3P1.text = pag8[2];
+            B4P1.text = pag8[3];
+            B5P1.text = pag8[4];
+            B6P1.text = pag8[5];
+
+        }
+        else if (PagActual == 9)
+        {
+            B1P1.text = pag9[0];
+            B2P1.text = pag9[1];
+            B3P1.text = pag9[2];
+            B4P1.text = pag9[3];
+            B5P1.text = pag9[4];
+            B6P1.text = pag9[5];
+
+        }
+        else if (PagActual == 10)
+        {
+            B1P1.text = pag10[0];
+            B2P1.text = pag10[1];
+            B3P1.text = pag10[2];
+            B4P1.text = pag10[3];
+            B5P1.text = pag10[4];
+            B6P1.text = pag10[5];
+        }
+        else if (PagActual == 11)
+        {
+            B1P1.text = pag11[0];
+            B2P1.text = pag11[1];
+            B3P1.text = pag11[2];
+            B4P1.text = pag11[3];
+            B5P1.text = pag11[4];
+            B6P1.text = pag11[5];
+        }
+        else if (PagActual == 12)
+        {
+            B1P1.text = pag12[0];
+            B2P1.text = pag12[1];
+            B3P1.text = pag12[2];
+            B4P1.text = pag12[3];
+            B5P1.text = pag12[4];
+            B6P1.text = pag12[5];
+        }
+
 
     }
 
@@ -2765,6 +2832,30 @@ public class Bitacoras : MonoBehaviour
         {
             pag6[ind] = Accion + " en proceso: " + System.Environment.NewLine + "Se completa el: " + FechaCompletado + " a las: " + HoraCompletado + ":" + TimeManager.Minuto;
         }
+        else if (Pag == 7)
+        {
+            pag7[ind] = Accion + " en proceso: " + System.Environment.NewLine + "Se completa el: " + FechaCompletado + " a las: " + HoraCompletado + ":" + TimeManager.Minuto;
+        }
+        else if (Pag == 8)
+        {
+            pag8[ind] = Accion + " en proceso: " + System.Environment.NewLine + "Se completa el: " + FechaCompletado + " a las: " + HoraCompletado + ":" + TimeManager.Minuto;
+        }
+        else if (Pag == 9)
+        {
+            pag9[ind] = Accion + " en proceso: " + System.Environment.NewLine + "Se completa el: " + FechaCompletado + " a las: " + HoraCompletado + ":" + TimeManager.Minuto;
+        }
+        else if (Pag == 10)
+        {
+            pag10[ind] = Accion + " en proceso: " + System.Environment.NewLine + "Se completa el: " + FechaCompletado + " a las: " + HoraCompletado + ":" + TimeManager.Minuto;
+        }
+        else if (Pag == 11)
+        {
+            pag11[ind] = Accion + " en proceso: " + System.Environment.NewLine + "Se completa el: " + FechaCompletado + " a las: " + HoraCompletado + ":" + TimeManager.Minuto;
+        }
+        else if (Pag == 12)
+        {
+            pag12[ind] = Accion + " en proceso: " + System.Environment.NewLine + "Se completa el: " + FechaCompletado + " a las: " + HoraCompletado + ":" + TimeManager.Minuto;
+        }
 
     }
     void ActualizarIndice ()
@@ -2790,6 +2881,18 @@ public class Bitacoras : MonoBehaviour
         if (Pag == 5) aux = 5;
 
         if (Pag == 6) aux = 6;
+
+        if (Pag == 7) aux = 7;
+
+        if (Pag == 8) aux = 8;
+
+        if (Pag == 9) aux = 9;
+
+        if (Pag == 10) aux = 10;
+
+        if (Pag == 11) aux = 11;
+
+        if (Pag == 12) aux = 12;
 
     }
     void CargarVectorAccion (int a, int indaux, string txt )
@@ -2852,6 +2955,66 @@ public class Bitacoras : MonoBehaviour
             if (indaux == 3) pag6[3] = txt;
             if (indaux == 4) pag6[4] = txt;
             if (indaux == 5) pag6[5] = txt;
+
+        }
+        if (a == 7)
+        {
+            if (indaux == 0) pag7[0] = txt;
+            if (indaux == 1) pag7[1] = txt;
+            if (indaux == 2) pag7[2] = txt;
+            if (indaux == 3) pag7[3] = txt;
+            if (indaux == 4) pag7[4] = txt;
+            if (indaux == 5) pag7[5] = txt;
+
+        }
+        if (a == 8)
+        {
+            if (indaux == 0) pag8[0] = txt;
+            if (indaux == 1) pag8[1] = txt;
+            if (indaux == 2) pag8[2] = txt;
+            if (indaux == 3) pag8[3] = txt;
+            if (indaux == 4) pag8[4] = txt;
+            if (indaux == 5) pag8[5] = txt;
+
+        }
+        if (a == 9)
+        {
+            if (indaux == 0) pag9[0] = txt;
+            if (indaux == 1) pag9[1] = txt;
+            if (indaux == 2) pag9[2] = txt;
+            if (indaux == 3) pag9[3] = txt;
+            if (indaux == 4) pag9[4] = txt;
+            if (indaux == 5) pag9[5] = txt;
+
+        }
+        if (a == 10)
+        {
+            if (indaux == 0) pag10[0] = txt;
+            if (indaux == 1) pag10[1] = txt;
+            if (indaux == 2) pag10[2] = txt;
+            if (indaux == 3) pag10[3] = txt;
+            if (indaux == 4) pag10[4] = txt;
+            if (indaux == 5) pag10[5] = txt;
+
+        }
+        if (a == 11)
+        {
+            if (indaux == 0) pag11[0] = txt;
+            if (indaux == 1) pag11[1] = txt;
+            if (indaux == 2) pag11[2] = txt;
+            if (indaux == 3) pag11[3] = txt;
+            if (indaux == 4) pag11[4] = txt;
+            if (indaux == 5) pag11[5] = txt;
+
+        }
+        if (a == 12)
+        {
+            if (indaux == 0) pag12[0] = txt;
+            if (indaux == 1) pag12[1] = txt;
+            if (indaux == 2) pag12[2] = txt;
+            if (indaux == 3) pag12[3] = txt;
+            if (indaux == 4) pag12[4] = txt;
+            if (indaux == 5) pag12[5] = txt;
 
         }
     }
@@ -2938,13 +3101,11 @@ public class Bitacoras : MonoBehaviour
                 libreta.BtnPuebloPimienta.SetActive(false);
             }
         }
-
         if (TrueEnding == true) 
         { 
             Pantallas.SwitchCanvas(CanvasTypePantallas.TrueEnding, CanvasTypePantallas.TrueEnding);
             time.TiempoPausado();
         }
-
     }
 
     int UN;

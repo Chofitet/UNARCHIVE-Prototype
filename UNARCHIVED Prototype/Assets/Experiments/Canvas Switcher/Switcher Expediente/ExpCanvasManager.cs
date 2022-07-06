@@ -18,10 +18,11 @@ public class ExpCanvasManager : MonoBehaviour
     public ExpController lastActiveCanvas;
     [SerializeField] TimeManager time;
     ExpController lastActiveCanvas2;
+    public GameObject tutorial;
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Mouse1) == true)
+        if (Input.GetKeyDown(KeyCode.Mouse1) == true && tutorial.gameObject.activeSelf == false)
         {
             SwitchCanvas(CanvasTypeExp.ExpedienteDef, CanvasTypeExp.ExpedienteDef);
             time.TiempoNormal();
