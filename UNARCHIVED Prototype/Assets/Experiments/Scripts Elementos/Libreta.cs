@@ -182,7 +182,7 @@ public class Libreta : MonoBehaviour
         else if (txtPieGrande.text == "<u>Pie Grande</u>" + SignoPreguntaPieGrande) { txtPieGrande.text = palabrasCaso[1] + SignoPreguntaPieGrande; }
         else if (txtPimientaPaluza.text == "<u>Pimientapaluza</u>") { txtPimientaPaluza.text = palabrasCaso[3]; }
         else if (txtPuebloPimienta.text == "<u>Pueblo Pimienta</u>") { txtPuebloPimienta.text = palabrasCaso[5]; }
-        else if (txtBananorrama.text == "<u>Bananorrama?<u>") { txtBananorrama.text = palabrasCaso[4] + "?";}
+        else if (txtBananorrama.text == "<u>Bananorrama?</u>") { txtBananorrama.text = palabrasCaso[4] + "?";}
         else if (txtColorada.text == "<u>colorada?</u>") { txtColorada.text = palabrasCaso[6] + "?"; }
         else if (txtPepeQueño.text == "<u>Pepe Quenio</u>" + SignoPreguntaPepeQueño) { txtPepeQueño.text = palabrasCaso[8] + SignoPreguntaPepeQueño; }
         else if (txtCabellosRojizos.text == "<u>cabellos rojizos</u>") { txtCabellosRojizos.text = palabrasCaso[9]; }

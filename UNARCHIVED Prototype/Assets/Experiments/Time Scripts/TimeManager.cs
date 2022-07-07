@@ -65,7 +65,10 @@ public class TimeManager : MonoBehaviour
     {
         if(Hora == 18)
         {
-            telefono.LLamadaDiaria = false;
+            telefono.LlamadaDiariaBen = false;
+            telefono.LlamadaDiariaKate = false;
+            telefono.LlamadaDiariaPepe = false;
+            telefono.LlamadaDiariaPieGrande = false;
             NoticiaDiaria = false;
             Dia++;
             Hora = 6;

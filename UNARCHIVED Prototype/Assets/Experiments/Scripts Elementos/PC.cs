@@ -17,7 +17,18 @@ public class PC : MonoBehaviour
     public Sprite[] images;
     public Sprite[] personajes;
 
-
+    /*
+     * 0 = ben
+     * 1 pie grande
+     * 2 kate
+     * 3 pepe 
+     * 4 png vacio
+     * 5 parque pimienta
+     * 6 pueblo pimienta
+     * 7 pimienta paluza
+     * 8 pimientapaluzers
+     * 9 bananorrama
+    */
     public int Rating;
 
     private void Update()
@@ -132,7 +143,9 @@ public class PC : MonoBehaviour
             + System.Environment.NewLine 
             + System.Environment.NewLine 
             + System.Environment.NewLine + "NOTA: POR FAVOR, MANTENGAMOS CIVILES LAS ENTRADAS EN LA BASE DE DATOS";
+            FotoCarnet(7);
         }
+
         //================================================================ Wiki Parque Pimienta =======================================================//
         else if (txtBuscador.text== libreta.palabrasCaso[10])
         {
@@ -141,6 +154,7 @@ public class PC : MonoBehaviour
             + System.Environment.NewLine 
             + System.Environment.NewLine + "Ubicación: Entre Pueblo Pimienta y Monte Quete.";
             libreta.BtnPimientaPaluza.SetActive(true);
+            FotoCarnet(5);
         }
         //================================================================ Wiki Pueblo Pimienta =======================================================//
         else if (txtBuscador.text == libreta.palabrasCaso[5])
@@ -154,6 +168,7 @@ public class PC : MonoBehaviour
             + System.Environment.NewLine + "Ubicacion: Quete.";
  
             libreta.BtnParquePimienta.SetActive(true);
+            FotoCarnet(6);
         }
         //================================================================ Wiki Pimientapaluzers =======================================================//
         else if (txtBuscador.text == libreta.palabrasCaso[11])
@@ -168,6 +183,8 @@ public class PC : MonoBehaviour
             + System.Environment.NewLine 
             + System.Environment.NewLine 
             + System.Environment.NewLine + "NOTA: POR FAVOR!!";
+            FotoCarnet(8);
+
         }
         //================================================================ Wiki cabellos rojizos =======================================================//
         else if (txtBuscador.text == libreta.palabrasCaso[9])
@@ -185,6 +202,7 @@ public class PC : MonoBehaviour
             txtInfo.text = "Comedia romántica estrenada en 1994. La actuación y encendida cabellera de Kate Milliard capturó a la audiencia catapultandola a la fama." ;
             libreta.BtnKateMilliard.gameObject.SetActive(true);
             libreta.BtnBananorrama.gameObject.SetActive(false);
+            FotoCarnet(9);
             }
         //================================================================ Wiki red78 =======================================================//
         else if (txtBuscador.text == libreta.palabrasCaso[7])
@@ -278,11 +296,26 @@ public class PC : MonoBehaviour
             case 4:
                 fotoCarnet.sprite = personajes[4];
                 break;
+            case 5:
+                fotoCarnet.sprite = personajes[5];
+                break;
+            case 6:
+                fotoCarnet.sprite = personajes[6];
+                break;
+            case 7:
+                fotoCarnet.sprite = personajes[7];
+                break;
+            case 8:
+                fotoCarnet.sprite = personajes[8];
+                break;
+            case 9:
+                fotoCarnet.sprite = personajes[9];
+                break;
         }
-
+        
     }
 
-   public void RatinMaximo()
+    public void RatinMaximo()
     {
         Pantallas.SwitchCanvas(CanvasTypePantallas.RatingMaximo, CanvasTypePantallas.RatingMaximo);
     }
