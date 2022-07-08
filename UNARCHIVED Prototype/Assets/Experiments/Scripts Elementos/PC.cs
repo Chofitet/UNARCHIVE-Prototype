@@ -8,35 +8,36 @@ public class PC : MonoBehaviour
 {
     [SerializeField] internal Libreta libreta;
     [SerializeField] Bitacoras bitacoras;
-    [SerializeField] PantallasSwitcherManager Pantallas; 
+    [SerializeField] PantallasSwitcherManager Pantallas;
+    [SerializeField] AlarmaPC alarmaPC;
     public TMP_Text txtBuscador;
     public TMP_Text txtInfo;
+    public TMP_Text txtDatos;
     public TMP_Text txtRating;
     public Image Termometro;
     public Image fotoCarnet;
     public Sprite[] images;
     public Sprite[] personajes;
 
-    /*
-     * 0 = ben
-     * 1 pie grande
-     * 2 kate
-     * 3 pepe 
-     * 4 png vacio
-     * 5 parque pimienta
-     * 6 pueblo pimienta
-     * 7 pimienta paluza
-     * 8 pimientapaluzers
-     * 9 bananorrama
-    */
     public int Rating;
+    private int RatingAux;
 
     private void Update()
     {
+        
         txtRating.text = Rating + "";
         txtBuscador.text = libreta.palabra;
-        CambiarTermometro();
-       
+        if (RatingAux < Rating)
+        {
+            alarmaPC.LuzRatingSube();
+            CambiarTermometro();
+        }
+        if (RatingAux > Rating)
+        {
+            alarmaPC.LuzRatingBaja();
+            CambiarTermometro();
+        }
+        RatingAux = Rating;
     }
 
     //Actualiza la wiki cada vez que le das a la lupa
@@ -47,16 +48,16 @@ public class PC : MonoBehaviour
         if(txtBuscador.text == libreta.palabrasCaso[0])
 
         {
-            txtInfo.text = "Niño común, académicamente correcto, no posee características ni poderes especiales. Si leer esto te parece aburrido y consideras que quien redactó esta entrada carece de ambición creativa, agradece que no conoces a Ben Benji."
-                + System.Environment.NewLine
-                + System.Environment.NewLine + "Edad: 10 años"
+            txtInfo.text = "Niño común, académicamente correcto, no posee características ni poderes especiales. Si leer esto te parece aburrido y consideras que quien redactó esta entrada carece de ambición creativa, agradece que no conoces a Ben Benji.";
+
+            FotoCarnet(0);
+            txtDatos.text = "Edad: 10 años"
                 + System.Environment.NewLine
                 + System.Environment.NewLine + "Estado: Niño de verdad"
                 + System.Environment.NewLine
                 + System.Environment.NewLine + "Teléfono: 0447 - 9965892"
                 + System.Environment.NewLine
                 + System.Environment.NewLine + "Ultima vez visto en: Pueblo Pimienta";
-            FotoCarnet(0);
         }
         //================================================================ Wiki Pie Grande ==============================================//
         else if (txtBuscador.text == libreta.palabrasCaso[1])
@@ -71,6 +72,7 @@ public class PC : MonoBehaviour
                 + System.Environment.NewLine
                 + System.Environment.NewLine + "Ultima vez visto en:  Monte Quete";
             FotoCarnet(1);
+            txtDatos.text = "";
         }
         //================================================================ Wiki Kate Milliard =======================================================//
         else if (txtBuscador.text == libreta.palabrasCaso[2])
@@ -83,6 +85,7 @@ public class PC : MonoBehaviour
                 + System.Environment.NewLine
                 + System.Environment.NewLine + "Última vez vista en: Monte Quete.";
             FotoCarnet(2);
+            txtDatos.text = ""; 
         }
         //================================================================ Wiki Colorada =======================================================//
         else if (txtBuscador.text == libreta.palabrasCaso[6])
@@ -110,6 +113,7 @@ public class PC : MonoBehaviour
             + System.Environment.NewLine
             + System.Environment.NewLine + "Última vez visto en: Pueblo Pimienta.";
                 FotoCarnet(3);
+                txtDatos.text = "";
             }
             if (txtBuscador.text == libreta.palabrasCaso[8] && bitacoras.PepeAnalizado == true)
             {
@@ -124,6 +128,7 @@ public class PC : MonoBehaviour
                + System.Environment.NewLine
                + System.Environment.NewLine + "Última vez visto en: Pueblo Pimienta.";
                 FotoCarnet(3);
+                txtDatos.text = "";
             }
             
 
@@ -144,6 +149,7 @@ public class PC : MonoBehaviour
             + System.Environment.NewLine 
             + System.Environment.NewLine + "NOTA: POR FAVOR, MANTENGAMOS CIVILES LAS ENTRADAS EN LA BASE DE DATOS";
             FotoCarnet(7);
+            txtDatos.text = "";
         }
 
         //================================================================ Wiki Parque Pimienta =======================================================//
@@ -155,6 +161,7 @@ public class PC : MonoBehaviour
             + System.Environment.NewLine + "Ubicación: Entre Pueblo Pimienta y Monte Quete.";
             libreta.BtnPimientaPaluza.SetActive(true);
             FotoCarnet(5);
+            txtDatos.text = "";
         }
         //================================================================ Wiki Pueblo Pimienta =======================================================//
         else if (txtBuscador.text == libreta.palabrasCaso[5])
@@ -169,6 +176,7 @@ public class PC : MonoBehaviour
  
             libreta.BtnParquePimienta.SetActive(true);
             FotoCarnet(6);
+            txtDatos.text = "";
         }
         //================================================================ Wiki Pimientapaluzers =======================================================//
         else if (txtBuscador.text == libreta.palabrasCaso[11])
@@ -184,6 +192,7 @@ public class PC : MonoBehaviour
             + System.Environment.NewLine 
             + System.Environment.NewLine + "NOTA: POR FAVOR!!";
             FotoCarnet(8);
+            txtDatos.text = "";
 
         }
         //================================================================ Wiki cabellos rojizos =======================================================//
@@ -201,8 +210,9 @@ public class PC : MonoBehaviour
         {
             txtInfo.text = "Comedia romántica estrenada en 1994. La actuación y encendida cabellera de Kate Milliard capturó a la audiencia catapultandola a la fama." ;
             libreta.BtnKateMilliard.gameObject.SetActive(true);
-            libreta.BtnBananorrama.gameObject.SetActive(false);
+            libreta.TacharPalabra(libreta.BananoramaBtn, libreta.txtBananorrama, 4);
             FotoCarnet(9);
+            txtDatos.text = "";
             }
         //================================================================ Wiki red78 =======================================================//
         else if (txtBuscador.text == libreta.palabrasCaso[7])

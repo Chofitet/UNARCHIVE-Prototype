@@ -82,7 +82,7 @@ public class TimeManager : MonoBehaviour
         if (x == false) 
         {
             efecto.ColocarEfectoTiempo();
-            VariacionDeTiempo = 800f; 
+            VariacionDeTiempo = 900f; 
             x = true; 
         }
         else { TiempoNormal(); }

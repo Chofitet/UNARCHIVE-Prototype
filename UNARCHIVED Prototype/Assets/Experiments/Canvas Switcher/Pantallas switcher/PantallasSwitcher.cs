@@ -6,6 +6,7 @@ public class PantallasSwitcher : MonoBehaviour
     public CanvasTypePantallas desiredCanvasType;
     public CanvasTypePantallas desiredCanvasType2;
 
+    [SerializeField] PasoDeDia pasoDeDia;
     public PantallasSwitcherManager canvasManager;
     Button menuButton;
 
@@ -13,11 +14,11 @@ public class PantallasSwitcher : MonoBehaviour
     {
         menuButton = GetComponent<Button>();
         menuButton.onClick.AddListener(OnButtonClicked);
-
     }
 
     void OnButtonClicked()
     {
         canvasManager.SwitchCanvas(desiredCanvasType, desiredCanvasType2);
+        pasoDeDia.PasoDia();
     }
 }

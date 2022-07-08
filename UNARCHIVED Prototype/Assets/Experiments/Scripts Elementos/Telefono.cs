@@ -64,7 +64,6 @@ public class Telefono : MonoBehaviour
     {
         if (x == false)
         {
-            
             LlamadaEnProgreso = libreta.palabra;
             EsLlamable(LlamadaEnProgreso);
             if (LlamadaEnProgreso == "") PapelFax.SetActive(false);
@@ -72,6 +71,7 @@ public class Telefono : MonoBehaviour
         else if (x == true)
         {
             btnllamar.interactable = true;
+            LlamadaEnTranscurso = false;
             x = false;
             Alarma.Apagado();
             Debug.Log("no llamado");
@@ -183,9 +183,9 @@ public class Telefono : MonoBehaviour
     IEnumerator PinchandoLlamada (float retencionllamada)
     {
         yield return StartCoroutine(time.RetencionBitacorasSegunAccion(retencionllamada));
-        Alarma.Titilando();
         if (x == true) 
         {
+            Alarma.Titilando();
             btnplay.interactable = true;
             btnREC.interactable = false;
             x = false;

@@ -213,7 +213,7 @@ public class Bitacoras : MonoBehaviour
         }
         else A.crearNoticia.interactable = true;
 
-        if (libreta.SignoPreguntaPieGrande == "") libreta.BtnWifiRobado.gameObject.SetActive(false);
+        if (libreta.SignoPreguntaPieGrande == "") libreta.TacharPalabra(libreta.WifiRobadoBtn, libreta.txtWifiRobado, 12);
 
         ActualizarPaginas();
     }
@@ -3029,7 +3029,6 @@ public class Bitacoras : MonoBehaviour
                 + System.Environment.NewLine + "Entrará en transmisión a la brevedad.";
                 txtTituloFalsa = "PUEBLO PIMIENTA NOMINADO A PUEBLO MENOS ILUSO DEL PLANETA";
                 txtNoticiaFalsa = "EL PREMIO SERÁ ENTREGADO EN ASDFGD";
-                PC.Rating = PC.Rating - 2;
                 NumNoticias++;
                 break;
             case 1:
@@ -3038,7 +3037,6 @@ public class Bitacoras : MonoBehaviour
                 txtTituloFalsa = "ESTUDIO COMPRUEBA QUE EL ESCEPTICISMO PREVIENE LA CAIDA DEL CABELLO";
                 txtNoticiaFalsa = "";
                 NumNoticias++;
-                PC.Rating = PC.Rating - 1;
                 break;
             case 2:
                 txtBitacoraNoticia = "<b>NOTICIA FALSA CREADA</b>"
@@ -3046,7 +3044,6 @@ public class Bitacoras : MonoBehaviour
                 txtTituloFalsa = "MARATÓN DE EL SEÑOR DE LOS ZARCILLOS ARRANCA DE HOY HASTA EL 28/03";
                 txtNoticiaFalsa = "";
                 NumNoticias++;
-                PC.Rating = PC.Rating - 2;
                 break;
             case 3:
                 txtBitacoraNoticia = "<b>NOTICIA FALSA CREADA</b>"
@@ -3054,7 +3051,6 @@ public class Bitacoras : MonoBehaviour
                 txtTituloFalsa = "FALLECE CANTANTE IMPORTANTE. PENSEMOS EN EL MUCHO Y MUCHOS DIAS.";
                 txtNoticiaFalsa = "";
                 NumNoticias++;
-                PC.Rating = PC.Rating - 1;
                 break;
             case 4:
                 txtBitacoraNoticia = "<b>NOTICIA FALSA CREADA</b>"
@@ -3062,7 +3058,6 @@ public class Bitacoras : MonoBehaviour
                 txtTituloFalsa = "NO CREER TODO LO QUE TE DICEN AUMENTA TU VIRILIDAD UN 800%";
                 txtNoticiaFalsa = "";
                 NumNoticias++;
-                PC.Rating = PC.Rating - 2;
                 break;
             case 5:
                 txtBitacoraNoticia = "<b>NOTICIA FALSA CREADA</b>"
@@ -3070,7 +3065,6 @@ public class Bitacoras : MonoBehaviour
                 txtTituloFalsa = "CONFIRMADO: VISITAR PARQUE PIMIENTA ATRAE LA MALA SUERTE Y EL ESCORBUTO";
                 txtNoticiaFalsa = "";
                 NumNoticias++;
-                PC.Rating = PC.Rating - 1;
                 break;
         }
     }
@@ -3098,7 +3092,7 @@ public class Bitacoras : MonoBehaviour
                 PieGrandeUbicacion = true;
                 libreta.txtPieGrande.text = libreta.palabrasCaso[1];
                 libreta.SignoPreguntaPieGrande = "";
-                libreta.BtnPuebloPimienta.SetActive(false);
+                libreta.TacharPalabra(libreta.PuebloPimientaBtn, libreta.txtPuebloPimienta, 5);
             }
         }
         if (TrueEnding == true) 

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 
 
 // hola si funciona
@@ -15,6 +16,11 @@ public class TV : MonoBehaviour
     [SerializeField] Libreta libreta;
     [SerializeField] PC PC;
     [SerializeField] Acciones A;
+    [SerializeField] private Sprite[] Reporteros;
+    [SerializeField] Image Reportero;
+    [SerializeField] Image ReporteroDef;
+    [SerializeField] Image FondoTV;
+    [SerializeField] Image FondeoTVDef;
     bool x;
     int CualLista;
     int NumNoticiasAteatorias = 1;
@@ -32,7 +38,7 @@ public class TV : MonoBehaviour
     int DifamarRetencion = 1;
     int CrearEscenaRetencion = 1;
     int AislarRetencion = 1;
-   
+    
 
 
     private bool NF1;
@@ -198,8 +204,8 @@ public class TV : MonoBehaviour
   
     public void DirectorNoticias()
     {
-       // CheckearBitacoras(); if (x == false) NoticiasAliatorias(); x = false;
-
+        // CheckearBitacoras(); if (x == false) NoticiasAliatorias(); x = false;
+        SetearReportero(0);
         if (TimeManager.Hora == 6) { CheckearBitacoras(); if (x == false) NoticiasAliatorias(); x = false; }
         if (TimeManager.Hora == 7) { CheckearBitacoras(); if (x == false) NoticiasAliatorias(); x = false; }
         if (TimeManager.Hora == 8) { CheckearBitacoras(); if (x == false) NoticiasAliatorias(); x = false; }
@@ -558,6 +564,7 @@ public class TV : MonoBehaviour
             PC.Rating = PC.Rating + IncrementoRating;
             x = true;
             NF1 = true;
+            SetearReportero(1);
         }
         else if (bitacoras.NoticiaFalasa2 == true && NF2 == false)
         {
@@ -567,6 +574,7 @@ public class TV : MonoBehaviour
             PC.Rating = PC.Rating + IncrementoRating;
             x = true;
             NF2 = true;
+            SetearReportero(1);
         }
         else if (bitacoras.NoticiaFalasa3 == true && NF3 == false)
         {
@@ -576,6 +584,7 @@ public class TV : MonoBehaviour
             PC.Rating = PC.Rating + IncrementoRating;
             x = true;
             NF3 = true;
+            SetearReportero(1);
         }
         else if (bitacoras.NoticiaFalasa4 == true && NF4 == false)
         {
@@ -585,6 +594,7 @@ public class TV : MonoBehaviour
             PC.Rating = PC.Rating + IncrementoRating;
             x = true;
             NF4 = true;
+            SetearReportero(1);
         }
         else if (bitacoras.NoticiaFalasa5 == true && NF5 == false)
         {
@@ -594,6 +604,7 @@ public class TV : MonoBehaviour
             PC.Rating = PC.Rating + IncrementoRating;
             x = true;
             NF5 = true;
+            SetearReportero(1);
         }
         else if (bitacoras.NoticiaFalsa6 == true && NF6 == false)
         {
@@ -603,6 +614,7 @@ public class TV : MonoBehaviour
             PC.Rating = PC.Rating + IncrementoRating;
             x = true;
             NF6 = true;
+            SetearReportero(1);
         }
 
     }
@@ -659,6 +671,23 @@ public class TV : MonoBehaviour
         */
         if (titular.text == BenEntrevistaTitulo4 && bitacoras.PieGrandeUbicacion == false) /*bitacoras.PieGrandeUbicacion == true*/;
         if (titular.text == KateEliminadaTitulo && bitacoras.PieGrandeEliminado == false) /*bitacoras.PieGrandeUbicacion == true*/;
+    }
+
+    void SetearReportero(int i)
+    {
+        Reportero.sprite = Reporteros[i];
+        ReporteroDef.sprite = Reporteros[i];
+        if (i == 0)
+        {
+            FondoTV.color = new Color(1, 1, 1);
+            FondeoTVDef.color = new Color(1, 1, 1);
+        }
+        if(i == 1)
+        {
+            FondoTV.color = new Color(1, 0.5f, 1);
+            FondeoTVDef.color = new Color(1, 0.5f, 1);
+        }
+
     }
 
     /// ================================================================== Noticias Aleatorias ========================================================= ///

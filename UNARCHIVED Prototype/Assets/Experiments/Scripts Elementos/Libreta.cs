@@ -31,6 +31,15 @@ public class Libreta : MonoBehaviour
     public Button PieGrandeBtn;
     public Button KateMilliardBtn;
     public Button PepeQuenioBtn;
+    public Button ParquePimientaBtn;
+    public Button PuebloPimientaBtn;
+    public Button BananoramaBtn;
+    public Button WifiRobadoBtn;
+    public Button CabellosRojizosBtn;
+    public Button Red78Btn;
+    public Button PimientapaluzaBtn;
+    public Button PimientapaluzersBtn;
+    public Button ColoradaBtn;
 
     public string SignoPreguntaPieGrande = "?";
     public string SignoPreguntaPepeQueño = "?";
@@ -49,6 +58,8 @@ public class Libreta : MonoBehaviour
     public TMP_Text txtPimientapaluzers;
     public TMP_Text txtWifiRobado;
     public TMP_Text txtBananorrama;
+    
+
     bool x;
     bool LevantasCerca;
     bool LevantasCercaPimientapaluza;
@@ -93,6 +104,8 @@ public class Libreta : MonoBehaviour
             BtnColorada.gameObject.SetActive(true);
             x = true;
         }
+
+        
     }
    
     public void Kate()
@@ -196,10 +209,10 @@ public class Libreta : MonoBehaviour
 
     public void PersonajeEliminado()
     {
-        if (bitacoras.BenEliminado) { BenBtn.interactable = false; txtBen.text = "<s>" + palabrasCaso[0] + "</s>"; }
-        if (bitacoras.PieGrandeEliminado) { PieGrandeBtn.interactable = false; txtPieGrande.text = "<s>" + palabrasCaso[1] + "</s>"; }
-        if (bitacoras.KateEliminada) { PieGrandeBtn.interactable = false; txtKate.text = "<s>" + palabrasCaso[2] + "</s>"; }
-        if (bitacoras.PepeEliminado) { PepeQuenioBtn.interactable = false; txtPepeQueño.text = "<s>" + palabrasCaso[8] + "</s>"; }
+        if (bitacoras.BenEliminado) { TacharPalabra(BenBtn, txtBen, 0); }
+        if (bitacoras.PieGrandeEliminado) { TacharPalabra(PieGrandeBtn, txtPieGrande, 1); }
+        if (bitacoras.KateEliminada) { TacharPalabra(KateMilliardBtn, txtKate, 2); }
+        if (bitacoras.PepeEliminado) { TacharPalabra(PepeQuenioBtn, txtPepeQueño, 8); }
     }
 
    public void ActualizarPalabras(Toggle accion)
@@ -211,10 +224,10 @@ public class Libreta : MonoBehaviour
             if (bitacoras.Red78Investigada == true || bitacoras.Red78Hackeada == true) { BtnKateMilliard.gameObject.SetActive(true); }
             if (bitacoras.CabellosRojijosAnalizado == true || bitacoras.Red78Hackeada == true || bitacoras.Red78Investigada == true)
             {
-                BtnColorada.gameObject.SetActive(false);
-                BtnPelosRojizos.gameObject.SetActive(false);
-                BtnRed78.gameObject.SetActive(false);
-                BtnBananorrama.gameObject.SetActive(false);
+                TacharPalabra(ColoradaBtn, txtColorada, 6);
+                TacharPalabra(CabellosRojizosBtn, txtCabellosRojizos, 9);
+                TacharPalabra(Red78Btn, txtRed78, 7);
+                TacharPalabra(BananoramaBtn, txtBananorrama, 4);
             }
         }
         if(accion == A.investigar)
@@ -222,14 +235,14 @@ public class Libreta : MonoBehaviour
             if (bitacoras.Red78Investigada == true || bitacoras.Red78Hackeada == true) { BtnKateMilliard.gameObject.SetActive(true); }
             if (bitacoras.PieGrandeInvestigado == true) { BtnPelosRojizos.gameObject.SetActive(true); }
             if (bitacoras.PuebloPimientaInvestigado == true) { BtnParquePimienta.gameObject.SetActive(true); }
-            if (bitacoras.ParquePimientaInvestigado == true) { BtnPuebloPimienta.gameObject.SetActive(false); }
+            if (bitacoras.ParquePimientaInvestigado == true) { TacharPalabra(PuebloPimientaBtn, txtPuebloPimienta, 5); }
             if (bitacoras.PepeInvestigado == true || bitacoras.PepeAnalizado == true) { SignoPreguntaPepeQueño = ""; PepeQueño(); }
             if (bitacoras.CabellosRojijosAnalizado == true || bitacoras.Red78Hackeada == true || bitacoras.Red78Investigada == true)
             {
-                BtnColorada.gameObject.SetActive(false);
-                BtnPelosRojizos.gameObject.SetActive(false);
-                BtnRed78.gameObject.SetActive(false);
-                BtnBananorrama.gameObject.SetActive(false);
+                TacharPalabra(ColoradaBtn, txtColorada, 6);
+                TacharPalabra(CabellosRojizosBtn, txtCabellosRojizos, 9);
+                TacharPalabra(Red78Btn, txtRed78, 7);
+                TacharPalabra(BananoramaBtn, txtBananorrama, 4);
             }
         }
         if (accion == A.analizarMuestra)
@@ -237,10 +250,10 @@ public class Libreta : MonoBehaviour
             if (bitacoras.CabellosRojijosAnalizado == true) BtnKateMilliard.gameObject.SetActive(true);
             if (bitacoras.CabellosRojijosAnalizado == true || bitacoras.Red78Hackeada == true || bitacoras.Red78Investigada == true)
             {
-                BtnColorada.gameObject.SetActive(false);
-                BtnPelosRojizos.gameObject.SetActive(false);
-                BtnRed78.gameObject.SetActive(false);
-                BtnBananorrama.gameObject.SetActive(false);
+                TacharPalabra(ColoradaBtn, txtColorada, 6);
+                TacharPalabra(CabellosRojizosBtn, txtCabellosRojizos, 9);
+                TacharPalabra(Red78Btn, txtRed78, 7);
+                TacharPalabra(BananoramaBtn, txtBananorrama, 4);
             }
         }
         if (accion == A.lavarCerebro)
@@ -279,5 +292,10 @@ public class Libreta : MonoBehaviour
         palabra = "";
     }
 
+    public void TacharPalabra (Button btn, TMP_Text txt, int i)
+    {
+        btn.interactable = false;
+        txt.text = "<s>" + palabrasCaso[i] + "</s>";
+    }
 
 }
