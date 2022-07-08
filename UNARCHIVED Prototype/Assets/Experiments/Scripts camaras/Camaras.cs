@@ -31,7 +31,7 @@ public class Camaras : MonoBehaviour
         {
             currentview = posCamara[1];
         }
-        if (Input.GetKeyDown(KeyCode.Mouse1) == true)
+        if (Input.GetKeyDown(KeyCode.Mouse1) == true && PasoDeDia.PantallaDia == false)
         {
             currentview = posCamara[3];
         }

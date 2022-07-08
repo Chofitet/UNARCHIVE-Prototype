@@ -18,7 +18,7 @@ public class PCCanvasManager : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Mouse1) == true)
+        if (Input.GetKeyDown(KeyCode.Mouse1) == true && PasoDeDia.PantallaDia == false)
         {
             SwitchCanvas(CanvasTypePC.PCDef, CanvasTypePC.PCDef);
 

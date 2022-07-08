@@ -49,10 +49,10 @@ public class Telefono : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Mouse1) == true)
+        if (Input.GetKeyDown(KeyCode.Mouse1) == true && PasoDeDia.PantallaDia == false)
         {
             BotonPlay.SetActive(true);
-            PapelFax.SetActive(false);
+           // PapelFax.SetActive(false);
         }
         if (LlamadaEnTranscurso == true) { BotonREC.SetActive(false); }
         else BotonREC.SetActive(true);
@@ -261,8 +261,8 @@ public class Telefono : MonoBehaviour
 
     public void ApagarPapel ()
     {
-        BotonPlay.SetActive(true);
-        PapelFax.SetActive(false);
+        //BotonPlay.SetActive(true);
+        //PapelFax.SetActive(false);
     }
 
 }

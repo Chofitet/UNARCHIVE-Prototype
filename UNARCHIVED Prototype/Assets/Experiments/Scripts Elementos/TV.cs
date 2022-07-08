@@ -10,7 +10,7 @@ public class TV : MonoBehaviour
 {
     public TMP_Text titular;
     public TMP_Text noticia;
-    [SerializeField] TimeManager tiempo;
+    [SerializeField] TimeManager TimeManager;
     [SerializeField] Bitacoras bitacoras;
     [SerializeField] Libreta libreta;
     [SerializeField] PC PC;
@@ -221,7 +221,7 @@ public class TV : MonoBehaviour
     void CheckearBitacoras()
     {
         //============================================================================ TV Diario =============================================================================//
-        if (bitacoras.BenEliminado == false && bitacoras.BenLavado == false && tiempo.Dia == 3 && TimeManager.Hora == 10 && BenEntrevista1 == false && bitacoras.BenRetirado == false)
+        if (bitacoras.BenEliminado == false && bitacoras.BenLavado == false && TimeManager.Dia == 3 && TimeManager.Hora == 10 && BenEntrevista1 == false && bitacoras.BenRetirado == false)
         {
             int IncrementoRating = 2;
             noticia.text =  BenEntrevistaNoticia1;//ENTREVISTA EXCLUSIVA CON NIÑO AVISTADOR DE MISTERIOSA CRIATURA MAÑANA A LAS 12 AM
@@ -231,7 +231,7 @@ public class TV : MonoBehaviour
             x = true;
             BenEntrevista1 = true;
         }
-        else if (bitacoras.BenEliminado == false && bitacoras.BenLavado == false && tiempo.Dia == 4 && TimeManager.Hora == 7 && BenEntrevista1 == true && BenEntrevista1b == false)
+        else if (bitacoras.BenEliminado == false && bitacoras.BenLavado == false && TimeManager.Dia == 4 && TimeManager.Hora == 7 && BenEntrevista1 == true && BenEntrevista1b == false)
         {
             int IncrementoRating = 2;
             noticia.text = BenEntrevistaNoticia1b;//REITERAMOS: ENTREVISTA EXCLUSIVA CON NIÑO AVISTADOR DE MISTERIOSA CRIATURA HOY A LAS 12 AM
@@ -241,7 +241,7 @@ public class TV : MonoBehaviour
             x = true;
             BenEntrevista1b = true;
         }
-        else if (bitacoras.BenEliminado == false && bitacoras.BenLavado == false && tiempo.Dia == 4 && TimeManager.Hora == 12 && BenEntrevista2 == false && bitacoras.PlantarPublico == false)
+        else if (bitacoras.BenEliminado == false && bitacoras.BenLavado == false && TimeManager.Dia == 4 && TimeManager.Hora == 12 && BenEntrevista2 == false && bitacoras.PlantarPublico == false)
         {
             int IncrementoRating = 6;
             noticia.text = BenEntrevistaNoticia2; //"ERA PIE GRANDE Y LO VÍ EN PARQUE PIMIENTA\". PELUDAS DECLARACIONES!!!
@@ -251,7 +251,7 @@ public class TV : MonoBehaviour
             x = true;
             BenEntrevista2 = true;
         }
-        else if (tiempo.Dia == 4 && TimeManager.Hora == 15 && BenEntrevista2 == true && BenEliminado == true)
+        else if (TimeManager.Dia == 4 && TimeManager.Hora == 15 && BenEntrevista2 == true && BenEliminado == true)
         {
             int IncrementoRating = 5;
             noticia.text = BenEntrevistaNoticia3;//TURBA ENFURECIDA SE DIRIJE A PARQUE PIMIENTA EN BÚSQUEDA DE BENJI EL PISPIADOR
@@ -261,7 +261,7 @@ public class TV : MonoBehaviour
             x = true;
             BenEntrevista3 = true;
         }
-        else if (tiempo.Dia == 4 && TimeManager.Hora == 15 && BenEntrevista2 == true && BenEliminado == false)
+        else if (TimeManager.Dia == 4 && TimeManager.Hora == 15 && BenEntrevista2 == true && BenEliminado == false)
         {
             int IncrementoRating = 5;
             noticia.text = BenEntrevistaNoticia3b;//TURBA ENTUSIASTA SE DIRIJE A PARQUE PIMIENTA EN BUSQUEDA DE CRIATURA
@@ -271,7 +271,7 @@ public class TV : MonoBehaviour
             x = true;
             BenEntrevista3b = true;
         }
-        else if (tiempo.Dia == 5 && TimeManager.Hora == 16 && BenEntrevista3 == true && PieGrandeEliminado == false)
+        else if (TimeManager.Dia == 5 && TimeManager.Hora == 16 && BenEntrevista3 == true && PieGrandeEliminado == false)
         {
             int IncrementoRating = 15;
             noticia.text = BenEntrevistaNoticia4;//TURBA AMATEUR ES ATACADA POR CRIATURA MONSTRUOSA EN PARQUE PIMIENTA!
@@ -281,7 +281,7 @@ public class TV : MonoBehaviour
             x = true;
             BenEntrevista4 = true;
         }
-        else if (tiempo.Dia == 5 && TimeManager.Hora == 16 && BenEntrevista3b == true && PieGrandeEliminado == false)
+        else if (TimeManager.Dia == 5 && TimeManager.Hora == 16 && BenEntrevista3b == true && PieGrandeEliminado == false)
         {
             int IncrementoRating = 15;
             noticia.text = BenEntrevistaNoticia4;//TURBA AMATEUR ES ATACADA POR CRIATURA MONSTRUOSA EN PARQUE PIMIENTA!
@@ -291,7 +291,7 @@ public class TV : MonoBehaviour
             x = true;
             BenEntrevista4 = true;
         }
-        else if (bitacoras.BenEliminado == false && bitacoras.BenLavado == false && tiempo.Dia == 4 && TimeManager.Hora == 12 && BenEntrevista2 == false && bitacoras.PlantarPublico == true)
+        else if (bitacoras.BenEliminado == false && bitacoras.BenLavado == false && TimeManager.Dia == 4 && TimeManager.Hora == 12 && BenEntrevista2 == false && bitacoras.PlantarPublico == true)
         {
             int IncrementoRating = -3;
             noticia.text = PlantarPublicoNoticia;//ABUCHEOS DURANTE ENTREVISTA!LA CREDBILIDAD DE BEN BENJI SE DESMORONA AL MOJAR SUS PANTALONES EN TV NACIONAL
@@ -302,7 +302,7 @@ public class TV : MonoBehaviour
             
         }
 
-        else if (tiempo.Dia == 3 && TimeManager.Hora == 13)
+        else if (TimeManager.Dia == 3 && TimeManager.Hora == 13)
         {
             int IncrementoRating = 0;
             noticia.text = PimientaPaluzaAnuncioNoticia;//se anuncia pimientapaluza
@@ -312,7 +312,7 @@ public class TV : MonoBehaviour
             x = true;
 
         }
-        else if (tiempo.Dia == 4 && TimeManager.Hora == 10)
+        else if (TimeManager.Dia == 4 && TimeManager.Hora == 10)
         {
             int IncrementoRating = 0;
             noticia.text = PimientaPaluzaAnuncioNoticia;//se anuncia pimientapaluza
@@ -322,7 +322,7 @@ public class TV : MonoBehaviour
             x = true;
 
         }
-        else if (BenEliminado == false && tiempo.Dia == 5 && TimeManager.Hora == 9 && BenBombaCasa == false && bitacoras.BenRetirado == false)
+        else if (BenEliminado == false && TimeManager.Dia == 5 && TimeManager.Hora == 9 && BenBombaCasa == false && bitacoras.BenRetirado == false)
         {
             int IncrementoRating = 3;
             noticia.text = BenBombaEscuelaNoticia;
@@ -332,7 +332,7 @@ public class TV : MonoBehaviour
             x = true;
             BenBombaEscuela = true;
         }
-        else if (BenEliminado == true && tiempo.Dia == 5 && TimeManager.Hora == 9 && bitacoras.BenRetirado == false)
+        else if (BenEliminado == true && TimeManager.Dia == 5 && TimeManager.Hora == 9 && bitacoras.BenRetirado == false)
         {
             int IncrementoRating = 3;
             noticia.text = BenBombaCasaNoticia;
@@ -342,7 +342,7 @@ public class TV : MonoBehaviour
             x = true;
             BenBombaCasa = true;
         }
-        else if (tiempo.Dia == 5 && TimeManager.Hora == 10)
+        else if (TimeManager.Dia == 5 && TimeManager.Hora == 10)
         {
             int IncrementoRating = 0;
             noticia.text = PimientaPaluzaSeAdelantaNoticia;//Pimientapaluza se adelanta
@@ -353,7 +353,7 @@ public class TV : MonoBehaviour
 
         }
 
-        else if (bitacoras.PieGrandeEliminado == true && PieGrandeEliminado == true && tiempo.Dia == 5 && TimeManager.Hora == 17 && KateEliminado2 == false)
+        else if (bitacoras.PieGrandeEliminado == true && PieGrandeEliminado == true && TimeManager.Dia == 5 && TimeManager.Hora == 17 && KateEliminado2 == false)
         {
             int IncrementoRating = 8;
             noticia.text = PieGrandeEliminadoNoticia2; //PIE GRANDE ERA MI FIANCÉ. REAPARECE KATE MILLIARD Y CUENTA TODO!
@@ -363,7 +363,7 @@ public class TV : MonoBehaviour
             x = true;
             PieGrandeEliminado = true;
         }
-        else if (tiempo.Dia == 6 && TimeManager.Hora == 10)
+        else if (TimeManager.Dia == 6 && TimeManager.Hora == 10)
         {
             int IncrementoRating = 0;
             noticia.text = PimientaPaluzaMañanaNoticia;//Pimientapaluza Mañana
@@ -372,7 +372,7 @@ public class TV : MonoBehaviour
             if (PC.Rating >= 16) { PC.RatinMaximo(); }
             x = true;
         }
-        else if (tiempo.Dia == 7 && TimeManager.Hora == 10)
+        else if (TimeManager.Dia == 7 && TimeManager.Hora == 10)
         {
             int IncrementoRating = 0;
             noticia.text = PimientaPaluzaArrancaNoticia;//Pimientapaluza Arranca
@@ -381,7 +381,7 @@ public class TV : MonoBehaviour
             if (PC.Rating >= 16) { PC.RatinMaximo(); }
             x = true;
         }
-        else if (bitacoras.KateEliminada == false && PieGrandeEliminado == false && KateEliminada == false && tiempo.Dia == 7 && TimeManager.Hora == 17)
+        else if (bitacoras.KateEliminada == false && PieGrandeEliminado == false && KateEliminada == false && TimeManager.Dia == 7 && TimeManager.Hora == 17)
         {
             int IncrementoRating = 15;
             noticia.text = CasamientoNoticia;//KATE MILLIARD ANUNCIA CASAMIENTO CON PIE GRANDE! LAS LEYENDAS ERAN CIERTAS!
@@ -391,7 +391,7 @@ public class TV : MonoBehaviour
             x = true;
         }
         //============================================================================ TV RUMOR =============================================================================//
-        else if (tiempo.Dia == 3 && TimeManager.Hora == 7)
+        else if (TimeManager.Dia == 3 && TimeManager.Hora == 7)
         {
             int IncrementoRating = 1;
             noticia.text = RumoresPuebloPimientaNoticia;//BIZARRO RUMOR TOMA MODERADO VUELO EN PUEBLO PIMIENTA
@@ -456,7 +456,7 @@ public class TV : MonoBehaviour
             StartCoroutine(ImprimirNoticia(KateEliminadaTitulo, KateEliminadaNoticia, IncrementoRating, RetencionNoticia));
             KateEliminada = true;
         }
-        else if (bitacoras.KateEliminada == true && PieGrandeEliminado == false && KateEliminada == true && (tiempo.Dia == 6 || tiempo.Dia == 7))
+        else if (bitacoras.KateEliminada == true && PieGrandeEliminado == false && KateEliminada == true && (TimeManager.Dia == 6 || TimeManager.Dia == 7))
         {
             int IncrementoRating = 13;
             int RetencionNoticia = 3;
@@ -610,7 +610,7 @@ public class TV : MonoBehaviour
     IEnumerator ImprimirNoticia(string T, string N, int IncrementoRating, int RetencioNoticia)
     {
         x = true;
-        yield return StartCoroutine(tiempo.RetencionBitacorasSegunAccion(RetencioNoticia));
+        yield return StartCoroutine(TimeManager.RetencionBitacorasSegunAccion(RetencioNoticia));
         noticia.text = N;
         titular.text = T;
         PC.Rating = PC.Rating + IncrementoRating;
