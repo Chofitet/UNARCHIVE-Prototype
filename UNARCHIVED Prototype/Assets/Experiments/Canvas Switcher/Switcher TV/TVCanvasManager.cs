@@ -19,7 +19,7 @@ public class TVCanvasManager : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Mouse1) == true)
+        if (Input.GetKeyDown(KeyCode.Mouse1) == true && PasoDeDia.PantallaDia == false)
         {
             SwitchCanvas(CanvasTypeTV.TVDef, CanvasTypeTV.TVDef);
         }

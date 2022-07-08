@@ -22,7 +22,7 @@ public class ExpCanvasManager : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Mouse1) == true && tutorial.gameObject.activeSelf == false)
+        if (Input.GetKeyDown(KeyCode.Mouse1) == true && tutorial.gameObject.activeSelf == false && PasoDeDia.PantallaDia == false)
         {
             SwitchCanvas(CanvasTypeExp.ExpedienteDef, CanvasTypeExp.ExpedienteDef);
             time.TiempoNormal();

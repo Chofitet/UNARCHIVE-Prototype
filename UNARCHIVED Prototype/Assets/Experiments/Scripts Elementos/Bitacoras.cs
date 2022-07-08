@@ -233,13 +233,13 @@ public class Bitacoras : MonoBehaviour
                 float HoraCompletado = RetencionBitacora + TimeManager.Hora;
                 string txt = "<b>BEN BENJI ELIMINADO</b>"
                 + System.Environment.NewLine + "Ben Benji ha contado su última paparrucha. No hubo testigos.";//hola chofitet
-                string FechaCompletado = "2" + time.Dia + "/03/2000";
+                string FechaCompletado = "2" + TimeManager.Dia + "/03/2000";
                 string txtAccion = "Eliminar a Ben";
                 Toggle accion = A.eliminar;
                 if (HoraCompletado >= 18)
                 {
                     HoraCompletado = 6 + (RetencionBitacora - (18 - TimeManager.Hora));
-                    FechaCompletado = "2" + (time.Dia + 1) + "/03/2000";
+                    FechaCompletado = "2" + (TimeManager.Dia + 1) + "/03/2000";
                 }
                 int indaux = ind;
                 int a = 1;
@@ -259,13 +259,13 @@ public class Bitacoras : MonoBehaviour
                 float HoraCompletado = RetencionBitacora + TimeManager.Hora;
                 string txt = "<b>BEN BENJI LAVADO</b>"
                 + System.Environment.NewLine + "Lavado completo. Ben ya no recuerda la última semana.";
-                string FechaCompletado = "2" + time.Dia + "/03/2000";
+                string FechaCompletado = "2" + TimeManager.Dia + "/03/2000";
                 string txtAccion = "Lavar cerebro a Ben";
                 Toggle accion = A.lavarCerebro;
                 if (HoraCompletado > 18)
                 {
                     HoraCompletado = 6 + (RetencionBitacora - (18 - TimeManager.Hora));
-                    FechaCompletado = "2" + (time.Dia + 1) + "/03/2000";
+                    FechaCompletado = "2" + (TimeManager.Dia + 1) + "/03/2000";
                 }
                 int indaux = ind;
                 int a = 1;
@@ -285,12 +285,12 @@ public class Bitacoras : MonoBehaviour
                 string txt = "<b>BEN BENJI INVESTIGADO</b>"
                 + System.Environment.NewLine + "Niño común y corriente. Mejor promedio del condado. Si tan solo pasara menos tiempo con su computadora quizas seria mas popular.";
                 Toggle accion = A.investigar;
-                string FechaCompletado = "2" + time.Dia + "/03/2000";
+                string FechaCompletado = "2" + TimeManager.Dia + "/03/2000";
                 string txtAccion = "Investigar a Ben";
                 if (HoraCompletado >= 18)
                 {
                     HoraCompletado = 6 + (RetencionBitacora - (18 - TimeManager.Hora));
-                    FechaCompletado = "2" + (time.Dia + 1) + "/03/2000";
+                    FechaCompletado = "2" + (TimeManager.Dia + 1) + "/03/2000";
                 }
                 int indaux = ind;
                 int a = 1;
@@ -309,13 +309,13 @@ public class Bitacoras : MonoBehaviour
                 float HoraCompletado = RetencionBitacora + TimeManager.Hora;
                 string txt = "<b>BEN BENJI HACKEADO</b>"
                 + System.Environment.NewLine + "Encontramos lista de compras e instrucciones para crear una bomba del tamaño justo para volar una escuela. Sugerimos difamar para que la fuerza de las autoridades locales caiga sobre Ben cuanto antes.";
-                string FechaCompletado = "2" + time.Dia + "/03/2000";
+                string FechaCompletado = "2" + TimeManager.Dia + "/03/2000";
                 string txtAccion = "Hackear a Ben";
                 Toggle accion = A.hackear;
                 if (HoraCompletado >= 18)
                 {
                     HoraCompletado = 6 + (RetencionBitacora - (18 - TimeManager.Hora));
-                    FechaCompletado = "2" + (time.Dia + 1) + "/03/2000";
+                    FechaCompletado = "2" + (TimeManager.Dia + 1) + "/03/2000";
                 }
                 int indaux = ind;
                 int a = 1;
@@ -334,13 +334,13 @@ public class Bitacoras : MonoBehaviour
                 float HoraCompletado = RetencionBitacora + TimeManager.Hora;
                 string txt = "<b>BEN BENJI ANALIZADO</b>"
                 + System.Environment.NewLine + "Nada fuera de lo ordinario. Nada de nada. Es casi como si hubieras perdido un turno.";
-                string FechaCompletado = "2" + time.Dia + "/03/2000";
+                string FechaCompletado = "2" + TimeManager.Dia + "/03/2000";
                 string txtAccion = "Analizar Ben";
                 Toggle accion = A.analizarMuestra;
                 if (HoraCompletado >= 18)
                 {
                     HoraCompletado = 6 + (RetencionBitacora - (18 - TimeManager.Hora));
-                    FechaCompletado = "2" + (time.Dia + 1) + "/03/2000";
+                    FechaCompletado = "2" + (TimeManager.Dia + 1) + "/03/2000";
                 }
                 int indaux = ind;
                 int a = 1;
@@ -360,12 +360,12 @@ public class Bitacoras : MonoBehaviour
                 string txt = "<b>BEN BENJI DIFAMADO</b>"
                 + System.Environment.NewLine + "Las autoridades locales se han encargado del pequeño terrorista en potencia";
                 Toggle accion = A.difamar;
-                string FechaCompletado = "2" + time.Dia + "/03/2000";
+                string FechaCompletado = "2" + TimeManager.Dia + "/03/2000";
                 string txtAccion = "Difamar a Ben";
                 if (HoraCompletado >= 18)
                 {
                     HoraCompletado = 6 + (RetencionBitacora - (18 - TimeManager.Hora));
-                    FechaCompletado = "2" + (time.Dia + 1) + "/03/2000";
+                    FechaCompletado = "2" + (TimeManager.Dia + 1) + "/03/2000";
                 }
                 int indaux = ind;
                 int a = 1;
@@ -386,12 +386,12 @@ public class Bitacoras : MonoBehaviour
                 string txt = "<b>BEN BENJI DIFAMADO</b>"
                 + System.Environment.NewLine + "Ben difamado";
                 Toggle accion = A.difamar;
-                string FechaCompletado = "2" + time.Dia + "/03/2000";
+                string FechaCompletado = "2" + TimeManager.Dia + "/03/2000";
                 string txtAccion = "Difamar a Ben";
                 if (HoraCompletado >= 18)
                 {
                     HoraCompletado = 6 + (RetencionBitacora - (18 - TimeManager.Hora));
-                    FechaCompletado = "2" + (time.Dia + 1) + "/03/2000";
+                    FechaCompletado = "2" + (TimeManager.Dia + 1) + "/03/2000";
                 }
                 int indaux = ind;
                 int a = 1;
@@ -416,13 +416,13 @@ public class Bitacoras : MonoBehaviour
                 float HoraCompletado = RetencionBitacora + TimeManager.Hora;
                 string txt = "<b>PIE GRANDE DIFAMADO</b>"
                 + System.Environment.NewLine + "Mala movida. Hemos aumentado el interes del ojo publico sobre Pie grande. ¿Sos sobrino del jefe o algo?¿Como conseguiste este trabajo?";
-                string FechaCompletado = "2" + time.Dia + "/03/2000";
+                string FechaCompletado = "2" + TimeManager.Dia + "/03/2000";
                 string txtAccion = "Difamar Pie Grande";
                 Toggle accion = A.difamar;
                 if (HoraCompletado >= 18)
                 {
                     HoraCompletado = 6 + (RetencionBitacora - (18 - TimeManager.Hora));
-                    FechaCompletado = "2" + (time.Dia + 1) + "/03/2000";
+                    FechaCompletado = "2" + (TimeManager.Dia + 1) + "/03/2000";
                 }
                 int indaux = ind;
                 int a = 1;
@@ -444,13 +444,13 @@ public class Bitacoras : MonoBehaviour
                 float HoraCompletado = RetencionBitacora + TimeManager.Hora;
                 string txt = "<b>PIE GRANDE ELIMINADO</b>"
                 + System.Environment.NewLine + "El último Pie Grande ha muerto, pero se ha cargado a nuestro agente de manera gloriosa. No podremos hacer eliminaciones por el resto del caso.";
-                string FechaCompletado = "2" + time.Dia + "/03/2000";
+                string FechaCompletado = "2" + TimeManager.Dia + "/03/2000";
                 string txtAccion = "Eliminar a Pie Grande";
                 Toggle accion = A.eliminar;
                 if (HoraCompletado >= 18)
                 {
                     HoraCompletado = 6 + (RetencionBitacora - (18 - TimeManager.Hora));
-                    FechaCompletado = "2" + (time.Dia + 1) + "/03/2000";
+                    FechaCompletado = "2" + (TimeManager.Dia + 1) + "/03/2000";
                 }
                 int indaux = ind;
                 int a = 1;
@@ -470,13 +470,13 @@ public class Bitacoras : MonoBehaviour
                 float HoraCompletado = RetencionBitacora + TimeManager.Hora;
                 string txt = "<b>PIE GRANDE LAVADO</b>"
                 + System.Environment.NewLine + "MISION FALLIDA. Hemos perdido al agente a manos de la criatura. No podremos hacer lavados de cerebro por el resto del caso. Último mensaje recibido “...Bananorrama”. Es una cinta del 94.";
-                string FechaCompletado = "2" + time.Dia + "/03/2000";
+                string FechaCompletado = "2" + TimeManager.Dia + "/03/2000";
                 string txtAccion = "Lavar cerebro Pie Grande";
                 Toggle accion = A.lavarCerebro;
                 if (HoraCompletado >= 18)
                 {
                     HoraCompletado = 6 + (RetencionBitacora - (18 - TimeManager.Hora));
-                    FechaCompletado = "2" + (time.Dia + 1) + "/03/2000";
+                    FechaCompletado = "2" + (TimeManager.Dia + 1) + "/03/2000";
                 }
                 int indaux = ind;
                 int a = 1;
@@ -495,13 +495,13 @@ public class Bitacoras : MonoBehaviour
                 float HoraCompletado = RetencionBitacora + TimeManager.Hora;
                 string txt = "<b>PIE GRANDE INVESTIGADO</b>"
                 + System.Environment.NewLine + "Se muestra recluso y no cooperativo. Tenía un chupón en una pequeña parte afeitada. Encontramos cabellos rojizos en las cercanías.";
-                string FechaCompletado = "2" + time.Dia + "/03/2000";
+                string FechaCompletado = "2" + TimeManager.Dia + "/03/2000";
                 string txtAccion = "Investigar Pie Grande";
                 Toggle accion = A.investigar;
                 if (HoraCompletado >= 18)
                 {
                     HoraCompletado = 6 + (RetencionBitacora - (18 - TimeManager.Hora));
-                    FechaCompletado = "2" + (time.Dia + 1) + "/03/2000";
+                    FechaCompletado = "2" + (TimeManager.Dia + 1) + "/03/2000";
                 }
                 int indaux = ind;
                 int a = 1;
@@ -520,13 +520,13 @@ public class Bitacoras : MonoBehaviour
                 float HoraCompletado = RetencionBitacora + TimeManager.Hora;
                 string txt = "<b>PIE GRANDE HACKEADO</b>"
                 + System.Environment.NewLine + "Frecuenta la página furmatch.net. Matcheó con red78 hace 2 semanas.";
-                string FechaCompletado = "2" + time.Dia + "/03/2000";
+                string FechaCompletado = "2" + TimeManager.Dia + "/03/2000";
                 string txtAccion = "Hackear Pie Grande";
                 Toggle accion = A.hackear;
                 if (HoraCompletado >= 18)
                 {
                     HoraCompletado = 6 + (RetencionBitacora - (18 - TimeManager.Hora));
-                    FechaCompletado = "2" + (time.Dia + 1) + "/03/2000";
+                    FechaCompletado = "2" + (TimeManager.Dia + 1) + "/03/2000";
                 }
                 int indaux = ind;
                 int a;
@@ -545,13 +545,13 @@ public class Bitacoras : MonoBehaviour
                 float HoraCompletado = RetencionBitacora + TimeManager.Hora;
                 string txt = "<b>PIE GRANDE ANALIZADO</b>"
                 + System.Environment.NewLine + "No es un truco. Es Pie Grande posta. Creenos.";
-                string FechaCompletado = "2" + time.Dia + "/03/2000";
+                string FechaCompletado = "2" + TimeManager.Dia + "/03/2000";
                 string txtAccion = "Analizar Pie Grande";
                 Toggle accion = A.analizarMuestra;
                 if (HoraCompletado >= 18)
                 {
                     HoraCompletado = 6 + (RetencionBitacora - (18 - TimeManager.Hora));
-                    FechaCompletado = "2" + (time.Dia + 1) + "/03/2000";
+                    FechaCompletado = "2" + (TimeManager.Dia + 1) + "/03/2000";
                 }
                 int indaux = ind;
                 int a = 1;
@@ -570,13 +570,13 @@ public class Bitacoras : MonoBehaviour
                 float HoraCompletado = RetencionBitacora + TimeManager.Hora;
                 string txt = "<b>PIE GRANDE DIFAMADO</b>"
                 + System.Environment.NewLine + "Hemos aumentado el interes del ojo público sobre Pie grande. ¿Sos sobrino del jefe o algo?¿Como conseguiste este trabajo?";
-                string FechaCompletado = "2" + time.Dia + "/03/2000";
+                string FechaCompletado = "2" + TimeManager.Dia + "/03/2000";
                 string txtAccion = "Difamar Pie Grande";
                 Toggle accion = A.difamar;
                 if (HoraCompletado >= 18)
                 {
                     HoraCompletado = 6 + (RetencionBitacora - (18 - TimeManager.Hora));
-                    FechaCompletado = "2" + (time.Dia + 1) + "/03/2000";
+                    FechaCompletado = "2" + (TimeManager.Dia + 1) + "/03/2000";
                 }
                 int indaux = ind;
                 int a = 1;
@@ -609,13 +609,13 @@ public class Bitacoras : MonoBehaviour
                 float HoraCompletado = RetencionBitacora + TimeManager.Hora;
                 string txt = "<b>ELIMINAR PUEBLO PIMIENTA</b>"
                 + System.Environment.NewLine + "“No tenemos una GRANJA lo suficientemente grande como para enviar a un pueblo entero.";
-                string FechaCompletado = "2" + time.Dia + "/03/2000";
+                string FechaCompletado = "2" + TimeManager.Dia + "/03/2000";
                 string txtAccion = "Eliminar Pueblo Pimienta";
                 Toggle accion = A.eliminar;
                 if (HoraCompletado >= 18)
                 {
                     HoraCompletado = 6 + (RetencionBitacora - (18 - TimeManager.Hora));
-                    FechaCompletado = "2" + (time.Dia + 1) + "/03/2000";
+                    FechaCompletado = "2" + (TimeManager.Dia + 1) + "/03/2000";
                 }
                 int indaux = ind;
                 int a = 1;
@@ -634,13 +634,13 @@ public class Bitacoras : MonoBehaviour
                 float HoraCompletado = RetencionBitacora + TimeManager.Hora;
                 string txt = "<b>LAVAR PUEBLO PIMIENTA</b>"
                 + System.Environment.NewLine + "¡No hay suficiente tiempo! Ni ahora ni desde el comienzo del juego.";
-                string FechaCompletado = "2" + time.Dia + "/03/2000";
+                string FechaCompletado = "2" + TimeManager.Dia + "/03/2000";
                 string txtAccion = "Lavar cerebro de Pueblo Pimienta";
                 Toggle accion = A.lavarCerebro;
                 if (HoraCompletado >= 18)
                 {
                     HoraCompletado = 6 + (RetencionBitacora - (18 - TimeManager.Hora));
-                    FechaCompletado = "2" + (time.Dia + 1) + "/03/2000";
+                    FechaCompletado = "2" + (TimeManager.Dia + 1) + "/03/2000";
                 }
                 int indaux = ind;
                 int a = 1;
@@ -659,13 +659,13 @@ public class Bitacoras : MonoBehaviour
                 float HoraCompletado = RetencionBitacora + TimeManager.Hora;
                 string txt = "<b>PUEBLO PIMIENTA INVESTIGADO</b>"
                 + System.Environment.NewLine + "Nada sospechoso que reportar. Parece un buen lugar para retirarse. Quizás deberíamos revisar el Parque";
-                string FechaCompletado = "2" + time.Dia + "/03/2000";
+                string FechaCompletado = "2" + TimeManager.Dia + "/03/2000";
                 string txtAccion = "Investigar Pueblo Pimienta";
                 Toggle accion = A.investigar;
                 if (HoraCompletado >= 18)
                 {
                     HoraCompletado = 6 + (RetencionBitacora - (18 - TimeManager.Hora));
-                    FechaCompletado = "2" + (time.Dia + 1) + "/03/2000";
+                    FechaCompletado = "2" + (TimeManager.Dia + 1) + "/03/2000";
                 }
                 int indaux = ind;
                 int a = 1;
@@ -684,13 +684,13 @@ public class Bitacoras : MonoBehaviour
                 float HoraCompletado = RetencionBitacora + TimeManager.Hora;
                 string txt = "<b>HACKEAR PUEBLO PIMIENTA</b>"
                 + System.Environment.NewLine + "Lo solicitado es un poco mucho.";
-                string FechaCompletado = "2" + time.Dia + "/03/2000";
+                string FechaCompletado = "2" + TimeManager.Dia + "/03/2000";
                 string txtAccion = "Hackear Pueblo Pimienta";
                 Toggle accion = A.hackear;
                 if (HoraCompletado >= 18)
                 {
                     HoraCompletado = 6 + (RetencionBitacora - (18 - TimeManager.Hora));
-                    FechaCompletado = "2" + (time.Dia + 1) + "/03/2000";
+                    FechaCompletado = "2" + (TimeManager.Dia + 1) + "/03/2000";
                 }
                 int indaux = ind;
                 int a;
@@ -709,13 +709,13 @@ public class Bitacoras : MonoBehaviour
                 float HoraCompletado = RetencionBitacora + TimeManager.Hora;
                 string txt = "<b>ANALIZAR PUEBLO PIMIENTA</b>"
                 + System.Environment.NewLine + "SuperLaboratorio Deluxe solo disponible en DLC";
-                string FechaCompletado = "2" + time.Dia + "/03/2000";
+                string FechaCompletado = "2" + TimeManager.Dia + "/03/2000";
                 string txtAccion = "Analizar Pueblo Pimienta";
                 Toggle accion = A.analizarMuestra;
                 if (HoraCompletado >= 18)
                 {
                     HoraCompletado = 6 + (RetencionBitacora - (18 - TimeManager.Hora));
-                    FechaCompletado = "2" + (time.Dia + 1) + "/03/2000";
+                    FechaCompletado = "2" + (TimeManager.Dia + 1) + "/03/2000";
                 }
                 int indaux = ind;
                 int a = 1;
@@ -734,13 +734,13 @@ public class Bitacoras : MonoBehaviour
                 float HoraCompletado = RetencionBitacora + TimeManager.Hora;
                 string txt = "<b>PUEBLO PIMIENTA DIFAMADO</b>"
                 + System.Environment.NewLine + "ENCUESTA MUNDIAL INDICA QUE LOS HABITANTES DE PUEBLO PIMIENTA CREEN EN CUALQUIER COSA";
-                string FechaCompletado = "2" + time.Dia + "/03/2000";
+                string FechaCompletado = "2" + TimeManager.Dia + "/03/2000";
                 string txtAccion = "Difamar Pueblo Pimienta";
                 Toggle accion = A.difamar;
                 if (HoraCompletado >= 18)
                 {
                     HoraCompletado = 6 + (RetencionBitacora - (18 - TimeManager.Hora));
-                    FechaCompletado = "2" + (time.Dia + 1) + "/03/2000";
+                    FechaCompletado = "2" + (TimeManager.Dia + 1) + "/03/2000";
                 }
                 int indaux = ind;
                 int a = 1;
@@ -759,13 +759,13 @@ public class Bitacoras : MonoBehaviour
                 float HoraCompletado = RetencionBitacora + TimeManager.Hora;
                 string txt = "<b>AISLAR PUEBLO PIMIENTA</b>"
                 + System.Environment.NewLine + "No contamos con los recursos necesarios!";
-                string FechaCompletado = "2" + time.Dia + "/03/2000";
+                string FechaCompletado = "2" + TimeManager.Dia + "/03/2000";
                 string txtAccion = "Aislar Pueblo Pimienta";
                 Toggle accion = A.aislar;
                 if (HoraCompletado >= 18)
                 {
                     HoraCompletado = 6 + (RetencionBitacora - (18 - TimeManager.Hora));
-                    FechaCompletado = "2" + (time.Dia + 1) + "/03/2000";
+                    FechaCompletado = "2" + (TimeManager.Dia + 1) + "/03/2000";
                 }
                 int indaux = ind;
                 int a = 1;
@@ -789,13 +789,13 @@ public class Bitacoras : MonoBehaviour
                 float HoraCompletado = RetencionBitacora + TimeManager.Hora;
                 string txt = "<b>ELIMINAR PARQUE PIMIENTA</b>"
                 + System.Environment.NewLine + "Eliminar a Mamá Naturaleza no es una posibilidad al momento.";
-                string FechaCompletado = "2" + time.Dia + "/03/2000";
+                string FechaCompletado = "2" + TimeManager.Dia + "/03/2000";
                 string txtAccion = "Eliminar a Parque Pimienta";
                 Toggle accion = A.eliminar;
                 if (HoraCompletado >= 18)
                 {
                     HoraCompletado = 6 + (RetencionBitacora - (18 - TimeManager.Hora));
-                    FechaCompletado = "2" + (time.Dia + 1) + "/03/2000";
+                    FechaCompletado = "2" + (TimeManager.Dia + 1) + "/03/2000";
                 }
                 int indaux = ind;
                 int a = 1;
@@ -814,13 +814,13 @@ public class Bitacoras : MonoBehaviour
                 float HoraCompletado = RetencionBitacora + TimeManager.Hora;
                 string txt = "<b>LAVAR PARQUE PIMIENTA</b>"
                 + System.Environment.NewLine + "No sabría ni por donde empezar a explicarte porque no es posible esto.";
-                string FechaCompletado = "2" + time.Dia + "/03/2000";
+                string FechaCompletado = "2" + TimeManager.Dia + "/03/2000";
                 string txtAccion = "Lavar cerebro Parque Pimienta";
                 Toggle accion = A.lavarCerebro;
                 if (HoraCompletado >= 18)
                 {
                     HoraCompletado = 6 + (RetencionBitacora - (18 - TimeManager.Hora));
-                    FechaCompletado = "2" + (time.Dia + 1) + "/03/2000";
+                    FechaCompletado = "2" + (TimeManager.Dia + 1) + "/03/2000";
                 }
                 int indaux = ind;
                 int a = 1;
@@ -839,13 +839,13 @@ public class Bitacoras : MonoBehaviour
                 float HoraCompletado = RetencionBitacora + TimeManager.Hora;
                 string txt = "<b>PARQUE PIMIENTA INVESTIGADO</b>"
                 + System.Environment.NewLine + "Es hermoso! Aunque la wifi que tienen es privada. Medio ratas.";
-                string FechaCompletado = "2" + time.Dia + "/03/2000";
+                string FechaCompletado = "2" + TimeManager.Dia + "/03/2000";
                 string txtAccion = "Investigar Parque Pimienta";
                 Toggle accion = A.investigar;
                 if (HoraCompletado >= 18)
                 {
                     HoraCompletado = 6 + (RetencionBitacora - (18 - TimeManager.Hora));
-                    FechaCompletado = "2" + (time.Dia + 1) + "/03/2000";
+                    FechaCompletado = "2" + (TimeManager.Dia + 1) + "/03/2000";
                 }
                 int indaux = ind;
                 int a = 1;
@@ -864,13 +864,13 @@ public class Bitacoras : MonoBehaviour
                 float HoraCompletado = RetencionBitacora + TimeManager.Hora;
                 string txt = "<b>PARQUE PIMIENTA HAQUEADO</b>"
                 + System.Environment.NewLine + "Alguien se está colgando de la WIFI privada del Parque. Sugerimos investigar.";
-                string FechaCompletado = "2" + time.Dia + "/03/2000";
+                string FechaCompletado = "2" + TimeManager.Dia + "/03/2000";
                 string txtAccion = "Hackear Parque Pimienta";
                 Toggle accion = A.hackear;
                 if (HoraCompletado >= 18)
                 {
                     HoraCompletado = 6 + (RetencionBitacora - (18 - TimeManager.Hora));
-                    FechaCompletado = "2" + (time.Dia + 1) + "/03/2000";
+                    FechaCompletado = "2" + (TimeManager.Dia + 1) + "/03/2000";
                 }
                 int indaux = ind;
                 int a;
@@ -888,13 +888,13 @@ public class Bitacoras : MonoBehaviour
                 float RetencionBitacora = 12;
                 float HoraCompletado = RetencionBitacora + TimeManager.Hora;
                 string txt = "SuperLaboratorio Deluxe solo disponible en DLC";
-                string FechaCompletado = "2" + time.Dia + "/03/2000";
+                string FechaCompletado = "2" + TimeManager.Dia + "/03/2000";
                 string txtAccion = "Analizar Parque Pimienta";
                 Toggle accion = A.analizarMuestra;
                 if (HoraCompletado >= 18)
                 {
                     HoraCompletado = 6 + (RetencionBitacora - (18 - TimeManager.Hora));
-                    FechaCompletado = "2" + (time.Dia + 1) + "/03/2000";
+                    FechaCompletado = "2" + (TimeManager.Dia + 1) + "/03/2000";
                 }
                 int indaux = ind;
                 int a = 1;
@@ -913,13 +913,13 @@ public class Bitacoras : MonoBehaviour
                 float HoraCompletado = RetencionBitacora + TimeManager.Hora;
                 string txt = "<b>PARQUE PIMIENTA DIFAMADO</b>"
                 + System.Environment.NewLine + "WIP Los Parques son bobos o algo así";
-                string FechaCompletado = "2" + time.Dia + "/03/2000";
+                string FechaCompletado = "2" + TimeManager.Dia + "/03/2000";
                 string txtAccion = "Difamar Parque Pimienta";
                 Toggle accion = A.difamar;
                 if (HoraCompletado >= 18)
                 {
                     HoraCompletado = 6 + (RetencionBitacora - (18 - TimeManager.Hora));
-                    FechaCompletado = "2" + (time.Dia + 1) + "/03/2000";
+                    FechaCompletado = "2" + (TimeManager.Dia + 1) + "/03/2000";
                 }
                 int indaux = ind;
                 int a = 1;
@@ -938,13 +938,13 @@ public class Bitacoras : MonoBehaviour
                 float HoraCompletado = RetencionBitacora + TimeManager.Hora;
                 string txt = "<b>PARQUE PIMIENTA AISLADO</b>"
                 + System.Environment.NewLine + "Parque Pimienta ha sido aislado. Ya nadie puede entrar ni salir.";
-                string FechaCompletado = "2" + time.Dia + "/03/2000";
+                string FechaCompletado = "2" + TimeManager.Dia + "/03/2000";
                 string txtAccion = "Aislar Parque Pimienta";
                 Toggle accion = A.aislar;
                 if (HoraCompletado >= 18)
                 {
                     HoraCompletado = 6 + (RetencionBitacora - (18 - TimeManager.Hora));
-                    FechaCompletado = "2" + (time.Dia + 1) + "/03/2000";
+                    FechaCompletado = "2" + (TimeManager.Dia + 1) + "/03/2000";
                 }
                 int indaux = ind;
                 int a = 1;
@@ -968,13 +968,13 @@ public class Bitacoras : MonoBehaviour
                 float HoraCompletado = RetencionBitacora + TimeManager.Hora;
                 string txt = "<b>ELIMINAR PIMIENTAPALUZA</b>"
                 + System.Environment.NewLine + "Puedes matar a un hombre pero nunca una idea.";
-                string FechaCompletado = "2" + time.Dia + "/03/2000";
+                string FechaCompletado = "2" + TimeManager.Dia + "/03/2000";
                 string txtAccion = "Eliminar Pimientapaluza";
                 Toggle accion = A.eliminar;
                 if (HoraCompletado >= 18)
                 {
                     HoraCompletado = 6 + (RetencionBitacora - (18 - TimeManager.Hora));
-                    FechaCompletado = "2" + (time.Dia + 1) + "/03/2000";
+                    FechaCompletado = "2" + (TimeManager.Dia + 1) + "/03/2000";
                 }
                 int indaux = ind;
                 int a = 1;
@@ -993,13 +993,13 @@ public class Bitacoras : MonoBehaviour
                 float HoraCompletado = RetencionBitacora + TimeManager.Hora;
                 string txt = "<b>LAVAR PIMIENTAPALUZA</b>"
                 + System.Environment.NewLine + "Nada que lavar por aquí";
-                string FechaCompletado = "2" + time.Dia + "/03/2000";
+                string FechaCompletado = "2" + TimeManager.Dia + "/03/2000";
                 string txtAccion = "Lavar cerebro Pimientapaluza";
                 Toggle accion = A.lavarCerebro;
                 if (HoraCompletado >= 18)
                 {
                     HoraCompletado = 6 + (RetencionBitacora - (18 - TimeManager.Hora));
-                    FechaCompletado = "2" + (time.Dia + 1) + "/03/2000";
+                    FechaCompletado = "2" + (TimeManager.Dia + 1) + "/03/2000";
                 }
                 int indaux = ind;
                 int a = 1;
@@ -1018,13 +1018,13 @@ public class Bitacoras : MonoBehaviour
                 float HoraCompletado = RetencionBitacora + TimeManager.Hora;
                 string txt = "<b>PIMIENTAPALUZA HACKEADO</b>"
                 + System.Environment.NewLine + "WIP SECRETOS!";
-                string FechaCompletado = "2" + time.Dia + "/03/2000";
+                string FechaCompletado = "2" + TimeManager.Dia + "/03/2000";
                 string txtAccion = "Investigar Pimientapaluza";
                 Toggle accion = A.investigar;
                 if (HoraCompletado >= 18)
                 {
                     HoraCompletado = 6 + (RetencionBitacora - (18 - TimeManager.Hora));
-                    FechaCompletado = "2" + (time.Dia + 1) + "/03/2000";
+                    FechaCompletado = "2" + (TimeManager.Dia + 1) + "/03/2000";
                 }
                 int indaux = ind;
                 int a = 1;
@@ -1043,13 +1043,13 @@ public class Bitacoras : MonoBehaviour
                 float HoraCompletado = RetencionBitacora + TimeManager.Hora;
                 string txt = "<b>PIMIENTAPALUZA HACKEADO</b>"
                 + System.Environment.NewLine + "Hemos reventado los servers de Pimientapaluza.";
-                string FechaCompletado = "2" + time.Dia + "/03/2000";
+                string FechaCompletado = "2" + TimeManager.Dia + "/03/2000";
                 string txtAccion = "Hackear Pimientapaluza";
                 Toggle accion = A.hackear;
                 if (HoraCompletado >= 18)
                 {
                     HoraCompletado = 6 + (RetencionBitacora - (18 - TimeManager.Hora));
-                    FechaCompletado = "2" + (time.Dia + 1) + "/03/2000";
+                    FechaCompletado = "2" + (TimeManager.Dia + 1) + "/03/2000";
                 }
                 int indaux = ind;
                 int a;
@@ -1068,13 +1068,13 @@ public class Bitacoras : MonoBehaviour
                 float HoraCompletado = RetencionBitacora + TimeManager.Hora;
                 string txt = "<b>ANALIZAR PIMIENTAPALUZA</b>"
                 + System.Environment.NewLine + "Nada que analizar por aquí.";
-                string FechaCompletado = "2" + time.Dia + "/03/2000";
+                string FechaCompletado = "2" + TimeManager.Dia + "/03/2000";
                 string txtAccion = "Analizar Pimientapaluza";
                 Toggle accion = A.analizarMuestra;
                 if (HoraCompletado >= 18)
                 {
                     HoraCompletado = 6 + (RetencionBitacora - (18 - TimeManager.Hora));
-                    FechaCompletado = "2" + (time.Dia + 1) + "/03/2000";
+                    FechaCompletado = "2" + (TimeManager.Dia + 1) + "/03/2000";
                 }
                 int indaux = ind;
                 int a = 1;
@@ -1093,13 +1093,13 @@ public class Bitacoras : MonoBehaviour
                 float HoraCompletado = RetencionBitacora + TimeManager.Hora;
                 string txt = "<b>PIMIENTAPALUZA DIFAMADO</b>"
                 + System.Environment.NewLine + "WIP";
-                string FechaCompletado = "2" + time.Dia + "/03/2000";
+                string FechaCompletado = "2" + TimeManager.Dia + "/03/2000";
                 string txtAccion = "Difamar Pimientapaluza";
                 Toggle accion = A.difamar;
                 if (HoraCompletado >= 18)
                 {
                     HoraCompletado = 6 + (RetencionBitacora - (18 - TimeManager.Hora));
-                    FechaCompletado = "2" + (time.Dia + 1) + "/03/2000";
+                    FechaCompletado = "2" + (TimeManager.Dia + 1) + "/03/2000";
                 }
                 int indaux = ind;
                 int a = 1;
@@ -1118,13 +1118,13 @@ public class Bitacoras : MonoBehaviour
                 float HoraCompletado = RetencionBitacora + TimeManager.Hora;
                 string txt = "<b>PIMIENTAPALUZA AISLADO</b>"
                 + System.Environment.NewLine + "El personal de Pimientapaluza y los Pimientapaluzersen han quedado atrapads dentro del Parque. No fué una buena desición.";
-                string FechaCompletado = "2" + time.Dia + "/03/2000";
+                string FechaCompletado = "2" + TimeManager.Dia + "/03/2000";
                 string txtAccion = "Aislar Pimientapaluza";
                 Toggle accion = A.aislar;
                 if (HoraCompletado >= 18)
                 {
                     HoraCompletado = 6 + (RetencionBitacora - (18 - TimeManager.Hora));
-                    FechaCompletado = "2" + (time.Dia + 1) + "/03/2000";
+                    FechaCompletado = "2" + (TimeManager.Dia + 1) + "/03/2000";
                 }
                 int indaux = ind;
                 int a = 1;
@@ -1149,13 +1149,13 @@ public class Bitacoras : MonoBehaviour
                 float HoraCompletado = RetencionBitacora + TimeManager.Hora;
                 string txt = "<b>PIMIENTAPALUZERS ELIMINADOS</b>"
                 + System.Environment.NewLine + "Horda de hippies eliminada. Es mi humilde opinión indicar que nos la acabamos de mandar. Fuerte.";
-                string FechaCompletado = "2" + time.Dia + "/03/2000";
+                string FechaCompletado = "2" + TimeManager.Dia + "/03/2000";
                 string txtAccion = "Eliminar a Pimientapaluzers";
                 Toggle accion = A.eliminar;
                 if (HoraCompletado >= 18)
                 {
                     HoraCompletado = 6 + (RetencionBitacora - (18 - TimeManager.Hora));
-                    FechaCompletado = "2" + (time.Dia + 1) + "/03/2000";
+                    FechaCompletado = "2" + (TimeManager.Dia + 1) + "/03/2000";
                 }
                 int indaux = ind;
                 int a = 1;
@@ -1174,13 +1174,13 @@ public class Bitacoras : MonoBehaviour
                 float HoraCompletado = RetencionBitacora + TimeManager.Hora;
                 string txt = "<b>LAVAR PIMIENTAPALUZERS</b>"
                 + System.Environment.NewLine + "Son demasiados!";
-                string FechaCompletado = "2" + time.Dia + "/03/2000";
+                string FechaCompletado = "2" + TimeManager.Dia + "/03/2000";
                 string txtAccion = "Lavar cerebro a Pimientapaluzers";
                 Toggle accion = A.lavarCerebro;
                 if (HoraCompletado >= 18)
                 {
                     HoraCompletado = 6 + (RetencionBitacora - (18 - TimeManager.Hora));
-                    FechaCompletado = "2" + (time.Dia + 1) + "/03/2000";
+                    FechaCompletado = "2" + (TimeManager.Dia + 1) + "/03/2000";
                 }
                 int indaux = ind;
                 int a = 1;
@@ -1199,13 +1199,13 @@ public class Bitacoras : MonoBehaviour
                 float HoraCompletado = RetencionBitacora + TimeManager.Hora;
                 string txt = "<b>PIMIENTAPALUZERS INVESTIGADOS</b>"
                 + System.Environment.NewLine + "WIP Pasión e integridad.";
-                string FechaCompletado = "2" + time.Dia + "/03/2000";
+                string FechaCompletado = "2" + TimeManager.Dia + "/03/2000";
                 string txtAccion = "Investigar Pimientapaluzers";
                 Toggle accion = A.investigar;
                 if (HoraCompletado >= 18)
                 {
                     HoraCompletado = 6 + (RetencionBitacora - (18 - TimeManager.Hora));
-                    FechaCompletado = "2" + (time.Dia + 1) + "/03/2000";
+                    FechaCompletado = "2" + (TimeManager.Dia + 1) + "/03/2000";
                 }
                 int indaux = ind;
                 int a = 1;
@@ -1224,13 +1224,13 @@ public class Bitacoras : MonoBehaviour
                 float HoraCompletado = RetencionBitacora + TimeManager.Hora;
                 string txt = "<b>PIMIENTAPALUZERS HACKEADOS</b>"
                 + System.Environment.NewLine + "WIP Todos sacaron las entradas online pero.";
-                string FechaCompletado = "2" + time.Dia + "/03/2000";
+                string FechaCompletado = "2" + TimeManager.Dia + "/03/2000";
                 string txtAccion = "Hackear Pimientapaluzers";
                 Toggle accion = A.hackear;
                 if (HoraCompletado >= 18)
                 {
                     HoraCompletado = 6 + (RetencionBitacora - (18 - TimeManager.Hora));
-                    FechaCompletado = "2" + (time.Dia + 1) + "/03/2000";
+                    FechaCompletado = "2" + (TimeManager.Dia + 1) + "/03/2000";
                 }
                 int indaux = ind;
                 int a;
@@ -1249,13 +1249,13 @@ public class Bitacoras : MonoBehaviour
                 float HoraCompletado = RetencionBitacora + TimeManager.Hora;
                 string txt = "<b>ANALIZAR PIMIENTAPALUZERS</b>"
                 + System.Environment.NewLine + "Prefeririamos no acercarnos a ellos. Parecen sucios.";
-                string FechaCompletado = "2" + time.Dia + "/03/2000";
+                string FechaCompletado = "2" + TimeManager.Dia + "/03/2000";
                 string txtAccion = "Analizar Pimientapaluzers";
                 Toggle accion = A.analizarMuestra;
                 if (HoraCompletado >= 18)
                 {
                     HoraCompletado = 6 + (RetencionBitacora - (18 - TimeManager.Hora));
-                    FechaCompletado = "2" + (time.Dia + 1) + "/03/2000";
+                    FechaCompletado = "2" + (TimeManager.Dia + 1) + "/03/2000";
                 }
                 int indaux = ind;
                 int a = 1;
@@ -1274,13 +1274,13 @@ public class Bitacoras : MonoBehaviour
                 float HoraCompletado = RetencionBitacora + TimeManager.Hora;
                 string txt = "<b>PIMIENTAPALUZERS DIFAMADOS</b>"
                 + System.Environment.NewLine + "WIP Yo mamma. algo que los dañe";
-                string FechaCompletado = "2" + time.Dia + "/03/2000";
+                string FechaCompletado = "2" + TimeManager.Dia + "/03/2000";
                 string txtAccion = "Difamar Pimientapaluzers";
                 Toggle accion = A.difamar;
                 if (HoraCompletado >= 18)
                 {
                     HoraCompletado = 6 + (RetencionBitacora - (18 - TimeManager.Hora));
-                    FechaCompletado = "2" + (time.Dia + 1) + "/03/2000";
+                    FechaCompletado = "2" + (TimeManager.Dia + 1) + "/03/2000";
                 }
                 int indaux = ind;
                 int a = 1;
@@ -1299,13 +1299,13 @@ public class Bitacoras : MonoBehaviour
                 float HoraCompletado = RetencionBitacora + TimeManager.Hora;
                 string txt = "<b>AISLAR PIMIENTAPALUZERS</b>"
                 + System.Environment.NewLine + "No contamos con los recursos necesarios.";
-                string FechaCompletado = "2" + time.Dia + "/03/2000";
+                string FechaCompletado = "2" + TimeManager.Dia + "/03/2000";
                 string txtAccion = "Aislar Pimientapaluzers";
                 Toggle accion = A.aislar;
                 if (HoraCompletado >= 18)
                 {
                     HoraCompletado = 6 + (RetencionBitacora - (18 - TimeManager.Hora));
-                    FechaCompletado = "2" + (time.Dia + 1) + "/03/2000";
+                    FechaCompletado = "2" + (TimeManager.Dia + 1) + "/03/2000";
                 }
                 int indaux = ind;
                 int a = 1;
@@ -1329,13 +1329,13 @@ public class Bitacoras : MonoBehaviour
                 float HoraCompletado = RetencionBitacora + TimeManager.Hora;
                 string txt = "<b>ELIMINAR COLORADA</b>"
                 + System.Environment.NewLine + "Tendriamos que dar primero con su identidad y paradero.";
-                string FechaCompletado = "2" + time.Dia + "/03/2000";
+                string FechaCompletado = "2" + TimeManager.Dia + "/03/2000";
                 string txtAccion = "Eliminar a Colorada";
                 Toggle accion = A.eliminar;
                 if (HoraCompletado >= 18)
                 {
                     HoraCompletado = 6 + (RetencionBitacora - (18 - TimeManager.Hora));
-                    FechaCompletado = "2" + (time.Dia + 1) + "/03/2000";
+                    FechaCompletado = "2" + (TimeManager.Dia + 1) + "/03/2000";
                 }
                 int indaux = ind;
                 int a = 1;
@@ -1354,13 +1354,13 @@ public class Bitacoras : MonoBehaviour
                 float HoraCompletado = RetencionBitacora + TimeManager.Hora;
                 string txt = "<b>INVESTIGAR COLORADA</b>"
                 + System.Environment.NewLine + "WIP quizas debamos focalizarnos en los involucrados confirmados.";
-                string FechaCompletado = "2" + time.Dia + "/03/2000";
+                string FechaCompletado = "2" + TimeManager.Dia + "/03/2000";
                 string txtAccion = "Investigar colorada";
                 Toggle accion = A.investigar;
                 if (HoraCompletado >= 18)
                 {
                     HoraCompletado = 6 + (RetencionBitacora - (18 - TimeManager.Hora));
-                    FechaCompletado = "2" + (time.Dia + 1) + "/03/2000";
+                    FechaCompletado = "2" + (TimeManager.Dia + 1) + "/03/2000";
                 }
                 int indaux = ind;
                 int a = 1;
@@ -1379,13 +1379,13 @@ public class Bitacoras : MonoBehaviour
                 float HoraCompletado = RetencionBitacora + TimeManager.Hora;
                 string txt = "<b>LAVAR COLORADA</b>"
                 + System.Environment.NewLine + "WIP Tendriamos que dar primero con su identidad y paradero.";
-                string FechaCompletado = "2" + time.Dia + "/03/2000";
+                string FechaCompletado = "2" + TimeManager.Dia + "/03/2000";
                 string txtAccion = "Lavar cerebro a colorada";
                 Toggle accion = A.lavarCerebro;
                 if (HoraCompletado >= 18)
                 {
                     HoraCompletado = 6 + (RetencionBitacora - (18 - TimeManager.Hora));
-                    FechaCompletado = "2" + (time.Dia + 1) + "/03/2000";
+                    FechaCompletado = "2" + (TimeManager.Dia + 1) + "/03/2000";
                 }
                 int indaux = ind;
                 int a = 1;
@@ -1404,13 +1404,13 @@ public class Bitacoras : MonoBehaviour
                 float HoraCompletado = RetencionBitacora + TimeManager.Hora;
                 string txt = "<b>HACKEAR COLORADA</b>"
                 + System.Environment.NewLine + "WIP Tendriamos que dar primero con su identidad y paradero.";
-                string FechaCompletado = "2" + time.Dia + "/03/2000";
+                string FechaCompletado = "2" + TimeManager.Dia + "/03/2000";
                 string txtAccion = "Hackear colorada";
                 Toggle accion = A.hackear;
                 if (HoraCompletado >= 18)
                 {
                     HoraCompletado = 6 + (RetencionBitacora - (18 - TimeManager.Hora));
-                    FechaCompletado = "2" + (time.Dia + 1) + "/03/2000";
+                    FechaCompletado = "2" + (TimeManager.Dia + 1) + "/03/2000";
                 }
                 int indaux = ind;
                 int a = 1;
@@ -1429,13 +1429,13 @@ public class Bitacoras : MonoBehaviour
                 float HoraCompletado = RetencionBitacora + TimeManager.Hora;
                 string txt = "<b>COLORADA DIFAMADA</b>"
                 + System.Environment.NewLine + "Ninfómana cabellos de Satán realiza actos indebidos ante la juventud. Mantengan a sus hijos en sus casas.";
-                string FechaCompletado = "2" + time.Dia + "/03/2000";
+                string FechaCompletado = "2" + TimeManager.Dia + "/03/2000";
                 string txtAccion = "Difamar colorada";
                 Toggle accion = A.difamar;
                 if (HoraCompletado >= 18)
                 {
                     HoraCompletado = 6 + (RetencionBitacora - (18 - TimeManager.Hora));
-                    FechaCompletado = "2" + (time.Dia + 1) + "/03/2000";
+                    FechaCompletado = "2" + (TimeManager.Dia + 1) + "/03/2000";
                 }
                 int indaux = ind;
                 int a = 1;
@@ -1454,13 +1454,13 @@ public class Bitacoras : MonoBehaviour
                 float HoraCompletado = RetencionBitacora + TimeManager.Hora;
                 string txt = "<b>AISLAR COLORADA</b>"
                 + System.Environment.NewLine + "Quizás debamos pensar un poco más antes de unir palabras al azar.";
-                string FechaCompletado = "2" + time.Dia + "/03/2000";
+                string FechaCompletado = "2" + TimeManager.Dia + "/03/2000";
                 string txtAccion = "Aislar colorada";
                 Toggle accion = A.aislar;
                 if (HoraCompletado >= 18)
                 {
                     HoraCompletado = 6 + (RetencionBitacora - (18 - TimeManager.Hora));
-                    FechaCompletado = "2" + (time.Dia + 1) + "/03/2000";
+                    FechaCompletado = "2" + (TimeManager.Dia + 1) + "/03/2000";
                 }
                 int indaux = ind;
                 int a = 1;
@@ -1479,13 +1479,13 @@ public class Bitacoras : MonoBehaviour
                 float HoraCompletado = RetencionBitacora + TimeManager.Hora;
                 string txt = "<b>ANALIZAR COLORADA</b>"
                 + System.Environment.NewLine + "Quizás debamos analizar .";
-                string FechaCompletado = "2" + time.Dia + "/03/2000";
+                string FechaCompletado = "2" + TimeManager.Dia + "/03/2000";
                 string txtAccion = "Analizar ADN Colorada";
                 Toggle accion = A.analizarMuestra;
                 if (HoraCompletado >= 18)
                 {
                     HoraCompletado = 6 + (RetencionBitacora - (18 - TimeManager.Hora));
-                    FechaCompletado = "2" + (time.Dia + 1) + "/03/2000";
+                    FechaCompletado = "2" + (TimeManager.Dia + 1) + "/03/2000";
                 }
                 int indaux = ind;
                 int a = 1;
@@ -1509,13 +1509,13 @@ public class Bitacoras : MonoBehaviour
                 float HoraCompletado = RetencionBitacora + TimeManager.Hora;
                 string txt = "<b>ELIMINAR RED78</b>"
                 + System.Environment.NewLine + "Tendriamos que dar primero con la persona que se esconde tras el nombre Red78.";
-                string FechaCompletado = "2" + time.Dia + "/03/2000";
+                string FechaCompletado = "2" + TimeManager.Dia + "/03/2000";
                 string txtAccion = "Eliminar Red78";
                 Toggle accion = A.eliminar;
                 if (HoraCompletado >= 18)
                 {
                     HoraCompletado = 6 + (RetencionBitacora - (18 - TimeManager.Hora));
-                    FechaCompletado = "2" + (time.Dia + 1) + "/03/2000";
+                    FechaCompletado = "2" + (TimeManager.Dia + 1) + "/03/2000";
                 }
                 int indaux = ind;
                 int a = 1;
@@ -1535,13 +1535,13 @@ public class Bitacoras : MonoBehaviour
                 string txt = "<b>ELIMINAR RED78</b>"
                 + System.Environment.NewLine + "Red78 es la reconocida actriz y documentóloga Kate Milliard";
                 if (libreta.BtnPelosRojizos.activeSelf == true) txt = "Bitacora 2";
-                string FechaCompletado = "2" + time.Dia + "/03/2000";
+                string FechaCompletado = "2" + TimeManager.Dia + "/03/2000";
                 string txtAccion = "Investigar Red78";
                 Toggle accion = A.investigar;
                 if (HoraCompletado >= 18)
                 {
                     HoraCompletado = 6 + (RetencionBitacora - (18 - TimeManager.Hora));
-                    FechaCompletado = "2" + (time.Dia + 1) + "/03/2000";
+                    FechaCompletado = "2" + (TimeManager.Dia + 1) + "/03/2000";
                 }
                 int indaux = ind;
                 int a = 1;
@@ -1560,13 +1560,13 @@ public class Bitacoras : MonoBehaviour
                 float HoraCompletado = RetencionBitacora + TimeManager.Hora;
                 string txt = "<b>LAVAR RED78</b>"
                 + System.Environment.NewLine + "WIP.";
-                string FechaCompletado = "2" + time.Dia + "/03/2000";
+                string FechaCompletado = "2" + TimeManager.Dia + "/03/2000";
                 string txtAccion = "Lavar cerebro a Red78";
                 Toggle accion = A.lavarCerebro;
                 if (HoraCompletado >= 18)
                 {
                     HoraCompletado = 6 + (RetencionBitacora - (18 - TimeManager.Hora));
-                    FechaCompletado = "2" + (time.Dia + 1) + "/03/2000";
+                    FechaCompletado = "2" + (TimeManager.Dia + 1) + "/03/2000";
                 }
                 int indaux = ind;
                 int a = 1;
@@ -1586,13 +1586,13 @@ public class Bitacoras : MonoBehaviour
                 string txt = "<b>RED78 HACKEADA</b>"
                 + System.Environment.NewLine + "Red78 es la reconocida actriz y documentóloga Kate Milliard.";
                 if (libreta.BtnPelosRojizos.activeSelf == true) txt = "Bitacora 2";
-                string FechaCompletado = "2" + time.Dia + "/03/2000";
+                string FechaCompletado = "2" + TimeManager.Dia + "/03/2000";
                 string txtAccion = "Hackear Red78";
                 Toggle accion = A.hackear;
                 if (HoraCompletado >= 18)
                 {
                     HoraCompletado = 6 + (RetencionBitacora - (18 - TimeManager.Hora));
-                    FechaCompletado = "2" + (time.Dia + 1) + "/03/2000";
+                    FechaCompletado = "2" + (TimeManager.Dia + 1) + "/03/2000";
                 }
                 int indaux = ind;
                 int a;
@@ -1613,13 +1613,13 @@ public class Bitacoras : MonoBehaviour
                 float HoraCompletado = RetencionBitacora + TimeManager.Hora;
                 string txt = "<b>RED78 DIFAMADA</b>"
                 + System.Environment.NewLine + "WIP Escondan a sus niños!.";
-                string FechaCompletado = "2" + time.Dia + "/03/2000";
+                string FechaCompletado = "2" + TimeManager.Dia + "/03/2000";
                 string txtAccion = "Difamar Red78";
                 Toggle accion = A.difamar;
                 if (HoraCompletado >= 18)
                 {
                     HoraCompletado = 6 + (RetencionBitacora - (18 - TimeManager.Hora));
-                    FechaCompletado = "2" + (time.Dia + 1) + "/03/2000";
+                    FechaCompletado = "2" + (TimeManager.Dia + 1) + "/03/2000";
                 }
                 int indaux = ind;
                 int a = 1;
@@ -1638,13 +1638,13 @@ public class Bitacoras : MonoBehaviour
                 float HoraCompletado = RetencionBitacora + TimeManager.Hora;
                 string txt = "<b>AISLAR RED78</b>"
                 + System.Environment.NewLine + "Solo por que la acción esté disponible no quiere decir que haya que probarla con cada palabrita de cada caso.";
-                string FechaCompletado = "2" + time.Dia + "/03/2000";
+                string FechaCompletado = "2" + TimeManager.Dia + "/03/2000";
                 string txtAccion = "Aislar Red78";
                 Toggle accion = A.aislar;
                 if (HoraCompletado >= 18)
                 {
                     HoraCompletado = 6 + (RetencionBitacora - (18 - TimeManager.Hora));
-                    FechaCompletado = "2" + (time.Dia + 1) + "/03/2000";
+                    FechaCompletado = "2" + (TimeManager.Dia + 1) + "/03/2000";
                 }
                 int indaux = ind;
                 int a = 1;
@@ -1663,13 +1663,13 @@ public class Bitacoras : MonoBehaviour
                 float HoraCompletado = RetencionBitacora + TimeManager.Hora;
                 string txt = "<b>ANALIZAR RED78</b>"
                 + System.Environment.NewLine + "Los nombres de usuario, por mas sucios que sean, carecen de ADN.";
-                string FechaCompletado = "2" + time.Dia + "/03/2000";
+                string FechaCompletado = "2" + TimeManager.Dia + "/03/2000";
                 string txtAccion = "Analizar ADN de Red78";
                 Toggle accion = A.analizarMuestra;
                 if (HoraCompletado >= 18)
                 {
                     HoraCompletado = 6 + (RetencionBitacora - (18 - TimeManager.Hora));
-                    FechaCompletado = "2" + (time.Dia + 1) + "/03/2000";
+                    FechaCompletado = "2" + (TimeManager.Dia + 1) + "/03/2000";
                 }
                 int indaux = ind;
                 int a = 1;
@@ -1693,13 +1693,13 @@ public class Bitacoras : MonoBehaviour
                 float HoraCompletado = RetencionBitacora + TimeManager.Hora;
                 string txt = "<b>KATE MILLIARD ELIMINADA</b>"
                 + System.Environment.NewLine + "Kate Milard se fué a filmar documentales a la Granja.";
-                string FechaCompletado = "2" + time.Dia + "/03/2000";
+                string FechaCompletado = "2" + TimeManager.Dia + "/03/2000";
                 string txtAccion = "Eliminar Kate Milliard";
                 Toggle accion = A.eliminar;
                 if (HoraCompletado >= 18)
                 {
                     HoraCompletado = 6 + (RetencionBitacora - (18 - TimeManager.Hora));
-                    FechaCompletado = "2" + (time.Dia + 1) + "/03/2000";
+                    FechaCompletado = "2" + (TimeManager.Dia + 1) + "/03/2000";
                 }
                 int indaux = ind;
                 int a = 1;
@@ -1718,13 +1718,13 @@ public class Bitacoras : MonoBehaviour
                 float HoraCompletado = RetencionBitacora + TimeManager.Hora;
                 string txt = "<b>KATE MILLIARD LAVADA</b>"
                 + System.Environment.NewLine + "Kate ya no recuerda su torrido romance.";
-                string FechaCompletado = "2" + time.Dia + "/03/2000";
+                string FechaCompletado = "2" + TimeManager.Dia + "/03/2000";
                 string txtAccion = "Lavar cerebro a Kate Milliard";
                 Toggle accion = A.lavarCerebro;
                 if (HoraCompletado >= 18)
                 {
                     HoraCompletado = 6 + (RetencionBitacora - (18 - TimeManager.Hora));
-                    FechaCompletado = "2" + (time.Dia + 1) + "/03/2000";
+                    FechaCompletado = "2" + (TimeManager.Dia + 1) + "/03/2000";
                 }
                 int indaux = ind;
                 int a = 1;
@@ -1743,13 +1743,13 @@ public class Bitacoras : MonoBehaviour
                 float HoraCompletado = RetencionBitacora + TimeManager.Hora;
                 string txt = "<b>KATE MILLIARD INVESTIGADA</b>"
                 + System.Environment.NewLine + "WIP Se encuentra alojada bajo un pseudonimo en un motel cercano a Parque Pimienta.";
-                string FechaCompletado = "2" + time.Dia + "/03/2000";
+                string FechaCompletado = "2" + TimeManager.Dia + "/03/2000";
                 string txtAccion = "Investigar Kate Milliard";
                 Toggle accion = A.investigar;
                 if (HoraCompletado >= 18)
                 {
                     HoraCompletado = 6 + (RetencionBitacora - (18 - TimeManager.Hora));
-                    FechaCompletado = "2" + (time.Dia + 1) + "/03/2000";
+                    FechaCompletado = "2" + (TimeManager.Dia + 1) + "/03/2000";
                 }
                 int indaux = ind;
                 int a = 1;
@@ -1768,13 +1768,13 @@ public class Bitacoras : MonoBehaviour
                 float HoraCompletado = RetencionBitacora + TimeManager.Hora;
                 string txt = "<b>KATE MILLIARD HACKEADA</b>"
                 + System.Environment.NewLine + "Busquedas frequentes: Suavizante capilar, futura novia, feng shui+cueva, geomancia.";
-                string FechaCompletado = "2" + time.Dia + "/03/2000";
+                string FechaCompletado = "2" + TimeManager.Dia + "/03/2000";
                 string txtAccion = "Hackear Kate Milliard";
                 Toggle accion = A.hackear;
                 if (HoraCompletado >= 18)
                 {
                     HoraCompletado = 6 + (RetencionBitacora - (18 - TimeManager.Hora));
-                    FechaCompletado = "2" + (time.Dia + 1) + "/03/2000";
+                    FechaCompletado = "2" + (TimeManager.Dia + 1) + "/03/2000";
                 }
                 int indaux = ind;
                 int a = 1;
@@ -1793,13 +1793,13 @@ public class Bitacoras : MonoBehaviour
                 float HoraCompletado = RetencionBitacora + TimeManager.Hora;
                 string txt = "<b>KATE MILLIARD DIFAMADA</b>"
                 + System.Environment.NewLine + "WIP algo del pasado (pateo un mono en el set de bananorrama).";
-                string FechaCompletado = "2" + time.Dia + "/03/2000";
+                string FechaCompletado = "2" + TimeManager.Dia + "/03/2000";
                 string txtAccion = "Difamar Kate Milliard";
                 Toggle accion = A.difamar;
                 if (HoraCompletado >= 18)
                 {
                     HoraCompletado = 6 + (RetencionBitacora - (18 - TimeManager.Hora));
-                    FechaCompletado = "2" + (time.Dia + 1) + "/03/2000";
+                    FechaCompletado = "2" + (TimeManager.Dia + 1) + "/03/2000";
                 }
                 int indaux = ind;
                 int a = 1;
@@ -1818,13 +1818,13 @@ public class Bitacoras : MonoBehaviour
                 float HoraCompletado = RetencionBitacora + TimeManager.Hora;
                 string txt = "<b>AISLAR KATE MILLIARD</b>"
                 + System.Environment.NewLine + "La cerca que tenemos es muy grande para una sola persona WIP";
-                string FechaCompletado = "2" + time.Dia + "/03/2000";
+                string FechaCompletado = "2" + TimeManager.Dia + "/03/2000";
                 string txtAccion = "Aislar Kate Milliard";
                 Toggle accion = A.aislar;
                 if (HoraCompletado >= 18)
                 {
                     HoraCompletado = 6 + (RetencionBitacora - (18 - TimeManager.Hora));
-                    FechaCompletado = "2" + (time.Dia + 1) + "/03/2000";
+                    FechaCompletado = "2" + (TimeManager.Dia + 1) + "/03/2000";
                 }
                 int indaux = ind;
                 int a = 1;
@@ -1843,13 +1843,13 @@ public class Bitacoras : MonoBehaviour
                 float HoraCompletado = RetencionBitacora + TimeManager.Hora;
                 string txt = "<b>KATE MILLIARD ANALIZADA</b>"
                 + System.Environment.NewLine + "Jefe, tenemos raras noticias. Se encuentra embarazada...WIP";
-                string FechaCompletado = "2" + time.Dia + "/03/2000";
+                string FechaCompletado = "2" + TimeManager.Dia + "/03/2000";
                 string txtAccion = "Analizar Kate Milliard";
                 Toggle accion = A.analizarMuestra;
                 if (HoraCompletado >= 18)
                 {
                     HoraCompletado = 6 + (RetencionBitacora - (18 - TimeManager.Hora));
-                    FechaCompletado = "2" + (time.Dia + 1) + "/03/2000";
+                    FechaCompletado = "2" + (TimeManager.Dia + 1) + "/03/2000";
                 }
                 int indaux = ind;
                 int a = 1;
@@ -1872,13 +1872,13 @@ public class Bitacoras : MonoBehaviour
                 float HoraCompletado = RetencionBitacora + TimeManager.Hora;
                 string txt = "<b>PEPE QUENIO ELIMINADO</b>"
                 + System.Environment.NewLine + "Pepe Quenio se fué a jugar a la Granja";
-                string FechaCompletado = "2" + time.Dia + "/03/2000";
+                string FechaCompletado = "2" + TimeManager.Dia + "/03/2000";
                 string txtAccion = "Eliminar Pepe Quenio";
                 Toggle accion = A.eliminar;
                 if (HoraCompletado >= 18)
                 {
                     HoraCompletado = 6 + (RetencionBitacora - (18 - TimeManager.Hora));
-                    FechaCompletado = "2" + (time.Dia + 1) + "/03/2000";
+                    FechaCompletado = "2" + (TimeManager.Dia + 1) + "/03/2000";
                 }
                 int indaux = ind;
                 int a = 1;
@@ -1897,13 +1897,13 @@ public class Bitacoras : MonoBehaviour
                 float HoraCompletado = RetencionBitacora + TimeManager.Hora;
                 string txt = "<b>PEPE QUENIO LAVADO</b>"
                 + System.Environment.NewLine + "Pepe Quenio ha olvidado todo. No volverá a ser el mismo.";
-                string FechaCompletado = "2" + time.Dia + "/03/2000";
+                string FechaCompletado = "2" + TimeManager.Dia + "/03/2000";
                 string txtAccion = "Lavar cerebro Pepe Quenio";
                 Toggle accion = A.lavarCerebro;
                 if (HoraCompletado >= 18)
                 {
                     HoraCompletado = 6 + (RetencionBitacora - (18 - TimeManager.Hora));
-                    FechaCompletado = "2" + (time.Dia + 1) + "/03/2000";
+                    FechaCompletado = "2" + (TimeManager.Dia + 1) + "/03/2000";
                 }
                 int indaux = ind;
                 int a = 1;
@@ -1922,13 +1922,13 @@ public class Bitacoras : MonoBehaviour
                 float HoraCompletado = RetencionBitacora + TimeManager.Hora;
                 string txt = "<b>PEPE QUENIO INVESTIGADO</b>"
                 + System.Environment.NewLine + "BASE DE DATOS ACTUALIZADA. Extraño niño...Su único amigo parece ser Ben Benji. Tiene un... no se qué.";
-                string FechaCompletado = "2" + time.Dia + "/03/2000";
+                string FechaCompletado = "2" + TimeManager.Dia + "/03/2000";
                 string txtAccion = "Investigar Pepe Quenio";
                 Toggle accion = A.investigar;
                 if (HoraCompletado >= 18)
                 {
                     HoraCompletado = 6 + (RetencionBitacora - (18 - TimeManager.Hora));
-                    FechaCompletado = "2" + (time.Dia + 1) + "/03/2000";
+                    FechaCompletado = "2" + (TimeManager.Dia + 1) + "/03/2000";
                 }
                 int indaux = ind;
                 int a = 1;
@@ -1948,13 +1948,13 @@ public class Bitacoras : MonoBehaviour
                 float HoraCompletado = RetencionBitacora + TimeManager.Hora;
                 string txt = "<b>PEPE QUENIO HACKEADO</b>"
                 + System.Environment.NewLine + "Búsquedas frecuentes: ¿Por qué tengo pelo ahí también ?, Siento el llamado del bosque, ¿Cuánto calza un niño normal?";
-                string FechaCompletado = "2" + time.Dia + "/03/2000";
+                string FechaCompletado = "2" + TimeManager.Dia + "/03/2000";
                 string txtAccion = "Hackear Pepe Quenio";
                 Toggle accion = A.hackear;
                 if (HoraCompletado >= 18)
                 {
                     HoraCompletado = 6 + (RetencionBitacora - (18 - TimeManager.Hora));
-                    FechaCompletado = "2" + (time.Dia + 1) + "/03/2000";
+                    FechaCompletado = "2" + (TimeManager.Dia + 1) + "/03/2000";
                 }
                 int indaux = ind;
                 int a = 1;
@@ -1973,13 +1973,13 @@ public class Bitacoras : MonoBehaviour
                 float HoraCompletado = RetencionBitacora + TimeManager.Hora;
                 string txt = "<b>DIFAMAR PEPE QUENIO</b>"
                 + System.Environment.NewLine + "Su simple existencia es difamación suficiente por esta miserable vida.";
-                string FechaCompletado = "2" + time.Dia + "/03/2000";
+                string FechaCompletado = "2" + TimeManager.Dia + "/03/2000";
                 string txtAccion = "Difamar Pepe Quenio";
                 Toggle accion = A.difamar;
                 if (HoraCompletado >= 18)
                 {
                     HoraCompletado = 6 + (RetencionBitacora - (18 - TimeManager.Hora));
-                    FechaCompletado = "2" + (time.Dia + 1) + "/03/2000";
+                    FechaCompletado = "2" + (TimeManager.Dia + 1) + "/03/2000";
                 }
                 int indaux = ind;
                 int a = 1;
@@ -1998,13 +1998,13 @@ public class Bitacoras : MonoBehaviour
                 float HoraCompletado = RetencionBitacora + TimeManager.Hora;
                 string txt = "<b>PEPE QUENIO ANALIZADO</b>"
                 + System.Environment.NewLine + "BASE DE DATOS ACTUALIZADA. ADN coincide con Pie Grade. Posible hijo ilegítimo durante su último matrimonio.";
-                string FechaCompletado = "2" + time.Dia + "/03/2000";
+                string FechaCompletado = "2" + TimeManager.Dia + "/03/2000";
                 string txtAccion = "Analizar Pepe Quenio";
                 Toggle accion = A.analizarMuestra;
                 if (HoraCompletado >= 18)
                 {
                     HoraCompletado = 6 + (RetencionBitacora - (18 - TimeManager.Hora));
-                    FechaCompletado = "2" + (time.Dia + 1) + "/03/2000";
+                    FechaCompletado = "2" + (TimeManager.Dia + 1) + "/03/2000";
                 }
                 int indaux = ind;
                 int a = 1;
@@ -2022,13 +2022,13 @@ public class Bitacoras : MonoBehaviour
                 float HoraCompletado = RetencionBitacora + TimeManager.Hora;
                 string txt = "<b>AISLAR PEPE QUENIO</b>"
                 + System.Environment.NewLine + "Este plan de acción es solo aplicable a LUGARES";
-                string FechaCompletado = "2" + time.Dia + "/03/2000";
+                string FechaCompletado = "2" + TimeManager.Dia + "/03/2000";
                 string txtAccion = "Aislar Pepe Quenio";
                 Toggle accion = A.aislar;
                 if (HoraCompletado >= 18)
                 {
                     HoraCompletado = 6 + (RetencionBitacora - (18 - TimeManager.Hora));
-                    FechaCompletado = "2" + (time.Dia + 1) + "/03/2000";
+                    FechaCompletado = "2" + (TimeManager.Dia + 1) + "/03/2000";
                 }
                 int indaux = ind;
                 int a = 1;
@@ -2052,13 +2052,13 @@ public class Bitacoras : MonoBehaviour
                 float HoraCompletado = RetencionBitacora + TimeManager.Hora;
                 string txt = "<b>WIFI ROBADO ELIMINADO</b>"
                 + System.Environment.NewLine + "Notificamos a los guardabosques y han cambiado la contraseña. Wifi robada 'eliminada'.";
-                string FechaCompletado = "2" + time.Dia + "/03/2000";
+                string FechaCompletado = "2" + TimeManager.Dia + "/03/2000";
                 string txtAccion = "Eliminar Wifi Robado";
                 Toggle accion = A.eliminar;
                 if (HoraCompletado >= 18)
                 {
                     HoraCompletado = 6 + (RetencionBitacora - (18 - TimeManager.Hora));
-                    FechaCompletado = "2" + (time.Dia + 1) + "/03/2000";
+                    FechaCompletado = "2" + (TimeManager.Dia + 1) + "/03/2000";
                 }
                 int indaux = ind;
                 int a = 1;
@@ -2077,13 +2077,13 @@ public class Bitacoras : MonoBehaviour
                 float HoraCompletado = RetencionBitacora + TimeManager.Hora;
                 string txt = "<b>LAVAR WIFI ROBADO</b>"
                 + System.Environment.NewLine + "uhm... no.";
-                string FechaCompletado = "2" + time.Dia + "/03/2000";
+                string FechaCompletado = "2" + TimeManager.Dia + "/03/2000";
                 string txtAccion = "Lavar cerebro a Wifi Robado";
                 Toggle accion = A.lavarCerebro;
                 if (HoraCompletado >= 18)
                 {
                     HoraCompletado = 6 + (RetencionBitacora - (18 - TimeManager.Hora));
-                    FechaCompletado = "2" + (time.Dia + 1) + "/03/2000";
+                    FechaCompletado = "2" + (TimeManager.Dia + 1) + "/03/2000";
                 }
                 int indaux = ind;
                 int a = 1;
@@ -2103,13 +2103,13 @@ public class Bitacoras : MonoBehaviour
                 float HoraCompletado = RetencionBitacora + TimeManager.Hora;
                 string txt = "<b>WIFI ROBADO INVESTIGADO</b>"
                 + System.Environment.NewLine + "Presencia de Pie Grande confirmada! Se encuentra en Parque Pimienta viviendole la Wifi a los guardabosques desde una cueva secreta!";
-                string FechaCompletado = "2" + time.Dia + "/03/2000";
+                string FechaCompletado = "2" + TimeManager.Dia + "/03/2000";
                 string txtAccion = "Investigar Wifi robado";
                 Toggle accion = A.investigar;
                 if (HoraCompletado >= 18)
                 {
                     HoraCompletado = 6 + (RetencionBitacora - (18 - TimeManager.Hora));
-                    FechaCompletado = "2" + (time.Dia + 1) + "/03/2000";
+                    FechaCompletado = "2" + (TimeManager.Dia + 1) + "/03/2000";
                 }
                 int indaux = ind;
                 int a = 1;
@@ -2128,13 +2128,13 @@ public class Bitacoras : MonoBehaviour
                 float HoraCompletado = RetencionBitacora + TimeManager.Hora;
                 string txt = "<b>WIFI ROBADO HACKEADO</b>"
                 + System.Environment.NewLine + "Presencia de Pie Grande confirmada! Se encuentra en Parque Pimienta viviendole la Wifi a los guardabosques desde una cueva secreta!";
-                string FechaCompletado = "2" + time.Dia + "/03/2000";
+                string FechaCompletado = "2" + TimeManager.Dia + "/03/2000";
                 string txtAccion = "Hackear Wifi Robado";
                 Toggle accion = A.hackear;
                 if (HoraCompletado >= 18)
                 {
                     HoraCompletado = 6 + (RetencionBitacora - (18 - TimeManager.Hora));
-                    FechaCompletado = "2" + (time.Dia + 1) + "/03/2000";
+                    FechaCompletado = "2" + (TimeManager.Dia + 1) + "/03/2000";
                 }
                 int indaux = ind;
                 int a = 1;
@@ -2153,13 +2153,13 @@ public class Bitacoras : MonoBehaviour
                 float HoraCompletado = RetencionBitacora + TimeManager.Hora;
                 string txt = "<b>WIFI ROBADO DIFAMADO</b>"
                 + System.Environment.NewLine + "WIP sucio ladron se encuentra robandole el wifi a la nombre reserva Parque Pimienta.";
-                string FechaCompletado = "2" + time.Dia + "/03/2000";
+                string FechaCompletado = "2" + TimeManager.Dia + "/03/2000";
                 string txtAccion = "Difamar Wifi robado";
                 Toggle accion = A.difamar;
                 if (HoraCompletado >= 18)
                 {
                     HoraCompletado = 6 + (RetencionBitacora - (18 - TimeManager.Hora));
-                    FechaCompletado = "2" + (time.Dia + 1) + "/03/2000";
+                    FechaCompletado = "2" + (TimeManager.Dia + 1) + "/03/2000";
                 }
                 int indaux = ind;
                 int a = 1;
@@ -2178,13 +2178,13 @@ public class Bitacoras : MonoBehaviour
                 float HoraCompletado = RetencionBitacora + TimeManager.Hora;
                 string txt = "<b>ANALIZAR WIFI ROBADO</b>"
                 + System.Environment.NewLine + "Wifi robado carece de ADN.";
-                string FechaCompletado = "2" + time.Dia + "/03/2000";
+                string FechaCompletado = "2" + TimeManager.Dia + "/03/2000";
                 string txtAccion = "Analizar Wifi Robado";
                 Toggle accion = A.analizarMuestra;
                 if (HoraCompletado >= 18)
                 {
                     HoraCompletado = 6 + (RetencionBitacora - (18 - TimeManager.Hora));
-                    FechaCompletado = "2" + (time.Dia + 1) + "/03/2000";
+                    FechaCompletado = "2" + (TimeManager.Dia + 1) + "/03/2000";
                 }
                 int indaux = ind;
                 int a = 1;
@@ -2203,13 +2203,13 @@ public class Bitacoras : MonoBehaviour
                 float HoraCompletado = RetencionBitacora + TimeManager.Hora;
                 string txt = "<b>AISLAR WIFI ROBADO</b>"
                 + System.Environment.NewLine + "Quizás debamos pensar un poco más antes de unir palabras al azar.";
-                string FechaCompletado = "2" + time.Dia + "/03/2000";
+                string FechaCompletado = "2" + TimeManager.Dia + "/03/2000";
                 string txtAccion = "Aislar Wifi Robado";
                 Toggle accion = A.aislar;
                 if (HoraCompletado >= 18)
                 {
                     HoraCompletado = 6 + (RetencionBitacora - (18 - TimeManager.Hora));
-                    FechaCompletado = "2" + (time.Dia + 1) + "/03/2000";
+                    FechaCompletado = "2" + (TimeManager.Dia + 1) + "/03/2000";
                 }
                 int indaux = ind;
                 int a = 1;
@@ -2232,13 +2232,13 @@ public class Bitacoras : MonoBehaviour
                 float HoraCompletado = RetencionBitacora + TimeManager.Hora;
                 string txt = "<b>CABELLOS ROJIZOS ANALIZADOS</b>"
                 + System.Environment.NewLine + "La muestra corresponde a la reconocida actriz Kate Milliard!";
-                string FechaCompletado = "2" + time.Dia + "/03/2000";
+                string FechaCompletado = "2" + TimeManager.Dia + "/03/2000";
                 string txtAccion = "Analizar cabellos rojizos";
                 Toggle accion = A.analizarMuestra;
                 if (HoraCompletado >= 18)
                 {
                     HoraCompletado = 6 + (RetencionBitacora - (18 - TimeManager.Hora));
-                    FechaCompletado = "2" + (time.Dia + 1) + "/03/2000";
+                    FechaCompletado = "2" + (TimeManager.Dia + 1) + "/03/2000";
                 }
                 int indaux = ind;
                 int a = 1;
@@ -2263,13 +2263,13 @@ public class Bitacoras : MonoBehaviour
                 float HoraCompletado = RetencionBitacora + TimeManager.Hora;
                 string txt = "<b>ELIMINAR BANANORRAMA</b>"//REVISAR SI ES POSIBLE O NO
                 + System.Environment.NewLine + "Hemos terciarizado el acto de eliminar cada cinta de Bananorrama en existencia. Aguardamos novedades.";//
-                string FechaCompletado = "2" + time.Dia + "/03/2000";
+                string FechaCompletado = "2" + TimeManager.Dia + "/03/2000";
                 string txtAccion = "Eliminar Bananorrama";
                 Toggle accion = A.eliminar;
                 if (HoraCompletado >= 18)
                 {
                     HoraCompletado = 6 + (RetencionBitacora - (18 - TimeManager.Hora));
-                    FechaCompletado = "2" + (time.Dia + 1) + "/03/2000";
+                    FechaCompletado = "2" + (TimeManager.Dia + 1) + "/03/2000";
                 }
                 int indaux = ind;
                 int a = 1;
@@ -2289,13 +2289,13 @@ public class Bitacoras : MonoBehaviour
                 float HoraCompletado = RetencionBitacora + TimeManager.Hora;
                 string txt = "<b>LAVAR BANANORRAMA</b>"
                 + System.Environment.NewLine + "No.";
-                string FechaCompletado = "2" + time.Dia + "/03/2000";
+                string FechaCompletado = "2" + TimeManager.Dia + "/03/2000";
                 string txtAccion = "Lavar cerebro a Bananorrama";
                 Toggle accion = A.lavarCerebro;
                 if (HoraCompletado > 18)
                 {
                     HoraCompletado = 6 + (RetencionBitacora - (18 - TimeManager.Hora));
-                    FechaCompletado = "2" + (time.Dia + 1) + "/03/2000";
+                    FechaCompletado = "2" + (TimeManager.Dia + 1) + "/03/2000";
                 }
                 int indaux = ind;
                 int a = 1;
@@ -2315,12 +2315,12 @@ public class Bitacoras : MonoBehaviour
                 string txt = "<b>BANANORRAMA INVESTIGADO</b>"
                 + System.Environment.NewLine + "WIP El agente ha terminado de ver la película Bananorrama.";
                 Toggle accion = A.investigar;
-                string FechaCompletado = "2" + time.Dia + "/03/2000";
+                string FechaCompletado = "2" + TimeManager.Dia + "/03/2000";
                 string txtAccion = "Investigar Bananorrama";
                 if (HoraCompletado >= 18)
                 {
                     HoraCompletado = 6 + (RetencionBitacora - (18 - TimeManager.Hora));
-                    FechaCompletado = "2" + (time.Dia + 1) + "/03/2000";
+                    FechaCompletado = "2" + (TimeManager.Dia + 1) + "/03/2000";
                 }
                 int indaux = ind;
                 int a = 1;
@@ -2339,13 +2339,13 @@ public class Bitacoras : MonoBehaviour
                 float HoraCompletado = RetencionBitacora + TimeManager.Hora;
                 string txt = "<b>HACKEAR BANANORRAMA</b>"
                 + System.Environment.NewLine + "No podemos hackear eso.";
-                string FechaCompletado = "2" + time.Dia + "/03/2000";
+                string FechaCompletado = "2" + TimeManager.Dia + "/03/2000";
                 string txtAccion = "Hackear Bananorrama";
                 Toggle accion = A.hackear;
                 if (HoraCompletado >= 18)
                 {
                     HoraCompletado = 6 + (RetencionBitacora - (18 - TimeManager.Hora));
-                    FechaCompletado = "2" + (time.Dia + 1) + "/03/2000";
+                    FechaCompletado = "2" + (TimeManager.Dia + 1) + "/03/2000";
                 }
                 int indaux = ind;
                 int a = 1;
@@ -2364,13 +2364,13 @@ public class Bitacoras : MonoBehaviour
                 float HoraCompletado = RetencionBitacora + TimeManager.Hora;
                 string txt = "<b>ANALIZAR BABANORRAMA</b>"
                 + System.Environment.NewLine + "El ADN de la película no requiere un laboratorio para ser analizado. Sus origenes e inspiraciones se datan a WIP";
-                string FechaCompletado = "2" + time.Dia + "/03/2000";
+                string FechaCompletado = "2" + TimeManager.Dia + "/03/2000";
                 string txtAccion = "Analizar Bananorrama";
                 Toggle accion = A.analizarMuestra;
                 if (HoraCompletado >= 18)
                 {
                     HoraCompletado = 6 + (RetencionBitacora - (18 - TimeManager.Hora));
-                    FechaCompletado = "2" + (time.Dia + 1) + "/03/2000";
+                    FechaCompletado = "2" + (TimeManager.Dia + 1) + "/03/2000";
                 }
                 int indaux = ind;
                 int a = 1;
@@ -2390,12 +2390,12 @@ public class Bitacoras : MonoBehaviour
                 string txt = "<b>BANANORRAMA DIFAMADO</b>"
                 + System.Environment.NewLine + "WIP peli mala tuto. porque un remake de bananorrama seria una mala idea. critico que no habia visto aun bananorrama se siente insultado personalmente por la cinta ";
                 Toggle accion = A.difamar;
-                string FechaCompletado = "2" + time.Dia + "/03/2000";
+                string FechaCompletado = "2" + TimeManager.Dia + "/03/2000";
                 string txtAccion = "Difamar Bananorrama";
                 if (HoraCompletado >= 18)
                 {
                     HoraCompletado = 6 + (RetencionBitacora - (18 - TimeManager.Hora));
-                    FechaCompletado = "2" + (time.Dia + 1) + "/03/2000";
+                    FechaCompletado = "2" + (TimeManager.Dia + 1) + "/03/2000";
                 }
                 int indaux = ind;
                 int a = 1;
@@ -2418,14 +2418,14 @@ public class Bitacoras : MonoBehaviour
                 float RetencionBitacora = 2;
                 float HoraCompletado = RetencionBitacora + TimeManager.Hora;
                 ElegirFakeNews(NumNoticias);
-                string FechaCompletado = "2" + time.Dia + "/03/2000";
+                string FechaCompletado = "2" + TimeManager.Dia + "/03/2000";
                 string txtAccion = "Crear noticia falsa";
                 Toggle accion = A.crearNoticia;
-                 time.NoticiaDiaria = true;
+                time.NoticiaDiaria = true;
                 if (HoraCompletado >= 18)
                 {
                     HoraCompletado = 6 + (RetencionBitacora - (18 - TimeManager.Hora));
-                    FechaCompletado = "2" + (time.Dia + 1) + "/03/2000";
+                    FechaCompletado = "2" + (TimeManager.Dia + 1) + "/03/2000";
                     
                 }
                 int indaux = ind;
@@ -2446,13 +2446,13 @@ public class Bitacoras : MonoBehaviour
             float HoraCompletado = RetencionBitacora + TimeManager.Hora;
             string txt = "<b>MONTAR ESCENA CON AGENTE PELUDO Y AGENTE CON PELUCA COLORADA WIP</b>"
             + System.Environment.NewLine + "La estrategia parece haber calmado las aguas. Los agentes fueron aproximados por un pequeño niño raro llamado Pepe Quenio, su interés en ellos les llamó la atención. WIP";
-            string FechaCompletado = "2" + time.Dia + "/03/2000";
+            string FechaCompletado = "2" + TimeManager.Dia + "/03/2000";
             string txtAccion = "Montar Escena";
             Toggle accion = A.crearEscena;
             if (HoraCompletado >= 18)
             {
                 HoraCompletado = 6 + (RetencionBitacora - (18 - TimeManager.Hora));
-                FechaCompletado = "2" + (time.Dia + 1) + "/03/2000";
+                FechaCompletado = "2" + (TimeManager.Dia + 1) + "/03/2000";
             }
             int indaux = ind;
             int a = 1;
@@ -2472,13 +2472,13 @@ public class Bitacoras : MonoBehaviour
             float HoraCompletado = RetencionBitacora + TimeManager.Hora;
             string txt = "<b>AGENTES PLANTADOS EN PUBLICO DE ENTREVISTA</b>"
             + System.Environment.NewLine + "Los agentes estarán listos para boicotear la entrevista apenas comience.";
-            string FechaCompletado = "2" + time.Dia + "/03/2000";
+            string FechaCompletado = "2" + TimeManager.Dia + "/03/2000";
             string txtAccion = "Boicotear entrevista";
             Toggle accion = A.plantarPublico;
             if (HoraCompletado >= 18)
             {
                 HoraCompletado = 6 + (RetencionBitacora - (18 - TimeManager.Hora));
-                FechaCompletado = "2" + (time.Dia + 1) + "/03/2000";
+                FechaCompletado = "2" + (TimeManager.Dia + 1) + "/03/2000";
 
             }
             int indaux = ind;
@@ -2500,13 +2500,13 @@ public class Bitacoras : MonoBehaviour
             + System.Environment.NewLine + "La nueva familia, reunida al fín gracias a nuestra cuestionable simpatía, ha decidido encontrar un nuevo hogar donde vivir alejados de la sociedad, libres de prejuicio y sentido común."
             + System.Environment.NewLine + "Caso ganado."
             + System.Environment.NewLine + "Que Dios se apiade de nuestras almas.";
-            string FechaCompletado = "2" + time.Dia + "/03/2000";
+            string FechaCompletado = "2" + TimeManager.Dia + "/03/2000";
             string txtAccion = "Reunir familia";
             Toggle accion = A.plantarPublico;
             if (HoraCompletado >= 18)
             {
                 HoraCompletado = 6 + (RetencionBitacora - (18 - TimeManager.Hora));
-                FechaCompletado = "2" + (time.Dia + 1) + "/03/2000";
+                FechaCompletado = "2" + (TimeManager.Dia + 1) + "/03/2000";
 
             }
             int indaux = ind;
@@ -2526,13 +2526,13 @@ public class Bitacoras : MonoBehaviour
             float HoraCompletado = RetencionBitacora + TimeManager.Hora;
             string txt = "<b>PROTECCION Y ASILO OFRECIDOS</b>"
             + System.Environment.NewLine + "Wip";
-            string FechaCompletado = "2" + time.Dia + "/03/2000";
+            string FechaCompletado = "2" + TimeManager.Dia + "/03/2000";
             string txtAccion = "Ofrenda de asilo y protección";
             Toggle accion = A.ofrecerProteccion;
             if (HoraCompletado >= 18)
             {
                 HoraCompletado = 6 + (RetencionBitacora - (18 - TimeManager.Hora));
-                FechaCompletado = "2" + (time.Dia + 1) + "/03/2000";
+                FechaCompletado = "2" + (TimeManager.Dia + 1) + "/03/2000";
             }
             int indaux = ind;
             int a = 1;
@@ -2551,13 +2551,13 @@ public class Bitacoras : MonoBehaviour
             float HoraCompletado = RetencionBitacora + TimeManager.Hora;
             string txt = "<b>CUEVA SECRETA CONVERTIDA EN GIFT SHOP</b>"
             + System.Environment.NewLine + "Wip va a estar todo bien";
-            string FechaCompletado = "2" + time.Dia + "/03/2000";
+            string FechaCompletado = "2" + TimeManager.Dia + "/03/2000";
             string txtAccion = "Convertir cueva secreta en Gift Shop";
             Toggle accion = A.convertirCueva;
             if (HoraCompletado >= 18)
             {
                 HoraCompletado = 6 + (RetencionBitacora - (18 - TimeManager.Hora));
-                FechaCompletado = "2" + (time.Dia + 1) + "/03/2000";
+                FechaCompletado = "2" + (TimeManager.Dia + 1) + "/03/2000";
 
             }
             int indaux = ind;
@@ -2577,13 +2577,13 @@ public class Bitacoras : MonoBehaviour
             float HoraCompletado = RetencionBitacora + TimeManager.Hora;
             string txt = "<b>FOTOS EXTRAIDAS</b>"
             + System.Environment.NewLine + "Wip El pequeño set fotos amateur muestra una mancha marrón y una roja fuera de foco.";
-            string FechaCompletado = "2" + time.Dia + "/03/2000";
+            string FechaCompletado = "2" + TimeManager.Dia + "/03/2000";
             string txtAccion = "Extracción de fotos";
             Toggle accion = A.extraerFotos;
             if (HoraCompletado >= 18)
             {
                 HoraCompletado = 6 + (RetencionBitacora - (18 - TimeManager.Hora));
-                FechaCompletado = "2" + (time.Dia + 1) + "/03/2000";
+                FechaCompletado = "2" + (TimeManager.Dia + 1) + "/03/2000";
 
             }
             int indaux = ind;
@@ -2606,13 +2606,13 @@ public class Bitacoras : MonoBehaviour
                 float HoraCompletado = RetencionBitacora + TimeManager.Hora;
                 string txt = "<b>Wip</b>"
                 + System.Environment.NewLine + "Wip";
-                string FechaCompletado = "2" + time.Dia + "/03/2000";
+                string FechaCompletado = "2" + TimeManager.Dia + "/03/2000";
                 string txtAccion = "Wip";
                 Toggle accion = A.levantarCerca;
                 if (HoraCompletado >= 18)
                 {
                     HoraCompletado = 6 + (RetencionBitacora - (18 - TimeManager.Hora));
-                    FechaCompletado = "2" + (time.Dia + 1) + "/03/2000";
+                    FechaCompletado = "2" + (TimeManager.Dia + 1) + "/03/2000";
                 }
                 int indaux = ind;
                 int a = 1;
@@ -2634,13 +2634,13 @@ public class Bitacoras : MonoBehaviour
                 float HoraCompletado = RetencionBitacora + TimeManager.Hora;
                 string txt = "<b>Wip</b>"
                 + System.Environment.NewLine + "Wip";
-                string FechaCompletado = "2" + time.Dia + "/03/2000";
+                string FechaCompletado = "2" + TimeManager.Dia + "/03/2000";
                 string txtAccion = "Wip";
                 Toggle accion = A.levantarCerca;
                 if (HoraCompletado >= 18)
                 {
                     HoraCompletado = 6 + (RetencionBitacora - (18 - TimeManager.Hora));
-                    FechaCompletado = "2" + (time.Dia + 1) + "/03/2000";
+                    FechaCompletado = "2" + (TimeManager.Dia + 1) + "/03/2000";
                 }
                 int indaux = ind;
                 int a = 1;

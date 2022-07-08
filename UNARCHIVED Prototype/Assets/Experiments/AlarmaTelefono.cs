@@ -26,6 +26,8 @@ public class AlarmaTelefono : MonoBehaviour
     {
         Luz.material.SetFloat("_Encendido", 1);
         Luz.material.SetFloat("_Speed", 0);
-  
+        //Luz.material.SetColor("_BaseColor", Color.HSVToRGB(0.45f,0.75f,1));
     }
+
+    
 }

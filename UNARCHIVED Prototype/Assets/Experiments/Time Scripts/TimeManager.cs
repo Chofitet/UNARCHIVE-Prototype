@@ -12,10 +12,11 @@ public class TimeManager : MonoBehaviour
     [SerializeField] MovimientoVolumesTiempo efecto;
     public static Action CambioMinutos;
     public static Action CambioHoras;
-    public int Dia ;
     public bool NoticiaDiaria;
     public float VariacionDeTiempo = 50;
     bool x;
+
+    public static int Dia { get; private set; }
 
     public static int Minuto { get; private set;}
     public static int Hora { get; private set;}
@@ -29,6 +30,7 @@ public class TimeManager : MonoBehaviour
         Minuto = 0;
         Hora = 6;
         VariacionDeTiempo = 0;
+        Debug.Log(Dia);
     }
 
     void Update()
