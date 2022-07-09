@@ -21,6 +21,9 @@ public class TV : MonoBehaviour
     [SerializeField] Image ReporteroDef;
     [SerializeField] Image FondoTV;
     [SerializeField] Image FondeoTVDef;
+    [SerializeField] Image ImgNoticiaDef;
+    [SerializeField] Image ImgNoticia;
+    [SerializeField] private Sprite[] vcImgNoticia;
     bool x;
     int CualLista;
     int NumNoticiasAteatorias = 1;
@@ -31,13 +34,13 @@ public class TV : MonoBehaviour
         NoticiasAliatorias();
     }
 
-    int EliminarRetencion = 1;
-    int LavarRetencion = 1;
-    int InvestigarRetencion = 3;
+    int EliminarRetencion = 2;
+    int LavarRetencion = 3;
+    int InvestigarRetencion = 4;
     int HackearRetencion = 3;
     int DifamarRetencion = 1;
-    int CrearEscenaRetencion = 1;
-    int AislarRetencion = 1;
+    int CrearEscenaRetencion = 3;
+    int AislarRetencion = 3;
     
 
 
@@ -206,6 +209,7 @@ public class TV : MonoBehaviour
     {
         // CheckearBitacoras(); if (x == false) NoticiasAliatorias(); x = false;
         SetearReportero(0);
+        SetearImagenesNoticias(0);
         if (TimeManager.Hora == 6) { CheckearBitacoras(); if (x == false) NoticiasAliatorias(); x = false; }
         if (TimeManager.Hora == 7) { CheckearBitacoras(); if (x == false) NoticiasAliatorias(); x = false; }
         if (TimeManager.Hora == 8) { CheckearBitacoras(); if (x == false) NoticiasAliatorias(); x = false; }
@@ -236,6 +240,7 @@ public class TV : MonoBehaviour
             if (PC.Rating >= 16) { PC.RatinMaximo(); }
             x = true;
             BenEntrevista1 = true;
+            SetearImagenesNoticias(8);
         }
         else if (bitacoras.BenEliminado == false && bitacoras.BenLavado == false && TimeManager.Dia == 4 && TimeManager.Hora == 7 && BenEntrevista1 == true && BenEntrevista1b == false)
         {
@@ -246,6 +251,7 @@ public class TV : MonoBehaviour
             if (PC.Rating >= 16) { PC.RatinMaximo(); }
             x = true;
             BenEntrevista1b = true;
+            SetearImagenesNoticias(8);
         }
         else if (bitacoras.BenEliminado == false && bitacoras.BenLavado == false && TimeManager.Dia == 4 && TimeManager.Hora == 12 && BenEntrevista2 == false && bitacoras.PlantarPublico == false)
         {
@@ -256,6 +262,7 @@ public class TV : MonoBehaviour
             if (PC.Rating >= 16) { PC.RatinMaximo(); }
             x = true;
             BenEntrevista2 = true;
+            SetearImagenesNoticias(8);
         }
         else if (TimeManager.Dia == 4 && TimeManager.Hora == 15 && BenEntrevista2 == true && BenEliminado == true)
         {
@@ -266,6 +273,7 @@ public class TV : MonoBehaviour
             if (PC.Rating >= 16) { PC.RatinMaximo(); }
             x = true;
             BenEntrevista3 = true;
+            SetearImagenesNoticias(11);
         }
         else if (TimeManager.Dia == 4 && TimeManager.Hora == 15 && BenEntrevista2 == true && BenEliminado == false)
         {
@@ -276,6 +284,7 @@ public class TV : MonoBehaviour
             if (PC.Rating >= 16) { PC.RatinMaximo(); }
             x = true;
             BenEntrevista3b = true;
+            SetearImagenesNoticias(11);
         }
         else if (TimeManager.Dia == 5 && TimeManager.Hora == 16 && BenEntrevista3 == true && PieGrandeEliminado == false)
         {
@@ -286,6 +295,7 @@ public class TV : MonoBehaviour
             if (PC.Rating >= 16) { PC.RatinMaximo(); }
             x = true;
             BenEntrevista4 = true;
+            SetearImagenesNoticias(11);
         }
         else if (TimeManager.Dia == 5 && TimeManager.Hora == 16 && BenEntrevista3b == true && PieGrandeEliminado == false)
         {
@@ -296,6 +306,7 @@ public class TV : MonoBehaviour
             if (PC.Rating >= 16) { PC.RatinMaximo(); }
             x = true;
             BenEntrevista4 = true;
+            SetearImagenesNoticias(11);
         }
         else if (bitacoras.BenEliminado == false && bitacoras.BenLavado == false && TimeManager.Dia == 4 && TimeManager.Hora == 12 && BenEntrevista2 == false && bitacoras.PlantarPublico == true)
         {
@@ -305,7 +316,8 @@ public class TV : MonoBehaviour
             PC.Rating = PC.Rating + IncrementoRating;
             if (PC.Rating >= 16) { PC.RatinMaximo(); }
             x = true;
-            
+            SetearImagenesNoticias(8);
+
         }
 
         else if (TimeManager.Dia == 3 && TimeManager.Hora == 13)
@@ -316,6 +328,7 @@ public class TV : MonoBehaviour
             PC.Rating = PC.Rating + IncrementoRating;
             if (PC.Rating >= 16) { PC.RatinMaximo(); }
             x = true;
+            SetearImagenesNoticias(4);
 
         }
         else if (TimeManager.Dia == 4 && TimeManager.Hora == 10)
@@ -326,6 +339,7 @@ public class TV : MonoBehaviour
             PC.Rating = PC.Rating + IncrementoRating;
             if (PC.Rating >= 16) { PC.RatinMaximo(); }
             x = true;
+            SetearImagenesNoticias(4);
 
         }
         else if (BenEliminado == false && TimeManager.Dia == 5 && TimeManager.Hora == 9 && BenBombaCasa == false && bitacoras.BenRetirado == false)
@@ -347,6 +361,7 @@ public class TV : MonoBehaviour
             if (PC.Rating >= 16) { PC.RatinMaximo(); }
             x = true;
             BenBombaCasa = true;
+            SetearImagenesNoticias(8);
         }
         else if (TimeManager.Dia == 5 && TimeManager.Hora == 10)
         {
@@ -356,7 +371,7 @@ public class TV : MonoBehaviour
             PC.Rating = PC.Rating + IncrementoRating;
             if (PC.Rating >= 16) { PC.RatinMaximo(); }
             x = true;
-
+            SetearImagenesNoticias(4);
         }
 
         else if (bitacoras.PieGrandeEliminado == true && PieGrandeEliminado == true && TimeManager.Dia == 5 && TimeManager.Hora == 17 && KateEliminado2 == false)
@@ -368,6 +383,7 @@ public class TV : MonoBehaviour
             if (PC.Rating >= 16) { PC.RatinMaximo(); }
             x = true;
             PieGrandeEliminado = true;
+            SetearImagenesNoticias(3);
         }
         else if (TimeManager.Dia == 6 && TimeManager.Hora == 10)
         {
@@ -377,6 +393,7 @@ public class TV : MonoBehaviour
             PC.Rating = PC.Rating + IncrementoRating;
             if (PC.Rating >= 16) { PC.RatinMaximo(); }
             x = true;
+            SetearImagenesNoticias(4);
         }
         else if (TimeManager.Dia == 7 && TimeManager.Hora == 10)
         {
@@ -386,6 +403,7 @@ public class TV : MonoBehaviour
             PC.Rating = PC.Rating + IncrementoRating;
             if (PC.Rating >= 16) { PC.RatinMaximo(); }
             x = true;
+            SetearImagenesNoticias(4);
         }
         else if (bitacoras.KateEliminada == false && PieGrandeEliminado == false && KateEliminada == false && TimeManager.Dia == 7 && TimeManager.Hora == 17)
         {
@@ -395,6 +413,7 @@ public class TV : MonoBehaviour
             PC.Rating = PC.Rating + IncrementoRating;
             if (PC.Rating >= 16) { PC.RatinMaximo(); }
             x = true;
+            SetearImagenesNoticias(7);
         }
         //============================================================================ TV FOTOS ANONIMAS =============================================================================//
         else if (bitacoras.BenLavado == true  && TimeManager.Dia == 4 && TimeManager.Hora == 12)
@@ -405,6 +424,7 @@ public class TV : MonoBehaviour
             PC.Rating = PC.Rating + IncrementoRating;
             if (PC.Rating >= 16) { PC.RatinMaximo(); }
             x = true;
+            SetearImagenesNoticias(7);
         }
         //============================================================================ TV RUMOR =============================================================================//
         else if (TimeManager.Dia == 3 && TimeManager.Hora == 7)
@@ -415,6 +435,7 @@ public class TV : MonoBehaviour
             PC.Rating = PC.Rating + IncrementoRating;
             if (PC.Rating >= 16) { PC.RatinMaximo(); }
             x = true;
+            SetearImagenesNoticias(1);
         }
         //============================================================================ TV Ben Benji =============================================================================//
         else if (bitacoras.BenEliminado == true && BenEliminado == false)
@@ -425,14 +446,14 @@ public class TV : MonoBehaviour
             BenEliminado = true;
         }
        
-        else if (bitacoras.BenLavado == true && BenBrainwash == false)//
+        else if (bitacoras.BenLavado == true && BenBrainwash == false)
         {
             int IncrementoRating = 1;
             int RetencionNoticia = LavarRetencion;
             StartCoroutine(ImprimirNoticia(BenBrainwashTitulo, BenBrainwashNoticia, IncrementoRating, RetencionNoticia));
             BenBrainwash = true;
         }
-        else if (bitacoras.BenDifamado == true && bitacoras.BenHackeado == false && BenDifamado1 == false)// Hackeado = false
+        else if (bitacoras.BenDifamado == true && bitacoras.BenHackeado == false && BenDifamado1 == false )// Hackeado = false
         {
             int IncrementoRating = -2;
             int RetencionNoticia = DifamarRetencion;
@@ -442,7 +463,7 @@ public class TV : MonoBehaviour
         else if (bitacoras.BenEliminado == false && bitacoras.BenLavado == false && bitacoras.BenRetirado == true && BenDifamado2 == false)// Hackeado = true
         {
             int IncrementoRating = -4;
-            int RetencionNoticia = 3;
+            int RetencionNoticia = DifamarRetencion;
             StartCoroutine(ImprimirNoticia(BenDifamadoTitulo2, BenDifamadoNoticia2, IncrementoRating, RetencionNoticia));
             BenDifamado1 = true;
             BenDifamado2 = true;
@@ -451,7 +472,7 @@ public class TV : MonoBehaviour
         else if (bitacoras.PieGrandeEliminado == true && PieGrandeEliminado == false && KateEliminada == false)
         {
             int IncrementoRating = 5;
-            int RetencionNoticia = 3;
+            int RetencionNoticia = DifamarRetencion;
             StartCoroutine(ImprimirNoticia(PieGrandeEliminadoTitulo, PieGrandeEliminadoNoticia, IncrementoRating, RetencionNoticia));
             PieGrandeEliminado = true;
         }
@@ -459,7 +480,7 @@ public class TV : MonoBehaviour
         else if (bitacoras.PieGrandeDifamado == true && PieGrandeDifamado == false)
         {
             int IncrementoRating = 3;
-            int RetencionNoticia = 3;
+            int RetencionNoticia = DifamarRetencion;
             StartCoroutine(ImprimirNoticia(PieGrandeDifamadoTitulo, PieGrandeDifamadoNoticia, IncrementoRating, RetencionNoticia));
             PieGrandeDifamado = true;
         }
@@ -468,14 +489,14 @@ public class TV : MonoBehaviour
         else if (bitacoras.KateEliminada == true && PieGrandeEliminado == false && KateEliminada == false)
         {
             int IncrementoRating = 7;
-            int RetencionNoticia = 3;
+            int RetencionNoticia = EliminarRetencion;
             StartCoroutine(ImprimirNoticia(KateEliminadaTitulo, KateEliminadaNoticia, IncrementoRating, RetencionNoticia));
             KateEliminada = true;
         }
-        else if (bitacoras.KateEliminada == true && PieGrandeEliminado == false && KateEliminada == true && (TimeManager.Dia == 6 || TimeManager.Dia == 7))
+        else if (bitacoras.KateEliminada == true && PieGrandeEliminado == false && KateEliminada == true )
         {
             int IncrementoRating = 13;
-            int RetencionNoticia = 3;
+            int RetencionNoticia = 4; // SON 4.
             StartCoroutine(ImprimirNoticia(KateEliminadaTitulo2, KateEliminadaNoticia2, IncrementoRating, RetencionNoticia));
             KateEliminada = true;
         }
@@ -483,7 +504,7 @@ public class TV : MonoBehaviour
         else if (bitacoras.CrearEscena == true && CrearEscena == false)
         {
             int IncrementoRating = -2;
-            int RetencionNoticia = 3;
+            int RetencionNoticia = CrearEscenaRetencion;
             StartCoroutine(ImprimirNoticia(CrearEscenaTitulo, CrearEscenaNoticia, IncrementoRating, RetencionNoticia));
             CrearEscena = true;
         }
@@ -492,14 +513,14 @@ public class TV : MonoBehaviour
         else if (bitacoras.PimientaPaluzaHackeado == true && PimientaPaluzaHackeado == false)
         {
             int IncrementoRating = 5;
-            int RetencionNoticia = 3;
+            int RetencionNoticia = HackearRetencion;
             StartCoroutine(ImprimirNoticia(PimientaPaluzaCanceladoTitulo, PimientaPaluzaCanceladoNoticia, IncrementoRating, RetencionNoticia));
             PimientaPaluzaHackeado = true;
         }
         else if (bitacoras.PimientaPaluzaAislado == true) 
         {
             int IncrementoRating = 3;
-            int RetencionNoticia = 3;
+            int RetencionNoticia = AislarRetencion;
             StartCoroutine(ImprimirNoticia(PimientaPaluzaAisladoTitulo, PimientaPaluzaAisladoNoticia, IncrementoRating, RetencionNoticia));
             Pimientapaluzaaislado = true;
         }
@@ -507,29 +528,29 @@ public class TV : MonoBehaviour
         else if (bitacoras.ParquePimientaAislado == true && PimientaPaluzaHackeado == false && ParquePimientaAislado1 == false) // Hackeado = false
         {
             int IncrementoRating = 3;
-            int RetencionNoticia = 3;
+            int RetencionNoticia = AislarRetencion;
             StartCoroutine(ImprimirNoticia(ParquePimientaTitulo1, ParquePimientaNoticia1, IncrementoRating, RetencionNoticia));
             ParquePimientaAislado1 = true;
-            libreta.BtnPimientapaluzers.SetActive(true);
+            libreta.BtnPimientapaluzers.SetActive(true); //WIP
         }
         else if (bitacoras.ParquePimientaAislado == true && PimientaPaluzaHackeado == true && ParquePimientaAislado2 == false) // Hackeado = true
         {
             int IncrementoRating = 0;
-            int RetencionNoticia = 3;
+            int RetencionNoticia = AislarRetencion;
             StartCoroutine(ImprimirNoticia(ParquePimientaTitulo2, ParquePimientaNoticia2, IncrementoRating, RetencionNoticia));
             ParquePimientaAislado2 = true;
         }
         else if (bitacoras.ParquePimientaAislado == true && bitacoras.BenEliminado == false && bitacoras.BenLavado == false && bitacoras.PepeLavado == false && bitacoras.PepeEliminado == false && PimientaPaluzaHackeado == true && ParquePimientaAislado3 == false) // Hackeado = true Ben Pepe
         {
             int IncrementoRating = 5;
-            int RetencionNoticia = 3;
+            int RetencionNoticia = 3; //wip
             StartCoroutine(ImprimirNoticia(ParquePimientaTitulo3, ParquePimientaNoticia3, IncrementoRating, RetencionNoticia));
             ParquePimientaAislado3 = true;
         }
         else if (bitacoras.ParquePimientaAislado == true && bitacoras.PieGrandeEliminado == false && bitacoras.PieGrandeLavado == false && bitacoras.KateLavada == false && bitacoras.KateEliminada == false && PimientaPaluzaHackeado == true && ParquePimientaAislado3 == false && ParquePimientaAislado4 == false) // Hackeado = true Kate Pie Grande
         {
             int IncrementoRating = 5;
-            int RetencionNoticia = 3;
+            int RetencionNoticia = 3; //WIP
             StartCoroutine(ImprimirNoticia(ParquePimientaTitulo4, ParquePimientaNoticia4, IncrementoRating, RetencionNoticia));
             ParquePimientaAislado4 = true;
         }
@@ -539,14 +560,14 @@ public class TV : MonoBehaviour
         else if (bitacoras.PimientapaluzersEliminado == true && PimientapaluzersEliminado == false)
         {
             int IncrementoRating = 8;
-            int RetencionNoticia = 3;
+            int RetencionNoticia = EliminarRetencion;
             StartCoroutine(ImprimirNoticia(PimientapaluzersTitulo, PimientapaluzersNoticia, IncrementoRating, RetencionNoticia));
             PimientapaluzersEliminado = true;
         }
         else if (bitacoras.PimientapaluzersDifamado == true && PimientapaluzersDifamado == false)
         {
             int IncrementoRating = 5;
-            int RetencionNoticia = 3;
+            int RetencionNoticia = DifamarRetencion;
             StartCoroutine(ImprimirNoticia(PimientapaluzersTitulo2, PimientapaluzersNoticia2, IncrementoRating, RetencionNoticia));
             PimientapaluzersDifamado = true;
         }
@@ -554,14 +575,14 @@ public class TV : MonoBehaviour
         else if (bitacoras.PepeEliminado == true && bitacoras.BenEliminado == false && PepeQueñoEliminado1 == false)
         {
             int IncrementoRating = 0;
-            int RetencionNoticia = 3;
+            int RetencionNoticia = EliminarRetencion;
             StartCoroutine(ImprimirNoticia(PepeQueñoTitulo1, PepeQueñoNoticia1, IncrementoRating, RetencionNoticia));
             PepeQueñoEliminado1 = true;
         }
         else if (bitacoras.PepeEliminado == true && bitacoras.BenEliminado == false && PepeQueñoEliminado2 == false)
         {
             int IncrementoRating = 0;
-            int RetencionNoticia = 3;
+            int RetencionNoticia = EliminarRetencion;
             StartCoroutine(ImprimirNoticia(PepeQueñoTitulo2, PepeQueñoNoticia2, IncrementoRating, RetencionNoticia));
             PepeQueñoEliminado2 = true;
         }
@@ -575,6 +596,7 @@ public class TV : MonoBehaviour
             PC.Rating = PC.Rating + IncrementoRating;
             x = true;
             NF1 = true;
+            SetearImagenesNoticias(10);
             SetearReportero(1);
         }
         else if (bitacoras.NoticiaFalasa2 == true && NF2 == false)
@@ -586,6 +608,7 @@ public class TV : MonoBehaviour
             x = true;
             NF2 = true;
             SetearReportero(1);
+            SetearImagenesNoticias(10);
         }
         else if (bitacoras.NoticiaFalasa3 == true && NF3 == false)
         {
@@ -596,6 +619,7 @@ public class TV : MonoBehaviour
             x = true;
             NF3 = true;
             SetearReportero(1);
+            SetearImagenesNoticias(10);
         }
         else if (bitacoras.NoticiaFalasa4 == true && NF4 == false)
         {
@@ -606,6 +630,7 @@ public class TV : MonoBehaviour
             x = true;
             NF4 = true;
             SetearReportero(1);
+            SetearImagenesNoticias(10);
         }
         else if (bitacoras.NoticiaFalasa5 == true && NF5 == false)
         {
@@ -616,6 +641,7 @@ public class TV : MonoBehaviour
             x = true;
             NF5 = true;
             SetearReportero(1);
+            SetearImagenesNoticias(10);
         }
         else if (bitacoras.NoticiaFalsa6 == true && NF6 == false)
         {
@@ -626,6 +652,7 @@ public class TV : MonoBehaviour
             x = true;
             NF6 = true;
             SetearReportero(1);
+            SetearImagenesNoticias(10);
         }
 
     }
@@ -639,11 +666,12 @@ public class TV : MonoBehaviour
         PC.Rating = PC.Rating + IncrementoRating;
         if (PC.Rating >= 16) { PC.RatinMaximo(); }
         LaFuncionMasEspecificaDelMundoPorqueEsteJugoNoDejaDeTenerDetallesBoludos();
+        ImagenesNoticiasPorReacción();
     }
 
     private void LaFuncionMasEspecificaDelMundoPorqueEsteJugoNoDejaDeTenerDetallesBoludos ()
     {
-       if(BenDifamado2) libreta.BtnBen.SetActive(false);
+       if(BenDifamado2) libreta.TacharPalabra(libreta.BenBtn, libreta.txtBen, 0);
     }
 
     public void PulsadoDeTV ()
@@ -663,8 +691,9 @@ public class TV : MonoBehaviour
         }
         /*  poner en la comparación el título de la noticia que lo activa
          if (titular.text ==  ) libreta.BtnKateMilliard.SetActive(true);
-         if (titular.text == ) libreta.BtnPimientapaluzers.SetActive(true);
+          
  */
+        if (titular.text == PimientaPaluzaAisladoTitulo) libreta.BtnPimientapaluzers.SetActive(true);
         if (titular.text == BenEntrevistaTitulo1) A.tglPlantarPublico.SetActive(true);
         if (titular.text == BenEntrevistaTitulo1b && PlantarPublico == false) A.tglPlantarPublico.SetActive(true);
 
@@ -684,6 +713,33 @@ public class TV : MonoBehaviour
         if (titular.text == KateEliminadaTitulo && bitacoras.PieGrandeEliminado == false) /*bitacoras.PieGrandeUbicacion == true*/;
     }
 
+    void ImagenesNoticiasPorReacción()
+    {
+        if (KateEliminadaTitulo == titular.text) SetearImagenesNoticias(1);
+        if (KateEliminadaTitulo2 == titular.text) SetearImagenesNoticias(1);
+
+        if (ParquePimientaTitulo1 == titular.text) SetearImagenesNoticias(2);
+        if (ParquePimientaTitulo2 == titular.text) SetearImagenesNoticias(2);
+
+        if (titular.text == PimientaPaluzaAisladoTitulo) SetearImagenesNoticias(4);
+        if (titular.text == PimientaPaluzaCanceladoTitulo) SetearImagenesNoticias(4);
+
+        if (titular.text == PimientapaluzersTitulo) SetearImagenesNoticias(5);
+        if (titular.text == PimientapaluzersTitulo2) SetearImagenesNoticias(5);
+
+        if (PieGrandeDifamadoTitulo == titular.text) SetearImagenesNoticias(6);
+
+        if (CrearEscenaTitulo == titular.text) { SetearImagenesNoticias(10); SetearReportero(1); }
+
+        if (BenDesapareceTitulo == titular.text) SetearImagenesNoticias(8);
+        if(PepeQueñoTitulo1 == titular.text) SetearImagenesNoticias(8);
+        if (PepeQueñoTitulo2 == titular.text) SetearImagenesNoticias(8);
+
+        if (BenBrainwashTitulo == titular.text) SetearImagenesNoticias(9);
+        if (BenDifamadoTitulo1== titular.text) SetearImagenesNoticias(9);
+        if (BenDifamadoTitulo2 == titular.text) SetearImagenesNoticias(9);
+    }
+
     void SetearReportero(int i)
     {
         Reportero.sprite = Reporteros[i];
@@ -698,7 +754,12 @@ public class TV : MonoBehaviour
             FondoTV.color = new Color(1, 0.5f, 1);
             FondeoTVDef.color = new Color(1, 0.5f, 1);
         }
+    }
 
+    void SetearImagenesNoticias(int i)
+    {
+        ImgNoticia.sprite = vcImgNoticia[i];
+        ImgNoticiaDef.sprite = vcImgNoticia[i];    
     }
 
     /// ================================================================== Noticias Aleatorias ========================================================= ///
@@ -824,11 +885,6 @@ public class TV : MonoBehaviour
 
     string TitularAleatoria43 = "THE OUTTER FRAME CANCELADO";
     string NoticiaAleatoria43 = "";
-
-
-
-
-
 
     void NoticiasAliatorias()
     {
