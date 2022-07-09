@@ -7,7 +7,7 @@ public class Camaras : MonoBehaviour
     [SerializeField] TelefonoCamara telefono;
     public Transform[] posCamara;
     public float transitionSpeed;
-    Transform currentview;
+    public static Transform currentview { get;  set; }
     public GameObject TV;
     public GameObject PC;
 

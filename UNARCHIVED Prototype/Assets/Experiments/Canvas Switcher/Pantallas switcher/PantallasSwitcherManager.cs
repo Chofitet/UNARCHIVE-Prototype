@@ -16,9 +16,9 @@ public class PantallasSwitcherManager : MonoBehaviour
     List<PantallasSwitcherController> canvasControllerList;
     PantallasSwitcherController lastActiveCanvas;
     PantallasSwitcherController lastActiveCanvas2;
+    [SerializeField] TimeManager time; 
 
     void Start()
-
     {
         canvasControllerList = GetComponentsInChildren<PantallasSwitcherController>().ToList();
         canvasControllerList.ForEach(x => x.gameObject.SetActive(false));
@@ -51,5 +51,8 @@ public class PantallasSwitcherManager : MonoBehaviour
             lastActiveCanvas2 = desiredCanvas2;
         }
         else { Debug.LogWarning("The desired canvas was not found!"); }
+
+        time.TiempoPausado();
+
     }
 }

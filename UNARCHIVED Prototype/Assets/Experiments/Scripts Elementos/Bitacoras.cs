@@ -3124,7 +3124,6 @@ public class Bitacoras : MonoBehaviour
         if (TrueEnding == true) 
         { 
             Pantallas.SwitchCanvas(CanvasTypePantallas.TrueEnding, CanvasTypePantallas.TrueEnding);
-            time.TiempoPausado();
         }
     }
 
