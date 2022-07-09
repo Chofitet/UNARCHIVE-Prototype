@@ -138,6 +138,11 @@ public class TV : MonoBehaviour
     string CasamientoTitulo = "KATE MILLIARD ANUNCIA CASAMIENTO CON PIE GRANDE! LAS LEYENDAS ERAN CIERTAS Y AMOROSAS!";
     string CasamientoNoticia = "KATE MILLIARD ANUNCIA CASAMIENTO CON PIE GRANDE! LAS LEYENDAS ERAN CIERTAS Y AMOROSAS!";
 
+
+    bool ColoradaDifamada;
+    string ColoradaDifamadaTitulo = "NINFÓMANA CABELLOS DE SATÁN REALIZA ACTOS INDEBIDOS ANTE LA JUVENTUD. MANTENGAN A SUS HIJOS EN SUS CASA.";
+    string ColoradaDifamadaNoticia = "NINFÓMANA CABELLOS DE SATÁN REALIZA ACTOS INDEBIDOS ANTE LA JUVENTUD. MANTENGAN A SUS HIJOS EN SUS CASA.";
+
     //============================================================================ TV Pimientapaluza ===================================================================//
     string PimientaPaluzaAnuncioTitulo = "SE APROXIMA EL PIMIENTAPALUZA! TODOS PREPARADOS PARA EL 28"; //EL 24
     string PimientaPaluzaAnuncioNoticia = "EL FESTIVAL MAS GRANDE DEL PLANETA DA COMIENZO ESTE 28 EN PARQUE PIMIENTA. ENTRADAS AGOTADAS!";
@@ -175,6 +180,8 @@ public class TV : MonoBehaviour
     bool PepeQueñoEliminado2;
     string PepeQueñoTitulo2 = "NADIE SE PRESENTA A BUSQUEDA DE NIÑO PELUDO, TRISTE Y RARO"; //Parte 2
     string PepeQueñoNoticia2 = "NADIE SE PRESENTA A BUSQUEDA DE NIÑO PELUDO, TRISTE Y RARO";
+
+    bool FotosAnonimas;
     //============================================================================ TV Parque Pimienta =============================================================================//
     bool ParquePimientaAislado1;
     string ParquePimientaTitulo1 = "MISTERIOSA CERCA RODEA PARQUE PIMIENTA!"; //Pimienta paluza hackeado = false
@@ -195,6 +202,21 @@ public class TV : MonoBehaviour
     bool PlantarPublico;
     string PlantarPublicoTitulo = "ABUCHEOS DURANTE ENTREVISTA!LA CREDiBILIDAD DE BENJI SE DESMORONA!!";
     string PlantarPublicoNoticia = "BENJI EL MENTIROSO PIERDE EL APOYO DE LA COMUNIDAD AVISTADORA AL MOJAR SUS PANTALONES EN TELEVISIÓN NACIONAL";
+
+    //============================================================================ TV Pueblo Pimienta ===================================================================//
+
+    bool PuebloPimientaDifamado;
+    string PuebloPimientaDifamadoTitulo = "ENCUESTA MUNDIAL INDICA QUE LOS HABITANTES DE PUEBLO PIMIENTA CREEN EN CUALQUIER COSA"; 
+    string PuebloPimientaDifamadoNoticia = "ENCUESTA MUNDIAL INDICA QUE LOS HABITANTES DE PUEBLO PIMIENTA CREEN EN CUALQUIER COSA";
+
+
+    //============================================================================ TV Pimienta Paluza ===================================================================//
+
+    bool PimientapaluzaDifamado;
+    string PimientapaluzaDifamadoTitulo = "WIP PIMIENTAPALUZA HACE CAMBIO DE LINEUP A ULTIMO MOMENTO";
+    string PimientapaluzaDifamadoNoticia = "";
+
+
 
     private void OnEnable()
     {
@@ -242,7 +264,7 @@ public class TV : MonoBehaviour
             BenEntrevista1 = true;
             SetearImagenesNoticias(8);
         }
-        else if (bitacoras.BenEliminado == false && bitacoras.BenLavado == false && TimeManager.Dia == 4 && TimeManager.Hora == 7 && BenEntrevista1 == true && BenEntrevista1b == false)
+        else if (bitacoras.BenEliminado == false && bitacoras.BenLavado == false && TimeManager.Dia == 4 && TimeManager.Hora == 7 && BenEntrevista1 == true && BenEntrevista1b == false && bitacoras.BenRetirado == false)
         {
             int IncrementoRating = 2;
             noticia.text = BenEntrevistaNoticia1b;//REITERAMOS: ENTREVISTA EXCLUSIVA CON NIÑO AVISTADOR DE MISTERIOSA CRIATURA HOY A LAS 12 AM
@@ -253,7 +275,7 @@ public class TV : MonoBehaviour
             BenEntrevista1b = true;
             SetearImagenesNoticias(8);
         }
-        else if (bitacoras.BenEliminado == false && bitacoras.BenLavado == false && TimeManager.Dia == 4 && TimeManager.Hora == 12 && BenEntrevista2 == false && bitacoras.PlantarPublico == false)
+        else if (bitacoras.BenEliminado == false && bitacoras.BenLavado == false && TimeManager.Dia == 4 && TimeManager.Hora == 12 && BenEntrevista2 == false && bitacoras.PlantarPublico == false && bitacoras.BenRetirado == false)
         {
             int IncrementoRating = 6;
             noticia.text = BenEntrevistaNoticia2; //"ERA PIE GRANDE Y LO VÍ EN PARQUE PIMIENTA\". PELUDAS DECLARACIONES!!!
@@ -319,6 +341,7 @@ public class TV : MonoBehaviour
             SetearImagenesNoticias(8);
 
         }
+
 
         else if (TimeManager.Dia == 3 && TimeManager.Hora == 13)
         {
@@ -468,6 +491,27 @@ public class TV : MonoBehaviour
             BenDifamado1 = true;
             BenDifamado2 = true;
         }
+        //============================================================================ TV Pueblo Pimienta ===================================================================//
+
+        else if (bitacoras.PuebloPimientaDifamado == true && PuebloPimientaDifamado == false)// 
+        {
+            int IncrementoRating = -1;
+            int RetencionNoticia = DifamarRetencion;
+            StartCoroutine(ImprimirNoticia(PuebloPimientaDifamadoTitulo, PuebloPimientaDifamadoNoticia, IncrementoRating, RetencionNoticia));
+            PuebloPimientaDifamado= true;
+        }
+
+        //============================================================================ TV Pimientapaluza ===================================================================//
+
+
+        else if (bitacoras.PuebloPimientaDifamado == true && PuebloPimientaDifamado == false)// 
+        {
+            int IncrementoRating = -1;
+            int RetencionNoticia = DifamarRetencion;
+            StartCoroutine(ImprimirNoticia(PimientapaluzaDifamadoTitulo, PimientapaluzaDifamadoNoticia, IncrementoRating, RetencionNoticia));
+            PimientapaluzaDifamado = true;
+        }
+
         //============================================================================ TV Pie Grande ===================================================================//
         else if (bitacoras.PieGrandeEliminado == true && PieGrandeEliminado == false && KateEliminada == false)
         {
@@ -499,6 +543,15 @@ public class TV : MonoBehaviour
             int RetencionNoticia = 4; // SON 4.
             StartCoroutine(ImprimirNoticia(KateEliminadaTitulo2, KateEliminadaNoticia2, IncrementoRating, RetencionNoticia));
             KateEliminada = true;
+        }
+        //============================================================================ TV Colorada ===================================================================//
+
+        else if (bitacoras.ColoradaDifamada == true && ColoradaDifamada == false)
+        {
+            int IncrementoRating = -1;
+            int RetencionNoticia = DifamarRetencion; 
+            StartCoroutine(ImprimirNoticia(ColoradaDifamadaTitulo, ColoradaDifamadaNoticia, IncrementoRating, RetencionNoticia));
+            ColoradaDifamada = true;
         }
         //============================================================================ TV Crear Escena ===================================================================//
         else if (bitacoras.CrearEscena == true && CrearEscena == false)
@@ -671,6 +724,8 @@ public class TV : MonoBehaviour
     private void LaFuncionMasEspecificaDelMundoPorqueEsteJugoNoDejaDeTenerDetallesBoludos ()
     {
        if(BenDifamado2) libreta.TacharPalabra(libreta.BenBtn, libreta.txtBen, 0);
+        if (FotosAnonimas == true) { A.tglExtraerFotos.SetActive(false); }
+       
     }
 
     public void PulsadoDeTV ()
