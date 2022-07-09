@@ -55,7 +55,7 @@ public class TV : MonoBehaviour
 
     //============================================================================ TV Ben Benji =============================================================================//
     bool RomoresPuebloPimienta;
-    string RumoresPuebloPimientaTitulo = "BIZARRO RUMOR TOMA MODERADO VUELO EN PUEBLO PIMIENTA";
+    string RumoresPuebloPimientaTitulo = "BIZARRO RUMOR TOMA MODERADO VUELO EN EL TRANQUILO PUEBLO PIMIENTA";
     string RumoresPuebloPimientaNoticia = "¿CREER O REVENTAR? LAS RESPUESTAS SE ACERCAN EN PUEBLO PIMIENTA";
 
     public bool BenEntrevista1; //aviso de que se hará la entrevista
@@ -718,7 +718,7 @@ public class TV : MonoBehaviour
     string TitularAleatoria9 = "GAME DESIGNER PROPONE FEATURE A ÚLTIMO MOMENTO";
     string NoticiaAleatoria9 = "GAME DESIGNER SORPRENDE A EQUIPO PROPONIENDO FEATURE ESCENCIAL A HORAS DE ENTREGA";
 
-    string TitularAleatoria10 = "ES OFICIAL: JAMES, A NADIE LE IMPORTA AVATAR";
+    string TitularAleatoria10 = "COCEAODANU OSAVNIHEE CE A TAU DNUNAZBNMN A AATNATVE";
     string NoticiaAleatoria10 = "PONETE LOS LENTES, PA";
 
     string TitularAleatoria11 = "LORO BOCASUCIA ARRUINA BAUTISMO";
@@ -727,8 +727,8 @@ public class TV : MonoBehaviour
     string TitularAleatoria12 = "COMO ROBAR DESEOS DE CUMPLEAÑOS COMO ESE NENE DE LA PELI";
     string NoticiaAleatoria12 = "PONETE LOS LENTES, PA";
 
-    string TitularAleatoria13 = "PATA PETA PITA POTA Y UNA HERMANA";
-    string NoticiaAleatoria13 = "PONETE LOS LENTES, PA";
+    string TitularAleatoria13 = "PATA PETA PITA POTA Y UNA HERMANA WIP";
+    string NoticiaAleatoria13 = "LAS NUEVAS RIMAS DE JARDIN DE INFANTES CLANDESTINO CAUSAN CONTROVERSIA";
 
     string TitularAleatoria14 = "¿ES AMARILLO EL COLOR PARA TU PERSONAJE?";
     string NoticiaAleatoria14 = "PONETE LOS LENTES, PA";
@@ -781,32 +781,42 @@ public class TV : MonoBehaviour
     string TitularAleatoria31 = "¿POR QUE ES QUE SOLO PASAN COSAS CADA 1 HORA?";
     string NoticiaAleatoria31 = "CUAL ES EL MOTIVO DETRAS DE ESTE ORDEN COSMICO QUE ORGANIZA CADA EVENTO A EXACTAMENTE UNA HORA DEL SIGUIENTE?";
 
-    string TitularAleatoria33 = "";
+    string TitularAleatoria33 = "ES OFICIAL: JAMES, A NADIE LE IMPORTA AVATAR";
     string NoticiaAleatoria33 = "";
 
-    string TitularAleatoria34 = "";
+    string TitularAleatoria34 = "PIANISTA";
     string NoticiaAleatoria34 = "";
 
-    string TitularAleatoria35 = "";
+    string TitularAleatoria35 = "VERDULERO";
     string NoticiaAleatoria35 = "";
 
-    string TitularAleatoria36 = "";
+    string TitularAleatoria36 = "AGUA EN POLVO";
     string NoticiaAleatoria36 = "";
 
-    string TitularAleatoria37 = "";
+    string TitularAleatoria37 = "ASTILLA EN EL CEREBRO";
     string NoticiaAleatoria37 = "";
 
-    string TitularAleatoria38 = "";
+    string TitularAleatoria38 = "MEDICINA HIPPIE";
     string NoticiaAleatoria38 = "";
 
-    string TitularAleatoria39 = "";
+    string TitularAleatoria39 = "CRISIS EXISTENCIAL";
     string NoticiaAleatoria39 = "";
 
-    string TitularAleatoria40 = "";
+    string TitularAleatoria40 = "ES POSIBLE?";
     string NoticiaAleatoria40 = "";
 
-    string TitularAleatoria41 = "";
+    string TitularAleatoria41 = "THE OUTTER FRAME 2 CANCELADO";
     string NoticiaAleatoria41 = "";
+
+    string TitularAleatoria42 = "EL PERDIDO ARTE DE ESCRIBIR DIALOGO RANDOMIZADO";
+    string NoticiaAleatoria42 = "";
+
+    string TitularAleatoria43 = "THE OUTTER FRAME CANCELADO";
+    string NoticiaAleatoria43 = "";
+
+
+
+
 
 
     void NoticiasAliatorias()

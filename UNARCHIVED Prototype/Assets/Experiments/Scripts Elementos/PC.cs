@@ -62,30 +62,27 @@ public class PC : MonoBehaviour
         //================================================================ Wiki Pie Grande ==============================================//
         else if (txtBuscador.text == libreta.palabrasCaso[1])
         {
-            txtInfo.text = "La Leyenda es cierta. De naturaleza andante y esotérica, esta reservada criatura ha sido avistada a lo largo, ancho y alto del globo durante su centenaria existencia; eludiendo a cada largo paso de su personal travesía cualquier tipo de intento de captura." 
-                + System.Environment.NewLine +  "Gracias a la intervención de su primo, el tratado de paz firmado en el 79 terminó años de rivalidad y cacería entre Pie Grande y La Agencia; aun así no es un ser ajeno a la violencia y deben evitarse situaciones incómodas."
-                + System.Environment.NewLine + "Para la incredulidad del no iniciado, Pie Grande ha mantenido contacto con los avances tecnológicos y, debido a su reservada personalidad, se comunica mejor vía chat que en persona. Es considerado una noble especie en peligro de extinción, y como tal debe ser protegida del alcance del vulgar ciudadano común."
-                + System.Environment.NewLine
-                + System.Environment.NewLine + "Edad: 134 años(sin certificado), relativamente joven en años pie."
+            txtInfo.text = "La Leyenda es cierta. De naturaleza andante y esotérica, esta reservada criatura ha sido avistada a lo largo, ancho y alto del globo durante su centenaria existencia; eludiendo a cada largo paso de su personal travesía cualquier tipo de intento de captura."
+                + System.Environment.NewLine + "Gracias a la intervención de su primo, el tratado de paz firmado en el 79 terminó años de rivalidad y cacería entre Pie Grande y La Agencia; aun así no es un ser ajeno a la violencia y deben evitarse situaciones incómodas."
+                + System.Environment.NewLine + "Para la incredulidad del no iniciado, Pie Grande ha mantenido contacto con los avances tecnológicos y, debido a su reservada personalidad, se comunica mejor vía chat que en persona. Es considerado una noble especie en peligro de extinción, y como tal debe ser protegida del alcance del vulgar ciudadano común.";
+
+            FotoCarnet(1);
+            txtDatos.text = "Edad: 134 años(sin certificado), relativamente joven en años pie."
                 + System.Environment.NewLine
                 + System.Environment.NewLine + "Estado: Divorciado en el 91."
                 + System.Environment.NewLine
-                + System.Environment.NewLine + "Ultima vez visto en:  Monte Quete";
-            FotoCarnet(1);
-            txtDatos.text = "";
+                + System.Environment.NewLine + "Ultima vez visto en:  Monte Quete"; ;
         }
         //================================================================ Wiki Kate Milliard =======================================================//
         else if (txtBuscador.text == libreta.palabrasCaso[2])
         {
-            txtInfo.text = "Actriz de alto reconocimiento, saltó a la fama con la comedia romántica 'Bananorrama' en 1994 y consolidó su lugar en el podio dramatúrgico con 'Not without my monkey' en 1997. Al negar teñir o cubrir su rojiza cabellera para interpretar roles ha logrado convertir ese capricho en su marca registrada. Aunque dice “aún no planea dejar la actuación, muchachos”, ha pasado a desarrollarse en los últimos años como directora de documentales sobre animales en peligro de extinción."
-                + System.Environment.NewLine
-                + System.Environment.NewLine + "Edad: 24 años"
+            txtInfo.text = "Actriz de alto reconocimiento, saltó a la fama con la comedia romántica 'Bananorrama' en 1994 y consolidó su lugar en el podio dramatúrgico con 'Not without my monkey' en 1997. Al negar teñir o cubrir su rojiza cabellera para interpretar roles ha logrado convertir ese capricho en su marca registrada. Aunque dice “aún no planea dejar la actuación, muchachos”, ha pasado a desarrollarse en los últimos años como directora de documentales sobre animales en peligro de extinción.";
+            FotoCarnet(2);
+            txtDatos.text = "Edad: 24 años"
                 + System.Environment.NewLine
                 + System.Environment.NewLine + "Estado: Soltera"
                 + System.Environment.NewLine
-                + System.Environment.NewLine + "Última vez vista en: Monte Quete.";
-            FotoCarnet(2);
-            txtDatos.text = ""; 
+                + System.Environment.NewLine + "Última vez vista en: Monte Quete."; 
         }
         //================================================================ Wiki Colorada =======================================================//
         else if (txtBuscador.text == libreta.palabrasCaso[6])
@@ -103,32 +100,28 @@ public class PC : MonoBehaviour
 
             if (bitacoras.PepeInvestigado == true && bitacoras.PepeAnalizado == false)
             {
-                txtInfo.text = "Extaño niño en búsqueda de una buena afeitada. Reside actualmente en el orfanato local y su ÚNICO amigo es Ben Benji."
-            + System.Environment.NewLine
-            + System.Environment.NewLine + "Edad: 10 años."
+                txtInfo.text = "Extaño niño en búsqueda de una buena afeitada. Reside actualmente en el orfanato local y su ÚNICO amigo es Ben Benji.";
+                FotoCarnet(3);
+                txtDatos.text = "Edad: 10 años."
             + System.Environment.NewLine
             + System.Environment.NewLine + "Estado: Pequeño niño raro."
             + System.Environment.NewLine
             + System.Environment.NewLine + "Teléfono: 0447 - 9965784"
             + System.Environment.NewLine
             + System.Environment.NewLine + "Última vez visto en: Pueblo Pimienta.";
-                FotoCarnet(3);
-                txtDatos.text = "";
             }
             if (txtBuscador.text == libreta.palabrasCaso[8] && bitacoras.PepeAnalizado == true)
             {
                 txtInfo.text = "Hijo bastardo de Pie Grande y más que probable causa de su separación en el 91."
-               + System.Environment.NewLine + "Su existencia fué un secreto para La Agencia hasta al incidente Venus in Fur. Reside actualmente en un orfanato. El paradero de su madre biológica permanece un misterio para todo aquel que no compra el DLC."
-               + System.Environment.NewLine
-               + System.Environment.NewLine + "Edad:10 años híbridos."
+               + System.Environment.NewLine + "Su existencia fué un secreto para La Agencia hasta al incidente Venus in Fur. Reside actualmente en un orfanato. El paradero de su madre biológica permanece un misterio para todo aquel que no compra el DLC.";
+                FotoCarnet(3);
+                txtDatos.text = "Edad:10 años híbridos."
                + System.Environment.NewLine
                + System.Environment.NewLine + "Estado: Pequeño niño pie grande."
                + System.Environment.NewLine
                + System.Environment.NewLine + "Teléfono: 0447 - 9965784"
                + System.Environment.NewLine
                + System.Environment.NewLine + "Última vez visto en: Pueblo Pimienta.";
-                FotoCarnet(3);
-                txtDatos.text = "";
             }
             
 
@@ -156,27 +149,23 @@ public class PC : MonoBehaviour
         else if (txtBuscador.text== libreta.palabrasCaso[10])
         {
             txtInfo.text = "Enorme reserva ambiental ubicada entre el dorso de Pueblo Pimienta y Monte Quete, es el austero hogar de especies nativas tales como el caribú mostaza, la liebre vermin y el noble salmón araña."
-            + System.Environment.NewLine + "A pesar de su propósito es también, controversialmente, el hogar del festival de música más masivo del planeta: El Pimentapaluza, festejado religiosamente en la inamovible fecha del 28 de Marzo de cada año."
-            + System.Environment.NewLine 
-            + System.Environment.NewLine + "Ubicación: Entre Pueblo Pimienta y Monte Quete.";
+            + System.Environment.NewLine + "A pesar de su propósito es también, controversialmente, el hogar del festival de música más masivo del planeta: El Pimentapaluza, festejado religiosamente en la inamovible fecha del 28 de Marzo de cada año.";
             libreta.BtnPimientaPaluza.SetActive(true);
             FotoCarnet(5);
-            txtDatos.text = "";
+            txtDatos.text = "Ubicación: Entre Pueblo Pimienta y Monte Quete.";
         }
         //================================================================ Wiki Pueblo Pimienta =======================================================//
         else if (txtBuscador.text == libreta.palabrasCaso[5])
         {
             txtInfo.text = "Ex Ciudad Pimienta, descendida a Pueblo luego de la Triquiñuela del 68."
             + System.Environment.NewLine + "El segundo pueblo más poblado de Quete es una zona semi rural pos urbana que se encuentra en un proceso de reivindicación fiscal. Es "
-            + System.Environment.NewLine + "Si bien los ingresos anuales generados por la reserva ambiental Parque Pimienta son suficientes para soportar la economía de diez Pueblos Pimienta, intentan mantener su urbanidad controlable."
-           + System.Environment.NewLine
-            + System.Environment.NewLine + "Habitantes: 274"
-            + System.Environment.NewLine
-            + System.Environment.NewLine + "Ubicacion: Quete.";
+            + System.Environment.NewLine + "Si bien los ingresos anuales generados por la reserva ambiental Parque Pimienta son suficientes para soportar la economía de diez Pueblos Pimienta, intentan mantener su urbanidad controlable.";
  
             libreta.BtnParquePimienta.SetActive(true);
             FotoCarnet(6);
-            txtDatos.text = "";
+            txtDatos.text = "Habitantes: 274"
+            + System.Environment.NewLine
+            + System.Environment.NewLine + "Ubicacion: Quete.";
         }
         //================================================================ Wiki Pimientapaluzers =======================================================//
         else if (txtBuscador.text == libreta.palabrasCaso[11])
