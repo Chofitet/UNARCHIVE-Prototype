@@ -2545,12 +2545,37 @@ public class Bitacoras : MonoBehaviour
             A.ofrecerProteccion.interactable = false;
         }
         //=========================================================== Bitacora Convertir Cueva ===================================================================//
-        if (A.convertirCueva.CompareTag(tag = "OptActivado") && A.convertirCueva.isOn == true && ConvertirCueva == false)
+        if (A.convertirCueva.CompareTag(tag = "OptActivado") && A.convertirCueva.isOn == true && ConvertirCueva == false && ParquePimientaAislado == true)
         {
             float RetencionBitacora = 1;
             float HoraCompletado = RetencionBitacora + TimeManager.Hora;
             string txt = "<b>CUEVA SECRETA CONVERTIDA EN GIFT SHOP</b>"
             + System.Environment.NewLine + "Wip va a estar todo bien";
+            string FechaCompletado = "2" + TimeManager.Dia + "/03/2000";
+            string txtAccion = "Convertir cueva secreta en Gift Shop";
+            Toggle accion = A.convertirCueva;
+            if (HoraCompletado >= 18)
+            {
+                HoraCompletado = 6 + (RetencionBitacora - (18 - TimeManager.Hora));
+                FechaCompletado = "2" + (TimeManager.Dia + 1) + "/03/2000";
+
+            }
+            int indaux = ind;
+            int a = 1;
+            CargarVectorProgreso(txtAccion, FechaCompletado, HoraCompletado, indaux);
+            SetearBitacora();
+            a = aux;
+            ActualizarIndice();
+            StartCoroutine(GuardarBitacora(RetencionBitacora, txt, indaux, accion, a));
+            ConvertirCueva = true;
+            A.convertirCueva.interactable = false;
+        }
+        if (A.convertirCueva.CompareTag(tag = "OptActivado") && A.convertirCueva.isOn == true && ConvertirCueva == false && ParquePimientaAislado == false)
+        {
+            float RetencionBitacora = 0.001f;
+            float HoraCompletado = RetencionBitacora + TimeManager.Hora;
+            string txt = "<b>CONVERTIR CUEVA SECRETA EN GIFT SHOP</b>"
+            + System.Environment.NewLine + "No puede haber testigos de esto, debemos asegurarnos antes que nadie pueda entrar al parque.";
             string FechaCompletado = "2" + TimeManager.Dia + "/03/2000";
             string txtAccion = "Convertir cueva secreta en Gift Shop";
             Toggle accion = A.convertirCueva;
