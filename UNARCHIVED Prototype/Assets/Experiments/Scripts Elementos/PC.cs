@@ -214,6 +214,7 @@ public class PC : MonoBehaviour
     {
         txtBuscador.text = "Buscar...";
         txtInfo.text = "";
+        txtDatos.text = "";
         FotoCarnet(4);
     }
 
