@@ -258,7 +258,8 @@ public class Bitacoras : MonoBehaviour
                 float RetencionBitacora = 3;
                 float HoraCompletado = RetencionBitacora + TimeManager.Hora;
                 string txt = "<b>BEN BENJI LAVADO</b>"
-                + System.Environment.NewLine + "Lavado completo. Ben ya no posee parte de las memorias mas preciadas y formativas de la experiencia humana: las memorias de la niñez.";
+                + System.Environment.NewLine + "Lavado completo."
+                + System.Environment.NewLine + "Ben ya no posee parte de las memorias mas preciadas y formativas de la experiencia humana: las memorias de la niñez.";
                 string FechaCompletado = "2" + TimeManager.Dia + "/03/2000";
                 string txtAccion = "Lavar cerebro a Ben Benji";
                 Toggle accion = A.lavarCerebro;
@@ -309,7 +310,7 @@ public class Bitacoras : MonoBehaviour
                 float HoraCompletado = RetencionBitacora + TimeManager.Hora;
                 string txt = "<b>BEN BENJI HACKEADO</b>"
                 + System.Environment.NewLine + "Encontramos una lista de compras e instrucciones para crear una bomba del tamaño justo para volar una escuela."
-                + System.Environment.NewLine + "Sugerimos difamar para que la fuerza de las autoridades locales caiga sobre Ben cuanto antes.";
+                + System.Environment.NewLine + "Sugerimos difamar para que el puño de las autoridades locales caiga sobre Benji cuanto antes.";
                 string FechaCompletado = "2" + TimeManager.Dia + "/03/2000";
                 string txtAccion = "Hackear a Ben Benji";
                 Toggle accion = A.hackear;
@@ -334,7 +335,9 @@ public class Bitacoras : MonoBehaviour
                 float RetencionBitacora = 12;
                 float HoraCompletado = RetencionBitacora + TimeManager.Hora;
                 string txt = "<b>BEN BENJI ANALIZADO</b>"
-                + System.Environment.NewLine + "Nada fuera de lo ordinario. Nada de nada. Es casi como si hubieras perdido un turno.";
+                + System.Environment.NewLine + "Nada fuera de lo ordinario."
+                + System.Environment.NewLine + "Nada de nada."
+                + System.Environment.NewLine + "Es casi como si hubieramos perdido un turno.";
                 string FechaCompletado = "2" + TimeManager.Dia + "/03/2000";
                 string txtAccion = "Analizar Ben Benji";
                 Toggle accion = A.analizarMuestra;
@@ -359,7 +362,7 @@ public class Bitacoras : MonoBehaviour
                 float RetencionBitacora = 1;
                 float HoraCompletado = RetencionBitacora + TimeManager.Hora;
                 string txt = "<b>BEN BENJI DIFAMADO</b>"
-                + System.Environment.NewLine + "Las autoridades locales se han encargado del pequeño terrorista en potencia";
+                + System.Environment.NewLine + "Las autoridades locales se han encargado del pequeño terrorista en potencia. Benji ha quedado fuera del juego.";
                 Toggle accion = A.difamar;
                 string FechaCompletado = "2" + TimeManager.Dia + "/03/2000";
                 string txtAccion = "Difamar a Ben Benji";
@@ -385,7 +388,7 @@ public class Bitacoras : MonoBehaviour
                 float RetencionBitacora = 1;
                 float HoraCompletado = RetencionBitacora + TimeManager.Hora;
                 string txt = "<b>BEN BENJI DIFAMADO</b>"
-                + System.Environment.NewLine + "Ben difamado";
+                + System.Environment.NewLine + "Todo listo. La noticia difamante se transmitirá en la próxima hora.";
                 Toggle accion = A.difamar;
                 string FechaCompletado = "2" + TimeManager.Dia + "/03/2000";
                 string txtAccion = "Difamar a Ben Benji";
@@ -734,7 +737,7 @@ public class Bitacoras : MonoBehaviour
                 float RetencionBitacora = 1;
                 float HoraCompletado = RetencionBitacora + TimeManager.Hora;
                 string txt = "<b>PUEBLO PIMIENTA DIFAMADO</b>"
-                + System.Environment.NewLine + "ENCUESTA MUNDIAL INDICA QUE LOS HABITANTES DE PUEBLO PIMIENTA CREEN EN CUALQUIER COSA";
+                + System.Environment.NewLine + "Todo listo. La noticia difamante se transmitirá en la próxima hora.";
                 string FechaCompletado = "2" + TimeManager.Dia + "/03/2000";
                 string txtAccion = "Difamar Pueblo Pimienta";
                 Toggle accion = A.difamar;
@@ -1093,7 +1096,7 @@ public class Bitacoras : MonoBehaviour
                 float RetencionBitacora = 1;
                 float HoraCompletado = RetencionBitacora + TimeManager.Hora;
                 string txt = "<b>PIMIENTAPALUZA DIFAMADO</b>"
-                + System.Environment.NewLine + "WIP";
+                + System.Environment.NewLine + "Todo listo. La noticia difamante se transmitirá en la próxima hora.";
                 string FechaCompletado = "2" + TimeManager.Dia + "/03/2000";
                 string txtAccion = "Difamar Pimientapaluza";
                 Toggle accion = A.difamar;
@@ -2153,7 +2156,7 @@ public class Bitacoras : MonoBehaviour
                 float RetencionBitacora = 1;
                 float HoraCompletado = RetencionBitacora + TimeManager.Hora;
                 string txt = "<b>WIFI ROBADO DIFAMADO</b>"
-                + System.Environment.NewLine + "WIP sucio ladron se encuentra robandole el wifi a la nombre reserva Parque Pimienta.";
+                + System.Environment.NewLine + "WIP sucio ladron se encuentra robandole el wifi a la noble reserva Parque Pimienta.";
                 string FechaCompletado = "2" + TimeManager.Dia + "/03/2000";
                 string txtAccion = "Difamar Wifi robado";
                 Toggle accion = A.difamar;
