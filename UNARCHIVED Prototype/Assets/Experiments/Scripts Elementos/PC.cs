@@ -8,16 +8,21 @@ public class PC : MonoBehaviour
 {
     [SerializeField] internal Libreta libreta;
     [SerializeField] Bitacoras bitacoras;
-    [SerializeField] PantallasSwitcherManager Pantallas;
+    [SerializeField] TimeManager time;
     [SerializeField] AlarmaPC alarmaPC;
+    public Transform camPosition;
+    public GameObject FondoInvisible;
     public TMP_Text txtBuscador;
     public TMP_Text txtInfo;
     public TMP_Text txtDatos;
     public TMP_Text txtRating;
+    public GameObject objTermometro;
     public Image Termometro;
     public Image fotoCarnet;
     public Sprite[] images;
     public Sprite[] personajes;
+    public TMP_Text RatingMaimo;
+    public Transform transformTermometro;
 
     public int Rating;
     private int RatingAux;
@@ -272,6 +277,7 @@ public class PC : MonoBehaviour
                 break;
             case 16:
                 Termometro.sprite = images[16];
+                RatinMaximo();
                 break;
         }
 
@@ -317,7 +323,11 @@ public class PC : MonoBehaviour
 
     public void RatinMaximo()
     {
-        Pantallas.SwitchCanvas(CanvasTypePantallas.RatingMaximo, CanvasTypePantallas.RatingMaximo);
+        RatingMaimo.text = "WIP";
+        objTermometro.transform.position = transformTermometro.position;
+        time.TiempoPausado();
+        Camaras.currentview = camPosition;
+        FondoInvisible.SetActive(true);
     }
 
 }
