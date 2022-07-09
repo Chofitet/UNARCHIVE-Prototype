@@ -396,6 +396,16 @@ public class TV : MonoBehaviour
             if (PC.Rating >= 16) { PC.RatinMaximo(); }
             x = true;
         }
+        //============================================================================ TV FOTOS ANONIMAS =============================================================================//
+        else if (bitacoras.BenLavado == true  && TimeManager.Dia == 4 && TimeManager.Hora == 12)
+        {
+            int IncrementoRating = 15;
+            noticia.text = CasamientoNoticia;//KATE MILLIARD ANUNCIA CASAMIENTO CON PIE GRANDE! LAS LEYENDAS ERAN CIERTAS!
+            titular.text = CasamientoTitulo;
+            PC.Rating = PC.Rating + IncrementoRating;
+            if (PC.Rating >= 16) { PC.RatinMaximo(); }
+            x = true;
+        }
         //============================================================================ TV RUMOR =============================================================================//
         else if (TimeManager.Dia == 3 && TimeManager.Hora == 7)
         {
@@ -555,6 +565,7 @@ public class TV : MonoBehaviour
             StartCoroutine(ImprimirNoticia(PepeQueñoTitulo2, PepeQueñoNoticia2, IncrementoRating, RetencionNoticia));
             PepeQueñoEliminado2 = true;
         }
+
         //=========================================================================== TV Noticia Falsa ===============================================================//
         else if (bitacoras.NoticiaFalasa1 == true && NF1 == false )
         {
