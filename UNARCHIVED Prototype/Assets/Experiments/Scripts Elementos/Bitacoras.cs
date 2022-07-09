@@ -258,9 +258,9 @@ public class Bitacoras : MonoBehaviour
                 float RetencionBitacora = 3;
                 float HoraCompletado = RetencionBitacora + TimeManager.Hora;
                 string txt = "<b>BEN BENJI LAVADO</b>"
-                + System.Environment.NewLine + "Lavado completo. Ben ya no recuerda la última semana.";
+                + System.Environment.NewLine + "Lavado completo. Ben ya no posee parte de las memorias mas preciadas y formativas de la experiencia humana: las memorias de la niñez.";
                 string FechaCompletado = "2" + TimeManager.Dia + "/03/2000";
-                string txtAccion = "Lavar cerebro a Ben";
+                string txtAccion = "Lavar cerebro a Ben Benji";
                 Toggle accion = A.lavarCerebro;
                 if (HoraCompletado > 18)
                 {
@@ -283,10 +283,10 @@ public class Bitacoras : MonoBehaviour
                 float RetencionBitacora = 4;
                 float HoraCompletado = RetencionBitacora + TimeManager.Hora;
                 string txt = "<b>BEN BENJI INVESTIGADO</b>"
-                + System.Environment.NewLine + "Niño común y corriente. Mejor promedio del condado. Si tan solo pasara menos tiempo con su computadora quizas seria mas popular.";
+                + System.Environment.NewLine + "No demuestra actividades sospechosas. Es un niño común y corriente, aunque bastente solitario. Si tan solo pasara menos tiempo encerrado con su computadora quizas seria mas popular.";
                 Toggle accion = A.investigar;
                 string FechaCompletado = "2" + TimeManager.Dia + "/03/2000";
-                string txtAccion = "Investigar a Ben";
+                string txtAccion = "Investigar a Ben Benji";
                 if (HoraCompletado >= 18)
                 {
                     HoraCompletado = 6 + (RetencionBitacora - (18 - TimeManager.Hora));
@@ -305,12 +305,13 @@ public class Bitacoras : MonoBehaviour
             //Hackear
             if (A.hackear.CompareTag(tag = "OptActivado") && A.hackear.isOn == true && BenHackeado == false )
             {
-                float RetencionBitacora =2;
+                float RetencionBitacora =3;
                 float HoraCompletado = RetencionBitacora + TimeManager.Hora;
                 string txt = "<b>BEN BENJI HACKEADO</b>"
-                + System.Environment.NewLine + "Encontramos lista de compras e instrucciones para crear una bomba del tamaño justo para volar una escuela. Sugerimos difamar para que la fuerza de las autoridades locales caiga sobre Ben cuanto antes.";
+                + System.Environment.NewLine + "Encontramos una lista de compras e instrucciones para crear una bomba del tamaño justo para volar una escuela."
+                + System.Environment.NewLine + "Sugerimos difamar para que la fuerza de las autoridades locales caiga sobre Ben cuanto antes.";
                 string FechaCompletado = "2" + TimeManager.Dia + "/03/2000";
-                string txtAccion = "Hackear a Ben";
+                string txtAccion = "Hackear a Ben Benji";
                 Toggle accion = A.hackear;
                 if (HoraCompletado >= 18)
                 {
@@ -335,7 +336,7 @@ public class Bitacoras : MonoBehaviour
                 string txt = "<b>BEN BENJI ANALIZADO</b>"
                 + System.Environment.NewLine + "Nada fuera de lo ordinario. Nada de nada. Es casi como si hubieras perdido un turno.";
                 string FechaCompletado = "2" + TimeManager.Dia + "/03/2000";
-                string txtAccion = "Analizar Ben";
+                string txtAccion = "Analizar Ben Benji";
                 Toggle accion = A.analizarMuestra;
                 if (HoraCompletado >= 18)
                 {
@@ -361,7 +362,7 @@ public class Bitacoras : MonoBehaviour
                 + System.Environment.NewLine + "Las autoridades locales se han encargado del pequeño terrorista en potencia";
                 Toggle accion = A.difamar;
                 string FechaCompletado = "2" + TimeManager.Dia + "/03/2000";
-                string txtAccion = "Difamar a Ben";
+                string txtAccion = "Difamar a Ben Benji";
                 if (HoraCompletado >= 18)
                 {
                     HoraCompletado = 6 + (RetencionBitacora - (18 - TimeManager.Hora));
@@ -387,7 +388,7 @@ public class Bitacoras : MonoBehaviour
                 + System.Environment.NewLine + "Ben difamado";
                 Toggle accion = A.difamar;
                 string FechaCompletado = "2" + TimeManager.Dia + "/03/2000";
-                string txtAccion = "Difamar a Ben";
+                string txtAccion = "Difamar a Ben Benji";
                 if (HoraCompletado >= 18)
                 {
                     HoraCompletado = 6 + (RetencionBitacora - (18 - TimeManager.Hora));
@@ -1505,7 +1506,7 @@ public class Bitacoras : MonoBehaviour
             //Eliminar
             if (A.eliminar.CompareTag(tag = "OptActivado") && A.eliminar.isOn == true && Red78Eliminada == false)
             {
-                float RetencionBitacora = 0.001f;
+                float RetencionBitacora =0.001f;
                 float HoraCompletado = RetencionBitacora + TimeManager.Hora;
                 string txt = "<b>ELIMINAR RED78</b>"
                 + System.Environment.NewLine + "Tendriamos que dar primero con la persona que se esconde tras el nombre Red78.";
@@ -1581,7 +1582,7 @@ public class Bitacoras : MonoBehaviour
             //Hackeado
             if (A.hackear.CompareTag(tag = "OptActivado") && A.hackear.isOn == true && Red78Hackeada == false && Red78Investigada == false)
             {
-                float RetencionBitacora = 0.001f;
+                float RetencionBitacora = 3;
                 float HoraCompletado = RetencionBitacora + TimeManager.Hora;
                 string txt = "<b>RED78 HACKEADA</b>"
                 + System.Environment.NewLine + "Red78 es la reconocida actriz y documentóloga Kate Milliard.";
@@ -1947,7 +1948,7 @@ public class Bitacoras : MonoBehaviour
                 float RetencionBitacora = 3;
                 float HoraCompletado = RetencionBitacora + TimeManager.Hora;
                 string txt = "<b>PEPE QUENIO HACKEADO</b>"
-                + System.Environment.NewLine + "Búsquedas frecuentes: ¿Por qué tengo pelo ahí también ?, Siento el llamado del bosque, ¿Cuánto calza un niño normal?";
+                + System.Environment.NewLine + "Búsquedas frecuentes: ¿Por qué tengo pelo ahí también?, Siento el llamado del bosque, ¿Cuánto calza un niño normal?";
                 string FechaCompletado = "2" + TimeManager.Dia + "/03/2000";
                 string txtAccion = "Hackear Pepe Quenio";
                 Toggle accion = A.hackear;
@@ -2601,7 +2602,7 @@ public class Bitacoras : MonoBehaviour
             float RetencionBitacora = 1;
             float HoraCompletado = RetencionBitacora + TimeManager.Hora;
             string txt = "<b>FOTOS EXTRAIDAS</b>"
-            + System.Environment.NewLine + "Wip El pequeño set fotos amateur muestra una mancha marrón y una roja fuera de foco.";
+            + System.Environment.NewLine + "El pequeño set fotos amateur muestra una mancha marrón y una roja fuera de foco.";
             string FechaCompletado = "2" + TimeManager.Dia + "/03/2000";
             string txtAccion = "Extracción de fotos";
             Toggle accion = A.extraerFotos;
@@ -2629,10 +2630,10 @@ public class Bitacoras : MonoBehaviour
             {
                 float RetencionBitacora = 1;
                 float HoraCompletado = RetencionBitacora + TimeManager.Hora;
-                string txt = "<b>Wip</b>"
-                + System.Environment.NewLine + "Wip";
+                string txt = "<b>CERCO QUITADO DE PARQUE PIMIENTA</b>"
+                + System.Environment.NewLine + "Hay pase libre al parque nuevamente.";
                 string FechaCompletado = "2" + TimeManager.Dia + "/03/2000";
-                string txtAccion = "Wip";
+                string txtAccion = "Quitando cerco de Parque Pimienta";
                 Toggle accion = A.levantarCerca;
                 if (HoraCompletado >= 18)
                 {
@@ -2657,10 +2658,10 @@ public class Bitacoras : MonoBehaviour
             {
                 float RetencionBitacora = 1;
                 float HoraCompletado = RetencionBitacora + TimeManager.Hora;
-                string txt = "<b>Wip</b>"
+                string txt = "<b>CERCO QUITADO DE PIMIENTAPALUZA</b>"
                 + System.Environment.NewLine + "Wip";
                 string FechaCompletado = "2" + TimeManager.Dia + "/03/2000";
-                string txtAccion = "Wip";
+                string txtAccion = "Quitando cerco de Pimientapaluza";
                 Toggle accion = A.levantarCerca;
                 if (HoraCompletado >= 18)
                 {

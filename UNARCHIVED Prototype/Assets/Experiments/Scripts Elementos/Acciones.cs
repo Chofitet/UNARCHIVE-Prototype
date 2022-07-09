@@ -55,6 +55,7 @@ public class Acciones : MonoBehaviour
         if (bitacoras.PieGrandeUbicacion == true && tglLevantarCerca.activeSelf == false) { tglAislar.SetActive(true); }
         if (tv.BenEntrevista2 == true) tglPlantarPublico.SetActive(false);
         if (bitacoras.PieGrandeEliminado == false && bitacoras.PepeEliminado == false && bitacoras.PepeAnalizado == true && trueEnding.isOn == false && bitacoras.PieGrandeUbicacion == true) tglTrueEnding.SetActive(true);
+
         //if (bitacoras.ParquePimientaAislado) tglAislar.SetActive(false);
 
         ///acciones  para agregar condiciones (solo en los if) AGREGAR && 
