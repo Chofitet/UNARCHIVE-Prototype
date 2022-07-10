@@ -12,6 +12,11 @@ public class BotonAprobarSwitch : MonoBehaviour
     public ToggleGroup acciones;
     public ExpCanvasManager canvasManager;
     Button boton;
+   public GameObject AprobadoSello;
+    private void OnEnable()
+    {
+        AprobadoSello.gameObject.SetActive(false);
+    }
     private void Update()
     {
         Debug.Log("accion" + Acciones.AccionSelccionada);
@@ -34,11 +39,19 @@ public class BotonAprobarSwitch : MonoBehaviour
     {
         if (Acciones.AccionSelccionada == true && Libreta.PalabraSeleccionada == true) 
         {
-            canvasManager.SwitchCanvas(desiredCanvasType, desiredCanvasType2);
-            libreta.gameObject.SetActive(false);
+            StartCoroutine(SelloAprobar());
         }
         Libreta.PalabraSeleccionada = false;
         Acciones.AccionSelccionada = false;
+    }
+
+    IEnumerator  SelloAprobar ()
+    {
+        AprobadoSello.gameObject.SetActive(true);
+        yield return new WaitForSeconds(1);
+        canvasManager.SwitchCanvas(desiredCanvasType, desiredCanvasType2);
+        libreta.gameObject.SetActive(false);
+        AprobadoSello.gameObject.SetActive(false);
     }
 
     

@@ -54,7 +54,7 @@ public class Acciones : MonoBehaviour
         if (bitacoras.PieGrandeUbicacion == true && crearEscena.isOn == false) {tglCrearEscena.SetActive(true); }
         if (bitacoras.PieGrandeUbicacion == true && tglLevantarCerca.activeSelf == false) { tglAislar.SetActive(true); }
         if (tv.BenEntrevista2 == true) tglPlantarPublico.SetActive(false);
-        if (bitacoras.PieGrandeEliminado == false && bitacoras.PepeEliminado == false && bitacoras.PepeAnalizado == true && trueEnding.isOn == false && bitacoras.PieGrandeUbicacion == true) tglTrueEnding.SetActive(true);
+       
 
         //if (bitacoras.ParquePimientaAislado) tglAislar.SetActive(false);
 
@@ -206,8 +206,8 @@ public class Acciones : MonoBehaviour
         difamar.isOn = false;
         aislar.isOn = false;
         crearNoticia.isOn = false;
+        analizarMuestra.isOn = false;
         
-
     }
     public void DeshabilitarAcciones()
     {
