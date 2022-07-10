@@ -2947,6 +2947,7 @@ MonoBehaviour:
   reloj: {fileID: 904785885}
   PC: {fileID: 1090419601}
   Pantallas: {fileID: 1707752575}
+  tv: {fileID: 1988636337}
   BenRetirado: 0
   BenEliminado: 0
   BenLavado: 0
@@ -2977,6 +2978,7 @@ MonoBehaviour:
   PimientaPaluzaDifamado: 0
   PimientaPaluzaAislado: 0
   PimientaPaluzaLevantarCerca: 0
+  PimientaPaluzaCancelado: 0
   ColoradaEliminado: 0
   ColoradaInvestigada: 0
   ColoradaLavada: 0

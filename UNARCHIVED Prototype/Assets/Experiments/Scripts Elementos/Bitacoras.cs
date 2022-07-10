@@ -13,6 +13,7 @@ public class Bitacoras : MonoBehaviour
     [SerializeField] Reloj reloj;
     [SerializeField] PC PC;
     [SerializeField] PantallasSwitcherManager Pantallas;
+    [SerializeField] TV tv;
 
     //Declaración varariables
 
@@ -980,8 +981,10 @@ public class Bitacoras : MonoBehaviour
                 StartCoroutine(GuardarBitacora(RetencionBitacora, txt, indaux, accion, a));
                 ParquePimientaAislado = true;
                 A.aislar.interactable = false;
+                tv.PimientaPaluzaNoPuedeEntrar = true;
+
             }
-           
+
         }
         //========================================================== Bitacoras Pimientapaluza ==================================================//
         if (libreta.palabra == libreta.palabrasCaso[3])
@@ -992,7 +995,7 @@ public class Bitacoras : MonoBehaviour
                 float RetencionBitacora = 0.001f;
                 float HoraCompletado = RetencionBitacora + TimeManager.Hora;
                 string txt = "<b>ELIMINAR PIMIENTAPALUZA</b>"
-                + System.Environment.NewLine + "Puedes matar a un hombre pero nunca una idea.";
+                + System.Environment.NewLine + "Pimientapaluza es más que sólo un festival. Puedes matar a un hombre pero nunca una idea.";
                 string FechaCompletado = "2" + TimeManager.Dia + "/03";
                 string txtAccion = "Eliminar Pimientapaluza";
                 Toggle accion = A.eliminar;
@@ -1041,8 +1044,8 @@ public class Bitacoras : MonoBehaviour
             {
                 float RetencionBitacora = 4;
                 float HoraCompletado = RetencionBitacora + TimeManager.Hora;
-                string txt = "<b>PIMIENTAPALUZA HACKEADO</b>"
-                + System.Environment.NewLine + "WIP SECRETOS!";
+                string txt = "<b>PIMIENTAPALUZA INVESTIGADO</b>"
+                + System.Environment.NewLine + "El CEO del Festival, Don Paluza, patrocina una red ilegal de boxeo hombre vs canguro. Esta actividad es altamente ilegal fuera del estado de Mierma.";
                 string FechaCompletado = "2" + TimeManager.Dia + "/03";
                 string txtAccion = "Investigar Pimientapaluza";
                 Toggle accion = A.investigar;
@@ -1060,6 +1063,7 @@ public class Bitacoras : MonoBehaviour
                 StartCoroutine(GuardarBitacora(RetencionBitacora, txt, indaux, accion, a));
                 PimientaPaluzaInvestigado = true;
                 A.investigar.interactable = false;
+                PimientaPaluzaDifamado = false;
             }
             //Hackeado
             if (A.hackear.CompareTag(tag = "OptActivado") && A.hackear.isOn == true && PimientaPaluzaHackeado == false)
@@ -1112,12 +1116,12 @@ public class Bitacoras : MonoBehaviour
                 A.analizarMuestra.interactable = false;
             }
             //Difamar
-            if (A.difamar.CompareTag(tag = "OptActivado") && A.difamar.isOn == true && PimientaPaluzaDifamado == false)
+            if (A.difamar.CompareTag(tag = "OptActivado") && A.difamar.isOn == true && PimientaPaluzaDifamado == false && PimientapaluzersInvestigado == true )
             {
                 float RetencionBitacora = 1;
                 float HoraCompletado = RetencionBitacora + TimeManager.Hora;
                 string txt = "<b>PIMIENTAPALUZA DIFAMADO</b>"
-                + System.Environment.NewLine + "Todo listo."
+                + System.Environment.NewLine + "Todo listo."//Escribir que lo cancelan y la noticia de cancelado
                 + System.Environment.NewLine + "La noticia difamante se transmitirá en la próxima hora."; 
                 string FechaCompletado = "2" + TimeManager.Dia + "/03";
                 string txtAccion = "Difamar Pimientapaluza";
@@ -1137,8 +1141,35 @@ public class Bitacoras : MonoBehaviour
                 PimientaPaluzaDifamado = true;
                 A.difamar.interactable = false;
             }
+            //Difamar2
+            if (A.difamar.CompareTag(tag = "OptActivado") && A.difamar.isOn == true && PimientaPaluzaDifamado == false && PimientapaluzersInvestigado == false)
+            {
+                float RetencionBitacora = 1;
+                float HoraCompletado = RetencionBitacora + TimeManager.Hora;
+                string txt = "<b>PIMIENTAPALUZA DIFAMADO</b>"
+                + System.Environment.NewLine + "Todo listo."//difamia nomas
+                + System.Environment.NewLine + "La noticia difamante se transmitirá en la próxima hora.";
+                string FechaCompletado = "2" + TimeManager.Dia + "/03";
+                string txtAccion = "Difamar Pimientapaluza";
+                Toggle accion = A.difamar;
+                if (HoraCompletado >= 18)
+                {
+                    HoraCompletado = 6 + (RetencionBitacora - (18 - TimeManager.Hora));
+                    FechaCompletado = "2" + (TimeManager.Dia + 1) + "/03";
+                }
+                int indaux = ind;
+                int a = 1;
+                CargarVectorProgreso(txtAccion, FechaCompletado, HoraCompletado, indaux);
+                SetearBitacora();
+                a = aux;
+                ActualizarIndice();
+                StartCoroutine(GuardarBitacora(RetencionBitacora, txt, indaux, accion, a));
+                PimientaPaluzaDifamado = true;
+                A.difamar.interactable = false;
+            }
+
             //Aislar
-            if (A.aislar.CompareTag(tag = "OptActivado") && A.aislar.isOn == true && PimientaPaluzaAislado == false)
+            if (A.aislar.CompareTag(tag = "OptActivado") && A.aislar.isOn == true && PimientaPaluzaAislado == false && tv.PimientapaluzaSeAdelanta == true )
             {
                 float RetencionBitacora = 3;
                 float HoraCompletado = RetencionBitacora + TimeManager.Hora;
@@ -1162,7 +1193,31 @@ public class Bitacoras : MonoBehaviour
                 PimientaPaluzaAislado = true;
                 A.aislar.interactable = false;
             }
-            
+            if (A.aislar.CompareTag(tag = "OptActivado") && A.aislar.isOn == true && PimientaPaluzaAislado == false && tv.PimientapaluzaSeAdelanta == false)
+            {
+                float RetencionBitacora = 0.001f;
+                float HoraCompletado = RetencionBitacora + TimeManager.Hora;
+                string txt = "<b>PIMIENTAPALUZA AISLADO</b>"
+                + System.Environment.NewLine + "El festival no se ha montado aún en el parque, deberíamos esperarle para intentarlo nuevamente.";
+                string FechaCompletado = "2" + TimeManager.Dia + "/03";
+                string txtAccion = "Aislar Pimientapaluza";
+                Toggle accion = A.aislar;
+                if (HoraCompletado >= 18)
+                {
+                    HoraCompletado = 6 + (RetencionBitacora - (18 - TimeManager.Hora));
+                    FechaCompletado = "2" + (TimeManager.Dia + 1) + "/03";
+                }
+                int indaux = ind;
+                int a = 1;
+                CargarVectorProgreso(txtAccion, FechaCompletado, HoraCompletado, indaux);
+                SetearBitacora();
+                a = aux;
+                ActualizarIndice(); 
+                StartCoroutine(GuardarBitacora(RetencionBitacora, txt, indaux, accion, a));
+                PimientaPaluzaAislado = false;
+                A.aislar.interactable = false;
+            }
+
 
         }
         //=========================================================== Bitacoras Pimientapaluzers =================================================//
@@ -2257,6 +2312,135 @@ public class Bitacoras : MonoBehaviour
         //================================================= Bitacoras Cabellos Rojizos ==========================================================//
         if (libreta.palabra == libreta.palabrasCaso[9])
         {
+
+            //Eliminar
+            if (A.eliminar.CompareTag(tag = "OptActivado") && A.eliminar.isOn == true && CabellosRojijosEliminado == false)
+            {
+                float RetencionBitacora = 0.001f;
+                float HoraCompletado = RetencionBitacora + TimeManager.Hora;
+                string txt = "<b>CABELLOS ROJIZOS ELIMINADOS</b>"
+                + System.Environment.NewLine + "Target eliminado en tiempo record!"
+                + System.Environment.NewLine + "Quizás para la próxima deberíamos analizar la evidencia antes de destruirla.";
+                string FechaCompletado = "2" + TimeManager.Dia + "/03";
+                string txtAccion = "Eliminar Cabellos rojizos";
+                Toggle accion = A.eliminar;
+                if (HoraCompletado >= 18)
+                {
+                    HoraCompletado = 6 + (RetencionBitacora - (18 - TimeManager.Hora));
+                    FechaCompletado = "2" + (TimeManager.Dia + 1) + "/03";
+                }
+                int indaux = ind;
+                int a = 1;
+                CargarVectorProgreso(txtAccion, FechaCompletado, HoraCompletado, indaux);
+                SetearBitacora();
+                a = aux;
+                ActualizarIndice();
+                StartCoroutine(GuardarBitacora(RetencionBitacora, txt, indaux, accion, a));
+                CabellosRojijosEliminado = true;
+                A.eliminar.interactable = false;
+            }
+            //LAVAR CEREBRO 
+            if (A.lavarCerebro.CompareTag(tag = "OptActivado") && A.lavarCerebro.isOn == true && CabellosRojijosLavado == false)
+            {
+                float RetencionBitacora = 0.001f;
+                float HoraCompletado = RetencionBitacora + TimeManager.Hora;
+                string txt = "<b>LAVAR DE CEREBRO A CABELLOS ROJIZOS</b>"
+                + System.Environment.NewLine + "Los cabellos rojizos no responden bien a la hipnosis.";
+                string FechaCompletado = "2" + TimeManager.Dia + "/03";
+                string txtAccion = "Lavar cerebro a cabellos rojizos";
+                Toggle accion = A.lavarCerebro;
+                if (HoraCompletado >= 18)
+                {
+                    HoraCompletado = 6 + (RetencionBitacora - (18 - TimeManager.Hora));
+                    FechaCompletado = "2" + (TimeManager.Dia + 1) + "/03";
+                }
+                int indaux = ind;
+                int a = 1;
+                CargarVectorProgreso(txtAccion, FechaCompletado, HoraCompletado, indaux);
+                SetearBitacora();
+                a = aux;
+                ActualizarIndice();
+                StartCoroutine(GuardarBitacora(RetencionBitacora, txt, indaux, accion, a));
+                CabellosRojijosLavado = true;
+                A.lavarCerebro.interactable = false;
+            }
+
+            // investigar
+            if (A.investigar.CompareTag(tag = "OptActivado") && A.investigar.isOn == true && CabellosRojijosInvestigado == false)
+            {
+                float RetencionBitacora = 2;
+                float HoraCompletado = RetencionBitacora + TimeManager.Hora;
+                string txt = "<b>CABELLOS ROJIZOS INVESTIGADOS</b>"
+                + System.Environment.NewLine + "Huelen a productos capilares y perfume femenino, no son de ninguna criatura del bosque."
+                + System.Environment.NewLine + "Creemos que el agente se quedó con unos.";
+                string FechaCompletado = "2" + TimeManager.Dia + "/03";
+                string txtAccion = "Investigar Cabellos rojizos";
+                Toggle accion = A.investigar;
+                if (HoraCompletado >= 18)
+                {
+                    HoraCompletado = 6 + (RetencionBitacora - (18 - TimeManager.Hora));
+                    FechaCompletado = "2" + (TimeManager.Dia + 1) + "/03";
+                }
+                int indaux = ind;
+                int a = 1;
+                CargarVectorProgreso(txtAccion, FechaCompletado, HoraCompletado, indaux);
+                SetearBitacora();
+                a = aux;
+                ActualizarIndice();
+                StartCoroutine(GuardarBitacora(RetencionBitacora, txt, indaux, accion, a));
+                CabellosRojijosInvestigado = true;
+                A.investigar.interactable = false;
+            }
+            //Hackear
+            if (A.hackear.CompareTag(tag = "OptActivado") && A.hackear.isOn == true && CabellosRojijosHackeados == false)
+            {
+                float RetencionBitacora = 0.001f;
+                float HoraCompletado = RetencionBitacora + TimeManager.Hora;
+                string txt = "<b>HACKEAR CABELLOS ROJIZOS</b>"
+                + System.Environment.NewLine + "";
+                string FechaCompletado = "2" + TimeManager.Dia + "/03";
+                string txtAccion = "Hackear Cabellos rojizos";
+                Toggle accion = A.hackear;
+                if (HoraCompletado >= 18)
+                {
+                    HoraCompletado = 6 + (RetencionBitacora - (18 - TimeManager.Hora));
+                    FechaCompletado = "2" + (TimeManager.Dia + 1) + "/03";
+                }
+                int indaux = ind;
+                int a = 1;
+                CargarVectorProgreso(txtAccion, FechaCompletado, HoraCompletado, indaux);
+                SetearBitacora();
+                a = aux;
+                ActualizarIndice();
+                StartCoroutine(GuardarBitacora(RetencionBitacora, txt, indaux, accion, a));
+                CabellosRojijosHackeados = true;
+                A.hackear.interactable = false;
+            }
+            //Difamar
+            if (A.difamar.CompareTag(tag = "OptActivado") && A.difamar.isOn == true && CabellosRojijosDifamado == false)
+            {
+                float RetencionBitacora = 0.001f;
+                float HoraCompletado = RetencionBitacora + TimeManager.Hora;
+                string txt = "<b>DIFAMAR CABELLOS ROJIZOS</b>"
+                + System.Environment.NewLine + "No, Cabellos rojizos jamás lastimaron a nadie.";
+                string FechaCompletado = "2" + TimeManager.Dia + "/03";
+                string txtAccion = "Difamar Cabellos rojizos";
+                Toggle accion = A.difamar;
+                if (HoraCompletado >= 18)
+                {
+                    HoraCompletado = 6 + (RetencionBitacora - (18 - TimeManager.Hora));
+                    FechaCompletado = "2" + (TimeManager.Dia + 1) + "/03";
+                }
+                int indaux = ind;
+                int a = 1;
+                CargarVectorProgreso(txtAccion, FechaCompletado, HoraCompletado, indaux);
+                SetearBitacora();
+                a = aux;
+                ActualizarIndice();
+                StartCoroutine(GuardarBitacora(RetencionBitacora, txt, indaux, accion, a));
+                CabellosRojijosDifamado = true;
+                A.difamar.interactable = false;
+            }
             //Analizar muestra
             if (A.analizarMuestra.CompareTag(tag = "OptActivado") && A.analizarMuestra.isOn == true && CabellosRojijosAnalizado == false)
             {
@@ -2282,6 +2466,31 @@ public class Bitacoras : MonoBehaviour
                 CabellosRojijosAnalizado = true;
                 A.analizarMuestra.interactable = false;
             }
+            //Aislar
+            if (A.aislar.CompareTag(tag = "OptActivado") && A.aislar.isOn == true && CabellosRojijosAislado == false)
+            {
+                float RetencionBitacora = 1;
+                float HoraCompletado = RetencionBitacora + TimeManager.Hora;
+                string txt = "<b>CABELLOS ROJIZOS AISLADOS</b>"
+                + System.Environment.NewLine + "El equipo ha montado una diminuta cerca rodeando los cabellos rojizos.";
+                string FechaCompletado = "2" + TimeManager.Dia + "/03";
+                string txtAccion = "Aislar Cabellos Rojizos";
+                Toggle accion = A.aislar;
+                if (HoraCompletado >= 18)
+                {
+                    HoraCompletado = 6 + (RetencionBitacora - (18 - TimeManager.Hora));
+                    FechaCompletado = "2" + (TimeManager.Dia + 1) + "/03";
+                }
+                int indaux = ind;
+                int a = 1;
+                CargarVectorProgreso(txtAccion, FechaCompletado, HoraCompletado, indaux);
+                SetearBitacora();
+                a = aux;
+                ActualizarIndice();
+                StartCoroutine(GuardarBitacora(RetencionBitacora, txt, indaux, accion, a));
+                CabellosRojijosAislado = true;
+                A.aislar.interactable = false;
+            }
 
         }
 
@@ -2294,7 +2503,7 @@ public class Bitacoras : MonoBehaviour
                 float RetencionBitacora = 2;//revisar
                 float HoraCompletado = RetencionBitacora + TimeManager.Hora;
                 string txt = "<b>ELIMINAR BANANORRAMA</b>"//REVISAR SI ES POSIBLE O NO
-                + System.Environment.NewLine + "Hemos terciarizado el acto de eliminar cada cinta de Bananorrama en existencia. Aguardamos novedades.";//
+                + System.Environment.NewLine + "Hemos terciarizado la misión de eliminar cada cinta de Bananorrama en existencia. No aguardamos prontas novedades.";//
                 string FechaCompletado = "2" + TimeManager.Dia + "/03";
                 string txtAccion = "Eliminar Bananorrama";
                 Toggle accion = A.eliminar;
@@ -2345,7 +2554,7 @@ public class Bitacoras : MonoBehaviour
                 float RetencionBitacora = 2;//revisar
                 float HoraCompletado = RetencionBitacora + TimeManager.Hora;
                 string txt = "<b>BANANORRAMA INVESTIGADO</b>"
-                + System.Environment.NewLine + "WIP El agente ha terminado de ver la película Bananorrama.";
+                + System.Environment.NewLine + "El agente ha terminado de ver la película Bananorrama. Le gustó mucho y prefiere no spoilearsela al resto.";
                 Toggle accion = A.investigar;
                 string FechaCompletado = "2" + TimeManager.Dia + "/03";
                 string txtAccion = "Investigar Bananorrama";
@@ -2414,7 +2623,7 @@ public class Bitacoras : MonoBehaviour
                 BananorramaAnalizado = true;
                 A.analizarMuestra.interactable = false;
             }
-
+            //Difamar
             if (A.difamar.CompareTag(tag = "OptActivado") && A.difamar.isOn == true && BananorramaDifamado == false)
             {
                 float RetencionBitacora = 1;
@@ -2440,6 +2649,31 @@ public class Bitacoras : MonoBehaviour
                 BananorramaDifamado = true;
                 A.difamar.interactable = false;
 
+            }
+            //Aislar
+            if (A.aislar.CompareTag(tag = "OptActivado") && A.aislar.isOn == true && BananorramaAislado == false)
+            {
+                float RetencionBitacora = 0.001f;
+                float HoraCompletado = RetencionBitacora + TimeManager.Hora;
+                string txt = "<b>AISLAR BANANORRAMA</b>"
+                + System.Environment.NewLine + "Quizás debamos pensar un poco más antes de unir palabras al azar.";
+                string FechaCompletado = "2" + TimeManager.Dia + "/03";
+                string txtAccion = "Aislar Bananorrama";
+                Toggle accion = A.aislar;
+                if (HoraCompletado >= 18)
+                {
+                    HoraCompletado = 6 + (RetencionBitacora - (18 - TimeManager.Hora));
+                    FechaCompletado = "2" + (TimeManager.Dia + 1) + "/03";
+                }
+                int indaux = ind;
+                int a = 1;
+                CargarVectorProgreso(txtAccion, FechaCompletado, HoraCompletado, indaux);
+                SetearBitacora();
+                a = aux;
+                ActualizarIndice();
+                StartCoroutine(GuardarBitacora(RetencionBitacora, txt, indaux, accion, a));
+                BananorramaAislado = true;
+                A.aislar.interactable = false;
             }
 
         }
@@ -2477,7 +2711,7 @@ public class Bitacoras : MonoBehaviour
         {
             float RetencionBitacora = 3;
             float HoraCompletado = RetencionBitacora + TimeManager.Hora;
-            string txt = "<b>MONTAR ESCENA CON AGENTE PELUDO Y AGENTE CON PELUCA COLORADA WIP</b>"
+            string txt = "<b>MONTAR ESCENA: AGENTE PELUDO Y AGENTE CON PELUCA</b>"
             + System.Environment.NewLine + "La estrategia parece haber calmado las aguas. Los agentes fueron aproximados por un pequeño niño raro llamado Pepe Quenio, su interés en ellos les llamó la atención. WIP";
             string FechaCompletado = "2" + TimeManager.Dia + "/03";
             string txtAccion = "Montar Escena";
@@ -2681,6 +2915,7 @@ public class Bitacoras : MonoBehaviour
                 StartCoroutine(GuardarBitacora(RetencionBitacora, txt, indaux, accion, a));
                 ParquePimientaLevantarCerca = true;
                 A.levantarCerca.interactable = false;
+                tv.PimientaPaluzaNoPuedeEntrar = false;
             }
         }
         //Levantar cerca
@@ -2708,7 +2943,7 @@ public class Bitacoras : MonoBehaviour
                 ActualizarIndice();
                 StartCoroutine(GuardarBitacora(RetencionBitacora, txt, indaux, accion, a));
                 PimientaPaluzaLevantarCerca = true;
-                A.levantarCerca.interactable = false;
+                A.levantarCerca.interactable = false;               
             }
         }
 
