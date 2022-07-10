@@ -110,6 +110,18 @@ public class TV : MonoBehaviour
     string BenDifamadoTitulo2 = "ENTUSIASTA AVISTADOR DE PIE GRANDES RESULTA TERRORISTA AMATEUR! PERPETUA PARA BENJI"; ///ESTE ES EL CASO Hackeado = true
     string BenDifamadoNoticia2 = "EXPLOSIVA REVELACIÓN DESENMASCA A BEN BENJI COMO TERRORISTA AMATEUR! EL PUEBLO PIDE PERPETUA"; ///ESTE ES EL CASO Hackeado = true
 
+    bool TurbaReclamaDia5;
+    string TurbaReclamaDia5Titulo = "TURBA ENFURECIDA RECLAMA LEVANTAMIENTO DE CERCA FRENTE A PARQUE PIMIENTA";
+    string TurbaReclamaDia5Noticia = "TURBA ENFURECIDA RECLAMA LEVANTAMIENTO DE CERCA FRENTE A PARQUE PIMIENTA";
+
+    bool TurbaReclamaDia6;
+    string TurbaReclamaDia6Titulo = "TURBA ENFURECIDA RECLAMA LEVANTAMIENTO DE CERCA FRENTE A PARQUE PIMIENTA";
+    string TurbaReclamaDia6Noticia = "TURBA ENFURECIDA RECLAMA LEVANTAMIENTO DE CERCA FRENTE A PARQUE PIMIENTA";
+
+    bool TurbaReclamaDia7;
+    string TurbaReclamaDia7Titulo = "TURBA ENFURECIDA RECLAMA LEVANTAMIENTO DE CERCA FRENTE A PARQUE PIMIENTA";
+    string TurbaReclamaDia7Noticia = "TURBA ENFURECIDA RECLAMA LEVANTAMIENTO DE CERCA FRENTE A PARQUE PIMIENTA";
+
     //============================================================================ TV Pie Grande ===================================================================//
     bool PieGrandeEliminado;
     string PieGrandeEliminadoTitulo = "REVELACIONES PELUDAS! LA NOVIA SECRETA DE PIE GRANDE DECLARA TODO HOY A LAS 17";
@@ -172,6 +184,15 @@ public class TV : MonoBehaviour
     bool PimientapaluzersDifamado;
     string PimientapaluzersTitulo2 = "WIP ALGO DIFAMANTE";
     string PimientapaluzersNoticia2 = "WIP ALGO DIFAMANTE";
+
+    bool PimientapaluzersReclamanDia6;
+    string PimientapaluzersReclamanDia6Titulo = "PIMIENTAPALUZERS RECLAMAN INGRESO A PARQUE PIMIENTA";//WIP
+    string PimientapaluzersReclamanDia6Noticia = "PIMIENTAPALUZERS RECLAMAN INGRESO A PARQUE PIMIENTA";
+
+    bool PimientapaluzersReclamanDia7;
+    string PimientapaluzersReclamanDia7Titulo = "PIMIENTAPALUZERS RECLAMAN INGRESO A PARQUE PIMIENTA";//WIP
+    string PimientapaluzersReclamanDia7Noticia = "PIMIENTAPALUZERS RECLAMAN INGRESO A PARQUE PIMIENTA";
+
     //============================================================================ TV Pepe Queño ===================================================================//
     bool PepeQueñoEliminado1;
     string PepeQueñoTitulo1 = "JOVEN ORGANIZA BÚSQUEDA POR SU AMIGO IMAGINARIO"; //Parte 1
@@ -182,6 +203,9 @@ public class TV : MonoBehaviour
     string PepeQueñoNoticia2 = "NADIE SE PRESENTA A BUSQUEDA DE NIÑO PELUDO, TRISTE Y RARO";
 
     bool FotosAnonimas;
+    string FotosAnonimasTitulo = "WIP"; //Parte 2
+    string FotosAnonimasNoticia = "WIP";
+
     //============================================================================ TV Parque Pimienta =============================================================================//
     bool ParquePimientaAislado1;
     string ParquePimientaTitulo1 = "MISTERIOSA CERCA RODEA PARQUE PIMIENTA!"; //Pimienta paluza hackeado = false
@@ -198,6 +222,10 @@ public class TV : MonoBehaviour
     bool ParquePimientaAislado4;
     string ParquePimientaTitulo4 = ""; //Pimienta paluza hackeado = true Kate/PieGrande eliminado/lavado = false
     string ParquePimientaNoticia4 = ""; //Pimienta paluza hackeado = true
+
+    bool ParquePimientaDifamado;
+    string ParquePimientaDifamadoTitulo = "PARQUE PIMIENTA"; //WIP
+    string ParquePimientaDifamadoNoticia = "";
                                         //============================================================================ TV Pie Grande ===================================================================//
     bool PlantarPublico;
     string PlantarPublicoTitulo = "ABUCHEOS DURANTE ENTREVISTA!LA CREDiBILIDAD DE BENJI SE DESMORONA!!";
@@ -306,6 +334,39 @@ public class TV : MonoBehaviour
             if (PC.Rating >= 16) { PC.RatinMaximo(); }
             x = true;
             BenEntrevista3b = true;
+            SetearImagenesNoticias(11);
+        }
+        else if (TurbaReclamaDia5 == false && TimeManager.Dia == 5 && TimeManager.Hora == 9 && bitacoras.ParquePimientaAislado == true)
+        {
+            int IncrementoRating = 2;
+            noticia.text = TurbaReclamaDia5Noticia;
+            titular.text = TurbaReclamaDia5Titulo;
+            PC.Rating = PC.Rating + IncrementoRating;
+            if (PC.Rating >= 16) { PC.RatinMaximo(); }
+            x = true;
+            TurbaReclamaDia5 = true;
+            SetearImagenesNoticias(11);
+        }
+        else if (TurbaReclamaDia6 == false && TimeManager.Dia == 6 && TimeManager.Hora == 9 && bitacoras.ParquePimientaAislado == true)
+        {
+            int IncrementoRating = 2;
+            noticia.text = TurbaReclamaDia6Noticia;
+            titular.text = TurbaReclamaDia6Titulo;
+            PC.Rating = PC.Rating + IncrementoRating;
+            if (PC.Rating >= 16) { PC.RatinMaximo(); }
+            x = true;
+            TurbaReclamaDia6 = true;
+            SetearImagenesNoticias(11);
+        }
+        else if (TurbaReclamaDia7 == false && TimeManager.Dia == 7 && TimeManager.Hora == 9 && bitacoras.ParquePimientaAislado == true)
+        {
+            int IncrementoRating = 2;
+            noticia.text = TurbaReclamaDia7Noticia;
+            titular.text = TurbaReclamaDia7Titulo;
+            PC.Rating = PC.Rating + IncrementoRating;
+            if (PC.Rating >= 16) { PC.RatinMaximo(); }
+            x = true;
+            TurbaReclamaDia7 = true;
             SetearImagenesNoticias(11);
         }
         else if (TimeManager.Dia == 5 && TimeManager.Hora == 16 && BenEntrevista3 == true && PieGrandeEliminado == false)
@@ -428,7 +489,7 @@ public class TV : MonoBehaviour
             x = true;
             SetearImagenesNoticias(4);
         }
-        else if (bitacoras.KateEliminada == false && PieGrandeEliminado == false && KateEliminada == false && TimeManager.Dia == 7 && TimeManager.Hora == 17)
+        else if (bitacoras.KateEliminada == false && bitacoras.KateLavada== false && PieGrandeEliminado == false && KateEliminada == false && TimeManager.Dia == 7 && TimeManager.Hora == 17)
         {
             int IncrementoRating = 15;
             noticia.text = CasamientoNoticia;//KATE MILLIARD ANUNCIA CASAMIENTO CON PIE GRANDE! LAS LEYENDAS ERAN CIERTAS!
@@ -438,16 +499,41 @@ public class TV : MonoBehaviour
             x = true;
             SetearImagenesNoticias(7);
         }
-        //============================================================================ TV FOTOS ANONIMAS =============================================================================//
-        else if (bitacoras.BenLavado == true  && TimeManager.Dia == 4 && TimeManager.Hora == 12)
+
+
+        else if (bitacoras.PimientaPaluzaAislado == true && bitacoras.PimientaPaluzaCancelado == false && TimeManager.Dia == 6 && TimeManager.Hora == 6)
         {
-            int IncrementoRating = 15;
-            noticia.text = CasamientoNoticia;//KATE MILLIARD ANUNCIA CASAMIENTO CON PIE GRANDE! LAS LEYENDAS ERAN CIERTAS!
-            titular.text = CasamientoTitulo;
+            int IncrementoRating = 2;
+            noticia.text = PimientapaluzersReclamanDia6Titulo;
+            titular.text = PimientapaluzersReclamanDia6Noticia; 
             PC.Rating = PC.Rating + IncrementoRating;
             if (PC.Rating >= 16) { PC.RatinMaximo(); }
             x = true;
-            SetearImagenesNoticias(7);
+            SetearImagenesNoticias(5);
+            PimientapaluzersReclamanDia6 = true;
+
+        }
+
+        else if (bitacoras.PimientaPaluzaAislado == true && bitacoras.PimientaPaluzaCancelado == false && TimeManager.Dia == 7 && TimeManager.Hora == 7)
+        {
+            int IncrementoRating = 2;
+            noticia.text = PimientapaluzersReclamanDia7Titulo;
+            titular.text = PimientapaluzersReclamanDia7Noticia;
+            PC.Rating = PC.Rating + IncrementoRating;
+            if (PC.Rating >= 16) { PC.RatinMaximo(); }
+            x = true;
+            SetearImagenesNoticias(5);
+            PimientapaluzersReclamanDia7 = true;
+
+        }
+
+        //============================================================================ TV FOTOS ANONIMAS =============================================================================//
+        else if (TimeManager.Dia == 5 && TimeManager.Hora == 6 && BenEntrevista2 == false && bitacoras.PepeEliminado == false && bitacoras.PepeLavado == false)
+        {
+            int IncrementoRating = 0;
+            int RetencionNoticia = 5;
+            StartCoroutine(ImprimirNoticia(FotosAnonimasTitulo, FotosAnonimasNoticia, IncrementoRating, RetencionNoticia));
+            FotosAnonimas = true;
         }
         //============================================================================ TV RUMOR =============================================================================//
         else if (TimeManager.Dia == 3 && TimeManager.Hora == 7)
@@ -608,6 +694,14 @@ public class TV : MonoBehaviour
             ParquePimientaAislado4 = true;
         }
 
+        
+        else if (bitacoras.ParquePimientaDifamado == true && ParquePimientaDifamado  == false) 
+        {
+            int IncrementoRating = -1;
+            int RetencionNoticia = DifamarRetencion; 
+            StartCoroutine(ImprimirNoticia(ParquePimientaDifamadoTitulo, ParquePimientaDifamadoNoticia, IncrementoRating, RetencionNoticia));
+            ParquePimientaDifamado = true;
+        }
         //============================================================================ TV Pimientapaluzers ===================================================================//
 
         else if (bitacoras.PimientapaluzersEliminado == true && PimientapaluzersEliminado == false)
@@ -624,6 +718,7 @@ public class TV : MonoBehaviour
             StartCoroutine(ImprimirNoticia(PimientapaluzersTitulo2, PimientapaluzersNoticia2, IncrementoRating, RetencionNoticia));
             PimientapaluzersDifamado = true;
         }
+        
         //============================================================================ TV Pepe Queño ===================================================================//
         else if (bitacoras.PepeEliminado == true && bitacoras.BenEliminado == false && PepeQueñoEliminado1 == false)
         {
@@ -774,12 +869,15 @@ public class TV : MonoBehaviour
 
         if (ParquePimientaTitulo1 == titular.text) SetearImagenesNoticias(2);
         if (ParquePimientaTitulo2 == titular.text) SetearImagenesNoticias(2);
+        if (titular.text == ParquePimientaDifamadoTitulo) SetearImagenesNoticias(2);
+
 
         if (titular.text == PimientaPaluzaAisladoTitulo) SetearImagenesNoticias(4);
         if (titular.text == PimientaPaluzaCanceladoTitulo) SetearImagenesNoticias(4);
 
         if (titular.text == PimientapaluzersTitulo) SetearImagenesNoticias(5);
         if (titular.text == PimientapaluzersTitulo2) SetearImagenesNoticias(5);
+
 
         if (PieGrandeDifamadoTitulo == titular.text) SetearImagenesNoticias(6);
 
