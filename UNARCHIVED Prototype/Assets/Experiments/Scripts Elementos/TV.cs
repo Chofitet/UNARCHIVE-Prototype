@@ -432,7 +432,7 @@ public class TV : MonoBehaviour
         {
             int IncrementoRating = 15;
             noticia.text = CasamientoNoticia;//KATE MILLIARD ANUNCIA CASAMIENTO CON PIE GRANDE! LAS LEYENDAS ERAN CIERTAS!
-            titular.text = CasamientoTitulo;
+            titular.text = CasamientoTitulo; // WIP (pregunta de sofi) ¿No deberia poder evitarse lavandole el cerebro a kate?
             PC.Rating = PC.Rating + IncrementoRating;
             if (PC.Rating >= 16) { PC.RatinMaximo(); }
             x = true;
@@ -452,7 +452,7 @@ public class TV : MonoBehaviour
         //============================================================================ TV RUMOR =============================================================================//
         else if (TimeManager.Dia == 3 && TimeManager.Hora == 7)
         {
-            int IncrementoRating = 16;
+            int IncrementoRating = 1;
             noticia.text = RumoresPuebloPimientaNoticia;//BIZARRO RUMOR TOMA MODERADO VUELO EN PUEBLO PIMIENTA
             titular.text = RumoresPuebloPimientaTitulo;
             PC.Rating = PC.Rating + IncrementoRating;

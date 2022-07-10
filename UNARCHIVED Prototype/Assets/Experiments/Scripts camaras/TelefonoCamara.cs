@@ -18,6 +18,14 @@ public class TelefonoCamara : MonoBehaviour
         {
             telefonoCamara = false;
         }
+        
+            if (PC.Rating >= 16)
+            {
+            telefonoCamara = false;
+            }
+        
     }
+
+
 
 }

@@ -24,7 +24,7 @@ public class PC : MonoBehaviour
     public TMP_Text RatingMaimo;
     public Transform transformTermometro;
 
-    public int Rating;
+    static public int Rating { get; set; }
     private int RatingAux;
 
     private void Update()

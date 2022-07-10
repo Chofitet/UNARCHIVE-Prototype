@@ -104,6 +104,7 @@ public class TimeManager : MonoBehaviour
     void FinJuego ()
     {
         Pantallas.SwitchCanvas(CanvasTypePantallas.FinJuego, CanvasTypePantallas.FinJuego);
+        TiempoPausado();
     }
 
    public IEnumerator RetencionBitacorasSegunAccion (float retencion)

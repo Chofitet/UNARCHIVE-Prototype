@@ -11,6 +11,7 @@ public class Libreta : MonoBehaviour
     [SerializeField] Bitacoras bitacoras;
     [SerializeField] Acciones A;
     bool apagado;
+    public GameObject ModeloLibreta;
     public string palabra;
     public GameObject BtnBen;
     public GameObject BtnPieGrande;
@@ -104,8 +105,14 @@ public class Libreta : MonoBehaviour
             BtnColorada.gameObject.SetActive(true);
             x = true;
         }
+       
+            if (PC.Rating >= 16)
+            {
+                ModeloLibreta.SetActive(false);
+            }
+      
 
-        
+
     }
    
     public void Kate()

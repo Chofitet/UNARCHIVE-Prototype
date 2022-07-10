@@ -22,6 +22,7 @@ public class SwitcherApagarLibreta : MonoBehaviour
     {
         Libreta.SetActive(false);
     }
+   
 
-    
+
 }

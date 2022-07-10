@@ -11,7 +11,6 @@ public enum CanvasTypeExp
    Acciones,
    Libreta,
 }
-
 public class ExpCanvasManager : MonoBehaviour
 {
     List<ExpController> canvasControllerList;
@@ -22,6 +21,10 @@ public class ExpCanvasManager : MonoBehaviour
 
     private void Update()
     {
+        if (PC.Rating >= 16)
+        {
+            SwitchCanvas(CanvasTypeExp.ExpedienteDef, CanvasTypeExp.ExpedienteDef);
+        }
         if (Input.GetKeyDown(KeyCode.Mouse1) == true && tutorial.gameObject.activeSelf == false && PasoDeDia.PantallaDia == false)
         {
             SwitchCanvas(CanvasTypeExp.ExpedienteDef, CanvasTypeExp.ExpedienteDef);
