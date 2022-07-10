@@ -13,6 +13,10 @@ public class BotonAprobarSwitch : MonoBehaviour
     public ExpCanvasManager canvasManager;
     Button boton;
    public GameObject AprobadoSello;
+    private void OnEnable()
+    {
+        AprobadoSello.gameObject.SetActive(false);
+    }
     private void Update()
     {
         Debug.Log("accion" + Acciones.AccionSelccionada);
