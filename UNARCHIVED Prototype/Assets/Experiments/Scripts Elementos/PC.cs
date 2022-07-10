@@ -69,8 +69,8 @@ public class PC : MonoBehaviour
         {
             txtInfo.text = "La Leyenda es cierta. De naturaleza andante y esotérica, esta reservada criatura ha sido avistada a lo largo, ancho y alto del globo durante su centenaria existencia; eludiendo a cada largo paso de su personal travesía cualquier tipo de intento de captura."
                 + System.Environment.NewLine + "Gracias a la intervención de su primo, el tratado de paz firmado en el 79 terminó años de rivalidad y cacería entre Pie Grande y La Agencia; aun así no es un ser ajeno a la violencia y deben evitarse situaciones incómodas."
-                + System.Environment.NewLine + "Para la incredulidad del no iniciado, Pie Grande ha mantenido contacto con los avances tecnológicos y, debido a su reservada personalidad, se comunica mejor vía chat que en persona. Es considerado una noble especie en peligro de extinción, y como tal debe ser protegida del alcance del vulgar ciudadano común.";
-
+                + System.Environment.NewLine + "Para la incredulidad del no iniciado, Pie Grande ha mantenido contacto con los avances tecnológicos y, debido a su reservada personalidad, se comunica mejor vía chat que en persona." 
+                + System.Environment.NewLine + "Es considerado una noble especie en peligro de extinción, y como tal debe ser protegida del alcance del vulgar ciudadano común.";
             FotoCarnet(1);
             txtDatos.text = "Edad: 134 años(sin certificado), relativamente joven en años pie."
                 + System.Environment.NewLine
