@@ -16,7 +16,8 @@ public class PantallasSwitcherManager : MonoBehaviour
     List<PantallasSwitcherController> canvasControllerList;
     PantallasSwitcherController lastActiveCanvas;
     PantallasSwitcherController lastActiveCanvas2;
-    [SerializeField] TimeManager time; 
+    [SerializeField] TimeManager time;
+    static public bool TutoActivo { get; set; }
 
     void Start()
     {
@@ -54,5 +55,19 @@ public class PantallasSwitcherManager : MonoBehaviour
 
         time.TiempoPausado();
 
+        DeshabilitarClickDerecho(desiredCanvas);
+
     }
-}
+
+    void DeshabilitarClickDerecho(PantallasSwitcherController canvas)
+    {
+        PantallasSwitcherController Tuto = canvasControllerList.Find(x => x.canvasTypePantallas == CanvasTypePantallas.Tuto);
+        if (canvas == Tuto)
+        {
+            TutoActivo = true;
+        }
+        else TutoActivo = false;
+    }
+
+    }
+

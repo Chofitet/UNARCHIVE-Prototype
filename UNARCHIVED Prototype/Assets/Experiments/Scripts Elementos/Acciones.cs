@@ -10,7 +10,7 @@ public class Acciones : MonoBehaviour
     [SerializeField] internal Bitacoras bitacoras;
     [SerializeField] TV tv;
     [SerializeField] Telefono Pinchofono;
-
+    static public bool AccionSelccionada { get; set; }
     public ToggleGroup acciones;
     public Toggle eliminar;
     public Toggle lavarCerebro;
@@ -95,6 +95,7 @@ public class Acciones : MonoBehaviour
 
         if (analizarMuestra.isOn == true) { txtAnalizarMuestra.text = libreta.palabra; }
         else { txtAnalizarMuestra.text = ""; }
+        
         //(hasta acá) rellenan las palabras al lado de las acciones
     }
     //Funcion llamada cada vez que se apreta el boton aprobar, aplica las acciones
@@ -102,72 +103,88 @@ public class Acciones : MonoBehaviour
     {
         if (action) { eliminar.tag = "OptActivado";  }
         CompletarPalabra();
+        AccionSelccionada = true;
+
     }
     public void LavarCerebro(bool action)
     {
         if (action){ lavarCerebro.tag = "OptActivado"; }
         CompletarPalabra();
+        AccionSelccionada = true;
     }
     public void Investigar(bool action)
     {
         if (action){ investigar.tag = "OptActivado"; }
         CompletarPalabra();
+        AccionSelccionada = true;
     }
     public void Hackear(bool action)
     {
         if (action){ hackear.tag = "OptActivado";}
         CompletarPalabra();
+        AccionSelccionada = true;
     }
     public void Difamar(bool action)
     {
         if (action) {difamar.tag = "OptActivado";}
         CompletarPalabra();
+        AccionSelccionada = true;
     }
     public void Aislar(bool action)
     {
         if (action){ aislar.tag = "OptActivado";}
         CompletarPalabra();
+        AccionSelccionada = true;
     }
     public void MontarEscena(bool action)
     {
         if (action){crearEscena.tag = "OptActivado";}
         CompletarPalabra();
+        AccionSelccionada = true;
     }
     public void CrearnoticiaFalsa(bool action)
     {
         if (action){ crearNoticia.tag = "OptActivado"; }
         CompletarPalabra();
+        AccionSelccionada = true;
     }
     public void AnalizarMuestra (bool action)
     {
         if (action) { analizarMuestra.tag = "OptActivado"; }
         CompletarPalabra();
+        AccionSelccionada = true;
     }
     public void PlantarPublico(bool action)
     {
         if (action) { plantarPublico.tag = "OptActivado"; }
         CompletarPalabra();
+        AccionSelccionada = true;
     }
     public void TrueEnding(bool action)
     {
         if (action) { trueEnding.tag = "OptActivado"; }
         CompletarPalabra();
+        AccionSelccionada = true;
     }
     public void ConvertirCueva(bool action)
     {
         if (action) { convertirCueva.tag = "OptActivado"; }
+        AccionSelccionada = true;
     }
     public void ExtraerFotos(bool action)
     {
         if (action) { extraerFotos.tag = "OptActivado"; }
+        AccionSelccionada = true;
     }
     public void OfrecerProteccion(bool action)
     {
         if (action) { ofrecerProteccion.tag = "OptActivado"; }
+        AccionSelccionada = true;
     }
     public void LevantarCerca(bool action)
     {
         if (action) { levantarCerca.tag = "OptActivado"; }
+        AccionSelccionada = true;
     }
 
 
@@ -189,6 +206,7 @@ public class Acciones : MonoBehaviour
         difamar.isOn = false;
         aislar.isOn = false;
         crearNoticia.isOn = false;
+        
 
     }
     public void DeshabilitarAcciones()
