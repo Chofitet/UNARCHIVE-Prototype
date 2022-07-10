@@ -158,19 +158,22 @@ public class TV : MonoBehaviour
     //============================================================================ TV Pimientapaluza ===================================================================//
     string PimientaPaluzaAnuncioTitulo = "SE APROXIMA EL PIMIENTAPALUZA! TODOS PREPARADOS PARA EL 28"; //EL 24
     string PimientaPaluzaAnuncioNoticia = "EL FESTIVAL MAS GRANDE DEL PLANETA DA COMIENZO ESTE 28 EN PARQUE PIMIENTA. ENTRADAS AGOTADAS!";
-
+    public bool PimientapaluzaSeAdelanta;
     string PimientaPaluzaSeAdelantaTitulo = "PIMIENTAPALUZA SE ADELANTA AL 27/03";//EL 25
-    string PimientaPaluzaSeAdelantaNoticia = "EL FESTIVAL AGREGA UN DIA DANDO INCIO ANTES DE LO ESPERADO. ENTRADAS AGOTADAS!";
+    string PimientaPaluzaSeAdelantaNoticia = "EL FESTIVAL AGREGA UN DÍA DANDO INICIO ANTES DE LO ESPERADO. ENTRADAS AGOTADAS!";
 
     string PimientaPaluzaMañanaTitulo = "PIMIENTAPALUZA COMIENZA MAÑANA";//EL 26
-    string PimientaPaluzaMañanaNoticia = "EL FESTIVAL SE ADELANTA UN DIA ";
+    string PimientaPaluzaMañanaNoticia = "EL FESTIVAL SE ADELANTÓ UN DÍA COMENZANDO AHORA EL 27/03 ";
 
     string PimientaPaluzaArrancaTitulo = "DA INICIO EL PIMIENTAPALUZA";//EL 27
     string PimientaPaluzaArrancaNoticia = "EL FESTIVAL DE MÚSICA MAS GRANDE DEL PLANETA HA DADO COMIENZO EN PARQUE PIMIENTA";
 
+    public bool PimientaPaluzaNoPuedeEntrar;
+    string PimientaPaluzaNoPuedeEntrarTitulo1 = "PIMIENTAPALUZA NO PUEDE COMENZAR DEBIDO A MISTERIOSA CERCA";
+    string PimientaPaluzaNoPuedeEntrarNoticia1 = "DON PALUZA RECLAMA INGRESAR A PARQUE PIMIENTA PARA PODER MONTAR SU FESTIVAL";
 
     bool Pimientapaluzaaislado;
-    string PimientaPaluzaAisladoTitulo = "CERCA GIGANTE RODEA LA CERCA GIGANTE DE PIMIENTAPALUZA";
+    string PimientaPaluzaAisladoTitulo = "CERCA GIGANTE RODEA LA CERCA GIGANTE DEL PIMIENTAPALUZA";
     string PimientaPaluzaAisladoNoticia = "MISTERIOSA CERCA SE CIERRA SOBRE EL FESTIVAL. PIMIENTAPALUZERS SE MUESTRAN APÁTICOS ANTE ESTE SUCESO.";
 
     bool PimientaPaluzaHackeado;
@@ -244,7 +247,9 @@ public class TV : MonoBehaviour
     string PimientapaluzaDifamadoTitulo = "WIP PIMIENTAPALUZA HACE CAMBIO DE LINEUP A ULTIMO MOMENTO";
     string PimientapaluzaDifamadoNoticia = "";
 
-
+    bool BananorramaDifamadoTV;
+    string BananorramaDifamadoTVTitulo = "wip";
+    string BananorramaDifamadoTVNoticia = "";
 
     private void OnEnable()
     {
@@ -447,6 +452,21 @@ public class TV : MonoBehaviour
             BenBombaCasa = true;
             SetearImagenesNoticias(8);
         }
+
+
+        
+        else if (bitacoras.ParquePimientaAislado == true && TimeManager.Dia == 5 && TimeManager.Hora == 12 && PimientaPaluzaNoPuedeEntrar == true)
+        {
+            int IncrementoRating = 2;
+            noticia.text = PimientaPaluzaNoPuedeEntrarNoticia1;
+            titular.text = PimientaPaluzaNoPuedeEntrarTitulo1;
+            PC.Rating = PC.Rating + IncrementoRating;
+            if (PC.Rating >= 16) { PC.RatinMaximo(); }
+            x = true;
+            SetearImagenesNoticias(4);
+          
+        }
+
         else if (TimeManager.Dia == 5 && TimeManager.Hora == 10)
         {
             int IncrementoRating = 0;
@@ -469,7 +489,7 @@ public class TV : MonoBehaviour
             PieGrandeEliminado = true;
             SetearImagenesNoticias(3);
         }
-        else if (TimeManager.Dia == 6 && TimeManager.Hora == 10)
+        else if (TimeManager.Dia == 6 && TimeManager.Hora == 10 && PimientaPaluzaNoPuedeEntrar == false)
         {
             int IncrementoRating = 0;
             noticia.text = PimientaPaluzaMañanaNoticia;//Pimientapaluza Mañana
@@ -479,7 +499,19 @@ public class TV : MonoBehaviour
             x = true;
             SetearImagenesNoticias(4);
         }
-        else if (TimeManager.Dia == 7 && TimeManager.Hora == 10)
+
+        else if (TimeManager.Dia == 6 && TimeManager.Hora == 10 && PimientaPaluzaNoPuedeEntrar == true)
+        {
+            int IncrementoRating = 2;
+            noticia.text = PimientaPaluzaNoPuedeEntrarNoticia1;//Organizadores  reclaman que levanten cerca
+            titular.text = PimientaPaluzaNoPuedeEntrarNoticia1;
+            PC.Rating = PC.Rating + IncrementoRating;
+            if (PC.Rating >= 16) { PC.RatinMaximo(); }
+            x = true;
+            SetearImagenesNoticias(4);
+        }
+
+        else if (TimeManager.Dia == 7 && TimeManager.Hora == 10 && PimientaPaluzaNoPuedeEntrar == false)
         {
             int IncrementoRating = 0;
             noticia.text = PimientaPaluzaArrancaNoticia;//Pimientapaluza Arranca
@@ -489,6 +521,18 @@ public class TV : MonoBehaviour
             x = true;
             SetearImagenesNoticias(4);
         }
+
+        else if (TimeManager.Dia == 7 && TimeManager.Hora == 10 && PimientaPaluzaNoPuedeEntrar == true)
+        {
+            int IncrementoRating = 2;
+            noticia.text = PimientaPaluzaNoPuedeEntrarNoticia1;//Pimientapaluza no puede arrancar
+            titular.text = PimientaPaluzaNoPuedeEntrarNoticia1;
+            PC.Rating = PC.Rating + IncrementoRating;
+            if (PC.Rating >= 16) { PC.RatinMaximo(); }
+            x = true;
+            SetearImagenesNoticias(4);
+        }
+
         else if (bitacoras.KateEliminada == false && bitacoras.KateLavada== false && PieGrandeEliminado == false && KateEliminada == false && TimeManager.Dia == 7 && TimeManager.Hora == 17)
         {
             int IncrementoRating = 15;
@@ -501,7 +545,7 @@ public class TV : MonoBehaviour
         }
 
 
-        else if (bitacoras.PimientaPaluzaAislado == true && bitacoras.PimientaPaluzaCancelado == false && TimeManager.Dia == 6 && TimeManager.Hora == 6)
+        else if (bitacoras.PimientaPaluzaAislado == true && bitacoras.PimientaPaluzaCancelado == false && TimeManager.Dia == 6 && TimeManager.Hora == 6 && Pimientapaluzaaislado == false)
         {
             int IncrementoRating = 2;
             noticia.text = PimientapaluzersReclamanDia6Titulo;
@@ -587,10 +631,19 @@ public class TV : MonoBehaviour
             PuebloPimientaDifamado= true;
         }
 
+        //============================================================================ TV Bananorrama ===================================================================//
+
+        else if (bitacoras.BananorramaDifamado == true && BananorramaDifamadoTV == false)// Hackeado = false
+        {
+            int IncrementoRating = -2;
+            int RetencionNoticia = DifamarRetencion;
+            StartCoroutine(ImprimirNoticia(BananorramaDifamadoTVTitulo, BananorramaDifamadoTVNoticia, IncrementoRating, RetencionNoticia));
+            BananorramaDifamadoTV = true;
+        }
         //============================================================================ TV Pimientapaluza ===================================================================//
 
 
-        else if (bitacoras.PuebloPimientaDifamado == true && PuebloPimientaDifamado == false)// 
+        else if (bitacoras.PimientaPaluzaDifamado == true && PimientapaluzaDifamado == false)// 
         {
             int IncrementoRating = -1;
             int RetencionNoticia = DifamarRetencion;
