@@ -8,6 +8,7 @@ public class Expediente : MonoBehaviour
     [SerializeField] TimeManager time;
     [SerializeField] Bitacoras bitacoras;
     public GameObject libreta;
+    public GameObject modeloCarpeta;
     void OnMouseDown()
     {
         time.TiempoNormal();
@@ -19,6 +20,13 @@ public class Expediente : MonoBehaviour
             
         } 
         else { libreta.SetActive(false); bitacoras.BitacoraCargada = false; }
+    }
+    private void Update()
+    {
+        if (PC.Rating >= 16)
+        {
+            modeloCarpeta.SetActive(false);
+        }
     }
 
 }

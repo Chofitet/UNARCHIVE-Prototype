@@ -18,6 +18,10 @@ public class PCCanvasManager : MonoBehaviour
 
     private void Update()
     {
+        if (PC.Rating >= 16)
+        {
+            SwitchCanvas(CanvasTypePC.PCDef, CanvasTypePC.PCDef);
+        }
         if (Input.GetKeyDown(KeyCode.Mouse1) == true && PasoDeDia.PantallaDia == false)
         {
             SwitchCanvas(CanvasTypePC.PCDef, CanvasTypePC.PCDef);
