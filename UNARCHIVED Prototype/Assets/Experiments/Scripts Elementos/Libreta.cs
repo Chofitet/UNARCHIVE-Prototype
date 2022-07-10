@@ -10,7 +10,7 @@ public class Libreta : MonoBehaviour
     [SerializeField] Expediente ex;
     [SerializeField] Bitacoras bitacoras;
     [SerializeField] Acciones A;
-    bool apagado;
+    static public bool PalabraSeleccionada { get; set; }
     public GameObject ModeloLibreta;
     public string palabra;
     public GameObject BtnBen;
@@ -111,8 +111,6 @@ public class Libreta : MonoBehaviour
                 ModeloLibreta.SetActive(false);
             }
       
-
-
     }
    
     public void Kate()
@@ -120,6 +118,7 @@ public class Libreta : MonoBehaviour
         DesSubrayar();
         palabra = palabrasCaso[2];
         txtKate.text = "<u>Kate Milliard<u>";
+        PalabraSeleccionada = true;
     }
 
     public void Ben ()
@@ -127,6 +126,7 @@ public class Libreta : MonoBehaviour
         DesSubrayar();
         palabra = palabrasCaso[0];
         txtBen.text = "<u>Ben Benji</u>";
+        PalabraSeleccionada = true;
     }
 
     public void PieGrande ()
@@ -134,75 +134,86 @@ public class Libreta : MonoBehaviour
         DesSubrayar();
         palabra = palabrasCaso[1];
         txtPieGrande.text = "<u>Pie Grande</u>" + SignoPreguntaPieGrande;
+        PalabraSeleccionada = true;
     }
     public void PimientaPaluza()
     {
         DesSubrayar();
         palabra = palabrasCaso[3];
         txtPimientaPaluza.text = "<u>Pimientapaluza</u>";
+        PalabraSeleccionada = true;
     }
     public void PuebloPimienta()
     {
         DesSubrayar();
         palabra = palabrasCaso[5];
         txtPuebloPimienta.text = "<u>Pueblo Pimienta</u>";
+        PalabraSeleccionada = true;
     }
     public void Colorada()
     {
         DesSubrayar();
         palabra = palabrasCaso[6];
         txtColorada.text = "<u>colorada?</u>";
+        PalabraSeleccionada = true;
     }
     public void Red78()
     {
         DesSubrayar();
         palabra = palabrasCaso[7];
         txtRed78.text = "<u>Red78?</u>";
+        PalabraSeleccionada = true;
     }
     public void PepeQueño()
     {
         DesSubrayar();
         palabra = palabrasCaso[8];
         txtPepeQueño.text = "<u>Pepe Quenio</u>" + SignoPreguntaPepeQueño;
+        PalabraSeleccionada = true;
     }
     public void CabellosRojizos()
     {
         DesSubrayar();
         palabra = palabrasCaso[9];
         txtCabellosRojizos.text = "<u>cabellos rojizos</u>";
+        PalabraSeleccionada = true;
     }
     public void Bananorrama()
     {
         DesSubrayar();
         palabra = palabrasCaso[4];
         txtBananorrama.text = "<u>Bananorrama?</u>";
+        PalabraSeleccionada = true;
     }
     public void ParquePimienta()
     {
         DesSubrayar();
         palabra = palabrasCaso[10];
         txtParquePimienta.text = "<u>Parque Pimienta<u>";
+        PalabraSeleccionada = true;
     }
     public void Pimientapaluzers()
     {
         DesSubrayar();
         palabra = palabrasCaso[11];
         txtPimientapaluzers.text = "<u>pimientapaluzers<u>";
+        PalabraSeleccionada = true;
     }
     public void WifiRobado()
     {
         DesSubrayar();
         palabra = palabrasCaso[12];
         txtWifiRobado.text = "<u>wifi robado<u>";
+        PalabraSeleccionada = true;
     }
 
     public void DesSubrayar()
     {
-        if(txtBen.text == "<u>Ben Benji</u>") { txtBen.text = palabrasCaso[0]; }
+        if (txtBen.text == "<u>Ben Benji</u>") { txtBen.text = palabrasCaso[0]; }
         else if (txtPieGrande.text == "<u>Pie Grande</u>" + SignoPreguntaPieGrande) { txtPieGrande.text = palabrasCaso[1] + SignoPreguntaPieGrande; }
         else if (txtPimientaPaluza.text == "<u>Pimientapaluza</u>") { txtPimientaPaluza.text = palabrasCaso[3]; }
         else if (txtPuebloPimienta.text == "<u>Pueblo Pimienta</u>") { txtPuebloPimienta.text = palabrasCaso[5]; }
-        else if (txtBananorrama.text == "<u>Bananorrama?</u>") { txtBananorrama.text = palabrasCaso[4] + "?";}
+        else if (txtBananorrama.text == "<u>Bananorrama?</u>") { txtBananorrama.text = palabrasCaso[4] + "?"; }
         else if (txtColorada.text == "<u>colorada?</u>") { txtColorada.text = palabrasCaso[6] + "?"; }
         else if (txtPepeQueño.text == "<u>Pepe Quenio</u>" + SignoPreguntaPepeQueño) { txtPepeQueño.text = palabrasCaso[8] + SignoPreguntaPepeQueño; }
         else if (txtCabellosRojizos.text == "<u>cabellos rojizos</u>") { txtCabellosRojizos.text = palabrasCaso[9]; }
@@ -211,7 +222,7 @@ public class Libreta : MonoBehaviour
         else if (txtParquePimienta.text == "<u>Parque Pimienta<u>") { txtParquePimienta.text = palabrasCaso[10]; }
         else if (txtPimientapaluzers.text == "<u>pimientapaluzers<u>") { txtPimientapaluzers.text = palabrasCaso[11]; }
         else if (txtWifiRobado.text == "<u>wifi robado<u>") { txtWifiRobado.text = palabrasCaso[12]; }
-
+      
     }
 
     public void PersonajeEliminado()
@@ -297,6 +308,7 @@ public class Libreta : MonoBehaviour
     public void SetearPalabraLibretaACero ()
     {
         palabra = "";
+       
     }
 
     public void TacharPalabra (Button btn, TMP_Text txt, int i)

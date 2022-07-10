@@ -25,8 +25,9 @@ public class ExpCanvasManager : MonoBehaviour
         {
             SwitchCanvas(CanvasTypeExp.ExpedienteDef, CanvasTypeExp.ExpedienteDef);
         }
-        if (Input.GetKeyDown(KeyCode.Mouse1) == true && tutorial.gameObject.activeSelf == false && PasoDeDia.PantallaDia == false)
+        if (Input.GetKeyDown(KeyCode.Mouse1) == true && PantallasSwitcherManager.TutoActivo == false && PasoDeDia.PantallaDia == false)
         {
+            Debug.Log("no funciona");
             SwitchCanvas(CanvasTypeExp.ExpedienteDef, CanvasTypeExp.ExpedienteDef);
             time.TiempoNormal();
         }

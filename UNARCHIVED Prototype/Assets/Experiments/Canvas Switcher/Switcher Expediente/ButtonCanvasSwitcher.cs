@@ -19,13 +19,6 @@ public class ButtonCanvasSwitcher : MonoBehaviour
         canvasManager.SwitchCanvas(desiredCanvasType, desiredCanvasType2);
     }
 
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Mouse1) == true)
-        {
-            canvasManager.SwitchCanvas(CanvasTypeExp.ExpedienteDef, CanvasTypeExp.ExpedienteDef);
-        }
-    }
 
     private void Start()
     {

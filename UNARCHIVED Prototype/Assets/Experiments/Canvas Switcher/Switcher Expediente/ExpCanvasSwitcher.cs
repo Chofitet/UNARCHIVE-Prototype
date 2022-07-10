@@ -23,7 +23,7 @@ public class ExpCanvasSwitcher : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Mouse1) == true)
+        if (Input.GetKeyDown(KeyCode.Mouse1) == true && PantallasSwitcherManager.TutoActivo == false && PasoDeDia.PantallaDia == false)
         {
             Carpeta.gameObject.SetActive(false);
         }
