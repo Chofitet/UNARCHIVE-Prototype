@@ -18933,6 +18933,7 @@ Transform:
   - {fileID: 113856865}
   - {fileID: 1988636336}
   - {fileID: 698772800}
+  - {fileID: 2018953226}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -28236,6 +28237,77 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1 &2018953225
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2018953226}
+  - component: {fileID: 2018953227}
+  m_Layer: 0
+  m_Name: SonidosManagement
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2018953226
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2018953225}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -1177.672, y: 67.52699, z: 98.9395}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1426801071}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2018953227
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2018953225}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 816f4d5ec183c584d9e3577125d3203a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  camara: {fileID: 0}
+  AbrirExpediente: {fileID: 2693955428119965530, guid: 2f9d82c46e6dc0646b50e3cb1eead94f, type: 3}
+  CerrarExpediente: {fileID: 16956568562034932, guid: f6a41c5ec48897d4c8c3aed547b45404, type: 3}
+  SonidoImprimir: {fileID: 3924760758477047190, guid: 4a66dcf753551f44ea5473fca2d1ea5d, type: 3}
+  SonidoTachar: {fileID: 8560816922296900077, guid: c35c74790db070a4da5eb043ff1cea52, type: 3}
+  PING: {fileID: 6583076030164176970, guid: f017b858ca18a7b4b92df4d968d59d20, type: 3}
+  RelojNormal: {fileID: 5950911551545462266, guid: 72526facfd5e89143b91ff9d231b5769, type: 3}
+  RelojRapido: {fileID: 6865227081373058436, guid: b02e0a0b214f52c4ca9ccf1b1e6c13bf, type: 3}
+  EscribirPapel:
+  - {fileID: 826747028300232187, guid: 8cb84e1e0b5cf414bba98d27805f968e, type: 3}
+  - {fileID: 1342365992440772043, guid: 41b8f1b5856581c4d8448adc36f60667, type: 3}
+  - {fileID: 3119632794560854626, guid: 19d1e5cf6ff4d324f9a057a6465e90ce, type: 3}
+  ClickMouse:
+  - {fileID: 8629342142397041216, guid: c63b412b98d51f340bc797e823de56fd, type: 3}
+  - {fileID: 7408940091345412453, guid: d2ee1c6bab081ac438edff7a7a36830f, type: 3}
+  - {fileID: 1408720568649355311, guid: a4234afe4734b744db5b87337ffd5706, type: 3}
+  PasarHoja:
+  - {fileID: 157931906236986895, guid: 13d0e639fc4ffd34cb1b15c85c72e90b, type: 3}
+  - {fileID: 4747996553631353212, guid: 9986bfdce8d8ee3479930602395427b4, type: 3}
+  SonidoBoton:
+  - {fileID: 2773480768118358123, guid: 6bc8fdf0541d58048a0f1c40978d5d83, type: 3}
+  - {fileID: 1624024331850727650, guid: 5037dd7846e25294c9744fcb5cbc6200, type: 3}
+  SonidoTeclado:
+  - {fileID: 9168460176264121523, guid: 4ebfd94c54471394e8d9587e140e2c34, type: 3}
+  - {fileID: 5555430501680066728, guid: 20d24db3b92e5ec4ba768950175231ed, type: 3}
+  - {fileID: 6436644893801605420, guid: 8f85975e7302dfa49a3743d4d84d790e, type: 3}
+  - {fileID: 8890671995334624900, guid: 17fc835a7f65b474c8cad45cd1387da2, type: 3}
 --- !u!1 &2023564432
 GameObject:
   m_ObjectHideFlags: 0
