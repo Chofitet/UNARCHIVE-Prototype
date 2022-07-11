@@ -142,21 +142,25 @@ public class TV : MonoBehaviour
     string KateEliminadaTitulo = "EMERGENCIA! MOSTRUOSA CRIATURA ATACA PUEBLO PIMIENTA!";
     string KateEliminadaNoticia = "EMERGENCIA! MOSTRUOSA CRIATURA ATACA PUEBLO PIMIENTA! LAS AUTORIDADES LOCALES PIDEN AYUDA!";
 
-    string KateEliminadaTitulo2 = "PUEBLO PIMIENTA DESTRUIDO!";
-    string KateEliminadaNoticia2 = "PUEBLO PIMIENTA DESTRUIDO!";
+    string KateEliminadaTitulo2 = "PUEBLO PIMIENTA DESTRUIDO! HA SIDO POR ARRASADO POR ENLOQUECIDA MARAÑA DE PELOS";
+    string KateEliminadaNoticia2 = "PUEBLO PIMIENTA DESTRUIDO! HA SIDO POR ARRASADO POR ENLOQUECIDA MARAÑA DE PELOS";
+
+    bool KateDifamada;
+    string KateDifamadaNoticia = "ASISTENTE DE KATE MILLIARD DECLARA: PATEÓ UN MONO EN EL SET DURANTE LA FILMACIÓN DE BANANORRAMA 2";
+    string KateDifamadaTitulo = "ASISTENTE DE KATE MILLIARD DECLARA: PATEÓ UN MONO EN EL SET DURANTE LA FILMACIÓN DE BANANORRAMA 2";
 
     bool CrearEscena;
     string CrearEscenaTitulo = "HOMBRE PELUDO Y COLORADA DESMIENTEN LOS DICHOS DE BENJI ¿ERA FALSO EL RUMOR?";
     string CrearEscenaNoticia = "HOMBRE PELUDO Y COLORADA DESMIENTEN LOS DICHOS DE BENJI ¿ERA FALSO EL RUMOR?";
 
     bool Casamiento;
-    string CasamientoTitulo = "KATE MILLIARD ANUNCIA CASAMIENTO CON PIE GRANDE! LAS LEYENDAS ERAN CIERTAS Y AMOROSAS!";
+    string CasamientoTitulo = "KATE MILLIARD REAPARECE Y ANUNCIA CASAMIENTO CON PIE GRANDE! LAS LEYENDAS ERAN CIERTAS Y AMOROSAS!";
     string CasamientoNoticia = "KATE MILLIARD ANUNCIA CASAMIENTO CON PIE GRANDE! LAS LEYENDAS ERAN CIERTAS Y AMOROSAS!";
 
 
     bool ColoradaDifamada;
-    string ColoradaDifamadaTitulo = "NINFÓMANA CABELLOS DE SATÁN REALIZA ACTOS INDEBIDOS ANTE LA JUVENTUD. MANTENGAN A SUS HIJOS EN SUS CASA.";
-    string ColoradaDifamadaNoticia = "NINFÓMANA CABELLOS DE SATÁN REALIZA ACTOS INDEBIDOS ANTE LA JUVENTUD. MANTENGAN A SUS HIJOS EN SUS CASA.";
+    string ColoradaDifamadaTitulo = "NINFÓMANA CABELLOS DE SATÁN REALIZA ACTOS INDEBIDOS ANTE LA JUVENTUD. MANTENGAN A SUS HIJOS BAJO LLAVE.";
+    string ColoradaDifamadaNoticia = "NINFÓMANA CABELLOS DE SATÁN REALIZA ACTOS INDEBIDOS ANTE LA JUVENTUD. MANTENGAN A SUS HIJOS BAJO LLAVE.";
 
     //============================================================================ TV Pimientapaluza ===================================================================//
     string PimientaPaluzaAnuncioTitulo = "SE APROXIMA EL PIMIENTAPALUZA! TODOS PREPARADOS PARA EL 28"; //EL 24
@@ -185,12 +189,12 @@ public class TV : MonoBehaviour
     string PimientaPaluzaLevantarCercaNoticia = "MISTERIOSA CERCA QUE RODEABA AL PIMIENTAPALUZA DESAPARECE MISTERIOSAMENTE";
 
     bool PimientapaluzaDifamado;
-    string PimientapaluzaDifamadoTitulo = "WIP PIMIENTAPALUZA HACE CAMBIO DE LINEUP A ULTIMO MOMENTO";
+    string PimientapaluzaDifamadoTitulo = "PIMIENTAPALUZA HACE CAMBIO DE LINEUP A ÚLTIMO MOMENTO";
     string PimientapaluzaDifamadoNoticia = "";
 
     bool BananorramaDifamadoTV;
-    string BananorramaDifamadoTVTitulo = "wip";
-    string BananorramaDifamadoTVNoticia = "";
+    string BananorramaDifamadoTVTitulo = "ACUSAN AL FILM BANANORRAMA DE TENER MENSAJES SUBLIMINALES INDECENTES. \"MI HIJO AHORA TIENE IDEAS.\"";
+    string BananorramaDifamadoTVNoticia = "ACUSAN AL FILM BANANORRAMA DE TENER MENSAJES SUBLIMINALES INDECENTES. \"MI HIJO AHORA TIENE IDEAS.\"";
 
 
     bool PimientapaluzaCancelado;
@@ -206,12 +210,16 @@ public class TV : MonoBehaviour
     string PimientapaluzersNoticia2 = "WIP ALGO DIFAMANTE";
 
     bool PimientapaluzersReclamanDia6;
-    string PimientapaluzersReclamanDia6Titulo = "PIMIENTAPALUZERS RECLAMAN INGRESO A PARQUE PIMIENTA";//WIP
-    string PimientapaluzersReclamanDia6Noticia = "PIMIENTAPALUZERS RECLAMAN INGRESO A PARQUE PIMIENTA";
+    string PimientapaluzersReclamanDia6Titulo = "PIMIENTAPALUZERS RECLAMAN INGRESO A PARQUE PIMIENTA";
+    string PimientapaluzersReclamanDia6Noticia = "PIMIENTAPALUZERS RECLAMAN INGRESO A PARQUE PIMIENTA. TENGO MI ENTRADA Y NO MI PALUZA!";
 
     bool PimientapaluzersReclamanDia7;
-    string PimientapaluzersReclamanDia7Titulo = "PIMIENTAPALUZERS RECLAMAN INGRESO A PARQUE PIMIENTA";//WIP
-    string PimientapaluzersReclamanDia7Noticia = "PIMIENTAPALUZERS RECLAMAN INGRESO A PARQUE PIMIENTA";
+    string PimientapaluzersReclamanDia7Titulo = "PIMIENTAPALUZERS RECLAMAN INGRESO A PARQUE PIMIENTA";
+    string PimientapaluzersReclamanDia7Noticia = "PIMIENTAPALUZERS RECLAMAN INGRESO A PARQUE PIMIENTA. TENGO MI ENTRADA Y NO MI PALUZA!";
+
+    bool PimientapaluzerEncuentraCuevaPieGrande;
+    string PimientapaluzerEncuentraCuevaPieGrandeTitulo = "PIMIENTAPALUZER ENCUENTRA LA CUEVA SECRETA DE PIE GRANDE. \"ME PERDÍ VOLVIENDO DE LOSO BAÑOS\"";
+    string PimientapaluzerEncuentraCuevaPieGrandeNoticia = "PIMIENTAPALUZER ENCUENTRA LA CUEVA SECRETA DE PIE GRANDE. \"ME PERDÍ VOLVIENDO DE LOSO BAÑOS\"";
 
     //============================================================================ TV Pepe Queño ===================================================================//
     bool PepeQueñoEliminado1;
@@ -248,8 +256,8 @@ public class TV : MonoBehaviour
     string ParquePimientaNoticia4 = ""; //Pimienta paluza hackeado = true
 
     bool ParquePimientaDifamado;
-    string ParquePimientaDifamadoTitulo = "PARQUE PIMIENTA"; //WIP
-    string ParquePimientaDifamadoNoticia = "";
+    string ParquePimientaDifamadoTitulo = "TURISTA DECLARA: ME AGARRÉ DIARREA DE LEGIONARIO EN PARQUE PIMIENTA."; 
+    string ParquePimientaDifamadoNoticia = "TURISTA DECLARA: ME AGARRÉ DIARREA DE LEGIONARIO EN PARQUE PIMIENTA. POR QUÉ NO HAY QUE VISITAR LA RESERVA";
                                         //============================================================================ TV Pie Grande ===================================================================//
     bool PlantarPublico;
     string PlantarPublicoTitulo = "ABUCHEOS DURANTE ENTREVISTA!LA CREDiBILIDAD DE BENJI SE DESMORONA!!";
@@ -268,6 +276,19 @@ public class TV : MonoBehaviour
     bool PuebloPimientaLevantarCerca;
     string PuebloPimientaLevantarCercaTitulo = "CERCO QUE AISLABA POBLADO ENTERO DESAPARECE. LA GENTE NO ENTIENDE NADA";
     string PuebloPimientaLevantarCercaNoticia = "CERCO QUE AISLABA POBLADO ENTERO DESAPARECE. LA GENTE NO ENTIENDE NADA";
+
+    //============================================================================ TV Red78 ===================================================================//
+    bool Red78Difamada;
+    string Red78DifamadaTitulo = "NINFÓMANA SUELTA EN LA WEB. ¿CON QUIEN CHEATEAN LOS NIÑOS?";
+    string Red78DifamadaNoticia = "NINFÓMANA SUELTA EN LA WEB. ¿CON QUIEN CHEATEAN LOS NIÑOS?";
+
+    //============================================================================ TV WifiRobado ===================================================================//
+
+    bool WifiRobadoDifamado;//WIP
+    string WifiRobadoDifamadoTitulo = "ESCONDIDO EN PARQUE PIMIENTA ROBANDO WIFI";
+    string WifiRobadoDifamadoNoticia = "";
+
+    //===============================================================================================================================================//
 
 
     private void OnEnable()
@@ -552,7 +573,7 @@ public class TV : MonoBehaviour
             SetearImagenesNoticias(4);
         }
 
-        else if (bitacoras.KateEliminada == false && bitacoras.KateLavada== false && PieGrandeEliminado == false && KateEliminada == false && TimeManager.Dia == 7 && TimeManager.Hora == 17)
+        else if (bitacoras.KateEliminada == false && bitacoras.KateLavada== false && PieGrandeEliminado == false && KateEliminada == false && TimeManager.Dia == 7 && TimeManager.Hora == 17 && bitacoras.KateProteccionAceptada == false)
         {
             int IncrementoRating = 15;
             noticia.text = CasamientoNoticia;//KATE MILLIARD ANUNCIA CASAMIENTO CON PIE GRANDE! LAS LEYENDAS ERAN CIERTAS!
@@ -590,6 +611,19 @@ public class TV : MonoBehaviour
 
         }
 
+         else if (bitacoras.PimientaPaluzaAislado == false && bitacoras.PimientaPaluzaCancelado == false && PimientapaluzaCancelado == false && bitacoras.ConvertirCueva == false && TimeManager.Dia == 7 && TimeManager.Hora == 12)
+        {
+            int IncrementoRating = 16;
+            noticia.text = PimientapaluzerEncuentraCuevaPieGrandeTitulo;
+            titular.text = PimientapaluzerEncuentraCuevaPieGrandeNoticia;
+;
+            PC.Rating = PC.Rating + IncrementoRating;
+            if (PC.Rating >= 16) { PC.RatinMaximo(); }
+            x = true;
+            SetearImagenesNoticias(5);
+            PimientapaluzerEncuentraCuevaPieGrande = true;
+
+        }
         //============================================================================ TV FOTOS ANONIMAS =============================================================================//
         else if (TimeManager.Dia == 5 && TimeManager.Hora == 6 && BenEntrevista2 == false && bitacoras.PepeEliminado == false && bitacoras.PepeLavado == false)
         {
@@ -726,6 +760,15 @@ public class TV : MonoBehaviour
             StartCoroutine(ImprimirNoticia(KateEliminadaTitulo2, KateEliminadaNoticia2, IncrementoRating, RetencionNoticia));
             KateEliminada = true;
         }
+        
+        else if (bitacoras.KateDifamada == true && KateDifamada == false)
+        {
+            int IncrementoRating = -2;
+            int RetencionNoticia = DifamarRetencion; // SON 4.
+            StartCoroutine(ImprimirNoticia(KateDifamadaTitulo, KateDifamadaNoticia, IncrementoRating, RetencionNoticia));
+            KateDifamada = true;
+        }
+
         //============================================================================ TV Colorada ===================================================================//
 
         else if (bitacoras.ColoradaDifamada == true && ColoradaDifamada == false)
@@ -735,6 +778,28 @@ public class TV : MonoBehaviour
             StartCoroutine(ImprimirNoticia(ColoradaDifamadaTitulo, ColoradaDifamadaNoticia, IncrementoRating, RetencionNoticia));
             ColoradaDifamada = true;
         }
+
+        //============================================================================ TV Red78 ===================================================================//
+
+        
+        else if (bitacoras.Red78Difamada == true && Red78Difamada == false)
+        {
+            int IncrementoRating = -1;
+            int RetencionNoticia = DifamarRetencion;
+            StartCoroutine(ImprimirNoticia(Red78DifamadaTitulo, Red78DifamadaNoticia, IncrementoRating, RetencionNoticia));
+            ColoradaDifamada = true;
+        }
+
+        //============================================================================ TV Wifi Robado ===================================================================//
+                
+       else if (bitacoras.WifiRobadoDifamado == true && WifiRobadoDifamado == false)
+        {
+            int IncrementoRating = 1;
+            int RetencionNoticia = DifamarRetencion;
+            StartCoroutine(ImprimirNoticia(WifiRobadoDifamadoTitulo, WifiRobadoDifamadoNoticia, IncrementoRating, RetencionNoticia));
+            WifiRobadoDifamado = true;
+        }
+
         //============================================================================ TV Crear Escena ===================================================================//
         else if (bitacoras.CrearEscena == true && CrearEscena == false)
         {
@@ -1034,7 +1099,7 @@ public class TV : MonoBehaviour
     string TitularAleatoria2 = "¿DIETA O RADIACION? CÓMO QUEMAR ESOS KILOS DE MÁS";
     string NoticiaAleatoria2 = "PONETE LOS LENTES, PA";
 
-    string TitularAleatoria3 = "BIZCOCHITOS DE ADAMANTIUM";
+    string TitularAleatoria3 = "¿BIZCOCHITOS DE ADAMANTIUM?";
     string NoticiaAleatoria3 = "SORPRENDE A TUS VISITAS CON EL LIBRO DE RECETAS DE LA ABUELA HARDCORE";
 
     string TitularAleatoria4 = "FESTIVAL 'PATEA UN TIBURÓN' TERMINA EN SORPRESIVA TRAGEDIA";
@@ -1047,10 +1112,10 @@ public class TV : MonoBehaviour
     string NoticiaAleatoria6 = "PONETE LOS LENTES, PA";
 
     string TitularAleatoria7 = "MARIPOSA SENTENCIADA A 60 AÑOS EN PRISIÓN FEDERAL";
-    string NoticiaAleatoria7 = "JUSTICIA AL FIN!";
+    string NoticiaAleatoria7 = "JUSTICIA AL FIN! MARIPOSA SENTENCIADA A 60 AÑOS EN PRISIÓN FEDERAL";
 
     string TitularAleatoria8 = "REBOOT DE PRECUELA SE CONVIERTE EN SPIN-OFF DE REMAKE DEL LIBRO";
-    string NoticiaAleatoria8 = "PONETE LOS LENTES, PA";
+    string NoticiaAleatoria8 = "WIP";
 
     string TitularAleatoria9 = "GAME DESIGNER PROPONE FEATURE A ÚLTIMO MOMENTO";
     string NoticiaAleatoria9 = "GAME DESIGNER SORPRENDE A EQUIPO PROPONIENDO FEATURE ESCENCIAL A HORAS DE ENTREGA";
@@ -1058,17 +1123,17 @@ public class TV : MonoBehaviour
     string TitularAleatoria10 = "COCEAODANU OSAVNIHEE CE A TAU DNUNAZBNMN A AATNATVE";
     string NoticiaAleatoria10 = "PONETE LOS LENTES, PA";
 
-    string TitularAleatoria11 = "LORO BOCASUCIA ARRUINA BAUTISMO";
-    string NoticiaAleatoria11 = "POLLY NO QUIERE UNA GALLETA, QUIERE &#$%@< Y +{<*/:(. ";
+    string TitularAleatoria11 = "LORO BOCASUCIA ARRUINA   BAUTISMO";
+    string NoticiaAleatoria11 = "LORO BOCASUCIA ARRUINA BAUTISMO. POLLY NO QUIERE UNA GALLETA, QUIERE &#$%@< Y +{<*/:(. ";
 
     string TitularAleatoria12 = "COMO ROBAR DESEOS DE CUMPLEAÑOS COMO ESE NENE DE LA PELI";
-    string NoticiaAleatoria12 = "PONETE LOS LENTES, PA";
+    string NoticiaAleatoria12 = "WIP";
 
-    string TitularAleatoria13 = "PATA PETA PITA POTA Y UNA HERMANA WIP";
-    string NoticiaAleatoria13 = "LAS NUEVAS RIMAS DE JARDIN DE INFANTES CLANDESTINO CAUSAN CONTROVERSIA";
+    string TitularAleatoria13 = "PATA PETA PITA POTA Y UNA HERMANA";
+    string NoticiaAleatoria13 = "LAS NUEVAS RIMAS DE LA SEÑO FLAVIA CAUSAN CONTROVERSIA";
 
     string TitularAleatoria14 = "¿ES AMARILLO EL COLOR PARA TU PERSONAJE?";
-    string NoticiaAleatoria14 = "PONETE LOS LENTES, PA";
+    string NoticiaAleatoria14 = "WIP";
 
     string TitularAleatoria15 = "TECHPROOF CUMPLE CON LA MÍNIMA. ALUMNOS SE REGOZIJAN";
     string NoticiaAleatoria15 = "LA LEY DEL MINIMO ESFUERZO DEMUESTRA RESULTADOS UNA VEZ MAS";
@@ -1080,10 +1145,10 @@ public class TV : MonoBehaviour
     string NoticiaAleatoria17 = "¿ES ESTE EL FIN DEL MUNDO DEL PERIODISMO COMO LO CONOCEMOS?";
 
     string TitularAleatoria18 = "ESTERNOCLEIDOMASTOIDEO Y OTRAS 10 PARALABRAS QUEMADAS PARA JUGAR AL AHORCADO COMO UN GIL";
-    string NoticiaAleatoria18 = "PONETE LOS LENTES, PA";
+    string NoticiaAleatoria18 = "ESTERNOCLEIDOMASTOIDEO Y OTRAS 10 PARALABRAS QUEMADAS PARA JUGAR AL AHORCADO COMO UN GIL";
 
-    string TitularAleatoria19 = "ABUELITA REAPARECE DESPUES DE CAER EN DUDOSO POZO SIN FONDO";
-    string NoticiaAleatoria19 = "NIETOS RECLAMAN REGALOS";
+    string TitularAleatoria19 = "ABUELITA REAPARECE A DOS AÑOS DE CAER EN DUDOSO POZO SIN FONDO";
+    string NoticiaAleatoria19 = "ABUELITA REAPARECE A DOS AÑOS DE CAER EN DUDOSO POZO SIN FONDO. NIETOS RECLAMAN REGALOS";
 
     string TitularAleatoria21 = "GROG! LA BEBIDA QUE ALGO ALGO";
     string NoticiaAleatoria21 = "";

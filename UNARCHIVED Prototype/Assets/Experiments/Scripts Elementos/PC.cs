@@ -331,7 +331,9 @@ public class PC : MonoBehaviour
 
     public void RatinMaximo()
     {
-        RatingMaimo.text = "WIP";
+        RatingMaimo.text = "SITUACIÓN LÍMITE ALCANZADA"
+        + System.Environment.NewLine + "ESTADO CONTRATUAL: OBSOLETO"
+        + System.Environment.NewLine + "AGUARDE A SER RETIRADO";
         objTermometro.transform.position = transformTermometro.position;
         time.TiempoPausado();
         Camaras.currentview = camPosition;
