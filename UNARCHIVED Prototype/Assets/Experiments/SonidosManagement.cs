@@ -24,12 +24,14 @@ public class SonidosManagement : MonoBehaviour
 
     void NuevoSonido(GameObject prefabs, Vector3 posición, float duración = 5f, bool ModificarPitch = true)
     {
+        
         GameObject obj = Instantiate(prefabs, posición, Quaternion.identity);
         if (ModificarPitch)
         {
             obj.GetComponent<AudioSource>().pitch *= 1 + Random.Range(-0.2f, 0.2f);
         }
         Destroy(obj, duración);
+        
     }
     void Start()
     {
@@ -39,77 +41,77 @@ public class SonidosManagement : MonoBehaviour
     public void SonidoAbrirExpediente()
     {
         NuevoSonido(AbrirExpediente, camara.position, 1f);
-        Destroy(AbrirExpediente);
+       // Destroy(AbrirExpediente);
     }
 
     public void SonidoCerrarExpediente()
     {
         NuevoSonido(CerrarExpediente, camara.position, 1f);
-        Destroy(CerrarExpediente);
+      //  Destroy(CerrarExpediente);
     }
 
     public void SonidodeImprimir()
     {
         NuevoSonido(SonidoImprimir, camara.position, 1f);
-        Destroy(SonidoImprimir);
+       // Destroy(SonidoImprimir);
     }
 
     public void SonidodeTachar()
     {
         NuevoSonido(SonidoTachar, camara.position, 1f);
-        Destroy(SonidoTachar);
+       // Destroy(SonidoTachar);
     }
 
     public void SonidoPING()
     {
         NuevoSonido(PING, camara.position, 1f);
-        Destroy(PING);
+       // Destroy(PING);
     }
 
     public void SonidoRelojNormal()
     {
         NuevoSonido(RelojNormal, camara.position, 1f);
-        Destroy(RelojNormal);
+       // Destroy(RelojNormal);
     }
 
     public void SonidoRelojRapido()
     {
         NuevoSonido(RelojRapido, camara.position, 1f);
-        Destroy(RelojRapido);
+       // Destroy(RelojRapido);
     }
 
     public void SonidoEscribirPapel()
     {
         int num = Random.Range(0, 3);
         NuevoSonido(EscribirPapel[num], camara.position, 1f);
-        Destroy(EscribirPapel[num]);
+       // Destroy(EscribirPapel[num]);
     }
 
     public void SonidoClickMouse()
     {
         int num = Random.Range(0, 3);
         NuevoSonido(ClickMouse[num], camara.position, 1f);
-        Destroy(ClickMouse[num]);
+       // Destroy(ClickMouse[num]);
     }
 
     public void SonidoPasarHoja()
     {
         int num = Random.Range(0, 2);
         NuevoSonido(PasarHoja[num], camara.position, 1f);
-        Destroy(PasarHoja[num]);
+       // Destroy(PasarHoja[num]);
     }
 
     public void SonidodeBoton()
     {
         int num = Random.Range(0, 2);
         NuevoSonido(SonidoBoton[num], camara.position, 1f);
-        Destroy(SonidoBoton[num]);
+       // Destroy(SonidoBoton[num]);
     }
 
     public void SonidodeTeclado()
     {
         int num = Random.Range(0, 4);
         NuevoSonido(SonidoTeclado[num], camara.position, 1f);
-        Destroy(SonidoTeclado[num]);
+       // Destroy(SonidoTeclado[num]);
     }
 }
