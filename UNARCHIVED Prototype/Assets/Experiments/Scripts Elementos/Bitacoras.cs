@@ -144,6 +144,7 @@ public class Bitacoras : MonoBehaviour
     public bool CrearEscena;
     public bool PlantarPublico;
     public bool TrueEnding;//falta detashar testos
+    public bool ReunirPadreEHijo;
     public bool LevantarCerca;
 
     private string PreUbicacion;
@@ -1620,7 +1621,6 @@ public class Bitacoras : MonoBehaviour
                 float HoraCompletado = RetencionBitacora + TimeManager.Hora;
                 string txt = "<b>ELIMINAR RED78</b>"
                 + System.Environment.NewLine + "Red78 es la reconocida actriz y documentóloga Kate Milliard";
-                if (libreta.BtnPelosRojizos.activeSelf == true) txt = "Bitacora 2";
                 string FechaCompletado = "2" + TimeManager.Dia + "/03";
                 string txtAccion = "Investigar Red78";
                 Toggle accion = A.investigar;
@@ -2761,7 +2761,7 @@ public class Bitacoras : MonoBehaviour
             A.plantarPublico.interactable = false;
         }
         //================================================ Bitacora TRUE ENDING  ===================================================================//
-        if (A.trueEnding.CompareTag(tag = "OptActivado") && A.trueEnding.isOn == true && TrueEnding == false )
+        /*if (A.trueEnding.CompareTag(tag = "OptActivado") && A.trueEnding.isOn == true && TrueEnding == false )
         {
             float RetencionBitacora = 1;
             float HoraCompletado = RetencionBitacora + TimeManager.Hora;
@@ -2787,7 +2787,119 @@ public class Bitacoras : MonoBehaviour
             StartCoroutine(GuardarBitacora(RetencionBitacora, txt, indaux, accion, a));
             TrueEnding = true;
             A.trueEnding.interactable = false;
+        }*/
+
+        if (A.trueEnding.CompareTag(tag = "OptActivado") && A.trueEnding.isOn == true && ReunirPadreEHijo == false && KateProteccionAceptada == true && ConvertirCueva == false)
+        {
+            float RetencionBitacora = 1;
+            float HoraCompletado = RetencionBitacora + TimeManager.Hora;
+            string txt = "<b>FAMILIA REUNIDA</b>"
+            + System.Environment.NewLine + "Padre e hijo se encuentran unidos nuevamente."
+            + System.Environment.NewLine + "Debemos lidiar con el resto de la evidencia del evento.";
+
+            string FechaCompletado = "2" + TimeManager.Dia + "/03";
+            string txtAccion = "Reunir familia";
+            Toggle accion = A.plantarPublico;
+            if (HoraCompletado >= 18)
+            {
+                HoraCompletado = 6 + (RetencionBitacora - (18 - TimeManager.Hora));
+                FechaCompletado = "2" + (TimeManager.Dia + 1) + "/03";
+
+            }
+            int indaux = ind;
+            int a = 1;
+            CargarVectorProgreso(txtAccion, FechaCompletado, HoraCompletado, indaux);
+            SetearBitacora();
+            a = aux;
+            ActualizarIndice();
+            StartCoroutine(GuardarBitacora(RetencionBitacora, txt, indaux, accion, a));
+            ReunirPadreEHijo = true;
+            A.trueEnding.interactable = false;
         }
+        if (A.trueEnding.CompareTag(tag = "OptActivado") && A.trueEnding.isOn == true && ReunirPadreEHijo == false && KateProteccionAceptada == false && ConvertirCueva == false)
+        {
+            float RetencionBitacora = 1;
+            float HoraCompletado = RetencionBitacora + TimeManager.Hora;
+            string txt = "<b>FAMILIA REUNIDA</b>"
+            + System.Environment.NewLine + "Padre e hijo se encuentran unidos nuevamente."
+            + System.Environment.NewLine + "Debemos lidiar con el resto de los involucrados y evidencia del evento.";
+
+            string FechaCompletado = "2" + TimeManager.Dia + "/03";
+            string txtAccion = "Reunir familia";
+            Toggle accion = A.plantarPublico;
+            if (HoraCompletado >= 18)
+            {
+                HoraCompletado = 6 + (RetencionBitacora - (18 - TimeManager.Hora));
+                FechaCompletado = "2" + (TimeManager.Dia + 1) + "/03";
+
+            }
+            int indaux = ind;
+            int a = 1;
+            CargarVectorProgreso(txtAccion, FechaCompletado, HoraCompletado, indaux);
+            SetearBitacora();
+            a = aux;
+            ActualizarIndice();
+            StartCoroutine(GuardarBitacora(RetencionBitacora, txt, indaux, accion, a));
+            ReunirPadreEHijo = true;
+            A.trueEnding.interactable = false;
+        }
+        if (A.trueEnding.CompareTag(tag = "OptActivado") && A.trueEnding.isOn == true && ReunirPadreEHijo == false && KateProteccionAceptada == false && ConvertirCueva == true)
+        {
+            float RetencionBitacora = 1;
+            float HoraCompletado = RetencionBitacora + TimeManager.Hora;
+            string txt = "<b>FAMILIA REUNIDA</b>"
+            + System.Environment.NewLine + "Padre e hijo se encuentran unidos nuevamente."
+            + System.Environment.NewLine + "Debemos lidiar con el resto de los involucrados del evento.";
+
+            string FechaCompletado = "2" + TimeManager.Dia + "/03";
+            string txtAccion = "Reunir familia";
+            Toggle accion = A.plantarPublico;
+            if (HoraCompletado >= 18)
+            {
+                HoraCompletado = 6 + (RetencionBitacora - (18 - TimeManager.Hora));
+                FechaCompletado = "2" + (TimeManager.Dia + 1) + "/03";
+
+            }
+            int indaux = ind;
+            int a = 1;
+            CargarVectorProgreso(txtAccion, FechaCompletado, HoraCompletado, indaux);
+            SetearBitacora();
+            a = aux;
+            ActualizarIndice();
+            StartCoroutine(GuardarBitacora(RetencionBitacora, txt, indaux, accion, a));
+            ReunirPadreEHijo = true;
+            A.trueEnding.interactable = false;
+        }
+        if (A.trueEnding.CompareTag(tag = "OptActivado") && A.trueEnding.isOn == true && TrueEnding == false && KateProteccionAceptada == false && ConvertirCueva == true)
+        {
+            float RetencionBitacora = 1;
+            float HoraCompletado = RetencionBitacora + TimeManager.Hora;
+            string txt = "<b>FAMILIA REUNIDA</b>"
+            + System.Environment.NewLine + "Padre e hijo se encuentran unidos nuevamente."
+            + System.Environment.NewLine + "Debemos lidiar con el resto de los involucrados del evento.";
+
+            string FechaCompletado = "2" + TimeManager.Dia + "/03";
+            string txtAccion = "Reunir familia";
+            Toggle accion = A.plantarPublico;
+            if (HoraCompletado >= 18)
+            {
+                HoraCompletado = 6 + (RetencionBitacora - (18 - TimeManager.Hora));
+                FechaCompletado = "2" + (TimeManager.Dia + 1) + "/03";
+
+            }
+            int indaux = ind;
+            int a = 1;
+            CargarVectorProgreso(txtAccion, FechaCompletado, HoraCompletado, indaux);
+            SetearBitacora();
+            a = aux;
+            ActualizarIndice();
+            StartCoroutine(GuardarBitacora(RetencionBitacora, txt, indaux, accion, a));
+            TrueEnding = true;
+            A.trueEnding.interactable = false;
+        }
+
+
+
         //=========================================================== Bitacora  Ofrecer Protección ===================================================================//
         if (A.ofrecerProteccion.CompareTag(tag = "OptActivado") && A.ofrecerProteccion.isOn == true && OfrecerProteccion == false && PieGrandeEliminado == false)
         {
@@ -2812,8 +2924,33 @@ public class Bitacoras : MonoBehaviour
             StartCoroutine(GuardarBitacora(RetencionBitacora, txt, indaux, accion, a));
             OfrecerProteccion = true;
             KateProteccionAceptada = true;
-
-    A.ofrecerProteccion.interactable = false;
+            A.ofrecerProteccion.interactable = false;
+        }
+        if (A.ofrecerProteccion.CompareTag(tag = "OptActivado") && A.ofrecerProteccion.isOn == true && OfrecerProteccion == false && PieGrandeEliminado == false && ConvertirCueva == true && ReunirPadreEHijo == true)
+        {
+            float RetencionBitacora = 2;
+            float HoraCompletado = RetencionBitacora + TimeManager.Hora;
+            string txt = "<b>PROTECCIÓN OFRECIDA A CAMBIO DE SILENCIO</b>"
+            + System.Environment.NewLine + "Ha aceptado. Pide que busquemos la forma de ayudar a entrar en razón a Pie Grande.";
+            string FechaCompletado = "2" + TimeManager.Dia + "/03";
+            string txtAccion = "Ofrenda de protección a cambio de silencio";
+            Toggle accion = A.ofrecerProteccion;
+            if (HoraCompletado >= 18)
+            {
+                HoraCompletado = 6 + (RetencionBitacora - (18 - TimeManager.Hora));
+                FechaCompletado = "2" + (TimeManager.Dia + 1) + "/03";
+            }
+            int indaux = ind;
+            int a = 1;
+            CargarVectorProgreso(txtAccion, FechaCompletado, HoraCompletado, indaux);
+            SetearBitacora();
+            a = aux;
+            ActualizarIndice();
+            StartCoroutine(GuardarBitacora(RetencionBitacora, txt, indaux, accion, a));
+            OfrecerProteccion = true;
+            TrueEnding = true;
+            KateProteccionAceptada = true;
+            A.ofrecerProteccion.interactable = false;
         }
         if (A.ofrecerProteccion.CompareTag(tag = "OptActivado") && A.ofrecerProteccion.isOn == true && OfrecerProteccion == false && PieGrandeEliminado == true)
         {
@@ -2866,6 +3003,32 @@ public class Bitacoras : MonoBehaviour
             ConvertirCueva = true;
             A.convertirCueva.interactable = false;
         }
+        if (A.convertirCueva.CompareTag(tag = "OptActivado") && A.convertirCueva.isOn == true && ConvertirCueva == false && ParquePimientaAislado == true && ReunirPadreEHijo == true && KateProteccionAceptada == true)
+        {
+            float RetencionBitacora = 1;
+            float HoraCompletado = RetencionBitacora + TimeManager.Hora;
+            string txt = "<b>CUEVA SECRETA CONVERTIDA EN GIFT SHOP</b>"
+            + System.Environment.NewLine + "Quedó irreconocible. Nadie sospechará al encontrarla.";
+            string FechaCompletado = "2" + TimeManager.Dia + "/03";
+            string txtAccion = "Convertir cueva secreta en Gift Shop";
+            Toggle accion = A.convertirCueva;
+            if (HoraCompletado >= 18)
+            {
+                HoraCompletado = 6 + (RetencionBitacora - (18 - TimeManager.Hora));
+                FechaCompletado = "2" + (TimeManager.Dia + 1) + "/03";
+
+            }
+            int indaux = ind;
+            int a = 1;
+            CargarVectorProgreso(txtAccion, FechaCompletado, HoraCompletado, indaux);
+            SetearBitacora();
+            a = aux;
+            ActualizarIndice();
+            StartCoroutine(GuardarBitacora(RetencionBitacora, txt, indaux, accion, a));
+            ConvertirCueva = true;
+            TrueEnding = true;
+            A.convertirCueva.interactable = false;
+        }
         if (A.convertirCueva.CompareTag(tag = "OptActivado") && A.convertirCueva.isOn == true && ConvertirCueva == false && ParquePimientaAislado == false)
         {
             float RetencionBitacora = 0.001f;
@@ -2888,7 +3051,7 @@ public class Bitacoras : MonoBehaviour
             a = aux;
             ActualizarIndice();
             StartCoroutine(GuardarBitacora(RetencionBitacora, txt, indaux, accion, a));
-            ConvertirCueva = true;
+            ConvertirCueva = false;
             A.convertirCueva.interactable = false;
         }
         //=========================================================== Bitacora Extraer fotos ===================================================================//
@@ -3381,42 +3544,42 @@ public class Bitacoras : MonoBehaviour
                 txtBitacoraNoticia = "<b>NOTICIA FALSA CREADA</b>"
                 + System.Environment.NewLine + "Entrará en transmisión a la brevedad.";
                 txtTituloFalsa = "PUEBLO PIMIENTA NOMINADO A PUEBLO MENOS ILUSO DEL PLANETA";
-                txtNoticiaFalsa = "EL PREMIO SERÁ ENTREGADO EN ASDFGD";
+                txtNoticiaFalsa = "EL PREMIO SERÁ ENTREGADO SOLO SI MANTIENEN BAJO PERFIL HASTA EL 28";
                 NumNoticias++;
                 break;
             case 1:
                 txtBitacoraNoticia = "<b>NOTICIA FALSA CREADA</b>"
                 + System.Environment.NewLine + "Entrará en transmisión a la brevedad.";
                 txtTituloFalsa = "ESTUDIO COMPRUEBA QUE EL ESCEPTICISMO PREVIENE LA CAIDA DEL CABELLO";
-                txtNoticiaFalsa = "";
+                txtNoticiaFalsa = "ESTUDIO COMPRUEBA QUE EL ESCEPTICISMO PREVIENE LA CAIDA DEL CABELLO";
                 NumNoticias++;
                 break;
             case 2:
                 txtBitacoraNoticia = "<b>NOTICIA FALSA CREADA</b>"
                 + System.Environment.NewLine + "Entrará en transmisión a la brevedad.";
                 txtTituloFalsa = "MARATÓN DE EL SEÑOR DE LOS ZARCILLOS ARRANCA DE HOY HASTA EL 28/03";
-                txtNoticiaFalsa = "";
+                txtNoticiaFalsa = "MARATÓN DE EL SEÑOR DE LOS ZARCILLOS ARRANCA DE HOY HASTA EL 28/03";
                 NumNoticias++;
                 break;
             case 3:
                 txtBitacoraNoticia = "<b>NOTICIA FALSA CREADA</b>"
                 + System.Environment.NewLine + "Entrará en transmisión a la brevedad.";
                 txtTituloFalsa = "FALLECE CANTANTE IMPORTANTE. PENSEMOS EN EL MUCHO Y MUCHOS DIAS.";
-                txtNoticiaFalsa = "";
+                txtNoticiaFalsa = "FALLECE CANTANTE IMPORTANTE. PENSEMOS EN EL MUCHO Y MUCHOS DIAS.";
                 NumNoticias++;
                 break;
             case 4:
                 txtBitacoraNoticia = "<b>NOTICIA FALSA CREADA</b>"
                 + System.Environment.NewLine + "Entrará en transmisión a la brevedad.";
                 txtTituloFalsa = "NO CREER TODO LO QUE TE DICEN AUMENTA TU VIRILIDAD UN 800%";
-                txtNoticiaFalsa = "";
+                txtNoticiaFalsa = "NO CREER TODO LO QUE TE DICEN AUMENTA TU VIRILIDAD UN 800%";
                 NumNoticias++;
                 break;
             case 5:
                 txtBitacoraNoticia = "<b>NOTICIA FALSA CREADA</b>"
                 + System.Environment.NewLine + "Entrará en transmisión a la brevedad.";
                 txtTituloFalsa = "CONFIRMADO: VISITAR PARQUE PIMIENTA ATRAE LA MALA SUERTE Y EL ESCORBUTO";
-                txtNoticiaFalsa = "";
+                txtNoticiaFalsa = "CONFIRMADO: VISITAR PARQUE PIMIENTA ATRAE LA MALA SUERTE Y EL ESCORBUTO";
                 NumNoticias++;
                 break;
         }

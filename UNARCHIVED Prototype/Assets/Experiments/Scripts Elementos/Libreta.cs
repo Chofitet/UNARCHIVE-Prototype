@@ -244,7 +244,12 @@ public class Libreta : MonoBehaviour
 
    public void ActualizarPalabras(Toggle accion)
     {
-     
+        if(accion == A.eliminar)
+        {
+            if (bitacoras.PieGrandeEliminado == true || bitacoras.PepeEliminado == true) A.tglTrueEnding.SetActive(false);
+            if (A.convertirCueva.isOn == false && bitacoras.PieGrandeEliminado == true) { A.tglConvertirCueva.SetActive(true); }
+        }
+    
         if (accion == A.hackear)
         {
             if (bitacoras.PieGrandeHackeado == true) { EscribirNuevaPalabra(BtnRed78, 7); }
@@ -287,7 +292,10 @@ public class Libreta : MonoBehaviour
                 TacharPalabra(Red78Btn, txtRed78, 7);
                 TacharPalabra(BananoramaBtn, txtBananorrama, 4);
             }
+            if (A.ofrecerProteccion.isOn == false && bitacoras.KateAnalizada == true && bitacoras.PieGrandeUbicacion == true && bitacoras.KateEliminada == false) { A.tglOfrecerprotección.SetActive(true); }
+
             if (bitacoras.PieGrandeEliminado == false && bitacoras.PepeEliminado == false && bitacoras.PepeAnalizado == true && bitacoras.PieGrandeUbicacion == true) A.tglTrueEnding.SetActive(true);
+            
         }
         if (accion == A.lavarCerebro)
         {
@@ -297,6 +305,12 @@ public class Libreta : MonoBehaviour
         {
             if (bitacoras.CrearEscena == true) { EscribirNuevaPalabra(BtnPepeQueño, 8); }
         } 
+        if (accion == bitacoras.ReunirPadreEHijo)
+        {
+            if (A.convertirCueva.isOn == false && bitacoras.ReunirPadreEHijo == true) { A.tglConvertirCueva.SetActive(true); }
+            
+        }
+        
 
         // Wip para cuando esten las bitacoras parte dos de los aislados, descomentar las condiciones y poner el nombre correcto de las variables.
             

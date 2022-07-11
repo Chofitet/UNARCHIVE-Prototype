@@ -59,10 +59,9 @@ public class Acciones : MonoBehaviour
         //if (bitacoras.ParquePimientaAislado) tglAislar.SetActive(false);
 
         ///acciones  para agregar condiciones (solo en los if) AGREGAR && 
-        if (convertirCueva.isOn == false && bitacoras.TrueEnding == true) { tglConvertirCueva.SetActive(true); }
-        if (convertirCueva.isOn == false && bitacoras.PieGrandeEliminado == true) { tglConvertirCueva.SetActive(true); }
+        
         if (extraerFotos.isOn == false && tv.BenEntrevista2 == false && Pinchofono.BenLlamado==true && bitacoras.ExtraerFoto == false) { tglExtraerFotos.SetActive(true); }
-        if (ofrecerProteccion.isOn == false && bitacoras.KateAnalizada == true && bitacoras.PieGrandeUbicacion == true && bitacoras.KateEliminada == false) { tglOfrecerprotección.SetActive(true); }
+        
     }
     ///////////////////////////////////////////////////////
     
