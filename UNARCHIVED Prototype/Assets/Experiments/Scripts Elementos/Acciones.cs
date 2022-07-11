@@ -62,7 +62,7 @@ public class Acciones : MonoBehaviour
         if (convertirCueva.isOn == false && bitacoras.TrueEnding == true) { tglConvertirCueva.SetActive(true); }
         if (convertirCueva.isOn == false && bitacoras.PieGrandeEliminado == true) { tglConvertirCueva.SetActive(true); }
         if (extraerFotos.isOn == false && tv.BenEntrevista2 == false && Pinchofono.BenLlamado==true && bitacoras.ExtraerFoto == false) { tglExtraerFotos.SetActive(true); }
-        if (ofrecerProteccion.isOn == false && bitacoras.KateAnalizada == true && bitacoras.PieGrandeUbicacion == true ) { tglOfrecerprotección.SetActive(true); }
+        if (ofrecerProteccion.isOn == false && bitacoras.KateAnalizada == true && bitacoras.PieGrandeUbicacion == true && bitacoras.KateEliminada == false) { tglOfrecerprotección.SetActive(true); }
     }
     ///////////////////////////////////////////////////////
     

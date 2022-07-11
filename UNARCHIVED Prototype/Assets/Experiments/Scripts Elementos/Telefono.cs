@@ -94,7 +94,9 @@ public class Telefono : MonoBehaviour
                         if (bitacora.PepeEliminado == false && bitacora.PepeLavado == false && BenLlamado == false)
                         {
 
-                            txtTranscripciónLlamado.text = "****¿Por qué te voy a mentir? Te lo juro, Pepe Quenio! Era igual a vos! Mirá las fotos que te mandé.****";
+                            txtTranscripciónLlamado.text = "EXTRACTO DE LLAMADO ENTRE BENJI Y ¿AMIGO?"
+                            + System.Environment.NewLine 
+                            + System.Environment.NewLine + "****¿Por qué te voy a mentir? Te lo juro, Pepe Quenio! Era igual a vos! Mirá las fotos que te mandé.****";
                             BenLlamado = true;
                             libreta.EscribirNuevaPalabra(libreta.BtnPepeQueño, 8);
 
