@@ -105,8 +105,9 @@ public class Telefono : MonoBehaviour
                     else if (bitacora.BenLavado == true && bitacora.BenRetirado == false)
                     {
                         txtTranscripciónLlamado.text = "****No tengo idea de que me hablas, Pepe Quenio. No ví nada en Parque Pimienta! Me haces doler la cabeza, no me llames denuevo...****";
-                    }
-                    else if (bitacora.PepeEliminado == true)
+                        libreta.EscribirNuevaPalabra(libreta.BtnPepeQueño, 8);
+                }
+                    else if (bitacora.BenEliminado == true)
                     { txtTranscripciónLlamado.text = "Ben Benji no puede realizar llamadas desde... La Granja"; }
 
                     LlamadaDiariaBen = true;

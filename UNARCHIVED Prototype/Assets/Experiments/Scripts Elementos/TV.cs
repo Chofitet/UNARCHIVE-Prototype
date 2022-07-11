@@ -635,7 +635,7 @@ public class TV : MonoBehaviour
         //============================================================================ TV RUMOR =============================================================================//
         else if (TimeManager.Dia == 3 && TimeManager.Hora == 7)
         {
-            int IncrementoRating = 1;
+            int IncrementoRating = 16;
             noticia.text = RumoresPuebloPimientaNoticia;//BIZARRO RUMOR TOMA MODERADO VUELO EN PUEBLO PIMIENTA
             titular.text = RumoresPuebloPimientaTitulo;
             PC.Rating = PC.Rating + IncrementoRating;
