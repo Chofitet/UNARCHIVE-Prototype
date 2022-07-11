@@ -96,8 +96,9 @@ public class Telefono : MonoBehaviour
 
                             txtTranscripciónLlamado.text = "****¿Por qué te voy a mentir? Te lo juro, Pepe Quenio! Era igual a vos! Mirá las fotos que te mandé.****";
                             BenLlamado = true;
+                            libreta.EscribirNuevaPalabra(libreta.BtnPepeQueño, 8);
 
-                        }
+                    }
                     }
                     else if (bitacora.BenLavado == true && bitacora.BenRetirado == false)
                     {
@@ -199,7 +200,7 @@ public class Telefono : MonoBehaviour
 
     void ActualizarPalabras()
     {
-        libreta.BtnPepeQueño.gameObject.SetActive(true);
+        
     }
 
     public void Play()

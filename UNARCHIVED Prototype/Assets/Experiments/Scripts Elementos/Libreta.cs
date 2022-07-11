@@ -11,7 +11,7 @@ public class Libreta : MonoBehaviour
     [SerializeField] Bitacoras bitacoras;
     [SerializeField] Acciones A;
     [SerializeField] SonidosManagement Sonidos;
-    static public bool PalabraSeleccionada { get; set; }
+    static public bool PalabraSeleccionada { get;  set; }
     public GameObject ModeloLibreta;
     public string palabra;
     public GameObject BtnBen;

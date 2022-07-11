@@ -24,6 +24,7 @@ public class TV : MonoBehaviour
     [SerializeField] Image ImgNoticiaDef;
     [SerializeField] Image ImgNoticia;
     [SerializeField] private Sprite[] vcImgNoticia;
+    [SerializeField] SonidosManagement Sonidos;
     bool x;
     int CualLista;
     int NumNoticiasAteatorias = 1;
@@ -32,6 +33,7 @@ public class TV : MonoBehaviour
     {
         CualLista = Random.Range(0, 3);
         NoticiasAliatorias();
+        Sonidos = FindObjectOfType<SonidosManagement>();
     }
 
     int EliminarRetencion = 2;
@@ -767,7 +769,7 @@ public class TV : MonoBehaviour
             int RetencionNoticia = AislarRetencion;
             StartCoroutine(ImprimirNoticia(ParquePimientaTitulo1, ParquePimientaNoticia1, IncrementoRating, RetencionNoticia));
             ParquePimientaAislado1 = true;
-            libreta.BtnPimientapaluzers.SetActive(true); //WIP
+           
         }
         /* else if (bitacoras.ParquePimientaAislado == true && ParquePimientaAislado2 == false) 
          {
@@ -929,24 +931,23 @@ public class TV : MonoBehaviour
 
     public void PulsadoDeTV ()
     {
-        if (titular.text == PimientaPaluzaAnuncioTitulo) libreta.BtnPimientaPaluza.SetActive(true);
-        if (titular.text == PimientaPaluzaSeAdelantaTitulo) libreta.BtnPimientaPaluza.SetActive(true);
-        if (titular.text == PimientaPaluzaMañanaTitulo) libreta.BtnPimientaPaluza.SetActive(true);
-        if (titular.text == PimientaPaluzaArrancaTitulo) libreta.BtnPimientaPaluza.SetActive(true);
+        if (ParquePimientaTitulo1 == titular.text) libreta.EscribirNuevaPalabra(libreta.BtnPimientapaluzers,3);
+        if (titular.text == PimientaPaluzaAnuncioTitulo) libreta.EscribirNuevaPalabra(libreta.BtnPimientaPaluza,3);
+        if (titular.text == PimientaPaluzaSeAdelantaTitulo) libreta.EscribirNuevaPalabra(libreta.BtnPimientaPaluza,3);
+        if (titular.text == PimientaPaluzaMañanaTitulo) libreta.EscribirNuevaPalabra(libreta.BtnPimientaPaluza,3);
+        if (titular.text == PimientaPaluzaArrancaTitulo) libreta.EscribirNuevaPalabra(libreta.BtnPimientaPaluza,3);
 
-        if (titular.text == PieGrandeEliminadoTitulo2) libreta.BtnKateMilliard.SetActive(true);
-        if (titular.text == CasamientoTitulo) libreta.BtnKateMilliard.SetActive(true);
+        if (titular.text == PieGrandeEliminadoTitulo2) libreta.EscribirNuevaPalabra(libreta.BtnKateMilliard, 2);
+        if (titular.text == CasamientoTitulo) libreta.EscribirNuevaPalabra(libreta.BtnKateMilliard, 2);
 
         if (titular.text == BenEntrevistaTitulo2) 
-        { 
-            libreta.BtnParquePimienta.SetActive(true); 
+        {
+            libreta.EscribirNuevaPalabra(libreta.BtnParquePimienta, 10);
 
         }
-        /*  poner en la comparación el título de la noticia que lo activa
-         if (titular.text ==  ) libreta.BtnKateMilliard.SetActive(true);
-          
- */
-        if (titular.text == PimientaPaluzaAisladoTitulo) libreta.BtnPimientapaluzers.SetActive(true);
+    
+        if (titular.text == PimientaPaluzaAisladoTitulo) libreta.EscribirNuevaPalabra(libreta.BtnPimientapaluzers, 11);
+
         if (titular.text == BenEntrevistaTitulo1) A.tglPlantarPublico.SetActive(true);
         if (titular.text == BenEntrevistaTitulo1b && PlantarPublico == false) A.tglPlantarPublico.SetActive(true);
 

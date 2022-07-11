@@ -145,8 +145,10 @@ public class Acciones : MonoBehaviour
     public void CrearnoticiaFalsa(bool action)
     {
         if (action){ crearNoticia.tag = "OptActivado"; }
-        CompletarPalabra();
         AccionSelccionada = true;
+        libreta.palabra = "";
+        Libreta.PalabraSeleccionada = true;
+        libreta.DesSubrayar();
     }
     public void AnalizarMuestra (bool action)
     {
@@ -170,21 +172,33 @@ public class Acciones : MonoBehaviour
     {
         if (action) { convertirCueva.tag = "OptActivado"; }
         AccionSelccionada = true;
+        libreta.palabra = "";
+        Libreta.PalabraSeleccionada = true;
+        libreta.DesSubrayar();
     }
     public void ExtraerFotos(bool action)
     {
         if (action) { extraerFotos.tag = "OptActivado"; }
         AccionSelccionada = true;
+        libreta.palabra = "";
+        Libreta.PalabraSeleccionada = true;
+        libreta.DesSubrayar();
     }
     public void OfrecerProteccion(bool action)
     {
         if (action) { ofrecerProteccion.tag = "OptActivado"; }
         AccionSelccionada = true;
+        libreta.palabra = "";
+        Libreta.PalabraSeleccionada = true;
+        libreta.DesSubrayar();
     }
     public void LevantarCerca(bool action)
     {
         if (action) { levantarCerca.tag = "OptActivado"; }
         AccionSelccionada = true;
+        libreta.palabra = "";
+        Libreta.PalabraSeleccionada = true;
+        libreta.DesSubrayar();
     }
 
 
