@@ -24,10 +24,11 @@ public class PC : MonoBehaviour
     public Sprite[] personajes;
     public TMP_Text RatingMaimo;
     public Transform transformTermometro;
-    
+
 
     static public int Rating { get; set; }
     private int RatingAux;
+    bool BDPimientapaluzaLeida;
     private void Start()
     {
 
@@ -35,7 +36,7 @@ public class PC : MonoBehaviour
     }
     private void Update()
     {
-        
+
         txtRating.text = Rating + "";
         txtBuscador.text = libreta.palabra;
         if (RatingAux < Rating)
@@ -54,11 +55,11 @@ public class PC : MonoBehaviour
     }
 
     //Actualiza la wiki cada vez que le das a la lupa
-    public void MostrarWiki ()
+    public void MostrarWiki()
     {
         //================================================================ Wiki Ben =======================================================//
         Sonido.SonidoClickMouse();
-        if(txtBuscador.text == libreta.palabrasCaso[0])
+        if (txtBuscador.text == libreta.palabrasCaso[0])
 
         {
             txtInfo.text = "Niño común, académicamente correcto, no posee características ni poderes especiales. Si leer esto te parece aburrido y consideras que quien redactó esta entrada carece de ambición creativa, agradece que no conoces a Ben Benji.";
@@ -77,10 +78,10 @@ public class PC : MonoBehaviour
         {
             txtInfo.text = "La Leyenda es cierta. De naturaleza andante y esotérica, esta reservada criatura ha sido avistada a lo largo, ancho y alto del globo durante su centenaria existencia; eludiendo a cada largo paso de su personal travesía cualquier tipo de intento de captura."
                 + System.Environment.NewLine + "Gracias a la intervención de su primo, el tratado de paz firmado en el 79 terminó años de rivalidad y cacería entre Pie Grande y La Agencia; aun así no es un ser ajeno a la violencia y deben evitarse situaciones incómodas."
-                + System.Environment.NewLine + "Para la incredulidad del no iniciado, Pie Grande ha mantenido contacto con los avances tecnológicos y, debido a su reservada personalidad, se comunica mejor vía chat que en persona." 
+                + System.Environment.NewLine + "Para la incredulidad del no iniciado, Pie Grande ha mantenido contacto con los avances tecnológicos y, debido a su reservada personalidad, se comunica mejor vía chat que en persona."
                 + System.Environment.NewLine + "Es considerado una noble especie en peligro de extinción, y como tal debe ser protegida del alcance del vulgar ciudadano común.";
             FotoCarnet(1);
-            txtDatos.text = "Edad: 134 años(sin certificado), relativamente joven en años pie."
+            txtDatos.text = "Edad: 134 años(sin certificado)."
                 + System.Environment.NewLine
                 + System.Environment.NewLine + "Estado: Divorciado en el 91."
                 + System.Environment.NewLine
@@ -95,7 +96,7 @@ public class PC : MonoBehaviour
                 + System.Environment.NewLine
                 + System.Environment.NewLine + "Estado: Soltera"
                 + System.Environment.NewLine
-                + System.Environment.NewLine + "Última vez vista en: Monte Quete."; 
+                + System.Environment.NewLine + "Última vez vista en: Monte Quete.";
         }
         //================================================================ Wiki Colorada =======================================================//
         else if (txtBuscador.text == libreta.palabrasCaso[6])
@@ -136,30 +137,31 @@ public class PC : MonoBehaviour
                + System.Environment.NewLine
                + System.Environment.NewLine + "Última vez visto en: Pueblo Pimienta.";
             }
-            
+
 
         }
-      
+
         //================================================================ Wiki Pimientapaluza =======================================================//
         else if (txtBuscador.text == libreta.palabrasCaso[3])
         {
             txtInfo.text = "Solo un absoluto careta buscaría el significado de la Pimientaexperiencia en una computadora."
             + System.Environment.NewLine + "Es el 28 de Marzo en Parque Pimienta. SIEMPRE. CARETA."
-            + System.Environment.NewLine 
-            + System.Environment.NewLine 
-            + System.Environment.NewLine 
-            + System.Environment.NewLine 
-            + System.Environment.NewLine 
-            + System.Environment.NewLine 
-            + System.Environment.NewLine 
-            + System.Environment.NewLine 
+            + System.Environment.NewLine
+            + System.Environment.NewLine
+            + System.Environment.NewLine
+            + System.Environment.NewLine
+            + System.Environment.NewLine
+            + System.Environment.NewLine
+            + System.Environment.NewLine
+            + System.Environment.NewLine
             + System.Environment.NewLine + "NOTA: POR FAVOR, MANTENGAMOS CIVILES LAS ENTRADAS EN LA BASE DE DATOS";
             FotoCarnet(7);
             txtDatos.text = "";
+            BDPimientapaluzaLeida = true;
         }
 
         //================================================================ Wiki Parque Pimienta =======================================================//
-        else if (txtBuscador.text== libreta.palabrasCaso[10])
+        else if (txtBuscador.text == libreta.palabrasCaso[10])
         {
             txtInfo.text = "Enorme reserva ambiental ubicada entre el dorso de Pueblo Pimienta y Monte Quete, es el austero hogar de especies nativas tales como el caribú mostaza, la liebre vermin y el noble salmón araña."
             + System.Environment.NewLine + "A pesar de su propósito es también, controversialmente, el hogar del festival de música más masivo del planeta: El Pimentapaluza, festejado religiosamente en la inamovible fecha del 28 de Marzo de cada año.";
@@ -171,7 +173,7 @@ public class PC : MonoBehaviour
         else if (txtBuscador.text == libreta.palabrasCaso[5])
         {
             txtInfo.text = "Ex Ciudad Pimienta, descendida a Pueblo luego de la Triquiñuela del 68."
-            + System.Environment.NewLine + "El segundo pueblo más poblado de Quete es una zona semi rural pos urbana que se encuentra en un proceso de reivindicación fiscal. Es "
+            + System.Environment.NewLine + "El segundo pueblo más poblado de Quete es una zona semi rural pos urbana que se encuentra en un proceso de reivindicación fiscal."
             + System.Environment.NewLine + "Si bien los ingresos anuales generados por la reserva ambiental Parque Pimienta son suficientes para soportar la economía de diez Pueblos Pimienta, intentan mantener su urbanidad controlable.";
 
             libreta.EscribirNuevaPalabra(libreta.BtnParquePimienta, 10);
@@ -181,17 +183,33 @@ public class PC : MonoBehaviour
             + System.Environment.NewLine + "Ubicacion: Quete.";
         }
         //================================================================ Wiki Pimientapaluzers =======================================================//
-        else if (txtBuscador.text == libreta.palabrasCaso[11])
+        else if (txtBuscador.text == libreta.palabrasCaso[11] && BDPimientapaluzaLeida == true)
         {
             txtInfo.text = "CARETA."
-            + System.Environment.NewLine 
-            + System.Environment.NewLine 
-            + System.Environment.NewLine 
-            + System.Environment.NewLine 
-            + System.Environment.NewLine 
-            + System.Environment.NewLine 
-            + System.Environment.NewLine 
-            + System.Environment.NewLine 
+            + System.Environment.NewLine
+            + System.Environment.NewLine
+            + System.Environment.NewLine
+            + System.Environment.NewLine
+            + System.Environment.NewLine
+            + System.Environment.NewLine
+            + System.Environment.NewLine
+            + System.Environment.NewLine
+            + System.Environment.NewLine + "NOTA: POR FAVOR!!";
+            FotoCarnet(8);
+            txtDatos.text = "";
+
+        }
+        else if (txtBuscador.text == libreta.palabrasCaso[11] && BDPimientapaluzaLeida == false)
+        {
+            txtInfo.text = "..."
+            + System.Environment.NewLine
+            + System.Environment.NewLine
+            + System.Environment.NewLine
+            + System.Environment.NewLine
+            + System.Environment.NewLine
+            + System.Environment.NewLine
+            + System.Environment.NewLine
+            + System.Environment.NewLine
             + System.Environment.NewLine + "NOTA: POR FAVOR!!";
             FotoCarnet(8);
             txtDatos.text = "";
@@ -210,12 +228,12 @@ public class PC : MonoBehaviour
         //================================================================ Wiki Bananorrama =======================================================//
         else if (txtBuscador.text == libreta.palabrasCaso[4])
         {
-            txtInfo.text = "Comedia romántica estrenada en 1994. La actuación y encendida cabellera de Kate Milliard capturó a la audiencia catapultandola a la fama." ;
+            txtInfo.text = "Comedia romántica estrenada en 1994. La actuación y encendida cabellera de Kate Milliard capturó a la audiencia catapultandola a la fama.";
             libreta.EscribirNuevaPalabra(libreta.BtnKateMilliard, 2);
             libreta.TacharPalabra(libreta.BananoramaBtn, libreta.txtBananorrama, 4);
             FotoCarnet(9);
             txtDatos.text = "";
-            }
+        }
         //================================================================ Wiki red78 =======================================================//
         else if (txtBuscador.text == libreta.palabrasCaso[7])
         {
@@ -223,7 +241,7 @@ public class PC : MonoBehaviour
         }
     }
 
-    public void BorrarWiki ()
+    public void BorrarWiki()
     {
         txtBuscador.text = "Buscar...";
         txtInfo.text = "";
@@ -291,7 +309,7 @@ public class PC : MonoBehaviour
 
     }
 
-    void FotoCarnet (int num)
+    void FotoCarnet(int num)
     {
         switch (num)
         {
@@ -326,20 +344,21 @@ public class PC : MonoBehaviour
                 fotoCarnet.sprite = personajes[9];
                 break;
         }
-        
+
     }
 
     public void RatinMaximo()
     {
-        RatingMaimo.text = "SITUACIÓN LÍMITE ALCANZADA"
-        + System.Environment.NewLine + "ESTADO CONTRATUAL: OBSOLETO"
-        + System.Environment.NewLine + "AGUARDE A SER RETIRADO";
+        RatingMaimo.text = "-SITUACIÓN LÍMITE ALCANZADA."
+        + System.Environment.NewLine + "-ESTADO CONTRATUAL: OBSOLETO."
+        + System.Environment.NewLine + "-AGUARDE A SER RETIRADO";
         objTermometro.transform.position = transformTermometro.position;
         time.TiempoPausado();
         Camaras.currentview = camPosition;
         FondoInvisible.SetActive(true);
     }
 
-    
+
 
 }
+

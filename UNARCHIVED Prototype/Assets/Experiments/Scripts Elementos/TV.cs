@@ -44,7 +44,7 @@ public class TV : MonoBehaviour
     int CrearEscenaRetencion = 3;
     int AislarRetencion = 3;
     int LevantarCercaRetencion = 1;
-    
+
 
 
     private bool NF1;
@@ -99,7 +99,7 @@ public class TV : MonoBehaviour
     bool BenBombaEscuela;
     string BenBombaEscuelaTitulo = "ESCUELA EXPLOTA! ¿QUE ESTA PASANDO EN PUEBLO PIMIENTA?";
     string BenBombaEscuelaNoticia = "GRACIAS A LA GRACIA DEL SEÑOR NO HAY VICTIMAS AL ENCONTRARSE EL COLEGIO ENTERO EN EXCURSION BARRIAL. FIUUU!!";
-     
+
 
     bool BenBrainwash;
     string BenBrainwashTitulo = "NIÑO AVISTADOR NIEGA TODO ¿COBARDE MENTIROSO O CONSPIRADOR?";
@@ -131,7 +131,7 @@ public class TV : MonoBehaviour
     string PieGrandeEliminadoNoticia = "REVELACIONES PELUDAS! LA NOVIA SECRETA DE PIE GRANDE DECLARA TODO HOY A LAS 17";
 
     bool KateEliminado2;
-    string PieGrandeEliminadoTitulo2 = "PIE GRANDE ERA MI FIANCÉ. REAPARECE KATE MILLIARD Y CUENTA TODO!"; 
+    string PieGrandeEliminadoTitulo2 = "PIE GRANDE ERA MI FIANCÉ. REAPARECE KATE MILLIARD Y CUENTA TODO!";
     string PieGrandeEliminadoNoticia2 = "PIE GRANDE ERA MI FIANCÉ. REAPARECE KATE MILLIARD Y CUENTA TODO! PERO TODO TODO!";
 
     bool PieGrandeDifamado;
@@ -206,8 +206,8 @@ public class TV : MonoBehaviour
     string PimientapaluzersNoticia = "SANGRE Y PULSERAS POR DOQUIER. ¡MASACRE FRENTE A PARQUE PIMIENTA!";
 
     bool PimientapaluzersDifamado;
-    string PimientapaluzersTitulo2 = "WIP ALGO DIFAMANTE";
-    string PimientapaluzersNoticia2 = "WIP ALGO DIFAMANTE";
+    string PimientapaluzersTitulo2 = "ESTUDIO DEMUESTRA QUE SER PIMIENTAPALUZER EQUIVALE A SER UN POSER";
+    string PimientapaluzersNoticia2 = "ESTUDIO DEMUESTRA QUE SER PIMIENTAPALUZER EQUIVALE A SER UN POSER";
 
     bool PimientapaluzersReclamanDia6;
     string PimientapaluzersReclamanDia6Titulo = "PIMIENTAPALUZERS RECLAMAN INGRESO A PARQUE PIMIENTA";
@@ -231,12 +231,12 @@ public class TV : MonoBehaviour
     string PepeQueñoNoticia2 = "NADIE SE PRESENTA A BUSQUEDA DE NIÑO PELUDO, TRISTE Y RARO";
 
     bool FotosAnonimas;
-    string FotosAnonimasTitulo = "WIP"; //Parte 2
-    string FotosAnonimasNoticia = "WIP";
+    string FotosAnonimasTitulo = "RECIBIMOS FOTOS ANÓNIMAS DEL EXTRAÑO AVISTAMIENTO EN PARQUE PIMIENTA"; //Parte 2
+    string FotosAnonimasNoticia = "RECIBIMOS FOTOS ANÓNIMAS DEL EXTRAÑO AVISTAMIENTO EN PARQUE PIMIENTA ¿ QUÉ DICEN QUE SE VE AHÍ?";
 
     //============================================================================ TV Parque Pimienta =============================================================================//
     bool ParquePimientaAislado1;
-    string ParquePimientaTitulo1 = "MISTERIOSA CERCA RODEA PARQUE PIMIENTA!"; 
+    string ParquePimientaTitulo1 = "MISTERIOSA CERCA RODEA PARQUE PIMIENTA!";
     string ParquePimientaNoticia1 = "MISTERIOSA CERCA RODEA PARQUE PIMIENTA!¿QUE ESTÁ PASANDO EN PUEBLO PIMIENTA?";
 
     bool ParquePimientaLevantarCerca;
@@ -244,8 +244,8 @@ public class TV : MonoBehaviour
     string ParquePimientaLevantarCercaNoticia = "COMO LLEGÓ SE FUÉ. QUITAN CERCA QUE RODEABA PARQUE PIMIENTA";
 
     bool ParquePimientaAislado2;
-    string ParquePimientaTitulo2 = "MISTERIOSA CERCA RODEA PARQUE PIMIENTA!"; 
-    string ParquePimientaNoticia2 = "MISTERIOSA CERCA RODEA PARQUE PIMIENTA!¿QUE ESTÁ PASANDO EN PUEBLO PIMIENTA?"; 
+    string ParquePimientaTitulo2 = "MISTERIOSA CERCA RODEA PARQUE PIMIENTA!";
+    string ParquePimientaNoticia2 = "MISTERIOSA CERCA RODEA PARQUE PIMIENTA!¿QUE ESTÁ PASANDO EN PUEBLO PIMIENTA?";
 
     bool ParquePimientaAislado3;
     string ParquePimientaTitulo3 = ""; //Pimienta paluza hackeado = true y pepe/ben eliminado/lavado = false
@@ -256,9 +256,9 @@ public class TV : MonoBehaviour
     string ParquePimientaNoticia4 = ""; //Pimienta paluza hackeado = true
 
     bool ParquePimientaDifamado;
-    string ParquePimientaDifamadoTitulo = "TURISTA DECLARA: ME AGARRÉ DIARREA DE LEGIONARIO EN PARQUE PIMIENTA."; 
+    string ParquePimientaDifamadoTitulo = "TURISTA DECLARA: ME AGARRÉ DIARREA DE LEGIONARIO EN PARQUE PIMIENTA.";
     string ParquePimientaDifamadoNoticia = "TURISTA DECLARA: ME AGARRÉ DIARREA DE LEGIONARIO EN PARQUE PIMIENTA. POR QUÉ NO HAY QUE VISITAR LA RESERVA";
-                                        //============================================================================ TV Pie Grande ===================================================================//
+    //============================================================================ TV Pie Grande ===================================================================//
     bool PlantarPublico;
     string PlantarPublicoTitulo = "ABUCHEOS DURANTE ENTREVISTA!LA CREDiBILIDAD DE BENJI SE DESMORONA!!";
     string PlantarPublicoNoticia = "BENJI EL MENTIROSO PIERDE EL APOYO DE LA COMUNIDAD AVISTADORA AL MOJAR SUS PANTALONES EN TELEVISIÓN NACIONAL";
@@ -266,7 +266,7 @@ public class TV : MonoBehaviour
     //============================================================================ TV Pueblo Pimienta ===================================================================//
 
     bool PuebloPimientaDifamado;
-    string PuebloPimientaDifamadoTitulo = "ENCUESTA MUNDIAL INDICA QUE LOS HABITANTES DE PUEBLO PIMIENTA CREEN EN CUALQUIER COSA"; 
+    string PuebloPimientaDifamadoTitulo = "ENCUESTA MUNDIAL INDICA QUE LOS HABITANTES DE PUEBLO PIMIENTA CREEN EN CUALQUIER COSA";
     string PuebloPimientaDifamadoNoticia = "ENCUESTA MUNDIAL INDICA QUE LOS HABITANTES DE PUEBLO PIMIENTA CREEN EN CUALQUIER COSA";
 
     bool PuebloPimientaAislado;
@@ -284,9 +284,9 @@ public class TV : MonoBehaviour
 
     //============================================================================ TV WifiRobado ===================================================================//
 
-    bool WifiRobadoDifamado;//WIP
-    string WifiRobadoDifamadoTitulo = "ESCONDIDO EN PARQUE PIMIENTA ROBANDO WIFI";
-    string WifiRobadoDifamadoNoticia = "";
+    bool WifiRobadoDifamado;
+    string WifiRobadoDifamadoTitulo = "PERSONA ESCONDIDA EN PARQUE PIMIENTA LE VIVE EL WIFI A LOS GUARDABOSQUES";
+    string WifiRobadoDifamadoNoticia = "PERSONA ESCONDIDA EN PARQUE PIMIENTA LE VIVE EL WIFI A LOS GUARDABOSQUES";
 
     //===============================================================================================================================================//
 
@@ -299,7 +299,7 @@ public class TV : MonoBehaviour
     {
         TimeManager.CambioHoras -= DirectorNoticias;
     }
-  
+
     public void DirectorNoticias()
     {
         // CheckearBitacoras(); if (x == false) NoticiasAliatorias(); x = false;
@@ -329,7 +329,7 @@ public class TV : MonoBehaviour
         if (bitacoras.BenEliminado == false && bitacoras.BenLavado == false && TimeManager.Dia == 3 && TimeManager.Hora == 10 && BenEntrevista1 == false && bitacoras.BenRetirado == false)
         {
             int IncrementoRating = 2;
-            noticia.text =  BenEntrevistaNoticia1;//ENTREVISTA EXCLUSIVA CON NIÑO AVISTADOR DE MISTERIOSA CRIATURA MAÑANA A LAS 12 AM
+            noticia.text = BenEntrevistaNoticia1;//ENTREVISTA EXCLUSIVA CON NIÑO AVISTADOR DE MISTERIOSA CRIATURA MAÑANA A LAS 12 AM
             titular.text = BenEntrevistaTitulo1;
             PC.Rating = PC.Rating + IncrementoRating;
             if (PC.Rating >= 16) { PC.RatinMaximo(); }
@@ -494,7 +494,7 @@ public class TV : MonoBehaviour
         }
 
 
-        
+
         else if (bitacoras.ParquePimientaAislado == true && TimeManager.Dia == 5 && TimeManager.Hora == 12 && PimientaPaluzaNoPuedeEntrar == true)
         {
             int IncrementoRating = 2;
@@ -504,7 +504,7 @@ public class TV : MonoBehaviour
             if (PC.Rating >= 16) { PC.RatinMaximo(); }
             x = true;
             SetearImagenesNoticias(4);
-          
+
         }
 
         else if (TimeManager.Dia == 5 && TimeManager.Hora == 10)
@@ -573,7 +573,7 @@ public class TV : MonoBehaviour
             SetearImagenesNoticias(4);
         }
 
-        else if (bitacoras.KateEliminada == false && bitacoras.KateLavada== false && PieGrandeEliminado == false && KateEliminada == false && TimeManager.Dia == 7 && TimeManager.Hora == 17 && bitacoras.KateProteccionAceptada == false)
+        else if (bitacoras.KateEliminada == false && bitacoras.KateLavada == false && PieGrandeEliminado == false && KateEliminada == false && TimeManager.Dia == 7 && TimeManager.Hora == 17 && bitacoras.KateProteccionAceptada == false)
         {
             int IncrementoRating = 15;
             noticia.text = CasamientoNoticia;//KATE MILLIARD ANUNCIA CASAMIENTO CON PIE GRANDE! LAS LEYENDAS ERAN CIERTAS!
@@ -584,12 +584,21 @@ public class TV : MonoBehaviour
             SetearImagenesNoticias(7);
         }
 
-
+        /*else if (TimeManager.Dia == 5 && TimeManager.Hora == 6 && BenEntrevista2 == false && bitacoras.PepeEliminado == false && bitacoras.PepeLavado == false && FotosAnonimas == false)
+        {
+            int IncrementoRating = 6;
+            noticia.text = FotosAnonimasNoticia;
+            titular.text = FotosAnonimasTitulo; 
+            PC.Rating = PC.Rating + IncrementoRating;
+            if (PC.Rating >= 16) { PC.RatinMaximo(); }
+            x = true;
+            SetearImagenesNoticias(12); ;
+        }*/
         else if (bitacoras.PimientaPaluzaAislado == true && bitacoras.PimientaPaluzaCancelado == false && TimeManager.Dia == 6 && TimeManager.Hora == 6 && Pimientapaluzaaislado == false)
         {
             int IncrementoRating = 2;
             noticia.text = PimientapaluzersReclamanDia6Titulo;
-            titular.text = PimientapaluzersReclamanDia6Noticia; 
+            titular.text = PimientapaluzersReclamanDia6Noticia;
             PC.Rating = PC.Rating + IncrementoRating;
             if (PC.Rating >= 16) { PC.RatinMaximo(); }
             x = true;
@@ -611,12 +620,12 @@ public class TV : MonoBehaviour
 
         }
 
-         else if (bitacoras.PimientaPaluzaAislado == false && bitacoras.PimientaPaluzaCancelado == false && PimientapaluzaCancelado == false && bitacoras.ConvertirCueva == false && TimeManager.Dia == 7 && TimeManager.Hora == 12)
+        else if (bitacoras.PimientaPaluzaAislado == false && bitacoras.PimientaPaluzaCancelado == false && PimientapaluzaCancelado == false && bitacoras.ConvertirCueva == false && TimeManager.Dia == 7 && TimeManager.Hora == 12)
         {
             int IncrementoRating = 16;
             noticia.text = PimientapaluzerEncuentraCuevaPieGrandeTitulo;
             titular.text = PimientapaluzerEncuentraCuevaPieGrandeNoticia;
-;
+            ;
             PC.Rating = PC.Rating + IncrementoRating;
             if (PC.Rating >= 16) { PC.RatinMaximo(); }
             x = true;
@@ -624,18 +633,11 @@ public class TV : MonoBehaviour
             PimientapaluzerEncuentraCuevaPieGrande = true;
 
         }
-        //============================================================================ TV FOTOS ANONIMAS =============================================================================//
-        else if (TimeManager.Dia == 5 && TimeManager.Hora == 6 && BenEntrevista2 == false && bitacoras.PepeEliminado == false && bitacoras.PepeLavado == false)
-        {
-            int IncrementoRating = 0;
-            int RetencionNoticia = 5;
-            StartCoroutine(ImprimirNoticia(FotosAnonimasTitulo, FotosAnonimasNoticia, IncrementoRating, RetencionNoticia));
-            FotosAnonimas = true;
-        }
+
         //============================================================================ TV RUMOR =============================================================================//
         else if (TimeManager.Dia == 3 && TimeManager.Hora == 7)
         {
-            int IncrementoRating = 16;
+            int IncrementoRating = 2;
             noticia.text = RumoresPuebloPimientaNoticia;//BIZARRO RUMOR TOMA MODERADO VUELO EN PUEBLO PIMIENTA
             titular.text = RumoresPuebloPimientaTitulo;
             PC.Rating = PC.Rating + IncrementoRating;
@@ -651,7 +653,7 @@ public class TV : MonoBehaviour
             StartCoroutine(ImprimirNoticia(BenDesapareceTitulo, BenDesapareceNoticia, IncrementoRating, RetencionNoticia));
             BenEliminado = true;
         }
-       
+
         else if (bitacoras.BenLavado == true && BenBrainwash == false)
         {
             int IncrementoRating = 1;
@@ -659,7 +661,7 @@ public class TV : MonoBehaviour
             StartCoroutine(ImprimirNoticia(BenBrainwashTitulo, BenBrainwashNoticia, IncrementoRating, RetencionNoticia));
             BenBrainwash = true;
         }
-        else if (bitacoras.BenDifamado == true && bitacoras.BenHackeado == false && BenDifamado1 == false )// Hackeado = false
+        else if (bitacoras.BenDifamado == true && bitacoras.BenHackeado == false && BenDifamado1 == false)// Hackeado = false
         {
             int IncrementoRating = -2;
             int RetencionNoticia = DifamarRetencion;
@@ -681,9 +683,9 @@ public class TV : MonoBehaviour
             int IncrementoRating = -1;
             int RetencionNoticia = DifamarRetencion;
             StartCoroutine(ImprimirNoticia(PuebloPimientaDifamadoTitulo, PuebloPimientaDifamadoNoticia, IncrementoRating, RetencionNoticia));
-            PuebloPimientaDifamado= true;
+            PuebloPimientaDifamado = true;
         }
-        
+
         else if (bitacoras.PuebloPimientaAislado == true && PuebloPimientaAislado == false)// 
         {
             int IncrementoRating = 8;
@@ -692,7 +694,7 @@ public class TV : MonoBehaviour
             PuebloPimientaAislado = true;
         }
 
-        
+
         else if (bitacoras.PuebloPimientaLevantarCerca == true && PuebloPimientaLevantarCerca == false)// 
         {
             int IncrementoRating = 2;
@@ -736,7 +738,7 @@ public class TV : MonoBehaviour
             StartCoroutine(ImprimirNoticia(PieGrandeEliminadoTitulo, PieGrandeEliminadoNoticia, IncrementoRating, RetencionNoticia));
             PieGrandeEliminado = true;
         }
-        
+
         else if (bitacoras.PieGrandeDifamado == true && PieGrandeDifamado == false)
         {
             int IncrementoRating = 3;
@@ -753,14 +755,14 @@ public class TV : MonoBehaviour
             StartCoroutine(ImprimirNoticia(KateEliminadaTitulo, KateEliminadaNoticia, IncrementoRating, RetencionNoticia));
             KateEliminada = true;
         }
-        else if (bitacoras.KateEliminada == true && PieGrandeEliminado == false && KateEliminada == true )
+        else if (bitacoras.KateEliminada == true && PieGrandeEliminado == false && KateEliminada == true)
         {
             int IncrementoRating = 13;
             int RetencionNoticia = 4; // SON 4.
             StartCoroutine(ImprimirNoticia(KateEliminadaTitulo2, KateEliminadaNoticia2, IncrementoRating, RetencionNoticia));
             KateEliminada = true;
         }
-        
+
         else if (bitacoras.KateDifamada == true && KateDifamada == false)
         {
             int IncrementoRating = -2;
@@ -774,14 +776,14 @@ public class TV : MonoBehaviour
         else if (bitacoras.ColoradaDifamada == true && ColoradaDifamada == false)
         {
             int IncrementoRating = -1;
-            int RetencionNoticia = DifamarRetencion; 
+            int RetencionNoticia = DifamarRetencion;
             StartCoroutine(ImprimirNoticia(ColoradaDifamadaTitulo, ColoradaDifamadaNoticia, IncrementoRating, RetencionNoticia));
             ColoradaDifamada = true;
         }
 
         //============================================================================ TV Red78 ===================================================================//
 
-        
+
         else if (bitacoras.Red78Difamada == true && Red78Difamada == false)
         {
             int IncrementoRating = -1;
@@ -791,8 +793,8 @@ public class TV : MonoBehaviour
         }
 
         //============================================================================ TV Wifi Robado ===================================================================//
-                
-       else if (bitacoras.WifiRobadoDifamado == true && WifiRobadoDifamado == false)
+
+        else if (bitacoras.WifiRobadoDifamado == true && WifiRobadoDifamado == false)
         {
             int IncrementoRating = 1;
             int RetencionNoticia = DifamarRetencion;
@@ -811,7 +813,7 @@ public class TV : MonoBehaviour
         //============================================================================ TV PimientaPaluza ===================================================================//
 
 
-        else if (bitacoras.PimientaPaluzaAislado == true) 
+        else if (bitacoras.PimientaPaluzaAislado == true)
         {
             int IncrementoRating = 3;
             int RetencionNoticia = AislarRetencion;
@@ -819,7 +821,7 @@ public class TV : MonoBehaviour
             Pimientapaluzaaislado = true;
         }
 
-        
+
         else if (bitacoras.PimientaPaluzaLevantarCerca == true)
         {
             int IncrementoRating = 1;
@@ -828,13 +830,13 @@ public class TV : MonoBehaviour
             PimientaPaluzaLevantarCerca = true;
         }
         //============================================================================ TV Parque Pimienta =============================================================================//
-        else if (bitacoras.ParquePimientaAislado == true && ParquePimientaAislado1 == false) 
+        else if (bitacoras.ParquePimientaAislado == true && ParquePimientaAislado1 == false)
         {
             int IncrementoRating = 3;
             int RetencionNoticia = AislarRetencion;
             StartCoroutine(ImprimirNoticia(ParquePimientaTitulo1, ParquePimientaNoticia1, IncrementoRating, RetencionNoticia));
             ParquePimientaAislado1 = true;
-           
+
         }
         /* else if (bitacoras.ParquePimientaAislado == true && ParquePimientaAislado2 == false) 
          {
@@ -857,7 +859,7 @@ public class TV : MonoBehaviour
              StartCoroutine(ImprimirNoticia(ParquePimientaTitulo4, ParquePimientaNoticia4, IncrementoRating, RetencionNoticia));
              ParquePimientaAislado4 = true;
          }*/
-        
+
         else if (bitacoras.ParquePimientaLevantarCerca == true && ParquePimientaLevantarCerca == false)
         {
             int IncrementoRating = 1;
@@ -866,10 +868,10 @@ public class TV : MonoBehaviour
             ParquePimientaLevantarCerca = true;
         }
 
-        else if (bitacoras.ParquePimientaDifamado == true && ParquePimientaDifamado  == false) 
+        else if (bitacoras.ParquePimientaDifamado == true && ParquePimientaDifamado == false)
         {
             int IncrementoRating = -1;
-            int RetencionNoticia = DifamarRetencion; 
+            int RetencionNoticia = DifamarRetencion;
             StartCoroutine(ImprimirNoticia(ParquePimientaDifamadoTitulo, ParquePimientaDifamadoNoticia, IncrementoRating, RetencionNoticia));
             ParquePimientaDifamado = true;
         }
@@ -889,7 +891,7 @@ public class TV : MonoBehaviour
             StartCoroutine(ImprimirNoticia(PimientapaluzersTitulo2, PimientapaluzersNoticia2, IncrementoRating, RetencionNoticia));
             PimientapaluzersDifamado = true;
         }
-        
+
         //============================================================================ TV Pepe Queño ===================================================================//
         else if (bitacoras.PepeEliminado == true && bitacoras.BenEliminado == false && PepeQueñoEliminado1 == false)
         {
@@ -907,7 +909,7 @@ public class TV : MonoBehaviour
         }
 
         //=========================================================================== TV Noticia Falsa ===============================================================//
-        else if (bitacoras.NoticiaFalasa1 == true && NF1 == false )
+        else if (bitacoras.NoticiaFalasa1 == true && NF1 == false)
         {
             int IncrementoRating = -2;
             noticia.text = bitacoras.txtNoticiaFalsa;
@@ -987,36 +989,36 @@ public class TV : MonoBehaviour
         ImagenesNoticiasPorReacción();
     }
 
-    private void LaFuncionMasEspecificaDelMundoPorqueEsteJugoNoDejaDeTenerDetallesBoludos ()
+    private void LaFuncionMasEspecificaDelMundoPorqueEsteJugoNoDejaDeTenerDetallesBoludos()
     {
-       if(BenDifamado2) libreta.TacharPalabra(libreta.BenBtn, libreta.txtBen, 0);
+        if (BenDifamado2) libreta.TacharPalabra(libreta.BenBtn, libreta.txtBen, 0);
         if (FotosAnonimas == true) { A.tglExtraerFotos.SetActive(false); }
-       
+
     }
 
-    public void PulsadoDeTV ()
+    public void PulsadoDeTV()
     {
-        if (ParquePimientaTitulo1 == titular.text) libreta.EscribirNuevaPalabra(libreta.BtnPimientapaluzers,3);
-        if (titular.text == PimientaPaluzaAnuncioTitulo) libreta.EscribirNuevaPalabra(libreta.BtnPimientaPaluza,3);
-        if (titular.text == PimientaPaluzaSeAdelantaTitulo) libreta.EscribirNuevaPalabra(libreta.BtnPimientaPaluza,3);
-        if (titular.text == PimientaPaluzaMañanaTitulo) libreta.EscribirNuevaPalabra(libreta.BtnPimientaPaluza,3);
-        if (titular.text == PimientaPaluzaArrancaTitulo) libreta.EscribirNuevaPalabra(libreta.BtnPimientaPaluza,3);
+        if (ParquePimientaTitulo1 == titular.text) libreta.EscribirNuevaPalabra(libreta.BtnPimientapaluzers, 3);
+        if (titular.text == PimientaPaluzaAnuncioTitulo) libreta.EscribirNuevaPalabra(libreta.BtnPimientaPaluza, 3);
+        if (titular.text == PimientaPaluzaSeAdelantaTitulo) libreta.EscribirNuevaPalabra(libreta.BtnPimientaPaluza, 3);
+        if (titular.text == PimientaPaluzaMañanaTitulo) libreta.EscribirNuevaPalabra(libreta.BtnPimientaPaluza, 3);
+        if (titular.text == PimientaPaluzaArrancaTitulo) libreta.EscribirNuevaPalabra(libreta.BtnPimientaPaluza, 3);
 
         if (titular.text == PieGrandeEliminadoTitulo2) libreta.EscribirNuevaPalabra(libreta.BtnKateMilliard, 2);
         if (titular.text == CasamientoTitulo) libreta.EscribirNuevaPalabra(libreta.BtnKateMilliard, 2);
 
-        if (titular.text == BenEntrevistaTitulo2) 
+        if (titular.text == BenEntrevistaTitulo2)
         {
             libreta.EscribirNuevaPalabra(libreta.BtnParquePimienta, 10);
 
         }
-    
+
         if (titular.text == PimientaPaluzaAisladoTitulo) libreta.EscribirNuevaPalabra(libreta.BtnPimientapaluzers, 11);
 
         if (titular.text == BenEntrevistaTitulo1) A.tglPlantarPublico.SetActive(true);
         if (titular.text == BenEntrevistaTitulo1b && PlantarPublico == false) A.tglPlantarPublico.SetActive(true);
 
-        
+
         if (titular.text == BenEntrevistaTitulo2 && A.tglLevantarCerca.activeSelf == false) A.tglAislar.SetActive(true);
         if (titular.text == BenEntrevistaTitulo3b && A.tglLevantarCerca.activeSelf == false) A.tglAislar.SetActive(true);
 
@@ -1044,10 +1046,12 @@ public class TV : MonoBehaviour
 
         if (titular.text == PuebloPimientaAisladoTitulo) SetearImagenesNoticias(1);
         if (titular.text == PuebloPimientaLevantarCercaTitulo) SetearImagenesNoticias(1);
-        
+
         if (titular.text == PimientaPaluzaAisladoTitulo) SetearImagenesNoticias(4);
         if (titular.text == PimientaPaluzaCanceladoTitulo) SetearImagenesNoticias(4);
         if (titular.text == PimientaPaluzaLevantarCercaTitulo) SetearImagenesNoticias(4);
+
+
 
         if (titular.text == PimientapaluzersTitulo) SetearImagenesNoticias(5);
         if (titular.text == PimientapaluzersTitulo2) SetearImagenesNoticias(5);
@@ -1062,11 +1066,11 @@ public class TV : MonoBehaviour
         if (CrearEscenaTitulo == titular.text) { SetearImagenesNoticias(10); SetearReportero(1); }
 
         if (BenDesapareceTitulo == titular.text) SetearImagenesNoticias(8);
-        if(PepeQueñoTitulo1 == titular.text) SetearImagenesNoticias(8);
+        if (PepeQueñoTitulo1 == titular.text) SetearImagenesNoticias(8);
         if (PepeQueñoTitulo2 == titular.text) SetearImagenesNoticias(8);
 
         if (BenBrainwashTitulo == titular.text) SetearImagenesNoticias(9);
-        if (BenDifamadoTitulo1== titular.text) SetearImagenesNoticias(9);
+        if (BenDifamadoTitulo1 == titular.text) SetearImagenesNoticias(9);
         if (BenDifamadoTitulo2 == titular.text) SetearImagenesNoticias(9);
     }
 
@@ -1079,7 +1083,7 @@ public class TV : MonoBehaviour
             FondoTV.color = new Color(1, 1, 1);
             FondeoTVDef.color = new Color(1, 1, 1);
         }
-        if(i == 1)
+        if (i == 1)
         {
             FondoTV.color = new Color(1, 0.5f, 1);
             FondeoTVDef.color = new Color(1, 0.5f, 1);
@@ -1089,15 +1093,15 @@ public class TV : MonoBehaviour
     void SetearImagenesNoticias(int i)
     {
         ImgNoticia.sprite = vcImgNoticia[i];
-        ImgNoticiaDef.sprite = vcImgNoticia[i];    
+        ImgNoticiaDef.sprite = vcImgNoticia[i];
     }
 
     /// ================================================================== Noticias Aleatorias ========================================================= ///
 	string TitularAleatoria1 = "ALMONDIGAS DE MURCIEGALO: EL PLATO DEL MOMENTO";
-    string NoticiaAleatoria1 = "PONETE LOS LENTES, PA";
+    string NoticiaAleatoria1 = "MENÚ DISLÉXICO ATRAE A MULTITUDES. ALMONDIGAS DE MURCIEGALO: EL PLATO DEL MOMENTO";
 
     string TitularAleatoria2 = "¿DIETA O RADIACION? CÓMO QUEMAR ESOS KILOS DE MÁS";
-    string NoticiaAleatoria2 = "PONETE LOS LENTES, PA";
+    string NoticiaAleatoria2 = "¿DIETA O RADIACION? CÓMO QUEMAR ESOS KILOS DE MÁS";
 
     string TitularAleatoria3 = "¿BIZCOCHITOS DE ADAMANTIUM?";
     string NoticiaAleatoria3 = "SORPRENDE A TUS VISITAS CON EL LIBRO DE RECETAS DE LA ABUELA HARDCORE";
@@ -1105,17 +1109,17 @@ public class TV : MonoBehaviour
     string TitularAleatoria4 = "FESTIVAL 'PATEA UN TIBURÓN' TERMINA EN SORPRESIVA TRAGEDIA";
     string NoticiaAleatoria4 = "FINALMENTE PASÓ LO IMPENSABLE. ¿ES ESTE EL FIN DE 'PATEA UN TIBURON'?";
 
-    string TitularAleatoria5 = "ASESINO SERIAL RAGE QUITS";
-    string NoticiaAleatoria5 = "ASESINO SERIAL RAGE QUITS";
+    string TitularAleatoria5 = "ASESINO SERIAL RAGE QUITS. CONFIEZA QUE NO LA ESTABA PASANDO BIEN";
+    string NoticiaAleatoria5 = "ASESINO SERIAL RAGE QUITS. CONFIEZA QUE NO LA ESTABA PASANDO BIEN";
 
     string TitularAleatoria6 = "¿CUÁNTO GARPA SER UNA NINFA?";
-    string NoticiaAleatoria6 = "PONETE LOS LENTES, PA";
+    string NoticiaAleatoria6 = "¿CUÁNTO GARPA SER UNA NINFA DEL BOSQUE? HABLAMOS CON ESPECIALISTAS DEL RUBRO";
 
     string TitularAleatoria7 = "MARIPOSA SENTENCIADA A 60 AÑOS EN PRISIÓN FEDERAL";
     string NoticiaAleatoria7 = "JUSTICIA AL FIN! MARIPOSA SENTENCIADA A 60 AÑOS EN PRISIÓN FEDERAL";
 
     string TitularAleatoria8 = "REBOOT DE PRECUELA SE CONVIERTE EN SPIN-OFF DE REMAKE DEL LIBRO";
-    string NoticiaAleatoria8 = "WIP";
+    string NoticiaAleatoria8 = "REBOOT DE PRECUELA SE CONVIERTE EN SPIN-OFF DE REMAKE DEL LIBRO";
 
     string TitularAleatoria9 = "GAME DESIGNER PROPONE FEATURE A ÚLTIMO MOMENTO";
     string NoticiaAleatoria9 = "GAME DESIGNER SORPRENDE A EQUIPO PROPONIENDO FEATURE ESCENCIAL A HORAS DE ENTREGA";
@@ -1126,14 +1130,14 @@ public class TV : MonoBehaviour
     string TitularAleatoria11 = "LORO BOCASUCIA ARRUINA   BAUTISMO";
     string NoticiaAleatoria11 = "LORO BOCASUCIA ARRUINA BAUTISMO. POLLY NO QUIERE UNA GALLETA, QUIERE &#$%@< Y +{<*/:(. ";
 
-    string TitularAleatoria12 = "COMO ROBAR DESEOS DE CUMPLEAÑOS COMO ESE NENE DE LA PELI";
-    string NoticiaAleatoria12 = "WIP";
+    string TitularAleatoria12 = "JOVEN PIERDE LA VISTA LUEGO DE ESTORNUDAR CON LOS OJOS ABIERTOS";
+    string NoticiaAleatoria12 = "¿POR QUE ES IMPORTANTE QUE LA EDUCACIÓN COMIENCE EN EL HOGAR?";
 
     string TitularAleatoria13 = "PATA PETA PITA POTA Y UNA HERMANA";
     string NoticiaAleatoria13 = "LAS NUEVAS RIMAS DE LA SEÑO FLAVIA CAUSAN CONTROVERSIA";
 
-    string TitularAleatoria14 = "¿ES AMARILLO EL COLOR PARA TU PERSONAJE?";
-    string NoticiaAleatoria14 = "WIP";
+    string TitularAleatoria14 = "SONAMBULA DESPIERTA CON TITULO DE MEDICINA Y 7 HIJOS";
+    string NoticiaAleatoria14 = "SONAMBULA DESPIERTA CON TITULO DE MEDICINA Y 7 HIJOS. Y ESO QUE ME ACOSTÉ TARDE";
 
     string TitularAleatoria15 = "TECHPROOF CUMPLE CON LA MÍNIMA. ALUMNOS SE REGOZIJAN";
     string NoticiaAleatoria15 = "LA LEY DEL MINIMO ESFUERZO DEMUESTRA RESULTADOS UNA VEZ MAS";
@@ -1150,38 +1154,41 @@ public class TV : MonoBehaviour
     string TitularAleatoria19 = "ABUELITA REAPARECE A DOS AÑOS DE CAER EN DUDOSO POZO SIN FONDO";
     string NoticiaAleatoria19 = "ABUELITA REAPARECE A DOS AÑOS DE CAER EN DUDOSO POZO SIN FONDO. NIETOS RECLAMAN REGALOS";
 
-    string TitularAleatoria21 = "GROG! LA BEBIDA QUE ALGO ALGO";
-    string NoticiaAleatoria21 = "";
+    string TitularAleatoria20 = "THE OUTTER FRAME 2 CANCELADO";
+    string NoticiaAleatoria20 = "THE OUTTER FRAME 2 CANCELADO. TODOS NOS LA VEÍAMOS VENIR.";
+
+    string TitularAleatoria21 = "TODO ESTA TRANQUILO POR ACA";
+    string NoticiaAleatoria21 = "CELEBRES ÚLTIMAS PALABRAS DE JOVEN APLASTADO POR VACA METÁLICA CAIDA DEL CIELO";
 
     string TitularAleatoria22 = "POLENTA OLVIDADA EN EL FONDO DE LA HELADERA SE COBRA OTRA VIDA";
-    string NoticiaAleatoria22 = "";
+    string NoticiaAleatoria22 = "POLENTA OLVIDADA EN EL FONDO DE LA HELADERA SE COBRA OTRA VIDA ¿CUANDO APRENDEREMOS?";
 
-    string TitularAleatoria23 = "ESTAFA PIRAMIDAL";
-    string NoticiaAleatoria23 = "";
+    string TitularAleatoria23 = "¿ES EL MOMENTO DE INVERTIR EN CIRCOS DE TERMITAS?¿ QUE DICE EL MERCADO?";
+    string NoticiaAleatoria23 = "¿ES EL MOMENTO DE INVERTIR EN CIRCOS DE TERMITAS?¿ QUE DICE EL MERCADO?";
 
-    string TitularAleatoria24 = "CHUPARTE EL CODO";
-    string NoticiaAleatoria24 = "";
+    string TitularAleatoria24 = "DESAFÍO DE CHUPARSE EL CODO SE COBRA OTRA VIDA";
+    string NoticiaAleatoria24 = "DESAFÍO DE CHUPARSE EL CODO SE COBRA OTRA VIDA";
 
-    string TitularAleatoria25 = "TODO ESTA TRANQUILO POR ACA";
-    string NoticiaAleatoria25 = "CELEBRES ULTIMAS PALABRAS DE JOVEN APLASTADO POR UNA VACA";
+    string TitularAleatoria25 = "HOMBRE EXTRAVÍA SUS PIES EN LA PLAYA LUEGO DE ENTERRARLOS EN LA ARENA";
+    string NoticiaAleatoria25 = "HOMBRE EXTRAVÍA SUS PIES EN LA PLAYA LUEGO DE ENTERRARLOS EN LA ARENA. - NI ME MOVÍ DE ACÁ -";
 
-    string TitularAleatoria26 = "JOVEN PIERDE LA VISTA LUEGO DE ESTORNUDAR CON LOS OJOS ABIERTOS";
-    string NoticiaAleatoria26 = "¿POR QUE ES IMPORTANTE QUE LA EDUCACION COMIENCE EN EL HOGAR?";
+    string TitularAleatoria26 = "¿POR QUE ES QUE SOLO PASAN COSAS CADA 1 HORA?";
+    string NoticiaAleatoria26 = "CUAL ES EL MOTIVO DETRAS DE ESTE ORDEN COSMICO QUE ORGANIZA CADA EVENTO A EXACTAMENTE UNA HORA DEL SIGUIENTE?";
 
     string TitularAleatoria27 = "CÓMO Y DÓNDE ENCONTRAR QUESO INVISIBLE";
     string NoticiaAleatoria27 = "Y CUANDO";
 
-    string TitularAleatoria28 = "SONAMBULA DESPIERTA CON TITULO DE MEDICINA Y 7 HIJOS";
-    string NoticiaAleatoria28 = "Y ESO QUE ME ACOSTÉ TARDE";
+    string TitularAleatoria28 = "ASTILLA EN EL CEREBRO BRINDA A HOMBRE LA HABILIDAD DE VER ATRAVES DE PUERTAS DE MADERA";
+    string NoticiaAleatoria28 = "ASTILLA EN EL CEREBRO BRINDA A HOMBRE LA HABILIDAD DE VER ATRAVES DE PUERTAS DE MADERA";
 
-    string TitularAleatoria29 = "CIRCO DE TERMITAS";
-    string NoticiaAleatoria29 = "";
+    string TitularAleatoria29 = "THE OUTTER FRAME 2 CANCELADO";
+    string NoticiaAleatoria29 = "THE OUTTER FRAME 2 CANCELADO. TODOS NOS LA VEÍAMOS VENIR.";
 
-    string TitularAleatoria30 = "HOMBRE EXTRAVÍA SUS PIES EN LA PLAYA LUEGO DE ENTERRARLOS EN LA ARENA";
-    string NoticiaAleatoria30 = "NI ME MOVI DE ACA, NO ENTIENDO DONDE PUEDEN ESTAR";
+    string TitularAleatoria30 = "DESAFÍO DE CHUPARSE EL CODO SE COBRA OTRA VIDA";
+    string NoticiaAleatoria30 = "DESAFÍO DE CHUPARSE EL CODO SE COBRA OTRA VIDA";
 
-    string TitularAleatoria31 = "¿POR QUE ES QUE SOLO PASAN COSAS CADA 1 HORA?";
-    string NoticiaAleatoria31 = "CUAL ES EL MOTIVO DETRAS DE ESTE ORDEN COSMICO QUE ORGANIZA CADA EVENTO A EXACTAMENTE UNA HORA DEL SIGUIENTE?";
+    string TitularAleatoria31 = "";
+    string NoticiaAleatoria31 = "";
 
     string TitularAleatoria33 = "ES OFICIAL: JAMES, A NADIE LE IMPORTA AVATAR";
     string NoticiaAleatoria33 = "";
@@ -1195,7 +1202,7 @@ public class TV : MonoBehaviour
     string TitularAleatoria36 = "AGUA EN POLVO";
     string NoticiaAleatoria36 = "";
 
-    string TitularAleatoria37 = "ASTILLA EN EL CEREBRO";
+    string TitularAleatoria37 = "";
     string NoticiaAleatoria37 = "";
 
     string TitularAleatoria38 = "MEDICINA HIPPIE";
@@ -1207,7 +1214,7 @@ public class TV : MonoBehaviour
     string TitularAleatoria40 = "ES POSIBLE?";
     string NoticiaAleatoria40 = "";
 
-    string TitularAleatoria41 = "THE OUTTER FRAME 2 CANCELADO";
+    string TitularAleatoria41 = "";
     string NoticiaAleatoria41 = "";
 
     string TitularAleatoria42 = "EL PERDIDO ARTE DE ESCRIBIR DIALOGO RANDOMIZADO";
@@ -1331,9 +1338,76 @@ public class TV : MonoBehaviour
                 case 19:
                     titular.text = TitularAleatoria19;
                     noticia.text = NoticiaAleatoria19;
-                    NumNoticiasAteatorias = 1;
-                    CualLista = 0;
+                    NumNoticiasAteatorias++;
                     break;
+
+                case 20:
+                    titular.text = TitularAleatoria20;
+                    noticia.text = NoticiaAleatoria20;
+                    NumNoticiasAteatorias++;
+                    break;
+
+                case 21:
+                    titular.text = TitularAleatoria21;
+                    noticia.text = NoticiaAleatoria21;
+                    NumNoticiasAteatorias++;
+                    break;
+
+                case 22:
+                    titular.text = TitularAleatoria22;
+                    noticia.text = NoticiaAleatoria22;
+                    NumNoticiasAteatorias++;
+                    break;
+
+                case 23:
+                    titular.text = TitularAleatoria23;
+                    noticia.text = NoticiaAleatoria23;
+                    NumNoticiasAteatorias++;
+                    break;
+
+                case 24:
+                    titular.text = TitularAleatoria24;
+                    noticia.text = NoticiaAleatoria24;
+                    NumNoticiasAteatorias++;
+                    break;
+
+                case 25:
+                    titular.text = TitularAleatoria25;
+                    noticia.text = NoticiaAleatoria25;
+                    NumNoticiasAteatorias++;
+                    break;
+
+                case 26:
+                    titular.text = TitularAleatoria26;
+                    noticia.text = NoticiaAleatoria26;
+                    NumNoticiasAteatorias++;
+                    break;
+
+                case 27:
+                    titular.text = TitularAleatoria27;
+                    noticia.text = NoticiaAleatoria27;
+                    NumNoticiasAteatorias++;
+                    break;
+
+                case 28:
+                    titular.text = TitularAleatoria28;
+                    noticia.text = NoticiaAleatoria28;
+                    NumNoticiasAteatorias++;
+                    break;
+
+                case 29:
+                    titular.text = TitularAleatoria29;
+                    noticia.text = NoticiaAleatoria29;
+                    NumNoticiasAteatorias++;
+                    break;
+
+                case 30:
+                    titular.text = TitularAleatoria30;
+                    noticia.text = NoticiaAleatoria30;
+                    CualLista = 0;
+                    NumNoticiasAteatorias = 1;
+                    break;
+
             }
 
         }
@@ -1453,6 +1527,74 @@ public class TV : MonoBehaviour
                     NumNoticiasAteatorias = 1;
                     CualLista = 1;
                     break;
+
+                case 30:
+                    titular.text = TitularAleatoria20;
+                    noticia.text = NoticiaAleatoria20;
+                    NumNoticiasAteatorias++;
+                    CualLista = 0;
+                    NumNoticiasAteatorias = 1;
+                    break;
+
+                case 29:
+                    titular.text = TitularAleatoria21;
+                    noticia.text = NoticiaAleatoria21;
+                    NumNoticiasAteatorias++;
+                    break;
+
+                case 28:
+                    titular.text = TitularAleatoria22;
+                    noticia.text = NoticiaAleatoria22;
+                    NumNoticiasAteatorias++;
+                    break;
+
+                case 27:
+                    titular.text = TitularAleatoria23;
+                    noticia.text = NoticiaAleatoria23;
+                    NumNoticiasAteatorias++;
+                    break;
+
+                case 26:
+                    titular.text = TitularAleatoria24;
+                    noticia.text = NoticiaAleatoria24;
+                    NumNoticiasAteatorias++;
+                    break;
+
+                case 25:
+                    titular.text = TitularAleatoria25;
+                    noticia.text = NoticiaAleatoria25;
+                    NumNoticiasAteatorias++;
+                    break;
+
+                case 24:
+                    titular.text = TitularAleatoria26;
+                    noticia.text = NoticiaAleatoria26;
+                    NumNoticiasAteatorias++;
+                    break;
+
+                case 23:
+                    titular.text = TitularAleatoria27;
+                    noticia.text = NoticiaAleatoria27;
+                    NumNoticiasAteatorias++;
+                    break;
+
+                case 22:
+                    titular.text = TitularAleatoria28;
+                    noticia.text = NoticiaAleatoria28;
+                    NumNoticiasAteatorias++;
+                    break;
+
+                case 21:
+                    titular.text = TitularAleatoria29;
+                    noticia.text = NoticiaAleatoria29;
+                    NumNoticiasAteatorias++;
+                    break;
+
+                case 20:
+                    titular.text = TitularAleatoria30;
+                    noticia.text = NoticiaAleatoria30;
+                    NumNoticiasAteatorias++;
+                    break;
             }
 
 
@@ -1564,14 +1706,81 @@ public class TV : MonoBehaviour
                 case 19:
                     titular.text = TitularAleatoria18;
                     noticia.text = NoticiaAleatoria18;
-                    NumNoticiasAteatorias=1;
-                    CualLista = 2;
+                    NumNoticiasAteatorias++;
                     break;
 
                 case 15:
                     titular.text = TitularAleatoria19;
                     noticia.text = NoticiaAleatoria19;
                     NumNoticiasAteatorias++;
+                    break;
+
+                case 20:
+                    titular.text = TitularAleatoria20;
+                    noticia.text = NoticiaAleatoria20;
+                    NumNoticiasAteatorias++;
+                    break;
+
+                case 25:
+                    titular.text = TitularAleatoria21;
+                    noticia.text = NoticiaAleatoria21;
+                    NumNoticiasAteatorias++;
+                    break;
+
+                case 23:
+                    titular.text = TitularAleatoria22;
+                    noticia.text = NoticiaAleatoria22;
+                    NumNoticiasAteatorias++;
+                    break;
+
+                case 30:
+                    titular.text = TitularAleatoria23;
+                    noticia.text = NoticiaAleatoria23;
+                    CualLista = 2;
+                    NumNoticiasAteatorias = 1;
+                    break;
+
+                case 24:
+                    titular.text = TitularAleatoria24;
+                    noticia.text = NoticiaAleatoria24;
+                    NumNoticiasAteatorias++;
+                    break;
+
+                case 26:
+                    titular.text = TitularAleatoria25;
+                    noticia.text = NoticiaAleatoria25;
+                    NumNoticiasAteatorias++;
+                    break;
+
+                case 27:
+                    titular.text = TitularAleatoria26;
+                    noticia.text = NoticiaAleatoria26;
+                    NumNoticiasAteatorias++;
+                    break;
+
+                case 28:
+                    titular.text = TitularAleatoria27;
+                    noticia.text = NoticiaAleatoria27;
+                    NumNoticiasAteatorias++;
+                    break;
+
+                case 29:
+                    titular.text = TitularAleatoria28;
+                    noticia.text = NoticiaAleatoria28;
+                    NumNoticiasAteatorias++;
+                    break;
+
+                case 22:
+                    titular.text = TitularAleatoria29;
+                    noticia.text = NoticiaAleatoria29;
+                    NumNoticiasAteatorias++;
+                    break;
+
+                case 21:
+                    titular.text = TitularAleatoria30;
+                    noticia.text = NoticiaAleatoria30;
+                    NumNoticiasAteatorias++;
+
                     break;
             }
         }
