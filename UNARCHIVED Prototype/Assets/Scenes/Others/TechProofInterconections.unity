@@ -401,6 +401,7 @@ MonoBehaviour:
   desiredCanvasType2: 2
   canvasManager: {fileID: 320038367}
   time: {fileID: 698772801}
+  Sonido: {fileID: 0}
 --- !u!65 &23763976
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1544,6 +1545,7 @@ MonoBehaviour:
   ex: {fileID: 1617941787}
   bitacoras: {fileID: 176843630}
   A: {fileID: 414450557}
+  Sonidos: {fileID: 0}
   ModeloLibreta: {fileID: 1592405869}
   palabra: 
   BtnBen: {fileID: 1983828063}
@@ -1975,6 +1977,7 @@ MonoBehaviour:
   bitacora: {fileID: 176843630}
   time: {fileID: 698772801}
   Alarma: {fileID: 1616859476}
+  Sonidos: {fileID: 0}
   btnllamar: {fileID: 1406351004}
   btnplay: {fileID: 1892829243}
   btnREC: {fileID: 1526328218}
@@ -4798,6 +4801,7 @@ MonoBehaviour:
   desiredCanvasType2: 0
   canvasManager: {fileID: 320038367}
   time: {fileID: 698772801}
+  Sonido: {fileID: 0}
 --- !u!65 &320533837
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7329,6 +7333,7 @@ MonoBehaviour:
   desiredCanvasType2: 3
   canvasManager: {fileID: 320038367}
   time: {fileID: 698772801}
+  Sonido: {fileID: 0}
 --- !u!65 &525171096
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10815,6 +10820,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1840333181}
+        m_TargetAssemblyTypeName: PCCanvasSwitcher, Assembly-CSharp
+        m_MethodName: SonidoTeclado
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &769224898
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11596,6 +11613,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1840333181}
+        m_TargetAssemblyTypeName: PCCanvasSwitcher, Assembly-CSharp
+        m_MethodName: SonidoTeclado
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &835116650
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12229,6 +12258,7 @@ MonoBehaviour:
   desiredCanvasType2: 0
   canvasManager: {fileID: 320038367}
   time: {fileID: 698772801}
+  Sonido: {fileID: 0}
 --- !u!65 &936548027
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13112,11 +13142,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd5225cfd9c9d704dabd9f85edd1cd35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Sonidos: {fileID: 0}
   desiredCanvasType: 2
   desiredCanvasType2: 2
   libreta: {fileID: 1592405869}
   acciones: {fileID: 1250356728}
   canvasManager: {fileID: 320038367}
+  AprobadoSello: {fileID: 1701328676}
 --- !u!1 &991863752
 GameObject:
   m_ObjectHideFlags: 0
@@ -13916,6 +13948,7 @@ MonoBehaviour:
   desiredCanvasType2: 2
   canvasManager: {fileID: 320038367}
   time: {fileID: 698772801}
+  Sonido: {fileID: 0}
 --- !u!65 &1073116704
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14408,6 +14441,7 @@ MonoBehaviour:
   bitacoras: {fileID: 176843630}
   time: {fileID: 698772801}
   alarmaPC: {fileID: 7790630311676405240}
+  Sonido: {fileID: 0}
   camPosition: {fileID: 1217366601}
   FondoInvisible: {fileID: 1086508401}
   txtBuscador: {fileID: 338755631}
@@ -14782,6 +14816,18 @@ MonoBehaviour:
       - m_Target: {fileID: 113856866}
         m_TargetAssemblyTypeName: Telefono, Assembly-CSharp
         m_MethodName: ApagarPapel
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1840333181}
+        m_TargetAssemblyTypeName: PCCanvasSwitcher, Assembly-CSharp
+        m_MethodName: SonidoTeclado
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -16146,6 +16192,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1840333181}
+        m_TargetAssemblyTypeName: PCCanvasSwitcher, Assembly-CSharp
+        m_MethodName: SonidoTeclado
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1225135679
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16953,6 +17011,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1840333181}
+        m_TargetAssemblyTypeName: PCCanvasSwitcher, Assembly-CSharp
+        m_MethodName: SonidoTeclado
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1308103300
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17356,6 +17426,7 @@ MonoBehaviour:
   desiredCanvasType2: 3
   canvasManager: {fileID: 320038367}
   time: {fileID: 698772801}
+  Sonido: {fileID: 0}
 --- !u!65 &1335159634
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20202,6 +20273,7 @@ Transform:
   - {fileID: 2120398559}
   - {fileID: 1250356727}
   - {fileID: 980845919}
+  - {fileID: 1701328677}
   m_Father: {fileID: 320038366}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 26.336, y: 0, z: 0}
@@ -22562,6 +22634,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1840333181}
+        m_TargetAssemblyTypeName: PCCanvasSwitcher, Assembly-CSharp
+        m_MethodName: SonidoTeclado
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1658477385
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22906,6 +22990,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1840333181}
+        m_TargetAssemblyTypeName: PCCanvasSwitcher, Assembly-CSharp
+        m_MethodName: SonidoTeclado
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1684793578
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23212,6 +23308,82 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1699579214}
+  m_CullTransparentMesh: 1
+--- !u!1 &1701328676
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1701328677}
+  - component: {fileID: 1701328679}
+  - component: {fileID: 1701328678}
+  m_Layer: 0
+  m_Name: AprobarSello
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1701328677
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1701328676}
+  m_LocalRotation: {x: -0, y: -0.000000009313225, z: 0.11927001, w: 0.99286187}
+  m_LocalPosition: {x: 0, y: 0, z: -74}
+  m_LocalScale: {x: 1.7521944, y: 0.69579065, z: 0.77903}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1501089360}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 13.7}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 64, y: 121}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1701328678
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1701328676}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 1a3d7e7b25c69b646919256c947a9794, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1701328679
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1701328676}
   m_CullTransparentMesh: 1
 --- !u!1 &1704502886
 GameObject:
@@ -24785,6 +24957,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   time: {fileID: 698772801}
+  Sonidos: {fileID: 0}
   desiredCanvasType: 0
   desiredCanvasType2: 0
   canvasManager: {fileID: 541790786}
@@ -24994,6 +25167,18 @@ MonoBehaviour:
       - m_Target: {fileID: 113856866}
         m_TargetAssemblyTypeName: Telefono, Assembly-CSharp
         m_MethodName: ApagarPapel
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1840333181}
+        m_TargetAssemblyTypeName: PCCanvasSwitcher, Assembly-CSharp
+        m_MethodName: SonidoTeclado
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -26213,6 +26398,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1840333181}
+        m_TargetAssemblyTypeName: PCCanvasSwitcher, Assembly-CSharp
+        m_MethodName: SonidoTeclado
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1896948677
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27351,6 +27548,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1840333181}
+        m_TargetAssemblyTypeName: PCCanvasSwitcher, Assembly-CSharp
+        m_MethodName: SonidoTeclado
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1958976861
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28041,6 +28250,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1840333181}
+        m_TargetAssemblyTypeName: PCCanvasSwitcher, Assembly-CSharp
+        m_MethodName: SonidoTeclado
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1983828066
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28154,6 +28375,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 63e30b05f27c69847a2785def961dc99, type: 3}
   BenEntrevista1: 0
   BenEntrevista2: 0
+  PimientapaluzaSeAdelanta: 0
+  PimientaPaluzaNoPuedeEntrar: 0
 --- !u!1 &1994510090
 GameObject:
   m_ObjectHideFlags: 0
@@ -28281,7 +28504,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 816f4d5ec183c584d9e3577125d3203a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  camara: {fileID: 0}
+  camara: {fileID: 1031912887}
   AbrirExpediente: {fileID: 2693955428119965530, guid: 2f9d82c46e6dc0646b50e3cb1eead94f, type: 3}
   CerrarExpediente: {fileID: 16956568562034932, guid: f6a41c5ec48897d4c8c3aed547b45404, type: 3}
   SonidoImprimir: {fileID: 3924760758477047190, guid: 4a66dcf753551f44ea5473fca2d1ea5d, type: 3}
@@ -28865,6 +29088,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1840333181}
+        m_TargetAssemblyTypeName: PCCanvasSwitcher, Assembly-CSharp
+        m_MethodName: SonidoTeclado
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2038859897
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29274,6 +29509,7 @@ MonoBehaviour:
   desiredCanvasType2: 2
   canvasManager: {fileID: 320038367}
   time: {fileID: 0}
+  Sonido: {fileID: 0}
 --- !u!65 &2057420179
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -29635,6 +29871,18 @@ MonoBehaviour:
       - m_Target: {fileID: 113856866}
         m_TargetAssemblyTypeName: Telefono, Assembly-CSharp
         m_MethodName: ApagarPapel
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1840333181}
+        m_TargetAssemblyTypeName: PCCanvasSwitcher, Assembly-CSharp
+        m_MethodName: SonidoTeclado
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

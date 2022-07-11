@@ -10,6 +10,7 @@ public class PC : MonoBehaviour
     [SerializeField] Bitacoras bitacoras;
     [SerializeField] TimeManager time;
     [SerializeField] AlarmaPC alarmaPC;
+    [SerializeField] SonidosManagement Sonido;
     public Transform camPosition;
     public GameObject FondoInvisible;
     public TMP_Text txtBuscador;
@@ -23,10 +24,15 @@ public class PC : MonoBehaviour
     public Sprite[] personajes;
     public TMP_Text RatingMaimo;
     public Transform transformTermometro;
+    
 
     static public int Rating { get; set; }
     private int RatingAux;
+    private void Start()
+    {
 
+        Sonido = FindObjectOfType<SonidosManagement>();
+    }
     private void Update()
     {
         
@@ -34,11 +40,13 @@ public class PC : MonoBehaviour
         txtBuscador.text = libreta.palabra;
         if (RatingAux < Rating)
         {
+            //Sonido.SonidoPING();
             alarmaPC.LuzRatingSube();
             CambiarTermometro();
         }
         if (RatingAux > Rating)
         {
+            //Sonido.SonidoPING();
             alarmaPC.LuzRatingBaja();
             CambiarTermometro();
         }
@@ -49,7 +57,7 @@ public class PC : MonoBehaviour
     public void MostrarWiki ()
     {
         //================================================================ Wiki Ben =======================================================//
-
+        Sonido.SonidoClickMouse();
         if(txtBuscador.text == libreta.palabrasCaso[0])
 
         {
@@ -329,5 +337,7 @@ public class PC : MonoBehaviour
         Camaras.currentview = camPosition;
         FondoInvisible.SetActive(true);
     }
+
+    
 
 }
