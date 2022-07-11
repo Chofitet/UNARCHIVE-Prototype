@@ -112,6 +112,7 @@ public class Bitacoras : MonoBehaviour
     public bool PuebloPimientaDifamado;
     public bool PuebloPimientaAnalizado;
     public bool PuebloPimientaAislado;
+    public bool PuebloPimientaLevantarCerca;
     ////////////////////////////
     public bool PimientapaluzersEliminado;
     public bool PimientapaluzersLavado;
@@ -214,8 +215,6 @@ public class Bitacoras : MonoBehaviour
             A.crearNoticia.interactable = false;
         }
         else A.crearNoticia.interactable = true;
-
-        if (libreta.SignoPreguntaPieGrande == "") libreta.TacharPalabra(libreta.WifiRobadoBtn, libreta.txtWifiRobado, 12);
 
         ActualizarPaginas();
     }
@@ -777,10 +776,10 @@ public class Bitacoras : MonoBehaviour
             //Aislar
             if (A.aislar.CompareTag(tag = "OptActivado") && A.aislar.isOn == true && PuebloPimientaAislado == false)
             {
-                float RetencionBitacora = 0.001f;
+                float RetencionBitacora = 3;
                 float HoraCompletado = RetencionBitacora + TimeManager.Hora;
-                string txt = "<b>AISLAR PUEBLO PIMIENTA</b>"
-                + System.Environment.NewLine + "No contamos con los recursos necesarios!";
+                string txt = "<b>PUEBLO PIMIENTA AISLADO</b>"
+                + System.Environment.NewLine + "Pueblo Pimienta y todos sus habitantes han sido aislados del mundo exterior.";
                 string FechaCompletado = "2" + TimeManager.Dia + "/03";
                 string txtAccion = "Aislar Pueblo Pimienta";
                 Toggle accion = A.aislar;
@@ -886,7 +885,7 @@ public class Bitacoras : MonoBehaviour
             {
                 float RetencionBitacora = 3;
                 float HoraCompletado = RetencionBitacora + TimeManager.Hora;
-                string txt = "<b>PARQUE PIMIENTA HAQUEADO</b>"
+                string txt = "<b>PARQUE PIMIENTA HACKEADO</b>"
                 + System.Environment.NewLine + "Alguien se está colgando de la WIFI privada del Parque."
                 + System.Environment.NewLine + "Sugerimos investigar.";
                 string FechaCompletado = "2" + TimeManager.Dia + "/03";
@@ -1121,7 +1120,7 @@ public class Bitacoras : MonoBehaviour
                 float RetencionBitacora = 1;
                 float HoraCompletado = RetencionBitacora + TimeManager.Hora;
                 string txt = "<b>PIMIENTAPALUZA DIFAMADO</b>"
-                + System.Environment.NewLine + "Todo listo."//Escribir que lo cancelan y la noticia de cancelado
+                + System.Environment.NewLine + "Bye bye, Pimientapaluza."//Escribir que lo cancelan y la noticia de cancelado
                 + System.Environment.NewLine + "La noticia difamante se transmitirá en la próxima hora."; 
                 string FechaCompletado = "2" + TimeManager.Dia + "/03";
                 string txtAccion = "Difamar Pimientapaluza";
@@ -1140,6 +1139,7 @@ public class Bitacoras : MonoBehaviour
                 StartCoroutine(GuardarBitacora(RetencionBitacora, txt, indaux, accion, a));
                 PimientaPaluzaDifamado = true;
                 A.difamar.interactable = false;
+                PimientaPaluzaCancelado = true;
             }
             //Difamar2
             if (A.difamar.CompareTag(tag = "OptActivado") && A.difamar.isOn == true && PimientaPaluzaDifamado == false && PimientapaluzersInvestigado == false)
@@ -1174,7 +1174,7 @@ public class Bitacoras : MonoBehaviour
                 float RetencionBitacora = 3;
                 float HoraCompletado = RetencionBitacora + TimeManager.Hora;
                 string txt = "<b>PIMIENTAPALUZA AISLADO</b>"
-                + System.Environment.NewLine + "El personal de Pimientapaluza y los Pimientapaluzersen han quedado atrapads dentro del Parque. No fué una buena desición.";
+                + System.Environment.NewLine + "El personal de Pimientapaluza y los Pimientapaluzersen han quedado atrapados dentro del Parque. No fué una buena desición.";
                 string FechaCompletado = "2" + TimeManager.Dia + "/03";
                 string txtAccion = "Aislar Pimientapaluza";
                 Toggle accion = A.aislar;
@@ -2944,6 +2944,34 @@ public class Bitacoras : MonoBehaviour
                 StartCoroutine(GuardarBitacora(RetencionBitacora, txt, indaux, accion, a));
                 PimientaPaluzaLevantarCerca = true;
                 A.levantarCerca.interactable = false;               
+            }
+        }
+
+        if (libreta.palabrasCaso[5] == lblLevantarCerca.text)
+        {
+            if (A.levantarCerca.CompareTag(tag = "OptActivado") && A.levantarCerca.isOn == true && PuebloPimientaLevantarCerca == false)
+            {
+                float RetencionBitacora = 1;
+                float HoraCompletado = RetencionBitacora + TimeManager.Hora;
+                string txt = "<b>CERCO QUITADO DE PUEBLO PIMIENTA</b>"
+                + System.Environment.NewLine + "Wip";
+                string FechaCompletado = "2" + TimeManager.Dia + "/03";
+                string txtAccion = "Quitando cerco de Pueblo Pimienta";
+                Toggle accion = A.levantarCerca;
+                if (HoraCompletado >= 18)
+                {
+                    HoraCompletado = 6 + (RetencionBitacora - (18 - TimeManager.Hora));
+                    FechaCompletado = "2" + (TimeManager.Dia + 1) + "/03";
+                }
+                int indaux = ind;
+                int a = 1;
+                CargarVectorProgreso(txtAccion, FechaCompletado, HoraCompletado, indaux);
+                SetearBitacora();
+                a = aux;
+                ActualizarIndice();
+                StartCoroutine(GuardarBitacora(RetencionBitacora, txt, indaux, accion, a));
+                PuebloPimientaLevantarCerca = true;
+                A.levantarCerca.interactable = false;
             }
         }
 
