@@ -163,7 +163,7 @@ public class PC : MonoBehaviour
         {
             txtInfo.text = "Enorme reserva ambiental ubicada entre el dorso de Pueblo Pimienta y Monte Quete, es el austero hogar de especies nativas tales como el caribú mostaza, la liebre vermin y el noble salmón araña."
             + System.Environment.NewLine + "A pesar de su propósito es también, controversialmente, el hogar del festival de música más masivo del planeta: El Pimentapaluza, festejado religiosamente en la inamovible fecha del 28 de Marzo de cada año.";
-            libreta.BtnPimientaPaluza.SetActive(true);
+            libreta.EscribirNuevaPalabra(libreta.BtnPimientaPaluza, 3);
             FotoCarnet(5);
             txtDatos.text = "Ubicación: Entre Pueblo Pimienta y Monte Quete.";
         }
@@ -173,8 +173,8 @@ public class PC : MonoBehaviour
             txtInfo.text = "Ex Ciudad Pimienta, descendida a Pueblo luego de la Triquiñuela del 68."
             + System.Environment.NewLine + "El segundo pueblo más poblado de Quete es una zona semi rural pos urbana que se encuentra en un proceso de reivindicación fiscal. Es "
             + System.Environment.NewLine + "Si bien los ingresos anuales generados por la reserva ambiental Parque Pimienta son suficientes para soportar la economía de diez Pueblos Pimienta, intentan mantener su urbanidad controlable.";
- 
-            libreta.BtnParquePimienta.SetActive(true);
+
+            libreta.EscribirNuevaPalabra(libreta.BtnParquePimienta, 10);
             FotoCarnet(6);
             txtDatos.text = "Habitantes: 274"
             + System.Environment.NewLine
@@ -211,7 +211,7 @@ public class PC : MonoBehaviour
         else if (txtBuscador.text == libreta.palabrasCaso[4])
         {
             txtInfo.text = "Comedia romántica estrenada en 1994. La actuación y encendida cabellera de Kate Milliard capturó a la audiencia catapultandola a la fama." ;
-            libreta.BtnKateMilliard.gameObject.SetActive(true);
+            libreta.EscribirNuevaPalabra(libreta.BtnKateMilliard, 2);
             libreta.TacharPalabra(libreta.BananoramaBtn, libreta.txtBananorrama, 4);
             FotoCarnet(9);
             txtDatos.text = "";

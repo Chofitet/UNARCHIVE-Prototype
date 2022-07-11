@@ -14,6 +14,7 @@ public class Bitacoras : MonoBehaviour
     [SerializeField] PC PC;
     [SerializeField] PantallasSwitcherManager Pantallas;
     [SerializeField] TV tv;
+    [SerializeField] SonidosManagement Sonidos;
 
     //Declaración varariables
 
@@ -204,7 +205,7 @@ public class Bitacoras : MonoBehaviour
 
     private void Start()
     {
-       
+        Sonidos = FindObjectOfType<SonidosManagement>();
         PagActual = Pag;
     }
 
@@ -2975,6 +2976,7 @@ public class Bitacoras : MonoBehaviour
             }
         }
 
+        
 
         libreta.DesSubrayar();
         libreta.SetearPalabraLibretaACero();
@@ -2991,6 +2993,7 @@ public class Bitacoras : MonoBehaviour
             libreta.PersonajeEliminado();
             UbicacionConfirmada(accion);
             libreta.ActualizarPalabras(accion);
+            if (time.VariacionDeTiempo > 500) Sonidos.SonidoPING();
             time.TiempoNormal();
             A.DeshabilitarAcciones();
             MostrarNoticiasFalsas(accion);
@@ -3003,11 +3006,12 @@ public class Bitacoras : MonoBehaviour
    
     public void SiguientePagina()
     {
-        if (PagActual < Pag)  {PagActual++;}
+        if (PagActual < Pag)  {PagActual++; Sonidos.SonidoPasarHoja(); }
+        
     }
     public void AnteriorPagina ()
     {
-        if (PagActual > 1) { PagActual--; } 
+        if (PagActual > 1) { PagActual--; Sonidos.SonidoPasarHoja(); } 
     }
     void ActualizarPaginas()
     {

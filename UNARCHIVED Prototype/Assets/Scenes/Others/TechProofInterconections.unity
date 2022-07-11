@@ -2951,6 +2951,7 @@ MonoBehaviour:
   PC: {fileID: 1090419601}
   Pantallas: {fileID: 1707752575}
   tv: {fileID: 1988636337}
+  Sonidos: {fileID: 0}
   BenRetirado: 0
   BenEliminado: 0
   BenLavado: 0
@@ -3031,6 +3032,7 @@ MonoBehaviour:
   PuebloPimientaDifamado: 0
   PuebloPimientaAnalizado: 0
   PuebloPimientaAislado: 0
+  PuebloPimientaLevantarCerca: 0
   PimientapaluzersEliminado: 0
   PimientapaluzersLavado: 0
   PimientapaluzersInvestigado: 0
@@ -15004,7 +15006,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!82 &1137727152
 AudioSource:
   m_ObjectHideFlags: 0
@@ -15017,7 +15019,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 70d0a51834cd7e84b913a270ca2071ff, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.521
+  m_Volume: 0.403
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -23477,7 +23479,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1707752575
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28373,6 +28375,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 9111618b8992ffc4d9d5241009d9f9ac, type: 3}
   - {fileID: 21300000, guid: 957b5c67f406c3841a6f879fb978ddb6, type: 3}
   - {fileID: 21300000, guid: 63e30b05f27c69847a2785def961dc99, type: 3}
+  Sonidos: {fileID: 0}
   BenEntrevista1: 0
   BenEntrevista2: 0
   PimientapaluzaSeAdelanta: 0
@@ -28476,7 +28479,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2018953226
 Transform:
   m_ObjectHideFlags: 0
