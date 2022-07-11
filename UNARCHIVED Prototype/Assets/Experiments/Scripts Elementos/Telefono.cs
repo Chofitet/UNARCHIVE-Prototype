@@ -10,6 +10,7 @@ public class Telefono : MonoBehaviour
     [SerializeField] Bitacoras bitacora;
     [SerializeField] TimeManager time;
     [SerializeField] AlarmaTelefono Alarma;
+    [SerializeField] SonidosManagement Sonidos;
     public Button btnllamar;
     public Button btnplay;
     public Button btnREC;
@@ -37,6 +38,7 @@ public class Telefono : MonoBehaviour
     private void Start()
     {
         PapelFax.gameObject.SetActive(false);
+        Sonidos = FindObjectOfType<SonidosManagement>();
     }
 
     public TMP_Text txtTranscripciónLlamado;
@@ -67,6 +69,7 @@ public class Telefono : MonoBehaviour
             LlamadaEnProgreso = libreta.palabra;
             EsLlamable(LlamadaEnProgreso);
             if (LlamadaEnProgreso == "") PapelFax.SetActive(false);
+            if (libreta.palabra != "") { Sonidos.SonidodeBoton(); }
         }
         else if (x == true)
         {
@@ -74,8 +77,9 @@ public class Telefono : MonoBehaviour
             LlamadaEnTranscurso = false;
             x = false;
             Alarma.Apagado();
-            Debug.Log("no llamado");
+            if (libreta.palabra != "") { Sonidos.SonidodeBoton(); }
         }
+        
     }
 
     public void SetearLlamada ()
@@ -175,6 +179,7 @@ public class Telefono : MonoBehaviour
         }
         else
         {
+           // if (libreta.palabra != "") { Sonidos.SonidodeImprimir(); }
             PapelFax.SetActive(true);
             txtTranscripciónLlamado.text = "WIP No es posible pinchar a " + LlamadaEnProgreso;//este es cuando llamas a un objeto  o lugar o coso
         }
@@ -207,7 +212,8 @@ public class Telefono : MonoBehaviour
         btnplay.interactable = false;
         x1 = true;
         ActualizarPalabras();
-       
+        Sonidos.SonidodeBoton();
+       // Sonidos.SonidodeImprimir();
     }
 
     void MostrarNumero ()

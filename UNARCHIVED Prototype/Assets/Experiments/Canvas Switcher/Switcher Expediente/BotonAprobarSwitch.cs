@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class BotonAprobarSwitch : MonoBehaviour
 {
+    [SerializeField] SonidosManagement Sonidos;
     public CanvasTypeExp desiredCanvasType;
     public CanvasTypeExp desiredCanvasType2;
 
@@ -25,6 +26,7 @@ public class BotonAprobarSwitch : MonoBehaviour
     }
     private void Start()
     {
+        Sonidos = FindObjectOfType<SonidosManagement>();
         boton = GetComponent<Button>();
 
         boton.onClick.AddListener(OnButtonClicked);
@@ -47,6 +49,7 @@ public class BotonAprobarSwitch : MonoBehaviour
 
     IEnumerator  SelloAprobar ()
     {
+        Sonidos.SonidoCerrarExpediente();
         AprobadoSello.gameObject.SetActive(true);
         yield return new WaitForSeconds(1);
         canvasManager.SwitchCanvas(desiredCanvasType, desiredCanvasType2);
