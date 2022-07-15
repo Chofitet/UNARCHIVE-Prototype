@@ -1565,7 +1565,7 @@ public class Bitacoras : MonoBehaviour
                 float RetencionBitacora = 0.001f;
                 float HoraCompletado = RetencionBitacora + TimeManager.Hora;
                 string txt = "<b>ANALIZAR COLORADA</b>"
-                + System.Environment.NewLine + "Quizás debamos analizar .";
+                + System.Environment.NewLine + "Quizás debamos analizar la necesidad de unir palabras al azar.";
                 string FechaCompletado = "2" + TimeManager.Dia + "/03";
                 string txtAccion = "Analizar ADN Colorada";
                 Toggle accion = A.analizarMuestra;
@@ -1615,11 +1615,11 @@ public class Bitacoras : MonoBehaviour
                 Red78Eliminada = true;
             }
             //Investigar 
-            if (A.investigar.CompareTag(tag = "OptActivado") && A.investigar.isOn == true && Red78Investigada == false && Red78Hackeada == false)
+            if (A.investigar.CompareTag(tag = "OptActivado") && A.investigar.isOn == true && Red78Investigada == false)
             {
                 float RetencionBitacora = 4;
                 float HoraCompletado = RetencionBitacora + TimeManager.Hora;
-                string txt = "<b>ELIMINAR RED78</b>"
+                string txt = "<b>INVESTIGAR RED78</b>"
                 + System.Environment.NewLine + "Red78 es la reconocida actriz y documentóloga Kate Milliard";
                 string FechaCompletado = "2" + TimeManager.Dia + "/03";
                 string txtAccion = "Investigar Red78";
@@ -1665,7 +1665,7 @@ public class Bitacoras : MonoBehaviour
                 A.lavarCerebro.interactable = false;
             }
             //Hackeado
-            if (A.hackear.CompareTag(tag = "OptActivado") && A.hackear.isOn == true && Red78Hackeada == false && Red78Investigada == false)
+            if (A.hackear.CompareTag(tag = "OptActivado") && A.hackear.isOn == true && Red78Hackeada == false)
             {
                 float RetencionBitacora = 3;
                 float HoraCompletado = RetencionBitacora + TimeManager.Hora;
@@ -2085,7 +2085,7 @@ public class Bitacoras : MonoBehaviour
                 float RetencionBitacora = 12;
                 float HoraCompletado = RetencionBitacora + TimeManager.Hora;
                 string txt = "<b>PEPE QUENIO ANALIZADO</b>"
-                + System.Environment.NewLine + "BASE DE DATOS ACTUALIZADA. ADN coincide con Pie Grade. Posible hijo ilegítimo durante su último matrimonio.";
+                + System.Environment.NewLine + "BASE DE DATOS ACTUALIZADA. El ADN analizado coincide con el de Pie Grande. Posible hijo ilegítimo durante su último matrimonio.";
                 string FechaCompletado = "2" + TimeManager.Dia + "/03";
                 string txtAccion = "Analizar Pepe Quenio";
                 Toggle accion = A.analizarMuestra;
@@ -2870,7 +2870,7 @@ public class Bitacoras : MonoBehaviour
             ReunirPadreEHijo = true;
             A.trueEnding.interactable = false;
         }
-        if (A.trueEnding.CompareTag(tag = "OptActivado") && A.trueEnding.isOn == true && TrueEnding == false && KateProteccionAceptada == false && ConvertirCueva == true)
+        if (A.trueEnding.CompareTag(tag = "OptActivado") && A.trueEnding.isOn == true && TrueEnding == false && KateProteccionAceptada == true && ConvertirCueva == true)
         {
             float RetencionBitacora = 1;
             float HoraCompletado = RetencionBitacora + TimeManager.Hora;

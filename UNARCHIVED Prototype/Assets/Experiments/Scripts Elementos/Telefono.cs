@@ -153,7 +153,7 @@ public class Telefono : MonoBehaviour
                            + System.Environment.NewLine + "No podemos imprimir esto en un juego para menores de 18. Es una fuerte llamada de cachondeo.";
                     }
                 }
-                else if (bitacora.KateLavada == true) { txtTranscripciónLlamado.text = "Wip llamada kate lavada de cerebro"; }
+                else if (bitacora.KateLavada == true) { txtTranscripciónLlamado.text = "Esta parte del juego esta en desarrollo. Saludos del Diseñador"; }//WIP
 
                 else if (bitacora.KateEliminada == true) { txtTranscripciónLlamado.text = "Kate no puede realizar llamadas desde... La Granja"; }
                 LlamadaDiariaKate = true;
@@ -204,7 +204,7 @@ public class Telefono : MonoBehaviour
         {
             // if (libreta.palabra != "") { Sonidos.SonidodeImprimir(); }
             PapelFax.SetActive(true);
-            txtTranscripciónLlamado.text = "WIP No es posible pinchar a " + LlamadaEnProgreso;//este es cuando llamas a un objeto  o lugar o coso
+            txtTranscripciónLlamado.text = "Esta parte del juego esta en desarrollo. Saludos del Diseñador" + LlamadaEnProgreso;//WIP
         }
     }
 
