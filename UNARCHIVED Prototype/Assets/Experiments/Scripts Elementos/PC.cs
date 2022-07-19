@@ -52,6 +52,8 @@ public class PC : MonoBehaviour
             CambiarTermometro();
         }
         RatingAux = Rating;
+
+        if (Rating < 0) Rating = 0;
     }
 
     //Actualiza la wiki cada vez que le das a la lupa
@@ -251,61 +253,70 @@ public class PC : MonoBehaviour
 
     void CambiarTermometro()
     {
-        switch (Rating)
+        if (Rating >= 0 && Rating <= 16)
         {
-            case 0:
-                Termometro.sprite = images[0];
-                break;
-            case 1:
-                Termometro.sprite = images[1];
-                break;
-            case 2:
-                Termometro.sprite = images[2];
-                break;
-            case 3:
-                Termometro.sprite = images[3];
-                break;
-            case 4:
-                Termometro.sprite = images[4];
-                break;
-            case 5:
-                Termometro.sprite = images[5];
-                break;
-            case 6:
-                Termometro.sprite = images[6];
-                break;
-            case 7:
-                Termometro.sprite = images[7];
-                break;
-            case 8:
-                Termometro.sprite = images[8];
-                break;
-            case 9:
-                Termometro.sprite = images[9];
-                break;
-            case 10:
-                Termometro.sprite = images[10];
-                break;
-            case 11:
-                Termometro.sprite = images[11];
-                break;
-            case 12:
-                Termometro.sprite = images[12];
-                break;
-            case 13:
-                Termometro.sprite = images[13];
-                break;
-            case 14:
-                Termometro.sprite = images[14];
-                break;
-            case 15:
-                Termometro.sprite = images[15];
-                break;
-            case 16:
-                Termometro.sprite = images[16];
-                RatinMaximo();
-                break;
+            switch (Rating)
+            {
+                case 0:
+                    Termometro.sprite = images[0];
+                    break;
+                case 1:
+                    Termometro.sprite = images[1];
+                    break;
+                case 2:
+                    Termometro.sprite = images[2];
+                    break;
+                case 3:
+                    Termometro.sprite = images[3];
+                    break;
+                case 4:
+                    Termometro.sprite = images[4];
+                    break;
+                case 5:
+                    Termometro.sprite = images[5];
+                    break;
+                case 6:
+                    Termometro.sprite = images[6];
+                    break;
+                case 7:
+                    Termometro.sprite = images[7];
+                    break;
+                case 8:
+                    Termometro.sprite = images[8];
+                    break;
+                case 9:
+                    Termometro.sprite = images[9];
+                    break;
+                case 10:
+                    Termometro.sprite = images[10];
+                    break;
+                case 11:
+                    Termometro.sprite = images[11];
+                    break;
+                case 12:
+                    Termometro.sprite = images[12];
+                    break;
+                case 13:
+                    Termometro.sprite = images[13];
+                    break;
+                case 14:
+                    Termometro.sprite = images[14];
+                    break;
+                case 15:
+                    Termometro.sprite = images[15];
+                    break;
+                case 16:
+                    Termometro.sprite = images[16];
+                    RatinMaximo();
+                    break;
+            }
         }
+        else if (Rating >= 16)
+        {
+            Termometro.sprite = images[16];
+            RatinMaximo();
+        }
+        
 
     }
 

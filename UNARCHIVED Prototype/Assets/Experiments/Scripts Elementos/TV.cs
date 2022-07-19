@@ -600,7 +600,7 @@ public class TV : MonoBehaviour
             noticia.text = PimientapaluzersReclamanDia6Titulo;
             titular.text = PimientapaluzersReclamanDia6Noticia;
             PC.Rating = PC.Rating + IncrementoRating;
-            if (PC.Rating >= 16) { PC.RatinMaximo(); }
+            if (PC.Rating >= 16) { PC.RatinMaximo();}
             x = true;
             SetearImagenesNoticias(5);
             PimientapaluzersReclamanDia6 = true;
