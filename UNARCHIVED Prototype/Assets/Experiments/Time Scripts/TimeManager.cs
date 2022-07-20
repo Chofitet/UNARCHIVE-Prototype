@@ -35,7 +35,7 @@ public class TimeManager : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKey("escape")) Application.Quit();
+        
 
         Debug.Log(VariacionDeTiempo);
         TiempoAlternativo += Time.deltaTime * VariacionDeTiempo;

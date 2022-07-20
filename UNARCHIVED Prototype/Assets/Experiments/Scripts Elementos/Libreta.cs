@@ -310,60 +310,64 @@ public class Libreta : MonoBehaviour
             if (A.convertirCueva.isOn == false && bitacoras.ReunirPadreEHijo == true) { A.tglConvertirCueva.SetActive(true); }
             
         }
-        
+
 
         // Wip para cuando esten las bitacoras parte dos de los aislados, descomentar las condiciones y poner el nombre correcto de las variables.
-            
-        if (accion == A.aislar && bitacoras.ParquePimientaAislado == true && LevantasCercaParquePimienta == false)
+        if (bitacoras.ObjetoCercable == true)
         {
-            A.tglAislar.gameObject.SetActive(false);
-            A.tglLevantarCerca.gameObject.SetActive(true);
-            lblCercar.text = palabrasCaso[10];
-            LevantasCercaParquePimienta = true;
-        }
-        else if (accion == A.aislar && LevantasCercaParquePimienta2 == false /*&& bitacoras.ParquePimientaAislado2  */)
-        {
-            A.tglAislar.gameObject.SetActive(false);
-            A.tglLevantarCerca.gameObject.SetActive(true);
-            lblCercar.text = palabrasCaso[10];
-            LevantasCercaParquePimienta2 = true;
-        }
-        else if (accion == A.aislar && bitacoras.PimientaPaluzaAislado == true && LevantasCercaPimientapaluza == false)
-        {
-            A.tglAislar.gameObject.SetActive(false);
-            A.tglLevantarCerca.gameObject.SetActive(true);
-            lblCercar.text = palabrasCaso[3];
-            LevantasCercaPimientapaluza = true;
-        }
-        else if (accion == A.aislar && LevantasCercaPimientapaluza2 == false /*  && bitacoras.PimientapaluzaAislado2  */)
-        {
-            A.tglAislar.gameObject.SetActive(false);
-            A.tglLevantarCerca.gameObject.SetActive(true);
-            lblCercar.text = palabrasCaso[3];
-            LevantasCercaPimientapaluza2 = true;
-        }
-        else if (accion == A.aislar && bitacoras.PuebloPimientaAislado == true && LevantarCercaPuebloPimienta == false)
-        {
-            A.tglAislar.gameObject.SetActive(false);
-            A.tglLevantarCerca.gameObject.SetActive(true);
-            lblCercar.text = palabrasCaso[5];
-            LevantarCercaPuebloPimienta = true;
-        }
-        else if (accion == A.aislar && LevantarCercaPuebloPimienta2 == false /*  || bitacoras.PuebloPimientaAislado2   */)
-        {
-            A.tglAislar.gameObject.SetActive(false);
-            A.tglLevantarCerca.gameObject.SetActive(true);
-            lblCercar.text = palabrasCaso[5];
-            LevantarCercaPuebloPimienta2 = true;
+
+            if (accion == A.aislar && bitacoras.ParquePimientaAislado == true && LevantasCercaParquePimienta == false)
+            {
+                A.tglAislar.gameObject.SetActive(false);
+                A.tglLevantarCerca.gameObject.SetActive(true);
+                lblCercar.text = palabrasCaso[10];
+                LevantasCercaParquePimienta = true;
+            }
+            else if (accion == A.aislar && LevantasCercaParquePimienta2 == false /*&& bitacoras.ParquePimientaAislado2  */)
+            {
+                A.tglAislar.gameObject.SetActive(false);
+                A.tglLevantarCerca.gameObject.SetActive(true);
+                lblCercar.text = palabrasCaso[10];
+                LevantasCercaParquePimienta2 = true;
+            }
+            else if (accion == A.aislar && bitacoras.PimientaPaluzaAislado == true && LevantasCercaPimientapaluza == false)
+            {
+                A.tglAislar.gameObject.SetActive(false);
+                A.tglLevantarCerca.gameObject.SetActive(true);
+                lblCercar.text = palabrasCaso[3];
+                LevantasCercaPimientapaluza = true;
+            }
+            else if (accion == A.aislar && LevantasCercaPimientapaluza2 == false /*  && bitacoras.PimientapaluzaAislado2  */)
+            {
+                A.tglAislar.gameObject.SetActive(false);
+                A.tglLevantarCerca.gameObject.SetActive(true);
+                lblCercar.text = palabrasCaso[3];
+                LevantasCercaPimientapaluza2 = true;
+            }
+            else if (accion == A.aislar && bitacoras.PuebloPimientaAislado == true && LevantarCercaPuebloPimienta == false)
+            {
+                A.tglAislar.gameObject.SetActive(false);
+                A.tglLevantarCerca.gameObject.SetActive(true);
+                lblCercar.text = palabrasCaso[5];
+                LevantarCercaPuebloPimienta = true;
+            }
+            else if (accion == A.aislar && LevantarCercaPuebloPimienta2 == false /*  || bitacoras.PuebloPimientaAislado2   */)
+            {
+                A.tglAislar.gameObject.SetActive(false);
+                A.tglLevantarCerca.gameObject.SetActive(true);
+                lblCercar.text = palabrasCaso[5];
+                LevantarCercaPuebloPimienta2 = true;
+            }
+            bitacoras.ObjetoCercable = false;
+
         }
 
-        if (accion == A.levantarCerca )
+        if (accion == A.levantarCerca)
         {
             A.tglAislar.gameObject.SetActive(true);
             A.tglLevantarCerca.gameObject.SetActive(false);
-
         }
-            
+
     }
 
     public void SetearPalabraLibretaACero ()

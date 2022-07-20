@@ -55,12 +55,9 @@ public class Acciones : MonoBehaviour
         if (bitacoras.PieGrandeUbicacion == true && tglLevantarCerca.activeSelf == false) { tglAislar.SetActive(true); }
         if (tv.BenEntrevista2 == true) tglPlantarPublico.SetActive(false);
        
-
-        //if (bitacoras.ParquePimientaAislado) tglAislar.SetActive(false);
-
-        ///acciones  para agregar condiciones (solo en los if) AGREGAR && 
         
         if (extraerFotos.isOn == false && tv.BenEntrevista2 == false && Pinchofono.BenLlamado==true && bitacoras.ExtraerFoto == false) { tglExtraerFotos.SetActive(true); }
+
         
     }
     ///////////////////////////////////////////////////////
@@ -139,7 +136,10 @@ public class Acciones : MonoBehaviour
     {
         if (action){crearEscena.tag = "OptActivado";}
         CompletarPalabra();
+        libreta.palabra = "";
+        Libreta.PalabraSeleccionada = true;
         AccionSelccionada = true;
+        libreta.DesSubrayar();
     }
     public void CrearnoticiaFalsa(bool action)
     {
@@ -154,18 +154,25 @@ public class Acciones : MonoBehaviour
         if (action) { analizarMuestra.tag = "OptActivado"; }
         CompletarPalabra();
         AccionSelccionada = true;
+
     }
     public void PlantarPublico(bool action)
     {
         if (action) { plantarPublico.tag = "OptActivado"; }
         CompletarPalabra();
         AccionSelccionada = true;
+        libreta.palabra = "";
+        Libreta.PalabraSeleccionada = true;
+        libreta.DesSubrayar();
     }
     public void TrueEnding(bool action)
     {
         if (action) { trueEnding.tag = "OptActivado"; }
         CompletarPalabra();
         AccionSelccionada = true;
+        libreta.palabra = "";
+        Libreta.PalabraSeleccionada = true;
+        libreta.DesSubrayar();
     }
     public void ConvertirCueva(bool action)
     {
@@ -220,7 +227,15 @@ public class Acciones : MonoBehaviour
         aislar.isOn = false;
         crearNoticia.isOn = false;
         analizarMuestra.isOn = false;
-        
+
+        crearEscena.isOn = false;
+        plantarPublico.isOn = false;
+        trueEnding.isOn =false;
+        ofrecerProteccion.isOn = false;
+        extraerFotos.isOn = false;
+        convertirCueva.isOn = false;
+        levantarCerca.isOn = false;
+
     }
     public void DeshabilitarAcciones()
     {

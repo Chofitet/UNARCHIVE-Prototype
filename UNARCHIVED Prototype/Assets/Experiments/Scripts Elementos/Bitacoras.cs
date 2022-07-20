@@ -148,6 +148,7 @@ public class Bitacoras : MonoBehaviour
     public bool LevantarCerca;
 
     private string PreUbicacion;
+    public bool ObjetoCercable;
 
     public string txtNoticiaFalsa;
     public string txtTituloFalsa;
@@ -802,6 +803,7 @@ public class Bitacoras : MonoBehaviour
                 StartCoroutine(GuardarBitacora(RetencionBitacora, txt, indaux, accion, a));
                 PuebloPimientaAislado = true;
                 A.aislar.interactable = false;
+                ObjetoCercable = true;
             }
             
         }
@@ -985,7 +987,7 @@ public class Bitacoras : MonoBehaviour
                 ParquePimientaAislado = true;
                 A.aislar.interactable = false;
                 tv.PimientaPaluzaNoPuedeEntrar = true;
-
+                ObjetoCercable = true;
             }
 
         }
@@ -3171,8 +3173,8 @@ public class Bitacoras : MonoBehaviour
 
         libreta.DesSubrayar();
         libreta.SetearPalabraLibretaACero();
-        A.Restablecer();
         A.DeshabilidarAccionesInstantadea();
+        A.Restablecer();
     }
 
 
@@ -3326,51 +3328,51 @@ public class Bitacoras : MonoBehaviour
     { 
         if (Pag == 1)
         {
-            pag1[ind] = "<b>" + Accion + " en proceso </b>" + System.Environment.NewLine + "Tendremos los resultados a las " + HoraCompletado + ":" + TimeManager.Minuto + " del " + FechaCompletado;
+            pag1[ind] = "<b>" + Accion + " en proceso </b>" + System.Environment.NewLine + "Tendremos los resultados a las " + $"{HoraCompletado}:{TimeManager.Minuto:00}" + " del " + FechaCompletado;
         }
         else if (Pag == 2)
         {
-            pag2[ind] = "<b>" + Accion + " en proceso </b>" + System.Environment.NewLine + "Tendremos los resultados a las " + HoraCompletado + ":" + TimeManager.Minuto + " del " + FechaCompletado;
+            pag2[ind] = "<b>" + Accion + " en proceso </b>" + System.Environment.NewLine + "Tendremos los resultados a las " + $"{HoraCompletado}:{TimeManager.Minuto:00}" + " del " + FechaCompletado;
         }
         else if (Pag == 3)
         {
-            pag3[ind] = "<b>" + Accion + " en proceso </b>" + System.Environment.NewLine + "Tendremos los resultados a las " + HoraCompletado + ":" + TimeManager.Minuto + " del " + FechaCompletado;
+            pag3[ind] = "<b>" + Accion + " en proceso </b>" + System.Environment.NewLine + "Tendremos los resultados a las " + $"{HoraCompletado}:{TimeManager.Minuto:00}" + " del " + FechaCompletado;
         }
         else if (Pag == 4)
         {
-            pag4[ind] = "<b>" + Accion + " en proceso </b>" + System.Environment.NewLine + "Tendremos los resultados a las " + HoraCompletado + ":" + TimeManager.Minuto + " del " + FechaCompletado;
+            pag4[ind] = "<b>" + Accion + " en proceso </b>" + System.Environment.NewLine + "Tendremos los resultados a las " + $"{HoraCompletado}:{TimeManager.Minuto:00}" + " del " + FechaCompletado;
         }
         else if (Pag == 5)
         {
-            pag5[ind] = "<b>" + Accion + " en proceso </b>" + System.Environment.NewLine + "Tendremos los resultados a las " + HoraCompletado + ":" + TimeManager.Minuto + " del " + FechaCompletado;
+            pag5[ind] = "<b>" + Accion + " en proceso </b>" + System.Environment.NewLine + "Tendremos los resultados a las " + $"{HoraCompletado}:{TimeManager.Minuto:00}" + " del " + FechaCompletado;
         }
         else if (Pag == 6)
         {
-            pag6[ind] = "<b>" + Accion + " en proceso </b>" + System.Environment.NewLine + "Tendremos los resultados a las " + HoraCompletado + ":" + TimeManager.Minuto + " del " + FechaCompletado;
+            pag6[ind] = "<b>" + Accion + " en proceso </b>" + System.Environment.NewLine + "Tendremos los resultados a las " + $"{HoraCompletado}:{TimeManager.Minuto:00}" + " del " + FechaCompletado;
         }
         else if (Pag == 7)
         {
-            pag7[ind] = "<b>" + Accion + " en proceso </b>" + System.Environment.NewLine + "Tendremos los resultados a las " + HoraCompletado + ":" + TimeManager.Minuto + " del " + FechaCompletado;
+            pag7[ind] = "<b>" + Accion + " en proceso </b>" + System.Environment.NewLine + "Tendremos los resultados a las " + $"{HoraCompletado}:{TimeManager.Minuto:00}" + " del " + FechaCompletado;
         }
         else if (Pag == 8)
         {
-            pag8[ind] = "<b>" + Accion + " en proceso </b>" + System.Environment.NewLine + "Tendremos los resultados a las " + HoraCompletado + ":" + TimeManager.Minuto + " del " + FechaCompletado;
+            pag8[ind] = "<b>" + Accion + " en proceso </b>" + System.Environment.NewLine + "Tendremos los resultados a las " + $"{HoraCompletado}:{TimeManager.Minuto:00}" + " del " + FechaCompletado;
         }
         else if (Pag == 9)
         {
-            pag9[ind] = "<b>" + Accion + " en proceso </b>" + System.Environment.NewLine + "Tendremos los resultados a las " + HoraCompletado + ":" + TimeManager.Minuto + " del " + FechaCompletado;
+            pag9[ind] = "<b>" + Accion + " en proceso </b>" + System.Environment.NewLine + "Tendremos los resultados a las " + $"{HoraCompletado}:{TimeManager.Minuto:00}" + " del " + FechaCompletado;
         }
         else if (Pag == 10)
         {
-            pag10[ind] = "<b>" + Accion + " en proceso </b>" + System.Environment.NewLine + "Tendremos los resultados a las " + HoraCompletado + ":" + TimeManager.Minuto + " del " + FechaCompletado;
+            pag10[ind] = "<b>" + Accion + " en proceso </b>" + System.Environment.NewLine + "Tendremos los resultados a las " + $"{HoraCompletado}:{TimeManager.Minuto:00}" + " del " + FechaCompletado;
         }
         else if (Pag == 11)
         {
-            pag11[ind] = "<b>" + Accion + " en proceso </b>" + System.Environment.NewLine + "Tendremos los resultados a las " + HoraCompletado + ":" + TimeManager.Minuto + " del " + FechaCompletado;
+            pag11[ind] = "<b>" + Accion + " en proceso </b>" + System.Environment.NewLine + "Tendremos los resultados a las " + $"{HoraCompletado}:{TimeManager.Minuto:00}" + " del " + FechaCompletado;
         }
         else if (Pag == 12)
         {
-            pag12[ind] = "<b>" + Accion + " en proceso </b>" + System.Environment.NewLine + "Tendremos los resultados a las " + HoraCompletado + ":" + TimeManager.Minuto + " del " + FechaCompletado;
+            pag12[ind] = "<b>" + Accion + " en proceso </b>" + System.Environment.NewLine + "Tendremos los resultados a las " + $"{HoraCompletado}:{TimeManager.Minuto:00}" + " del " + FechaCompletado;
         }
 
     }

@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class BotonAprobarSwitch : MonoBehaviour
 {
     [SerializeField] SonidosManagement Sonidos;
+    [SerializeField] Libreta Libreta;
     public CanvasTypeExp desiredCanvasType;
     public CanvasTypeExp desiredCanvasType2;
 
@@ -39,7 +40,8 @@ public class BotonAprobarSwitch : MonoBehaviour
 
     void ComprobarAccionPulsada()
     {
-        if (Acciones.AccionSelccionada == true && Libreta.PalabraSeleccionada == true) 
+        
+        if (Acciones.AccionSelccionada == true && Libreta.PalabraSeleccionada == true ) 
         {
             StartCoroutine(SelloAprobar());
         }
