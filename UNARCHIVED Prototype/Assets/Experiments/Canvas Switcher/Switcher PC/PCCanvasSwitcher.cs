@@ -28,6 +28,7 @@ public class PCCanvasSwitcher : MonoBehaviour
         time.TiempoNormal();
 
             PCPantalla = true;
+        Camaras.currentviewNum = 1;
     }
 
     public void SonidoTeclado()

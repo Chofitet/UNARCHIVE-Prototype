@@ -207,6 +207,7 @@ public class Bitacoras : MonoBehaviour
     public TMP_Text B6P2;
 
     public TMP_Text lblLevantarCerca;
+    public TMP_Text lblNemeroPagina;
 
     private void Start()
     {
@@ -3199,12 +3200,12 @@ public class Bitacoras : MonoBehaviour
    
     public void SiguientePagina()
     {
-        if (PagActual < Pag)  {PagActual++; Sonidos.SonidoPasarHoja(); }
+        if (PagActual < Pag)  {PagActual++; Sonidos.SonidoPasarHoja(); lblNemeroPagina.text = "" + PagActual; }
         
     }
     public void AnteriorPagina ()
     {
-        if (PagActual > 1) { PagActual--; Sonidos.SonidoPasarHoja(); } 
+        if (PagActual > 1) { PagActual--; Sonidos.SonidoPasarHoja(); lblNemeroPagina.text = "" + PagActual; } 
     }
     void ActualizarPaginas()
     {

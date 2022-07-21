@@ -13,6 +13,7 @@ public class TVCanvasSwither : MonoBehaviour
 
     void OnMouseDown()
     {
+        Camaras.currentviewNum = 2;
         canvasManager.SwitchCanvas(desiredCanvasType, desiredCanvasType2);
         time.TiempoNormal();
         tv.PulsadoDeTV();

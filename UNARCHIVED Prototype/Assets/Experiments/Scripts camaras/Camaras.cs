@@ -8,17 +8,20 @@ public class Camaras : MonoBehaviour
     public Transform[] posCamara;
     public float transitionSpeed;
     public static Transform currentview { get;  set; }
+    public static int currentviewNum { get; set; }
     public GameObject TV;
     public GameObject PC;
 
     void Start()
     {
         currentview = transform;
+        currentviewNum = 3;
     }
 
     
     void Update()
     {
+        /*
        if(telefono.telefonoCamara == true)
         {
             currentview = posCamara[0];
@@ -31,9 +34,11 @@ public class Camaras : MonoBehaviour
         {
             currentview = posCamara[1];
         }
+        */
+        currentview = posCamara[currentviewNum];
         if (Input.GetKeyDown(KeyCode.Mouse1) == true && PasoDeDia.PantallaDia == false)
         {
-            currentview = posCamara[3];
+            currentviewNum = 3;
         }
        
     }

@@ -10,6 +10,8 @@ public class TelefonoCamara : MonoBehaviour
     {
         time.TiempoNormal();
         telefonoCamara = true;
+
+        Camaras.currentviewNum = 0;
     }
 
     private void Update()
