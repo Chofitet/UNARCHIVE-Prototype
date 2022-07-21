@@ -217,6 +217,8 @@ public class Telefono : MonoBehaviour
             btnplay.interactable = true;
             btnREC.interactable = false;
             x = false;
+            if (time.VariacionDeTiempo > 500) Sonidos.SonidoPING();
+            time.TiempoNormal();
         }
     }
 

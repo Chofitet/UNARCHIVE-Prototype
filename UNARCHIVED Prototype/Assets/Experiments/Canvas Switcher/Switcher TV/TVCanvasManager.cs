@@ -21,11 +21,11 @@ public class TVCanvasManager : MonoBehaviour
     {
         if (PC.Rating >= 16)
         {
-            SwitchCanvas(CanvasTypeTV.TVDef, CanvasTypeTV.TVDef);
+            SwitchCanvas(CanvasTypeTV.TV, CanvasTypeTV.TV);
         }
         if (Input.GetKeyDown(KeyCode.Mouse1) == true && PasoDeDia.PantallaDia == false)
         {
-            SwitchCanvas(CanvasTypeTV.TVDef, CanvasTypeTV.TVDef);
+            SwitchCanvas(CanvasTypeTV.TV, CanvasTypeTV.TV);
         }
     }
 
@@ -34,7 +34,7 @@ public class TVCanvasManager : MonoBehaviour
     {
         canvasControllerList = GetComponentsInChildren<TVCanvasController>().ToList();
         canvasControllerList.ForEach(x => x.gameObject.SetActive(false));
-        SwitchCanvas(CanvasTypeTV.TVDef, CanvasTypeTV.TVDef);
+        SwitchCanvas(CanvasTypeTV.TV, CanvasTypeTV.TV);
     }
 
     public void SwitchCanvas(CanvasTypeTV _type, CanvasTypeTV _type2)
