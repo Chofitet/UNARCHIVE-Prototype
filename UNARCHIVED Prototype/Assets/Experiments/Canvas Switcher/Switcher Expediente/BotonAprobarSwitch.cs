@@ -15,6 +15,8 @@ public class BotonAprobarSwitch : MonoBehaviour
     public ExpCanvasManager canvasManager;
     Button boton;
    public GameObject AprobadoSello;
+    [SerializeField] Sprite[] SellosDeAprobado;
+    [SerializeField] Image Sello;
     private void OnEnable()
     {
         AprobadoSello.gameObject.SetActive(false);
@@ -51,12 +53,15 @@ public class BotonAprobarSwitch : MonoBehaviour
 
     IEnumerator  SelloAprobar ()
     {
+        int r = Random.Range(0, 3);
+        Sello.sprite = SellosDeAprobado[r];
         Sonidos.SonidoCerrarExpediente();
         AprobadoSello.gameObject.SetActive(true);
         yield return new WaitForSeconds(1);
         canvasManager.SwitchCanvas(desiredCanvasType, desiredCanvasType2);
         libreta.gameObject.SetActive(false);
         AprobadoSello.gameObject.SetActive(false);
+        
     }
 
     

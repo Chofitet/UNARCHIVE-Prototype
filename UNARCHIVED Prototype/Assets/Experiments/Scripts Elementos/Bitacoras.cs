@@ -134,6 +134,13 @@ public class Bitacoras : MonoBehaviour
     public bool WifiRobadoDifamado;
     public bool WifiRobadoAislado;
 
+    ///////////////////////// Variable versión 2
+    public bool BenHackeado2;
+    public bool PepeQuenioInvestigado2;
+    public bool PepeQuenioAnalizado2;
+    public bool pimientapaluzersInvestigados2;
+
+
     //////////////////////
     public bool BitacoraCargada;
 
@@ -367,7 +374,7 @@ public class Bitacoras : MonoBehaviour
                 A.analizarMuestra.interactable = false;
             }
             //Difamar hay que hacer uno if hack true y otro si hack false
-            if (A.difamar.CompareTag(tag = "OptActivado") && A.difamar.isOn == true && BenHackeado == true && BenDifamado == false )
+            if (A.difamar.CompareTag(tag = "OptActivado") && A.difamar.isOn == true && BenHackeado2 == true && BenDifamado == false )
             {
                 float RetencionBitacora = 1;
                 float HoraCompletado = RetencionBitacora + TimeManager.Hora;
@@ -394,7 +401,7 @@ public class Bitacoras : MonoBehaviour
                 A.difamar.interactable = false;
                 
             }
-            if (A.difamar.CompareTag(tag = "OptActivado") && A.difamar.isOn == true && BenHackeado == false && BenDifamado == false )
+            if (A.difamar.CompareTag(tag = "OptActivado") && A.difamar.isOn == true && BenHackeado2 == false && BenDifamado == false )
             {
                 float RetencionBitacora = 1;
                 float HoraCompletado = RetencionBitacora + TimeManager.Hora;
@@ -1122,7 +1129,7 @@ public class Bitacoras : MonoBehaviour
                 A.analizarMuestra.interactable = false;
             }
             //Difamar
-            if (A.difamar.CompareTag(tag = "OptActivado") && A.difamar.isOn == true && PimientaPaluzaDifamado == false && PimientapaluzersInvestigado == true )
+            if (A.difamar.CompareTag(tag = "OptActivado") && A.difamar.isOn == true && PimientaPaluzaDifamado == false && pimientapaluzersInvestigados2 == true )
             {
                 float RetencionBitacora = 1;
                 float HoraCompletado = RetencionBitacora + TimeManager.Hora;
@@ -1149,7 +1156,7 @@ public class Bitacoras : MonoBehaviour
                 PimientaPaluzaCancelado = true;
             }
             //Difamar2
-            if (A.difamar.CompareTag(tag = "OptActivado") && A.difamar.isOn == true && PimientaPaluzaDifamado == false && PimientapaluzersInvestigado == false)
+            if (A.difamar.CompareTag(tag = "OptActivado") && A.difamar.isOn == true && PimientaPaluzaDifamado == false && pimientapaluzersInvestigados2 == false)
             {
                 float RetencionBitacora = 1;
                 float HoraCompletado = RetencionBitacora + TimeManager.Hora;
@@ -3192,6 +3199,7 @@ public class Bitacoras : MonoBehaviour
             A.DeshabilitarAcciones();
             MostrarNoticiasFalsas(accion);
             BitacoraCargada = true;
+            BooleanosVersion2(accion);
     }
 
     
@@ -3621,38 +3629,69 @@ public class Bitacoras : MonoBehaviour
         }
     }
 
+    string txt;
     int UN;
     void UbicacionNoEncontrada (string palabra)
     {
+        
+        SetearAccion();
         switch (UN)
         {
             case 0:
-                PreUbicacion = "¿Sabes donde está " + palabra + "? Porque nosotros no.";
+                PreUbicacion = txt + "<b>" + palabra + "</b>"
+                +System.Environment.NewLine + "¿Sabes donde está " + palabra + "? Porque nosotros no.";
                 UN++;
                 break;
             case 1:
-                PreUbicacion = "No contamos con la ubicación de " + palabra + ". Sería necesaria para llevar a cabo la directiva.";
+                PreUbicacion = txt + "<b>" + palabra + "</b>"
+                + System.Environment.NewLine + "No contamos con la ubicación de " + palabra + ". Sería necesaria para llevar a cabo la directiva.";
                 UN++;
                 break;
             case 2:
-                PreUbicacion = "Necesitamos que confirmen su ubicación primero.";
+                PreUbicacion = txt + "<b>" + palabra + "</b>"
+                + System.Environment.NewLine + "Necesitamos que confirmen su ubicación primero.";
                 UN++;
                 break;
             case 3:
-                PreUbicacion = "Necesitamos primero contar con el paradero de " + palabra + ".";
+                PreUbicacion = txt + "<b>" + palabra + "</b>"
+                + System.Environment.NewLine + "Necesitamos primero contar con el paradero de " + palabra + ".";
                 UN++;
                 break;
             case 4:
-                PreUbicacion = "Objetivo inalcanzable sin conocimiento de su ubicación.";
+                PreUbicacion = txt + "<b>" + palabra + "</b>"
+                + System.Environment.NewLine + "Objetivo inalcanzable sin conocimiento de su ubicación.";
                 UN++;
                 break;
             case 5:
-                PreUbicacion = "El agente necesita la ubicación del objetivo primero...DUH!";
+                PreUbicacion = txt + "<b>" + palabra + "</b>"
+                + System.Environment.NewLine + "El agente necesita la ubicación del objetivo primero...DUH!";
                 UN = 0; 
                 break;
         }
-        
-       
     }
-  
+    void SetearAccion()
+    {
+        if (A.eliminar.CompareTag(tag = "OptActivado")) txt = "<b>Eliminar a </b>";
+        if (A.investigar.CompareTag(tag = "OptActivado")) txt = "<b>Investigado a </b>";
+        if (A.lavarCerebro.CompareTag(tag = "OptActivado")) txt = "<b>Lavar cerebro a </b>";
+        if (A.hackear.CompareTag(tag = "OptActivado")) txt = "<b>Hackear a </b>";
+        if (A.analizarMuestra.CompareTag(tag = "OptActivado")) txt = "<b>Muestra analizada de </b>";
+    }
+    void BooleanosVersion2(Toggle accion)
+    {
+        if (accion == A.hackear)
+        {
+            if (BenHackeado == true) BenHackeado2 = true;
+        }
+        if(accion == A.investigar)
+        {
+            if (PepeInvestigado == true) PepeQuenioInvestigado2 = true;
+            if (PimientapaluzersInvestigado == true) pimientapaluzersInvestigados2 = true;
+        }
+        if(accion == A.analizarMuestra)
+        {
+            if (PepeAnalizado == true) PepeQuenioAnalizado2 = true;
+        }
+    }
+
 }

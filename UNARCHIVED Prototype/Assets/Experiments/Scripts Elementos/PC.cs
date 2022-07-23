@@ -114,7 +114,7 @@ public class PC : MonoBehaviour
             txtInfo.text = "Habitante de Pueblo Pimienta no cargado en BD."
                 + System.Environment.NewLine + "Investigar para completar entrada.";
 
-            if (bitacoras.PepeInvestigado == true && bitacoras.PepeAnalizado == false)
+            if (bitacoras.PepeQuenioInvestigado2 == true && bitacoras.PepeAnalizado == false)
             {
                 txtInfo.text = "Extaño niño en búsqueda de una buena afeitada. Reside actualmente en el orfanato local y su ÚNICO amigo es Ben Benji.";
                 FotoCarnet(3);
@@ -126,7 +126,7 @@ public class PC : MonoBehaviour
             + System.Environment.NewLine
             + System.Environment.NewLine + "Última vez visto en: Pueblo Pimienta.";
             }
-            if (txtBuscador.text == libreta.palabrasCaso[8] && bitacoras.PepeAnalizado == true)
+            if (txtBuscador.text == libreta.palabrasCaso[8] && bitacoras.PepeQuenioAnalizado2 == true)
             {
                 txtInfo.text = "Hijo bastardo de Pie Grande y más que probable causa de su separación en el 91."
                + System.Environment.NewLine + "Su existencia fué un secreto para La Agencia hasta al incidente Venus in Fur. Reside actualmente en un orfanato. El paradero de su madre biológica permanece un misterio para todo aquel que no compra el DLC.";
