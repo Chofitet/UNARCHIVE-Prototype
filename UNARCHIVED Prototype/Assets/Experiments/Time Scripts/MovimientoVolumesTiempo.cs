@@ -38,7 +38,6 @@ public class MovimientoVolumesTiempo : MonoBehaviour
     IEnumerator EfectoTiempoExagerado ()
     {
         yield return  new WaitForSeconds(0.6f);
-        Debug.Log("aaaaa");
         tiempoExagerado.QuitarEfectoTiempoExagerado();
     }
 }
