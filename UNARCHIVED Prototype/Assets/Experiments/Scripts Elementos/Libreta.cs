@@ -64,12 +64,12 @@ public class Libreta : MonoBehaviour
     bool[] PalabrasNuevasSonido = new bool[13];
 
     bool x;
-    bool LevantasCercaParquePimienta;
-    bool LevantasCercaPimientapaluza;
-    bool LevantarCercaPuebloPimienta;
-    bool LevantasCercaParquePimienta2;
-    bool LevantasCercaPimientapaluza2;
-    bool LevantarCercaPuebloPimienta2;
+    public bool LevantasCercaParquePimienta;
+    public bool LevantasCercaPimientapaluza;
+    public bool LevantarCercaPuebloPimienta;
+    public bool LevantasCercaParquePimienta2;
+    public bool LevantasCercaPimientapaluza2;
+    public bool LevantarCercaPuebloPimienta2;
 
 
     private void Start()
@@ -366,6 +366,7 @@ public class Libreta : MonoBehaviour
         {
             A.tglAislar.gameObject.SetActive(true);
             A.tglLevantarCerca.gameObject.SetActive(false);
+
         }
 
     }

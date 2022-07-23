@@ -931,8 +931,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Bananorrama?
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 035f7ed0c420fd34696a515b0622948e, type: 2}
-  m_sharedMaterial: {fileID: 6229731339834884539, guid: 035f7ed0c420fd34696a515b0622948e, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: d2baccae16612064b9598776b8873b9a, type: 2}
+  m_sharedMaterial: {fileID: -710284575419473342, guid: d2baccae16612064b9598776b8873b9a, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1446,8 +1446,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 035f7ed0c420fd34696a515b0622948e, type: 2}
-  m_sharedMaterial: {fileID: 6229731339834884539, guid: 035f7ed0c420fd34696a515b0622948e, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: d2baccae16612064b9598776b8873b9a, type: 2}
+  m_sharedMaterial: {fileID: -710284575419473342, guid: d2baccae16612064b9598776b8873b9a, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1604,6 +1604,12 @@ MonoBehaviour:
   txtPimientapaluzers: {fileID: 144801476}
   txtWifiRobado: {fileID: 161633720}
   txtBananorrama: {fileID: 47936689}
+  LevantasCercaParquePimienta: 0
+  LevantasCercaPimientapaluza: 0
+  LevantarCercaPuebloPimienta: 0
+  LevantasCercaParquePimienta2: 0
+  LevantasCercaPimientapaluza2: 0
+  LevantarCercaPuebloPimienta2: 0
 --- !u!4 &94808030
 Transform:
   m_ObjectHideFlags: 0
@@ -2227,7 +2233,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: 
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 035f7ed0c420fd34696a515b0622948e, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: d2baccae16612064b9598776b8873b9a, type: 2}
   m_sharedMaterial: {fileID: 6229731339834884539, guid: 035f7ed0c420fd34696a515b0622948e, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -2291,7 +2297,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!1 &132277837 stripped
@@ -2415,8 +2421,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: pimientapaluzers
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 035f7ed0c420fd34696a515b0622948e, type: 2}
-  m_sharedMaterial: {fileID: 6229731339834884539, guid: 035f7ed0c420fd34696a515b0622948e, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: d2baccae16612064b9598776b8873b9a, type: 2}
+  m_sharedMaterial: {fileID: -710284575419473342, guid: d2baccae16612064b9598776b8873b9a, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2570,8 +2576,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Pie Grande?
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 035f7ed0c420fd34696a515b0622948e, type: 2}
-  m_sharedMaterial: {fileID: 6229731339834884539, guid: 035f7ed0c420fd34696a515b0622948e, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: d2baccae16612064b9598776b8873b9a, type: 2}
+  m_sharedMaterial: {fileID: -710284575419473342, guid: d2baccae16612064b9598776b8873b9a, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2840,8 +2846,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: wifi robado
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 035f7ed0c420fd34696a515b0622948e, type: 2}
-  m_sharedMaterial: {fileID: 6229731339834884539, guid: 035f7ed0c420fd34696a515b0622948e, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: d2baccae16612064b9598776b8873b9a, type: 2}
+  m_sharedMaterial: {fileID: -710284575419473342, guid: d2baccae16612064b9598776b8873b9a, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2958,6 +2964,7 @@ MonoBehaviour:
   BenInvestigado: 0
   BenHackeado: 0
   BenDifamado: 0
+  BenDifamado2: 0
   BenAnalizado: 0
   PieGrandeEliminado: 0
   PieGrandeLavado: 0
@@ -3053,6 +3060,10 @@ MonoBehaviour:
   PepeQuenioInvestigado2: 0
   PepeQuenioAnalizado2: 0
   pimientapaluzersInvestigados2: 0
+  ParquePimientaAislado2: 0
+  ProteccionAceptadaKate2: 0
+  ConvertirCueva2: 0
+  ReunirPadreEHijo2: 0
   BitacoraCargada: 0
   OfrecerProteccion: 0
   ConvertirCueva: 0
@@ -4175,8 +4186,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: colorada?
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 035f7ed0c420fd34696a515b0622948e, type: 2}
-  m_sharedMaterial: {fileID: 6229731339834884539, guid: 035f7ed0c420fd34696a515b0622948e, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: d2baccae16612064b9598776b8873b9a, type: 2}
+  m_sharedMaterial: {fileID: -710284575419473342, guid: d2baccae16612064b9598776b8873b9a, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -6196,7 +6207,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: 
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 035f7ed0c420fd34696a515b0622948e, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: d2baccae16612064b9598776b8873b9a, type: 2}
   m_sharedMaterial: {fileID: 6229731339834884539, guid: 035f7ed0c420fd34696a515b0622948e, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -8041,8 +8052,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 035f7ed0c420fd34696a515b0622948e, type: 2}
-  m_sharedMaterial: {fileID: 6229731339834884539, guid: 035f7ed0c420fd34696a515b0622948e, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: d2baccae16612064b9598776b8873b9a, type: 2}
+  m_sharedMaterial: {fileID: -710284575419473342, guid: d2baccae16612064b9598776b8873b9a, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -10053,8 +10064,8 @@ MonoBehaviour:
 
 '
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 035f7ed0c420fd34696a515b0622948e, type: 2}
-  m_sharedMaterial: {fileID: 6229731339834884539, guid: 035f7ed0c420fd34696a515b0622948e, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: d2baccae16612064b9598776b8873b9a, type: 2}
+  m_sharedMaterial: {fileID: -710284575419473342, guid: d2baccae16612064b9598776b8873b9a, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -10188,7 +10199,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: hhhhhhhh
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 7d364b5be8c9e2f48a3c9cf5c83e3899, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: d2baccae16612064b9598776b8873b9a, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -10621,8 +10632,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 035f7ed0c420fd34696a515b0622948e, type: 2}
-  m_sharedMaterial: {fileID: 6229731339834884539, guid: 035f7ed0c420fd34696a515b0622948e, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: d2baccae16612064b9598776b8873b9a, type: 2}
+  m_sharedMaterial: {fileID: -710284575419473342, guid: d2baccae16612064b9598776b8873b9a, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -11578,7 +11589,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: 
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 035f7ed0c420fd34696a515b0622948e, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: d2baccae16612064b9598776b8873b9a, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -12820,8 +12831,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 035f7ed0c420fd34696a515b0622948e, type: 2}
-  m_sharedMaterial: {fileID: 6229731339834884539, guid: 035f7ed0c420fd34696a515b0622948e, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: d2baccae16612064b9598776b8873b9a, type: 2}
+  m_sharedMaterial: {fileID: -710284575419473342, guid: d2baccae16612064b9598776b8873b9a, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -15171,8 +15182,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 035f7ed0c420fd34696a515b0622948e, type: 2}
-  m_sharedMaterial: {fileID: 6229731339834884539, guid: 035f7ed0c420fd34696a515b0622948e, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: d2baccae16612064b9598776b8873b9a, type: 2}
+  m_sharedMaterial: {fileID: -710284575419473342, guid: d2baccae16612064b9598776b8873b9a, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -21379,8 +21390,8 @@ MonoBehaviour:
 
 '
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 035f7ed0c420fd34696a515b0622948e, type: 2}
-  m_sharedMaterial: {fileID: 6229731339834884539, guid: 035f7ed0c420fd34696a515b0622948e, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: d2baccae16612064b9598776b8873b9a, type: 2}
+  m_sharedMaterial: {fileID: -710284575419473342, guid: d2baccae16612064b9598776b8873b9a, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -23610,8 +23621,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Pueblo Pimienta
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 035f7ed0c420fd34696a515b0622948e, type: 2}
-  m_sharedMaterial: {fileID: 6229731339834884539, guid: 035f7ed0c420fd34696a515b0622948e, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: d2baccae16612064b9598776b8873b9a, type: 2}
+  m_sharedMaterial: {fileID: -710284575419473342, guid: d2baccae16612064b9598776b8873b9a, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -24813,7 +24824,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1707752575
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25264,7 +25275,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 3807446889ec5c64f9abd97d6ee4a602, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3063520781439420625, guid: 3807446889ec5c64f9abd97d6ee4a602, type: 3}
       propertyPath: m_LocalPosition.x
@@ -29072,8 +29083,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 035f7ed0c420fd34696a515b0622948e, type: 2}
-  m_sharedMaterial: {fileID: 6229731339834884539, guid: 035f7ed0c420fd34696a515b0622948e, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: d2baccae16612064b9598776b8873b9a, type: 2}
+  m_sharedMaterial: {fileID: -710284575419473342, guid: d2baccae16612064b9598776b8873b9a, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -29227,8 +29238,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Pimientapaluza
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 035f7ed0c420fd34696a515b0622948e, type: 2}
-  m_sharedMaterial: {fileID: 6229731339834884539, guid: 035f7ed0c420fd34696a515b0622948e, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: d2baccae16612064b9598776b8873b9a, type: 2}
+  m_sharedMaterial: {fileID: -710284575419473342, guid: d2baccae16612064b9598776b8873b9a, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -29362,8 +29373,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: cabellos rojizos
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 035f7ed0c420fd34696a515b0622948e, type: 2}
-  m_sharedMaterial: {fileID: 6229731339834884539, guid: 035f7ed0c420fd34696a515b0622948e, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: d2baccae16612064b9598776b8873b9a, type: 2}
+  m_sharedMaterial: {fileID: -710284575419473342, guid: d2baccae16612064b9598776b8873b9a, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -30011,8 +30022,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Parque Pimienta
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 035f7ed0c420fd34696a515b0622948e, type: 2}
-  m_sharedMaterial: {fileID: 6229731339834884539, guid: 035f7ed0c420fd34696a515b0622948e, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: d2baccae16612064b9598776b8873b9a, type: 2}
+  m_sharedMaterial: {fileID: -710284575419473342, guid: d2baccae16612064b9598776b8873b9a, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -30719,8 +30730,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Ben Benji
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 035f7ed0c420fd34696a515b0622948e, type: 2}
-  m_sharedMaterial: {fileID: 6229731339834884539, guid: 035f7ed0c420fd34696a515b0622948e, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: d2baccae16612064b9598776b8873b9a, type: 2}
+  m_sharedMaterial: {fileID: -710284575419473342, guid: d2baccae16612064b9598776b8873b9a, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -31630,8 +31641,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Red78?
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 035f7ed0c420fd34696a515b0622948e, type: 2}
-  m_sharedMaterial: {fileID: 6229731339834884539, guid: 035f7ed0c420fd34696a515b0622948e, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: d2baccae16612064b9598776b8873b9a, type: 2}
+  m_sharedMaterial: {fileID: -710284575419473342, guid: d2baccae16612064b9598776b8873b9a, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
