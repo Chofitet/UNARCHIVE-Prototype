@@ -24,6 +24,7 @@ public class Bitacoras : MonoBehaviour
     public bool BenInvestigado;
     public bool BenHackeado;
     public bool BenDifamado;
+    public bool BenDifamado2;
     public bool BenAnalizado;
     ///////////////////////////// 
     public bool PieGrandeEliminado;
@@ -139,6 +140,10 @@ public class Bitacoras : MonoBehaviour
     public bool PepeQuenioInvestigado2;
     public bool PepeQuenioAnalizado2;
     public bool pimientapaluzersInvestigados2;
+    public bool ParquePimientaAislado2;
+    public bool ProteccionAceptadaKate2;
+    public bool ConvertirCueva2;
+    public bool ReunirPadreEHijo2;
 
 
     //////////////////////
@@ -374,7 +379,7 @@ public class Bitacoras : MonoBehaviour
                 A.analizarMuestra.interactable = false;
             }
             //Difamar hay que hacer uno if hack true y otro si hack false
-            if (A.difamar.CompareTag(tag = "OptActivado") && A.difamar.isOn == true && BenHackeado2 == true && BenDifamado == false )
+            if (A.difamar.CompareTag(tag = "OptActivado") && A.difamar.isOn == true && BenHackeado2 == true && BenDifamado2 == false )
             {
                 float RetencionBitacora = 1;
                 float HoraCompletado = RetencionBitacora + TimeManager.Hora;
@@ -396,8 +401,7 @@ public class Bitacoras : MonoBehaviour
                 a = aux;
                 ActualizarIndice();
                 StartCoroutine(GuardarBitacora(RetencionBitacora, txt, indaux, accion, a));
-                BenDifamado = true;
-                BenRetirado = true;
+                BenDifamado2 = true;
                 A.difamar.interactable = false;
                 
             }
@@ -2742,7 +2746,7 @@ public class Bitacoras : MonoBehaviour
             StartCoroutine(GuardarBitacora(RetencionBitacora, txt, indaux, accion, a));
             CrearEscena = true;
             A.crearEscena.interactable = false;
-
+            A.crearEscena.gameObject.SetActive(false);
         }
         //================================================ Bitacoras Plantar público ===================================================================//
         if (A.plantarPublico.CompareTag(tag = "OptActivado") && A.plantarPublico.isOn == true && PlantarPublico == false)
@@ -2799,7 +2803,7 @@ public class Bitacoras : MonoBehaviour
             A.trueEnding.interactable = false;
         }*/
 
-        if (A.trueEnding.CompareTag(tag = "OptActivado") && A.trueEnding.isOn == true && ReunirPadreEHijo == false && KateProteccionAceptada == true && ConvertirCueva == false)
+        if (A.trueEnding.CompareTag(tag = "OptActivado") && A.trueEnding.isOn == true && ReunirPadreEHijo == false && ProteccionAceptadaKate2 == true && ConvertirCueva2 == false)
         {
             float RetencionBitacora = 1;
             float HoraCompletado = RetencionBitacora + TimeManager.Hora;
@@ -2826,7 +2830,7 @@ public class Bitacoras : MonoBehaviour
             ReunirPadreEHijo = true;
             A.trueEnding.interactable = false;
         }
-        if (A.trueEnding.CompareTag(tag = "OptActivado") && A.trueEnding.isOn == true && ReunirPadreEHijo == false && KateProteccionAceptada == false && ConvertirCueva == false)
+        if (A.trueEnding.CompareTag(tag = "OptActivado") && A.trueEnding.isOn == true && ReunirPadreEHijo == false && ProteccionAceptadaKate2 == false && ConvertirCueva2 == false)
         {
             float RetencionBitacora = 1;
             float HoraCompletado = RetencionBitacora + TimeManager.Hora;
@@ -2853,7 +2857,7 @@ public class Bitacoras : MonoBehaviour
             ReunirPadreEHijo = true;
             A.trueEnding.interactable = false;
         }
-        if (A.trueEnding.CompareTag(tag = "OptActivado") && A.trueEnding.isOn == true && ReunirPadreEHijo == false && KateProteccionAceptada == false && ConvertirCueva == true)
+        if (A.trueEnding.CompareTag(tag = "OptActivado") && A.trueEnding.isOn == true && ReunirPadreEHijo == false && ProteccionAceptadaKate2 == false && ConvertirCueva2 == true)
         {
             float RetencionBitacora = 1;
             float HoraCompletado = RetencionBitacora + TimeManager.Hora;
@@ -2880,7 +2884,7 @@ public class Bitacoras : MonoBehaviour
             ReunirPadreEHijo = true;
             A.trueEnding.interactable = false;
         }
-        if (A.trueEnding.CompareTag(tag = "OptActivado") && A.trueEnding.isOn == true && TrueEnding == false && KateProteccionAceptada == true && ConvertirCueva == true)
+        if (A.trueEnding.CompareTag(tag = "OptActivado") && A.trueEnding.isOn == true && TrueEnding == false && ProteccionAceptadaKate2 == true && ConvertirCueva2 == true) // Esto es el final mas final
         {
             float RetencionBitacora = 1;
             float HoraCompletado = RetencionBitacora + TimeManager.Hora;
@@ -2936,7 +2940,7 @@ public class Bitacoras : MonoBehaviour
             KateProteccionAceptada = true;
             A.ofrecerProteccion.interactable = false;
         }
-        if (A.ofrecerProteccion.CompareTag(tag = "OptActivado") && A.ofrecerProteccion.isOn == true && OfrecerProteccion == false && PieGrandeEliminado == false && ConvertirCueva == true && ReunirPadreEHijo == true)
+        if (A.ofrecerProteccion.CompareTag(tag = "OptActivado") && A.ofrecerProteccion.isOn == true && OfrecerProteccion == false && PieGrandeEliminado == false && ConvertirCueva2 == true && ReunirPadreEHijo == true)
         {
             float RetencionBitacora = 2;
             float HoraCompletado = RetencionBitacora + TimeManager.Hora;
@@ -2988,7 +2992,7 @@ public class Bitacoras : MonoBehaviour
             A.ofrecerProteccion.interactable = false;
         }
         //=========================================================== Bitacora Convertir Cueva ===================================================================//
-        if (A.convertirCueva.CompareTag(tag = "OptActivado") && A.convertirCueva.isOn == true && ConvertirCueva == false && ParquePimientaAislado == true)
+        if (A.convertirCueva.CompareTag(tag = "OptActivado") && A.convertirCueva.isOn == true && ConvertirCueva == false && ParquePimientaAislado2 == true)
         {
             float RetencionBitacora = 1;
             float HoraCompletado = RetencionBitacora + TimeManager.Hora;
@@ -3012,8 +3016,9 @@ public class Bitacoras : MonoBehaviour
             StartCoroutine(GuardarBitacora(RetencionBitacora, txt, indaux, accion, a));
             ConvertirCueva = true;
             A.convertirCueva.interactable = false;
+            A.convertirCueva.gameObject.SetActive(false);
         }
-        if (A.convertirCueva.CompareTag(tag = "OptActivado") && A.convertirCueva.isOn == true && ConvertirCueva == false && ParquePimientaAislado == true && ReunirPadreEHijo == true && KateProteccionAceptada == true)
+        if (A.convertirCueva.CompareTag(tag = "OptActivado") && A.convertirCueva.isOn == true && ConvertirCueva == false && ParquePimientaAislado2 == true && ReunirPadreEHijo == true && ProteccionAceptadaKate2 == true)
         {
             float RetencionBitacora = 1;
             float HoraCompletado = RetencionBitacora + TimeManager.Hora;
@@ -3038,6 +3043,7 @@ public class Bitacoras : MonoBehaviour
             ConvertirCueva = true;
             TrueEnding = true;
             A.convertirCueva.interactable = false;
+            A.convertirCueva.gameObject.SetActive(false);
         }
         if (A.convertirCueva.CompareTag(tag = "OptActivado") && A.convertirCueva.isOn == true && ConvertirCueva == false && ParquePimientaAislado == false)
         {
@@ -3190,8 +3196,9 @@ public class Bitacoras : MonoBehaviour
     {
             yield return StartCoroutine(time.RetencionBitacorasSegunAccion(ReinicioTiempo));
             CargarVectorAccion(a, indaux, txt);
-            if (accion != A.crearEscena && accion != A.trueEnding && accion != A.plantarPublico && accion != A.extraerFotos && accion != A.ofrecerProteccion && accion != A.convertirCueva) accion.interactable = true;
-            libreta.PersonajeEliminado();
+        // if (accion != A.crearEscena && accion != A.trueEnding && accion != A.plantarPublico && accion != A.extraerFotos && accion != A.ofrecerProteccion && accion != A.convertirCueva) accion.interactable = true;
+        accion.interactable = true;
+        libreta.PersonajeEliminado();
             UbicacionConfirmada(accion);
             libreta.ActualizarPalabras(accion);
             if (time.VariacionDeTiempo > 500) Sonidos.SonidoPING();
@@ -3691,6 +3698,26 @@ public class Bitacoras : MonoBehaviour
         if(accion == A.analizarMuestra)
         {
             if (PepeAnalizado == true) PepeQuenioAnalizado2 = true;
+        }
+        if (accion == A.difamar)
+        {
+            if(BenDifamado2) BenRetirado = true;
+        }
+        if(accion == A.aislar)
+        {
+            if (ParquePimientaAislado) ParquePimientaAislado2 = true;
+        }
+        if(accion == A.ofrecerProteccion)
+        {
+            if (KateProteccionAceptada) ProteccionAceptadaKate2 = true;
+        }
+        if (accion == A.convertirCueva)
+        {
+            if (ConvertirCueva == true) ConvertirCueva2 = true;
+        }
+        if (accion == A.trueEnding)
+        {
+            if(ReunirPadreEHijo) ReunirPadreEHijo2 = true;
         }
     }
 

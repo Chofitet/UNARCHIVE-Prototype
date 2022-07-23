@@ -251,7 +251,7 @@ public class Acciones : MonoBehaviour
         if (trueEnding.isOn == true) tglTrueEnding.SetActive(false);
         if (ofrecerProteccion.isOn == true) tglOfrecerprotección.SetActive(false);
         if (extraerFotos.isOn == true) tglExtraerFotos.SetActive(false);
-        if (convertirCueva.isOn == true) tglConvertirCueva.SetActive(false);
+        if (convertirCueva.isOn == true && bitacoras.ConvertirCueva == true) tglConvertirCueva.SetActive(false);
     }
 
 }

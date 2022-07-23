@@ -381,7 +381,7 @@ public class TV : MonoBehaviour
             BenEntrevista3b = true;
             SetearImagenesNoticias(11);
         }
-        else if (TurbaReclamaDia5 == false && TimeManager.Dia == 5 && TimeManager.Hora == 9 && bitacoras.ParquePimientaAislado == true)
+        else if (TurbaReclamaDia5 == false && TimeManager.Dia == 5 && TimeManager.Hora == 9 && bitacoras.ParquePimientaAislado == true && libreta.LevantarCercaPuebloPimienta == false)
         {
             int IncrementoRating = 2;
             noticia.text = TurbaReclamaDia5Noticia;
@@ -392,7 +392,7 @@ public class TV : MonoBehaviour
             TurbaReclamaDia5 = true;
             SetearImagenesNoticias(11);
         }
-        else if (TurbaReclamaDia6 == false && TimeManager.Dia == 6 && TimeManager.Hora == 9 && bitacoras.ParquePimientaAislado == true)
+        else if (TurbaReclamaDia6 == false && TimeManager.Dia == 6 && TimeManager.Hora == 9 && bitacoras.ParquePimientaAislado == true && libreta.LevantarCercaPuebloPimienta == false)
         {
             int IncrementoRating = 2;
             noticia.text = TurbaReclamaDia6Noticia;
@@ -403,7 +403,7 @@ public class TV : MonoBehaviour
             TurbaReclamaDia6 = true;
             SetearImagenesNoticias(11);
         }
-        else if (TurbaReclamaDia7 == false && TimeManager.Dia == 7 && TimeManager.Hora == 9 && bitacoras.ParquePimientaAislado == true)
+        else if (TurbaReclamaDia7 == false && TimeManager.Dia == 7 && TimeManager.Hora == 9 && bitacoras.ParquePimientaAislado == true && libreta.LevantarCercaPuebloPimienta == false)
         {
             int IncrementoRating = 2;
             noticia.text = TurbaReclamaDia7Noticia;
@@ -661,7 +661,7 @@ public class TV : MonoBehaviour
             StartCoroutine(ImprimirNoticia(BenBrainwashTitulo, BenBrainwashNoticia, IncrementoRating, RetencionNoticia));
             BenBrainwash = true;
         }
-        else if (bitacoras.BenDifamado == true && bitacoras.BenHackeado == false && BenDifamado1 == false)// Hackeado = false
+        else if (bitacoras.BenDifamado == true && bitacoras.BenHackeado2 == false && BenDifamado1 == false)// Hackeado = false
         {
             int IncrementoRating = -2;
             int RetencionNoticia = DifamarRetencion;
