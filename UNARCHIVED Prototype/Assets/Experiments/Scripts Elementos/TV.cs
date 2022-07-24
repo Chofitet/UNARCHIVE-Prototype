@@ -62,23 +62,23 @@ public class TV : MonoBehaviour
     //============================================================================ TV Ben Benji =============================================================================//
     bool RomoresPuebloPimienta;
     string RumoresPuebloPimientaTitulo = "BIZARRO RUMOR TOMA MODERADO VUELO EN EL TRANQUILO PUEBLO PIMIENTA";
-    string RumoresPuebloPimientaNoticia = "¿CREER O REVENTAR? LAS RESPUESTAS SE ACERCAN EN PUEBLO PIMIENTA";
+    string RumoresPuebloPimientaNoticia = "BIZARRO RUMOR TOMA MODERADO VUELO EN PUEBLO PIMIENTA ¿CREER O REVENTAR? LAS RESPUESTAS SE ACERCAN";
 
     public bool BenEntrevista1; //aviso de que se hará la entrevista
-    string BenEntrevistaTitulo1 = "ENTREVISTA EXCLUSIVA CON NIÑO AVISTADOR DE MISTERIOSA CRIATURA MAÑANA A LAS 12 AM";
-    string BenEntrevistaNoticia1 = "BEN BENJI CONTARÁ TODO EN ESTE MISMO CANAL MAÑANA A LAS 12 AM.";
+    string BenEntrevistaTitulo1 = "ENTREVISTA EXCLUSIVA CON NIÑO AVISTADOR DE MISTERIOSA CRIATURA MAÑANA A LAS 12 AM. ";
+    string BenEntrevistaNoticia1 = "ENTREVISTA EXCLUSIVA CON NIÑO AVISTADOR DE MISTERIOSA CRIATURA! BEN BENJI CONTARÁ TODO EN ESTE MISMO CANAL MAÑANA A LAS 12 AM.";
 
     bool BenEntrevista1b;
     string BenEntrevistaTitulo1b = "REITERAMOS: ENTREVISTA EXCLUSIVA CON NIÑO AVISTADOR DE MISTERIOSA CRIATURA HOY A LAS 12 AM";
-    string BenEntrevistaNoticia1b = "BENJI EL PISPIADOR CONTARÁ TODO EN IMPERDIBLE EXCLUSIVA HOY A LAS 12 AM.";
+    string BenEntrevistaNoticia1b = "REITERAMOS: BENJI EL PISPIADOR CONTARÁ TODO EN IMPERDIBLE EXCLUSIVA HOY A LAS 12 AM.";
 
     public bool BenEntrevista2; // entrevista de ben
     string BenEntrevistaTitulo2 = "\"ERA PIE GRANDE Y LO VÍ EN PARQUE PIMIENTA\". PELUDAS DECLARACIONES!!!";
-    string BenEntrevistaNoticia2 = "BENJI EL PISPIADOR CONFIRMA QUE LA CRIATURA EN PARQUE PIMIENTA SE TRATA DE EL MÍTICO PIE GRANDE.¿QUIÉN ERA LA COLORADA?";
+    string BenEntrevistaNoticia2 = "BENJI EL PISPIADOR CONFIRMA QUE LA CRIATURA EN PARQUE PIMIENTA SE TRATA DE EL MÍTICO PIE GRANDE. PERO...¿QUIÉN ERA LA COLORADA?";
 
     bool BenEntrevista3;
     string BenEntrevistaTitulo3 = "TURBA ENFURECIDA SE DIRIJE A PARQUE PIMIENTA EN BÚSQUEDA DE BENJI EL PISPIADOR";
-    string BenEntrevistaNoticia3 = "TURBA ENFURECIDA SE DIRIJE A PARQUE PIMIENTA EN BÚSQUEDA DE BENJI EL PISPIADOR";
+    string BenEntrevistaNoticia3 = "TURBA ENFURECIDA SE DIRIJE A PARQUE PIMIENTA EN BÚSQUEDA DE BENJI ¿DONDE ESTÁ NUESTRO PISPIADOR?";
 
     bool BenEntrevista3b;
     string BenEntrevistaTitulo3b = "TURBA ENTUSIASTA SE DIRIJE A PARQUE PIMIENTA EN BUSQUEDA DE CRIATURA";
@@ -86,53 +86,53 @@ public class TV : MonoBehaviour
 
     bool BenEntrevista4;
     string BenEntrevistaTitulo4 = "TURBA AMATEUR ES ATACADA POR CRIATURA MONSTRUOSA EN PARQUE PIMIENTA!";
-    string BenEntrevistaNoticia4 = "TURBA AMATEUR ES ATACADA POR CRIATURA MONSTRUOSA EN PARQUE PIMIENTA! MASACRE A PLENA LUZ DEL DIA!";
+    string BenEntrevistaNoticia4 = "TURBA AMATEUR ES ATACADA POR MONSTRUOSA CRIATURA EN PARQUE PIMIENTA! MASACRE A PLENA LUZ DEL DIA!";
 
     bool BenEliminado;
     string BenDesapareceTitulo = "NIÑO TESTIGO DESAPARECE. ¿ES PIE GRANDE EL CULPABLE O EL GOBIERNO?";
-    string BenDesapareceNoticia = "BENJI EL PISPIADOR HA DESAPARECIDO SIN DEJAR RASTRO.¿RAPTADO POR PIE GRANDE O BAJO ORDENES DEL GOBIERNO?";
+    string BenDesapareceNoticia = "BENJI EL PISPIADOR HA DESAPARECIDO SIN DEJAR RASTRO ¿RAPTADO POR LA CRIATURA? ¿O BAJO ORDENES DEL GOBIERNO?";
 
     bool BenBombaCasa;
     string BenBombaCasaTitulo = "CASA DE BEN BENJI VUELA EN ALEVOSA EXPLOSIÓN. ¿QUE ESTÁ PASANDO EN PUEBLO PIMIENTA?";
-    string BenBombaCasaNoticia = "EXPLOSIÓN EN CASA DE NIÑO DESAPARECIDO. ¿QUE ESTA PASANDO EN PUEBLO PIMIENTA?";
+    string BenBombaCasaNoticia = "CASA DE BEN BENJI VUELA EN ALEVOSA EXPLOSIÓN. ¿QUE ESTÁ PASANDO EN PUEBLO PIMIENTA?";
 
     bool BenBombaEscuela;
-    string BenBombaEscuelaTitulo = "ESCUELA EXPLOTA! ¿QUE ESTA PASANDO EN PUEBLO PIMIENTA?";
-    string BenBombaEscuelaNoticia = "GRACIAS A LA GRACIA DEL SEÑOR NO HAY VICTIMAS AL ENCONTRARSE EL COLEGIO ENTERO EN EXCURSION BARRIAL. FIUUU!!";
+    string BenBombaEscuelaTitulo = "ESCUELA  EXPLOTA! ¿QUE ESTA PASANDO EN PUEBLO PIMIENTA?";
+    string BenBombaEscuelaNoticia = "ESCUELA EXPLOTA EN PUEBLO PIMIENTA! GRACIAS A LA GRACIA DEL SEÑOR NO HAY VICTIMAS AL ENCONTRARSE TODOS EN EXCURSION BARRIAL.";
 
 
     bool BenBrainwash;
     string BenBrainwashTitulo = "NIÑO AVISTADOR NIEGA TODO ¿COBARDE MENTIROSO O CONSPIRADOR?";
-    string BenBrainwashNoticia = "¿DONDE COMIENZA LA MENTIRA?¿EN EL HOGAR O EN LAS AULAS?";
+    string BenBrainwashNoticia = "EL PISPIADOR NIEGA TODO ¿COBARDE MENTIROSO O CONSPIRADOR EN POTENCIA?";
 
     bool BenDifamado1;
     string BenDifamadoTitulo1 = "NIÑO MENTIROSO MIENTE DEVUELTA. 10 MENTIRAS QUE BENJI YA TE DIJO Y NO SABÍAS!"; ///ESTE ES EL CASO Hackeado = false
-    string BenDifamadoNoticia1 = "¿DONDE COMIENZA LA MENTIRA?¿EN EL HOGAR O EN LAS AULAS?";///ESTE ES EL CASO Hackeado = false
+    string BenDifamadoNoticia1 = "10 MENTIRAS QUE BENJI YA TE DIJO Y NO TE HABÍAS ENTERADO! ¿DONDE COMIENZA LA MITOMANIA? ¿EN EL HOGAR O EN LAS AULAS?";///ESTE ES EL CASO Hackeado = false
 
     bool BenDifamado2;
     string BenDifamadoTitulo2 = "ENTUSIASTA AVISTADOR DE PIE GRANDES RESULTA TERRORISTA AMATEUR! PERPETUA PARA BENJI"; ///ESTE ES EL CASO Hackeado = true
-    string BenDifamadoNoticia2 = "EXPLOSIVA REVELACIÓN DESENMASCA A BEN BENJI COMO TERRORISTA AMATEUR! EL PUEBLO PIDE PERPETUA"; ///ESTE ES EL CASO Hackeado = true
+    string BenDifamadoNoticia2 = "EXPLOSIVA REVELACIÓN DESENMASCA A BENJI EL PISPIADOR COMO TERRORISTA AMATEUR! PUEBLO PIMIENTA PIDE PERPETUA"; ///ESTE ES EL CASO Hackeado = true
 
     bool TurbaReclamaDia5;
     string TurbaReclamaDia5Titulo = "TURBA ENFURECIDA RECLAMA LEVANTAMIENTO DE CERCA FRENTE A PARQUE PIMIENTA";
-    string TurbaReclamaDia5Noticia = "TURBA ENFURECIDA RECLAMA LEVANTAMIENTO DE CERCA FRENTE A PARQUE PIMIENTA";
+    string TurbaReclamaDia5Noticia = "TURBA AMATEUR RECLAMA CON VIGOR LA QUITA DEL CERCO FRENTE A PARQUE PIMIENTA";
 
     bool TurbaReclamaDia6;
     string TurbaReclamaDia6Titulo = "TURBA ENFURECIDA RECLAMA LEVANTAMIENTO DE CERCA FRENTE A PARQUE PIMIENTA";
-    string TurbaReclamaDia6Noticia = "TURBA ENFURECIDA RECLAMA LEVANTAMIENTO DE CERCA FRENTE A PARQUE PIMIENTA";
+    string TurbaReclamaDia6Noticia = "TURBA AMATEUR ENFURECIDA RECLAMA CON AHINCO LA QUITA DEL CERCO FRENTE A PARQUE PIMIENTA";
 
     bool TurbaReclamaDia7;
     string TurbaReclamaDia7Titulo = "TURBA ENFURECIDA RECLAMA LEVANTAMIENTO DE CERCA FRENTE A PARQUE PIMIENTA";
-    string TurbaReclamaDia7Noticia = "TURBA ENFURECIDA RECLAMA LEVANTAMIENTO DE CERCA FRENTE A PARQUE PIMIENTA";
+    string TurbaReclamaDia7Noticia = "FURIOSA TURBA RECLAMA CON FRENESÍ LA QUITA DEL CERCO FRENTE A PARQUE PIMIENTA";
 
     //============================================================================ TV Pie Grande ===================================================================//
     bool PieGrandeEliminado;
     string PieGrandeEliminadoTitulo = "REVELACIONES PELUDAS! LA NOVIA SECRETA DE PIE GRANDE DECLARA TODO HOY A LAS 17";
-    string PieGrandeEliminadoNoticia = "REVELACIONES PELUDAS! LA NOVIA SECRETA DE PIE GRANDE DECLARA TODO HOY A LAS 17";
+    string PieGrandeEliminadoNoticia = "REVELACIONES PELUDAS! LA IDENTIDAD DE LA COLORADA SE REVELA? LA NOVIA SECRETA DE PIE GRANDE DECLARARÁ TODO HOY A LAS 17 HS";
 
     bool KateEliminado2;
     string PieGrandeEliminadoTitulo2 = "PIE GRANDE ERA MI FIANCÉ. REAPARECE KATE MILLIARD Y CUENTA TODO!";
-    string PieGrandeEliminadoNoticia2 = "PIE GRANDE ERA MI FIANCÉ. REAPARECE KATE MILLIARD Y CUENTA TODO! PERO TODO TODO!";
+    string PieGrandeEliminadoNoticia2 = "\"PIE GRANDE ERA MI FIANCÉ...\"PELUDAS DECLARACIONES! REAPARECE KATE MILLIARD Y CUENTA TODO! PERO TODO TODO!";
 
     bool PieGrandeDifamado;
     string PieGrandeDifamadoTitulo = "TE EXPLICAMOS CON CIENCIA 10 MOTIVOS QUE DEMUESTRAN QUE PIE GRANDE ES UN SALAME";
@@ -140,22 +140,22 @@ public class TV : MonoBehaviour
     //============================================================================ TV Kate Milliard ===================================================================//
     bool KateEliminada;
     string KateEliminadaTitulo = "EMERGENCIA! MOSTRUOSA CRIATURA ATACA PUEBLO PIMIENTA!";
-    string KateEliminadaNoticia = "EMERGENCIA! MOSTRUOSA CRIATURA ATACA PUEBLO PIMIENTA! LAS AUTORIDADES LOCALES PIDEN AYUDA!";
+    string KateEliminadaNoticia = "ALERTA DE CRISIS! MOSTRUOSA CRIATURA ATACA PUEBLO PIMIENTA! LAS AUTORIDADES LOCALES PIDEN AYUDA INMEDIATA!";
 
     string KateEliminadaTitulo2 = "PUEBLO PIMIENTA DESTRUIDO! HA SIDO POR ARRASADO POR ENLOQUECIDA MARAÑA DE PELOS";
-    string KateEliminadaNoticia2 = "PUEBLO PIMIENTA DESTRUIDO! HA SIDO POR ARRASADO POR ENLOQUECIDA MARAÑA DE PELOS";
+    string KateEliminadaNoticia2 = "PUEBLO PIMIENTA DESTRUIDO! EL TRANQUILO POBLADO HA SIDO POR ARRASADO POR ENLOQUECIDA MARAÑA DE PELOS";
 
     bool KateDifamada;
-    string KateDifamadaNoticia = "ASISTENTE DE KATE MILLIARD DECLARA: PATEÓ UN MONO EN EL SET DURANTE LA FILMACIÓN DE BANANORRAMA 2";
-    string KateDifamadaTitulo = "ASISTENTE DE KATE MILLIARD DECLARA: PATEÓ UN MONO EN EL SET DURANTE LA FILMACIÓN DE BANANORRAMA 2";
+    string KateDifamadaNoticia = "ASISTENTE DE KATE MILLIARD DECLARA:\" PATEÓ UN MONO EN EL SET DURANTE LA FILMACIÓN DE BANANORRAMA\"";
+    string KateDifamadaTitulo = "ASISTENTE DE KATE MILLIARD DECLARA: \"PATEÓ UN MONO EN EL SET DURANTE LA FILMACIÓN DE BANANORRAMA\"";
 
     bool CrearEscena;
     string CrearEscenaTitulo = "HOMBRE PELUDO Y COLORADA DESMIENTEN LOS DICHOS DE BENJI ¿ERA FALSO EL RUMOR?";
-    string CrearEscenaNoticia = "HOMBRE PELUDO Y COLORADA DESMIENTEN LOS DICHOS DE BENJI ¿ERA FALSO EL RUMOR?";
+    string CrearEscenaNoticia = "HOMBRE PELUDO Y COLORADA DESMIENTEN TODOS LOS DICHOS DEL PISPIADOR ¿BENJI NOS PAPARRUCHEÓ?";
 
     bool Casamiento;
     string CasamientoTitulo = "KATE MILLIARD REAPARECE Y ANUNCIA CASAMIENTO CON PIE GRANDE! LAS LEYENDAS ERAN CIERTAS Y AMOROSAS!";
-    string CasamientoNoticia = "KATE MILLIARD ANUNCIA CASAMIENTO CON PIE GRANDE! LAS LEYENDAS ERAN CIERTAS Y AMOROSAS!";
+    string CasamientoNoticia = "\"NOS CASAMOS!\"KATE MILLIARD ANUNCIA CASAMIENTO CON PIE GRANDE! LAS LEYENDAS ERAN CIERTAS Y AMOROSAS!";
 
 
     bool ColoradaDifamada;
@@ -164,7 +164,7 @@ public class TV : MonoBehaviour
 
     //============================================================================ TV Pimientapaluza ===================================================================//
     string PimientaPaluzaAnuncioTitulo = "SE APROXIMA EL PIMIENTAPALUZA! TODOS PREPARADOS PARA EL 28"; //EL 24
-    string PimientaPaluzaAnuncioNoticia = "EL FESTIVAL MAS GRANDE DEL PLANETA DA COMIENZO ESTE 28 EN PARQUE PIMIENTA. ENTRADAS AGOTADAS!";
+    string PimientaPaluzaAnuncioNoticia = "SE APROXIMA EL PIMIENTAPALUZA! EL FESTIVAL MAS GRANDE DEL PLANETA DA COMIENZO ESTE 28 EN PARQUE PIMIENTA. ENTRADAS AGOTADAS!";
 
     public bool PimientapaluzaSeAdelanta;
     string PimientaPaluzaSeAdelantaTitulo = "PIMIENTAPALUZA SE ADELANTA AL 27/03";//EL 25
@@ -218,8 +218,8 @@ public class TV : MonoBehaviour
     string PimientapaluzersReclamanDia7Noticia = "PIMIENTAPALUZERS RECLAMAN INGRESO A PARQUE PIMIENTA. TENGO MI ENTRADA Y NO MI PALUZA!";
 
     bool PimientapaluzerEncuentraCuevaPieGrande;
-    string PimientapaluzerEncuentraCuevaPieGrandeTitulo = "PIMIENTAPALUZER ENCUENTRA LA CUEVA SECRETA DE PIE GRANDE. \"ME PERDÍ VOLVIENDO DE LOSO BAÑOS\"";
-    string PimientapaluzerEncuentraCuevaPieGrandeNoticia = "PIMIENTAPALUZER ENCUENTRA LA CUEVA SECRETA DE PIE GRANDE. \"ME PERDÍ VOLVIENDO DE LOSO BAÑOS\"";
+    string PimientapaluzerEncuentraCuevaPieGrandeTitulo = "PIMIENTAPALUZER ENCUENTRA LA CUEVA SECRETA DE PIE GRANDE. \"ME PERDÍ VOLVIENDO DE LOS BAÑOS\"";
+    string PimientapaluzerEncuentraCuevaPieGrandeNoticia = "PIMIENTAPALUZER ENCUENTRA LA CUEVA SECRETA DE PIE GRANDE. \"ME PERDÍ VOLVIENDO DE LOS BAÑOS\"";
 
     //============================================================================ TV Pepe Queño ===================================================================//
     bool PepeQueñoEliminado1;

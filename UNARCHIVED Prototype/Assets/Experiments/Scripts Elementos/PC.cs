@@ -92,7 +92,7 @@ public class PC : MonoBehaviour
         //================================================================ Wiki Kate Milliard =======================================================//
         else if (txtBuscador.text == libreta.palabrasCaso[2])
         {
-            txtInfo.text = "Actriz de alto reconocimiento, saltó a la fama con la comedia romántica 'Bananorrama' en 1994 y consolidó su lugar en el podio dramatúrgico con 'Not without my monkey' en 1997. Al negar teñir o cubrir su rojiza cabellera para interpretar roles ha logrado convertir ese capricho en su marca registrada. Aunque dice “aún no planea dejar la actuación, muchachos”, ha pasado a desarrollarse en los últimos años como directora de documentales sobre animales en peligro de extinción.";
+            txtInfo.text = "Actriz de alto reconocimiento, saltó a la fama con la comedia romántica 'Bananorrama' en 1994 y consolidó su lugar en el podio dramatúrgico con 'Not without my monkey' en 1997. Al negar teñir o cubrir su rojiza cabellera para interpretar roles ha logrado convertir ese capricho en su marca registrada. Aunque dice “aún no planeo dejar la actuación, muchachos”, ha pasado a desarrollarse en los últimos años como directora de documentales sobre animales en peligro de extinción.";
             FotoCarnet(2);
             txtDatos.text = "Edad: 24 años"
                 + System.Environment.NewLine
@@ -147,7 +147,12 @@ public class PC : MonoBehaviour
         else if (txtBuscador.text == libreta.palabrasCaso[3])
         {
             txtInfo.text = "Solo un absoluto careta buscaría el significado de la Pimientaexperiencia en una computadora."
-            + System.Environment.NewLine + "Es el 28 de Marzo en Parque Pimienta. SIEMPRE. CARETA."
+            + System.Environment.NewLine + "Es el 28 de Marzo en Parque Pimienta."
+            +System.Environment.NewLine + " SIEMPRE."
+            + System.Environment.NewLine + "CARETA."
+            + System.Environment.NewLine
+            + System.Environment.NewLine
+            + System.Environment.NewLine
             + System.Environment.NewLine
             + System.Environment.NewLine
             + System.Environment.NewLine
@@ -166,7 +171,7 @@ public class PC : MonoBehaviour
         else if (txtBuscador.text == libreta.palabrasCaso[10])
         {
             txtInfo.text = "Enorme reserva ambiental ubicada entre el dorso de Pueblo Pimienta y Monte Quete, es el austero hogar de especies nativas tales como el caribú mostaza, la liebre vermin y el noble salmón araña."
-            + System.Environment.NewLine + "A pesar de su propósito es también, controversialmente, el hogar del festival de música más masivo del planeta: El Pimentapaluza, festejado religiosamente en la inamovible fecha del 28 de Marzo de cada año.";
+            + System.Environment.NewLine + "A pesar de su propósito es también, controversialmente, el hogar del festival de música más masivo del planeta: El Pimientapaluza, festejado religiosamente en la inamovible fecha del 28 de Marzo de cada año.";
             libreta.EscribirNuevaPalabra(libreta.BtnPimientaPaluza, 3);
             FotoCarnet(5);
             txtDatos.text = "Ubicación: Entre Pueblo Pimienta y Monte Quete.";
@@ -175,7 +180,7 @@ public class PC : MonoBehaviour
         else if (txtBuscador.text == libreta.palabrasCaso[5])
         {
             txtInfo.text = "Ex Ciudad Pimienta, descendida a Pueblo luego de la Triquiñuela del 68."
-            + System.Environment.NewLine + "El segundo pueblo más poblado de Quete es una zona semi rural pos urbana que se encuentra en un proceso de reivindicación fiscal."
+            + System.Environment.NewLine + "El segundo pueblo más poblado de Quete es una zona semi rural post urbana que se encuentra en un proceso de reivindicación fiscal."
             + System.Environment.NewLine + "Si bien los ingresos anuales generados por la reserva ambiental Parque Pimienta son suficientes para soportar la economía de diez Pueblos Pimienta, intentan mantener su urbanidad controlable.";
 
             libreta.EscribirNuevaPalabra(libreta.BtnParquePimienta, 10);
