@@ -322,6 +322,7 @@ public class Libreta : MonoBehaviour
                 A.tglLevantarCerca.gameObject.SetActive(true);
                 lblCercar.text = palabrasCaso[10];
                 LevantasCercaParquePimienta = true;
+                Debug.Log("funciona,bro1?");
             }
             else if (accion == A.aislar && LevantasCercaParquePimienta2 == false /*&& bitacoras.ParquePimientaAislado2  */)
             {
@@ -329,6 +330,8 @@ public class Libreta : MonoBehaviour
                 A.tglLevantarCerca.gameObject.SetActive(true);
                 lblCercar.text = palabrasCaso[10];
                 LevantasCercaParquePimienta2 = true;
+                Debug.Log("funciona,bro2?");
+
             }
             else if (accion == A.aislar && bitacoras.PimientaPaluzaAislado == true && LevantasCercaPimientapaluza == false)
             {
@@ -368,7 +371,9 @@ public class Libreta : MonoBehaviour
             A.tglLevantarCerca.gameObject.SetActive(false);
 
         }
-
+        if(accion == A.aislar){
+            Debug.Log("estoy afuera,bro");
+        }
     }
 
     public void SetearPalabraLibretaACero ()

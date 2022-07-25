@@ -111,7 +111,7 @@ public class TV : MonoBehaviour
 
 
     bool BenPostBrainwash1;
-    string BenPostBrainwas1hTitulo = "\"A MI HIJO LE HICIERON ALGO\" FAMILIAN DE BENJI COMPARTE QUE EL JOVEN YA NO ES EL MISMO";//despues DE LA ENTREVISTA
+    string BenPostBrainwash1Titulo = "\"A MI HIJO LE HICIERON ALGO\" FAMILIAN DE BENJI COMPARTE QUE EL JOVEN YA NO ES EL MISMO";//despues DE LA ENTREVISTA
     string BenPostBrainwash1Noticia = "\"A MI HIJO LE HICIERON ALGO\" FAMILIAN DE BENJI COMPARTE QUE EL JOVEN YA NO ES EL MISMO";//WIP AGREGAR FOTOS Y UBICAR ESTO
 
     bool BenPostBrainwash2;
@@ -200,7 +200,7 @@ public class TV : MonoBehaviour
 
     bool PimientaPaluzaLevantarCerca;
     string PimientaPaluzaLevantarCercaTitulo = "MISTERIOSA CERCA QUE RODEABA AL PIMIENTAPALUZA DESAPARECE MISTERIOSAMENTE";
-    string PimientaPaluzaLevantarCercaNoticia = "\"SE FUÉ COMO LLEGÓ\". MISTERIOSA CERCA QUE RODEABA AL PIMIENTAPALUZA DESAPARECE MISTERIOSAMENTE. ";
+    string PimientaPaluzaLevantarCercaNoticia = "\"SE FUÉ COMO LLEGÓ\"." + System.Environment.NewLine + "MISTERIOSA CERCA QUE RODEABA AL PIMIENTAPALUZA DESAPARECE MISTERIOSAMENTE. ";
 
     bool PimientapaluzaDifamado;
     string PimientapaluzaDifamadoTitulo = "PIMIENTAPALUZA HACE CAMBIO DE LINEUP A ÚLTIMO MOMENTO";
@@ -251,11 +251,11 @@ public class TV : MonoBehaviour
     //============================================================================ TV Parque Pimienta =============================================================================//
     bool ParquePimientaAislado1;
     string ParquePimientaTitulo1 = "MISTERIOSA CERCA RODEA PARQUE PIMIENTA!";
-    string ParquePimientaNoticia1 = "MISTERIOSA CERCA RODEA PARQUE PIMIENTA!¿QUE ESTÁ PASANDO EN PUEBLO PIMIENTA?";
+    string ParquePimientaNoticia1 = "MISTERIOSA CERCA RODEA PARQUE PIMIENTA!" + System.Environment.NewLine + "¿QUE ESTÁ PASANDO EN PUEBLO PIMIENTA?";
 
     bool ParquePimientaLevantarCerca;
     string ParquePimientaLevantarCercaTitulo = "\"COMO LLEGÓ SE FUÉ.\" QUITAN CERCA QUE RODEABA PARQUE PIMIENTA";
-    string ParquePimientaLevantarCercaNoticia = "\"COMO LLEGÓ SE FUÉ.\" QUITAN CERCA QUE RODEABA PARQUE PIMIENTA";
+    string ParquePimientaLevantarCercaNoticia = "\"COMO LLEGÓ SE FUÉ.\"" + System.Environment.NewLine + "QUITAN CERCA QUE RODEABA PARQUE PIMIENTA";
 
     bool ParquePimientaAislado2;
     string ParquePimientaTitulo2 = "MISTERIOSA CERCA RODEA PARQUE PIMIENTA!";
@@ -689,6 +689,13 @@ public class TV : MonoBehaviour
             StartCoroutine(ImprimirNoticia(BenDifamadoTitulo2, BenDifamadoNoticia2, IncrementoRating, RetencionNoticia));
             BenDifamado1 = true;
             BenDifamado2 = true;
+        }
+        else if (BenBrainwash == true && BenPostBrainwash1 == false)
+        {
+            int IncrementoRating = 2;
+            int RetencionNoticia = 12;
+            StartCoroutine(ImprimirNoticia(BenPostBrainwash1Titulo, BenPostBrainwash1Noticia, IncrementoRating, RetencionNoticia));
+            BenPostBrainwash1 = true;
         }
         //============================================================================ TV Pueblo Pimienta ===================================================================//
 

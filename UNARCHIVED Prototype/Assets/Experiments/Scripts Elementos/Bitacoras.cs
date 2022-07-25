@@ -1113,7 +1113,7 @@ public class Bitacoras : MonoBehaviour
                 float RetencionBitacora = 4;
                 float HoraCompletado = RetencionBitacora + TimeManager.Hora;
                 string txt = "<b>PIMIENTAPALUZA INVESTIGADO</b>"
-                + System.Environment.NewLine + "El CEO del Festival, Don Paluza, patrocina una red ilegal de boxeo hombre vs canguro. Esta actividad es altamente ilegal fuera del estado de Mierma.";
+                + System.Environment.NewLine + "El CEO del Festival, Don Paluza, patrocina una red ilegal de boxeo hombre vs canguro. Sugerimos difamar esta actividad es altamente ilegal.";
                 string FechaCompletado = "2" + TimeManager.Dia + "/03";
                 string txtAccion = "Investigar Pimientapaluza";
                 Toggle accion = A.investigar;
@@ -1139,7 +1139,8 @@ public class Bitacoras : MonoBehaviour
                 float RetencionBitacora = 3;
                 float HoraCompletado = RetencionBitacora + TimeManager.Hora;
                 string txt = "<b>PIMIENTAPALUZA HACKEADO</b>"
-                + System.Environment.NewLine + "Hemos reventado los servers de Pimientapaluza.";
+                + System.Environment.NewLine + "Hemos intentado acceder al sistema de entradas online pero no logramos conseguir ninguna..."
+                + System.Environment.NewLine + "Definitivamente las entradas están agotadas.";
                 string FechaCompletado = "2" + TimeManager.Dia + "/03";
                 string txtAccion = "Hackear Pimientapaluza";
                 Toggle accion = A.hackear;
@@ -1184,7 +1185,7 @@ public class Bitacoras : MonoBehaviour
                 A.analizarMuestra.interactable = false;
             }
             //Difamar
-            if (A.difamar.CompareTag(tag = "OptActivado") && A.difamar.isOn == true && PimientaPaluzaDifamado == false && pimientapaluzersInvestigados2 == true )
+            if (A.difamar.CompareTag(tag = "OptActivado") && A.difamar.isOn == true && PimientaPaluzaDifamado == false && PimientaPaluzaInvestigado == true )
             {
                 float RetencionBitacora = 1;
                 float HoraCompletado = RetencionBitacora + TimeManager.Hora;
@@ -1266,7 +1267,7 @@ public class Bitacoras : MonoBehaviour
             {
                 float RetencionBitacora = 0.001f;
                 float HoraCompletado = RetencionBitacora + TimeManager.Hora;
-                string txt = "<b>PIMIENTAPALUZA CERCADO</b>"
+                string txt = "<b>CERCAR PIMIENTAPALUZA</b>"
                 + System.Environment.NewLine + "El festival no se ha montado aún en el parque, deberíamos esperarle para intentarlo nuevamente.";
                 string FechaCompletado = "2" + TimeManager.Dia + "/03";
                 string txtAccion = "Cercar Pimientapaluza";
@@ -1992,7 +1993,7 @@ public class Bitacoras : MonoBehaviour
             //Analizar muestra
             if (A.analizarMuestra.CompareTag(tag = "OptActivado") && A.analizarMuestra.isOn == true && KateAnalizada == false)
             {
-                float RetencionBitacora = 12;
+                float RetencionBitacora = 1;//WIP cambialo a 12 no seas perejil paparrucho
                 float HoraCompletado = RetencionBitacora + TimeManager.Hora;
                 string txt = "<b>ADN DE KATE MILLIARD ANALIZADO</b>"
                 + System.Environment.NewLine + "Jefe, tenemos noticias cuestionables. Pie Grande ya no es el último de su especie. Kate se encuentra embarazada...";
@@ -2147,7 +2148,7 @@ public class Bitacoras : MonoBehaviour
             //Analizar muestra
             if (A.analizarMuestra.CompareTag(tag = "OptActivado") && A.analizarMuestra.isOn == true && PepeAnalizado == false)
             {
-                float RetencionBitacora = 12;
+                float RetencionBitacora = 1;//WIP pasalo a 12 acordate maaaan dale que se te van las chichis!
                 float HoraCompletado = RetencionBitacora + TimeManager.Hora;
                 string txt = "<b>ADN DE PEPE QUENIO ANALIZADO</b>"
                 + System.Environment.NewLine + "BASE DE DATOS ACTUALIZADA. El ADN analizado coincide con el de Pie Grande. Posible hijo ilegítimo durante su último matrimonio.";
@@ -2860,7 +2861,7 @@ public class Bitacoras : MonoBehaviour
             float HoraCompletado = RetencionBitacora + TimeManager.Hora;
             string txt = "<b>FAMILIA REUNIDA</b>"
             + System.Environment.NewLine + "Padre e hijo se encuentran unidos nuevamente."
-            + System.Environment.NewLine + "Debemos lidiar con el resto de la evidencia del evento.";
+            + System.Environment.NewLine + "Debemos lidiar ahora con el resto de la evidencia del evento.";
 
             string FechaCompletado = "2" + TimeManager.Dia + "/03";
             string txtAccion = "Reunir a Pie Grande con hijo perdido";
@@ -2966,7 +2967,7 @@ public class Bitacoras : MonoBehaviour
 
 
         //=========================================================== Bitacora  Ofrecer Protección ===================================================================//
-        if (A.ofrecerProteccion.CompareTag(tag = "OptActivado") && A.ofrecerProteccion.isOn == true && OfrecerProteccion == false && PieGrandeEliminado == false)
+        if (A.ofrecerProteccion.CompareTag(tag = "OptActivado") && A.ofrecerProteccion.isOn == true && OfrecerProteccion == false && PieGrandeEliminado == false && ConvertirCueva2 == false && ReunirPadreEHijo == false)
         {
             float RetencionBitacora = 2;
             float HoraCompletado = RetencionBitacora + TimeManager.Hora;
@@ -2996,7 +2997,7 @@ public class Bitacoras : MonoBehaviour
             float RetencionBitacora = 2;
             float HoraCompletado = RetencionBitacora + TimeManager.Hora;
             string txt = "<b>PROTECCIÓN OFRECIDA A CAMBIO DE SILENCIO</b>"
-            + System.Environment.NewLine + "Ha aceptado. Pide que busquemos la forma de ayudar a entrar en razón a Pie Grande.";
+            + System.Environment.NewLine + "Ha aceptado. Parece que lo logramos, Jefe!";
             string FechaCompletado = "2" + TimeManager.Dia + "/03";
             string txtAccion = "Ofrenda de protección a cambio de silencio";
             Toggle accion = A.ofrecerProteccion;
@@ -3043,12 +3044,12 @@ public class Bitacoras : MonoBehaviour
             A.ofrecerProteccion.interactable = false;
         }
         //=========================================================== Bitacora Convertir Cueva ===================================================================//
-        if (A.convertirCueva.CompareTag(tag = "OptActivado") && A.convertirCueva.isOn == true && ConvertirCueva == false && ParquePimientaAislado2 == true)
+        if (A.convertirCueva.CompareTag(tag = "OptActivado") && A.convertirCueva.isOn == true && ConvertirCueva == false && ParquePimientaAislado2 == true && ProteccionAceptadaKate2 == false)
         {
             float RetencionBitacora = 1;
             float HoraCompletado = RetencionBitacora + TimeManager.Hora;
             string txt = "<b>CUEVA SECRETA CONVERTIDA EN GIFT SHOP</b>"
-            + System.Environment.NewLine + "Quedó irreconocible. Nadie sospechará al encontrarla.";
+            + System.Environment.NewLine + "Quedó irreconocible. Nadie sospechará quien vivía allí si la encuentran. Debemos lidiar ahora con el resto de los cabos sueltos";
             string FechaCompletado = "2" + TimeManager.Dia + "/03";
             string txtAccion = "Convertir cueva secreta en Gift Shop";
             Toggle accion = A.convertirCueva;
@@ -3074,7 +3075,7 @@ public class Bitacoras : MonoBehaviour
             float RetencionBitacora = 1;
             float HoraCompletado = RetencionBitacora + TimeManager.Hora;
             string txt = "<b>CUEVA SECRETA CONVERTIDA EN GIFT SHOP</b>"
-            + System.Environment.NewLine + "Quedó irreconocible. Nadie sospechará al encontrarla.";
+            + System.Environment.NewLine + "Quedó irreconocible. Nadie sospechará quien vivía allí si la encuentran.";
             string FechaCompletado = "2" + TimeManager.Dia + "/03";
             string txtAccion = "Convertir cueva secreta en Gift Shop";
             Toggle accion = A.convertirCueva;
@@ -3101,7 +3102,7 @@ public class Bitacoras : MonoBehaviour
             float RetencionBitacora = 0.001f;
             float HoraCompletado = RetencionBitacora + TimeManager.Hora;
             string txt = "<b>CONVERTIR CUEVA SECRETA EN GIFT SHOP</b>"
-            + System.Environment.NewLine + "No puede haber testigos de esto, debemos asegurarnos antes que nadie pueda entrar al parque.";
+            + System.Environment.NewLine + "No puede haber testigos de esto, debemos asegurarnos que nadie pueda entrar al parque mientras realizamos esto.";
             string FechaCompletado = "2" + TimeManager.Dia + "/03";
             string txtAccion = "Convertir cueva secreta en Gift Shop";
             Toggle accion = A.convertirCueva;
@@ -3127,7 +3128,7 @@ public class Bitacoras : MonoBehaviour
             float RetencionBitacora = 1;
             float HoraCompletado = RetencionBitacora + TimeManager.Hora;
             string txt = "<b>FOTOS EXTRAIDAS</b>"
-            + System.Environment.NewLine + "El pequeño set de fotos amateur muestra una mancha marrón y una roja fuera de foco. Parecen ser las originales.";
+            + System.Environment.NewLine + "El pequeño set de fotos amateur muestra una mancha marrón y una roja fuera de foco paseando por un bosque. No parecen tener alteraciones.";
             string FechaCompletado = "2" + TimeManager.Dia + "/03";
             string txtAccion = "Extracción de fotos";
             Toggle accion = A.extraerFotos;
@@ -3155,10 +3156,10 @@ public class Bitacoras : MonoBehaviour
             {
                 float RetencionBitacora = 1;
                 float HoraCompletado = RetencionBitacora + TimeManager.Hora;
-                string txt = "<b>CERCO QUITADO DE PARQUE PIMIENTA</b>"
+                string txt = "<b>CERCA QUITADA DE PARQUE PIMIENTA</b>"
                 + System.Environment.NewLine + "Hay pase libre al parque nuevamente.";
                 string FechaCompletado = "2" + TimeManager.Dia + "/03";
-                string txtAccion = "Quitando cerco de Parque Pimienta";
+                string txtAccion = "Quitando cerca de Parque Pimienta";
                 Toggle accion = A.levantarCerca;
                 if (HoraCompletado >= 18)
                 {
@@ -3184,10 +3185,10 @@ public class Bitacoras : MonoBehaviour
             {
                 float RetencionBitacora = 1;
                 float HoraCompletado = RetencionBitacora + TimeManager.Hora;
-                string txt = "<b>CERCO QUITADO DE PIMIENTAPALUZA</b>"
+                string txt = "<b>CERCA QUITADA DE PIMIENTAPALUZA</b>"
                 + System.Environment.NewLine + "Los pimientapaluzers ya pueden pimientapaluzearla libremente.";
                 string FechaCompletado = "2" + TimeManager.Dia + "/03";
-                string txtAccion = "Quitando cerco de Pimientapaluza";
+                string txtAccion = "Quitando cerca de Pimientapaluza";
                 Toggle accion = A.levantarCerca;
                 if (HoraCompletado >= 18)
                 {
@@ -3212,10 +3213,10 @@ public class Bitacoras : MonoBehaviour
             {
                 float RetencionBitacora = 1;
                 float HoraCompletado = RetencionBitacora + TimeManager.Hora;
-                string txt = "<b>CERCO QUITADO DE PUEBLO PIMIENTA</b>"
+                string txt = "<b>CERCA QUITADA DE PUEBLO PIMIENTA</b>"
                 + System.Environment.NewLine + "Hay pase libre a Parque Pimienta nuevamente.";
                 string FechaCompletado = "2" + TimeManager.Dia + "/03";
-                string txtAccion = "Quitando cerco de Pueblo Pimienta";
+                string txtAccion = "Quitando cerca de Pueblo Pimienta";
                 Toggle accion = A.levantarCerca;
                 if (HoraCompletado >= 18)
                 {
@@ -3247,8 +3248,8 @@ public class Bitacoras : MonoBehaviour
     {
             yield return StartCoroutine(time.RetencionBitacorasSegunAccion(ReinicioTiempo));
             CargarVectorAccion(a, indaux, txt);
-        // if (accion != A.crearEscena && accion != A.trueEnding && accion != A.plantarPublico && accion != A.extraerFotos && accion != A.ofrecerProteccion && accion != A.convertirCueva) accion.interactable = true;
-        accion.interactable = true;
+         if (accion != A.crearEscena && accion != A.trueEnding && accion != A.plantarPublico && accion != A.extraerFotos && accion != A.ofrecerProteccion && accion != A.convertirCueva) accion.interactable = true;
+       // accion.interactable = true;
         libreta.PersonajeEliminado();
             UbicacionConfirmada(accion);
             libreta.ActualizarPalabras(accion);
