@@ -3613,7 +3613,7 @@ public class Bitacoras : MonoBehaviour
                 txtBitacoraNoticia = "<b>NOTICIA FALSA CREADA</b>"
                 + System.Environment.NewLine + "Entrará en transmisión a la brevedad.";
                 txtTituloFalsa = "PUEBLO PIMIENTA NOMINADO A PUEBLO MENOS ILUSO DEL PLANETA";
-                txtNoticiaFalsa = "EL PREMIO SERÁ ENTREGADO SOLO SI MANTIENEN BAJO PERFIL HASTA EL 28";
+                txtNoticiaFalsa = "PUEBLO PIMIENTA NOMINADO A PUEBLO MENOS ILUSO DEL PLANETA. EL PREMIO SERÁ ENTREGADO SOLO SI MANTIENEN BAJO PERFIL HASTA EL 28";
                 NumNoticias++;
                 break;
             case 1:
