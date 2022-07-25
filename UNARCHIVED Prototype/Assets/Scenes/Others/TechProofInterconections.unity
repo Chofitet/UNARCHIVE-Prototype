@@ -2966,6 +2966,7 @@ MonoBehaviour:
   BenDifamado: 0
   BenDifamado2: 0
   BenAnalizado: 0
+  BenAislado: 0
   PieGrandeEliminado: 0
   PieGrandeLavado: 0
   PieGrandeInvestigado: 0
@@ -2973,6 +2974,7 @@ MonoBehaviour:
   PieGrandeAnalizado: 0
   PieGrandeDifamado: 0
   PieGrandeUbicacion: 0
+  PieGrandeAislado: 0
   ParquePimientaEliminado: 0
   ParquePimientaLavado: 0
   ParquePimientaHackeado: 0
@@ -29843,7 +29845,9 @@ MonoBehaviour:
   SonidoTachar: {fileID: 8560816922296900077, guid: c35c74790db070a4da5eb043ff1cea52, type: 3}
   PING: {fileID: 6583076030164176970, guid: f017b858ca18a7b4b92df4d968d59d20, type: 3}
   RelojNormal: {fileID: 5950911551545462266, guid: 72526facfd5e89143b91ff9d231b5769, type: 3}
-  RelojRapido: {fileID: 6865227081373058436, guid: b02e0a0b214f52c4ca9ccf1b1e6c13bf, type: 3}
+  RelojRapido: {fileID: 1799459934025814396, guid: 257a8fa929656f04da0d26cc062c3f3a, type: 3}
+  FinalTelefono: {fileID: 7195741581643446950, guid: 5b4243ab4f13fdd41ad60b2a823c1056, type: 3}
+  Termometro: {fileID: 681039644985492174, guid: a7bc62f651b9fbc4e9ed964d9a2b4e9b, type: 3}
   EscribirPapel:
   - {fileID: 826747028300232187, guid: 8cb84e1e0b5cf414bba98d27805f968e, type: 3}
   - {fileID: 1342365992440772043, guid: 41b8f1b5856581c4d8448adc36f60667, type: 3}

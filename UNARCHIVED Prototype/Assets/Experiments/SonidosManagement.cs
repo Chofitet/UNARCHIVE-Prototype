@@ -15,6 +15,8 @@ public class SonidosManagement : MonoBehaviour
     public GameObject PING;
     public GameObject RelojNormal;
     public GameObject RelojRapido;
+    public GameObject FinalTelefono;
+    public GameObject Termometro;
 
     public GameObject[] EscribirPapel;
     public GameObject[] ClickMouse;
@@ -78,6 +80,18 @@ public class SonidosManagement : MonoBehaviour
     {
         NuevoSonido(RelojRapido, camara.position, 1f);
        // Destroy(RelojRapido);
+    }
+
+    public void SonidoTermometro()
+    {
+        NuevoSonido(Termometro, camara.position, 1f);
+        // Destroy(Termometro);
+    }
+
+    public void SonidoFinalizacionTelefono()
+    {
+        NuevoSonido(FinalTelefono, camara.position, 1f);
+        // Destroy(FinalTelefono);
     }
 
     public void SonidoEscribirPapel()
