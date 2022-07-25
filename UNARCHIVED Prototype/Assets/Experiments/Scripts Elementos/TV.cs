@@ -62,11 +62,11 @@ public class TV : MonoBehaviour
     //============================================================================ TV Ben Benji =============================================================================//
     bool RomoresPuebloPimienta;
     string RumoresPuebloPimientaTitulo = "BIZARRO RUMOR TOMA MODERADO VUELO EN EL TRANQUILO PUEBLO PIMIENTA";
-    string RumoresPuebloPimientaNoticia = "BIZARRO RUMOR TOMA MODERADO VUELO EN PUEBLO PIMIENTA ¿CREER O REVENTAR? LAS RESPUESTAS SE ACERCAN";
+    string RumoresPuebloPimientaNoticia = "BIZARRO RUMOR TOMA MODERADO VUELO EN PUEBLO PIMIENTA ¿CREER O REVENTAR? " + System.Environment.NewLine +  "LAS RESPUESTAS SE ACERCAN";
 
     public bool BenEntrevista1; //aviso de que se hará la entrevista
     string BenEntrevistaTitulo1 = "ENTREVISTA EXCLUSIVA CON NIÑO AVISTADOR DE MISTERIOSA CRIATURA MAÑANA A LAS 12 AM. ";
-    string BenEntrevistaNoticia1 = "ENTREVISTA EXCLUSIVA CON NIÑO AVISTADOR DE MISTERIOSA CRIATURA! BEN BENJI CONTARÁ TODO EN ESTE MISMO CANAL MAÑANA A LAS 12 AM.";
+    string BenEntrevistaNoticia1 = "ENTREVISTA EXCLUSIVA CON NIÑO AVISTADOR DE MISTERIOSA CRIATURA! BENJI CONTARÁ TODO EN ESTE MISMO CANAL MAÑANA A LAS 12 AM.";
 
     bool BenEntrevista1b;
     string BenEntrevistaTitulo1b = "REITERAMOS: ENTREVISTA EXCLUSIVA CON NIÑO AVISTADOR DE MISTERIOSA CRIATURA HOY A LAS 12 AM";
@@ -100,14 +100,28 @@ public class TV : MonoBehaviour
     string BenBombaEscuelaTitulo = "ESCUELA  EXPLOTA! ¿QUE ESTA PASANDO EN PUEBLO PIMIENTA?";
     string BenBombaEscuelaNoticia = "ESCUELA EXPLOTA EN PUEBLO PIMIENTA! GRACIAS A LA GRACIA DEL SEÑOR NO HAY VICTIMAS AL ENCONTRARSE TODOS EN EXCURSION BARRIAL.";
 
+    bool IbelieveinPispiador;
+    string IbelieveinPispiadorTitulo = "";
+    string IbelieveinPispiadorNoticia = "EXTRAÑO MOVIMIENTO UNDERGROUND ARRANCA EN PUEBLO PIMIENTA. \"I BELIEVE IN EL PISPIADOR\"";//WIP AGREGAR FOTOS Y UBICAR ESTO
+
 
     bool BenBrainwash;
-    string BenBrainwashTitulo = "NIÑO AVISTADOR NIEGA TODO ¿COBARDE MENTIROSO O CONSPIRADOR?";
-    string BenBrainwashNoticia = "EL PISPIADOR NIEGA TODO ¿COBARDE MENTIROSO O CONSPIRADOR EN POTENCIA?";
+    string BenBrainwashTitulo = "NIÑO AVISTADOR NIEGA TODO Y CANCELA ENTREVISTA ¿COBARDE MENTIROSO O CONSPIRADOR?";//ANTES DE LA ENTREVISTA
+    string BenBrainwashNoticia = "EL PISPIADOR NIEGA TODO Y CANCELA FUTURAS ENTREVISTAS ¿COBARDE MENTIROSO O CONSPIRADOR EN POTENCIA?";
+
+
+    bool BenPostBrainwash1;
+    string BenPostBrainwas1hTitulo = "\"A MI HIJO LE HICIERON ALGO\" FAMILIAN DE BENJI COMPARTE QUE EL JOVEN YA NO ES EL MISMO";//despues DE LA ENTREVISTA
+    string BenPostBrainwash1Noticia = "\"A MI HIJO LE HICIERON ALGO\" FAMILIAN DE BENJI COMPARTE QUE EL JOVEN YA NO ES EL MISMO";//WIP AGREGAR FOTOS Y UBICAR ESTO
+
+    bool BenPostBrainwash2;
+    string BenPostBrainwash2Titulo = "NEUROLOGO LOCAL CONFIRMA \"A BENJI LE FRISLARON LA CAPUCHA \" ";
+    string BenPostBrainwash2Noticia = "NEUROLOGO LOCAL CONFIRMA: \"A BENJI LE FRISLARON LA CAPUCHA\"" + System.Environment.NewLine + "¿QUIÉN ESTÁ TRATANDO DE OCULTAR LA VERDAD?";//WIP AGREGAR FOTOS Y UBICAR ESTO
+
 
     bool BenDifamado1;
     string BenDifamadoTitulo1 = "NIÑO MENTIROSO MIENTE DEVUELTA. 10 MENTIRAS QUE BENJI YA TE DIJO Y NO SABÍAS!"; ///ESTE ES EL CASO Hackeado = false
-    string BenDifamadoNoticia1 = "10 MENTIRAS QUE BENJI YA TE DIJO Y NO TE HABÍAS ENTERADO! ¿DONDE COMIENZA LA MITOMANIA? ¿EN EL HOGAR O EN LAS AULAS?";///ESTE ES EL CASO Hackeado = false
+    string BenDifamadoNoticia1 = "10 MENTIRAS QUE BENJI YA TE DIJO Y NI TE HABÍAS ENTERADO! ¿DONDE EMPIEZA LA MITOMANÍA?" + System.Environment.NewLine + "¿EN EL HOGAR O EN LAS AULAS?";///ESTE ES EL CASO Hackeado = false
 
     bool BenDifamado2;
     string BenDifamadoTitulo2 = "ENTUSIASTA AVISTADOR DE PIE GRANDES RESULTA TERRORISTA AMATEUR! PERPETUA PARA BENJI"; ///ESTE ES EL CASO Hackeado = true
@@ -128,15 +142,15 @@ public class TV : MonoBehaviour
     //============================================================================ TV Pie Grande ===================================================================//
     bool PieGrandeEliminado;
     string PieGrandeEliminadoTitulo = "REVELACIONES PELUDAS! LA NOVIA SECRETA DE PIE GRANDE DECLARA TODO HOY A LAS 17";
-    string PieGrandeEliminadoNoticia = "REVELACIONES PELUDAS! LA IDENTIDAD DE LA COLORADA SE REVELA? LA NOVIA SECRETA DE PIE GRANDE DECLARARÁ TODO HOY A LAS 17 HS";
+    string PieGrandeEliminadoNoticia = "ÚLTIMO MOMENTO! LA IDENTIDAD DE LA COLORADA SE REVELA? DECLARARÁ TODO HOY A LAS 17 HS";
 
     bool KateEliminado2;
     string PieGrandeEliminadoTitulo2 = "PIE GRANDE ERA MI FIANCÉ. REAPARECE KATE MILLIARD Y CUENTA TODO!";
-    string PieGrandeEliminadoNoticia2 = "\"PIE GRANDE ERA MI FIANCÉ...\"PELUDAS DECLARACIONES! REAPARECE KATE MILLIARD Y CUENTA TODO! PERO TODO TODO!";
+    string PieGrandeEliminadoNoticia2 = "PELUDAS DECLARACIONES! \"PIE GRANDE ERA MI FIANCÉ...\" REAPARECE KATE MILLIARD Y CUENTA TODO! PERO TODO TODO!";
 
     bool PieGrandeDifamado;
     string PieGrandeDifamadoTitulo = "TE EXPLICAMOS CON CIENCIA 10 MOTIVOS QUE DEMUESTRAN QUE PIE GRANDE ES UN SALAME";
-    string PieGrandeDifamadoNoticia = "TE EXPLICAMOS CON CIENCIA 10 MOTIVOS QUE DEMUESTRAN QUE PIE GRANDE ES UN SALAME";
+    string PieGrandeDifamadoNoticia = "TE EXPLICAMOS CON CIENCIA 10 MOTIVOS QUE DEMUESTRAN QUE PIE GRANDE ES UN SALAME";//wip
     //============================================================================ TV Kate Milliard ===================================================================//
     bool KateEliminada;
     string KateEliminadaTitulo = "EMERGENCIA! MOSTRUOSA CRIATURA ATACA PUEBLO PIMIENTA!";
@@ -164,21 +178,21 @@ public class TV : MonoBehaviour
 
     //============================================================================ TV Pimientapaluza ===================================================================//
     string PimientaPaluzaAnuncioTitulo = "SE APROXIMA EL PIMIENTAPALUZA! TODOS PREPARADOS PARA EL 28"; //EL 24
-    string PimientaPaluzaAnuncioNoticia = "SE APROXIMA EL PIMIENTAPALUZA! EL FESTIVAL MAS GRANDE DEL PLANETA DA COMIENZO ESTE 28 EN PARQUE PIMIENTA. ENTRADAS AGOTADAS!";
+    string PimientaPaluzaAnuncioNoticia = "SE APROXIMA EL PIMIENTAPALUZA! EL FESTIVAL MAS GRANDE DEL PLANETA DA COMIENZA ESTE 28 EN PARQUE PIMIENTA. ENTRADAS AGOTADAS!";
 
     public bool PimientapaluzaSeAdelanta;
     string PimientaPaluzaSeAdelantaTitulo = "PIMIENTAPALUZA SE ADELANTA AL 27/03";//EL 25
-    string PimientaPaluzaSeAdelantaNoticia = "EL FESTIVAL AGREGA UN DÍA DANDO INICIO ANTES DE LO ESPERADO. ENTRADAS AGOTADAS!";
+    string PimientaPaluzaSeAdelantaNoticia = "PIMIENTAPALUZA SE ADELANTA AL 27. EL FESTIVAL AGREGA UN DÍA DANDO INICIO ANTES DE LO ESPERADO. ENTRADAS AGOTADAS!";
 
     string PimientaPaluzaMañanaTitulo = "PIMIENTAPALUZA COMIENZA MAÑANA";//EL 26
-    string PimientaPaluzaMañanaNoticia = "EL FESTIVAL SE ADELANTÓ UN DÍA COMENZANDO AHORA EL 27/03 ";
+    string PimientaPaluzaMañanaNoticia = "PIMIENTAPALUZA COMIENZA MAÑANA. EL FESTIVAL SE ADELANTÓ UN DÍA COMENZANDO AHORA EL 27/03 ";
 
     string PimientaPaluzaArrancaTitulo = "DA INICIO EL PIMIENTAPALUZA";//EL 27
-    string PimientaPaluzaArrancaNoticia = "EL FESTIVAL DE MÚSICA MAS GRANDE DEL PLANETA HA DADO COMIENZO EN PARQUE PIMIENTA";
+    string PimientaPaluzaArrancaNoticia = "DA INICIO EL PIMIENTAPALUZA!EL FESTIVAL DE MÚSICA MAS GRANDE DEL PLANETA HA DADO COMIENZO EN PARQUE PIMIENTA";
 
     public bool PimientaPaluzaNoPuedeEntrar;
     string PimientaPaluzaNoPuedeEntrarTitulo1 = "PIMIENTAPALUZA NO PUEDE COMENZAR DEBIDO A MISTERIOSA CERCA";
-    string PimientaPaluzaNoPuedeEntrarNoticia1 = "DON PALUZA RECLAMA INGRESAR A PARQUE PIMIENTA PARA PODER MONTAR SU FESTIVAL";
+    string PimientaPaluzaNoPuedeEntrarNoticia1 = "PIMIENTAPALUZA NO PUEDE SER MONTADO DEBIDO A MISTERIOSA CERCA. ORGANIZADORES RECLAMAN INGRESO A PARQUE PIMIENTA";
 
     bool Pimientapaluzaaislado;
     string PimientaPaluzaAisladoTitulo = "CERCA GIGANTE RODEA LA CERCA GIGANTE DEL PIMIENTAPALUZA";
@@ -186,11 +200,11 @@ public class TV : MonoBehaviour
 
     bool PimientaPaluzaLevantarCerca;
     string PimientaPaluzaLevantarCercaTitulo = "MISTERIOSA CERCA QUE RODEABA AL PIMIENTAPALUZA DESAPARECE MISTERIOSAMENTE";
-    string PimientaPaluzaLevantarCercaNoticia = "MISTERIOSA CERCA QUE RODEABA AL PIMIENTAPALUZA DESAPARECE MISTERIOSAMENTE";
+    string PimientaPaluzaLevantarCercaNoticia = "\"SE FUÉ COMO LLEGÓ\". MISTERIOSA CERCA QUE RODEABA AL PIMIENTAPALUZA DESAPARECE MISTERIOSAMENTE. ";
 
     bool PimientapaluzaDifamado;
     string PimientapaluzaDifamadoTitulo = "PIMIENTAPALUZA HACE CAMBIO DE LINEUP A ÚLTIMO MOMENTO";
-    string PimientapaluzaDifamadoNoticia = "";
+    string PimientapaluzaDifamadoNoticia = "PIMIENTAPALUZA HACE CAMBIO DE LINEUP A ÚLTIMO MOMENTO. PROPONE 4 DIAS SEGUIDOS DE REGGAETON";
 
     bool BananorramaDifamadoTV;
     string BananorramaDifamadoTVTitulo = "ACUSAN AL FILM BANANORRAMA DE TENER MENSAJES SUBLIMINALES INDECENTES. \"MI HIJO AHORA TIENE IDEAS.\"";
@@ -203,7 +217,7 @@ public class TV : MonoBehaviour
     //============================================================================ TV Pimientapaluzers ===================================================================//
     bool PimientapaluzersEliminado;
     string PimientapaluzersTitulo = "¡MASACRE FRENTE A PARQUE PIMIENTA!";
-    string PimientapaluzersNoticia = "SANGRE Y PULSERAS POR DOQUIER. ¡MASACRE FRENTE A PARQUE PIMIENTA!";
+    string PimientapaluzersNoticia = "SANGRE Y PULSERAS POR DOQUIER. ¡MASACRE FRENTE A PARQUE PIMIENTA! LLUVIA DE MUNICIONES DESCIENDE SOBRE PIMIENTAPALUZERS";
 
     bool PimientapaluzersDifamado;
     string PimientapaluzersTitulo2 = "ESTUDIO DEMUESTRA QUE SER PIMIENTAPALUZER EQUIVALE A SER UN POSER";
@@ -223,8 +237,8 @@ public class TV : MonoBehaviour
 
     //============================================================================ TV Pepe Queño ===================================================================//
     bool PepeQueñoEliminado1;
-    string PepeQueñoTitulo1 = "JOVEN ORGANIZA BÚSQUEDA POR SU AMIGO IMAGINARIO"; //Parte 1
-    string PepeQueñoNoticia1 = "JOVEN ORGANIZA BÚSQUEDA POR SU AMIGO IMAGINARIO";
+    string PepeQueñoTitulo1 = "BENJI EL PISPIADOR ORGANIZA BÚSQUEDA POR SU AMIGO IMAGINARIO"; //Parte 1
+    string PepeQueñoNoticia1 = "BENJI EL PISPIADOR ORGANIZA BÚSQUEDA POR SU AMIGO IMAGINARIO";
 
     bool PepeQueñoEliminado2;
     string PepeQueñoTitulo2 = "NADIE SE PRESENTA A BUSQUEDA DE NIÑO PELUDO, TRISTE Y RARO"; //Parte 2
@@ -232,7 +246,7 @@ public class TV : MonoBehaviour
 
     bool FotosAnonimas;
     string FotosAnonimasTitulo = "RECIBIMOS FOTOS ANÓNIMAS DEL EXTRAÑO AVISTAMIENTO EN PARQUE PIMIENTA"; //Parte 2
-    string FotosAnonimasNoticia = "RECIBIMOS FOTOS ANÓNIMAS DEL EXTRAÑO AVISTAMIENTO EN PARQUE PIMIENTA ¿ QUÉ DICEN QUE SE VE AHÍ?";
+    string FotosAnonimasNoticia = "RECIBIMOS FOTOS ANÓNIMAS DEL EXTRAÑO AVISTAMIENTO EN PARQUE PIMIENTA ¿QUÉ DICEN QUE SE VE AHÍ?";
 
     //============================================================================ TV Parque Pimienta =============================================================================//
     bool ParquePimientaAislado1;
@@ -240,8 +254,8 @@ public class TV : MonoBehaviour
     string ParquePimientaNoticia1 = "MISTERIOSA CERCA RODEA PARQUE PIMIENTA!¿QUE ESTÁ PASANDO EN PUEBLO PIMIENTA?";
 
     bool ParquePimientaLevantarCerca;
-    string ParquePimientaLevantarCercaTitulo = "COMO LLEGÓ SE FUÉ. QUITAN CERCA QUE RODEABA PARQUE PIMIENTA";
-    string ParquePimientaLevantarCercaNoticia = "COMO LLEGÓ SE FUÉ. QUITAN CERCA QUE RODEABA PARQUE PIMIENTA";
+    string ParquePimientaLevantarCercaTitulo = "\"COMO LLEGÓ SE FUÉ.\" QUITAN CERCA QUE RODEABA PARQUE PIMIENTA";
+    string ParquePimientaLevantarCercaNoticia = "\"COMO LLEGÓ SE FUÉ.\" QUITAN CERCA QUE RODEABA PARQUE PIMIENTA";
 
     bool ParquePimientaAislado2;
     string ParquePimientaTitulo2 = "MISTERIOSA CERCA RODEA PARQUE PIMIENTA!";
@@ -261,7 +275,7 @@ public class TV : MonoBehaviour
     //============================================================================ TV Pie Grande ===================================================================//
     bool PlantarPublico;
     string PlantarPublicoTitulo = "ABUCHEOS DURANTE ENTREVISTA!LA CREDiBILIDAD DE BENJI SE DESMORONA!!";
-    string PlantarPublicoNoticia = "BENJI EL MENTIROSO PIERDE EL APOYO DE LA COMUNIDAD AVISTADORA AL MOJAR SUS PANTALONES EN TELEVISIÓN NACIONAL";
+    string PlantarPublicoNoticia = "ABUCHEOS DURANTE ENTREVISTA!LA CREDiBILIDAD DE BENJI SE DESMORONA AL MOJAR SUS PANTALONES EN TELEVISIÓN NACIONAL";
 
     //============================================================================ TV Pueblo Pimienta ===================================================================//
 
@@ -1098,25 +1112,25 @@ public class TV : MonoBehaviour
 
     /// ================================================================== Noticias Aleatorias ========================================================= ///
 	string TitularAleatoria1 = "ALMONDIGAS DE MURCIEGALO: EL PLATO DEL MOMENTO";
-    string NoticiaAleatoria1 = "MENÚ DISLÉXICO ATRAE A MULTITUDES. ALMONDIGAS DE MURCIEGALO: EL PLATO DEL MOMENTO";
+    string NoticiaAleatoria1 = "ALMÓNDIGAS DE MURCIÉGALO" + System.Environment.NewLine + "EL MENÚ DISLÉXICO QUE ATRAE A MULTITUDES";
 
     string TitularAleatoria2 = "¿DIETA O RADIACION? CÓMO QUEMAR ESOS KILOS DE MÁS";
-    string NoticiaAleatoria2 = "¿DIETA O RADIACION? CÓMO QUEMAR ESOS KILOS DE MÁS";
+    string NoticiaAleatoria2 = "¿DIETA O RADIACIÓN?"+ System.Environment.NewLine +  "CÓMO QUEMAR ESOS KILOS DE MÁS";
 
     string TitularAleatoria3 = "¿BIZCOCHITOS DE ADAMANTIUM?";
-    string NoticiaAleatoria3 = "SORPRENDE A TUS VISITAS CON EL LIBRO DE RECETAS DE LA ABUELA HARDCORE";
+    string NoticiaAleatoria3 = "¿BIZCOCHITOS DE ADAMANTIUM?" + System.Environment.NewLine + "SORPRENDE A TUS VISITAS CON EL LIBRO DE RECETAS DE LA ABUELA HARDCORE";
 
     string TitularAleatoria4 = "FESTIVAL 'PATEA UN TIBURÓN' TERMINA EN SORPRESIVA TRAGEDIA";
-    string NoticiaAleatoria4 = "FINALMENTE PASÓ LO IMPENSABLE. ¿ES ESTE EL FIN DE 'PATEA UN TIBURON'?";
+    string NoticiaAleatoria4 = "FESTIVAL 'PATEA UN TIBURÓN' TERMINA EN SORPRESIVA TRAGEDIA." + System.Environment.NewLine + "FINALMENTE PASÓ LO IMPENSABLE.";
 
     string TitularAleatoria5 = "ASESINO SERIAL RAGE QUITS. CONFIEZA QUE NO LA ESTABA PASANDO BIEN";
-    string NoticiaAleatoria5 = "ASESINO SERIAL RAGE QUITS. CONFIEZA QUE NO LA ESTABA PASANDO BIEN";
+    string NoticiaAleatoria5 = "ASESINO SERIAL RAGE QUITS." + System.Environment.NewLine + "CONFIEZA QUE NO LA ESTABA PASANDO BIEN";
 
     string TitularAleatoria6 = "¿CUÁNTO GARPA SER UNA NINFA?";
     string NoticiaAleatoria6 = "¿CUÁNTO GARPA SER UNA NINFA DEL BOSQUE? HABLAMOS CON ESPECIALISTAS DEL RUBRO";
 
     string TitularAleatoria7 = "MARIPOSA SENTENCIADA A 60 AÑOS EN PRISIÓN FEDERAL";
-    string NoticiaAleatoria7 = "JUSTICIA AL FIN! MARIPOSA SENTENCIADA A 60 AÑOS EN PRISIÓN FEDERAL";
+    string NoticiaAleatoria7 = "MARIPOSA SENTENCIADA A 60 AÑOS EN PRISIÓN FEDERAL. FAMILIARES DE LAS VÍCTIMAS CELEBRAN: \"JUSTICIA AL FIN!\"";
 
     string TitularAleatoria8 = "REBOOT DE PRECUELA SE CONVIERTE EN SPIN-OFF DE REMAKE DEL LIBRO";
     string NoticiaAleatoria8 = "REBOOT DE PRECUELA SE CONVIERTE EN SPIN-OFF DE REMAKE DEL LIBRO";
@@ -1127,53 +1141,53 @@ public class TV : MonoBehaviour
     string TitularAleatoria10 = "COCEAODANU OSAVNIHEE CE A TAU DNUNAZBNMN A AATNATVE";
     string NoticiaAleatoria10 = "PONETE LOS LENTES, PA";
 
-    string TitularAleatoria11 = "LORO BOCASUCIA ARRUINA   BAUTISMO";
-    string NoticiaAleatoria11 = "LORO BOCASUCIA ARRUINA BAUTISMO. POLLY NO QUIERE UNA GALLETA, QUIERE &#$%@ Y +{<*/A. ";
+    string TitularAleatoria11 = "LORO BOCASUCIA ARRUINA BAUTISMO";
+    string NoticiaAleatoria11 = "LORO BOCASUCIA ARRUINA BAUTISMO." + System.Environment.NewLine + "POLLY NO QUIERE UNA GALLETA, QUIERE &#$%@ Y +{<*/A. ";
 
     string TitularAleatoria12 = "JOVEN PIERDE LA VISTA LUEGO DE ESTORNUDAR CON LOS OJOS ABIERTOS";
-    string NoticiaAleatoria12 = "¿POR QUE ES IMPORTANTE QUE LA EDUCACIÓN COMIENCE EN EL HOGAR?";
+    string NoticiaAleatoria12 = "JOVEN PIERDE LA VISTA LUEGO DE ESTORNUDAR CON LOS OJOS ABIERTOS ¿POR QUE ES IMPORTANTE QUE LA EDUCACIÓN COMIENCE EN EL HOGAR?";
 
     string TitularAleatoria13 = "PATA PETA PITA POTA Y UNA HERMANA";
-    string NoticiaAleatoria13 = "LAS NUEVAS RIMAS DE LA SEÑO FLAVIA CAUSAN CONTROVERSIA";
+    string NoticiaAleatoria13 = "PATA PETA PITA POTA Y UNA HERMANA" + System.Environment.NewLine + "LAS NUEVAS RIMAS DE LA SEÑO FLAVIA CAUSAN CONTROVERSIA";
 
     string TitularAleatoria14 = "SONAMBULA DESPIERTA CON TITULO DE MEDICINA Y 7 HIJOS";
-    string NoticiaAleatoria14 = "SONAMBULA DESPIERTA CON TITULO DE MEDICINA Y 7 HIJOS. Y ESO QUE ME ACOSTÉ TARDE";
+    string NoticiaAleatoria14 = "SONAMBULA DESPIERTA CON TITULO DE MEDICINA Y 7 HIJOS. \"Y ESO QUE NO ME ACOSTÉ TEMPRANO\"";
 
     string TitularAleatoria15 = "TECHPROOF CUMPLE CON LA MÍNIMA. ALUMNOS SE REGOZIJAN";
-    string NoticiaAleatoria15 = "LA LEY DEL MINIMO ESFUERZO DEMUESTRA RESULTADOS UNA VEZ MAS";
+    string NoticiaAleatoria15 = "TECHPROOF CUMPLE CON LA MÍNIMA. ALUMNOS SE REGOZIJAN. LA LEY DEL MINIMO ESFUERZO DEMUESTRA RESULTADOS UNA VEZ MAS";
 
     string TitularAleatoria16 = "APRENDE OTRO IDIOMA CAMBIANDOLO EN SETTINGS";
-    string NoticiaAleatoria16 = "DETECTAR MENTIRAS COMO ESTA ES ESENCIAL PARA SOBREVIVIR EN ESTE MUNDO CONTEMPORANEO";
+    string NoticiaAleatoria16 = "APRENDE OTRO IDIOMA CAMBIANDOLO EN SETTINGS. DETECTAR MENTIRAS COMO ESTA ES ESENCIAL PARA SOBREVIVIR EN ESTE MUNDO CONTEMPORANEO";
 
     string TitularAleatoria17 = "HACE UNA HORA QUE NO PASA NADA";
-    string NoticiaAleatoria17 = "¿ES ESTE EL FIN DEL MUNDO DEL PERIODISMO TAL COMO LO CONOCEMOS?";
+    string NoticiaAleatoria17 = "HACE UNA HORA QUE NO PASA NADA" + System.Environment.NewLine + "¿ES ESTE EL FIN DEL MUNDO DEL PERIODISMO TAL COMO LO CONOCEMOS?";
 
-    string TitularAleatoria18 = "ESTERNOCLEIDOMASTOIDEO Y OTRAS 10 PARALABRAS QUEMADAS PARA JUGAR AL AHORCADO COMO UN GIL";
-    string NoticiaAleatoria18 = "ESTERNOCLEIDOMASTOIDEO Y OTRAS 10 PARALABRAS QUEMADAS PARA JUGAR AL AHORCADO COMO UN GIL";
+    string TitularAleatoria18 = "ESTERNOCLEIDOMASTOIDEO Y OTRAS 10 PARALABRAS QUEMADAS PARA JUGAR AL AHORCADO COMO UN BONAFIDE GIL";
+    string NoticiaAleatoria18 = "ESTERNOCLEIDOMASTOIDEO Y OTRAS 10 PARALABRAS QUEMADAS PARA JUGAR AL AHORCADO COMO UN BONAFIDE GIL";
 
     string TitularAleatoria19 = "ABUELITA REAPARECE A DOS AÑOS DE CAER EN DUDOSO POZO SIN FONDO";
-    string NoticiaAleatoria19 = "ABUELITA REAPARECE A DOS AÑOS DE CAER EN DUDOSO POZO SIN FONDO. NIETOS RECLAMAN REGALOS";
+    string NoticiaAleatoria19 = "ABUELITA REAPARECE A DOS AÑOS DE CAER EN DUDOSO POZO SIN FONDO. " + System.Environment.NewLine + "NIETOS RECLAMAN REGALOS";
 
     string TitularAleatoria20 = "THE OUTTER FRAME 2 CANCELADO";
     string NoticiaAleatoria20 = "THE OUTTER FRAME 2 CANCELADO. TODOS NOS LA VEÍAMOS VENIR.";
 
     string TitularAleatoria21 = "TODO ESTÁ TRANQUILO POR ACA";
-    string NoticiaAleatoria21 = "CÉLEBRES ÚLTIMAS PALABRAS DE JOVEN APLASTADO POR VACA METÁLICA CAIDA DEL CIELO";
+    string NoticiaAleatoria21 = "TODO ESTÁ TRANQUILO POR ACA" + System.Environment.NewLine + "CÉLEBRES ÚLTIMAS PALABRAS DE JOVEN APLASTADO POR VACA METÁLICA CAIDA DEL CIELO";
 
     string TitularAleatoria22 = "POLENTA OLVIDADA EN EL FONDO DE LA HELADERA SE COBRA OTRA VIDA";
     string NoticiaAleatoria22 = "POLENTA OLVIDADA EN EL FONDO DE LA HELADERA SE COBRA OTRA VIDA ¿CUANDO APRENDEREMOS?";
 
-    string TitularAleatoria23 = "¿ES EL MOMENTO DE INVERTIR EN CIRCOS DE TERMITAS?¿ QUE DICE EL MERCADO?";
-    string NoticiaAleatoria23 = "¿ES EL MOMENTO DE INVERTIR EN CIRCOS DE TERMITAS?¿ QUE DICE EL MERCADO?";
+    string TitularAleatoria23 = "¿ES EL MOMENTO DE INVERTIR EN CIRCOS DE TERMITAS?" + System.Environment.NewLine + " ¿QUE DICE EL MERCADO?";
+    string NoticiaAleatoria23 = "¿ES EL MOMENTO DE INVERTIR EN CIRCOS DE TERMITAS?" + System.Environment.NewLine + " ¿QUÉ DICE EL MERCADO?";
 
-    string TitularAleatoria24 = "DESAFÍO DE CHUPARSE EL CODO SE COBRA OTRA VIDA";
-    string NoticiaAleatoria24 = "DESAFÍO DE CHUPARSE EL CODO SE COBRA OTRA VIDA";
+    string TitularAleatoria24 = "DESAFÍO DE CHUPARSE EL CODO DEJA A PAR DE AMIGOS CUADRIPLÉJICOS";
+    string NoticiaAleatoria24 = "DESAFÍO DE CHUPARSE EL CODO DEJA A PAR DE AMIGOS CUADRIPLÉJICOS";
 
     string TitularAleatoria25 = "HOMBRE EXTRAVÍA SUS PIES EN LA PLAYA LUEGO DE ENTERRARLOS EN LA ARENA";
-    string NoticiaAleatoria25 = "HOMBRE EXTRAVÍA SUS PIES EN LA PLAYA LUEGO DE ENTERRARLOS EN LA ARENA. - NI ME MOVÍ DE ACÁ -";
+    string NoticiaAleatoria25 = "HOMBRE EXTRAVÍA SUS PIES EN LA PLAYA LUEGO DE ENTERRARLOS EN LA ARENA. \"NO ENTIENDO DONDE PUEDEN ESTAR... NI ME MOVÍ DE ACÁ\"";
 
     string TitularAleatoria26 = "¿POR QUE ES QUE SOLO PASAN COSAS CADA 1 HORA?";
-    string NoticiaAleatoria26 = "CUAL ES EL MOTIVO DETRAS DE ESTE ORDEN COSMICO QUE ORGANIZA CADA EVENTO A EXACTAMENTE UNA HORA DEL SIGUIENTE?";
+    string NoticiaAleatoria26 = "¿POR QUE ES QUE SOLO PASAN COSAS CADA 1 HORA? " + System.Environment.NewLine + "CUAL ES EL MOTIVO DETRAS DE ESTE ORDEN COSMICO QUE ORGANIZA CADA EVENTO A EXACTAMENTE UNA HORA DEL SIGUIENTE?";
 
     string TitularAleatoria27 = "TE CONTAMOS CÓMO Y DÓNDE ENCONTRAR QUESO INVISIBLE";
     string NoticiaAleatoria27 = "TE CONTAMOS CÓMO Y DÓNDE ENCONTRAR QUESO INVISIBLE";
@@ -1184,11 +1198,11 @@ public class TV : MonoBehaviour
     string TitularAleatoria29 = "THE OUTTER FRAME 2 CANCELADO";
     string NoticiaAleatoria29 = "THE OUTTER FRAME 2 CANCELADO. TODOS NOS LA VEÍAMOS VENIR.";
 
-    string TitularAleatoria30 = "MILANESAS DE HEROÍNA. EL PLATO DEL QUE NO HAY VUELTA";
-    string NoticiaAleatoria30 = "MILANESAS DE HEROÍNA. EL PLATO DEL QUE NO HAY VUELTA";
+    string TitularAleatoria30 = "MILANESAS DE HEROÍNA." + System.Environment.NewLine + "EL PLATO DEL QUE NO HAY VUELTA ATRÁS";
+    string NoticiaAleatoria30 = "MILANESAS DE HEROÍNA." + System.Environment.NewLine + "EL PLATO DEL QUE NO HAY VUELTA ATRÁS";
 
     string TitularAleatoria31 = "";
-    string NoticiaAleatoria31 = "";
+    string NoticiaAleatoria31 = "MUJER LAGARTO";
 
     string TitularAleatoria33 = "ES OFICIAL: JAMES, A NADIE LE IMPORTA AVATAR";
     string NoticiaAleatoria33 = "";
@@ -1203,25 +1217,62 @@ public class TV : MonoBehaviour
     string NoticiaAleatoria36 = "";
 
     string TitularAleatoria37 = "";
-    string NoticiaAleatoria37 = "";
+    string NoticiaAleatoria37 = "SUPUESTA GONODA DE GODZILLA ENCONTRADA EN EL FONDO DEL MAR RESULTA SER UN SIMPLE METEORITO";
 
     string TitularAleatoria38 = "MEDICINA HIPPIE";
     string NoticiaAleatoria38 = "";
 
     string TitularAleatoria39 = "CRISIS EXISTENCIAL";
-    string NoticiaAleatoria39 = "";
+    string NoticiaAleatoria39 = "COMO EVITAR UNA CRISIS EXISTENCIAL";
 
     string TitularAleatoria40 = "ES POSIBLE?";
     string NoticiaAleatoria40 = "";
 
     string TitularAleatoria41 = "";
-    string NoticiaAleatoria41 = "";
+    string NoticiaAleatoria41 = "EL MISTERIO DEL PERRO MOMIA VAMPIRO ERA UN ";
 
     string TitularAleatoria42 = "EL PERDIDO ARTE DE ESCRIBIR DIALOGO RANDOMIZADO";
     string NoticiaAleatoria42 = "";
 
     string TitularAleatoria43 = "THE OUTTER FRAME CANCELADO";
     string NoticiaAleatoria43 = "";
+
+    string TitularAleatoria44 = "";
+    string NoticiaAleatoria44 = "ESPECTRO CHOCARRERO DE LA CALLE 18 ERA ENREALIDAD UN INDIGENTE EN POSESIÓN DE UNA MAQUINA DE HUMO";
+
+    string TitularAleatoria45 = "";
+    string NoticiaAleatoria45 = "";
+
+    string TitularAleatoria46 = "";
+    string NoticiaAleatoria46 = "";
+
+    string TitularAleatoria47 = "";
+    string NoticiaAleatoria47 = "";
+
+    string TitularAleatoria48 = "";
+    string NoticiaAleatoria48 = "";
+
+    string TitularAleatoria49 = "";
+    string NoticiaAleatoria49 = "";
+
+    string TitularAleatoria50 = "";
+    string NoticiaAleatoria50 = "";
+
+    string TitularAleatoria51 = "";
+    string NoticiaAleatoria51 = "";
+
+    string TitularAleatoria52 = "";
+    string NoticiaAleatoria52 = "";
+
+    string TitularAleatoria53 = "";
+    string NoticiaAleatoria53 = "";
+
+    string TitularAleatoria54 = "";
+    string NoticiaAleatoria54 = "";
+
+    string TitularAleatoria55 = "";
+    string NoticiaAleatoria55 = "SI ESTAS LEYENDO ESTO HAS LLEGADO DE ALGUNA FORMA";
+
 
     void NoticiasAliatorias()
     {
