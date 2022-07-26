@@ -233,6 +233,7 @@ Transform:
   - {fileID: 23763974}
   - {fileID: 525171094}
   - {fileID: 1424062412}
+  - {fileID: 170677957}
   m_Father: {fileID: 320038366}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 25.068, y: 0, z: 0}
@@ -1984,6 +1985,7 @@ MonoBehaviour:
   time: {fileID: 698772801}
   Alarma: {fileID: 1616859476}
   Sonidos: {fileID: 0}
+  tv: {fileID: 1988636337}
   btnllamar: {fileID: 1406351004}
   btnplay: {fileID: 1892829243}
   btnREC: {fileID: 1526328218}
@@ -2921,6 +2923,83 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 161633718}
   m_CullTransparentMesh: 1
+--- !u!1 &170677956
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 170677957}
+  - component: {fileID: 170677959}
+  - component: {fileID: 170677958}
+  m_Layer: 0
+  m_Name: FotoExp
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &170677957
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 170677956}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -0.0003640698}
+  m_LocalScale: {x: 1.4419, y: 1.4418999, z: 1.4418999}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 790511633}
+  m_Father: {fileID: 8975650}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -111.5, y: -316.7}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &170677958
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 170677956}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 793512456741010428bbd03c6970e944, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &170677959
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 170677956}
+  m_CullTransparentMesh: 1
 --- !u!1 &176843629
 GameObject:
   m_ObjectHideFlags: 0
@@ -2966,6 +3045,7 @@ MonoBehaviour:
   BenDifamado: 0
   BenDifamado2: 0
   BenAnalizado: 0
+  BenAislado: 0
   PieGrandeEliminado: 0
   PieGrandeLavado: 0
   PieGrandeInvestigado: 0
@@ -2973,6 +3053,7 @@ MonoBehaviour:
   PieGrandeAnalizado: 0
   PieGrandeDifamado: 0
   PieGrandeUbicacion: 0
+  PieGrandeAislado: 0
   ParquePimientaEliminado: 0
   ParquePimientaLavado: 0
   ParquePimientaHackeado: 0
@@ -2987,6 +3068,7 @@ MonoBehaviour:
   PimientaPaluzaAnalizado: 0
   PimientaPaluzaInvestigado: 0
   PimientaPaluzaDifamado: 0
+  PimientaPaluzaDifamado2: 0
   PimientaPaluzaAislado: 0
   PimientaPaluzaLevantarCerca: 0
   PimientaPaluzaCancelado: 0
@@ -3059,11 +3141,15 @@ MonoBehaviour:
   BenHackeado2: 0
   PepeQuenioInvestigado2: 0
   PepeQuenioAnalizado2: 0
-  pimientapaluzersInvestigados2: 0
+  PimientaPaluzaInvestigadoV2: 0
   ParquePimientaAislado2: 0
   ProteccionAceptadaKate2: 0
   ConvertirCueva2: 0
   ReunirPadreEHijo2: 0
+  BenLavadoV2: 0
+  KateLavadaV2: 0
+  PepeLavadoV2: 0
+  PieGrandeEliminadoV2: 0
   BitacoraCargada: 0
   OfrecerProteccion: 0
   ConvertirCueva: 0
@@ -4289,8 +4375,8 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 305564279}
   m_LocalRotation: {x: 0.12960897, y: 0, z: 0, w: 0.99156517}
-  m_LocalPosition: {x: 0, y: 0, z: -80.132}
-  m_LocalScale: {x: 0.051853504, y: 0.016514631, z: 0.03348045}
+  m_LocalPosition: {x: 0, y: 0, z: -80.35406}
+  m_LocalScale: {x: 0.2822579, y: 0.16031924, z: 0.18224654}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 825379810}
@@ -4298,9 +4384,9 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 14.894, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -467.81, y: -164.73}
+  m_AnchoredPosition: {x: -465.21732, y: -165.528}
   m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_Pivot: {x: 1, y: 0}
 --- !u!114 &305564281
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4374,14 +4460,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.21960786, g: 0.21960786, b: 0.21960786, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: ace8ea8619eaf434fb8195b667d93e17, type: 3}
+  m_Sprite: {fileID: 0}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -7622,12 +7708,12 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\t\t\t\t\t        23/03/2000\r\n\t\t\n                            -<u><b>VENUS
-    IN FUR</b></u>-\r\n\n\nALERTA MAGENTA! Ni\xF1o se encuentra propagando haber
-    avistado a Pie Grande reciprocando besitos mariposa con misteriosa colorada durante
-    inocente excurci\xF3n.\n\n\n<u>OBJETIVO:</u> Verificar presencia de Pie Grande
-    y tomar las acciones necesarias para mantener bajo control la TEMPERATURA de
-    la situaci\xF3n hasta la llegada de El Equipo de Limpieza el 27/03. \n\nProveeremos
+  m_text: "\t\t\t\t\t                                 23/03\r\n\t\t\n                           
+    -<u><b>VENUS IN FUR</b></u>-\r\n\nALERTA MAGENTA! Ni\xF1o se encuentra propagando
+    haber avistado a Pie Grande reciprocando besitos mariposa con misteriosa colorada
+    durante inocente excurci\xF3n.\n\n<u>OBJETIVO:</u> Verificar presencia de Pie
+    Grande y tomar las acciones necesarias para mantener bajo control la TEMPERATURA
+    de la situaci\xF3n hasta la llegada de El Equipo de Limpieza el 27/03. \n\nProveeremos
     un equipo de especialistas acorde al caso.\n\nNo convertir esto en un Evento
     AZUL.\n\nTestigo/s: Ben Benji.\n\nLugar: Pueblo Pimienta."
   m_isRightToLeft: 0
@@ -7656,8 +7742,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 13
-  m_fontSizeBase: 13
+  m_fontSize: 13.5
+  m_fontSizeBase: 13.5
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -7692,7 +7778,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: -107.86688, w: -400.31494}
+  m_margin: {x: -23.539833, y: 0, z: -138.97227, w: -400.31494}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -11221,6 +11307,82 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canvasType: 5
+--- !u!1 &790511632
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 790511633}
+  - component: {fileID: 790511635}
+  - component: {fileID: 790511634}
+  m_Layer: 0
+  m_Name: MarcoFotoExp
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &790511633
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 790511632}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0.006751841}
+  m_LocalScale: {x: 1.1061001, y: 1.1061003, z: 1.1061003}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 170677957}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -54.400932, y: 54.302795}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0, y: 1}
+--- !u!114 &790511634
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 790511632}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 84230f95ae339e04b9bba6015faa6a38, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &790511635
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 790511632}
+  m_CullTransparentMesh: 1
 --- !u!1 &796935656
 GameObject:
   m_ObjectHideFlags: 0
@@ -29703,12 +29865,17 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 9111618b8992ffc4d9d5241009d9f9ac, type: 3}
   - {fileID: 21300000, guid: 957b5c67f406c3841a6f879fb978ddb6, type: 3}
   - {fileID: 21300000, guid: 63e30b05f27c69847a2785def961dc99, type: 3}
-  - {fileID: 21300000, guid: 1ae9090d5d071144e8fe0d9da90e66a7, type: 3}
+  - {fileID: 21300000, guid: 6b139ae12060e6748a2b9e75d6c56f97, type: 3}
+  - {fileID: 21300000, guid: 16db0416ac4de704b940d66d574dbe3e, type: 3}
+  - {fileID: 21300000, guid: 793512456741010428bbd03c6970e944, type: 3}
+  - {fileID: 21300000, guid: 2f050e0a6581d1645a29897c13ea6233, type: 3}
+  - {fileID: 21300000, guid: dc27e84fd600ceb46adf8a822f5e5eb7, type: 3}
   Sonidos: {fileID: 0}
   BenEntrevista1: 0
   BenEntrevista2: 0
   PimientapaluzaSeAdelanta: 0
   PimientaPaluzaNoPuedeEntrar: 0
+  PlantarPublico: 0
 --- !u!1 &1994510090
 GameObject:
   m_ObjectHideFlags: 0

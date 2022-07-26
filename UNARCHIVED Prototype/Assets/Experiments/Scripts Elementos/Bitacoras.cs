@@ -52,6 +52,7 @@ public class Bitacoras : MonoBehaviour
     public bool PimientaPaluzaAnalizado;
     public bool PimientaPaluzaInvestigado;
     public bool PimientaPaluzaDifamado;
+    public bool PimientaPaluzaDifamado2;
     public bool PimientaPaluzaAislado;
     public bool PimientaPaluzaLevantarCerca;
     public bool PimientaPaluzaCancelado;
@@ -141,12 +142,15 @@ public class Bitacoras : MonoBehaviour
     public bool BenHackeado2;
     public bool PepeQuenioInvestigado2;
     public bool PepeQuenioAnalizado2;
-    public bool pimientapaluzersInvestigados2;
+    public bool PimientaPaluzaInvestigadoV2;
     public bool ParquePimientaAislado2;
     public bool ProteccionAceptadaKate2;
     public bool ConvertirCueva2;
     public bool ReunirPadreEHijo2;
-
+    public bool BenLavadoV2;
+    public bool KateLavadaV2;
+    public bool PepeLavadoV2;
+    public bool PieGrandeEliminadoV2;
 
     //////////////////////
     public bool BitacoraCargada;
@@ -590,7 +594,7 @@ public class Bitacoras : MonoBehaviour
                     FechaCompletado = "2" + (TimeManager.Dia + 1) + "/03";
                 }
                 int indaux = ind;
-                int a;
+                int a = 1;
                 ActualizarIndice();
                 CargarVectorProgreso(txtAccion, FechaCompletado, HoraCompletado, indaux);
                 SetearBitacora();
@@ -782,7 +786,7 @@ public class Bitacoras : MonoBehaviour
                     FechaCompletado = "2" + (TimeManager.Dia + 1) + "/03";
                 }
                 int indaux = ind;
-                int a;
+                int a = 0;
                 ActualizarIndice();
                 CargarVectorProgreso(txtAccion, FechaCompletado, HoraCompletado, indaux);
                 SetearBitacora();
@@ -966,7 +970,7 @@ public class Bitacoras : MonoBehaviour
                     FechaCompletado = "2" + (TimeManager.Dia + 1) + "/03";
                 }
                 int indaux = ind;
-                int a;
+                int a = 1;
                 ActualizarIndice();
                 CargarVectorProgreso(txtAccion, FechaCompletado, HoraCompletado, indaux);
                 SetearBitacora();
@@ -1131,7 +1135,6 @@ public class Bitacoras : MonoBehaviour
                 StartCoroutine(GuardarBitacora(RetencionBitacora, txt, indaux, accion, a));
                 PimientaPaluzaInvestigado = true;
                 A.investigar.interactable = false;
-                PimientaPaluzaDifamado = false;
             }
             //Hackeado
             if (A.hackear.CompareTag(tag = "OptActivado") && A.hackear.isOn == true && PimientaPaluzaHackeado == false)
@@ -1150,7 +1153,7 @@ public class Bitacoras : MonoBehaviour
                     FechaCompletado = "2" + (TimeManager.Dia + 1) + "/03";
                 }
                 int indaux = ind;
-                int a;
+                int a = 1;
                 ActualizarIndice();
                 CargarVectorProgreso(txtAccion, FechaCompletado, HoraCompletado, indaux);
                 SetearBitacora();
@@ -1185,7 +1188,7 @@ public class Bitacoras : MonoBehaviour
                 A.analizarMuestra.interactable = false;
             }
             //Difamar
-            if (A.difamar.CompareTag(tag = "OptActivado") && A.difamar.isOn == true && PimientaPaluzaDifamado == false && PimientaPaluzaInvestigado == true )
+            if (A.difamar.CompareTag(tag = "OptActivado") && A.difamar.isOn == true && PimientaPaluzaDifamado2 == false && PimientaPaluzaInvestigadoV2 == true )
             {
                 float RetencionBitacora = 1;
                 float HoraCompletado = RetencionBitacora + TimeManager.Hora;
@@ -1207,12 +1210,12 @@ public class Bitacoras : MonoBehaviour
                 a = aux;
                 ActualizarIndice();
                 StartCoroutine(GuardarBitacora(RetencionBitacora, txt, indaux, accion, a));
-                PimientaPaluzaDifamado = true;
+                PimientaPaluzaDifamado2 = true;
                 A.difamar.interactable = false;
                 PimientaPaluzaCancelado = true;
             }
             //Difamar2
-            if (A.difamar.CompareTag(tag = "OptActivado") && A.difamar.isOn == true && PimientaPaluzaDifamado == false && pimientapaluzersInvestigados2 == false)
+            if (A.difamar.CompareTag(tag = "OptActivado") && A.difamar.isOn == true && PimientaPaluzaDifamado == false && PimientaPaluzaInvestigadoV2 == false)
             {
                 float RetencionBitacora = 1;
                 float HoraCompletado = RetencionBitacora + TimeManager.Hora;
@@ -1384,7 +1387,7 @@ public class Bitacoras : MonoBehaviour
                     FechaCompletado = "2" + (TimeManager.Dia + 1) + "/03";
                 }
                 int indaux = ind;
-                int a;
+                int a = 1;
                 ActualizarIndice();
                 CargarVectorProgreso(txtAccion, FechaCompletado, HoraCompletado, indaux);
                 SetearBitacora();
@@ -1747,7 +1750,7 @@ public class Bitacoras : MonoBehaviour
                     FechaCompletado = "2" + (TimeManager.Dia + 1) + "/03";
                 }
                 int indaux = ind;
-                int a;
+                int a = 1;
                 ActualizarIndice();
                 CargarVectorProgreso(txtAccion, FechaCompletado, HoraCompletado, indaux);
                 SetearBitacora();
@@ -3267,12 +3270,12 @@ public class Bitacoras : MonoBehaviour
    
     public void SiguientePagina()
     {
-        if (PagActual < Pag)  {PagActual++; Sonidos.SonidoPasarHoja(); lblNemeroPagina.text = "" + PagActual; }
+        if (PagActual < Pag)  {PagActual++; Sonidos.SonidoPasarHoja(); }
         
     }
     public void AnteriorPagina ()
     {
-        if (PagActual > 1) { PagActual--; Sonidos.SonidoPasarHoja(); lblNemeroPagina.text = "" + PagActual; } 
+        if (PagActual > 1) { PagActual--; Sonidos.SonidoPasarHoja(); } 
     }
     void ActualizarPaginas()
     {
@@ -3388,7 +3391,7 @@ public class Bitacoras : MonoBehaviour
             B5P1.text = pag12[4];
             B6P1.text = pag12[5];
         }
-
+        lblNemeroPagina.text = "" + PagActual;
 
     }
 
@@ -3745,7 +3748,7 @@ public class Bitacoras : MonoBehaviour
         if(accion == A.investigar)
         {
             if (PepeInvestigado == true) PepeQuenioInvestigado2 = true;
-            if (PimientapaluzersInvestigado == true) pimientapaluzersInvestigados2 = true;
+            if (PimientaPaluzaInvestigado == true) PimientaPaluzaInvestigadoV2 = true;
         }
         if(accion == A.analizarMuestra)
         {
@@ -3770,6 +3773,16 @@ public class Bitacoras : MonoBehaviour
         if (accion == A.trueEnding)
         {
             if(ReunirPadreEHijo) ReunirPadreEHijo2 = true;
+        }
+        if(accion == A.lavarCerebro)
+        {
+            if (BenLavado) BenLavadoV2 = true;
+            if (KateLavada) KateLavadaV2 = true;
+            if (PepeLavado) PepeLavadoV2 = true;
+        }
+        if(accion == A.eliminar)
+        {
+            if (PieGrandeEliminado) PieGrandeEliminadoV2= true;
         }
     }
 

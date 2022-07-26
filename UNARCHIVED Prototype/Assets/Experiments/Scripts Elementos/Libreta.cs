@@ -262,7 +262,7 @@ public class Libreta : MonoBehaviour
                 TacharPalabra(Red78Btn, txtRed78, 7);
                 TacharPalabra(BananoramaBtn, txtBananorrama, 4);
             }
-            if (bitacoras.PieGrandeEliminado == false && bitacoras.PepeEliminado == false && bitacoras.PepeAnalizado == true && bitacoras.PieGrandeUbicacion == true) A.tglTrueEnding.SetActive(true);
+            if (bitacoras.PieGrandeEliminado == false && bitacoras.PepeEliminado == false && bitacoras.PepeQuenioAnalizado2 == true && bitacoras.PieGrandeUbicacion == true) A.tglTrueEnding.SetActive(true);
             if (SignoPreguntaPieGrande == "") TacharPalabra(WifiRobadoBtn,txtWifiRobado, 12);
         }
         if(accion == A.investigar)
@@ -279,8 +279,12 @@ public class Libreta : MonoBehaviour
                 TacharPalabra(Red78Btn, txtRed78, 7);
                 TacharPalabra(BananoramaBtn, txtBananorrama, 4);
             }
-            if (bitacoras.PieGrandeEliminado == false && bitacoras.PepeEliminado == false && bitacoras.PepeAnalizado == true && bitacoras.PieGrandeUbicacion == true) A.tglTrueEnding.SetActive(true);
+            if (bitacoras.PieGrandeEliminado == false && bitacoras.PepeEliminado == false && bitacoras.PepeQuenioAnalizado2 == true && bitacoras.PieGrandeUbicacion == true) A.tglTrueEnding.SetActive(true);
             if (SignoPreguntaPieGrande == "") TacharPalabra(WifiRobadoBtn, txtWifiRobado, 12);
+        }
+        if(accion == A.difamar)
+        {
+            if (bitacoras.PimientaPaluzaCancelado == true) TacharPalabra(PimientapaluzaBtn, txtPimientaPaluza, 3);
         }
         if (accion == A.analizarMuestra)
         {
