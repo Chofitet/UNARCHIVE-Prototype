@@ -141,15 +141,16 @@ public class Telefono : MonoBehaviour
                         {
                             txtTranscripciónLlamado.text = "EXTRACTO DE LLAMADO ENTRE PIE GRANDE Y ¿AMANTE?"// Wip
                                + System.Environment.NewLine
-                               + System.Environment.NewLine + "unga unga aplastar porunga";// Wip
+                               + System.Environment.NewLine + "**** unga unga aplastar porunga ****";// Wip
                             PieGrandeLlamado = true;
                         }
                         // PieGrande Kate brainwash
                         if (bitacora.KateLavadaV2 == true)
                         {
-                            txtTranscripciónLlamado.text = "Wip"
+                            txtTranscripciónLlamado.text = "EXTRACTO DE LLAMADO ENTRE PIE GRANDE Y ¿DESCONOCIDA?"
                                + System.Environment.NewLine
-                               + System.Environment.NewLine + "Wip";
+                               + System.Environment.NewLine + " **** UNGÜEIT? UNGA, UNGA, GÜEIT...****"
+                               + System.Environment.NewLine + " **** No entiendo nada de lo que dice! QUIEN ES? Por favor no llame devuelta a este número****";
                             PieGrandeLlamado = true;
                         }
                     }
@@ -167,19 +168,21 @@ public class Telefono : MonoBehaviour
                     {
                         txtTranscripciónLlamado.text = "EXTRACTO DE LLAMADO ENTRE KATE Y ¿AMANTE?"// Wip
                            + System.Environment.NewLine
-                           + System.Environment.NewLine + "No podemos imprimir esto en un juego para menores de 18. Es una fuerte llamada de cachondeo.";// Wip
+                           + System.Environment.NewLine + "No podemos imprimir esto en un juego para menores de 18 años. Es una llamada demasiado cachonda. Se escuchaban gruñidos desde ambos participantes.";// Wip
                         KateLlamado = true;
                     }
                     //Kate Pie grande eliminado
                     if (bitacora.PieGrandeEliminadoV2 == true)
                     {
-                        txtTranscripciónLlamado.text = "EXTRACTO DE LLAMADO ENTRE KATE Y ¿AMANTE?" //WIP
+                        txtTranscripciónLlamado.text = "EXTRACTO DE LLAMADO ENTRE KATE Y ¿PUBLICISTA?" //WIP
                            + System.Environment.NewLine
-                           + System.Environment.NewLine + "No podemos imprimir esto en un juego para menores de 18. Es una fuerte llamada de cachondeo.";// Wip
+                           + System.Environment.NewLine + "**** No me importa lo que piense la gente. Voy a contar toda mi versión de la historia! **** ";// Wip
                     }
                 }
                 //Kate Brainwash
-                else if (bitacora.KateLavadaV2 == true) { txtTranscripciónLlamado.text = "Esta parte del juego esta en desarrollo. Saludos del Diseñador"; }//WIP
+                else if (bitacora.KateLavadaV2 == true) { txtTranscripciónLlamado.text = "EXTRACTO DE LLAMADO ENTRE KATE Y ¿DESCONOCIDO?" //WIP
+                           + System.Environment.NewLine + " **** UNGÜEIT? UNGA, UNGA, GÜEIT...****"
+                           + System.Environment.NewLine + " **** No entiendo nada de lo que dice! QUIEN ES? Por favor no llame devuelta a este número****"; }//WIP
 
                 else if (bitacora.KateEliminada == true) { txtTranscripciónLlamado.text = "Kate no puede realizar llamadas desde... La Granja"; }
                 LlamadaDiariaKate = true;
@@ -193,9 +196,10 @@ public class Telefono : MonoBehaviour
                     //PEPE normal
                     if (PepeLlamado1 == false)
                     {
-                        txtTranscripciónLlamado.text = "EXTRACTO DE LLAMADO ENTRE BENJI Y ¿AMIGO?"
+                        txtTranscripciónLlamado.text = "EXTRACTO DE LLAMADO ENTRE BENJI Y ¿GUARDABOSQUES?"
                            + System.Environment.NewLine
-                           + System.Environment.NewLine + "********";
+                           + System.Environment.NewLine + "**** Pero mi amigo dice que los vió! Ustedes no vieron nada de nada?? ****"
+                           + System.Environment.NewLine + "**** Nene, dejá de romper, ya te dijimos que no llames más. ****";
                     }
                 }
                 //Pepe BrainWash
