@@ -1126,7 +1126,7 @@ public class TV : MonoBehaviour
 
     /// ================================================================== Noticias Aleatorias ========================================================= ///
 	string TitularAleatoria1 = "ALMONDIGAS DE MURCIEGALO: EL PLATO DEL MOMENTO";
-    string NoticiaAleatoria1 = "ALMÓNDIGAS DE MURCIÉGALO" + System.Environment.NewLine + "EL MENÚ DISLÉXICO QUE ATRAE A MULTITUDES";
+    string NoticiaAleatoria1 = "ALMONDIGAS DE MURCIEGALO: EL PLATO DEL MOMENTO" + System.Environment.NewLine + "NUEVO MENÚ DISLÉXICO ATRAE A MULTITUDES";
 
     string TitularAleatoria2 = "¿DIETA O RADIACION? CÓMO QUEMAR ESOS KILOS DE MÁS";
     string NoticiaAleatoria2 = "¿DIETA O RADIACIÓN?"+ System.Environment.NewLine +  "CÓMO QUEMAR ESOS KILOS DE MÁS";
@@ -1135,10 +1135,10 @@ public class TV : MonoBehaviour
     string NoticiaAleatoria3 = "¿BIZCOCHITOS DE ADAMANTIUM?" + System.Environment.NewLine + "SORPRENDE A TUS VISITAS CON EL LIBRO DE RECETAS DE LA ABUELA HARDCORE";
 
     string TitularAleatoria4 = "FESTIVAL 'PATEA UN TIBURÓN' TERMINA EN SORPRESIVA TRAGEDIA";
-    string NoticiaAleatoria4 = "FESTIVAL 'PATEA UN TIBURÓN' TERMINA EN SORPRESIVA TRAGEDIA." + System.Environment.NewLine + "FINALMENTE PASÓ LO IMPENSABLE.";
+    string NoticiaAleatoria4 = "FESTIVAL PATEA UN TIBURÓN' TERMINA EN SORPRESIVA TRAGEDIA." + System.Environment.NewLine + "FINALMENTE PASÓ LO IMPENSABLE.";
 
     string TitularAleatoria5 = "ASESINO SERIAL RAGE QUITS. CONFIEZA QUE NO LA ESTABA PASANDO BIEN";
-    string NoticiaAleatoria5 = "ASESINO SERIAL RAGE QUITS." + System.Environment.NewLine + "CONFIEZA QUE NO LA ESTABA PASANDO BIEN";
+    string NoticiaAleatoria5 = "ASESINO SERIAL RAGE QUITS." + System.Environment.NewLine + "VIDEO DE REACCIÓN A ÚLTIMA VÍCTIMA ES FUROR EN LA WEB";
 
     string TitularAleatoria6 = "¿CUÁNTO GARPA SER UNA NINFA?";
     string NoticiaAleatoria6 = "¿CUÁNTO GARPA SER UNA NINFA DEL BOSQUE? HABLAMOS CON ESPECIALISTAS DEL RUBRO";
@@ -1153,7 +1153,7 @@ public class TV : MonoBehaviour
     string NoticiaAleatoria9 = "GAME DESIGNER SORPRENDE A EQUIPO PROPONIENDO FEATURE ESCENCIAL A HORAS DE ENTREGA";
 
     string TitularAleatoria10 = "COCEAODANU OSAVNIHEE CE A TAU DNUNAZBNMN A AATNATVE";
-    string NoticiaAleatoria10 = "PONETE LOS LENTES, PA";
+    string NoticiaAleatoria10 = "\"COCEAODANU OSAVNIHEE CE A TAU DNUNAZBNMN\" Y OTRAS FRASES QUE SON FACILES DE RECONOCER DE LEJOS SIN PONERTE LOS LENTES";
 
     string TitularAleatoria11 = "LORO BOCASUCIA ARRUINA BAUTISMO";
     string NoticiaAleatoria11 = "LORO BOCASUCIA ARRUINA BAUTISMO." + System.Environment.NewLine + "POLLY NO QUIERE UNA GALLETA, QUIERE &#$%@ Y +{<*/A. ";

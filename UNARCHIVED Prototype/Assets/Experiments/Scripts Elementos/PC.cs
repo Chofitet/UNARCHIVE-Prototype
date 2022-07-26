@@ -148,8 +148,8 @@ public class PC : MonoBehaviour
         {
             txtInfo.text = "Solo un absoluto careta buscaría el significado de la Pimientaexperiencia en una computadora."
             + System.Environment.NewLine + "Es el 28 de Marzo en Parque Pimienta."
-            +System.Environment.NewLine + " SIEMPRE."
-            + System.Environment.NewLine + "CARETA."
+            +System.Environment.NewLine + "SIEMPRE."
+            + System.Environment.NewLine +"CARETA."
             + System.Environment.NewLine
             + System.Environment.NewLine
             + System.Environment.NewLine
@@ -161,7 +161,9 @@ public class PC : MonoBehaviour
             + System.Environment.NewLine
             + System.Environment.NewLine
             + System.Environment.NewLine
-            + System.Environment.NewLine + "NOTA: POR FAVOR, MANTENGAMOS CIVILES LAS ENTRADAS EN LA BASE DE DATOS";
+            + System.Environment.NewLine
+            + System.Environment.NewLine
+            + System.Environment.NewLine + "NOTA: POR FAVOR, MANTENGAMOS CIVILES LAS ENTRADAS DE LA BASE DE DATOS";
             FotoCarnet(7);
             txtDatos.text = "";
             BDPimientapaluzaLeida = true;
@@ -198,6 +200,14 @@ public class PC : MonoBehaviour
             + System.Environment.NewLine
             + System.Environment.NewLine
             + System.Environment.NewLine
+            + System.Environment.NewLine
+            + System.Environment.NewLine
+            + System.Environment.NewLine
+            + System.Environment.NewLine
+            + System.Environment.NewLine
+            + System.Environment.NewLine
+            + System.Environment.NewLine
+            + System.Environment.NewLine 
             + System.Environment.NewLine
             + System.Environment.NewLine
             + System.Environment.NewLine
