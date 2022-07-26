@@ -273,7 +273,7 @@ public class TV : MonoBehaviour
     string ParquePimientaDifamadoTitulo = "TURISTA DECLARA: ME AGARRÉ DIARREA DE LEGIONARIO EN PARQUE PIMIENTA.";
     string ParquePimientaDifamadoNoticia = "TURISTA DECLARA: ME AGARRÉ DIARREA DE LEGIONARIO EN PARQUE PIMIENTA. POR QUÉ NO HAY QUE VISITAR LA RESERVA";
     //============================================================================ TV Pie Grande ===================================================================//
-    bool PlantarPublico;
+    public bool PlantarPublico;
     string PlantarPublicoTitulo = "ABUCHEOS DURANTE ENTREVISTA!LA CREDiBILIDAD DE BENJI SE DESMORONA!!";
     string PlantarPublicoNoticia = "ABUCHEOS DURANTE ENTREVISTA!LA CREDiBILIDAD DE BENJI SE DESMORONA AL MOJAR SUS PANTALONES EN TELEVISIÓN NACIONAL";
 
@@ -459,6 +459,7 @@ public class TV : MonoBehaviour
             if (PC.Rating >= 16) { PC.RatinMaximo(); }
             x = true;
             SetearImagenesNoticias(8);
+            PlantarPublico = true;
 
         }
 
@@ -494,6 +495,7 @@ public class TV : MonoBehaviour
             if (PC.Rating >= 16) { PC.RatinMaximo(); }
             x = true;
             BenBombaEscuela = true;
+            SetearImagenesNoticias(15);
         }
         else if (BenEliminado == true && TimeManager.Dia == 5 && TimeManager.Hora == 9 && bitacoras.BenRetirado == false)
         {
@@ -504,7 +506,7 @@ public class TV : MonoBehaviour
             if (PC.Rating >= 16) { PC.RatinMaximo(); }
             x = true;
             BenBombaCasa = true;
-            SetearImagenesNoticias(8);
+            SetearImagenesNoticias(15);
         }
 
 
@@ -1082,17 +1084,22 @@ public class TV : MonoBehaviour
         if (titular.text == BananorramaDifamadoTVTitulo) SetearImagenesNoticias(12);
 
 
-        if (PieGrandeDifamadoTitulo == titular.text) SetearImagenesNoticias(6);
+        if (PieGrandeDifamadoTitulo == titular.text) SetearImagenesNoticias(16);
 
         if (CrearEscenaTitulo == titular.text) { SetearImagenesNoticias(10); SetearReportero(1); }
 
         if (BenDesapareceTitulo == titular.text) SetearImagenesNoticias(8);
         if (PepeQueñoTitulo1 == titular.text) SetearImagenesNoticias(8);
         if (PepeQueñoTitulo2 == titular.text) SetearImagenesNoticias(8);
+        if (IbelieveinPispiadorTitulo == titular.text) SetearImagenesNoticias(8);
 
         if (BenBrainwashTitulo == titular.text) SetearImagenesNoticias(9);
         if (BenDifamadoTitulo1 == titular.text) SetearImagenesNoticias(9);
         if (BenDifamadoTitulo2 == titular.text) SetearImagenesNoticias(9);
+
+        if (BenPostBrainwash1Titulo == titular.text) SetearImagenesNoticias(13);
+
+
     }
 
     void SetearReportero(int i)

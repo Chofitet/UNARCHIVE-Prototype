@@ -11,6 +11,7 @@ public class Telefono : MonoBehaviour
     [SerializeField] TimeManager time;
     [SerializeField] AlarmaTelefono Alarma;
     [SerializeField] SonidosManagement Sonidos;
+    [SerializeField] TV tv;
     public Button btnllamar;
     public Button btnplay;
     public Button btnREC;
@@ -90,8 +91,9 @@ public class Telefono : MonoBehaviour
         {
             case ("Ben Benji"):
 
-                if (bitacora.BenEliminado == false && bitacora.BenLavado == false && bitacora.BenRetirado == false)
+                if (bitacora.BenEliminado == false && bitacora.BenLavadoV2 == false && bitacora.BenRetirado == false)
                 {
+                    //Ben Benji Normal
                     if (bitacora.PepeEliminado == false && bitacora.PepeLavado == false && BenLlamado == false)
                     {
 
@@ -102,7 +104,8 @@ public class Telefono : MonoBehaviour
                         libreta.EscribirNuevaPalabra(libreta.BtnPepeQueño, 8);
 
                     }
-                    if (bitacora.PepeEliminado == false && bitacora.PepeLavado == false && bitacora.PlantarPublico == true && BenLlamadoPlantarPublico == false)
+                    //Ben Benji post Plantar publico
+                    if (bitacora.PepeEliminado == false && bitacora.PepeLavado == false &&  tv.PlantarPublico == true && BenLlamadoPlantarPublico == false)
                     {
 
                         txtTranscripciónLlamado.text = "EXTRACTO DE LLAMADO ENTRE BENJI Y ¿AMIGO?"
@@ -113,7 +116,8 @@ public class Telefono : MonoBehaviour
 
                     }
                 }
-                else if (bitacora.BenLavado == true && bitacora.BenRetirado == false)
+                //Ben Benji Brainwash
+                else if (bitacora.BenLavadoV2 == true && bitacora.BenRetirado == false && bitacora.BenEliminado == false)
                 {
                     txtTranscripciónLlamado.text = "EXTRACTO DE LLAMADO ENTRE BENJI Y ¿AMIGO?"
                     + System.Environment.NewLine
@@ -130,12 +134,24 @@ public class Telefono : MonoBehaviour
             case ("Pie Grande"):
                 if (bitacora.PieGrandeEliminado == false)
                 {
-                    if (bitacora.KateEliminada == false && bitacora.KateLavada == false && PieGrandeLlamado == false)
+                    if (bitacora.KateEliminada == false)
                     {
-                        txtTranscripciónLlamado.text = "EXTRACTO DE LLAMADO ENTRE PIE GRANDE Y ¿AMANTE?"
-                           + System.Environment.NewLine
-                           + System.Environment.NewLine + "unga unga aplastar porunga";
-                        PieGrandeLlamado = true;
+                        //Pie grande Normal (supuse que la llamada es con Kate, si no lo es, sacarlo del if kate eliminada)
+                        if (PieGrandeLlamado == false && bitacora.KateLavada == false)
+                        {
+                            txtTranscripciónLlamado.text = "EXTRACTO DE LLAMADO ENTRE PIE GRANDE Y ¿AMANTE?"// Wip
+                               + System.Environment.NewLine
+                               + System.Environment.NewLine + "unga unga aplastar porunga";// Wip
+                            PieGrandeLlamado = true;
+                        }
+                        // PieGrande Kate brainwash
+                        if (bitacora.KateLavadaV2 == true)
+                        {
+                            txtTranscripciónLlamado.text = "Wip"
+                               + System.Environment.NewLine
+                               + System.Environment.NewLine + "Wip";
+                            PieGrandeLlamado = true;
+                        }
                     }
                 }
                 else { PapelFax.SetActive(true); txtTranscripciónLlamado.text = "Pie Grande no puede realizar llamadas desde... La Granja"; }
@@ -144,25 +160,37 @@ public class Telefono : MonoBehaviour
 
             // Llamar Kate Milliard
             case ("Kate Milliard"):
-                if (bitacora.KateEliminada == false && bitacora.KateLavada == false)
+                if (bitacora.KateEliminada == false && bitacora.KateLavadaV2 == false)
                 {
-                    if (bitacora.PieGrandeEliminado == false && KateLlamado == false)
+                    //Kate normal 
+                    if (bitacora.PieGrandeEliminadoV2 == false && KateLlamado == false)
                     {
-                        txtTranscripciónLlamado.text = "EXTRACTO DE LLAMADO ENTRE KATE Y ¿AMANTE?"
+                        txtTranscripciónLlamado.text = "EXTRACTO DE LLAMADO ENTRE KATE Y ¿AMANTE?"// Wip
                            + System.Environment.NewLine
-                           + System.Environment.NewLine + "No podemos imprimir esto en un juego para menores de 18. Es una fuerte llamada de cachondeo.";
+                           + System.Environment.NewLine + "No podemos imprimir esto en un juego para menores de 18. Es una fuerte llamada de cachondeo.";// Wip
+                        KateLlamado = true;
+                    }
+                    //Kate Pie grande eliminado
+                    if (bitacora.PieGrandeEliminadoV2 == true)
+                    {
+                        txtTranscripciónLlamado.text = "EXTRACTO DE LLAMADO ENTRE KATE Y ¿AMANTE?" //WIP
+                           + System.Environment.NewLine
+                           + System.Environment.NewLine + "No podemos imprimir esto en un juego para menores de 18. Es una fuerte llamada de cachondeo.";// Wip
                     }
                 }
-                else if (bitacora.KateLavada == true) { txtTranscripciónLlamado.text = "Esta parte del juego esta en desarrollo. Saludos del Diseñador"; }//WIP
+                //Kate Brainwash
+                else if (bitacora.KateLavadaV2 == true) { txtTranscripciónLlamado.text = "Esta parte del juego esta en desarrollo. Saludos del Diseñador"; }//WIP
 
                 else if (bitacora.KateEliminada == true) { txtTranscripciónLlamado.text = "Kate no puede realizar llamadas desde... La Granja"; }
                 LlamadaDiariaKate = true;
                 break;
+
             // Llamar Pepe Queño
             case ("Pepe Quenio"):
+                
                 if (bitacora.PepeEliminado == false && bitacora.PepeLavado == false)
                 {
-                    //Llamada 1 de pepe
+                    //PEPE normal
                     if (PepeLlamado1 == false)
                     {
                         txtTranscripciónLlamado.text = "EXTRACTO DE LLAMADO ENTRE BENJI Y ¿AMIGO?"
@@ -170,8 +198,10 @@ public class Telefono : MonoBehaviour
                            + System.Environment.NewLine + "********";
                     }
                 }
-                else if (bitacora.PepeLavado == true) { txtTranscripciónLlamado.text = "NO HA USADO EL TELEFONO"; }
-                else { txtTranscripciónLlamado.text = "Pepe Quenio no puede realizar llamadas desde... La Granja"; }
+                //Pepe BrainWash
+                else if (bitacora.PepeLavadoV2 == true) { txtTranscripciónLlamado.text = "NO HA USADO EL TELEFONO"; }
+
+                else if (bitacora.PepeEliminado == true){ txtTranscripciónLlamado.text = "Pepe Quenio no puede realizar llamadas desde... La Granja"; }
                 LlamadaDiariaPepe = true;
                 break;
             case null:

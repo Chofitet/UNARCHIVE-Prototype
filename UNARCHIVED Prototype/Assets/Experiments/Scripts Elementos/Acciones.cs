@@ -228,11 +228,11 @@ public class Acciones : MonoBehaviour
         crearNoticia.isOn = false;
         analizarMuestra.isOn = false;
 
-        crearEscena.isOn = false;
+        //crearEscena.isOn = false;
         plantarPublico.isOn = false;
         trueEnding.isOn =false;
         ofrecerProteccion.isOn = false;
-        extraerFotos.isOn = false;
+        //extraerFotos.isOn = false;
         convertirCueva.isOn = false;
         levantarCerca.isOn = false;
 
