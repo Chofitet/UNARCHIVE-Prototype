@@ -86,6 +86,7 @@ public class Telefono : MonoBehaviour
 
     public void SetearLlamada()
     {
+        txtTranscripciónLlamado.text = "No se ha interceptado ninguna llamada relevante";
         //Llamado ben
         switch (LlamadaEnProgreso)
         {
@@ -200,6 +201,7 @@ public class Telefono : MonoBehaviour
                            + System.Environment.NewLine
                            + System.Environment.NewLine + "**** Pero mi amigo dice que los vió! Ustedes no vieron nada de nada?? ****"
                            + System.Environment.NewLine + "**** Nene, dejá de romper, ya te dijimos que no llames más. ****";
+                        PepeLlamado1 = true;
                     }
                 }
                 //Pepe BrainWash
@@ -209,7 +211,7 @@ public class Telefono : MonoBehaviour
                 LlamadaDiariaPepe = true;
                 break;
             case null:
-                txtTranscripciónLlamado.text = "No se ha interceptado ninguna llamada";
+                txtTranscripciónLlamado.text = "No se ha interceptado ninguna llamada relevante";
                 break;
 
         }
@@ -238,7 +240,7 @@ public class Telefono : MonoBehaviour
         {
             // if (libreta.palabra != "") { Sonidos.SonidodeImprimir(); }
             PapelFax.SetActive(true);
-            txtTranscripciónLlamado.text = "Esta parte del juego esta en desarrollo. Saludos del Diseñador" + LlamadaEnProgreso;//WIP
+            txtTranscripciónLlamado.text = "No es posible llamar a " + LlamadaEnProgreso;//WIP
         }
     }
 

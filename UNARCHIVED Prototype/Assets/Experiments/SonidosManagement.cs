@@ -110,6 +110,7 @@ public class SonidosManagement : MonoBehaviour
 
     public void SonidodeTeclado()
     {
+        Debug.Log("teclado");
         int num = Random.Range(0, 4);
         NuevoSonido(SonidoTeclado[num], camara.position, 1f);
        // Destroy(SonidoTeclado[num]);

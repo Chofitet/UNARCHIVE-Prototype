@@ -264,6 +264,7 @@ public class PC : MonoBehaviour
         txtInfo.text = "";
         txtDatos.text = "";
         FotoCarnet(4);
+        if (Camaras.currentviewNum == 1) Sonido.SonidodeTeclado();
     }
 
     void CambiarTermometro()

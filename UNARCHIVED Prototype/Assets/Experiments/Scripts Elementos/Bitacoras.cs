@@ -1996,7 +1996,7 @@ public class Bitacoras : MonoBehaviour
             //Analizar muestra
             if (A.analizarMuestra.CompareTag(tag = "OptActivado") && A.analizarMuestra.isOn == true && KateAnalizada == false)
             {
-                float RetencionBitacora = 1;//WIP cambialo a 12 no seas perejil paparrucho
+                float RetencionBitacora = 12;//WIP cambialo a 12 no seas perejil paparrucho
                 float HoraCompletado = RetencionBitacora + TimeManager.Hora;
                 string txt = "<b>ADN DE KATE MILLIARD ANALIZADO</b>"
                 + System.Environment.NewLine + "Jefe, tenemos noticias cuestionables. Pie Grande ya no es el último de su especie. Kate se encuentra embarazada...";
@@ -2151,7 +2151,7 @@ public class Bitacoras : MonoBehaviour
             //Analizar muestra
             if (A.analizarMuestra.CompareTag(tag = "OptActivado") && A.analizarMuestra.isOn == true && PepeAnalizado == false)
             {
-                float RetencionBitacora = 1;//WIP pasalo a 12 acordate maaaan dale que se te van las chichis!
+                float RetencionBitacora = 12;//WIP pasalo a 12 acordate maaaan dale que se te van las chichis!
                 float HoraCompletado = RetencionBitacora + TimeManager.Hora;
                 string txt = "<b>ADN DE PEPE QUENIO ANALIZADO</b>"
                 + System.Environment.NewLine + "BASE DE DATOS ACTUALIZADA. El ADN analizado coincide con el de Pie Grande. Posible hijo ilegítimo durante su último matrimonio.";
